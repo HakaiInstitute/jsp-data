@@ -20,3 +20,5 @@
 # Conduct a one-time QC check against Google Sheets to identify records that don't exist on both platforms (e.g. why are there 637 surveys in the Data Porta
 #  but only 616 in Google Sheets?)
 #  - Seines OK
+
+# Surveys - jsp_survey_id should be unique
