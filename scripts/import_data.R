@@ -140,11 +140,10 @@ rna_dna_endpoint <- sprintf(
   'eims/views/output/jsp_rna_muscle?limit=-1')
 
 rna_dna <- client$get(rna_dna_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, -comments,
-         survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
 write.csv(rna_dna, here("data", "rna_dna_samples.csv"))
 
@@ -154,13 +153,12 @@ rna_pathogen_endpoint <- sprintf(
   'eims/views/output/jsp_rna_pathogen?limit=-1')
 
 rna_pathogen <- client$get(rna_pathogen_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, -comments,
-         survey_id = jsp_survey_id, survey_date = date, tissue_sampled = jsp_sample_type)
+         -project, -action, -work_area, -survey, -comments)
 
-write.csv(rna_dna, here("data", "rna_pathogen_samples.csv"))
+write.csv(rna_pathogen, here("data", "rna_pathogen_samples.csv"))
 
 
 fa_endpoint <- sprintf(
@@ -168,13 +166,12 @@ fa_endpoint <- sprintf(
   'eims/views/output/jsp_fatty_acid?limit=-1')
 
 fatty_acid <- client$get(fa_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, -comments,
-         survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
-write.csv(rna_dna, here("data", "fatty_acid_samples.csv"))
+write.csv(fatty_acid, here("data", "fatty_acid_samples.csv"))
 
 
 isotope_endpoint <- sprintf(
@@ -182,13 +179,12 @@ isotope_endpoint <- sprintf(
   'eims/views/output/jsp_isotope?limit=-1')
 
 isotope <- client$get(isotope_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, -comments,
-         survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
-write.csv(rna_dna, here("data", "isotope_samples.csv"))
+write.csv(isotope, here("data", "isotope_samples.csv"))
 
 
 xm_endpoint <- sprintf(
@@ -196,12 +192,12 @@ xm_endpoint <- sprintf(
   'eims/views/output/jsp_extra_muscle?limit=-1')
 
 extra_muscle <- client$get(xm_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
-write.csv(rna_dna, here("data", "extra_muscle_samples.csv"))
+write.csv(extra_muscle, here("data", "extra_muscle_samples.csv"))
 
 
 dna_endpoint <- sprintf(
@@ -212,19 +208,17 @@ finclip_endpoint <- sprintf(
   "%s/%s", client$api_root, 
   'eims/views/output/jsp_fin_clip?limit=-1')
 
-dna <- client$get(dna_endpoint) %>% 
-  mutate(tissue_sampled = "muscle/liver")
+dna <- client$get(dna_endpoint)
 
-fin_clip <- client$get(finclip_endpoint) %>% 
-  mutate(tissue_sampled = "fin clip")
+fin_clip <- client$get(finclip_endpoint)
 
-dna_fc <- rbind(dna,fin_clip) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, tissue_sampled, date_collected = date_processed,
+stock_id <- rbind(dna,fin_clip) %>% 
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
-write.csv(dna_fc, here("data", "genetic_stockid_samples.csv"))
+write.csv(stock_id, here("data", "stock_id_samples.csv"))
 
 
 stomach_endpoint <- sprintf(
@@ -232,10 +226,10 @@ stomach_endpoint <- sprintf(
   'eims/views/output/jsp_stomach?limit=-1')
 
 stomach <- client$get(stomach_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
 write.csv(stomach, here("data", "stomach_samples.csv"))
 
@@ -245,10 +239,10 @@ otolith_endpoint <- sprintf(
   'eims/views/output/jsp_otolith?limit=-1')
 
 otolith <- client$get(otolith_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
 write.csv(otolith, here("data", "otolith_samples.csv"))
 
@@ -258,10 +252,10 @@ scale_endpoint <- sprintf(
   'eims/views/output/jsp_scale?limit=-1')
 
 scale <- client$get(scale_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
 
 write.csv(scale, here("data", "scale_samples.csv"))
 
@@ -271,20 +265,15 @@ lice_sample_endpoint <- sprintf(
   'eims/views/output/jsp_lice_sample?limit=-1')
 
 lice_sample <- client$get(lice_sample_endpoint) %>% 
-  left_join(select(fish, ufn, date_processed), by = c("fish_id" = "ufn")) %>% 
-  select(ufn = fish_id, sample_id = hakai_id, louse_sample_type = jsp_sample_type, date_collected = date_processed,
+  left_join(select(fish, hakai_id), by = c("fish_id" = "hakai_id")) %>% 
+  select(fish_id, hakai_id,
          everything(),
-         -project, -action, -work_area, -survey, survey_id = jsp_survey_id, survey_date = date)
+         -project, -action, -work_area, -survey, -comments)
+
+write.csv(lice_sample, here("data", "sealice_samples.csv"))
 
 
 # TODO:
 
-# Re-upload sample inventory... T_T
 # Package data is missing from data portal - should migrate timeout/dewar values to individual fish records and leave package data as inventory only
 # Download YSI & zoop data
-
-
-
-# QUESTIONS
-
-# Does sample collection date (i.e. when the fish was dissected) belong in database or inventory?

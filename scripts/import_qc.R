@@ -230,3 +230,6 @@ survey_summ <- survey %>%
 #   filter(!ufn %in% ufn_flag)
 # 
 # write.csv(diff_lice, "diff_lice.csv")
+
+
+ctd_endpoint <- 

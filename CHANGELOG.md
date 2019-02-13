@@ -5,9 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 ### Added
-
+- 2018 fish dissections and sea-louse enumeration
+- New sample tables `rna_dna_samples`, `rna_pathogen_samples`, `fatty_acid_samples`, `isotope_samples`, `extra_muscle_samples`, `stock_id_samples` (combination of DNA and fin clip collections),
+`stomach_samples`, `otolith_samples`, `scale_samples`, `sealice_samples`
 
 ### Changed
+- All data tables are now downloaded from the Hakai Ecological Integrated Management System (EIMS) Data Portal. As a result, some column names have been modified in accordance with the EIMS database structure. Please refer to the Data Dictionary for definitions.  
 - Species in `bycatch_mort` no longer use four-letter codes; instead, their common names are fully spelled out 
 
 ### Fixed
