@@ -73,7 +73,7 @@ bm_endpoint <- sprintf(
   'eims/views/output/jsp_bycatch_mort?limit=-1')
 
 bycatch_mort <- client$get(bm_endpoint) %>%
-  left_join(select(survey, survey_id, site_id), by = c("jsp_survey_id" = "survey_id")) %>% 
+  left_join(select(survey, jsp_survey_id, site_id)) %>% 
   select(seine_id, jsp_survey_id, date, site_id, 
          everything(), 
          -project, -action, seine_id, -work_area)
