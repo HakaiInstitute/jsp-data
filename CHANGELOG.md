@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - 2018 fish dissections and sea-louse enumeration
 - New sample tables `rna_dna_samples`, `rna_pathogen_samples`, `fatty_acid_samples`, `isotope_samples`, `extra_muscle_samples`, `stock_id_samples` (combination of DNA and fin clip collections),
 `stomach_samples`, `otolith_samples`, `scale_samples`, `sealice_samples`
+- Fish that previously did not have 'fork_length_lab' measurements now have a modeled value generated from 'standard_length_lab' measurements using lab data from 2015 to February 2019 (`juvenile-salmon` repository release 2019-02-21)
 
 ### Changed
 - All data tables are now downloaded from the Hakai Ecological Integrated Management System (EIMS) Data Portal. As a result, some column names have been modified in accordance with the EIMS database structure. Please refer to the Data Dictionary for definitions.  
