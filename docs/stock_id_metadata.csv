@@ -1,0 +1,25 @@
+"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
+"1","seine_id","Seine ID","text",NA,NA,"Unique ID assigned to each seine conducted",NA
+"2","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
+"3","date","Date","date",NA,NA,NA,NA
+"4","site_id","Site ID","text",NA,NA,NA,NA
+"5","fish_id",NA,"text",NA,NA,NA,NA
+"6","hakai_id","Hakai ID","text",NA,NA,NA,NA
+"7","stock_1","Stock 1","text",NA,"Request Molecular Genetics Laboratory documents for more information","The genetic stock assigned with the highest probability",NA
+"8","region_1","Region 1","numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The region associated with Stock 1",NA
+"9","prob_1",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The probablilty the fish originates from Stock 1",NA
+"10","stock_2",NA,"text",NA,"Request Molecular Genetics Laboratory documents for more information","The genetic stock assigned with the second highest probability",NA
+"11","region_2",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The region associated with stock 2",NA
+"12","prob_2",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The probablilty the fish originates from stock 2",NA
+"13","stock_3",NA,"text",NA,"Request Molecular Genetics Laboratory documents for more information","The genetic stock assigned with the third highest probability",NA
+"14","region_3",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The region associated with stock 3",NA
+"15","prob_3",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The probablilty the fish originates from stock 3",NA
+"16","stock_4",NA,"text",NA,"Request Molecular Genetics Laboratory documents for more information","The genetic stock assigned with the fourth highest probability",NA
+"17","region_4",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The region associated with stock 4",NA
+"18","prob_4",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The probablilty the fish originates from stock 4",NA
+"19","stock_5",NA,"text",NA,"Request Molecular Genetics Laboratory documents for more information","The genetic stock assigned with the fifth highest probability",NA
+"20","region_5",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The region associated with stock 5",NA
+"21","prob_5",NA,"numeric",NA,"Request Molecular Genetics Laboratory documents for more information","The probablilty the fish originates from stock 5",NA
+"22","analyzing_lab","Analyzing Lab","text",NA,NA,NA,NA
+"23","quality_log","Quality Log","text",NA,NA,NA,NA
+"24","quality_level","Quality Level","USER-DEFINED","Raw,Technician,Technicianm,Technicianr,Technicianmr,Principal Investigator,Interum,Publication,Error",NA,NA,NA

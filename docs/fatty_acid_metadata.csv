@@ -1,0 +1,10 @@
+"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
+"1","seine_id","Seine ID","text",NA,NA,"Unique ID assigned to each seine conducted",NA
+"2","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
+"3","date","Date","date",NA,NA,NA,NA
+"4","site_id","Site ID","text",NA,NA,NA,NA
+"5","fish_id",NA,"text",NA,NA,NA,NA
+"6","hakai_id","Hakai ID","text",NA,NA,NA,NA
+"7","analyzing_lab","Analyzing Lab","text",NA,NA,NA,NA
+"8","quality_log","Quality Log","text",NA,NA,NA,NA
+"9","quality_level","Quality Level","USER-DEFINED","Raw,Technician,Technicianm,Technicianr,Technicianmr,Principal Investigator,Interum,Publication,Error",NA,NA,NA

@@ -1,0 +1,33 @@
+"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
+"1","seine_id","Seine ID","text",NA,NA,"Unique ID assigned to each seine conducted",NA
+"2","date","Date","date",NA,NA,NA,NA
+"3","site_id","Site ID","text",NA,NA,NA,NA
+"4","hakai_id","Hakai ID","text",NA,NA,NA,NA
+"5","semsp_id","SEMSP ID","text",NA,NA,"A concatenation of date, site, species, and order the fish was pulled out of the net was used to uniquely identify the fish. In 2017 this was method was abandonded, and instead we assigned seine IDs and UFNs to uniquely identify seines and fish",NA
+"6","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
+"7","species","Species","text",NA,NA,NA,NA
+"8","package_id","Package ID","text",NA,NA,"Unique ID assigned to each unique package of fish",NA
+"9","fish_time_out","Time Out","timestamp with time zone",NA,NA,"Time that the fish was euthanized after being taken out of the seine. In conjunction with fis_time_dewar you an calculate the handling time of the fish before being flash frozen in liquid nitrogenh",NA
+"10","fish_time_dewar","Time Dewar","timestamp with time zone",NA,NA,"Time that the fish was put into the liquid nitrogen dry shipper. In conjunction with fish_time_dewar you an calculate the handling time of the fish before being flash frozen in liquid nitrogen",NA
+"11","fork_length_field","Fork Length Field (mm)","numeric",NA,"mm","The fork length of the fish measured while in the field using a 15 cm flexible ruler",NA
+"12","height_field","Height Field (mm)","numeric",NA,"mm","The height of the fish measured perpendicular to the lateral line from the anterior insertion of the dorsal fin to the ventral side of the fish",NA
+"13","weight_field","Weight Field (g)","numeric",NA,"g","The weight of the fish measured in the field using a spring scale. Precision is +/- 1 g",NA
+"14","date_processed","Date Processed","date",NA,NA,"The date the fish was processed (dissected) in the lab. Blank infers the fish has not be dissected yet",NA
+"15","cwt","Coded Wire Tag","text",NA,NA,"Fish were scanned using a handheld CWT read. none = no coded wire tag detected",NA
+"16","adipose","Adipose Fin","text",NA,NA,"none = adipose is not clipped",NA
+"17","weight","Weight Lab (g)","numeric",NA,"g","weight of the fish measured in the lab using Pro Scout scales with 0.1 g precision",NA
+"18","standard_length","Standard Length Lab (mm)","numeric",NA,"mm","The length of the fish measured from the tip of the snout to the caudal peduncle where scales give way to caudal fin rays",NA
+"19","fork_length","Fork Length Lab (mm)","numeric",NA,"mm","The length of the fish meadured from the tip of the snout to the fork of the caudal fin",NA
+"20","photo_number","Photo Number","integer",NA,NA,"Photos of abnormal looking fish were taken. The name of the photo file in the photo database. The file name is also the UFN of the fish.",NA
+"21","comments_protocol","Protocol Comments","text",NA,NA,"Comments related to deviations to standard dissection protocols",NA
+"22","comments_fish_health_lab","Fish Health Comments","text",NA,NA,"Comments to describe any abnormal/unique observations about the *fish itself* (e.g. lesions, non-louse parasites, _tissue discolouration_, scale loss, etc.)",NA
+"23","dissector","Dissector","text",NA,NA,"The initials of the technician who performed the dissection",NA
+"24","dissection_protocol","Dissection Protocol","text",NA,NA,"Full work-up 1: procedure for 2015 & 2016 samples (One RNA sample each taken from muscle, gill, brain, spleen, liver, heart, and head kidney; fatty acid, stable isotope, DNA (if no fin clips were taken in the field), stomach, otolith, and scales). Full work-up 2: procedure for all samples effective Oct. 2017 (One RNA sample each taken from muscle, gill, brain, spleen, liver, heart, and head kidney; fatty acid, stable isotope, EXTRA MUSCLE STORED AT -80, DNA (if no fin clips were taken in the field), stomach, otolith, and scales). Full work-up 3: procedure for fish subsampled for compound specific stable isotope analysis (by David Costalago, Feb. 2018). All samples taken as in full work-up 2, with the addition of a second isotope sample taken. Work-up excluding cold samples: full work-up 1 without RNA, fatty acid, or stable isotope samples taken. Irregular work-up: processing with at least one sample type not taken (e.g. no RNA, no DNA, etc.). Lice enumeration only - in lab: fish was inspected for sea lice only and did not undergo dissection. Lengths and weight recorded. -20 work up 1: procedure for dissecting fish that have been previously stored at -20 before dissection. No RNA samples, no fatty acid samples, no extra muscle sample, no sea-lice retention. Reduced sterilization between fish to scrubbing and ethanoling direct contact surfaces with 95% ethanol. Otherwise the same as Full work-up 2.",NA
+"25","analysis_planned","Analysis Planned","text",NA,"SEMSP, SJ UBC, or field loused only","The type of analysis the fish is to undergo (or has underwent). ""Field loused only"" fish are not retained, and therefore have no SEMSP ID or package ID for inventory.",NA
+"26","dissection_status","Dissection Status","text",NA,"dissected, not dissected","Whether or not the fish had been dissected at the time the data package was released",NA
+"27","lice_collection_protocol","Lice Collection Protocol","text",NA,"lab_motiles, labcount_2015, not_collected","What protocol was followed to collect sealice from the fish",NA
+"28","lice_id_protocol","Lice ID Protocol","text",NA,"lportner, lab_motiles","The protocol that was followed for identifying sea lice in the lab.",NA
+"29","analyzing_lab","Analyzing Lab","text",NA,NA,NA,NA
+"30","comments","Comments","text",NA,NA,NA,NA
+"31","quality_log","Quality Log","text",NA,NA,NA,NA
+"32","quality_level","Quality Level","USER-DEFINED","Raw,Technician,Technicianm,Technicianr,Technicianmr,Principal Investigator,Interum,Publication,Error",NA,NA,NA

@@ -1,0 +1,22 @@
+"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
+"1","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
+"2","region","Region","text",NA,NA,"DI = Discovery Islands, JS = Johnstone Strait",NA
+"3","zone",NA,"text",NA,NA,NA,NA
+"4","date","Date","date",NA,NA,NA,NA
+"5","site_id","Site ID","text",NA,NA,NA,NA
+"6","site_name","Site Name","text",NA,NA,"Long name for site",NA
+"7","field_staff","Field Staff","text",NA,NA,NA,NA
+"8","precip","Precipitation","text",NA,"none, light, moderate, or heavy","Subjective categorical representation of the amount of precipitation",NA
+"9","cloud_cover","Cloud Cover (%)","text",NA,"0, 25, 50, 75, or 100","Visual approximation of the amount of cloud cover overhead",NA
+"10","sea_state","Sea State","text",NA,"0, 1, 2, 3, 4, or 5","0 = Sea-surface smooth and mirror like. 1 = Scaly ripples, no foam crests. 2 = Small wavelets, crests glassy, no breaking. 3 = Large wavelets, crests begin to break, scattered whitecaps. 4 = small waves 1–4 ft. becoming longer, numerous whiteaps. 5 = Moderate waves 4–8 ft. taking longer form, many whitecaps, some spray.",NA
+"11","wind_speed","Wind Speed (knots)","text",NA,"0, 0.1-5, 5-10, 10-15, 15-20, or 20-30","Estimated wind speed range observed on site",NA
+"12","wind_direction","Wind Direction","text",NA,"N, S, E, W, NE, NW, SE, or SW","Approximation of which way the wind is coming from",NA
+"13","tide_state","Tidal State","text",NA,"high slack, low slack, flood, or ebb tide","Tidal state at the start of the survey",NA
+"14","survey_time_start","Survey Time Start","timestamp with time zone",NA,"hh:mm:ss","24-hour time of commencing visual survey for site activity",NA
+"15","survey_time_end","Survey Time End","timestamp with time zone",NA,"hh:mm:ss","24-hour time of end of visual survey for site activity",NA
+"16","net_sets","Number of Net Sets","numeric",NA,NA,"number of times the seine was deployed in a survey",NA
+"17","survey_type",NA,"text",NA,NA,NA,NA
+"18","survey_notes",NA,"text",NA,NA,NA,NA
+"19","ctd_cast_id","CTD Cast ID","text",NA,NA,"This is the primary key to join survey data to CTD data. It is an automatically-generated concatenation of Site Code, Date, and drop number",NA
+"20","secchi_id",NA,"text",NA,NA,NA,NA
+"21","zooplankton_tow_id",NA,"text",NA,NA,NA,NA
