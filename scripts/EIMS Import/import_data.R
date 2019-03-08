@@ -112,7 +112,7 @@ sealice_field <- lice %>%
          unid_chal_field = as.numeric(unid_chal_field),
          pinched_belly = as.numeric(pinched_belly))
 
-write.csv(sealice_field, here("data", "sealice_field.csv"))
+write.csv(sealice_field, here("data", "lice_field.csv"))
 
 sealice_lab_motiles <- lice %>%
   select(hakai_id, seine_id, jsp_survey_id, date,
@@ -120,7 +120,7 @@ sealice_lab_motiles <- lice %>%
          -(8:30), -project, -work_area, -survey) %>%  #This removes the lice counts & body abnormality observations recorded in the field 
   filter(!is.na(lab_count_motiles))  #Filtering out fish that received field enumeration only
 
-write.csv(sealice_lab_motiles, here("data", "sealice_lab_motiles.csv"))
+write.csv(sealice_lab_motiles, here("data", "lice_lab_motiles.csv"))
 
 
 lice_finescale_endpoint <- sprintf(
@@ -132,7 +132,7 @@ lice_finescale <- client$get(lice_finescale_endpoint) %>%
          everything(),
          -project, -action, -work_area, -survey)
   
-write.csv(lice_finescale, here("data", "sealice_lab_finescale.csv"))
+write.csv(lice_finescale, here("data", "lice_lab_finescale.csv"))
 
 
 rna_dna_endpoint <- sprintf(

@@ -1,4 +1,4 @@
-seine_id,jsp_survey_id,date,site_id,gather_lat,gather_long,set_time,set_number,set_type,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,preservation_status,collection_protocol,seine_notes
+seine_id,jsp_survey_id,date,site_id,gather_long,gather_lat,set_time,set_number,set_type,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,preservation_status,collection_protocol,seine_notes
 DE100N2,DE100,2015-05-12,D01,NA,NA,NA,2,TARGETED,NA,NA,NA,NA,FALSE,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,1: No sockeye in set; did not enumerate
 DE100N1,DE100,2015-05-12,D01,NA,NA,NA,1,TARGETED,NA,NA,NA,NA,FALSE,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,1: No sockeye in set; did not enumerate
 DE100N3,DE100,2015-05-12,D01,-124.747,49.9613,11:40:00,3,TARGETED,40,NA,NA,NA,TRUE,30,NA,0,0,10,NA,1,NA,2,NA,NA,NA,1,SEMSP,NA

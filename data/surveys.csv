@@ -1,0 +1,638 @@
+jsp_survey_id,region,zone,date,site_id,site_name,field_staff,precip,cloud_cover,sea_state,wind_speed,wind_direction,tide_state,survey_time_start,survey_time_end,net_sets,survey_type,survey_notes,ctd_cast_id,secchi_id,zooplankton_tow_id
+DE99,DI,C,2015-05-10,D07,Hoskyn Channel,"Brett Johnson,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,0,NON-STANDARD,1: Circumnavigation of Quadra. No formal data recorded.,NA,NA,NA
+DE100,DI,E,2015-05-12,D01,Hurtado Point,"Ben Millard-Martin,Brett Johnson,Carolyn Knapper,Kristi Inman,Luke Rogers",NA,25,3,10-15,NW,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-05-12_D01_1_250_2
+DE101,DI,E,2015-05-13,D02,Kinghorn Island,"Ben Millard-Martin,Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-13_D02_1_250_2
+DE102,DI,W,2015-05-14,D04,Fransisco Point,"Ben Millard-Martin,Carolyn Knapper,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-14_D04_1_250_2
+DE104,DI,E,2015-05-15,D02,Kinghorn Island,"Ben Millard-Martin,Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-15_D02_1_250_2
+DE105,DI,E,2015-05-15,D03,Sutil Narrows,"Ben Millard-Martin,Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-15_D03_1_250_2
+DE103,DI,E,2015-05-15,D05,Lewis Channel,"Ben Millard-Martin,Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-15_D05_1_250_2
+DE106,DI,W,2015-05-16,D06,Gowlland Harbour,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,NA,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-16_D06_1_250_2
+DE107,DI,C,2015-05-16,D07,Hoskyn Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-16_D07_1_250_2
+DE108,DI,E,2015-05-17,D02,Kinghorn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,NA,0.1-5,S,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-17_D02_1_250_2
+DE109,DI,E,2015-05-18,D03,Sutil Narrows,"Brett Johnson,Carolyn Knapper,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: First problems with flowmeter observed: intermittent spinning.,NA,NA,2015-05-18_D03_1_250_2
+DE110,DI,E,2015-05-18,D05,Lewis Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-18_D05_1_250_2
+DE111,DI,E,2015-05-19,D08,Calm Channel,"Brett Johnson,Kristi Inman,Luke Rogers,Samantha Crowley",NA,NA,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-19_D08_1_250_2
+DE112,DI,C,2015-05-20,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers,Samantha Crowley",NA,NA,1,0.1-5,E,NA,NA,NA,1,STANDARD,1: Salmon Farms: Brent Island NA; Venture Point 12 pens stocked; Okisolo Channel no nets in pens; Barnes Bay no nets in pens.,NA,NA,2015-05-20_D09_1_250_2
+JE100,JS,N,2015-05-20,J03,Cracroft Point,"Donnah MacKinnon,Dylan Smyth,Sean Godwin",light,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE101,JS,N,2015-05-20,J05,Stimpson Point,"Donnah MacKinnon,Dylan Smyth,Sean Godwin",light,100,2,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-20_J05_1_250_2
+DE113,DI,E,2015-05-21,D02,Kinghorn Island,"Carolyn Knapper,Kristi Inman,Luke Rogers,Samantha Crowley",NA,NA,3,0.1-5,NW,NA,NA,NA,0,STANDARD,1: From LR logbook,NA,NA,NA
+DE114,DI,E,2015-05-21,D03,Sutil Narrows,"Carolyn Knapper,Kristi Inman,Luke Rogers,Samantha Crowley",NA,NA,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-21_D03_1_250_2
+DE115,DI,C,2015-05-21,D07,Hoskyn Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers,Samantha Crowley",NA,NA,2,10-15,NE,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-21_D07_1_250_2
+JE103,JS,N,2015-05-21,J04,Forward Bay,"Carson White,Donnah MacKinnon,Sean Godwin",NA,100,3,5-10,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,NA
+JE102,JS,N,2015-05-21,J06,Blinkensop Bay,"Brendan Connors,Carson White,Sean Godwin",NA,100,2,5-10,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-21_J06_1_250_2
+JE106,JS,N,2015-05-22,J04,Forward Bay,"Carson White,Dylan Smyth,Sean Godwin",NA,75,2,10-15,NW,NA,NA,NA,4,STANDARD,NA,NA,NA,2015-05-22_J04_1_250_2
+JE104,JS,S,2015-05-22,J07,South Mouth,"Carson White,Dylan Smyth,Sean Godwin",NA,100,2,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-22_J07_1_250_2
+JE105,JS,S,2015-05-22,J08,Naka Creek,"Carson White,Dylan Smyth,Sean Godwin",NA,100,2,5-10,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-22_J08_1_250_2
+DE118,DI,W,2015-05-23,D04,Fransisco Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,1,0.1-5,SE,NA,NA,NA,0,STANDARD,1: From LR logbook,NA,NA,NA
+DE119,DI,W,2015-05-23,D06,Gowlland Harbour,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,1,0.1-5,SE,NA,NA,NA,0,STANDARD,1: From LR logbook,NA,NA,NA
+DE116,DI,E,2015-05-23,D08,Calm Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-23_D08_1_250_2
+DE117,DI,E,2015-05-23,D10,Hall Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,50,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-23_D10_1_250_2
+JE107,JS,N,2015-05-23,J03,Cracroft Point,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,100,NA,NA,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-23_J03_1_250_2
+JE108,JS,S,2015-05-23,J09,Blinkhorn Peninsula,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,100,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-23_J09_1_250_2
+JE109,JS,N,2015-05-23,J10,Hanson South,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,25,2,5-10,NW,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-05-23_J10_1_250_2
+DE122,DI,C,2015-05-24,D07,Hoskyn Channel,"Brett Johnson,Carolyn Knapper,Katie Chan,Luke Rogers",NA,NA,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE121,DI,C,2015-05-24,D09,Okisollo Channel,"Brett Johnson,Carolyn Knapper,Katie Chan,Luke Rogers",NA,NA,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-24_D09_1_250_2
+DE120,DI,NA,2015-05-24,D11,Turn Island,"Brett Johnson,Carolyn Knapper,Katie Chan,Luke Rogers",NA,50,1,5-10,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-24_D11_1_250_2
+JE111,JS,N,2015-05-24,J01,Hanson North,"Mack Barlett,Samantha Crowley,Sean Godwin",NA,75,2,5-10,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE110,JS,N,2015-05-24,J02,Swanson Island,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,100,1,0.1-5,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-24_J02_1_250_2
+JE112,JS,N,2015-05-24,J06,Blinkensop Bay,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,25,3,15-20,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-24_J06_1_250_2
+DE127,DI,E,2015-05-25,D01,Hurtado Point,"Brett Johnson,Katie Chan,Kristi Inman,Luke Rogers",NA,25,2,5-10,W,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE126,DI,E,2015-05-25,D02,Kinghorn Island,"Brett Johnson,Katie Chan,Kristi Inman,Luke Rogers",NA,50,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE123,DI,E,2015-05-25,D03,Sutil Narrows,"Brett Johnson,Katie Chan,Kristi Inman,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE125,DI,E,2015-05-25,D05,Lewis Channel,"Brett Johnson,Katie Chan,Kristi Inman,Luke Rogers",NA,100,2,5-10,NW,NA,NA,NA,1,STANDARD,"1: Set on 1 slider, no catch",NA,NA,NA
+DE124,DI,E,2015-05-25,D08,Calm Channel,"Brett Johnson,Katie Chan,Kristi Inman,Luke Rogers",NA,100,2,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-25_D08_1_250_2
+JE114,JS,N,2015-05-25,J04,Forward Bay,"Chris Guinchard,Samantha Crowley,Sean Godwin",NA,100,2,5-10,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-25_J04_1_250_2
+JE113,JS,N,2015-05-25,J05,Stimpson Point,"Chris Guinchard,Samantha Crowley,Sean Godwin",light,100,2,5-10,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-25_J05_1_250_2
+JE115,JS,S,2015-05-25,J08,Naka Creek,"Chris Guinchard,Samantha Crowley,Sean Godwin",NA,100,2,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-25_J08_1_250_2
+DE130,DI,C,2015-05-26,D09,Okisollo Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,W,NA,NA,NA,1,STANDARD,1: Nordic Queen (Chrys Nevilles DFO chartered commercial seiner) set 500 m W of us 1.5 hours after our set.,NA,NA,2015-05-26_D09_1_250_2
+DE128,DI,E,2015-05-26,D10,Hall Point,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,4,STANDARD,NA,NA,NA,2015-05-26_D10_1_250_2
+DE129,DI,NA,2015-05-26,D11,Turn Island,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,10-15,W,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE117,JS,N,2015-05-26,J03,Cracroft Point,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,75,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-26_J03_1_250_2
+JE116,JS,S,2015-05-26,J07,South Mouth,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,100,2,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-26_J07_1_250_2
+JE118,JS,S,2015-05-26,J09,Blinkhorn Peninsula,"Chris Guinchard,Mack Bartlett,Sean Godwin",NA,75,1,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-26_J09_1_250_2
+DE134,DI,E,2015-05-27,D01,Hurtado Point,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE133,DI,E,2015-05-27,D02,Kinghorn Island,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE135,DI,E,2015-05-27,D03,Sutil Narrows,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE132,DI,E,2015-05-27,D05,Lewis Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE136,DI,C,2015-05-27,D07,Hoskyn Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE131,DI,E,2015-05-27,D08,Calm Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,50,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE121,JS,N,2015-05-27,J01,Hanson North,"Carson White,Dylan Smyth,Lauren Portner",NA,100,NA,NA,S,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE120,JS,N,2015-05-27,J02,Swanson Island,"Carson White,Dylan Smyth,Lauren Portner",NA,100,NA,0.1-5,S,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE122,JS,S,2015-05-27,J09,Blinkhorn Peninsula,"Carson White,Dylan Smyth,Lauren Portner",NA,100,1,5-10,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-27_J09_1_250_2
+JE119,JS,N,2015-05-27,J10,Hanson South,"Carson White,Dylan Smyth,Lauren Portner",NA,100,NA,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-27_J10_1_250_2
+DE139,DI,C,2015-05-28,D09,Okisollo Channel,"Brett Johnson,Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,NA,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-28_D09_1_250_2
+DE137,DI,E,2015-05-28,D10,Hall Point,"Brett Johnson,Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-28_D10_1_250_2
+DE138,DI,NA,2015-05-28,D11,Turn Island,"Brett Johnson,Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,NA,2,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE123,JS,N,2015-05-28,J01,Hanson North,"Carson White,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-05-28_J01_1_250_2
+JE124,JS,N,2015-05-28,J05,Stimpson Point,"Carson White,Katie Chan,Lauren Portner",NA,100,3,10-15,NW,NA,NA,NA,0,STANDARD,"1: fish not at depth, close to beach",NA,NA,NA
+JE125,JS,N,2015-05-28,J06,Blinkensop Bay,"Carson White,Katie Chan,Lauren Portner",NA,25,4,15-20,NW,NA,NA,NA,0,STANDARD,"1: fish not at depth, close to beach",NA,NA,NA
+JE127,JS,N,2015-05-29,J05,Stimpson Point,"Dylan Smyth,Katie Chan,Lauren Portner",NA,NA,4,15-20,NW,NA,NA,NA,1,STANDARD,"1: one net set, no fish caught",NA,NA,NA
+JE126,JS,N,2015-05-29,J06,Blinkensop Bay,"Dylan Smyth,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-29_J06_1_250_2
+DE142,DI,E,2015-05-30,D03,Sutil Narrows,"Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,SE,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE141,DI,W,2015-05-30,D04,Fransisco Point,"Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,SE,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE140,DI,W,2015-05-30,D06,Gowlland Harbour,"Donnah MacKinnon,Kristi Inman,Luke Rogers",NA,NA,2,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-30_D06_1_250_2
+JE130,JS,N,2015-05-30,J04,Forward Bay,"Carson White,Dylan Smyth,Lauren Portner",NA,NA,3,10-15,NW,NA,NA,NA,0,STANDARD,1: net not set because no fish,NA,NA,NA
+JE128,JS,N,2015-05-30,J05,Stimpson Point,"Carson White,Dylan Smyth,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-05-30_J05_1_250_2
+JE129,JS,S,2015-05-30,J07,South Mouth,"Carson White,Dylan Smyth,Lauren Portner",NA,100,1,0.1-5,NA,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-05-30_J07_1_250_2
+JE131,JS,S,2015-05-30,J08,Naka Creek,"Carson White,Dylan Smyth,Lauren Portner",NA,NA,4,10-15,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-30_J08_1_250_2
+DE146,DI,E,2015-05-31,D01,Hurtado Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,50,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE145,DI,E,2015-05-31,D02,Kinghorn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE148,DI,E,2015-05-31,D03,Sutil Narrows,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,75,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE147,DI,W,2015-05-31,D04,Fransisco Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,75,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE144,DI,E,2015-05-31,D05,Lewis Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,NA,NA,NA,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE143,DI,E,2015-05-31,D08,Calm Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: Salmon Farms: Raza Island 10 pens stocked.,NA,NA,2015-05-31_D08_1_250_2
+JE133,JS,N,2015-05-31,J03,Cracroft Point,"Carson White,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-31_J03_1_250_2
+JE132,JS,N,2015-05-31,J04,Forward Bay,"Carson White,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-31_J04_1_250_2
+JE134,JS,S,2015-05-31,J09,Blinkhorn Peninsula,"Carson White,Katie Chan,Lauren Portner",NA,50,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-05-31_J09_1_250_2
+JE135,JS,N,2015-05-31,J10,Hanson South,"Carson White,Katie Chan,Lauren Portner",NA,NA,2,5-10,NW,NA,NA,NA,0,STANDARD,1: fish not at depth,NA,NA,NA
+DE151,DI,C,2015-06-01,D09,Okisollo Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",light,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-01_D09_1_250_2
+DE149,DI,E,2015-06-01,D10,Hall Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,75,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-01_D10_1_250_2
+DE150,DI,NA,2015-06-01,D11,Turn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,75,2,0.1-5,W,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-06-01_D11_1_250_2
+JE137,JS,N,2015-06-01,J01,Hanson North,"Dylan Smyth,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-01_J01_1_250_2
+JE136,JS,N,2015-06-01,J02,Swanson Island,"Dylan Smyth,Katie Chan,Lauren Portner",NA,100,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-01_J02_1_250_2
+JE138,JS,N,2015-06-01,J10,Hanson South,"Dylan Smyth,Katie Chan,Lauren Portner",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-01_J10_1_250_2
+JE139,JS,N,2015-06-02,J05,Stimpson Point,"Carson White,Donnah MacKinnon,Lauren Portner",light,100,1,0-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-02_J05_1_250_2
+JE141,JS,N,2015-06-02,J06,Blinkensop Bay,"Carson White,Donnah MacKinnon,Lauren Portner",NA,NA,3,5-10,NW,NA,NA,NA,1,STANDARD,1: snagged net on bottom- no fish. strong current dragged us into the shallows,NA,NA,NA
+JE140,JS,S,2015-06-02,J07,South Mouth,"Carson White,Donnah MacKinnon,Lauren Portner",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-02_J07_1_250_2
+DE154,DI,C,2015-06-03,D09,Okisollo Channel,"Carolyn Knapper,Dylan Smyth,Kristi Inman,Luke Rogers",NA,25,2,10-15,W,NA,NA,NA,1,STANDARD,1: Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.,NA,NA,2015-06-03_D09_1_250_2
+DE152,DI,E,2015-06-03,D10,Hall Point,"Carolyn Knapper,Dylan Smyth,Kristi Inman,Luke Rogers",NA,100,NA,NA,NA,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-06-03_D10_1_250_2
+DE153,DI,NA,2015-06-03,D11,Turn Island,"Carolyn Knapper,Dylan Smyth,Kristi Inman,Luke Rogers",NA,100,1,0.1-5,W,NA,NA,NA,2,STANDARD,1: Salmon Farms: North Nodales nets being delivered.,NA,NA,2015-06-03_D11_1_250_2
+JE144,JS,N,2015-06-03,J04,Forward Bay,"Mack Bartlett,Samantha Crowley,Sean Godwin",light,75,3,5-10,SW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE142,JS,N,2015-06-03,J06,Blinkensop Bay,"Carson White,Katie Chan,Lauren Portner",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-03_J06_1_250_2
+JE143,JS,S,2015-06-03,J08,Naka Creek,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,75,1,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: could not find herring again because too many fish; unsure of herring, pink, and coho numbers because too many fish",NA,NA,2015-06-03_J08_1_250_2
+JE145,JS,S,2015-06-03,J09,Blinkhorn Peninsula,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,75,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-03_J09_1_250_2
+DE157,DI,E,2015-06-04,D02,Kinghorn Island,"Brett Johnson,Carolyn Knapper,Dylan Smyth,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE156,DI,E,2015-06-04,D05,Lewis Channel,"Brett Johnson,Carolyn Knapper,Dylan Smyth,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE158,DI,W,2015-06-04,D06,Gowlland Harbour,"Brett Johnson,Carolyn Knapper,Dylan Smyth,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,2,STANDARD,"1: Sighted outside of sets: 10,000 herring 30-40 mm length.",NA,NA,2015-06-04_D06_1_250_2
+DE155,DI,E,2015-06-04,D08,Calm Channel,"Brett Johnson,Carolyn Knapper,Dylan Smyth,Luke Rogers",NA,NA,1,NA,NA,NA,NA,NA,1,STANDARD,1: Salmon Farms: Raza Island 10 pens stocked. Sockeye miscount: new convention two independent counts of fish taken prior to net release.,NA,NA,2015-06-04_D08_1_250_2
+DE159,DI,C,2015-06-04,D12,Hyacinthe Bay,"Brett Johnson,Carolyn Knapper,Dylan Smyth,Luke Rogers",NA,NA,1,0.1-5,SE,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE148,JS,N,2015-06-04,J02,Swanson Island,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,1,0.1-5,NW,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-06-04_J02_1_250_2
+JE147,JS,N,2015-06-04,J03,Cracroft Point,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,25,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-04_J03_1_250_2
+JE146,JS,N,2015-06-04,J04,Forward Bay,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,50,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-04_J04_1_250_2
+DE163,DI,C,2015-06-05,D07,Hoskyn Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,75,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-05_D07_1_250_2
+DE162,DI,C,2015-06-05,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,1: Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel NA; Barnes Bay NA.,NA,NA,2015-06-05_D09_1_250_2
+DE160,DI,E,2015-06-05,D10,Hall Point,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-05_D10_1_250_2
+DE161,DI,NA,2015-06-05,D11,Turn Island,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,1,5-10,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE150,JS,N,2015-06-05,J01,Hanson North,"Donnah MacKinnon,Samantha Crowley,Sean Godwin",NA,25,1,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-05_J01_1_250_2
+JE149,JS,N,2015-06-05,J10,Hanson South,"Donnah MacKinnon,Samantha Crowley,Sean Godwin",NA,25,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-05_J10_1_250_2
+DE166,DI,E,2015-06-06,D02,Kinghorn Island,"Dylan Smyth,Kristi Inman,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,S,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE167,DI,E,2015-06-06,D03,Sutil Narrows,"Dylan Smyth,Kristi Inman,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE165,DI,E,2015-06-06,D05,Lewis Channel,"Dylan Smyth,Kristi Inman,Luke Rogers,Midoli Bresch",NA,NA,2,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+DE164,DI,E,2015-06-06,D08,Calm Channel,"Dylan Smyth,Kristi Inman,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE151,JS,N,2015-06-06,J05,Stimpson Point,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,100,3,5-10,SW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE153,JS,N,2015-06-06,J06,Blinkensop Bay,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,25,3,10-15,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE152,JS,S,2015-06-06,J07,South Mouth,"Mack Bartlett,Samantha Crowley,Sean Godwin",NA,100,2,5-10,N,NA,NA,NA,1,STANDARD,1: Ipad forms wont open- error message (note after data entry: ipad form fixed and submitted),NA,NA,2015-06-06_J07_1_250_2
+DE169,DI,C,2015-06-07,D07,Hoskyn Channel,"Brett Johnson,Dylan Smyth,Luke Rogers,Midoli Bresch",NA,NA,1,0.1-5,E,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-07_D07_1_250_2
+DE168,DI,C,2015-06-07,D09,Okisollo Channel,"Brett Johnson,Dylan Smyth,Luke Rogers,Midoli Bresch",NA,NA,2,5-10,W,NA,NA,NA,1,STANDARD,1: Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.,NA,NA,2015-06-07_D09_1_250_2
+JE156,JS,N,2015-06-07,J04,Forward Bay,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,2,5-10,SW,NA,NA,NA,0,STANDARD,1: net not set due to poor weather and lack of fish,NA,NA,NA
+JE158,JS,N,2015-06-07,J04,Forward Bay,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,2,0.1-5,SW,NA,NA,NA,0,STANDARD,1: lack of fish,NA,NA,NA
+JE155,JS,N,2015-06-07,J05,Stimpson Point,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-07_J05_1_250_2
+JE154,JS,N,2015-06-07,J06,Blinkensop Bay,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,2,5-10,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-07_J06_1_250_2
+JE157,JS,S,2015-06-07,J08,Naka Creek,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,2,5-10,SW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-07_J08_1_250_2
+JE159,JS,S,2015-06-07,J09,Blinkhorn Peninsula,"Donnah MacKinnon,Mack Bartlett,Sean Godwin",NA,NA,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-07_J09_1_250_2
+JE162,JS,N,2015-06-08,J01,Hanson North,"Chris Guinchard,Lauren Portner,Stephanie Peacock",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-08_J01_1_250_2
+JE161,JS,N,2015-06-08,J03,Cracroft Point,"Chris Guinchard,Lauren Portner,Stephanie Peacock",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-08_J03_1_250_2
+JE160,JS,N,2015-06-08,J04,Forward Bay,"Mack Bartlett,Samantha Crowley,Sean Godwin",light,100,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-08_J04_1_250_2
+DE172,DI,E,2015-06-09,D05,Lewis Channel,"Brian Hunt,Carson White,Kristi Inman,Luke Rogers",NA,NA,4,10-15,W,NA,NA,NA,0,STANDARD,1: fish too sparse to target,NA,NA,NA
+DE173,DI,C,2015-06-09,D07,Hoskyn Channel,"Brian Hunt,Carson White,Kristi Inman,Luke Rogers",NA,NA,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-09_D07_1_250_2
+DE171,DI,E,2015-06-09,D08,Calm Channel,"Brian Hunt,Carson White,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,S,NA,NA,NA,2,STANDARD,NA,NA,NA,NA
+DE170,DI,C,2015-06-09,D09,Okisollo Channel,"Brian Hunt,Carson White,Kristi Inman,Luke Rogers",NA,25,2,5-10,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-09_D09_1_250_2
+JE163,JS,N,2015-06-09,J02,Swanson Island,"Chris Guinchard,Katie Chan,Mack Bartlett",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-09_J02_1_250_2
+JE164,JS,N,2015-06-09,J10,Hanson South,"Chris Guinchard,Katie Chan,Mack Bartlett",NA,75,3,10-15,SW,NA,NA,NA,0,STANDARD,1: net not set due to unfavourable conditions,NA,NA,NA
+DE175,DI,C,2015-06-11,D07,Hoskyn Channel,"Brett Johnson,Carolyn Knapper,Grant Callegri,Luke Rogers",NA,NA,3,0.1-5,E,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-11_D07_1_250_2
+DE174,DI,C,2015-06-11,D09,Okisollo Channel,"Brett Johnson,Carolyn Knapper,Grant Callegri,Luke Rogers",NA,75,2,0.1-5,W,NA,NA,NA,1,STANDARD,1: Samples marked D09(2). Initial set removed due to potential bias from snag on bottom.,NA,NA,2015-06-11_D09_1_250_2
+JE165,JS,N,2015-06-11,J05,Stimpson Point,"Chris Guinchard,Katie Chan,Lauren Portner",NA,75,2,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-11_J05_1_250_2
+JE167,JS,N,2015-06-11,J06,Blinkensop Bay,"Chris Guinchard,Katie Chan,Lauren Portner",NA,50,4,15-20,NW,NA,NA,NA,0,STANDARD,"1: fish not at depth, poor weather",NA,NA,NA
+JE166,JS,S,2015-06-11,J07,South Mouth,"Chris Guinchard,Katie Chan,Lauren Portner",NA,50,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-11_J07_1_250_2
+DE176,DI,C,2015-06-12,D07,Hoskyn Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,1,5-10,NW,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+JE168,JS,N,2015-06-12,J06,Blinkensop Bay,"Katie Chan,Lauren Portner,Mack Bartlett",NA,75,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-12_J06_1_250_2
+DE177,DI,E,2015-06-13,D01,Hurtado Point,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,2,5-10,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE178,DI,E,2015-06-13,D02,Kinghorn Island,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE181,DI,E,2015-06-13,D03,Sutil Narrows,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,N,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE179,DI,E,2015-06-13,D05,Lewis Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,2,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE182,DI,C,2015-06-13,D07,Hoskyn Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-13_D07_1_250_2
+DE180,DI,E,2015-06-13,D08,Calm Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,NA,3,5-10,NA,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+JE170,JS,N,2015-06-13,J01,Hanson North,"Chris Guinchard,Lauren Portner,Mack Bartlett",NA,25,3,5-10,N,NA,NA,NA,0,STANDARD,"1: fish not at depth, poor weather",NA,NA,NA
+JE169,JS,N,2015-06-13,J03,Cracroft Point,"Chris Guinchard,Lauren Portner,Mack Bartlett",NA,50,2,5-10,SW,NA,NA,NA,0,STANDARD,"1: fish not at depth, poor weather",NA,NA,NA
+JE171,JS,S,2015-06-13,J09,Blinkhorn Peninsula,"Chris Guinchard,Lauren Portner,Mack Bartlett",NA,25,1,5-10,SW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-13_J09_1_250_2
+DE183,DI,C,2015-06-14,D09,Okisollo Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-14_D09_1_250_2
+DE185,DI,E,2015-06-14,D10,Hall Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,2,STANDARD,1: No sockeye in sets,NA,NA,NA
+DE184,DI,NA,2015-06-14,D11,Turn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,NA,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-14_D11_1_250_2
+JE174,JS,N,2015-06-14,J05,Stimpson Point,"Carson White,Melissa Orobko,Sean Godwin",NA,25,3,10-15,S,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-14_J05_1_250_2
+JE172,JS,N,2015-06-14,J06,Blinkensop Bay,"Donnah MacKinnon,Samantha Crowley,Sean Godwin",NA,NA,1,5-10,SW,NA,NA,NA,4,STANDARD,NA,NA,NA,2015-06-14_J06_1_250_2
+JE173,JS,S,2015-06-14,J07,South Mouth,"Donnah MacKinnon,Samantha Crowley,Sean Godwin",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-14_J07_1_250_2
+DE188,DI,W,2015-06-15,D04,Fransisco Point,"Alex Hare,Brett Johnson,Luke Rogers",NA,NA,1,0.1-5,NE,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE187,DI,W,2015-06-15,D06,Gowlland Harbour,"Alex Hare,Brett Johnson,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE189,DI,C,2015-06-15,D07,Hoskyn Channel,"Alex Hare,Brett Johnson,Luke Rogers",NA,NA,1,0.1-5,N,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE186,DI,C,2015-06-15,D09,Okisollo Channel,"Alex Hare,Brett Johnson,Luke Rogers",NA,NA,1,0.1-5,SW,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+JE177,JS,N,2015-06-15,J03,Cracroft Point,"Carson White,Donnah MacKinnon,Sean Godwin",NA,100,1,5-10,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-15_J03_1_250_2
+JE175,JS,N,2015-06-15,J04,Forward Bay,"Carson White,Donnah MacKinnon,Sean Godwin",NA,100,1,0.1-5,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-15_J04_1_250_2
+JE176,JS,S,2015-06-15,J08,Naka Creek,"Donnah MacKinnon,Martin Krkosek,Sean Godwin",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-15_J08_1_250_2
+JE178,JS,N,2015-06-15,J10,Hanson South,"Carson White,Donnah MacKinnon,Melissa Orobko,Sean Godwin",NA,25,2,5-10,SW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-15_J10_1_250_2
+DE193,DI,C,2015-06-16,D07,Hoskyn Channel,"Chris Guinchard,Grant Callegari,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,NE,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE190,DI,C,2015-06-16,D09,Okisollo Channel,"Chris Guinchard,Grant Callegari,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,W,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE191,DI,E,2015-06-16,D10,Hall Point,"Chris Guinchard,Grant Callegari,Kristi Inman,Luke Rogers",NA,NA,1,5-10,NW,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE192,DI,NA,2015-06-16,D11,Turn Island,"Chris Guinchard,Grant Callegari,Kristi Inman,Luke Rogers",NA,NA,1,5-10,NW,NA,NA,NA,3,STANDARD,NA,NA,NA,2015-06-16_D11_1_250_2
+JE179,JS,N,2015-06-16,J01,Hanson North,"Carson White,Donnah MacKinnon,Samantha Crowley",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-16_J01_1_250_2
+JE180,JS,N,2015-06-16,J02,Swanson Island,"Carson White,Donnah MacKinnon,Samantha Crowley",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-16_J02_1_250_2
+JE181,JS,S,2015-06-16,J09,Blinkhorn Peninsula,"Carson White,Donnah MacKinnon,Samantha Crowley",NA,75,1,5-10,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-16_J09_1_250_2
+DE196,DI,E,2015-06-17,D02,Kinghorn Island,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,25,2,0.1-5,ES,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE195,DI,E,2015-06-17,D05,Lewis Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,ES,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE194,DI,E,2015-06-17,D08,Calm Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-17_D08_1_250_2
+JE184,JS,N,2015-06-17,J03,Cracroft Point,"Carson White,Samantha Crowley,Sean Godwin",NA,25,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-17_J03_1_250_2
+JE182,JS,N,2015-06-17,J04,Forward Bay,"Carson White,Samantha Crowley,Sean Godwin",NA,100,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-17_J04_1_250_2
+JE183,JS,S,2015-06-17,J08,Naka Creek,"Carson White,Samantha Crowley,Sean Godwin",NA,75,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-17_J08_1_250_2
+DE200,DI,C,2015-06-18,D07,Hoskyn Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,2,5-10,SE,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE199,DI,C,2015-06-18,D09,Okisollo Channel,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-18_D09_1_250_2
+DE197,DI,E,2015-06-18,D10,Hall Point,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE198,DI,NA,2015-06-18,D11,Turn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,1,0.1-5,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-18_D11_1_250_2
+JE188,JS,N,2015-06-18,J01,Hanson North,"Dylan Smyth,Melissa Orobko,Sean Godwin",light,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-18_J01_1_250_2
+JE187,JS,N,2015-06-18,J05,Stimpson Point,"Dylan Smyth,Melissa Orobko,Sean Godwin",NA,100,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-18_J05_1_250_2
+JE185,JS,N,2015-06-18,J06,Blinkensop Bay,"Dylan Smyth,Katie Chan,Sean Godwin",NA,50,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-18_J06_1_250_2
+JE186,JS,S,2015-06-18,J07,South Mouth,"Dylan Smyth,Katie Chan,Sean Godwin",NA,100,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-18_J07_1_250_2
+DE203,DI,E,2015-06-19,D03,Sutil Narrows,"Brett Johnson. Luke Rogers,Natalie Mahara",light,75,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE202,DI,W,2015-06-19,D04,Fransisco Point,"Brett Johnson. Luke Rogers,Natalie Mahara",moderate,75,1,0.1-5,E,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,2015-06-19_D04_1_250_2
+DE201,DI,W,2015-06-19,D06,Gowlland Harbour,"Brett Johnson. Luke Rogers,Natalie Mahara",NA,50,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-19_D06_1_250_2
+JE191,JS,N,2015-06-19,J02,Swanson Island,"Dylan Smyth,Lauren Portner,Sean Godwin",light,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-19_J02_1_250_2
+JE189,JS,S,2015-06-19,J09,Blinkhorn Peninsula,"Dylan Smyth,Lauren Portner,Sean Godwin",NA,75,NA,0.1-5,E,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-19_J09_1_250_2
+JE190,JS,N,2015-06-19,J10,Hanson South,"Dylan Smyth,Lauren Portner,Sean Godwin",NA,75,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-19_J10_1_250_2
+DE206,DI,C,2015-06-20,D09,Okisollo Channel,"Brett Johnson. Kristi Inman,Luke Rogers",NA,25,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-20_D09_1_250_2
+DE204,DI,E,2015-06-20,D10,Hall Point,"Brett Johnson. Kristi Inman,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE205,DI,NA,2015-06-20,D11,Turn Island,"Brett Johnson. Kristi Inman,Luke Rogers",NA,100,1,0.1-5,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-20_D11_1_250_2
+JE192,JS,N,2015-06-20,J04,Forward Bay,"Dylan Smyth,Katie Chan,Lauren Portner",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-20_J04_1_250_2
+JE194,JS,N,2015-06-20,J05,Stimpson Point,"Dylan Smyth,Katie Chan,Lauren Portner",NA,50,2,10-15,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE195,JS,S,2015-06-20,J07,South Mouth,"Dylan Smyth,Katie Chan,Lauren Portner",NA,25,1,5-10,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-20_J07_1_250_2
+JE193,JS,S,2015-06-20,J08,Naka Creek,"Dylan Smyth,Katie Chan,Lauren Portner",light,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-20_J08_1_250_2
+DE207,DI,E,2015-06-21,D01,Hurtado Point,"Brett Johnson. Kristi Inman,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE208,DI,E,2015-06-21,D02,Kinghorn Island,"Brett Johnson. Kristi Inman,Luke Rogers",NA,NA,1,NA,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE211,DI,E,2015-06-21,D03,Sutil Narrows,"Brett Johnson. Kristi Inman,Luke Rogers",nonw,25,NA,NA,NA,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE209,DI,E,2015-06-21,D05,Lewis Channel,"Brett Johnson. Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE210,DI,E,2015-06-21,D08,Calm Channel,"Brett Johnson. Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,W,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+JE197,JS,N,2015-06-21,J05,Stimpson Point,"Carson White,Katie Chan,Lauren Portner",NA,25,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-21_J05_1_250_2
+JE196,JS,N,2015-06-21,J06,Blinkensop Bay,"Carson White,Katie Chan,Lauren Portner",NA,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-21_J06_1_250_2
+JE198,JS,N,2015-06-21,J10,Hanson South,"Carson White,Katie Chan,Lauren Portner",NA,NA,1,0.1-5,NW,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-21_J10_1_250_2
+DE214,DI,C,2015-06-22,D09,Okisollo Channel,"Alex Hare,Caroyln Knapper,Luke Rogers",NA,25,1,0.1-5,SE,NA,NA,NA,1,STANDARD,1: Data entry note: Seems secchi depth was not taken,NA,NA,2015-06-22_D09_1_250_2
+DE212,DI,E,2015-06-22,D10,Hall Point,"Alex Hare,Caroyln Knapper,Luke Rogers",NA,75,1,0.1-5,SE,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-22_D10_1_250_2
+DE213,DI,NA,2015-06-22,D11,Turn Island,"Alex Hare,Caroyln Knapper,Luke Rogers",NA,25,1,0.1-5,S,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE216,DI,W,2015-06-23,D04,Fransisco Point,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,NA,2,5-10,NW,NA,NA,NA,1,STANDARD,1: No sockeye in set,NA,NA,NA
+DE217,DI,W,2015-06-23,D06,Gowlland Harbour,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,NA,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-23_D06_1_250_2
+DE215,DI,C,2015-06-23,D07,Hoskyn Channel,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,NA,1,0.1-5,N,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+JE200,JS,N,2015-06-23,J01,Hanson North,"Andrew Bateman,Chris Guinchard,Katie Pocock,Sean Godwin",NA,NA,NA,0.1-5,N,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-23_J01_1_250_2
+JE201,JS,N,2015-06-23,J02,Swanson Island,"Andrew Bateman,Chris Guinchard,Sean Godwin",NA,25,1,0.1-5,NW,NA,NA,NA,3,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-23_J02_1_250_2
+JE199,JS,N,2015-06-23,J03,Cracroft Point,"Carson White,Dylan Smyth,Lauren Portner",NA,NA,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-23_J03_1_250_2
+JE202,JS,S,2015-06-23,J09,Blinkhorn Peninsula,"Andrew Bateman,Chris Guinchard,Sean Godwin",NA,50,NA,0.1-5,N,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-23_J09_1_250_2
+DE220,DI,C,2015-06-24,D09,Okisollo Channel,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-24_D09_1_250_2
+DE218,DI,E,2015-06-24,D10,Hall Point,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,100,NA,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-24_D10_1_250_2
+DE219,DI,NA,2015-06-24,D11,Turn Island,"Carolyn Knapper,Luke Rogers,Natalie Mahara",NA,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-24_D11_1_250_2
+JE205,JS,N,2015-06-24,J05,Stimpson Point,"Andrew Bateman,Samantha Crowley,Sean Godwin",moderate,100,NA,0.1-5,SE,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-24_J05_1_250_2
+JE203,JS,N,2015-06-24,J06,Blinkensop Bay,"Andrew Bateman,Samantha Crowley,Sean Godwin",light,100,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-24_J06_1_250_2
+JE204,JS,S,2015-06-24,J07,South Mouth,"Andrew Bateman,Samantha Crowley,Sean Godwin",NA,100,NA,0.1-5,NE,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-24_J07_1_250_2
+JE206,JS,S,2015-06-24,J08,Naka Creek,"Andrew Bateman,Samantha Crowley,Sean Godwin",moderate,100,2,0.1-5,NE,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-24_J08_1_250_2
+DE223,DI,C,2015-06-27,D07,Hoskyn Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,1,5-10,N,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE222,DI,E,2015-06-27,D08,Calm Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,50,1,0.1-5,W,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE221,DI,C,2015-06-27,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,2,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-27_D09_1_250_2
+JE208,JS,N,2015-06-27,J01,Hanson North,"Carson White,Dylan Smyth,Peter Harrington",NA,100,NA,0.1-5,N,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-27_J01_1_250_2
+JE209,JS,S,2015-06-27,J09,Blinkhorn Peninsula,"Carson White,Dylan Smyth,Peter Harrington",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-27_J09_1_250_2
+JE207,JS,N,2015-06-27,J10,Hanson South,"Carson White,Dylan Smyth,Peter Harrington",NA,100,NA,0.1-5,S,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-27_J10_1_250_2
+JE210,JS,N,2015-06-28,J02,Swanson Island,"Carson White,Dylan Smyth,Peter Harrington",NA,NA,NA,NA,NA,NA,NA,NA,2,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-28_J02_1_250_2
+JE211,JS,N,2015-06-28,J03,Cracroft Point,"Carson White,Dylan Smyth,Peter Harrington",NA,NA,1,5-10,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-28_J03_1_250_2
+DE226,DI,C,2015-06-29,D09,Okisollo Channel,"Brett Johnson,Leo Pontier,Luke Rogers",NA,75,1,0.1-5,E,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-06-29_D09_1_250_2
+DE224,DI,E,2015-06-29,D10,Hall Point,"Brett Johnson,Leo Pontier,Luke Rogers",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: Too sparse to target,NA,NA,NA
+DE225,DI,NA,2015-06-29,D11,Turn Island,"Brett Johnson,Leo Pontier,Luke Rogers",NA,75,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-06-29_D11_1_250_2
+JE215,JS,N,2015-06-29,J04,Forward Bay,"Carson White,Lauren Portner,Peter Harrington",NA,75,2,5-10,NW,NA,NA,NA,0,STANDARD,"1: fish not at depth, saw one popper over total search time.",NA,NA,NA
+JE214,JS,N,2015-06-29,J05,Stimpson Point,"Carson White,Lauren Portner,Peter Harrington",NA,100,2,5-10,NW,NA,NA,NA,0,STANDARD,"1: fish not at depth, only saw 2 poppers over total search time.",NA,NA,NA
+JE213,JS,S,2015-06-29,J07,South Mouth,"Carson White,Lauren Portner,Peter Harrington",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-29_J07_1_250_2
+JE212,JS,S,2015-06-29,J08,Naka Creek,"Carson White,Lauren Portner,Peter Harrington",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-06-29_J08_1_250_2
+DE229,DI,C,2015-07-01,D09,Okisollo Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,1,NA,NA,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE227,DI,E,2015-07-01,D10,Hall Point,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,10-15,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE228,DI,NA,2015-07-01,D11,Turn Island,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,5-10,W,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+JE217,JS,N,2015-07-01,J03,Cracroft Point,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,50,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball. Whale activity",NA,NA,2015-07-01_J03_1_250_2
+JE218,JS,S,2015-07-01,J09,Blinkhorn Peninsula,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-07-01_J09_1_250_2
+JE216,JS,N,2015-07-01,J10,Hanson South,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,50,1,NA,NA,NA,NA,NA,1,STANDARD,"1: Secchi depth not possible. Tape broke, lost disc and cannon ball.",NA,NA,2015-07-01_J10_1_250_2
+DE232,DI,W,2015-07-02,D06,Gowlland Harbour,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,10-15,NW,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE230,DI,C,2015-07-02,D07,Hoskyn Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,2,5-10,NE,NA,NA,NA,0,STANDARD,1: No surface activity,NA,NA,NA
+DE231,DI,C,2015-07-02,D09,Okisollo Channel,"Carolyn Knapper,Kristi Inman,Luke Rogers",NA,NA,1,0.1-5,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-07-02_D09_1_250_2
+JE219,JS,N,2015-07-02,J01,Hanson North,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE220,JS,N,2015-07-02,J02,Swanson Island,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,1,10-15,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE233,DI,W,2015-07-05,D06,Gowlland Harbour,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,"1: No salmon surface activity, all herring and stickleback",NA,NA,NA
+DE234,DI,NA,2015-07-05,D11,Turn Island,"Brett Johnson,Carolyn Knapper,Luke Rogers",NA,25,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-05_D11_1_250_2
+DE235,DI,C,2015-07-06,D07,Hoskyn Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,NA,0.1-5,N,NA,NA,NA,0,STANDARD,1: Too sparse to target,NA,NA,NA
+DE236,DI,C,2015-07-06,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-06_D09_1_250_2
+DE237,DI,NA,2015-07-06,D11,Turn Island,"Brett Johnson,Kristi Inman,Luke Rogers",NA,50,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-06_D11_1_250_2
+DE239,DI,C,2015-07-07,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,NA,0.1-5,E,NA,NA,NA,2,STANDARD,NA,NA,NA,2015-07-07_D09_1_250_2
+DE238,DI,NA,2015-07-07,D11,Turn Island,"Brett Johnson,Kristi Inman,Luke Rogers",NA,50,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-07_D11_1_250_2
+JE222,JS,N,2015-07-07,J01,Hanson North,"Carson White,Lauren Portner,Sean Godwin",NA,100,NA,NA,NA,NA,NA,NA,0,STANDARD,1: net not set because no smolt activity,NA,NA,NA
+JE221,JS,N,2015-07-07,J02,Swanson Island,"Carson White,Lauren Portner,Sean Godwin",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE223,JS,N,2015-07-07,J03,Cracroft Point,"Carson White,Lauren Portner,Sean Godwin",NA,100,NA,0.1-5,NW,NA,NA,NA,0,STANDARD,1: net not set because no smolt activity,NA,NA,NA
+JE225,JS,S,2015-07-07,J09,Blinkhorn Peninsula,"Carson White,Lauren Portner,Sean Godwin",NA,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-07_J09_1_250_2
+JE224,JS,N,2015-07-07,J10,Hanson South,"Carson White,Lauren Portner,Sean Godwin",NA,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE227,JS,N,2015-07-10,J01,Hanson North,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE226,JS,N,2015-07-10,J02,Swanson Island,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,NA,NA,NA,NA,NA,NA,0,STANDARD,1: net not set because no smolt activity,NA,NA,NA
+JE228,JS,N,2015-07-10,J03,Cracroft Point,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,"1: net set on possible smolt school, fish not caught or seen again. Otherwise no smolt activity.",NA,NA,NA
+JE229,JS,N,2015-07-10,J10,Hanson South,"Dylan Smyth,Mack Bartlett,Sean Godwin",NA,NA,NA,NA,NA,NA,NA,NA,2,STANDARD,NA,NA,NA,NA
+DE240,DI,C,2015-07-14,D09,Okisollo Channel,"Brett Johnson,Kristi Inman,Luke Rogers",NA,50,NA,NA,NA,NA,NA,NA,1,STANDARD,1: Sockeye very small,NA,NA,2015-07-14_D09_1_250_2
+DE241,DI,NA,2015-07-14,D11,Turn Island,"Brett Johnson,Kristi Inman,Luke Rogers",NA,25,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2015-07-14_D11_1_250_2
+DE244,DI,C,2016-05-07,D09,Okisollo Channel,"Brett Johnson,Luke Rogers,Sam James",NA,NA,2,5-10,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-07_D09_1_250_SEMSP
+DE242,DI,E,2016-05-07,D22,McMullen Point,"Brett Johnson,Luke Rogers,Sam James",NA,25,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-07_D22_1_250_SEMSP
+DE243,DI,W,2016-05-07,D23,Discovery East,"Brett Johnson,Luke Rogers,Sam James",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-07_D23_1_250_SEMSP
+DE248,DI,C,2016-05-09,D07,Hoskyn Channel,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",NA,NA,2,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-09_D07_1_250_SEMSP
+DE245,DI,E,2016-05-09,D08,Calm Channel,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",NA,NA,1,0.1-5,NW,NA,NA,NA,2,STANDARD,"1: Fish surface activity: rapid splashing as of many fish. Visual on several: small <7cm, some distinct popping also.",NA,NA,2016-05-09_D08_1_250_SEMSP
+DE247,DI,C,2016-05-09,D24,Surge Narrows,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",NA,NA,2,5-10,NE,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-09_D24_1_250_SEMSP
+DE249,DI,W,2016-05-10,D04,Fransisco Point,"Brett Johnson,Luke Rogers,Sam James",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-10_D04_1_250_SEMSP
+DE251,DI,E,2016-05-10,D25,Twin Islands,"Brett Johnson,Luke Rogers,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-10_D25_1_250_SEMSP
+DE250,DI,W,2016-05-10,D26,Oyster Bay,"Brett Johnson,Luke Rogers,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-10_D26_1_250_SEMSP
+DE254,DI,NA,2016-05-11,D11,Turn Island,"Luke Rogers,Sam James,Tim Spesivy",NA,NA,1,5-10,W,NA,NA,NA,0,STANDARD,"1: Scan 11:14-11:30 at Turn Isl, 11:36-11:46 at Rock Bay",NA,NA,2016-05-11_D11_1_250_SEMSP
+DE252,DI,E,2016-05-11,D20,Godwin Point,"Luke Rogers,Sam James,Tim Spesivy",light,100,1,5-10,W,NA,NA,NA,0,STANDARD,1: Scan stopped at 0802 near Godwin Pt and restarted at 0804 in Bickley Bay.,NA,NA,2016-05-11_D20_1_250_SEMSP
+DE253,DI,E,2016-05-11,D21,Hemming Bay,"Luke Rogers,Sam James,Tim Spesivy",NA,25,1,0.1-5,W,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-11_D21_1_250_SEMSP
+DE258,DI,W,2016-05-13,D04,Fransisco Point,"Brett Johnson,Luke Rogers,TIm Spesivy",NA,75,1,0.1-5,S,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-13_D04_1_250_SEMSP
+DE255,DI,E,2016-05-13,D25,Twin Islands,"Brett Johnson,Luke Rogers,TIm Spesivy",NA,25,NA,0.1-5,S,NA,NA,NA,2,STANDARD,1: Saw fish immediately upon site arrival,NA,NA,2016-05-13_D25_1_250_SEMSP
+DE257,DI,W,2016-05-13,D26,Oyster Bay,"Brett Johnson,Luke Rogers,TIm Spesivy",NA,50,1,0.1-5,SE,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-13_D26_1_250_SEMSP
+DE261,DI,C,2016-05-14,D07,Hoskyn Channel,"Brett Johnson,Luke Rogers,Sam James",NA,50,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-14_D07_1_250_SEMSP
+DE260,DI,E,2016-05-14,D08,Calm Channel,"Brett Johnson,Luke Rogers,Sam James",NA,50,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-14_D08_1_250_SEMSP
+DE259,DI,C,2016-05-14,D24,Surge Narrows,"Brett Johnson,Luke Rogers,Sam James",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-14_D24_1_250_SEMSP
+DE262,DI,C,2016-05-15,D09,Okisollo Channel,"Luke Rogers,Sam James,Tim Spesivy",NA,100,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-15_D09_1_250_SEMSP
+DE263,DI,E,2016-05-15,D22,McMullen Point,"Luke Rogers,Sam James,Tim Spesivy",NA,50,2,5-10,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-15_D22_1_250_SEMSP
+DE264,DI,W,2016-05-15,D23,Discovery East,"Luke Rogers,Sam James,Tim Spesivy",NA,50,1,5-10,N,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-05-15_D23_1_250_SEMSP
+DE266,DI,NA,2016-05-16,D11,Turn Island,"Brett Johnson,Sam James,Tim Spesivy",NA,25,2,5-10,W,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-16_D11_1_250_SEMSP
+DE268,DI,E,2016-05-16,D20,Godwin Point,"Brett Johnson,Sam James,Tim Spesivy",NA,75,1,5-10,W,NA,NA,NA,0,STANDARD,"1: 2 Scans:2: Bickley Bay (10 min)3: Shoal Bay + Godwin Pt (10 min),",NA,NA,2016-05-16_D20_1_250_SEMSP
+DE267,DI,E,2016-05-16,D21,Hemming Bay,"Brett Johnson,Sam James,Tim Spesivy",NA,50,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-16_D21_1_250_SEMSP
+DE272,DI,W,2016-05-18,D04,Fransisco Point,"Luke Rogers,Olivia Gutjahr,Sam James",NA,100,1,5-10,NW,NA,NA,NA,2,STANDARD,1: Resume search 13:05 after first set.,NA,NA,2016-05-18_D04_1_250_SEMSP
+DE269,DI,E,2016-05-18,D25,Twin Islands,"Luke Rogers,Olivia Gutjahr,Sam James",NA,100,NA,0.1-5,SE,NA,NA,NA,2,STANDARD,"1: First set 06:20 mostly chum fry. Set on dimpling 2 and a single slider event(1) resume search 06:48, second set 06:58-targeted set.",NA,NA,2016-05-18_D25_1_250_SEMSP
+DE271,DI,W,2016-05-18,D26,Oyster Bay,"Luke Rogers,Olivia Gutjahr,Sam James",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,"1: 1 single slider seen, nothing else",NA,NA,2016-05-18_D26_1_250_SEMSP
+DE276,DI,C,2016-05-19,D07,Hoskyn Channel,"Luke Rogers,Olivia Gutjahr,Sam James",light,100,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-19_D07_1_250_SEMSP
+DE274,DI,E,2016-05-19,D08,Calm Channel,"Luke Rogers,Olivia Gutjahr,Sam James",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-19_D08_1_250_SEMSP
+DE275,DI,C,2016-05-19,D24,Surge Narrows,"Luke Rogers,Olivia Gutjahr,Sam James",NA,100,1,5-10,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-19_D24_1_250_SEMSP
+JE231,JS,N,2016-05-20,J05,Stimpson Point,"Chris Guinchard,Mirko Diaz,Sean Godwin",NA,50,2,5-10,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE232,JS,S,2016-05-20,J07,South Mouth,"Chris Guinchard,Clare Atkinson,Mirko Diaz,Sean Godwin",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE230,JS,S,2016-05-20,J08,Naka Creek,"Chris Guinchard,Mirko Diaz,Sean Godwin",NA,50,2,5-10,SE,NA,NA,NA,0,STANDARD,NA,NA,NA,NA
+JE235,JS,N,2016-05-21,J04,Forward Bay,"Chris Guinchard,Clare Atkinson,Mirko Diaz,Sean Godwin",NA,NA,1,0.1-5,NW,NA,NA,NA,3,STANDARD,"1: few small cryptic schools, unable to catch",NA,NA,NA
+JE233,JS,N,2016-05-21,J06,Blinkensop Bay,"Chris Guinchard,Clare Atkinson,Sean Godwin",NA,NA,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE234,JS,S,2016-05-21,J07,South Mouth,"Chris Guinchard,Clare Atkinson,Sean Godwin",NA,NA,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,NA
+JE236,JS,S,2016-05-21,J08,Naka Creek,"Chris Guinchard,Clare Atkinson,Sean Godwin",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE241,JS,N,2016-05-22,J01,Hanson North,"Clare Atkinson,Mirko Diaz,Sean Godwin",NA,50,3,5-10,NW,NA,NA,NA,0,STANDARD,"1: Bad weather, no fish",NA,NA,NA
+JE240,JS,N,2016-05-22,J02,Swanson Island,"Clare Atkinson,Mirko Diaz,Sean Godwin",NA,25,2,10-15,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE239,JS,N,2016-05-22,J03,Cracroft Point,"Clare Atkinson,Mirko Diaz,Sean Godwin",NA,25,3,10-15,NW,NA,NA,NA,2,STANDARD,"1: Few good schools, bad current and wind. Set twice, difficult condition, no fish, forgot YSI and secchi",NA,NA,NA
+JE237,JS,S,2016-05-22,J09,Blinkhorn Peninsula,"Clare Atkinson,Mirko Diaz,Sean Godwin",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,1: forgot Secchi,NA,NA,NA
+JE238,JS,N,2016-05-22,J10,Hanson South,"Clare Atkinson,Mirko Diaz,Sean Godwin",NA,25,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+DE277,DI,C,2016-05-23,D09,Okisollo Channel,"Luke Rogers,Olivia Gutjahr,Tim Spesivy",NA,100,1,NA,NA,NA,NA,NA,1,STANDARD,1: YSI did not calibrate this morning- fluctuating readings. Coho neglected and in dry shipper.,NA,NA,2016-05-23_D09_1_250_SEMSP
+DE279,DI,E,2016-05-23,D22,McMullen Point,"Luke Rogers,Olivia Gutjahr,Tim Spesivy",NA,25,2,10-15,N,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-05-23_D22_1_250_SEMSP
+DE278,DI,E,2016-05-23,D27,Granite Point,"Luke Rogers,Olivia Gutjahr,Tim Spesivy",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-23_D27_1_250_SEMSP
+DE281,DI,NA,2016-05-24,D11,Turn Island,"Brett Johnson,Tim Spesivy,Yulia Kuzmenko",NA,50,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-24_D11_1_250_SEMSP
+DE283,DI,E,2016-05-24,D20,Godwin Point,"Brett Johnson,Tim Spesivy,Yulia Kuzmenko",NA,50,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-27_D20_1_250_Semps
+DE283,DI,E,2016-05-24,D20,Godwin Point,"Brett Johnson,Tim Spesivy,Yulia Kuzmenko",NA,50,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-24_D20_1_250_SEMSP
+DE282,DI,E,2016-05-24,D21,Hemming Bay,"Brett Johnson,Tim Spesivy,Yulia Kuzmenko",NA,75,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-24_D21_1_250_SEMSP
+DE287,DI,C,2016-05-26,D07,Hoskyn Channel,"Lauren Portner,Luke Rogers,Sam James",NA,100,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-26_D07_1_250_SEMSP
+DE284,DI,E,2016-05-26,D08,Calm Channel,"Lauren Portner,Luke Rogers,Sam James",NA,50,1,0.1-5,W,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-05-26_D08_1_250_SEMSP
+DE286,DI,C,2016-05-26,D24,Surge Narrows,"Lauren Portner,Luke Rogers,Sam James",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-26_D24_1_250_SEMSP
+JE243,JS,N,2016-05-26,J04,Forward Bay,"Brett Johnson,Sean Godwin,Shannon Mendt",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,"1: flow-meter did not rotate, did not retain sample",NA,NA,NA
+JE244,JS,N,2016-05-26,J05,Stimpson Point,"Brett Johnson,Sean Godwin,Shannon Mendt",NA,100,3,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,NA
+JE242,JS,S,2016-05-26,J08,Naka Creek,"Brett Johnson,Sean Godwin,Shannon Mendt",NA,100,2,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-26_J08_1_250_5
+DE290,DI,C,2016-05-27,D09,Okisollo Channel,"Lauren Portner,Luke Rogers,Sam James",NA,75,1,5-10,NW,NA,NA,NA,2,STANDARD,"1: Caught net on bottom, abandoned set to free net.",NA,NA,2016-05-27_D09_1_250_SEMSP
+DE288,DI,E,2016-05-27,D22,McMullen Point,"Lauren Portner,Luke Rogers,Sam James",NA,75,1,10-15,NW,NA,NA,NA,1,STANDARD,1: appr. 2 ml of zooplankton sample was lost,NA,NA,2016-05-27_D22_1_250_SEMSP
+DE289,DI,E,2016-05-27,D27,Granite Point,"Lauren Portner,Luke Rogers,Sam James",NA,50,2,10-15,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-27_D27_1_250_SEMSP
+JE249,JS,N,2016-05-27,J01,Hanson North,"Brett Johnson,Brianna Knowles,Sean Godwin",light,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-27_J01_1_250_5
+JE245,JS,N,2016-05-27,J06,Blinkensop Bay,"Brett Johnson,Brianna Knowles,Sean Godwin",NA,75,2,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-05-27_J06_1_250_5
+JE246,JS,S,2016-05-27,J07,South Mouth,"Brett Johnson,Brianna Knowles,Sean Godwin",NA,50,3,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-27_J07_1_250_5
+JE248,JS,S,2016-05-27,J09,Blinkhorn Peninsula,"Brett Johnson,Brianna Knowles,Jack Goldman,Sean Godwin",light,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-27_J09_1_250_5
+JE247,JS,N,2016-05-27,J10,Hanson South,"Brett Johnson,Brianna Knowles,Sean Godwin",light,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-05-27_J10_1_250_5
+JE250,JS,N,2016-05-28,J02,Swanson Island,"Brett Johnson,Brianna Knowles,Shannon Mendt",light,100,NA,NA,NA,NA,NA,NA,2,STANDARD,1: No fish on first set,NA,NA,2016-05-28_J02_1_250_5
+JE251,JS,N,2016-05-28,J03,Cracroft Point,"Brett Johnson,Brianna Knowles,Jack Goldman,Shannon Mendt",NA,25,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-05-28_J03_1_250_5
+DE292,DI,C,2016-06-01,D09,Okisollo Channel,"Brett Johnson,Luke Rogers,Mirko Diaz",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-01_D09_1_250_SEMSP
+DE294,DI,E,2016-06-01,D22,McMullen Point,"Brett Johnson,Luke Rogers,Mirko Diaz",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: First dayaltering search time method. First day with altered set/site-wide surface activity,NA,NA,2016-06-01_D22_1_250_SEMSP
+DE293,DI,E,2016-06-01,D27,Granite Point,"Brett Johnson,Luke Rogers,Mirko Diaz",NA,50,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: Starting to use 64 um sieved filter for zooplankton preservation,NA,NA,2016-06-01_D27_1_250_SEMSP
+JE253,JS,N,2016-06-01,J01,Hanson North,"Chris Guinchard,Dylan Smyth.,Lauren Portner",NA,100,NA,0.1-5,N,NA,NA,NA,1,STANDARD,1: Morts due to misidentification,NA,NA,2016-06-01_J01_1_250_5
+JE252,JS,N,2016-06-01,J02,Swanson Island,"Chris Guinchard,Dylan Smyth.,Lauren Portner",NA,75,NA,NA,NA,NA,NA,NA,1,STANDARD,1: Secchi left onboard Madrona,NA,NA,2016-06-01_J02_1_250_5
+DE295,DI,NA,2016-06-02,D11,Turn Island,"Brett Johnson,Sam James,Tim Spesivy",NA,75,1,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-02_D11_1_250_SEMSP
+DE297,DI,E,2016-06-02,D20,Godwin Point,"Brett Johnson,Sam James,Tim Spesivy",light,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-02_D20_1_250_SEMSP
+DE296,DI,E,2016-06-02,D21,Hemming Bay,"Brett Johnson,Sam James,Tim Spesivy",NA,75,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-02_D21_1_250_SEMSP
+JE256,JS,S,2016-06-02,J08,Naka Creek,"Dylan Smyth,Lauren Portner,Olivia Gutjahr",NA,100,1,5-10,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-02_J08_1_250_5
+JE255,JS,S,2016-06-02,J09,Blinkhorn Peninsula,"Dylan Smyth,Lauren Portner,Olivia Gutjahr",NA,50,1,5-10,S,NA,NA,NA,2,STANDARD,1: Couldnt locate whatman paper for JS00541-JS00660,NA,NA,2016-06-02_J09_1_250_5
+JE254,JS,N,2016-06-02,J10,Hanson South,"Dylan Smyth,Lauren Portner,Olivia Gutjahr",NA,50,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-02_J10_1_250_5
+DE300,DI,C,2016-06-03,D07,Hoskyn Channel,"Luke Rogers,Mirko Diaz,Sam James",NA,100,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-03_D07_1_250_SEMSP
+DE298,DI,E,2016-06-03,D08,Calm Channel,"Luke Rogers,Mirko Diaz,Sam James",NA,100,1,0.1-5,NE,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-03_D08_1_250_SEMSP
+DE299,DI,C,2016-06-03,D24,Surge Narrows,"Luke Rogers,Mirko Diaz,Sam James",NA,100,1,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-03_D24_1_250_SEMSP
+JE257,JS,N,2016-06-03,J05,Stimpson Point,"Chris Guinchard,Dylan Smyth,Lauren Portner,Olivia Gutjahr",NA,100,2,5-10,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-03_J05_1_250_5
+JE258,JS,S,2016-06-03,J07,South Mouth,"Chris Guinchard,Dylan Smyth,Lauren Portner,Olivia Gutjahr",NA,100,2,5-10,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-03_J07_1_250_UBCFlow
+JE261,JS,N,2016-06-04,J03,Cracroft Point,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr",NA,NA,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-04_J03_1_250_5
+JE260,JS,N,2016-06-04,J04,Forward Bay,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr",NA,50,2,10-15,NW,NA,NA,NA,1,STANDARD,"1: no fish, stopped for weather",NA,NA,2016-06-04_J04_1_250_5
+JE259,JS,N,2016-06-04,J06,Blinkensop Bay,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr",NA,50,NA,0.1-5,SE,NA,NA,NA,3,STANDARD,NA,NA,NA,2016-06-04_J06_1_250_5
+DE301,DI,C,2016-06-07,D09,Okisollo Channel,"Brett Johnson,Luke Rogers,Mirko Diaz,Sam James",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Set concurrent with Chrys Set (Nordic Queen), Lenora set (Beach Seine 1), and Stephane Transects (Pellesi).",NA,NA,2016-06-07_D09_1_250_SEMSP
+DE302,DI,E,2016-06-07,D22,McMullen Point,"Luke Rogers,Mirko Diaz,Sam James",NA,NA,2,5-10,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-07_D22_1_250_SEMSP
+DE303,DI,NA,2016-06-08,D11,Turn Island,"Luke Rogers,Shannon Mendt,Tim Spesivy",NA,100,1,0.1-5,W,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-08_D11_2_250_SEMSP
+DE305,DI,E,2016-06-08,D20,Godwin Point,"Luke Rogers,Shannon Mendt,Tim Spesivy",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,1: No fish in first set.,NA,NA,2016-06-08_D20_2_250_SEMSP
+DE304,DI,E,2016-06-08,D21,Hemming Bay,"Luke Rogers,Shannon Mendt,Tim Spesivy",NA,75,1,0.1-5,SW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-08_D21_2_250_SEMSP
+DE309,DI,W,2016-06-09,D04,Fransisco Point,"Brett Johnson,Shannon Mendt,Tim Spesivy",NA,25,3,10-15,SE,NA,NA,NA,0,STANDARD,1: High wind and swell,NA,NA,2016-06-09_D04_2_250_Semsp
+DE308,DI,C,2016-06-09,D07,Hoskyn Channel,"Brett Johnson,Shannon Mendt,Tim Spesivy",NA,100,1,0.1-5,S,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_D07_2_250_SEMSP
+DE307,DI,E,2016-06-09,D08,Calm Channel,"Brett Johnson,Shannon Mendt,Tim Spesivy",NA,100,2,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_D08_2_250_SEMSP
+JE264,JS,N,2016-06-09,J02,Swanson Island,"Brianna Knowles,Lauren Portner,Melissa Orobko,Sam James",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_J02_1_250_Net5
+JE264,JS,N,2016-06-09,J02,Swanson Island,"Brianna Knowles,Lauren Portner,Melissa Orobko,Sam James",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_J02_1_250_5
+JE262,JS,S,2016-06-09,J09,Blinkhorn Peninsula,"Brianna Knowles,Lauren Portner,Sam James",NA,NA,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_J09_1_250_5
+JE262,JS,S,2016-06-09,J09,Blinkhorn Peninsula,"Brianna Knowles,Lauren Portner,Sam James",NA,NA,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_J09_1_250_Net5
+JE263,JS,N,2016-06-09,J10,Hanson South,"Brianna Knowles,Lauren Portner,Sam James",moderate,100,NA,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-09_J10_1_250_5
+JE265,JS,N,2016-06-10,J01,Hanson North,"Claire Atkinson,Lauren Portner,Sam James",NA,100,1,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-10_J01_1_250_5
+JE266,JS,N,2016-06-10,J03,Cracroft Point,"Claire Atkinson,Lauren Portner,Sam James",NA,100,3,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-10_J03_1_250_5
+JE267,JS,N,2016-06-10,J04,Forward Bay,"Claire Atkinson,Lauren Portner,Sam James",NA,100,NA,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-10_J04_1_250_5
+JE268,JS,S,2016-06-10,J08,Naka Creek,"Claire Atkinson,Lauren Portner,Melissa Orobko,Sam James",moderate,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-10_J08_1_250_5
+DE313,DI,W,2016-06-11,D04,Fransisco Point,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",NA,100,NA,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-11_D04_2_250_SEMSP
+DE310,DI,E,2016-06-11,D25,Twin Islands,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",light,100,NA,NA,NA,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-11_D25_2_250_SEMSP
+DE312,DI,W,2016-06-11,D26,Oyster Bay,"Luke Rogers,Tim Spesivy,Yuliya Kuzmenko",NA,100,NA,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-11_D26_2_250_SEMSP
+JE271,JS,N,2016-06-11,J05,Stimpson Point,"Brianna Knowles,Clare Atkinson,Melissa Orobko,Sam James",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J05_3_250_Net5
+JE271,JS,N,2016-06-11,J05,Stimpson Point,"Brianna Knowles,Clare Atkinson,Melissa Orobko,Sam James",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J05_3_250_5
+JE269,JS,N,2016-06-11,J06,Blinkensop Bay,"Brianna Knowles,Lauren Portner,Sam James",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J06_1_250_Net5
+JE269,JS,N,2016-06-11,J06,Blinkensop Bay,"Brianna Knowles,Lauren Portner,Sam James",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J06_1_250_5
+JE270,JS,S,2016-06-11,J07,South Mouth,"Brianna Knowles,Clare Atkinson,Sam James",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J07_1_250_Net 5.
+JE270,JS,S,2016-06-11,J07,South Mouth,"Brianna Knowles,Clare Atkinson,Sam James",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-11_J07_1_250_5
+DE316,DI,NA,2016-06-13,D11,Turn Island,"Brett Johnson,Brianna Knowles,Luke Rogers",light,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-13_D11_1_250_SEMSP
+DE314,DI,E,2016-06-13,D20,Godwin Point,"Brett Johnson,Brianna Knowles,Luke Rogers",NA,100,1,0.1-5,W,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-13_D20_1_250_SEMSP
+DE315,DI,E,2016-06-13,D21,Hemming Bay,"Brett Johnson,Brianna Knowles,Luke Rogers",NA,100,1,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-13_D21_2_250_SEMSP
+DE322,DI,C,2016-06-14,D09,Okisollo Channel,"Brianna Knowles,Luke Rogers,Sam James",NA,50,1,0.1-5,S,NA,NA,NA,1,STANDARD,"1: 3 random sets conducted over DFO accoustic moorings. 1) 06:34 @ 50.305971N, 125.334369W - Dimpling observed but no fish in net. 2) 06:59 @ same as 1st set - some dimpling observed, no fish in net. 3) 07:40 @ western mooring. No surface activity observed, no fish.",NA,NA,2016-06-14_D09_1_250_SEMSP
+DE317,DI,C,2016-06-14,D09,Okisollo Channel,"Brianna Knowles,Luke Rogers,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,3,STANDARD,1: random blind set thus no other data collected,NA,NA,2016-06-14_D09_1_250_SEMSP
+DE320,DI,E,2016-06-14,D22,McMullen Point,"Brianna Knowles,Luke Rogers,Sam James",NA,25,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-14_D22_1_250_SEMSP
+DE321,DI,E,2016-06-14,D27,Granite Point,"Brianna Knowles,Luke Rogers,Sam James",NA,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-14_D27_1_250_SEMSP
+DE327,DI,C,2016-06-16,D07,Hoskyn Channel,"Kate Holmes,Luke Rogers,Sam James",NA,25,NA,0.1-5,S,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-16_D07_1_250_SEMSP
+DE323,DI,E,2016-06-16,D08,Calm Channel,"Kate Holmes,Luke Rogers,Sam James",NA,25,NA,NA,NA,NA,NA,NA,2,STANDARD,"1: Sampling with DFO. Chrys Neville/Nordic Queen first set time: 06:33. One splash and one dimple ovserved, but not deemed settable school. No other surface activity observed in area. DFO also reported minimal fish in their catch, almost no sockeye.",NA,NA,2016-06-16_D08_2_250_SEMSP
+DE325,DI,C,2016-06-16,D24,Surge Narrows,"Kate Holmes,Luke Rogers,Sam James",NA,25,NA,NA,NA,NA,NA,NA,2,STANDARD,"1: Sparse splashing, no fish.",NA,NA,2016-06-16_D24_2_250_SEMSP
+JE273,JS,N,2016-06-17,J01,Hanson North,"Chris Guinchard,Mirko Diaz,Olivia Gutjahr",NA,25,NA,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-17_J01_1_250_Net 5
+JE273,JS,N,2016-06-17,J01,Hanson North,"Chris Guinchard,Mirko Diaz,Olivia Gutjahr",NA,25,NA,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-17_J01_1_250_5
+JE272,JS,N,2016-06-17,J02,Swanson Island,"Chris Guinchard,Mirko Diaz,Olivia Gutjahr",NA,75,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-17_J02_1_250_Net 5
+JE276,JS,N,2016-06-18,J03,Cracroft Point,"Chris Guinchard,Dylan Smyth,Mirko Diaz,Stephanie Peacock",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-18_J03_1_250_5
+JE274,JS,S,2016-06-18,J09,Blinkhorn Peninsula,"Chris Guinchard,Dylan Smyth,Mirko Diaz,Stephanie Peacock",NA,50,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-18_J09_1_250_5
+JE275,JS,N,2016-06-18,J10,Hanson South,"Chris Guinchard,Dylan Smyth,Mirko Diaz,Stephanie Peacock",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,1: No setable fish. Called it after 1 hour of searching.,NA,NA,2016-06-18_J10_1_250_5
+JE277,JS,N,2016-06-19,J04,Forward Bay,"Andrew Bateman,Chris Guinchard,Dylan Smyth,Olivia Gutjahr",NA,100,NA,0.1-5,NW,NA,NA,NA,0,STANDARD,"1: Searched for 1 hour and 40 minutes, dimpling seen at the end of survey turned out to be perch.",NA,NA,2016-06-19_J04_1_250_UBC
+JE281,JS,N,2016-06-19,J05,Stimpson Point,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr,Stephanie Peacock",NA,75,2,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-19_J05_3_250_5
+JE282,JS,N,2016-06-19,J06,Blinkensop Bay,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr,Stephanie Peacock",NA,75,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-19_J06_1_250_5
+JE278,JS,S,2016-06-19,J08,Naka Creek,"Chris Guinchard,Dylan Smyth,Olivia Gutjahr,Stephanie Peacock",NA,100,1,0.1-5,NW,NA,NA,NA,3,STANDARD,1: Three seperate sets no sockeye. No fish collected.,NA,NA,2016-06-19_J08_2_250_5
+JE283,JS,S,2016-06-20,J07,South Mouth,"Dylan Smyth,Mirko Diaz,Olivia Guinchard,Stephanie Peacock",NA,NA,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-20_J07_1_250_5
+DE329,DI,C,2016-06-21,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,25,1,NA,NA,NA,NA,NA,2,STANDARD,"1: DFO set at 09:30. No fish in our first set but large school observed. 3 CTD drops total: 1 practice, 1 @ oceanography site (65m), 1 @ fish site (10m)",D09_2016-06-21_4,D09_2016-06-21_1,2016-06-21_D09_3_250_SEMSP
+DE329,DI,C,2016-06-21,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,25,1,NA,NA,NA,NA,NA,2,STANDARD,"1: DFO set at 09:30. No fish in our first set but large school observed. 3 CTD drops total: 1 practice, 1 @ oceanography site (65m), 1 @ fish site (10m)",D09_2016-06-21_1,D09_2016-06-21_1,2016-06-21_D09_3_250_SEMSP
+DE331,DI,E,2016-06-21,D22,McMullen Point,"Brett Johnson,Brianna Knowles,Sam James",NA,25,1,0.1-5,NW,NA,NA,NA,1,STANDARD,1: On site for 2 hours. Only 1 successful set conducted,D22_2016-06-21_2,D22_2016-06-21_2,2016-06-21_D22_3_250_SEMSP
+DE334,DI,E,2016-06-21,D27,Granite Point,"Brett Johnson,Brianna Knowles,Sam James",NA,100,2,10-15,SE,NA,NA,NA,0,STANDARD,NA,D27_2016-06-21_4,D27_2016-06-21_4,2016-06-21_D27_3_250_SEMSP
+DE338,DI,E,2016-06-22,D20,Godwin Point,"Brianna Knowles,Luke Rogers,Tim Spesivy",NA,100,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,D20_2016-06-22_2,D20_2016-06-22_2,2016-06-22_D20_3_250_SEMSP
+DE335,DI,E,2016-06-22,D21,Hemming Bay,"Brianna Knowles,Luke Rogers,Tim Spesivy",NA,100,NA,NA,NA,NA,NA,NA,2,STANDARD,NA,D21_2016-06-22_2,D21_2016-06-22_2,2016-06-22_D21_3_250_SEMSP
+DE337,DI,NA,2016-06-22,D28,Knox Bay,"Brianna Knowles,Luke Rogers,Tim Spesivy",NA,100,1,0.1-5,S,NA,NA,NA,1,STANDARD,1: DFO set at 10:44 - Cameron & Julia report zero sockeye in set. 1st set 10:52 on one aggressive slider. Suspect coho,D28_2016-06-22_2,D28_2016-06-22_2,2016-06-22_D28_3_250_SEMSP
+DE339,DI,C,2016-06-23,D07,Hoskyn Channel,"Luke Rogers,Sam James,Tim Spesivy",moderate,100,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,D07_2016-06-23_2,D07_2016-06-23_2,2016-06-23_D07_3_250_SEMSP
+DE340,DI,E,2016-06-23,D08,Calm Channel,"Luke Rogers,Sam James,Tim Spesivy",moderate,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,D08_2016-06-23_1,D08_2016-06-23_2,2016-06-23_D08_3_250_SEMSP
+DE340,DI,E,2016-06-23,D08,Calm Channel,"Luke Rogers,Sam James,Tim Spesivy",moderate,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,D08_2016-06-23_2,D08_2016-06-23_2,2016-06-23_D08_3_250_SEMSP
+DE341,DI,C,2016-06-23,D24,Surge Narrows,"Luke Rogers,Sam James,Tim Spesivy",moderate,100,1,0.1-5,S,NA,NA,NA,1,STANDARD,NA,D24_2016-06-23_2,D24_2016-06-23_2,2016-06-23_D24_3_250_SEMSP
+JE286,JS,N,2016-06-23,J03,Cracroft Point,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",light,100,1,0.1-5,NE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-23_J03_1_250_5
+JE284,JS,S,2016-06-23,J09,Blinkhorn Peninsula,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",moderate,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-23_J09_1_250_5
+JE285,JS,N,2016-06-23,J10,Hanson South,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",light,100,NA,NA,NA,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-23_J10_1_250_5
+DE344,DI,W,2016-06-24,D04,Fransisco Point,"Brianna Knowles,Luke Rogers,Natalie Mahara",NA,100,1,0.1-5,S,NA,NA,NA,1,STANDARD,"1: 1st set no fish, interupted oceanography to set. Crafty fish, very skittish. Gone Quickly. Ipad not working and coordinates were taken off phne in degree decimal minutes. 2nd set: after leaving the site.",D04_2016-06-24_3,D04_2016-06-24_3,2016-06-24_D04_1_250_SEMSP
+DE342,DI,E,2016-06-24,D25,Twin Islands,"Brianna Knowles,Luke Rogers,Natalie Mahara",light,100,NA,0.1-5,NW,NA,NA,NA,1,STANDARD,"1: Natalie asks that we write ""formalin"" on pet jar labels. CTD times stored on IPAD but IPAD touch screen not responding",D25_2016-06-24_1,D25_2016-06-24_1,2016-06-24_D25_1_250_SEMSP
+DE343,DI,W,2016-06-24,D26,Oyster Bay,"Brianna Knowles,Luke Rogers,Natalie Mahara",NA,75,1,0.1-5,N,NA,NA,NA,0,STANDARD,"1: Ipad not working. Coordinates taken from phone in degree, minutes, seconds)",D26_2016-06-24_1,D26_2016-06-24_1,2016-06-24_D26_1_250_SEMSP
+JE287,JS,N,2016-06-24,J01,Hanson North,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",light,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-24_J01_1_250_5
+JE288,JS,N,2016-06-24,J02,Swanson Island,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",moderate,100,1,NA,NA,NA,NA,NA,1,STANDARD,"1: Other activity in area, but no distinct sockeye. Difficult catching consditions, so kept school. Herring was small (~6cm) and dead when net was brought in.",NA,NA,2016-06-24_J02_1_250_5
+JE289,JS,N,2016-06-24,J04,Forward Bay,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",NA,100,1,0.1-5,SW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-06-24_J04_1_250_5
+JE290,JS,S,2016-06-24,J08,Naka Creek,"Andrew Bateman,Clare Atkinson,Fiona Francis,Shannon Mendt",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-24_J08_1_250_5
+JE293,JS,N,2016-06-25,J05,Stimpson Point,"Andrew Bateman,Clare Atkinson,Fiona Francis,Shannon Mendt",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-06-25_J05_1_250_5
+JE291,JS,N,2016-06-25,J06,Blinkensop Bay,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-25_J06_1_250_5
+JE292,JS,S,2016-06-25,J07,South Mouth,"Clare Atkinson,Fiona Francis,Sean Godwin,Shannon Mendt",NA,100,1,5-10,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-25_J07_1_250_5
+DE347,DI,C,2016-06-28,D07,Hoskyn Channel,"Luke Rogeres,Time Spesivy,Yuliya Kuzmenko",NA,NA,1,0.1-5,SE,NA,NA,NA,0,STANDARD,1: No CTD today due to malfunction,NA,NA,2016-06-28_D07_2_250_SEMSP
+DE346,DI,E,2016-06-28,D08,Calm Channel,"Luke Rogeres,Time Spesivy,Yuliya Kuzmenko",NA,NA,1,NA,NA,NA,NA,NA,0,STANDARD,1: No CTD today due to malfunction,NA,NA,2016-06-28_D08_2_250_SEMSP
+DE345,DI,C,2016-06-28,D24,Surge Narrows,"Luke Rogeres,Time Spesivy,Yuliya Kuzmenko",NA,NA,1,0.1-5,E,NA,NA,NA,0,STANDARD,1: No CTD today due to malfunction,NA,NA,2016-06-28_D24_2_250_SEMSP
+DE350,DI,C,2016-06-29,D09,Okisollo Channel,"Brett Johnson,Grant Callegari,Luke Rogers,Sam James",NA,NA,NA,0.1-5,W,NA,NA,NA,2,STANDARD,"1: Set 1 with DFO. DFO set at 09:22, Sloop Jo set at 09:24. Random set, no fish.",NA,NA,2016-06-29_D09_2_250_SEMSP
+DE349,DI,E,2016-06-29,D22,McMullen Point,"Brett Johnson,Grant Callegari,Luke Rogers,Sam James",NA,NA,1,0.1-5,NW,NA,NA,NA,0,STANDARD,"1: Search paused at 07:19, continued at 07:41.",NA,NA,2016-06-29_D22_2_250_SEMSP
+DE348,DI,E,2016-06-29,D27,Granite Point,"Brett Johnson,Grant Callegari,Luke Rogers,Sam James",NA,NA,2,5-10,NW,NA,NA,NA,0,STANDARD,1: For site-wide poppers: 2 single pops in 2 separate locations.,NA,NA,2016-06-29_D27_2_250_SEMSP
+DE353,DI,NA,2016-06-30,D11,Turn Island,"Brianna Knowles,Luke Rogers,Sam James",NA,NA,1,5-10,W,NA,NA,NA,1,STANDARD,1: Fucus caught on line for zoop tow. May have affected flowmeter.,NA,NA,2016-06-30_D11_2_250_SEMSP
+DE355,DI,E,2016-06-30,D20,Godwin Point,"Brianna Knowles,Luke Rogers,Sam James",NA,75,1,0.1-5,NE,NA,NA,NA,1,STANDARD,"1: Search paused at 14:51, continued at 15:08.",NA,NA,2016-06-30_D20_2_250_SEMSP
+DE352,DI,E,2016-06-30,D21,Hemming Bay,"Brianna Knowles,Luke Rogers,Sam James",NA,100,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-06-30_D21_2_250_SEMSP
+DE354,DI,NA,2016-06-30,D28,Knox Bay,"Brianna Knowles,Luke Rogers,Sam James",NA,75,2,0.1-5,W,NA,NA,NA,0,STANDARD,"1: DFO may have sampled in Knox Bay between 10:30-11, but couldnt make contact. Saw them pass through JS. No fish observed so no set conducted.",NA,NA,2016-06-30_D28_2_250_SEMSP
+JE295,JS,N,2016-07-04,J01,Hanson North,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,75,1,0.1-5,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-07-04_J01_1_250_5
+JE294,JS,N,2016-07-04,J02,Swanson Island,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,100,1,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,NA,NA,2016-07-04_J02_1_250_5
+JE296,JS,N,2016-07-04,J03,Cracroft Point,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-07-04_J03_1_250_5
+JE298,JS,S,2016-07-04,J09,Blinkhorn Peninsula,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,50,2,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-07-04_J09_1_250_3
+JE297,JS,N,2016-07-04,J10,Hanson South,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-07-04_J10_1_250_5
+DE359,DI,C,2016-07-05,D07,Hoskyn Channel,"Luke Rogers,Sam James,Tim Spesivy",NA,100,1,0.1-5,N,NA,NA,NA,0,STANDARD,NA,D07_2016-07-05_1,D07_2016-07-05_1,2016-07-05_D07_3_250_SEMSP
+DE356,DI,E,2016-07-05,D08,Calm Channel,"Luke Rogers,Sam James,Tim Spesivy",light,100,1,0.1-5,S,NA,NA,NA,0,STANDARD,NA,D08_2016-07-05_2,D08_2016-07-05_2,2016-07-05_D08_3_250_SEMSP
+DE357,DI,C,2016-07-05,D24,Surge Narrows,"Luke Rogers,Sam James,Tim Spesivy",light,100,NA,0.1-5,NW,NA,NA,NA,2,STANDARD,NA,D24_2016-07-05_2,D24_2016-07-05_2,2016-07-05_D24_3_250_SEMSP
+JE299,JS,N,2016-07-05,J04,Forward Bay,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-07-05_J04_1_250_5
+JE301,JS,N,2016-07-05,J05,Stimpson Point,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,100,1,0.1-5,NW,NA,NA,NA,0,STANDARD,NA,NA,NA,2016-07-05_J05_1_250_5
+JE302,JS,S,2016-07-05,J07,South Mouth,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,25,1,5-10,N,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-07-05_J07_1_250_5
+JE300,JS,S,2016-07-05,J08,Naka Creek,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,100,1,0.1-5,NW,NA,NA,NA,1,STANDARD,NA,NA,NA,2016-07-05_J08_1_250_5
+DE361,DI,C,2016-07-06,D09,Okisollo Channel,"Brett Johnson,Luke Rogers,Sam James",NA,25,1,0.1-5,S,NA,NA,NA,2,STANDARD,1: re set because there was lots of surface activity elsewhere,D09_2016-07-06_2,D09_2016-07-06_2,2016-07-06_D09_3_250_SEMSP
+DE363,DI,E,2016-07-06,D22,McMullen Point,"Brett Johnson,Luke Rogers,Sam James",NA,50,1,0.1-5,SE,NA,NA,NA,0,STANDARD,NA,D22_2016-07-06_2,D22_2016-07-06_2,2016-07-06_D22_3_250_SEMSP
+DE360,DI,E,2016-07-06,D27,Granite Point,"Brett Johnson,Luke Rogers,Sam James",NA,75,1,0.1-5,SE,NA,NA,NA,1,STANDARD,NA,D27_2016-07-06_2,D27_2016-07-06_2,2016-07-06_D27_3_250_SEMSP
+JE303,JS,N,2016-07-06,J06,Blinkensop Bay,"Dylan Smyth,Lauren Portner,Mirko Diaz,Olivia Gutjahr",NA,25,NA,NA,NW,NA,NA,NA,1,STANDARD,1: left YSI on Madrona,NA,NA,2016-07-06_J06_2_250_5
+DE408,DI,E,2017-05-11,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",moderate,100,NA,0.1-5,W,NA,2017-05-11T18:04:00Z,2017-05-11T18:19:00Z,0,STANDARD,NA,D08_2017-05-11_3,D08_2017-05-11_3,2017-05-11_D08_1_250_SEMSP
+DE414,DI,W,2017-05-15,D22,McMullen Point,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",light,100,NA,0.1-5,S,NA,2017-05-15T15:20:00Z,2017-05-15T15:35:00Z,0,STANDARD,NA,D22_2017-05-15_3,D22_2017-05-15_3,2017-05-15_D22_2_250_1
+DE426,DI,C,2017-05-16,D09,Okisollo Channel,"Carly Janusson,Luke Rogers,Sam James",NA,100,NA,NA,NA,NA,2017-05-16T14:35:00Z,2017-05-16T14:50:00Z,0,STANDARD,NA,D09_2017-05-16_3,D09_2017-05-16_3,2017-05-16_D09_2_250_Semsp
+DE438,DI,C,2017-05-16,D30,Chonat Bay,"Carly Janusson,Luke Rogers,Sam James",NA,100,3,5-10,NW,NA,2017-05-16T17:04:00Z,2017-05-16T17:18:00Z,0,STANDARD,NA,NA,NA,NA
+DE404,DI,C,2017-05-16,D31,NA,"Carly Janusson,Luke Rogers,Sam James",NA,75,1,0.1-5,N,NA,2017-05-16T17:49:00Z,2017-05-16T18:02:00Z,0,STANDARD,NA,NA,NA,NA
+DE416,DI,E,2017-05-17,D08,Calm Channel,"Brett Johnson,Julian Gan,Luke Rogers",NA,100,NA,NA,NA,NA,2017-05-17T14:20:00Z,2017-05-17T14:34:00Z,0,STANDARD,NA,D08_2017-05-17_2,D08_2017-05-17_2,2017-05-17_D08_3_250_SEMSP
+DE428,DI,E,2017-05-17,D29,Raza Island,"Brett Johnson,Julian Gan,Luke Rogers",NA,100,NA,0.1-5,E,NA,2017-05-17T16:05:00Z,2017-05-17T16:19:00Z,0,STANDARD,NA,D29_2017-05-17_1,D29_2017-05-17_1,NA
+DE440,DI,C,2017-05-19,D09,Okisollo Channel,"Brett Johnson,Julian Gan,Luke Rogers",NA,100,NA,NA,NA,NA,2017-05-19T15:55:00Z,2017-05-19T16:07:00Z,0,STANDARD,"1: No Sliding after survey, saw sliders in the morning near Rebecca Spit",D09_2017-05-19_1,D09_2017-05-19_1,2017-05-19_D09_3_250_SEMSP
+DE403,DI,C,2017-05-19,D30,Chonat Bay,"Brett Johnson,Julian Gan,Luke Rogers",NA,100,1,0.1-5,W,flood,2017-05-19T17:23:00Z,2017-05-19T17:38:00Z,0,STANDARD,1: saw sliders in the morning near Rebecca Spit,D30_2017-05-19_2,D30_2017-05-19_2,NA
+DE415,DI,W,2017-05-23,D22,McMullen Point,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,25,2,5-10,N,ebb,2017-05-23T15:05:00Z,2017-05-23T15:20:00Z,0,STANDARD,NA,D22_2017-05-23_2,D22_2017-05-23_2,2017-05-23_D22_3_250_Semsp
+DE427,DI,W,2017-05-23,D27,Granite Point,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,NA,2,0.1-5,NW,high slack,2017-05-23T16:38:00Z,2017-05-23T16:53:00Z,0,STANDARD,NA,D27_2017-05-23_2,D27_2017-05-23_2,NA
+DE364,DI,W,2017-05-23,D32,Deepwater Bay,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,75,NA,0.1-5,N,flood,NA,NA,1,STANDARD,"1: 1 unknown mort. Non-formal visual survey conducted. Performed a trial run of collection procedure, in which the one set was both for retention and sea licing. Fish were anaesthetized (for sea licing), placed into recovery, and then euthanized for retention. Due to time restraints, we werent able to collect complete packages of 10 fish per species.",NA,NA,NA
+DE365,DI,C,2017-05-25,D09,Okisollo Channel,"Brett Johnson,Carly Janusson,Luke Rogers,Sam James",NA,NA,2,0.1-5,W,high slack,2017-05-25T14:14:00Z,2017-05-25T14:29:00Z,1,STANDARD,NA,D09_2017-05-25_2,D09_2017-05-25_2,2017-05-25_D09_3_250_Semsp
+DE439,DI,E,2017-05-26,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Luke Rogers",NA,NA,NA,0.1-5,NW,high slack,2017-05-26T14:23:00Z,2017-05-26T14:39:00Z,0,STANDARD,1: synchronized one-off surface event after survey - herring forced to surface?,D08_2017-05-26_2,D08_2017-05-26_2,2017-05-26_D08_3_250_Semsp
+DE405,DI,E,2017-05-26,D29,Raza Island,"Brett Johnson,Carly Janusson,Julian Gan,Luke Rogers",NA,NA,1,0.1-5,N,ebb,2017-05-26T15:44:00Z,2017-05-26T16:00:00Z,0,STANDARD,NA,D29_2017-05-26_2,D29_2017-05-26_2,NA
+DE366,DI,E,2017-05-26,D34,Penn Islands,"Brett Johnson,Carly Janusson,Julian Gan,Luke Rogers",NA,NA,NA,NA,NA,ebb,NA,NA,1,STANDARD,1: Informal site survery; did not have time for a lousing seine. First coho out at 11:26; in dewar at unknown time (in quickly though). Coho # 2 onwards out at 12:36,D34_2017-05-26_2,D34_2017-05-26_2,2017-05-26_D34_3_250_SEMSP
+JE325,JS,N,2017-05-26,J02,Swanson Island,"Dylan Smyth,Lauren Portner,Mirko Diaz,Sean Godwin.",NA,100,NA,NA,NA,ebb,2017-05-26T14:08:00Z,2017-05-26T14:24:00Z,0,STANDARD,1: No CTD on board.,NA,NA,NA
+JE324,JS,N,2017-05-26,J03,Cracroft Point,"Dylan Smyth,Lauren Portner,Mirko Diaz,Sean Godwin.",NA,100,1,0.1-5,NW,ebb,2017-05-26T13:17:00Z,2017-05-26T13:32:00Z,0,STANDARD,1: No CTD on board and no flow meter on board so no zoop tow completed.,NA,NA,NA
+JE327,JS,S,2017-05-26,J09,Blinkhorn Peninsula,"Dylan Smyth,Lauren Portner,Mirko Diaz,Sean Godwin.",NA,100,NA,NA,NA,flood,2017-05-26T17:38:00Z,2017-05-26T17:53:00Z,0,STANDARD,1: No CTD or flow meter on board so no zoop tow.,NA,NA,NA
+JE326,JS,N,2017-05-26,J13,Sophia Islands,"Dylan Smyth,Lauren Portner,Mirko Diaz,Sean Godwin.",NA,100,NA,NA,NA,ebb,2017-05-26T15:00:00Z,2017-05-26T15:24:00Z,0,STANDARD,1: No CTD on board.,NA,NA,NA
+DE367,DI,C,2017-05-29,D09,Okisollo Channel,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,75,NA,NA,NA,ebb,2017-05-29T18:19:00Z,2017-05-29T18:34:00Z,1,STANDARD,NA,D09_2017-05-29_2,D09_2017-05-29_2,2017-05-29_D09_3_250_Semsp
+DE417,DI,W,2017-05-29,D22,McMullen Point,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,75,2,5-10,NW,high slack,2017-05-29T14:53:00Z,2017-05-29T15:10:00Z,0,STANDARD,NA,D22_2017-05-29_2,D22_2017-05-29_2,2017-05-29_D22_3_250_Semsp
+DE429,DI,W,2017-05-29,D27,Granite Point,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,50,1,0.1-5,NW,high slack,2017-05-29T16:05:00Z,2017-05-29T16:22:00Z,0,STANDARD,NA,D27_2017-05-29_2,D27_2017-05-29_2,NA
+DE424,DI,E,2017-05-31,D08,Calm Channel,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,100,2,5-10,S,flood,2017-05-31T17:03:00Z,2017-05-31T17:18:00Z,0,STANDARD,NA,D08_2017-05-31_2,D08_2017-05-31_2,2017-05-31_D08_3_250_SEMSP
+DE441,DI,W,2017-05-31,D22,McMullen Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,100,1,0.1-5,SE,flood,2017-05-31T13:57:00Z,2017-05-31T14:13:00Z,0,STANDARD,NA,D22_2017-05-31_2,D22_2017-05-31_2,2017-05-31_D22_3_250_SEMSP
+DE412,DI,W,2017-05-31,D27,Granite Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,100,2,5-10,SE,flood,2017-05-31T14:57:00Z,2017-05-31T15:13:00Z,0,STANDARD,"1: Observed sliding unlikely to be sockeye due to different appearance in behaviours; more like angular ""spy-hop"" sliding than textbook sliding; also fish much smaller (fry sized)",D27_2017-05-31_2,D27_2017-05-31_2,NA
+DE368,DI,E,2017-05-31,D29,Raza Island,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,100,1,0.1-5,S,ebb,2017-05-31T18:16:00Z,2017-05-31T18:30:00Z,1,STANDARD,NA,D29_2017-05-31_2,D29_2017-05-31_2,NA
+DE436,DI,E,2017-06-01,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,100,1,NA,NA,ebb,2017-06-01T14:05:00Z,2017-06-01T14:20:00Z,1,STANDARD,"1: One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.",D08_2017-06-01_3,D08_2017-06-01_3,2017-06-01_D08_4_250_SEMSP
+DE436,DI,E,2017-06-01,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,100,1,NA,NA,ebb,2017-06-01T14:05:00Z,2017-06-01T14:20:00Z,1,STANDARD,"1: One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.",D08_2017-06-01_3,D08_2017-06-01_2,2017-06-01_D08_4_250_SEMSP
+DE436,DI,E,2017-06-01,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,100,1,NA,NA,ebb,2017-06-01T14:05:00Z,2017-06-01T14:20:00Z,1,STANDARD,"1: One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.",D08_2017-06-01_2,D08_2017-06-01_3,2017-06-01_D08_4_250_SEMSP
+DE436,DI,E,2017-06-01,D08,Calm Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,100,1,NA,NA,ebb,2017-06-01T14:05:00Z,2017-06-01T14:20:00Z,1,STANDARD,"1: One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.",D08_2017-06-01_2,D08_2017-06-01_2,2017-06-01_D08_4_250_SEMSP
+DE369,DI,E,2017-06-01,D29,Raza Island,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,100,1,0.1-5,SW,flood,2017-06-01T16:38:00Z,2017-06-01T16:53:00Z,1,STANDARD,NA,D29_2017-06-01_2,D29_2017-06-01_2,2017-06-01_D29_3_250_SEMSP
+JE328,JS,S,2017-06-02,J09,Blinkhorn Peninsula,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",light,50,2,10-15,SW,ebb,2017-06-02T19:58:00Z,2017-06-02T20:14:00Z,0,STANDARD,1: Observed popping behavior to be salmon fry or small smolts,NA,NA,2017-06-02_J09_2_250_5
+JE329,JS,S,2017-06-02,J11,Blinkhorn Bay,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,1,5-10,SE,ebb,2017-06-02T20:58:00Z,2017-06-02T21:14:00Z,0,STANDARD,1: No salmon or surface activity observed,NA,NA,NA
+JE330,JS,S,2017-06-02,J12,West Kaikash Creek,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,2,5-10,SE,ebb,2017-06-02T21:38:00Z,2017-06-02T21:53:00Z,0,STANDARD,"1: Wind gusting 15SE, heavy wave action on shore, Beaufort of B2-B3.",NA,NA,NA
+JE332,JS,N,2017-06-03,J02,Swanson Island,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,50,1,0.1-5,E,flood,2017-06-03T13:58:00Z,2017-06-03T14:15:00Z,0,STANDARD,1: CTD failed to record cast,J02_2017-06-03_2,J02_2017-06-03_2,NA
+JE331,JS,N,2017-06-03,J03,Cracroft Point,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,2,10-15,NW,flood,2017-06-03T12:36:00Z,2017-06-03T12:49:00Z,0,STANDARD,1: CTD hand dropped.,J03_2017-06-03_3,J03_2017-06-03_3,2017-06-03_J03_2_250_5
+JE333,JS,N,2017-06-03,J13,Sophia Islands,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,1,0.1-5,SE,flood,2017-06-03T15:19:00Z,2017-06-03T15:35:00Z,0,STANDARD,"1: CTD hand dropped. No other surface activity observed beyond dimpling, and unsure whether dimpling behaviour was indeed salmon.",J13_2017-06-03_2,J13_2017-06-03_2,NA
+DE422,DI,W,2017-06-05,D22,McMullen Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,NA,1,0.1-5,N,ebb,2017-06-05T14:50:00Z,2017-06-05T15:05:00Z,0,STANDARD,"1: Used Seans 15 second observe time (data person kept track of time from ""mark"" called by observers. Attempted retention seine, but no SO caught.",D22_2017-06-05_2,D22_2017-06-05_2,2017-06-05_D22_3_250_SEMSP
+DE370,DI,W,2017-06-05,D27,Granite Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,25,1,5-10,SE,flood,2017-06-05T17:45:00Z,2017-06-05T18:00:00Z,1,STANDARD,NA,D27_2017-06-05_2,D27_2017-06-05_2,2017-06-05_D27_3_250_Semsp
+JE305,JS,N,2017-06-06,J02,Swanson Island,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,25,NA,NA,NA,ebb,2017-06-06T21:18:00Z,2017-06-06T21:34:00Z,1,STANDARD,"1: No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing.",NA,NA,NA
+JE304,JS,N,2017-06-06,J03,Cracroft Point,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,NA,1,0.1-5,SW,ebb,2017-06-06T13:27:00Z,2017-06-06T13:43:00Z,3,STANDARD,1: Missed fish on first set. Had to wait for cruise ship wake to do second set. Long search time after first set (fish dove?). No CTD on board. Secchi drop on datasheet only (not on digital form).,NA,NA,2017-06-06_J03_2_250_5
+DE371,DI,C,2017-06-07,D09,Okisollo Channel,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,100,NA,NA,NA,ebb,2017-06-07T14:26:00Z,2017-06-07T14:41:00Z,2,STANDARD,1: Hinch set @ 06:30; 100 SO retained by Hinch crew. 1 unhealthy SO released. 1 trainer CU taken.,D09_2017-06-07_2,D09_2017-06-07_2,2017-06-07_D09_3_250_Semsp
+JE334,JS,S,2017-06-07,J09,Blinkhorn Peninsula,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,100,1,5-10,SE,ebb,2017-06-07T14:16:00Z,2017-06-07T14:32:00Z,0,STANDARD,1: No slides observed on visual survey. Did full oceanography and moved to secondary site.,NA,NA,2017-06-07_J09_2_250_5
+JE335,JS,S,2017-06-07,J11,Blinkhorn Bay,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,100,2,5-10,SE,flood,2017-06-07T15:14:00Z,2017-06-07T15:29:00Z,0,STANDARD,1: Reduced visibility due to heavy wave action and gusting wind.,NA,NA,NA
+JE336,JS,S,2017-06-07,J12,West Kaikash Creek,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,2,5-10,SE,flood,2017-06-07T15:52:00Z,2017-06-07T16:06:00Z,0,STANDARD,1: Reduced visibility due to heavy wave action and gusting wind.,NA,NA,NA
+DE434,DI,E,2017-06-09,D08,Calm Channel,"Brenna Collicut,Carly Janusson,Julian Gan,Luke Rogers",NA,100,1,0.1-5,NE,ebb,2017-06-09T16:03:00Z,2017-06-09T16:19:00Z,0,STANDARD,1: Took ~ 300 fish from D09 (mix SO & other spp) for Hinch Lab crew,D08_2017-06-09_2,D08_2017-06-09_2,2017-06-09_D08_3_250_SEMSP
+DE400,DI,E,2017-06-09,D29,Raza Island,"Brenna Collicut,Carly Janusson,Julian Gan,Luke Rogers",NA,25,NA,0.1-5,N,ebb,2017-06-09T17:47:00Z,2017-06-09T18:01:00Z,0,STANDARD,NA,D29_2017-06-09_2,D29_2017-06-09_2,NA
+DE372,DI,C,2017-06-12,D09,Okisollo Channel,"Brett Johnson,Luke Rogers,Sam James,Wade Smith",NA,25,1,0.1-5,NW,ebb,2017-06-12T16:36:00Z,2017-06-12T16:51:00Z,2,STANDARD,NA,D09_2017-06-12_2,D09_2017-06-12_2,2017-06-12_D09_3_250_SEMSP
+DE396,DI,W,2017-06-13,D22,McMullen Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,75,1,0.1-5,NA,flood,2017-06-13T13:00:00Z,2017-06-13T13:15:00Z,0,STANDARD,NA,D22_2017-06-13_2,D22_2017-06-13_2,2017-06-13_D22_3_250_SEMSP
+DE376,DI,W,2017-06-13,D27,Granite Point,"Brenna Collicutt,Julian Gan,Luke Rogers,Sam James",NA,75,2,5-10,NW,ebb,2017-06-13T15:32:00Z,2017-06-13T15:47:00Z,2,STANDARD,NA,D27_2017-06-13_2,D27_2017-06-13_2,2017-06-13_D27_3_250_SEMSP
+JE306,JS,S,2017-06-13,J09,Blinkhorn Peninsula,"Dylan Shea,Dylan Smyth,Emma Atkinson,Lauren Portner",NA,100,1,NA,NA,ebb,2017-06-13T13:36:00Z,2017-06-13T13:52:00Z,2,STANDARD,NA,J09_2017-06-13_2,J09_2017-06-13_2,2017-06-13_J09_3_250_5
+DE402,DI,E,2017-06-14,D08,Calm Channel,"Brenna Collicutt,Gideon Mordecai,Julian Gan,Luke Rogers",light,100,1,0.1-5,S,ebb,2017-06-14T17:53:00Z,2017-06-14T18:08:00Z,0,STANDARD,NA,D08_2017-06-14_2,D08_2017-06-14_2,2017-06-14_D08_3_250_SEMSP
+DE454A,DI,C,2017-06-14,D09,Okisollo Channel,"DFO,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,5,DFO,1: Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study,NA,NA,NA
+DE420,DI,E,2017-06-14,D29,Raza Island,"Brenna Collicutt,Gideon Mordecai,Julian Gan,Luke Rogers",NA,100,1,0.1-5,N,ebb,2017-06-14T19:26:00Z,2017-06-14T19:41:00Z,0,STANDARD,NA,D29_2017-06-14_2,D29_2017-06-14_2,NA
+JE307,JS,N,2017-06-14,J03,Cracroft Point,"Dylan Shea,Dylan Smyth,Emma Atkinson,Lauren Portner",NA,100,1,0.1-5,SE,ebb,2017-06-14T12:51:00Z,2017-06-14T13:04:00Z,1,STANDARD,1: CTD failed to record cast,J03_2017-06-14_2,J03_2017-06-14_2,2017-06-14_J03_3_250_5
+DE454B,DI,C,2017-06-15,D09,Okisollo Channel,"DFO,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,3,DFO,1: Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study,NA,NA,NA
+DE382,DI,C,2017-06-19,D09,Okisollo Channel,"Carly Janusson,Julian Gan,Luke Rogers,Tianyi Chang",NA,NA,NA,NA,NA,NA,NA,NA,1,NON-STANDARD,1: Survey conducted to obtain fish for Hinch crew,NA,NA,NA
+DE377,DI,W,2017-06-19,D22,McMullen Point,"Carly Janusson,Julian Gan,Luke Rogers,Tianyi Chang",moderate,100,1,0.1-5,N,ebb,2017-06-19T14:02:00Z,2017-06-19T14:17:00Z,1,STANDARD,"1: Set twice at D09 to collect fish for Tianyi Chen, Sam James, & Hinch lab. First set at 11:15, retained 1 CU for TC (released 100 CU, 1 unhealthy SO). Second set at 12:15, retained 1 CU for GM & 18 CU for TC (released 150 CU).",D22_2017-06-19_2,D22_2017-06-19_2,2017-06-19_D22_3_250_SEMSP
+DE378,DI,C,2017-06-20,D09,Okisollo Channel,"Brenna Collicutt,Brett Johnson,Carly Janusson,Luke Rogers",NA,100,1,0.1-5,NW,ebb,2017-06-20T13:28:00Z,2017-06-20T13:43:00Z,1,STANDARD,NA,D09_2017-06-20_2,D09_2017-06-20_2,2017-06-20_D09_3_250_SEMSP
+DE432,DI,C,2017-06-20,D30,Chonat Bay,"Brett Johnson,Christine Stevenson,Luke Rogers,Sam James",NA,NA,3,5-10,NW,flood,2017-06-20T18:37:00Z,2017-06-20T18:50:00Z,0,STANDARD,NA,NA,NA,NA
+JE308,JS,N,2017-06-20,J02,Swanson Island,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,100,1,0.1-5,NW,flood,2017-06-20T15:36:00Z,2017-06-20T15:52:00Z,2,STANDARD,"1: Last half of visual survey was a B2-3, so visibility was difficult. We caught 3 local pink fry. CTD not recording drops (turning off spontaneously).",J02_2017-06-20_2,J02_2017-06-20_2,2017-06-20_J02_3_250_5
+JE337,JS,N,2017-06-20,J03,Cracroft Point,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,100,2,5-10,NW,flood,2017-06-20T13:32:00Z,2017-06-20T13:46:00Z,1,STANDARD,1: Weather picked up. Unable to complete a set.,NA,NA,2017-06-20_J03_2_250_5
+DE398,DI,E,2017-06-21,D08,Calm Channel,"Brenna Collicutt,Brett Johnson,Julian Gan,Luke Rogers",NA,25,2,5-10,NW,low slack,2017-06-21T16:26:00Z,2017-06-21T16:39:00Z,0,STANDARD,NA,D08_2017-06-21_2,D08_2017-06-21_2,2017-06-21_D08_3_250_SEMSP
+DE383,DI,C,2017-06-21,D09,Okisollo Channel,"Brenna Collicutt,Brett Johnson,Julian Gan,Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,1,NON-STANDARD,1: Survey conducted to obtain fish for Hinch crew,NA,NA,NA
+DE410,DI,E,2017-06-21,D29,Raza Island,"Brenna Collicutt,Brett Johnson,Julian Gan,Luke Rogers",NA,50,2,5-10,NW,low slack,2017-06-21T17:41:00Z,2017-06-21T17:56:00Z,0,STANDARD,NA,D29_2017-06-21_2,D29_2017-06-21_2,NA
+JE309,JS,S,2017-06-21,J09,Blinkhorn Peninsula,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,1,0.1-5,NW,ebb,2017-06-21T12:56:00Z,2017-06-21T13:10:00Z,2,STANDARD,NA,NA,NA,2017-06-21_J09_2_250_5
+DE384,DI,C,2017-06-26,D09,Okisollo Channel,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NON-STANDARD,1: Survey conducted to obtain fish for Hinch crew,D09_2017-06-26_2,D09_2017-06-26_2,2017-06-26_D09_3_250_SEMSP
+DE373,DI,C,2017-06-26,D09,Okisollo Channel,"Carly Janusson,Julian Gan,Luke Rogers,Sam James",NA,75,1,0.1-5,NW,flood,2017-06-26T13:37:00Z,2017-06-26T13:55:00Z,2,STANDARD,NA,D09_2017-06-26_2,D09_2017-06-26_2,2017-06-26_D09_3_250_SEMSP
+DE394,DI,W,2017-06-27,D22,McMullen Point,"Brett Johnson,Carly Janusson,Julian Gan,Luke Rogers",NA,50,2,5-10,NW,flood,2017-06-27T13:10:00Z,2017-06-27T13:23:00Z,0,STANDARD,NA,D22_2017-06-27_2,D22_2017-06-27_2,2017-06-27_D22_3_250_Semsp
+DE406,DI,W,2017-06-27,D27,Granite Point,"Brett Johnson,Carly Janusson,Julian Gan,Luke Rogers",NA,75,2,5-10,NW,flood,2017-06-27T15:08:00Z,2017-06-27T15:24:00Z,0,STANDARD,NA,D27_2017-06-27_2,D27_2017-06-27_2,NA
+JE310,JS,S,2017-06-27,J09,Blinkhorn Peninsula,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,100,2,10-15,NW,ebb,2017-06-27T12:56:00Z,2017-06-27T13:11:00Z,2,STANDARD,NA,NA,NA,2017-06-27_J09_2_250_5
+DE374,DI,E,2017-06-28,D10,Hall Point,"Carly Janusson,Julian Gan Brett Johnson,Luke Rogers",NA,100,NA,0.1-5,NW,flood,2017-06-28T13:59:00Z,2017-06-28T14:12:00Z,1,STANDARD,NA,D10_2017-06-28_2,D10_2017-06-28_2,2017-06-28_D10_3_250_SEMSP 250 MICRON
+JE311,JS,N,2017-06-28,J02,Swanson Island,"Dylan Smyth,Emma Atkinson,Lauren Portner,Mirko Diaz",NA,75,2,5-10,NW,ebb,2017-06-28T12:42:00Z,2017-06-28T12:57:00Z,5,STANDARD,"1: First half of visual survey was a B2, second half was a B3. Secchi hit the bottom at 7.5m.",NA,NA,2017-06-28_J02_2_250_5
+DE458,DI,C,2017-06-29,D09,Okisollo Channel,"Julian Gan,Luke Rogers,Sam James",NA,NA,NA,NA,NA,flood,NA,NA,1,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE460,DI,C,2017-06-29,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,NA,NA,0.1-5,W,ebb,NA,NA,1,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE459,DI,C,2017-06-29,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,NA,NA,NA,NA,ebb,NA,NA,2,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE457,DI,C,2017-06-29,D09,Okisollo Channel,"Julian Gan,Luke Rogers,Sam James",NA,NA,NA,NA,NA,flood,NA,NA,3,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE464,DI,C,2017-06-30,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,NA,1,0.1-5,NW,flood,NA,NA,2,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE463,DI,C,2017-06-30,D09,Okisollo Channel,"Brett Johnson,Brianna Knowles,Sam James",NA,NA,1,0.1-5,NW,flood,NA,NA,3,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE462,DI,C,2017-06-30,D09,Okisollo Channel,"Carly Janusson,Luke Rogers,Sam James",NA,25,1,0.1-5,NW,ebb,NA,NA,2,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE461,DI,C,2017-06-30,D09,Okisollo Channel,"Carly Janusson,Luke Rogers,Sam James",NA,25,1,0.1-5,NW,ebb,NA,NA,1,NON-STANDARD,1: Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.,NA,NA,NA
+DE379,DI,W,2017-07-04,D22,McMullen Point,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,50,2,5-10,NW,ebb,2017-07-04T13:21:00Z,2017-07-04T13:35:00Z,1,STANDARD,NA,D22_2017-07-04_2,D22_2017-07-04_2,2017-07-04_D22_3_250_SEMSP
+DE375,DI,W,2017-07-04,D27,Granite Point,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,25,1,0.1-5,NW,high slack,2017-07-04T16:02:00Z,2017-07-04T16:16:00Z,1,STANDARD,NA,D27_2017-07-04_2,D27_2017-07-04_2,2017-07-04_D27_3_250_SEMSP
+DE380,DI,C,2017-07-05,D09,Okisollo Channel,"Carly Janusson,Luke Rogers,Melissa Orobko",NA,75,NA,0.1-5,NW,ebb,2017-07-05T14:01:00Z,2017-07-05T14:15:00Z,1,STANDARD,NA,D09_2017-07-05_2,D09_2017-07-05_2,2017-07-05_D09_3_250_Semsp
+DE397,DI,E,2017-07-06,D08,Calm Channel,"Julian Gan,Luke Rogers,Melissa Orobko",NA,NA,NA,NA,NA,ebb,2017-07-06T16:58:00Z,2017-07-06T17:12:00Z,0,STANDARD,NA,D08_2017-07-06_2,D08_2017-07-06_2,2017-07-06_D08_3_250_SEMSP
+DE395,DI,E,2017-07-06,D10,Hall Point,"Julian Gan,Luke Rogers,Melissa Orobko",NA,NA,1,0.1-5,W,ebb,2017-07-06T13:57:00Z,2017-07-06T14:14:00Z,0,STANDARD,1: Site activity survey conducted in 50% shade. Set activity survey conducted in full sun.,D10_2017-07-06_2,D10_2017-07-06_2,2017-07-06_D10_3_250_SEMSP
+DE399,DI,E,2017-07-06,D29,Raza Island,"Julian Gan,Luke Rogers,Melissa Orobko",NA,NA,1,0.1-5,W,flood,2017-07-06T18:11:00Z,2017-07-06T18:25:00Z,0,STANDARD,NA,D29_2017-07-06_2,D29_2017-07-06_2,NA
+JE314,JS,S,2017-07-06,J09,Blinkhorn Peninsula,"Dylan Shea,Dylan Smyth,Lauren Portner,Mirko Diaz",NA,100,NA,NA,NA,ebb,2017-07-06T13:04:00Z,2017-07-06T13:20:00Z,2,STANDARD,NA,J09_2017-07-06_1,J09_2017-07-06_1,2017-07-06_J09_3_250_5
+JE313,JS,N,2017-07-07,J02,Swanson Island,"Dylan Shea,Dylan Smyth,Lauren Portner,Mirko Diaz",NA,100,NA,0.1-5,NW,flood,2017-07-07T16:29:00Z,2017-07-07T16:46:00Z,1,STANDARD,NA,NA,NA,NA
+JE312,JS,N,2017-07-07,J03,Cracroft Point,"Dylan Shea,Dylan Smyth,Lauren Portner,Mirko Diaz",NA,75,NA,NA,NA,ebb,2017-07-07T13:17:00Z,2017-07-07T13:32:00Z,1,STANDARD,NA,NA,NA,2017-07-07_J03_2_250_5
+DE381,DI,C,2017-07-10,D09,Okisollo Channel,"Brett Johnson,Carly Janusson,Julian Gan,Sam James",NA,75,2,5-10,W,high slack,2017-07-10T14:47:00Z,2017-07-10T15:02:00Z,1,STANDARD,"1: Trial run of combining retention & lousing duties in one set. Took all chum as substitute for SO and other species, retained as trainer fish. Liced 10 chum.",D09_2017-07-10_2,D09_2017-07-10_2,2017-07-10_D09_3_250_SEMSP
+DE455A,DI,C,2017-07-12,D09,Okisollo Channel,"DFO,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,4,DFO,1: Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study,NA,NA,NA
+JE341,JS,N,2017-07-12,J02,Swanson Island,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,75,1,0.1-5,NW,flood,2017-07-12T21:09:00Z,2017-07-12T21:26:00Z,0,STANDARD,NA,J02_2017-07-12_2,J02_2017-07-12_2,NA
+JE315,JS,N,2017-07-12,J03,Cracroft Point,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,100,1,NA,NA,ebb,2017-07-12T17:01:00Z,2017-07-12T17:16:00Z,1,STANDARD,NA,J03_2017-07-12_2,J03_2017-07-12_2,2017-07-12_J03_3_250_5
+JE316,JS,S,2017-07-12,J09,Blinkhorn Peninsula,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,100,1,NA,NA,ebb,2017-07-12T13:27:00Z,2017-07-12T13:43:00Z,1,STANDARD,NA,J09_2017-07-12_2,J09_2017-07-12_2,2017-07-12_J09_3_250_5
+JE338,JS,S,2017-07-12,J11,Blinkhorn Bay,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,100,NA,NA,NA,ebb,2017-07-12T15:27:00Z,2017-07-12T15:41:00Z,0,STANDARD,NA,J11_2017-07-12_2,J11_2017-07-12_2,NA
+JE363,JS,S,2017-07-12,J12,West Kaikash Creek,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,75,NA,NA,NA,ebb,2017-07-12T16:12:00Z,2017-07-12T16:28:00Z,0,STANDARD,NA,J12_2017-07-12_2,J12_2017-07-12_2,NA
+JE340,JS,N,2017-07-12,J13,Sophia Islands,"Dylan Smyth,Griffin Kelly,Lauren Portner,Mirko Diaz",NA,75,NA,NA,NA,flood,2017-07-12T19:32:00Z,2017-07-12T19:50:00Z,0,STANDARD,NA,J13_2017-07-12_2,J13_2017-07-12_2,NA
+DE455B,DI,C,2017-07-13,D09,Okisollo Channel,"DFO,Sam James",NA,NA,NA,NA,NA,NA,NA,NA,4,DFO,1: Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study,NA,NA,NA
+DE500,DI,E,2018-05-01,D08,Calm Channel,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,NA,NA,0,NON-STANDARD,1: Boat training,D08_2018-05-01_2,D08_2018-05-01_2,NA
+DE501,DI,C,2018-05-09,D09,Okisollo Channel,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,1,5-10,SE,low slack,2018-05-09T14:40:00Z,2018-05-09T14:52:00Z,0,STANDARD,1: No settable activity,D09_2018-05-09_2,D09_2018-05-09_2,2018-05-09_D09_3_250_SEMSP
+DE503,DI,W,2018-05-10,D22,McMullen Point,"Brett Johnson,Katie Davidson,Krystal Bachen,Sara Tremblay-Boyer",light,100,NA,NA,NA,ebb tide,2018-05-10T14:24:00Z,2018-05-10T14:30:00Z,0,STANDARD,1: no settable activity,D22_2018-05-10_3,D22_2018-05-10_3,2018-05-10_D22_4_250_SEMSP
+DE503,DI,W,2018-05-10,D22,McMullen Point,"Brett Johnson,Katie Davidson,Krystal Bachen,Sara Tremblay-Boyer",light,100,NA,NA,NA,ebb tide,2018-05-10T14:24:00Z,2018-05-10T14:30:00Z,0,STANDARD,1: no settable activity,D22_2018-05-10_3,D22_2018-05-10_2,2018-05-10_D22_4_250_SEMSP
+DE503,DI,W,2018-05-10,D22,McMullen Point,"Brett Johnson,Katie Davidson,Krystal Bachen,Sara Tremblay-Boyer",light,100,NA,NA,NA,ebb tide,2018-05-10T14:24:00Z,2018-05-10T14:30:00Z,0,STANDARD,1: no settable activity,D22_2018-05-10_2,D22_2018-05-10_3,2018-05-10_D22_4_250_SEMSP
+DE503,DI,W,2018-05-10,D22,McMullen Point,"Brett Johnson,Katie Davidson,Krystal Bachen,Sara Tremblay-Boyer",light,100,NA,NA,NA,ebb tide,2018-05-10T14:24:00Z,2018-05-10T14:30:00Z,0,STANDARD,1: no settable activity,D22_2018-05-10_2,D22_2018-05-10_2,2018-05-10_D22_4_250_SEMSP
+DE502,DI,W,2018-05-10,D27,Granite Point,"Brett Johnson,Katie Davidson,Krystal Bachen,Sara Tremblay-Boyer",light,100,1,NA,NA,flood,2018-05-10T16:47:00Z,2018-05-10T17:01:00Z,0,STANDARD,1: no settable activity,D27_2018-05-10_2,D27_2018-05-10_2,NA
+DE505,DI,E,2018-05-11,D08,Calm Channel,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,2,10-15,NW,ebb tide,2018-05-11T16:42:00Z,2018-05-11T16:57:00Z,2,STANDARD,NA,D08_2018-05-11_2,D08_2018-05-11_2,NA
+DE504,DI,E,2018-05-11,D10,Hall Point,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,2,10-15,NW,ebb tide,2018-05-11T14:59:00Z,2018-05-11T15:12:00Z,0,STANDARD,1: no settable activity,D10_2018-05-11_2,D10_2018-05-11_2,2018-05-11_D10_3_250_SEMSP
+DE506,DI,C,2018-05-14,D07,Hoskyn Channel,"Brett Johnson,Carly Janusson,Katie Davidson,Sara Boyer-Tremblay",NA,25,1,5-10,N,ebb tide,2018-05-14T13:52:00Z,2018-05-14T14:05:00Z,1,STANDARD,NA,D07_2018-05-14_2,D07_2018-05-14_2,2018-05-14_D07_3_250_SEMSP
+DE507,DI,C,2018-05-14,D09,Okisollo Channel,"Brett Johnson,Carly Janusson,Katie Davidson,Sara Boyer-Tremblay",NA,NA,NA,0.1-5,NW,low slack,NA,NA,0,STANDARD,NA,D09_2018-05-14_1,D09_2018-05-14_1,2018-05-14_D09_3_250_SEMSP
+DE510,DI,C,2018-05-15,D09,Okisollo Channel,"Brett Johnson,Katie Davidson,Sam James,Sara Tremblay-Boyer",NA,25,1,0.1-5,NW,ebb tide,2018-05-15T16:19:00Z,2018-05-15T16:33:00Z,1,STANDARD,NA,D09_2018-05-15_2,D09_2018-05-15_2,2018-05-15_D09_3_250_SEMSP
+DE508,DI,W,2018-05-15,D22,McMullen Point,"Brett Johnson,Katie Davidson,Sam James,Sara Tremblay-Boyer",NA,NA,2,10-15,NW,ebb tide,2018-05-15T13:39:00Z,2018-05-15T13:54:00Z,0,STANDARD,NA,D22_2018-05-15_2,D22_2018-05-15_2,2018-05-15_D22_3_250_SEMSP
+DE509,DI,W,2018-05-15,D27,Granite Point,"Brett Johnson,Katie Davidson,Sam James,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,2018-05-15T15:09:00Z,2018-05-15T15:22:00Z,0,STANDARD,NA,D27_2018-05-15_2,D27_2018-05-15_2,NA
+JE410,JS,N,2018-05-16,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Julian Gan,Mirko Diaz",NA,75,1,5-10,NW,flood,2018-05-16T14:21:00Z,2018-05-16T14:39:00Z,0,STANDARD,1: no settable activity,J02_2018-05-16_1,J02_2018-05-16_1,NA
+JE409,JS,N,2018-05-16,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Julian Gan,Mirko Diaz",NA,75,NA,0.1-5,NW,flood,2018-05-16T13:03:00Z,2018-05-16T13:18:00Z,0,STANDARD,1: no settable activity,J03_2018-05-16_1,J03_2018-05-16_1,2018-05-16_J03_3_250_5
+DE516,DI,E,2018-05-17,D08,Calm Channel,"Brett Johnson,Katie Davidson,Sam James,Sara Tremblay-Boyer",NA,NA,NA,0.1-5,NW,ebb tide,2018-05-17T15:20:00Z,2018-05-17T15:34:00Z,2,STANDARD,NA,D08_2018-05-17_2,D08_2018-05-17_2,2018-05-17_D08_3_250_SEMSP
+DE511,DI,E,2018-05-17,D10,Hall Point,"Brett Johnson,Katie Davidson,Sam James,Sara Tremblay-Boyer",NA,NA,2,0.1-5,NW,ebb tide,2018-05-17T13:52:00Z,2018-05-17T14:06:00Z,0,STANDARD,1: no settable activity,D10_2018-05-17_2,D10_2018-05-17_2,2018-05-17_D10_3_250_SEMSP
+JE413,JS,N,2018-05-17,J03,Cracroft Point,"Dylan Smyth,Julian Gan,Michelle Douglas,Mirko Diaz",NA,NA,1,0.1-5,NW,ebb tide,2018-05-17T17:17:00Z,2018-05-17T17:32:00Z,0,STANDARD,1: no settable activity,J03_2018-05-17_2,J03_2018-05-17_2,2018-05-17_J03_3_250_5
+JE411,JS,S,2018-05-17,J09,Blinkhorn Peninsula,"Dylan Smyth,Julian Gan,Michelle Douglas,Mirko Diaz",NA,NA,1,NA,NA,ebb tide,2018-05-17T13:11:00Z,2018-05-17T13:26:00Z,0,STANDARD,1: no settable activity,J09_2018-05-17_2,J09_2018-05-17_2,2018-05-17_J09_3_250_5
+JE412,JS,S,2018-05-17,J11,Blinkhorn Bay,"Dylan Smyth,Julian Gan,Michelle Douglas,Mirko Diaz",NA,25,1,NA,NA,ebb tide,2018-05-17T14:33:00Z,2018-05-17T14:47:00Z,1,STANDARD,1: No setttable activity for a second set.,J11_2018-05-17_2,J11_2018-05-17_2,NA
+JE401,JS,S,2018-05-21,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,NA,NA,NA,flood,2018-05-21T13:24:00Z,2018-05-21T13:39:00Z,1,STANDARD,1: ~120 rockfish were caught first set. No further settable activity,J09_2018-05-21_2,J09_2018-05-21_2,2018-05-21_J09_3_250_5
+JE402,JS,S,2018-05-21,J11,Blinkhorn Bay,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,1,0.1-5,SE,flood,2018-05-21T15:01:00Z,2018-05-21T15:16:00Z,1,STANDARD,NA,J11_2018-05-21_2,J11_2018-05-21_2,2018-05-21_J11_3_250_5
+DE517,DI,C,2018-05-22,D09,Okisollo Channel,"Brett Johnson,Carly Janusson,Jessica Garzke,Katie Davidson,Noah Kussin,Sara Tremblay-Boyer,Steve Johnson",NA,NA,NA,NA,NA,flood,2018-05-22T14:21:00Z,2018-05-22T14:34:00Z,2,STANDARD,1: Ebb tide & 25% CC during oceanography survey,D09_2018-05-22_2,D09_2018-05-22_2,2018-05-22_D09_3_250_SEMSP
+JE405,JS,N,2018-05-22,J01,Hanson North,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,1,NA,NA,flood,2018-05-22T15:09:00Z,2018-05-22T15:28:00Z,0,STANDARD,1: no settable activity,J01_2018-05-22_2,J01_2018-05-22_2,2018-05-22_J01_3_250_5
+JE404,JS,N,2018-05-22,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,NA,NA,NA,flood,2018-05-22T14:19:00Z,2018-05-22T14:37:00Z,0,STANDARD,1: no settable activity,J02_2018-05-22_2,J02_2018-05-22_2,NA
+JE403,JS,N,2018-05-22,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,NA,NA,NA,low slack,2018-05-22T13:14:00Z,2018-05-22T13:28:00Z,0,STANDARD,1: no settable activity,J03_2018-05-22_2,J03_2018-05-22_2,2018-05-22_J03_3_250_5
+DE515,DI,W,2018-05-23,D22,McMullen Point,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,2,5-10,NW,ebb tide,2018-05-23T13:51:00Z,2018-05-23T14:04:00Z,0,STANDARD,"1: no settable activity, strong wind and choppy conditions",D22_2018-05-23_2,D22_2018-05-23_2,2018-05-23_D22_3_250_SEMSP
+DE531,DI,W,2018-05-23,D27,Granite Point,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,flood,2018-05-23T15:28:00Z,2018-05-23T15:43:00Z,1,STANDARD,NA,D27_2018-05-23_2,D27_2018-05-23_2,2018-05-23_D27_3_250_SEMSP
+DE512,DI,E,2018-05-24,D08,Calm Channel,"Brett Johnson,JESSICA GARZKE,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,50,NA,5-10,NW,flood,2018-05-24T16:20:00Z,2018-05-24T16:34:00Z,1,STANDARD,NA,D08_2018-05-24_2,D08_2018-05-24_2,2018-05-24_D08_3_250_SEMSP
+DE518,DI,E,2018-05-24,D10,Hall Point,"Brett Johnson,JESSICA GARZKE,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,100,NA,10-15,NW,flood,2018-05-24T14:38:00Z,2018-05-24T14:53:00Z,0,STANDARD,1: no settable activity,D10_2018-05-24_3,D10_2018-05-24_3,2018-05-24_D10_2_250_SEMSP
+DE513,DI,C,2018-05-28,D09,Okisollo Channel,"Julian Gan,Katie Davidson,Sara Tremblay-Boyer,Stephen Johnston",NA,100,1,0.1-5,NW,ebb tide,2018-05-28T13:43:00Z,2018-05-28T13:58:00Z,2,STANDARD,NA,D09_2018-05-28_2,D09_2018-05-28_2,2018-05-28_D09_3_250_SEMSP
+DE519,DI,W,2018-05-29,D27,Granite Point,"Alicia Anderson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,NA,10-15,NW,ebb tide,2018-05-29T13:28:00Z,2018-05-29T13:43:00Z,1,STANDARD,NA,D27_2018-05-29_2,D27_2018-05-29_2,2018-05-29_D27_3_250_SEMSP
+DE514,DI,E,2018-05-30,D10,Hall Point,"Brett Johnson,Brian Hendricks,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,5-10,NW,ebb tide,2018-05-30T14:34:00Z,2018-05-30T14:47:00Z,1,STANDARD,NA,D10_2018-05-30_2,D10_2018-05-30_2,2018-05-30_D10_3_250_SEMSP
+JE416,JS,N,2018-05-30,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,50,1,5-10,NW,ebb tide,2018-05-30T18:09:00Z,2018-05-30T18:26:00Z,0,STANDARD,1: no settable activity,J02_2018-05-30_2,J02_2018-05-30_2,NA
+JE408,JS,N,2018-05-30,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,25,2,0.1-5,NW,ebb tide,2018-05-30T16:06:00Z,2018-05-30T16:21:00Z,0,STANDARD,1: no settable activity,J03_2018-05-30_2,J03_2018-05-30_2,2018-05-30_J03_3_250_5
+JE406,JS,S,2018-05-30,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,1,0.1-5,NW,ebb tide,2018-05-30T13:22:00Z,2018-05-30T13:37:00Z,0,STANDARD,1: no settable activity,J09_2018-05-30_2,J09_2018-05-30_2,2018-05-30_J09_3_250_5
+JE407,JS,S,2018-05-30,J11,Blinkhorn Bay,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,2,0.1-5,NW,ebb tide,2018-05-30T14:21:00Z,2018-05-30T14:36:00Z,0,STANDARD,1: no settable activity,J11_2018-05-30_2,J11_2018-05-30_2,NA
+JE417,JS,S,2018-05-31,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,2,0.1-5,NW,ebb tide,2018-05-31T13:20:00Z,2018-05-31T13:35:00Z,2,STANDARD,1: No net. Unable to do Zooptow,J09_2018-05-31_2,J09_2018-05-31_2,NA
+JE418,JS,N,2018-06-03,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,1,0.1-5,SE,flood,2018-06-03T13:10:00Z,2018-06-03T13:25:00Z,1,STANDARD,NA,J03_2018-06-03_2,J03_2018-06-03_2,2018-06-03_J03_3_250_5
+DE520,DI,C,2018-06-04,D09,Okisollo Channel,"Brian Hendriks,Julian Gan,Katie Davidson,Noah Kussin-Bordo",NA,NA,NA,0.1-5,N,flood,2018-06-04T13:49:00Z,2018-06-04T14:04:00Z,3,STANDARD,NA,D09_2018-06-04_2,D09_2018-06-04_2,2018-06-04_D09_3_250_SEMSP
+DE521,DI,W,2018-06-05,D27,Granite Point,"Julian Gan,Katie Davidson,Lauren Portner,Sara Tremblay-Boyer",NA,100,NA,0.1-5,SE,flood,2018-06-05T13:18:00Z,2018-06-05T13:30:00Z,1,STANDARD,NA,D27_2018-06-05_2,D27_2018-06-05_2,2018-06-05_D27_3_250_SEMSP
+DE522,DI,E,2018-06-07,D10,Hall Point,"Brian Hendricks,Katie Davidson,Lauren Portner,Sara Tremblay-Boyer",light,100,1,0.1-5,SE,flood,2018-06-07T14:07:00Z,2018-06-07T14:20:00Z,1,STANDARD,1: no settable activity,D10_2018-06-07_2,D10_2018-06-07_2,2018-06-07_D10_3_250_SEMSP
+JE414,JS,S,2018-06-07,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",light,100,NA,0.1-5,SE,high slack,2018-06-07T13:21:00Z,2018-06-07T13:37:00Z,1,STANDARD,NA,J09_2018-06-07_2,J09_2018-06-07_2,2018-06-07_J09_3_250_5
+DE523,DI,C,2018-06-11,D09,Okisollo Channel,"Chris OSullivan,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,NA,0.1-5,NW,ebb tide,2018-06-11T13:24:00Z,2018-06-11T13:39:00Z,1,STANDARD,NA,D09_2018-06-11_2,D09_2018-06-11_2,2018-06-11_D09_3_250_SEMSP
+DE525,DI,W,2018-06-12,D22,McMullen Point,"Chris OSullivan,Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,100,2,0.1-5,SE,low slack,2018-06-12T17:40:00Z,2018-06-12T17:55:00Z,1,STANDARD,NA,D22_2018-06-12_3,D22_2018-06-12_2,2018-06-12_D22_4_250_SEMSP
+DE525,DI,W,2018-06-12,D22,McMullen Point,"Chris OSullivan,Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,100,2,0.1-5,SE,low slack,2018-06-12T17:40:00Z,2018-06-12T17:55:00Z,1,STANDARD,NA,D22_2018-06-12_3,D22_2018-06-12_3,2018-06-12_D22_4_250_SEMSP
+DE525,DI,W,2018-06-12,D22,McMullen Point,"Chris OSullivan,Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,100,2,0.1-5,SE,low slack,2018-06-12T17:40:00Z,2018-06-12T17:55:00Z,1,STANDARD,NA,D22_2018-06-12_2,D22_2018-06-12_2,2018-06-12_D22_4_250_SEMSP
+DE525,DI,W,2018-06-12,D22,McMullen Point,"Chris OSullivan,Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,100,2,0.1-5,SE,low slack,2018-06-12T17:40:00Z,2018-06-12T17:55:00Z,1,STANDARD,NA,D22_2018-06-12_2,D22_2018-06-12_3,2018-06-12_D22_4_250_SEMSP
+DE524,DI,W,2018-06-12,D27,Granite Point,"Chris OSullivan,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,100,1,0.1-5,NW,ebb tide,2018-06-12T13:07:00Z,2018-06-12T13:19:00Z,4,STANDARD,NA,D27_2018-06-12_2,D27_2018-06-12_2,2018-06-12_D27_3_250_SEMSP
+JE415,JS,N,2018-06-12,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,1,0.1-5,SE,ebb tide,2018-06-12T13:19:00Z,2018-06-12T13:37:00Z,2,STANDARD,1: no visual survey at primary site due to poor weather.,J02_2018-06-12_2,J02_2018-06-12_2,2018-06-12_J02_3_250_5
+DE526,DI,E,2018-06-13,D10,Hall Point,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",light,100,1,0.1-5,SE,ebb tide,2018-06-13T13:48:00Z,2018-06-13T14:01:00Z,1,STANDARD,NA,D10_2018-06-13_2,D10_2018-06-13_2,2018-06-13_D10_3_250_SEMSP
+JE419,JS,S,2018-06-14,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,NA,0.1-5,NW,ebb tide,2018-06-14T13:09:00Z,2018-06-14T13:24:00Z,1,STANDARD,1: So many logs,J09_2018-06-14_2,J09_2018-06-14_2,2018-06-14_J09_3_250_5
+DE527,DI,C,2018-06-18,D09,Okisollo Channel,",Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,NA,1,0.1-5,NW,flood,2018-06-18T13:20:00Z,2018-06-18T13:35:00Z,3,STANDARD,NA,D09_2018-06-18_2,D09_2018-06-18_2,2018-06-18_D09_3_250_SEMSP
+DE528,DI,C,2018-06-18,D30,Chonat Bay,",Katie Davidson,Sara Tremblay-Boyer,ulian Gan",NA,NA,1,NA,NA,low slack,2018-06-18T19:07:00Z,2018-06-18T19:22:00Z,1,STANDARD,1: No surface activity indicating sockeye,D30_2018-06-18_2,D30_2018-06-18_2,NA
+DE530,DI,W,2018-06-19,D22,McMullen Point,"David Costalago,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,SE,flood,2018-06-19T16:20:00Z,2018-06-19T16:34:00Z,2,STANDARD,NA,D22_2018-06-19_2,D22_2018-06-19_2,2018-06-19_D22_3_250_SEMSP
+DE529,DI,W,2018-06-19,D27,Granite Point,"David Costalago,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,25,1,0.1-5,SE,flood,2018-06-19T13:22:00Z,2018-06-19T13:36:00Z,2,STANDARD,NA,D27_2018-06-19_2,D27_2018-06-19_2,2018-06-19_D27_3_250_SEMSP
+DE532,DI,E,2018-06-20,D10,Hall Point,"David Costalago,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,1,0.1-5,SE,flood,2018-06-20T14:40:00Z,2018-06-20T14:53:00Z,3,STANDARD,"1: Set #2 herring released poor condition, no ice packs for cooling fish, first 3 herring in 12:20",D10_2018-06-20_2,D10_2018-06-20_2,2018-06-20_D10_3_250_SEMSP
+JE420,JS,N,2018-06-20,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",light,100,1,0.1-5,NW,flood,2018-06-20T15:29:00Z,2018-06-20T15:45:00Z,1,STANDARD,1: Heavy fog during transit and transect. Could not reach primary site. Three sets attempted at secondary site.,J02_2018-06-20_1,J02_2018-06-20_1,2018-06-20_J02_3_250_5
+JE421,JS,S,2018-06-21,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,NA,0.1-5,NW,flood,2018-06-21T13:49:00Z,2018-06-21T14:04:00Z,2,STANDARD,NA,J09_2018-06-21_1,J09_2018-06-21_1,2018-06-21_J09_3_250_5
+JE422,JS,N,2018-06-23,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,2,0.1-5,NW,ebb tide,2018-06-23T13:15:00Z,2018-06-23T13:30:00Z,2,STANDARD,NA,J03_2018-06-23_3,J03_2018-06-23_3,2018-06-23_J03_4_250_5
+DE533,DI,C,2018-06-25,D09,Okisollo Channel,"Eva Jordinson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,100,1,10-15,NW,ebb tide,2018-06-25T13:32:00Z,2018-06-25T13:46:00Z,2,STANDARD,NA,D09_2018-06-25_3,D09_2018-06-25_3,2018-06-25_D09_4_250_SEMSP
+DE534,DI,W,2018-06-26,D27,Granite Point,"Eva Jordinson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,2018-06-26T13:08:00Z,2018-06-26T13:21:00Z,2,STANDARD,NA,D27_2018-06-26_5,D27_2018-06-26_6,2018-06-26_D27_2_250_SEMSP
+DE534,DI,W,2018-06-26,D27,Granite Point,"Eva Jordinson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,2018-06-26T13:08:00Z,2018-06-26T13:21:00Z,2,STANDARD,NA,D27_2018-06-26_5,D27_2018-06-26_6,2018-06-26_D27_3_250_SEMSP
+DE534,DI,W,2018-06-26,D27,Granite Point,"Eva Jordinson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,2018-06-26T13:08:00Z,2018-06-26T13:21:00Z,2,STANDARD,NA,D27_2018-06-26_6,D27_2018-06-26_6,2018-06-26_D27_2_250_SEMSP
+DE534,DI,W,2018-06-26,D27,Granite Point,"Eva Jordinson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,ebb tide,2018-06-26T13:08:00Z,2018-06-26T13:21:00Z,2,STANDARD,NA,D27_2018-06-26_6,D27_2018-06-26_6,2018-06-26_D27_3_250_SEMSP
+DE536,DI,C,2018-06-27,D09,Okisollo Channel,"Brett Johnson,Brian Hendriks,Julian Gan,Katie Davidson,Sara Tremblay-Boyer,Steve Johnston",NA,50,2,5-10,NW,flood,NA,NA,1,NON-STANDARD,1: Set for Hinch crew to get samples for holding study. Retained incidental sockeye & 1 diseased-looking chum for Gideon Mordecai (UBC Suttle lab virology),NA,NA,NA
+DE535,DI,E,2018-06-27,D10,Hall Point,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,2,10-15,NW,ebb tide,2018-06-27T13:44:00Z,2018-06-27T13:57:00Z,1,STANDARD,NA,D10_2018-06-27_2,D10_2018-06-27_2,2018-06-27_D10_3_250_Semsp
+JE423,JS,S,2018-06-28,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",light,100,NA,NA,NA,ebb tide,2018-06-28T13:22:00Z,2018-06-28T13:39:00Z,2,STANDARD,NA,J09_2018-06-28_2,J09_2018-06-28_2,2018-06-28_J09_3_250_5
+JE425,JS,N,2018-06-29,J02,Swanson Island,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",moderate,100,NA,NA,NA,ebb tide,2018-06-29T14:20:00Z,2018-06-29T14:38:00Z,1,STANDARD,1: Current too strong to keep the fish or set again safely.,J02_2018-06-29_2,J02_2018-06-29_2,NA
+JE424,JS,N,2018-06-29,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,2,5-10,SE,ebb tide,2018-06-29T13:14:00Z,2018-06-29T13:30:00Z,0,STANDARD,1: Weather too poor to set,J03_2018-06-29_2,J03_2018-06-29_2,2018-06-29_J03_3_250_5
+DE537,DI,C,2018-07-03,D09,Okisollo Channel,"Carly Janusson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,75,1,5-10,NW,flood,2018-07-03T13:29:00Z,2018-07-03T13:43:00Z,1,STANDARD,NA,D09_2018-07-03_3,D09_2018-07-03_3,2018-07-03_D09_4_250_SEMSP
+JE426,JS,N,2018-07-03,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,75,1,0.1-5,SE,flood,2018-07-03T13:05:00Z,2018-07-03T13:21:00Z,1,STANDARD,NA,J03_2018-07-03_2,J03_2018-07-03_2,2018-07-03_J03_3_250_5
+DE538,DI,W,2018-07-04,D27,Granite Point,"Julian Gan,Katie Davidson,Sara Tremblay-Boyer,Tyrel Froese",NA,25,2,10-15,NW,flood,2018-07-04T13:05:00Z,2018-07-04T13:19:00Z,2,STANDARD,NA,D27_2018-07-04_3,D27_2018-07-04_3,2018-07-04_D27_4_250_SEMSP
+JE427,JS,S,2018-07-04,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,25,NA,NA,NA,flood,2018-07-04T13:09:00Z,2018-07-04T13:24:00Z,2,STANDARD,NA,J09_2018-07-04_2,J09_2018-07-04_2,2018-07-04_J09_3_250_5
+DE539,DI,E,2018-07-05,D10,Hall Point,"Brian Hendriks,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,100,1,0.1-5,N,flood,2018-07-05T13:41:00Z,2018-07-05T13:54:00Z,2,STANDARD,NA,D10_2018-07-05_3,D10_2018-07-05_3,2018-07-05_D10_4_250_SEMSP
+JE428,JS,N,2018-07-09,J03,Cracroft Point,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,NA,NA,NA,ebb tide,2018-07-09T13:04:00Z,2018-07-09T13:19:00Z,1,STANDARD,NA,J03_2018-07-09_2,J03_2018-07-09_2,2018-07-09_J03_3_250_4
+JE429,JS,S,2018-07-09,J09,Blinkhorn Peninsula,"Dylan Smyth,Erin Pippus,Michelle Douglas,Mirko Diaz",NA,100,1,NA,NA,flood,2018-07-09T16:00:00Z,2018-07-09T16:15:00Z,1,STANDARD,NA,J09_2018-07-09_2,J09_2018-07-09_2,2018-07-09_J09_3_250_4
+DE540,DI,C,2018-07-17,D09,Okisollo Channel,"Carly Janusson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,50,1,5-10,NW,high slack,2018-07-17T14:15:00Z,2018-07-17T14:28:00Z,1,STANDARD,NA,D09_2018-07-17_3,D09_2018-07-17_3,2018-07-17_D09_4_250_SEMSP
+DE541,DI,C,2018-08-01,D09,Okisollo Channel,"Brett Johnson,Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,high slack,2018-08-01T15:05:00Z,2018-08-01T15:19:00Z,1,STANDARD,NA,D09_2018-08-01_3,D09_2018-08-01_3,2018-08-01_D09_4_250_SEMSP
+DE546,DI,C,2018-08-08,D09,Okisollo Channel,"Brett Johnson,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,high slack,2018-08-08T15:02:00Z,2018-08-08T15:17:00Z,2,STANDARD,NA,D09_2018-08-08_1,D09_2018-08-08_1,2018-08-08_D09_3_250_SEMSP
+DE542,DI,C,2018-08-15,D09,Okisollo Channel,"Brett Johnson,Katie Davidson,Sara Tremblay-Boyer",NA,NA,1,0.1-5,NW,flood,2018-08-15T14:50:00Z,2018-08-15T15:03:00Z,2,STANDARD,NA,D09_2018-08-15_2,D09_2018-08-15_2,2018-08-15_D09_3_250_SEMSP
+DE543,DI,C,2018-08-22,D09,Okisollo Channel,"Julian Gan,Katie Davidson,Sara Tremblay-Boyer",NA,100,1,0.1-5,NW,flood,2018-08-22T15:02:00Z,2018-08-22T15:15:00Z,1,STANDARD,1: very smokey,D09_2018-08-22_2,D09_2018-08-22_2,2018-08-22_D09_3_250_SEMSP
