@@ -18,7 +18,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Surveys DE278, DE289, DE293, DE321, DE334, DE348, and DE360 incorrectly had their zone listed as "E"; corrected to "W"
 
 ### Removed
-- Removed the following records from `sealice_lab_finescale` due to no results: U41, U148, U150, U1189, U1375, U1393, U1397, U1411 
+- Removed the following records from `sealice_finescale` due to no results: U41, U148, U150, U1189, U1375, U1393, U1397, U1411 
 
 
 ## [0.2.0] - 2018-10-15
