@@ -1,617 +1,617 @@
-survey_id,survey_date,crew,precip,cloud_cover,sea_state,wind_speed,wind_direction,tide_state,survey_time_start,survey_time_end,ysi_cast_id,ctd_cast_id,zoop_sample_id,secchi,net_sets,survey_type,survey_comments
-DE99,2015-05-10,"Brett Johnson, Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,,NA,NA,NA,0,non-standard,Circumnavigation of Quadra. No formal data recorded.
-DE100,2015-05-12,"Carolyn Knapper, Kristi Inman, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,3,10-15,NW,NA,NA,NA,,NA,NA,8.7,3,standard,NA
-DE101,2015-05-13,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,100,0,0,NA,NA,NA,NA,,NA,NA,12.1,1,standard,NA
-DE102,2015-05-14,"Carolyn Knapper, Ben Millard-Martin, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,,NA,NA,8.5,1,standard,NA
-DE103,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,0,0,NA,NA,NA,NA,,NA,QPK1005,10.3,1,standard,NA
-DE104,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,0,0,NA,NA,NA,NA,,NA,QPK1007,NA,1,standard,NA
-DE105,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,1,0.1-5,NW,NA,NA,NA,,NA,QPK1009,7,1,standard,NA
-DE106,2015-05-16,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,0,0,5-10,NW,NA,NA,NA,,NA,QPK1011,NA,1,standard,NA
-DE107,2015-05-16,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,0,1,0.1-5,SW,NA,NA,NA,,NA,QPK1012,5,1,standard,NA
-DE108,2015-05-17,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,100,0,0.1-5,S,NA,NA,NA,,NA,QPK1013,11.9,1,standard,NA
-DE109,2015-05-18,"Carolyn Knapper, Brett Johnson, Luke Rogers, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK1014,6.6,1,standard,First problems with flowmeter observed: intermittent spinning.
-DE110,2015-05-18,"Carolyn Knapper, Brett Johnson, Luke Rogers, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK1015,NA,1,standard,NA
-DE111,2015-05-19,"Brett Johnson, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,5-10,NW,NA,NA,NA,,NA,QPK1016,6.1,1,standard,NA
-DE112,2015-05-20,"Brett Johnson, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,0.1-5,E,NA,NA,NA,,NA,QPK1017,11.4,1,standard,Salmon Farms: Brent Island NA; Venture Point 12 pens stocked; Okisolo Channel no nets in pens; Barnes Bay no nets in pens. 
-DE113,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,3,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,From LR logbook
-DE114,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK1018,4.6,1,standard,NA
-DE115,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,2,10-15,NE,NA,NA,NA,,NA,QPK1019,4.2,2,standard,NA
-DE116,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,100,1,0,NA,NA,NA,NA,,NA,QPK1020,8.7,1,standard,NA
-DE117,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,50,1,0.1-5,NW,NA,NA,NA,,NA,QPK1021,11,1,standard,NA
-DE118,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,0,1,0.1-5,SE,NA,NA,NA,,NA,NA,NA,0,standard,From LR logbook
-DE119,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,25,1,0.1-5,SE,NA,NA,NA,,NA,NA,NA,0,standard,From LR logbook
-DE120,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,50,1,5-10,W,NA,NA,NA,,NA,QPK1022,9.8,2,standard,NA
-DE121,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,0,1,0.1-5,SW,NA,NA,NA,,NA,QPK1023,13.9,1,standard,NA
-DE122,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,0,1,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE123,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE124,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,2,5-10,W,NA,NA,NA,,NA,QPK1024,7.3,1,standard,NA
-DE125,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,2,5-10,NW,NA,NA,NA,,NA,NA,NA,1,standard,"Set on 1 slider, no catch"
-DE126,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,50,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE127,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,25,2,5-10,W,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE128,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK1025,9.9,4,standard,NA
-DE129,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,0,2,10-15,W,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE130,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,0,1,0.1-5,W,NA,NA,NA,,NA,QPK1026,12.9,1,standard,Nordic Queen (Chrys Neville's DFO chartered commercial seiner) set 500 m W of us 1.5 hours after our set.
-DE131,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,50,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE132,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,25,1,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE133,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,25,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE134,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE135,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE136,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE137,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK1027,9.3,1,standard,NA
-DE138,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,0,2,5-10,W,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE139,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,0,1,NA,NA,NA,NA,NA,,NA,QPK1028,14.3,1,standard,NA
-DE140,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,2,5-10,NW,NA,NA,NA,,NA,QPK1029,13.2,1,standard,NA
-DE141,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,1,0.1-5,SE,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE142,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,1,0.1-5,SE,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE143,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,1,0.1-5,NW,NA,NA,NA,,NA,QPK1030,11,1,standard,Salmon Farms: Raza Island 10 pens stocked.
-DE144,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,0,0,NA,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE145,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE146,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,50,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE147,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,75,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE148,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,75,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE149,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,75,1,0.1-5,NW,NA,NA,NA,,NA,QPK1031,9.8,1,standard,NA
-DE150,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,75,2,0.1-5,W,NA,NA,NA,,NA,QPK1032,12.6,3,standard,NA
-DE151,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",light,100,0,0,NA,NA,NA,NA,,NA,QPK1033,12.5,1,standard,NA
-DE152,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,100,0,0,NA,NA,NA,NA,,NA,QPK1034,12.3,3,standard,NA
-DE153,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK1035,12.2,2,standard,Salmon Farms: North Nodales nets being delivered.
-DE154,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,25,2,10-15,W,NA,NA,NA,,NA,QPK1036,9.9,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.
-DE155,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0,NA,NA,NA,NA,,NA,QPK1037,11.5,1,standard,Salmon Farms: Raza Island 10 pens stocked. Sockeye miscount: new convention two independent counts of fish taken prior to net release.
-DE156,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE157,2015-06-04,"Luke Rogers, Carolyn Knapper, Brett Johnson, Dylan Smyth",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE158,2015-06-04,"Luke Rogers, Carolyn Knapper, Brett Johnson, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,QPK1038,10.8,2,standard,"Sighted outside of sets: 10,000 herring 30-40 mm length."
-DE159,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0.1-5,SE,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE160,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,0.1-5,N,NA,NA,NA,,NA,QPK1039,13.2,1,standard,NA
-DE161,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE162,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,0,0,0,NA,NA,NA,NA,,NA,QPK1040,13.3,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel NA; Barnes Bay NA.
-DE163,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,75,1,0.1-5,SE,NA,NA,NA,,NA,QPK1041,14.9,1,standard,NA
-DE164,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE165,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,2,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE166,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,S,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE167,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-DE168,2015-06-07,"Luke Rogers, Brett Johnson, Dylan Smyth, Midoli Bresch",none,0,2,5-10,W,NA,NA,NA,,NA,QPK1042,16.2,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.
-DE169,2015-06-07,"Luke Rogers, Brett Johnson, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,E,NA,NA,NA,,NA,QPK1043,13.9,2,standard,NA
-DE170,2015-06-09,"Luke Rogers, Carson White, Kristi Inman, Brian Hunt",none,25,2,5-10,W,NA,NA,NA,,NA,QPK1044,11.6,2,standard,NA
-DE171,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,1,0.1-5,S,NA,NA,NA,,NA,NA,NA,2,standard,NA
-DE172,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,4,10-15,W,NA,NA,NA,,NA,NA,NA,0,standard,fish too sparse to target
-DE173,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,1,5-10,NW,NA,NA,NA,,NA,QPK1045,11.5,1,standard,NA
-DE174,2015-06-11,"Brett Johnson, Luke Rogers, Carolyn Knapper, Grant Callegri",none,75,2,0.1-5,W,NA,NA,NA,,NA,QPK1046,14.3,1,standard,Samples marked D09(2). Initial set removed due to potential bias from snag on bottom.
-DE175,2015-06-11,"Brett Johnson, Luke Rogers, Carolyn Knapper, Grant Callegri",none,0,3,0.1-5,E,NA,NA,NA,,NA,QPK1048,12.9,1,standard,NA
-DE176,2015-06-12,"Brett Johnson, Kristi Inman, Luke Rogers",none,25,1,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE177,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,2,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE178,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE179,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,2,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE180,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,3,5-10,NA,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE181,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE182,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,5-10,NW,NA,NA,NA,,NA,QPK1049,11.4,1,standard,NA
-DE183,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,0,0,NA,NA,NA,NA,,NA,QPK1050,13.2,2,standard,NA
-DE184,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,1,0.1-5,W,NA,NA,NA,,NA,QPK1051,15.6,1,standard,NA
-DE185,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,2,standard,No sockeye in sets
-DE186,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,SW,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE187,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE188,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,NE,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE189,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,N,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE190,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,0.1-5,W,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE191,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE192,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,5-10,NW,NA,NA,NA,,NA,QPK1052,14.9,3,standard,NA
-DE193,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,25,1,0.1-5,NE,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE194,2015-06-17,"Carolyn Knapper, Kristi Inman, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK1053,4.1,1,standard,NA
-DE195,2015-06-17,"Luke Rogers, Kristi Inman, Carolyn Knapper",none,25,1,0.1-5,ES,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE196,2015-06-17,"Luke Rogers, Kristi Inman, Carolyn Knapper",none,25,2,0.1-5,ES,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE197,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,25,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE198,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK1054,13,2,standard,NA
-DE199,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,0,0,NA,NA,NA,NA,,NA,QPK1055,11.4,1,standard,NA
-DE200,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,2,5-10,SE,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE201,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",none,50,1,0.1-5,W,NA,NA,NA,,NA,QPK1057,9.4,1,standard,NA
-DE202,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",moderate,75,1,0.1-5,E,NA,NA,NA,,NA,QPK1056,NA,0,standard,Too sparse to target
-DE203,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",light,75,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE204,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE205,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK1058,10.8,2,standard,NA
-DE206,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,25,1,0.1-5,SE,NA,NA,NA,,NA,QPK1059,10.4,1,standard,NA
-DE207,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-DE208,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE209,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE210,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0.1-5,W,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE211,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",nonw,25,0,0,NA,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE212,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,75,1,0.1-5,SE,NA,NA,NA,,NA,QPK1060,10.5,2,standard,NA
-DE213,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,25,1,0.1-5,S,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE214,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,25,1,0.1-5,SE,NA,NA,NA,,NA,QPK1061,NA,1,standard,Data entry note: Seems secchi depth was not taken
-DE216,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,2,5-10,NW,NA,NA,NA,,NA,NA,NA,1,standard,No sockeye in set
-DE217,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK1062,13.7,2,standard,NA
-DE215,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,1,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE218,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,0,0.1-5,SE,NA,NA,NA,,NA,QPK1063,11,1,standard,NA
-DE219,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,1,0.1-5,SE,NA,NA,NA,,NA,QPK1064,13.8,1,standard,NA
-DE220,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,0,0,NA,NA,NA,NA,,NA,QPK1065,12.2,1,standard,NA
-DE221,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,2,5-10,W,NA,NA,NA,,NA,QPK1066,15.4,1,standard,NA
-DE222,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,50,1,0.1-5,W,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE223,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,5-10,N,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE224,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,25,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,Too sparse to target
-DE225,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,75,1,0.1-5,NW,NA,NA,NA,,NA,QPK1067,12.9,1,standard,NA
-DE226,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,75,1,0.1-5,E,NA,NA,NA,,NA,QPK1068,10.5,2,standard,NA
-DE227,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,10-15,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE228,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,5-10,W,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE229,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0,NA,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE231,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,W,NA,NA,NA,,NA,QPK1069,12.9,2,standard,NA
-DE232,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,10-15,NW,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE230,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,5-10,NE,NA,NA,NA,,NA,NA,NA,0,standard,No surface activity
-DE233,2015-07-05,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,"No salmon surface activity, all herring and stickleback"
-DE234,2015-07-05,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,25,1,0.1-5,W,NA,NA,NA,,NA,QPK1070,11.9,1,standard,NA
-DE236,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0,NA,NA,NA,NA,,NA,QPK1071,11.3,1,standard,NA
-DE237,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,1,0.1-5,N,NA,NA,NA,,NA,QPK1072,11.6,1,standard,NA
-DE235,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0.1-5,N,NA,NA,NA,,NA,NA,NA,0,standard,Too sparse to target
-DE238,2015-07-07,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,1,0.1-5,W,NA,NA,NA,,NA,QPK1073,12.9,1,standard,NA
-DE239,2015-07-07,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0.1-5,E,NA,NA,NA,,NA,QPK1074,11.4,2,standard,NA
-DE240,2015-07-14,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,0,0,NA,NA,NA,NA,,NA,QPK1075,10,1,standard,Sockeye very small
-DE241,2015-07-14,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,1,0.1-5,W,NA,NA,NA,,NA,QPK1076,15.8,1,standard,NA
-DE242,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,25,1,0.1-5,NW,NA,NA,NA,,NA,QPK1077,9.5,0,standard,NA
-DE243,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK1078,9.5,0,standard,NA
-DE244,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,0,2,5-10,NW,NA,NA,NA,,NA,QPK1079,11,0,standard,NA
-DE245,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK685,5,2,standard,"Fish surface activity: rapid splashing as of many fish. Visual on several: small <7cm, some distinct popping also."
-DE247,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,2,5-10,NE,NA,NA,NA,,NA,QPK686,7.5,0,standard,NA
-DE248,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,2,0.1-5,NW,NA,NA,NA,,NA,QPK687,8.3,0,standard,NA
-DE249,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK688,1.6,0,standard,NA
-DE250,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,0,0,NA,NA,NA,NA,,NA,QPK689,3.1,0,standard,NA
-DE251,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,0,0,NA,NA,NA,NA,,NA,QPK690,3,0,standard,NA
-DE252,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",light,100,1,5-10,W,NA,NA,NA,,NA,QPK691,9.3,0,standard,Scan stopped at 0802 near Godwin Pt and restarted at 0804 in Bickley Bay.
-DE253,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",none,25,1,0.1-5,W,NA,NA,NA,,NA,QPK692,12.7,0,standard,NA
-DE254,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",none,0,1,5-10,W,NA,NA,NA,,NA,QPK693,13,0,standard,"Scan 11:14-11:30 at Turn Isl, 11:36-11:46 at Rock Bay"
-DE255,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,25,0,0.1-5,S,NA,NA,NA,,NA,QPK694,2.3,2,standard,Saw fish immediately upon site arrival
-DE257,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,50,1,0.1-5,SE,NA,NA,NA,,NA,QPK695,3.2,0,standard,NA
-DE258,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,75,1,0.1-5,S,NA,NA,NA,,NA,QPK696,1.4,1,standard,NA
-DE259,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,25,0,0,NA,NA,NA,NA,,NA,QPK697,1.5,1,standard,NA
-DE260,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,50,0,0,NA,NA,NA,NA,,NA,QPK698,2,1,standard,NA
-DE261,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,50,1,0.1-5,NW,NA,NA,NA,,NA,QPK699,1.5,1,standard,NA
-DE262,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK700,8.5,1,standard,NA
-DE263,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,50,2,5-10,N,NA,NA,NA,,NA,QPK701,8.5,1,standard,NA
-DE264,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,50,1,5-10,N,NA,NA,NA,,NA,QPK702,7,2,standard,NA
-DE266,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,25,2,5-10,W,NA,NA,NA,,NA,QPK703,11.5,0,standard,NA
-DE267,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,50,1,0.1-5,W,NA,NA,NA,,NA,QPK704,8.1,1,standard,NA
-DE268,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,75,1,5-10,W,NA,NA,NA,,NA,QPK705,8.5,0,standard,"2 Scans: 1: Shoal Bay + Godwin Pt (10 min), 2: Bickley Bay (10 min)"
-DE269,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,0,0.1-5,SE,NA,NA,NA,,NA,QPK706,6.5,2,standard,"First set 06:20 mostly chum fry. Set on dimpling 2 and a single slider event(1) resume search 06:48, second set 06:58-targeted set."
-DE271,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK707,7.5,0,standard,"1 single slider seen, nothing else"
-DE272,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,5-10,NW,NA,NA,NA,,NA,QPK708,7,2,standard,Resume search 13:05 after first set.
-DE274,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK709,6,1,standard,NA
-DE275,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,5-10,W,NA,NA,NA,,NA,QPK710,6,1,standard,NA
-DE276,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,,NA,QPK711,5,1,standard,NA
-DE277,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,100,1,0,NA,NA,NA,NA,,NA,QPK712,12.3,1,standard,YSI did not calibrate this morning- fluctuating readings. Coho neglected and in dry shipper.
-DE278,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,100,1,5-10,NW,NA,NA,NA,,NA,QPK713,12,1,standard,NA
-DE279,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,25,2,10-15,N,NA,NA,NA,,NA,QPK714,10.4,2,standard,NA
-DE281,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,50,1,0.1-5,NW,NA,NA,NA,,NA,QPK715,14.7,0,standard,NA
-DE282,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,75,1,0.1-5,NW,NA,NA,NA,,NA,QPK716,13,1,standard,NA
-DE283,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,50,1,0.1-5,NW,NA,NA,NA,,NA,QPK717A,10.5,0,standard,NA
-DE284,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,50,1,0.1-5,W,NA,NA,NA,,NA,QPK717B,7.5,2,standard,NA
-DE286,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK718,7,0,standard,NA
-DE287,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,100,1,0.1-5,N,NA,NA,NA,,NA,QPK719,4,1,standard,NA
-DE288,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,75,1,10-15,NW,NA,NA,NA,,NA,QPK720,12,1,standard,appr. 2 ml of zooplankton sample was lost
-DE289,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,50,2,10-15,NW,NA,NA,NA,,NA,QPK721,14.5,0,standard,NA
-DE290,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,75,1,5-10,NW,NA,NA,NA,,NA,QPK722,10.5,2,standard,"Caught net on bottom, abandoned set to free net."
-DE292,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK723,11.5,1,standard,NA
-DE293,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,50,1,0.1-5,NW,NA,NA,NA,,NA,QPK724,14,1,standard,Starting to use 64 um sieved filter for zooplankton preservation
-DE294,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK725,15,1,standard,First dayaltering search time method. First day with altered set/site-wide surface activity
-DE295,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",none,75,1,0,NA,NA,NA,NA,,NA,QPK726,13.5,1,standard,NA
-DE296,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",none,75,0,0,NA,NA,NA,NA,,NA,QPK727,9,1,standard,NA
-DE297,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",light,100,1,0.1-5,SE,NA,NA,NA,,NA,QPK728,8.5,1,standard,NA
-DE298,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,NE,NA,NA,NA,,NA,QPK729,8,0,standard,NA
-DE299,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,NE,NA,NA,NA,,NA,QPK730,9.8,1,standard,NA
-DE300,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,N,NA,NA,NA,,NA,QPK731,9.3,1,standard,NA
-DE301,2016-06-07,"Brett Johnson, Sam James, Luke Rogers, Mirko Diaz",none,25,1,0.1-5,NW,NA,NA,NA,,NA,QPK732,11.5,1,standard,"Set concurrent with Chrys Set (Nordic Queen), Lenora set (Beach Seine 1), and Stephane Transects (Pellesi)."
-DE302,2016-06-07,"Luke Rogers, Sam James, Mirko Diaz",none,0,2,5-10,N,NA,NA,NA,,NA,QPK733,12.5,1,standard,NA
-DE303,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK734,13,1,standard,NA
-DE304,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,75,1,0.1-5,SW,NA,NA,NA,,NA,QPK735,14.5,0,standard,NA
-DE305,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK736,8.5,2,standard,No fish in first set.
-DE307,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,100,2,0.1-5,NW,NA,NA,NA,,NA,QPK737,6.5,1,standard,NA
-DE309,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,25,3,10-15,SE,NA,NA,NA,,NA,QPK739,5.5,0,standard,High wind and swell
-DE308,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,S,NA,NA,NA,,NA,QPK738,4.5,1,standard,NA
-DE310,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",light,100,0,0,NA,NA,NA,NA,,NA,QPK740,5.5,2,standard,NA
-DE312,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",none,100,0,0.1-5,N,NA,NA,NA,,NA,QPK741,7.5,0,standard,NA
-DE313,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",none,100,0,0.1-5,N,NA,NA,NA,,NA,QPK742,5.3,0,standard,NA
-DE314,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",none,100,1,0.1-5,W,NA,NA,NA,,NA,QPK743,11,0,standard,NA
-DE315,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",none,100,1,0.1-5,NE,NA,NA,NA,,NA,QPK744,11,1,standard,NA
-DE316,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",light,100,1,0.1-5,NW,NA,NA,NA,,NA,QPK745,11.5,0,standard,NA
-DE317,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",NA,NA,NA,NA,NA,NA,NA,NA,,NA,QPK747,NA,3,standard,random blind set thus no other data collected
-DE320,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,25,1,0.1-5,SE,NA,NA,NA,,NA,QPK746,11,1,standard,NA
-DE321,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,100,1,0.1-5,SE,NA,NA,NA,,NA,QPK748,12.5,1,standard,NA
-DE322,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,50,1,0.1-5,S,NA,NA,NA,,NA,NA,11,1,standard,"3 random sets conducted over DFO accoustic moorings. 1) 06:34 @ 50.305971N, 125.334369W - Dimpling observed but no fish in net. 2) 06:59 @ same as 1st set - some dimpling observed, no fish in net. 3) 07:40 @ western mooring. No surface activity observed, no fish."
-DE323,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0,NA,NA,NA,NA,,NA,QPK749,11,2,standard,"Sampling with DFO. Chrys Neville/Nordic Queen first set time: 06:33. One splash and one dimple ovserved, but not deemed 'settable school'. No other surface activity observed in area. DFO also reported minimal fish in their catch, almost no sockeye."
-DE325,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0,NA,NA,NA,NA,,NA,QPK750,11.5,2,standard,"Sparse splashing, no fish."
-DE327,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0.1-5,S,NA,NA,NA,,NA,QPK751,8.5,2,standard,NA
-DE329,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,25,1,0,NA,NA,NA,NA,,D22_2016-06-21_2,QPK752,13,2,standard,"DFO set at 09:30. No fish in our first set but large school observed. 3 CTD drops total: 1 practice, 1 @ oceanography site (65m), 1 @ fish site (10m)"
-DE331,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,25,1,0.1-5,NW,NA,NA,NA,,D22_2016-06-21_2,QPK753,10,1,standard,On site for 2 hours. Only 1 successful set conducted
-DE334,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,100,2,10-15,SE,NA,NA,NA,,D27_2016-06-21_4,QPK754,12,0,standard,NA
-DE335,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,0,0,NA,NA,NA,NA,,D21_2016-06-22_2,QPK755,11.5,2,standard,NA
-DE337,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,1,0.1-5,S,NA,NA,NA,,D28_2016-06-22_2,QPK756,13,1,standard,DFO set at 10:44 - Cameron & Julia report zero sockeye in set. 1st set 10:52 on one aggressive slider. Suspect coho
-DE338,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,1,0.1-5,N,NA,NA,NA,,D20_2016-06-22_2,QPK757,9,1,standard,NA
-DE340,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,NW,NA,NA,NA,,D08_2016-06-23_2,QPK759,6.5,0,standard,NA
-DE341,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,S,NA,NA,NA,,D24_2016-06-23_2,QPK760,5,1,standard,NA
-DE339,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,N,NA,NA,NA,,D07_2016-06-23_2,QPK758,5,0,standard,NA
-DE342,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",light,100,0,0.1-5,NW,NA,NA,NA,,D25_2016-06-24_1,QPK761,6.5,1,standard,"Natalie asks that we write ""formalin"" on pet jar labels. CTD times stored on IPAD but IPAD touch screen not responding"
-DE343,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",none,75,1,0.1-5,N,NA,NA,NA,,D26_2016-06-24_1,QPK762,7.5,0,standard,"Ipad not working. Coordinates taken from phone in degree, minutes, seconds)"
-DE344,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",none,100,1,0.1-5,S,NA,NA,NA,,D04_2016-06-24_3,QPK763,6.5,1,standard,"1st set no fish, interupted oceanography to set. Crafty fish, very skittish. Gone Quickly. Ipad not working and coordinates were taken off phne in degree decimal minutes. 2nd set: after leaving the site. "
-DE345,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0.1-5,E,NA,NA,NA,,NA,QPK764,6.5,0,standard,No CTD today due to malfunction
-DE346,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0,NA,NA,NA,NA,,NA,QPK765,5.5,0,standard,No CTD today due to malfunction
-DE347,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0.1-5,SE,NA,NA,NA,,NA,QPK766,5.3,0,standard,No CTD today due to malfunction
-DE348,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,2,5-10,NW,NA,NA,NA,,NA,QPK767,10.8,0,standard,For site-wide poppers: 2 single pops in 2 separate locations.
-DE349,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,1,0.1-5,NW,NA,NA,NA,,NA,QPK768,10,0,standard,"Search paused at 07:19, continued at 07:41."
-DE350,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,0,0.1-5,W,NA,NA,NA,,NA,QPK769,11.5,2,standard,"Set 1 with DFO. DFO set at 09:22, Sloop Jo set at 09:24. Random set, no fish."
-DE352,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,100,1,0.1-5,SE,NA,NA,NA,,NA,QPK770,10.5,1,standard,NA
-DE353,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,0,1,5-10,W,NA,NA,NA,,NA,QPK771,11.5,1,standard,Fucus caught on line for zoop tow. May have affected flowmeter.
-DE354,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,75,2,0.1-5,W,NA,NA,NA,,NA,QPK773,11.5,0,standard,"DFO may have sampled in Knox Bay between 10:30-11, but couldn't make contact. Saw them pass through JS. No fish observed so no set conducted."
-DE355,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,75,1,0.1-5,NE,NA,NA,NA,,NA,QPK772,9.5,1,standard,"Search paused at 14:51, continued at 15:08."
-DE356,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",light,100,1,0.1-5,S,NA,NA,NA,,D08_2016-07-05_2,QPK774,4,0,standard,NA
-DE357,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",light,100,0,0.1-5,NW,NA,NA,NA,,D24_2016-07-05_2,QPK775,8.5,2,standard,NA
-DE359,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",none,100,1,0.1-5,N,NA,NA,NA,,D07_2016-07-05_1,QPK776,5.5,0,standard,NA
-DE360,2016-07-06,"Brett Johnson, Luke Rogers, Sam James",none,75,1,0.1-5,SE,NA,NA,NA,,D27_2016-07-06_2,QPK777,9.5,1,standard,NA
-DE361,2016-07-06,"Brett Johnson, Luke Rogers, Sam James",none,25,1,0.1-5,S,NA,NA,NA,,D09_2016-07-06_2,QPK778,10.5,2,standard,re set because there was lots of surface activity elsewhere
-DE363,2016-07-06,"Luke Rogers, Brett Johnson, Sam James",none,50,1,0.1-5,SE,NA,NA,NA,,D22_2016-07-06_2,QPK779,11,0,standard,NA
-DE408,2017-05-11,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",moderate,100,0,0.1-5,W,NA,11:04:00,11:19:00,,D08_2017-05-11_3,QPK780,6.5,0,standard,NA
-DE414,2017-05-15,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",light,100,0,0.1-5,S,NA,8:20:00,8:35:00,,D22_2017-05-15_3,QPK781,11,0,standard,NA
-DE426,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,100,0,0,NA,NA,7:35:00,7:50:00,,D09_2017-05-16_3,QPK782,11.5,0,standard,NA
-DE438,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,100,3,5-10,NW,NA,10:04:00,10:18:00,,NA,NA,NA,0,standard,NA
-DE404,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,75,1,0.1-5,N,NA,10:49:00,11:02:00,,NA,NA,NA,0,standard,NA
-DE428,2017-05-17,"Brett Johnson, Julian Gan, Luke Rogers",none,100,0,0.1-5,E,NA,9:05:00,9:19:00,,D29_2017-05-17_1,NA,8.5,0,standard,NA
-DE416,2017-05-17,"Brett Johnson, Julian Gan, Luke Rogers",none,100,0,0,NA,NA,7:20:00,7:34:00,,D08_2017-05-17_2,QPK783,8.4,0,standard,NA
-DE440,2017-05-19,"Brett Johnson, Luke Rogers, Julian Gan",none,100,0,0,NA,NA,8:55:00,9:07:00,,D09_2017-05-19_1,QPK784,13,0,standard,"No Sliding after survey, saw sliders in the morning near Rebecca Spit"
-DE403,2017-05-19,"Brett Johnson, Luke Rogers, Julian Gan",none,100,1,0.1-5,W,flood,10:23:00,10:38:00,,D30_2017-05-19_2,NA,16.4,0,standard,saw sliders in the morning near Rebecca Spit
-DE415,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,25,2,5-10,N,ebb,8:05:00,8:20:00,,D22_2017-05-23_2,QPK785,15.8,0,standard,NA
-DE427,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,0,2,0.1-5,NW,high slack,9:38:00,9:53:00,,D27_2017-05-23_2,NA,15.8,0,standard,NA
-DE364,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,0,0.1-5,N,flood,NA,NA,,NA,NA,NA,1,standard,"1 unknown mort. Non-formal visual survey conducted. Performed a trial run of collection procedure, in which the one set was both for retention and sea licing. Fish were anaesthetized (for sea licing), placed into recovery, and then euthanized for retention. Due to time restraints, we weren't able to collect complete packages of 10 fish per species."
-DE365,2017-05-25,"Brett Johnson, Sam James, Carly Janusson, Luke Rogers",none,0,2,0.1-5,W,high slack,7:14:00,7:29:00,,D09_2017-05-25_2,QPK786,12.5,1,standard,NA
-DE366,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,0,0,NA,ebb,NA,NA,,D34_2017-05-26_2,QPK788,11,1,standard,Informal site survery; did not have time for a lousing seine. First coho out at 11:26; in dewar at unknown time (in quickly though). Coho # 2 onwards out at 12:36
-DE439,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,0,0.1-5,NW,high slack,7:23:00,7:39:00,,D08_2017-05-26_2,QPK787,10,0,standard,synchronized one-off surface event after survey - herring forced to surface?
-DE405,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,1,0.1-5,N,ebb,8:44:00,9:00:00,,D29_2017-05-26_2,NA,10.5,0,standard,NA
-DE417,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,2,5-10,NW,high slack,7:53:00,8:10:00,,D22_2017-05-29_2,QPK789,10.5,0,standard,NA
-DE429,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,50,1,0.1-5,NW,high slack,9:05:00,9:22:00,,D27_2017-05-29_2,NA,13,0,standard,NA
-DE367,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,0,0,NA,ebb,11:19:00,11:34:00,,D09_2017-05-29_2,QPK790,12,1,standard,NA
-DE441,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,1,0.1-5,SE,flood,6:57:00,7:13:00,,D22_2017-05-31_2,QPK791,11.5,0,standard,NA
-DE424,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,2,5-10,S,flood,10:03:00,10:18:00,,D08_2017-05-31_2,QPK792,7,0,standard,NA
-DE412,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,2,5-10,SE,flood,7:57:00,8:13:00,,D27_2017-05-31_2,NA,12,0,standard,"Observed sliding unlikely to be sockeye due to different appearance in behaviours; more like angular ""spy-hop"" sliding than textbook sliding; also fish much smaller (fry sized)"
-DE368,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,1,0.1-5,S,ebb,11:16:00,11:30:00,,D29_2017-05-31_2,NA,5.5,1,standard,NA
-DE436,2017-06-01,"Brett Johnson, Carly Janusson, Sam James, Julian Gan",none,100,1,0,NA,ebb,7:05:00,7:20:00,,D08_2017-06-01_3,QPK793,6.5,1,standard,"One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general."
-DE369,2017-06-01,"Brett Johnson, Carly Janusson, Sam James, Julian Gan",none,100,1,0.1-5,SW,flood,9:38:00,9:53:00,,D29_2017-06-01_2,QPK794,4.5,1,standard,NA
-DE422,2017-06-05,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,0,1,0.1-5,N,ebb,7:50:00,8:05:00,,D22_2017-06-05_2,QPK795,12,0,standard,"Used Sean's 15 second observe time (data person kept track of time from ""mark"" called by observers. Attempted retention seine, but no SO caught."
-DE370,2017-06-05,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,25,1,5-10,SE,flood,10:45:00,11:00:00,,D27_2017-06-05_2,QPK796,12.5,1,standard,NA
-DE371,2017-06-07,"Luke Rogers, Julian Gan, Brenna Collicutt, Sam James",none,100,0,0,NA,ebb,7:26:00,7:41:00,,D09_2017-06-07_2,QPK797,9.5,2,standard,Hinch set @ 06:30; 100 SO retained by Hinch crew. 1 unhealthy SO released. 1 trainer CU taken.
-DE400,2017-06-09,"Luke Rogers, Carly Janusson, Brenna Collicut, Julian Gan",none,25,0,0.1-5,N,ebb,10:47:00,11:01:00,,D29_2017-06-09_2,NA,13,0,standard,NA
-DE434,2017-06-09,"Luke Rogers, Carly Janusson, Brenna Collicut, Julian Gan",none,100,1,0.1-5,NE,ebb,9:03:00,9:19:00,,D08_2017-06-09_2,QPK798,11.5,0,standard,Took ~ 300 fish from D09 (mix SO & other spp) for Hinch Lab crew
-DE372,2017-06-12,"Brett Johnson, Luke Rogers, Wade Smith, Sam James",none,25,1,0.1-5,NW,ebb,9:36:00,9:51:00,,D09_2017-06-12_2,QPK799,11.5,2,standard,NA
-DE396,2017-06-13,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,75,1,0.1-5,,flood,6:00:00,6:15:00,,D22_2017-06-13_2,QPK800,13.5,0,standard,NA
-DE376,2017-06-13,"Luke Rogers, Julian Gan, Brenna Collicutt, Sam James",none,75,2,5-10,NW,ebb,8:32:00,8:47:00,,D27_2017-06-13_2,QPK1080,13,2,standard,NA
-DE402,2017-06-14,"Luke Rogers, Julian Gan, Brenna Collicutt, Gideon Mordecai",light,100,1,0.1-5,S,ebb,10:53:00,11:08:00,,D08_2017-06-14_2,QPK1081,8.5,0,standard,NA
-DE420,2017-06-14,"Luke Rogers, Julian Gan, Brenna Collicutt, Gideon Mordecai",none,100,1,0.1-5,N,ebb,12:26:00,12:41:00,,D29_2017-06-14_2,NA,6.5,0,standard,NA
-DE454A,2017-06-14,"Sam James, DFO",,,,,,,,,,NA,NA,NA,5,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
-DE454B,2017-06-15,"Sam James, DFO",,,,,,,,,,NA,NA,NA,3,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
-DE377,2017-06-19,"Luke Rogers, Carly Janusson, Julian Gan, Tianyi Chang",moderate,100,1,0.1-5,N,ebb,7:02:00,7:17:00,,D22_2017-06-19_2,QPK1085,12,1,standard,"Set twice at D09 to collect fish for Tianyi Chen, Sam James, & Hinch lab. First set at 11:15, retained 1 CU for TC (released 100 CU, 1 unhealthy SO). Second set at 12:15, retained 1 CU for GM & 18 CU for TC (released 150 CU)."
-DE382,2017-06-19,"Luke Rogers, Carly Janusson, Julian Gan, Tianyi Chang",NA,NA,NA,NA,NA,NA,NA,NA,,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
-DE378,2017-06-20,"Brett Johnson, Luke Rogers, Carly Janusson, Brenna Collicutt",none,100,1,0.1-5,NW,ebb,6:28:00,6:43:00,,D09_2017-06-20_2,QPK1082,12,1,standard,NA
-DE432,2017-06-20,"Brett Johnson, Sam James, Luke Rogers, Christine Stevenson",none,0,3,5-10,NW,flood,11:37:00,11:50:00,,NA,NA,NA,0,standard,NA
-DE398,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",none,25,2,5-10,NW,low slack,9:26:00,9:39:00,,D08_2017-06-21_2,QPK1083,8,0,standard,NA
-DE410,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",none,50,2,5-10,NW,low slack,10:41:00,10:56:00,,D29_2017-06-21_2,NA,6,0,standard,NA
-DE383,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",NA,NA,NA,NA,NA,NA,NA,NA,,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
-DE373,2017-06-26,"Luke Rogers, Carly Janusson, Sam James, Julian Gan",none,75,1,0.1-5,NW,flood,6:37:00,6:55:00,,D09_2017-06-26_2,QPK1084,10,2,standard,NA
-DE384,2017-06-26,NA,NA,NA,NA,NA,NA,NA,NA,NA,,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
-DE394,2017-06-27,"Brett Johnson, Luke Rogers, Carly Janusson, Julian Gan",none,50,2,5-10,NW,flood,6:10:00,6:23:00,,D22_2017-06-27_2,QPK1086,10.5,0,standard,NA
-DE406,2017-06-27,"Brett Johnson, Luke Rogers, Carly Janusson, Julian Gan",none,75,2,5-10,NW,flood,8:08:00,8:24:00,,D27_2017-06-27_2,NA,11,0,standard,NA
-DE374,2017-06-28,"Carly Janusson, Julian Gan Brett Johnson, Luke Rogers",none,100,0,0.1-5,NW,flood,6:59:00,7:12:00,,D10_2017-06-28_2,QPK1087,12,1,standard,NA
-DE457,2017-06-29,"Sam James, Luke Rogers, Julian Gan",none,0,0,0,NA,flood,NA,NA,,NA,NA,NA,3,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE458,2017-06-29,"Sam James, Luke Rogers, Julian Gan",none,0,0,0,NA,flood,NA,NA,,NA,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE459,2017-06-29,"Brett Johnson, Sam James, Brianna Knowles",none,0,0,0,NA,ebb,NA,NA,,NA,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE460,2017-06-29,"Brett Johnson, Sam James, Brianna Knowles",none,0,0,0.1-5,W,ebb,NA,NA,,NA,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE461,2017-06-30,"Sam James, Luke Rogers, Carly Janusson",none,25,1,0.1-5,NW,ebb,NA,NA,,NA,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE462,2017-06-30,"Sam James, Luke Rogers, Carly Janusson",none,25,1,0.1-5,NW,ebb,NA,NA,,NA,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE463,2017-06-30,"Sam James, Brett Johnson, Brianna Knowles",none,0,1,0.1-5,NW,flood,NA,NA,,NA,NA,NA,3,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE464,2017-06-30,"Sam James, Brett Johnson, Brianna Knowles",none,0,1,0.1-5,NW,flood,NA,NA,,NA,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
-DE379,2017-07-04,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,50,2,5-10,NW,ebb,6:21:00,6:35:00,,D22_2017-07-04_2,QPK1088,10,1,standard,NA
-DE375,2017-07-04,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,25,1,0.1-5,NW,high slack,9:02:00,9:16:00,,D27_2017-07-04_2,QPK1090,12,1,standard,NA
-DE380,2017-07-05,"Luke Rogers, Carly Janusson, Melissa Orobko",none,75,0,0.1-5,NW,ebb,7:01:00,7:15:00,,D09_2017-07-05_2,QPK1089,9,1,standard,NA
-DE395,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,1,0.1-5,W,ebb,6:57:00,7:14:00,,D10_2017-07-06_2,QPK1092,10,0,standard,Site activity survey conducted in 50% shade. Set activity survey conducted in full sun.
-DE397,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,0,0,NA,ebb,9:58:00,10:12:00,,D08_2017-07-06_2,QPK1093,8.5,0,standard,NA
-DE399,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,1,0.1-5,W,flood,11:11:00,11:25:00,,D29_2017-07-06_2,NA,9,0,standard,NA
-DE381,2017-07-10,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,75,2,5-10,W,high slack,7:47:00,8:02:00,,D09_2017-07-10_2,QPK1094,9,1,standard,"Trial run of combining retention & lousing duties in one set. Took all chum as substitute for SO and other species, retained as trainer fish. Liced 10 chum."
-DE455A,2017-07-12,"Sam James, DFO",,,,,,,,,,NA,NA,NA,4,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
-DE455B,2017-07-13,"Sam James, DFO",,,,,,,,,,NA,NA,NA,4,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
-JE100,2015-05-20,"Sean Godwin, Donnah MacKinnon, Dylan Smyth",light,100,0,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE101,2015-05-20,"Sean Godwin, Donnah MacKinnon, Dylan Smyth",light,100,2,5-10,NW,NA,NA,NA,,NA,JSPK1001,13.2,1,standard,NA
-JE102,2015-05-21,"Sean Godwin, Brendan Connors, Carson White",none,100,2,5-10,NW,NA,NA,NA,,NA,JSPK1002,10.5,2,standard,NA
-JE103,2015-05-21,"Sean Godwin, Donnah MacKinnon, Carson White",none,100,3,5-10,NW,NA,NA,NA,,NA,NA,NA,2,standard,NA
-JE104,2015-05-22,"Sean Godwin, Dylan Smyth, Carson White",none,100,2,0.1-5,NW,NA,NA,NA,,NA,JSPK1003,14.6,1,standard,NA
-JE105,2015-05-22,"Sean Godwin, Carson White, Dylan Smyth",none,100,2,5-10,NW,NA,NA,NA,,NA,JSPK1004,14.9,2,standard,NA
-JE106,2015-05-22,"Sean Godwin, Carson White, Dylan Smyth",none,75,2,10-15,NW,NA,NA,NA,,NA,JSPK1005,12.8,4,standard,NA
-JE107,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,0,0,NW,NA,NA,NA,,NA,JSPK1006,13.5,2,standard,NA
-JE108,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1007,15.1,2,standard,NA
-JE109,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,25,2,5-10,NW,NA,NA,NA,,NA,JSPK1008,15.3,3,standard,NA
-JE110,2015-05-24,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,1,0.1-5,W,NA,NA,NA,,NA,JSPK1009,11,2,standard,NA
-JE111,2015-05-24,"Sean Godwin, Mack Barlett, Samantha Crowley",none,75,2,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE112,2015-05-24,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,25,3,15-20,SW,NA,NA,NA,,NA,JSPK1010,8.9,1,standard,NA
-JE113,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",light,100,2,5-10,SW,NA,NA,NA,,NA,JSPK1011,10.9,1,standard,NA
-JE114,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",none,100,2,5-10,SW,NA,NA,NA,,NA,JSPK1012,11.3,1,standard,NA
-JE115,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",none,100,2,5-10,W,NA,NA,NA,,NA,JSPK1013,13.3,1,standard,NA
-JE116,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,2,0.1-5,NW,NA,NA,NA,,NA,JSPK1014,15.5,1,standard,NA
-JE117,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,75,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1015,13,2,standard,NA
-JE118,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,75,1,5-10,W,NA,NA,NA,,NA,JSPK1016,16.9,1,standard,NA
-JE119,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,SW,NA,NA,NA,,NA,JSPK1017,12.2,1,standard,NA
-JE120,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,S,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE121,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0,S,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE122,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,1,5-10,NW,NA,NA,NA,,NA,JSPK1018,12.2,2,standard,NA
-JE123,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1019,13,3,standard,NA
-JE124,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,100,3,10-15,NW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, close to beach"
-JE125,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,25,4,15-20,NW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, close to beach"
-JE126,2015-05-29,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1020,5.5,1,standard,NA
-JE127,2015-05-29,"Lauren Portner, Katie Chan, Dylan Smyth",none,0,4,15-20,NW,NA,NA,NA,,NA,NA,NA,1,standard,"one net set, no fish caught"
-JE128,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1021,11.1,2,standard,NA
-JE129,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,100,1,0.1-5,NA,NA,NA,NA,,NA,JSPK1022,10.3,3,standard,NA
-JE130,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,0,3,10-15,NW,NA,NA,NA,,NA,NA,NA,0,standard,net not set because no fish
-JE131,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,0,4,10-15,NW,NA,NA,NA,,NA,JSPK1023,7.5,1,standard,NA
-JE132,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1024,8.1,1,standard,NA
-JE133,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1025,5.5,1,standard,NA
-JE134,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,50,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1026,7.6,1,standard,NA
-JE135,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,0,2,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,fish not at depth
-JE136,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,1,0,NA,NA,NA,NA,,NA,JSPK1027,6.1,1,standard,NA
-JE137,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1028,10.9,1,standard,NA
-JE138,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1029,9.1,1,standard,NA
-JE139,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",light,100,1,0-5,NW,NA,NA,NA,,NA,JSPK1030,12.1,1,standard,NA
-JE140,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1031,11.7,1,standard,NA
-JE141,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",none,0,3,5-10,NW,NA,NA,NA,,NA,NA,NA,1,standard,snagged net on bottom- no fish. strong current dragged us into the shallows 
-JE142,2015-06-03,"Carson White, Katie Chan, Lauren Portner",none,100,1,5-10,NW,NA,NA,NA,,NA,JSPK1032,10.2,1,standard,NA
-JE143,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,75,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1033,10.7,1,standard,"could not find herring again because too many fish; unsure of herring, pink, and coho numbers because too many fish"
-JE144,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",light,75,3,5-10,SW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE145,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,75,1,0.1-5,W,NA,NA,NA,,NA,JSPK1034,9.6,1,standard,NA
-JE146,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,50,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1035,10.6,1,standard,NA
-JE147,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,25,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1036,10.8,1,standard,NA
-JE148,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1037,16.2,3,standard,NA
-JE149,2015-06-05,"Sean Godwin, Samantha Crowley, Donnah MacKinnon",none,25,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1038,13.4,1,standard,NA
-JE150,2015-06-05,"Sean Godwin, Samantha Crowley, Donnah MacKinnon",none,25,1,0.1-5,NE,NA,NA,NA,,NA,JSPK1039,14,1,standard,NA
-JE151,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,3,5-10,SW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE152,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,2,5-10,N,NA,NA,NA,,NA,JSPK1040,13.6,1,standard,Ipad forms won't open- error message (note after data entry: ipad form fixed and submitted)
-JE153,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,25,3,10-15,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE154,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,,NA,JSPK1041,12.2,1,standard,NA
-JE155,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1042,13.4,1,standard,NA
-JE156,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,,NA,NA,NA,0,standard,net not set due to poor weather and lack of fish
-JE157,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,,NA,JSPK1043,11.8,2,standard,NA
-JE158,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,0.1-5,SW,NA,NA,NA,,NA,NA,NA,0,standard,lack of fish
-JE159,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1044,13.9,1,standard,NA
-JE160,2015-06-08,"Sean Godwin, Mack Bartlett, Samantha Crowley",light,100,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1045,13.2,1,standard,NA
-JE161,2015-06-08,"Lauren Portner, Chris Guinchard, Stephanie Peacock",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1046,8,1,standard,NA
-JE162,2015-06-08,"Lauren Portner, Chris Guinchard, Stephanie Peacock",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1047,9.3,1,standard,NA
-JE163,2015-06-09,"Mack Bartlett, Chris Guinchard, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1048,9.1,1,standard,NA
-JE164,2015-06-09,"Mack Bartlett, Chris Guinchard, Katie Chan",none,75,3,10-15,SW,NA,NA,NA,,NA,NA,NA,0,standard,net not set due to unfavourable conditions
-JE165,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,75,2,0.1-5,NE,NA,NA,NA,,NA,JSPK1049,12.1,1,standard,NA
-JE166,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,50,1,5-10,NW,NA,NA,NA,,NA,JSPK1050,8.9,1,standard,NA
-JE167,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,50,4,15-20,NW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, poor weather"
-JE168,2015-06-12,"Lauren Portner, Mack Bartlett, Katie Chan",none,75,1,5-10,NW,NA,NA,NA,,NA,JSPK1051,8.2,1,standard,NA
-JE169,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,50,2,5-10,SW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, poor weather"
-JE170,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,25,3,5-10,N,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, poor weather"
-JE171,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,25,1,5-10,SW,NA,NA,NA,,NA,JSPK1052,11.3,2,standard,NA
-JE172,2015-06-14,"Sean Godwin, Donnah MacKinnon, Samantha Crowley",none,0,1,5-10,SW,NA,NA,NA,,NA,JSPK1053,13,4,standard,NA
-JE173,2015-06-14,"Sean Godwin, Donnah MacKinnon, Samantha Crowley",none,25,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1054,12,1,standard,NA
-JE174,2015-06-14,"Sean Godwin, Carson White, Melissa Orobko",none,25,3,10-15,S,NA,NA,NA,,NA,JSPK1055,13.7,1,standard,NA
-JE175,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon",none,100,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1056,12.5,1,standard,NA
-JE176,2015-06-15,"Sean Godwin, Donnah MacKinnon, Martin Krkosek",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1057,10.1,2,standard,NA
-JE177,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon",none,100,1,5-10,W,NA,NA,NA,,NA,JSPK1058,11.9,2,standard,NA
-JE178,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon, Melissa Orobko",none,25,2,5-10,SW,NA,NA,NA,,NA,JSPK1059,12.3,1,standard,NA
-JE179,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1060,11.4,1,standard,NA
-JE180,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1061,13.3,2,standard,NA
-JE181,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,75,1,5-10,NW,NA,NA,NA,,NA,JSPK1062,10.8,2,standard,NA
-JE182,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,100,1,0,NA,NA,NA,NA,,NA,JSPK1063,9.6,1,standard,NA
-JE183,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,75,1,0.1-5,N,NA,NA,NA,,NA,JSPK1064,9.1,1,standard,NA
-JE184,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,25,1,0,NA,NA,NA,NA,,NA,JSPK1065,11.1,1,standard,NA
-JE185,2015-06-18,"Sean Godwin, Dylan Smyth, Katie Chan",none,50,1,0.1-5,SE,NA,NA,NA,,NA,JSPK1066,10.1,1,standard,NA
-JE186,2015-06-18,"Sean Godwin, Dylan Smyth, Katie Chan",none,100,1,0,NA,NA,NA,NA,,NA,JSPK1067,16.1,1,standard,NA
-JE187,2015-06-18,"Sean Godwin, Dylan Smyth, Sean Godwin, Melissa Orobko",none,100,1,0.1-5,W,NA,NA,NA,,NA,JSPK1068,10.9,1,standard,NA
-JE188,2015-06-18,"Sean Godwin, Dylan Smyth, Sean Godwin, Melissa Orobko",light,100,0,0,NA,NA,NA,NA,,NA,JSPK1069,13.2,1,standard,NA
-JE189,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",none,75,0,0.1-5,E,NA,NA,NA,,NA,JSPK1070,13.7,2,standard,NA
-JE190,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",none,75,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1071,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE191,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",light,100,1,0.1-5,SE,NA,NA,NA,,NA,JSPK1072,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE192,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1073,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE193,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",light,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1074,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE194,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,50,2,10-15,NW,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE195,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,25,1,5-10,NW,NA,NA,NA,,NA,JSPK1075,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE196,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,100,1,0.1-5,SE,NA,NA,NA,,NA,JSPK1076,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE197,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,25,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1077,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE198,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,0,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1078,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE199,2015-06-23,"Lauren Portner, Carson White, Dylan Smyth",none,0,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1079,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE200,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman, Katie Pocock",none,0,0,0.1-5,N,NA,NA,NA,,NA,JSPK1080,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE201,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman",none,25,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1081,NA,3,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE202,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman",none,50,0,0.1-5,N,NA,NA,NA,,NA,JSPK1082,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE203,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",light,100,0,0,NA,NA,NA,NA,,NA,JSPK1083,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE204,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",none,100,0,0.1-5,NE,NA,NA,NA,,NA,JSPK1084,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE205,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",moderate,100,0,0.1-5,SE,NA,NA,NA,,NA,JSPK1086,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE206,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",moderate,100,2,0.1-5,NE,NA,NA,NA,,NA,JSPK1085,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE207,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,100,0,0.1-5,S,NA,NA,NA,,NA,JSPK1087,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE208,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,100,0,0.1-5,N,NA,NA,NA,,NA,JSPK1088,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE209,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,0,0,0,NA,NA,NA,NA,,NA,JSPK1089,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE210,2015-06-28,"Carson White, Dylan Smyth, Peter Harrington",none,0,0,0,NA,NA,NA,NA,,NA,JSPK1090,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE211,2015-06-28,"Carson White, Dylan Smyth, Peter Harrington",none,0,1,5-10,NW,NA,NA,NA,,NA,JSPK1091,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE212,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,0,0,NA,NA,NA,NA,,NA,JSPK1092,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE213,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1093,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE214,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,2,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, only saw 2 poppers over total search time."
-JE215,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,75,2,5-10,NW,NA,NA,NA,,NA,NA,NA,0,standard,"fish not at depth, saw one popper over total search time."
-JE216,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,50,1,0,NA,NA,NA,NA,,NA,JSPK1094,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE217,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,50,0,0,NA,NA,NA,NA,,NA,JSPK1095,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball. Whale activity"
-JE218,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,JSPK1096,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
-JE219,2015-07-02,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,1,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE220,2015-07-02,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,1,10-15,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE221,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE222,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,,NA,NA,NA,0,standard,net not set because no smolt activity
-JE223,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,,NA,NA,NA,0,standard,net not set because no smolt activity
-JE224,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE225,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,,NA,JSPK1097,9.5,1,standard,NA
-JE226,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,0,standard,net not set because no smolt activity
-JE227,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE228,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,"net set on possible smolt school, fish not caught or seen again. Otherwise no smolt activity."
-JE229,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,,NA,NA,NA,2,standard,NA
-JE230,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz",none,50,2,5-10,SE,NA,NA,NA,,NA,NA,NA,0,standard,NA
-JE231,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz",none,50,2,5-10,SE,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE232,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz, Clare Atkinson",none,25,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE233,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,1,standard,NA
-JE234,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,2,standard,NA
-JE235,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson, Mirko Diaz",none,0,1,0.1-5,NW,NA,NA,NA,,NA,NA,NA,3,standard,"few small cryptic schools, unable to catch"
-JE236,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,25,1,0.1-5,NW,NA,NA,NA,,NA,NA,7.5,1,standard,NA
-JE237,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,0,0,NA,NA,NA,NA,,NA,NA,NA,1,standard,forgot Secchi
-JE238,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,0,0,NA,NA,NA,NA,,NA,NA,10,1,standard,NA
-JE239,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,3,10-15,NW,NA,NA,NA,,NA,NA,NA,2,standard,"Few good schools, bad current and wind. Set twice, difficult condition, no fish, forgot YSI and secchi"
-JE240,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,2,10-15,NW,NA,NA,NA,,NA,NA,12,1,standard,NA
-JE241,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,50,3,5-10,NW,NA,NA,NA,,NA,NA,8.5,0,standard,"Bad weather, no fish"
-JE242,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,2,0.1-5,NW,NA,NA,NA,,NA,JSPK1098,7,0,standard,NA
-JE243,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,1,0.1-5,NW,NA,NA,NA,,NA,NA,10.5,2,standard,"flow-meter did not rotate, did not retain sample"
-JE244,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,3,5-10,NW,NA,NA,NA,,NA,NA,10.5,1,standard,NA
-JE245,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",none,75,2,0.1-5,NW,NA,NA,NA,,NA,JSPK1099,8.5,2,standard,NA
-JE246,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",none,50,3,5-10,NW,NA,NA,NA,,NA,JSPK1100,8,1,standard,NA
-JE247,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",light,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1101,10.5,0,standard,NA
-JE248,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson, Jack Goldman",light,100,0,0,NA,NA,NA,NA,,NA,JSPK1102,7.5,1,standard,NA 
-JE249,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",light,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1103,8.5,1,standard,NA
-JE250,2016-05-28,"Brett Johnson, Shannon Mendt, Brianna Knowles",light,100,0,0,NA,NA,NA,NA,,NA,JSPK1104,10,2,standard,No fish on first set
-JE251,2016-05-28,"Brett Johnson, Shannon Mendt, Brianna Knowles, Jack Goldman",none,25,1,0.1-5,SE,NA,NA,NA,,NA,JSPK1105,8.5,1,standard,NA
-JE252,2016-06-01,"Chris Guinchard, Lauren Portner, Dylan Smyth.",none,75,0,0,NA,NA,NA,NA,,NA,JSPK1106,NA,1,standard,Secchi left onboard Madrona
-JE253,2016-06-01,"Chris Guinchard, Lauren Portner, Dylan Smyth.",none,100,0,0.1-5,N,NA,NA,NA,,NA,JSPK1107,8.5,1,standard,Morts due to misidentification
-JE254,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,50,1,0.1-5,SE,NA,NA,NA,,NA,JSPK1108,8.5,1,standard,NA
-JE255,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,50,1,5-10,S,NA,NA,NA,,NA,JSPK1109,6,2,standard,Couldn't locate whatman paper for JS00541-JS00660
-JE256,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,1,5-10,SE,NA,NA,NA,,NA,JSPK1110,10,1,standard,NA
-JE257,2016-06-03,"Chris Guinchard, Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,2,5-10,SE,NA,NA,NA,,NA,JSPK1111,10,1,standard,NA
-JE258,2016-06-03,"Chris Guinchard, Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,2,5-10,SE,NA,NA,NA,,NA,JSPK1112,12,1,standard,NA
-JE259,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,50,0,0.1-5,SE,NA,NA,NA,,NA,JSPK1113,10.5,3,standard,NA
-JE260,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,50,2,10-15,NW,NA,NA,NA,,NA,JSPK1114,10.5,1,standard,"no fish, stopped for weather"
-JE261,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,0,1,5-10,NW,NA,NA,NA,,NA,JSPK1115,12,1,standard,NA
-JE262,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James",none,0,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1116,11.5,1,standard,NA
-JE263,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James",moderate,100,0,0.1-5,SE,NA,NA,NA,,NA,JSPK1117,13,1,standard,NA
-JE264,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James, Melissa Orobko",none,25,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1118,11,1,standard,NA
-JE265,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,1,0.1-5,NE,NA,NA,NA,,NA,JSPK1119,10.5,1,standard,NA
-JE266,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,3,5-10,NW,NA,NA,NA,,NA,JSPK1120,10.5,1,standard,NA
-JE267,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,0,0.1-5,SE,NA,NA,NA,,NA,JSPK1121,6,1,standard,NA
-JE268,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson, Melissa Orobko",moderate,100,0,0,NA,NA,NA,NA,,NA,JSPK1122,10.5,1,standard,NA
-JE269,2016-06-11,"Lauren Portner, Sam James, Brianna Knowles",none,100,1,5-10,NW,NA,NA,NA,,NA,JSPK1123,8,1,standard,NA
-JE270,2016-06-11,"Sam James, Clare Atkinson, Brianna Knowles",none,100,1,5-10,NW,NA,NA,NA,,NA,JSPK1124,12.5,1,standard,NA
-JE271,2016-06-11,"Sam James, Clare Atkinson, Brianna Knowles, Melissa Orobko",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1125,10,1,standard,NA
-JE272,2016-06-17,"Mirko Diaz, Chris Guinchard, Olivia Gutjahr",none,75,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1126,12,2,standard,NA
-JE273,2016-06-17,"Mirko Diaz, Chris Guinchard, Olivia Gutjahr",none,25,0,5-10,NW,NA,NA,NA,,NA,JSPK1127,NA,1,standard,NA
-JE274,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,50,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1128,8.5,2,standard,NA
-JE275,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1129,9.5,0,standard,No setable fish. Called it after 1 hour of searching. 
-JE276,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1130,7.5,1,standard,NA
-JE277,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Andrew Bateman",none,100,0,0.1-5,NW,NA,NA,NA,,NA,JSPK1131,8,0,standard,"Searched for 1 hour and 40 minutes, dimpling seen at the end of survey turned out to be perch."
-JE278,2016-06-19,"Chris Guinchard, Olivia Gutjahr, Stephanie Peacock, Dylan Smyth",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1132,7,3,standard,Three seperate sets no sockeye. No fish collected.
-JE281,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Stephanie Peacock",none,75,2,5-10,NW,NA,NA,NA,,NA,JSPK1133,10.5,1,standard,NA
-JE282,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Stephanie Peacock",none,75,1,5-10,NW,NA,NA,NA,,NA,JSPK1134,11,1,standard,NA
-JE283,2016-06-20,"Dylan Smyth, Stephanie Peacock, Mirko Diaz, Olivia Guinchard",none,0,0,0,NA,NA,NA,NA,,NA,JSPK1135,12.5,1,standard,NA
-JE284,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",moderate,100,0,0,NA,NA,NA,NA,,NA,JSPK1136,10,1,standard,NA
-JE285,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,0,0,NA,NA,NA,NA,,NA,JSPK1137,7.5,1,standard,NA
-JE286,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,1,0.1-5,NE,NA,NA,NA,,NA,JSPK1138,9,1,standard,NA
-JE287,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1139,9,0,standard,NA
-JE288,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",moderate,100,1,0,NA,NA,NA,NA,,NA,JSPK1140,8,1,standard,"Other activity in area, but no distinct sockeye. Difficult catching consditions, so kept school. Herring was small (~6cm) and dead when net was brought in."
-JE289,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,SW,NA,NA,NA,,NA,JSPK1141,8.5,0,standard,NA
-JE290,2016-06-24,"Andrew Bateman, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1142,9.5,2,standard,NA
-JE291,2016-06-25,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1143,10.5,1,standard,NA
-JE292,2016-06-25,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,5-10,NW,NA,NA,NA,,NA,JSPK1144,11.5,1,standard,NA
-JE293,2016-06-25,"Andrew Bateman, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1145,12,2,standard,NA
-JE294,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1146,6,2,standard,NA
-JE295,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,75,1,0.1-5,N,NA,NA,NA,,NA,JSPK1147,8,1,standard,NA
-JE296,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,,NA,JSPK1148,9,0,standard,NA
-JE297,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,,NA,JSPK1149,10,0,standard,NA
-JE298,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,50,2,0.1-5,NW,NA,NA,NA,,NA,JSPK1150,9,1,standard,NA
-JE299,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1151,10,0,standard,NA
-JE300,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1152,10.5,1,standard,NA
-JE301,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,,NA,JSPK1153,11,0,standard,NA
-JE302,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,25,1,5-10,N,NA,NA,NA,,NA,JSPK1154,12.5,1,standard,NA
-JE303,2016-07-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,25,0,0,NW,NA,NA,NA,,NA,JSPK1155,11.5,1,standard,left YSI on Madrona
-JE324,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,1,0.1-5,NW,ebb,6:17:00,6:32:00,,NA,NA,8,0,standard,No CTD on board and no flow meter on board so no zoop tow completed.
-JE325,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,ebb,7:08:00,7:24:00,,NA,NA,8,0,standard,No CTD on board.
-JE326,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,ebb,8:00:00,8:24:00,,NA,NA,10.5,0,standard,No CTD on board.
-JE327,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,flood,10:38:00,10:53:00,,NA,NA,8.5,0,standard,No CTD or flow meter on board so no zoop tow.
-JE328,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",light,50,2,10-15,SW,ebb,12:58:00,13:14:00,,NA,JSPK1156,10,0,standard,Observed popping behavior to be salmon fry or small smolts
-JE329,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,5-10,SE,ebb,13:58:00,14:14:00,,NA,NA,16.5,0,standard,No salmon or surface activity observed
-JE330,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,5-10,SE,ebb,14:38:00,14:53:00,,NA,NA,13,0,standard,"Wind gusting 15SE, heavy wave action on shore, Beaufort of B2-B3."
-JE331,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,10-15,NW,flood,5:36:00,5:49:00,,J03_2017-06-03_3,JSPK1157,13,0,standard,CTD hand dropped.
-JE332,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,50,1,0.1-5,E,flood,6:58:00,7:15:00,,NA,NA,12.5,0,standard,CTD failed to record cast
-JE333,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,0.1-5,SE,flood,8:19:00,8:35:00,,J13_2017-06-03_2,NA,12,0,standard,"CTD hand dropped. No other surface activity observed beyond dimpling, and unsure whether dimpling behaviour was indeed salmon."
-JE304,2017-06-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,0,1,0.1-5,SW,ebb,6:27:00,6:43:00,,NA,JSPK1158,8,3,standard,Missed fish on first set. Had to wait for cruise ship wake to do second set. Long search time after first set (fish dove?). No CTD on board. Secchi drop on datasheet only (not on digital form).
-JE305,2017-06-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,25,0,0,NA,ebb,14:18:00,14:34:00,,NA,NA,NA,1,standard,"No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing."
-JE334,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,100,1,5-10,SE,ebb,7:16:00,7:32:00,,NA,JSPK1159,10.5,0,standard,No slides observed on visual survey. Did full oceanography and moved to secondary site.
-JE335,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,100,2,5-10,SE,flood,8:14:00,8:29:00,,NA,NA,9,0,standard,Reduced visibility due to heavy wave action and gusting wind.
-JE336,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,5-10,SE,flood,8:52:00,9:06:00,,NA,NA,10.5,0,standard,Reduced visibility due to heavy wave action and gusting wind.
-JE306,2017-06-13,"Dylan Smyth, Emma Atkinson, Lauren Portner, Dylan Shea",none,100,1,0,NA,ebb,6:36:00,6:52:00,,J09_2017-06-13_2,JSPK1160,10.5,2,standard,NA
-JE307,2017-06-14,"Lauren Portner, Dylan Smyth, Emma Atkinson, Dylan Shea",none,100,1,0.1-5,SE,ebb,5:51:00,6:04:00,,NA,JSPK1161,8,1,standard,CTD failed to record cast
-JE337,2017-06-20,"Emma Atkinson, Lauren Portner, Dylan Smyth, Mirko Diaz",none,100,2,5-10,NW,flood,6:32:00,6:46:00,,NA,JSPK1162,11,1,standard,Weather picked up. Unable to complete a set.
-JE308,2017-06-20,"Emma Atkinson, Lauren Portner, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,flood,8:36:00,8:52:00,,NA,JSPK1163,8.5,2,standard,"Last half of visual survey was a B2-3, so visibility was difficult. We caught 3 local pink fry. CTD not recording drops (turning off spontaneously)."
-JE309,2017-06-21,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,0.1-5,NW,ebb,5:56:00,6:10:00,,NA,JSPK1167,10,2,standard,NA
-JE310,2017-06-27,"Dylan Smyth, Emma Atkinson, Lauren Portner, Mirko Diaz",none,100,2,10-15,NW,ebb,5:56:00,6:11:00,,NA,JSPK1164,9.5,2,standard,NA
-JE311,2017-06-28,"Dylan Smyth, Emma Atkinson, Lauren Portner, Mirko Diaz",none,75,2,5-10,NW,ebb,5:42:00,5:57:00,,NA,JSPK1165,11.5,5,standard,"First half of visual survey was a B2, second half was a B3. Secchi hit the bottom at 7.5m."
-JE314,2017-07-06,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,100,0,0,NA,ebb,6:04:00,6:20:00,,J09_2017-07-06_1,JSPK1166,5.5,2,standard,NA
-JE312,2017-07-07,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,75,0,0,NA,ebb,6:17:00,6:32:00,,NA,JSPK1168,7.5,1,standard,NA
-JE313,2017-07-07,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,100,0,0.1-5,NW,flood,9:29:00,9:46:00,,NA,NA,NA,1,standard,NA
-JE316,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,1,0,NA,ebb,6:27:00,6:43:00,,J09_2017-07-12_2,JSPK1169,9.5,1,standard,NA
-JE338,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,0,0,NA,ebb,8:27:00,8:41:00,,J11_2017-07-12_2,NA,9.5,0,standard,NA
-JE363,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,0,0,NA,ebb,9:12:00,9:28:00,,J12_2017-07-12_2,NA,8.5,0,standard,NA
-JE315,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,1,0,NA,ebb,10:01:00,10:16:00,,J03_2017-07-12_2,JSPK1170,8,1,standard,NA
-JE340,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,0,0,NA,flood,12:32:00,12:50:00,,J13_2017-07-12_2,NA,10.5,0,standard,NA
-JE341,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,1,0.1-5,NW,flood,14:09:00,14:26:00,,J02_2017-07-12_2,NA,14,0,standard,NA
-DE500,2018-05-01,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,ebb tide,NA,NA,,,,,0,non-standard,Boat training
-DE501,2018-05-09,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,75,1,5-10,SE,low slack,7:40:00,7:52:00,,,,,0,standard,No settable activity
-DE502,2018-05-10,"Brett Johnson, Krystal Bachen, Katie Davidson, Sara Tremblay-Boyer",light,100,1,0,NA,flood,9:47:00,10:01:00,,,,,0,standard,no settable activity
-DE503,2018-05-10,"Brett Johnson, Krystal Bachen, Katie Davidson, Sara Tremblay-Boyer",light,100,0,0,NA,ebb tide,7:24:00,7:30:00,,,,,0,standard,no settable activity
-DE504,2018-05-11,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,75,2,10-15,NW,ebb tide,7:59:00,8:12:00,,,,,0,standard,no settable activity
-DE505,2018-05-11,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,2,10-15,NW,ebb tide,9:42:00,9:57:00,,,,,2,standard,
-DE506,2018-05-14,"Carly Janusson, Brett Johnson, Sara Boyer-Tremblay, Katie Davidson",none,25,1,5-10,N,ebb tide,6:52:00,7:05:00,,,,,1,standard,
-DE507,2018-05-14,"Carly Janusson, Brett Johnson, Sara Boyer-Tremblay, Katie Davidson",none,0,0,0.1-5,NW,low slack,NA,NA,,,,,0,standard,
-DE508,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,2,10-15,NW,ebb tide,6:39:00,6:54:00,,,,,0,standard,
-DE509,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,1,0.1-5,NW,ebb tide,8:09:00,8:22:00,,,,,0,standard,
-DE510,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,25,1,0.1-5,NW,ebb tide,9:19:00,9:33:00,,,,,1,standard,
-JE409,2018-05-16,"Dylan Smyth, Mirko Diaz, Erin Pippus, Julian Gan",none,75,0,0.1-5,NW,flood,6:03:00,6:18:00,,,,,0,standard,no settable activity
-JE410,2018-05-16,"Dylan Smyth, Mirko Diaz, Erin Pippus, Julian Gan",none,75,1,5-10,NW,flood,7:21:00,7:39:00,,,,,0,standard,no settable activity
-JE411,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,0,1,0,NA,ebb tide,6:11:00,6:26:00,,,,,0,standard,no settable activity
-JE412,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,25,1,0,NA,ebb tide,7:33:00,7:47:00,,,,,1,standard,No setttable activity for a second set.
-JE413,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,0,1,0.1-5,NW,ebb tide,10:17:00,10:32:00,,,,,0,standard,no settable activity
-DE511,2018-05-17,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,2,0.1-5,NW,ebb tide,6:52:00,7:06:00,,,,,0,standard,no settable activity
-DE516,2018-05-17,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,0,0.1-5,NW,ebb tide,8:20:00,8:34:00,,,,,2,standard,
-JE401,2018-05-21,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,flood,6:24:00,6:39:00,,,,,1,standard,~120 rockfish were caught first set. No further settable activity
-JE402,2018-05-21,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,1,0.1-5,SE,flood,8:01:00,8:16:00,,,,,1,standard,
-JE403,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,low slack,6:14:00,6:28:00,,,,,0,standard,no settable activity
-JE404,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,flood,7:19:00,7:37:00,,,,,0,standard,no settable activity
-JE405,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,100,1,0,NA,flood,8:09:00,8:28:00,,,,,0,standard,no settable activity
-DE517,2018-05-22,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Steve Johnson, Noah Kussin, Carly Janusson, Jessica Garzke",none,0,0,0,NA,flood,7:21:00,7:34:00,,,,,2,standard,Ebb tide & 25% CC during oceanography survey
-DE515,2018-05-23,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,2,5-10,NW,ebb tide,6:51:00,7:04:00,,,,,0,standard,"no settable activity, strong wind and choppy conditions"
-DE531,2018-05-23,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,1,0.1-5,NW,flood,8:28:00,8:43:00,,,,,1,standard,
-DE518,2018-05-24,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan, JESSICA GARZKE",none,100,0,10-15,NW,flood,7:38:00,7:53:00,,,,,0,standard,no settable activity
-DE512,2018-05-24,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan, JESSICA GARZKE",none,50,0,5-10,NW,flood,9:20:00,9:34:00,,,,,1,standard,
-DE513,2018-05-28,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Stephen Johnston",none,100,1,0.1-5,NW,ebb tide,6:43:00,6:58:00,,,,,2,standard,
-DE519,2018-05-29,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Alicia Anderson",none,75,0,10-15,NW,ebb tide,6:28:00,6:43:00,,,,,1,standard,
-JE406,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,1,0.1-5,NW,ebb tide,6:22:00,6:37:00,,,,,0,standard,no settable activity
-JE407,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,2,0.1-5,NW,ebb tide,7:21:00,7:36:00,,,,,0,standard,no settable activity
-JE408,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,25,2,0.1-5,NW,ebb tide,9:06:00,9:21:00,,,,,0,standard,no settable activity
-JE416,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,50,1,5-10,NW,ebb tide,11:09:00,11:26:00,,,,,0,standard,no settable activity
-DE514,2018-05-30,"Sara Tremblay-Boyer, Katie Davidson, Brett Johnson, Julian Gan, Brian Hendricks",none,0,1,5-10,NW,ebb tide,7:34:00,7:47:00,,,,,1,standard,
-JE417,2018-05-31,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,75,2,0.1-5,NW,ebb tide,6:20:00,6:35:00,,,,,2,standard,No net. Unable to do Zooptow
-JE418,2018-06-03,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,1,0.1-5,SE,flood,6:10:00,6:25:00,,,,,1,standard,
-DE520,2018-06-04,"Julian Gan, Katie Davidson, Noah Kussin-Bordo, Brian Hendriks",none,0,0,0.1-5,N,flood,6:49:00,7:04:00,,,,,3,standard,
-DE521,2018-06-05,"Katie Davidson, Sara Tremblay-Boyer, Julian Gan, Lauren Portner",none,100,0,0.1-5,SE,flood,6:18:00,6:30:00,,,,,1,standard,
-JE414,2018-06-07,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",light,100,0,0.1-5,SE,high slack,6:21:00,6:37:00,,,,,1,standard,
-DE522,2018-06-07,"Katie Davidson, Sara Tremblay-Boyer, Brian Hendricks, Lauren Portner",light,100,1,0.1-5,SE,flood,7:07:00,7:20:00,,,,,1,standard,no settable activity
-DE523,2018-06-11,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Chris O'Sullivan",none,0,0,0.1-5,NW,ebb tide,6:24:00,6:39:00,,,,,1,standard,
-JE415,2018-06-12,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,100,1,0.1-5,SE,ebb tide,6:19:00,6:37:00,,,,,2,standard,no visual survey at primary site due to poor weather.
-DE524,2018-06-12,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Chris O'Sullivan",none,100,1,0.1-5,NW,ebb tide,6:07:00,6:19:00,,,,,4,standard,
-DE525,2018-06-12,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan, Chris O'Sullivan",none,100,2,0.1-5,SE,low slack,10:40:00,10:55:00,,,,,1,standard,
-DE526,2018-06-13,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",light,100,1,0.1-5,SE,ebb tide,6:48:00,7:01:00,,,,,1,standard,
-JE419,2018-06-14,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0.1-5,NW,ebb tide,6:09:00,6:24:00,,,,,1,standard,So many logs
-DE527,2018-06-18,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan,",none,0,1,0.1-5,NW,flood,6:20:00,6:35:00,,,,,3,standard,
-DE528,2018-06-18,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan,",none,0,1,0,NA,low slack,12:07:00,12:22:00,,,,,1,standard,No surface activity indicating sockeye
-DE529,2018-06-19,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,25,1,0.1-5,SE,flood,6:22:00,6:36:00,,,,,2,standard,
-DE530,2018-06-19,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,0,1,0.1-5,SE,flood,9:20:00,9:34:00,,,,,2,standard,
-JE420,2018-06-20,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",light,100,1,0.1-5,NW,flood,8:29:00,8:45:00,,,,,1,standard,Heavy fog during transit and transect. Could not reach primary site. Three sets attempted at secondary site.
-DE532,2018-06-20,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,75,1,0.1-5,SE,flood,7:40:00,7:53:00,,,,,3,standard,"Set #2 herring released poor condition, no ice packs for cooling fish, first 3 herring in 12:20"
-JE421,2018-06-21,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0.1-5,NW,flood,6:49:00,7:04:00,,,,,2,standard,
-JE422,2018-06-23,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,75,2,0.1-5,NW,ebb tide,6:15:00,6:30:00,,,,,2,standard,
-DE533,2018-06-25,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Eva Jordinson",none,100,1,10-15,NW,ebb tide,6:32:00,6:46:00,,,,,2,standard,
-DE534,2018-06-26,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Eva Jordinson",none,0,1,0.1-5,NW,ebb tide,6:08:00,6:21:00,,,,,2,standard,
-DE535,2018-06-27,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brett Johnson",none,75,2,10-15,NW,ebb tide,6:44:00,6:57:00,,,,,1,standard,
-DE536,2018-06-27,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brett Johnson, Brian Hendriks, Steve Johnston",none,50,2,5-10,NW,flood,NA,NA,,,,,1,non-standard,Set for Hinch crew to get samples for holding study. Retained incidental sockeye & 1 diseased-looking chum for Gideon Mordecai (UBC Suttle lab virology)
-JE423,2018-06-28,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",light,100,0,0,NA,ebb tide,6:22:00,6:39:00,,,,,2,standard,
-JE424,2018-06-29,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,100,2,5-10,SE,ebb tide,6:14:00,6:30:00,,,,,0,standard,Weather too poor to set
-JE425,2018-06-29,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",moderate,100,0,0,NA,ebb tide,7:20:00,7:38:00,,,,,1,standard,Current too strong to keep the fish or set again safely.
-DE537,2018-07-03,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Carly Janusson",none,75,1,5-10,NW,flood,6:29:00,6:43:00,,,,,1,standard,
-JE426,2018-07-03,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,1,0.1-5,SE,flood,6:05:00,6:21:00,,,,,1,standard,
-DE538,2018-07-04,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Tyrel Froese",none,25,2,10-15,NW,flood,6:05:00,6:19:00,,,,,2,standard,
-JE427,2018-07-04,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,25,0,0,NA,flood,6:09:00,6:24:00,,,,,2,standard,
-DE539,2018-07-05,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brian Hendriks",none,100,1,0.1-5,N,flood,6:41:00,6:54:00,,,,,2,standard,
-JE428,2018-07-09,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0,NA,ebb tide,6:04:00,6:19:00,,,,,1,standard,
-JE429,2018-07-09,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,100,1,0,NA,flood,9:00:00,9:15:00,,,,,1,standard,
-DE540,2018-07-17,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Carly Janusson",none,50,1,5-10,NW,high slack,7:15:00,7:28:00,,,,,1,standard,
-DE541,2018-08-01,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,high slack,8:05:00,8:19:00,,,,,1,standard,
-DE546,2018-08-08,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,high slack,8:02:00,8:17:00,,,,,2,standard,
-DE542,2018-08-15,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,flood,7:50:00,8:03:00,,,,,2,standard,
-DE543,2018-08-22,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,100,1,0.1-5,NW,flood,8:02:00,8:15:00,,,,,1,standard,very smokey
+survey_id,survey_date,crew,precip,cloud_cover,sea_state,wind_speed,wind_direction,tide_state,survey_time_start,survey_time_end,net_sets,survey_type,survey_comments
+DE99,2015-05-10,"Brett Johnson, Luke Rogers",NA,NA,NA,NA,NA,NA,NA,NA,0,non-standard,Circumnavigation of Quadra. No formal data recorded.
+DE100,2015-05-12,"Carolyn Knapper, Kristi Inman, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,3,10-15,NW,NA,NA,NA,3,standard,NA
+DE101,2015-05-13,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,100,0,0,NA,NA,NA,NA,1,standard,NA
+DE102,2015-05-14,"Carolyn Knapper, Ben Millard-Martin, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE103,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+DE104,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+DE105,2015-05-15,"Carolyn Knapper, Brett Johnson, Ben Millard-Martin, Luke Rogers",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE106,2015-05-16,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,0,0,5-10,NW,NA,NA,NA,1,standard,NA
+DE107,2015-05-16,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,0,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+DE108,2015-05-17,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,100,0,0.1-5,S,NA,NA,NA,1,standard,NA
+DE109,2015-05-18,"Carolyn Knapper, Brett Johnson, Luke Rogers, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,1,standard,First problems with flowmeter observed: intermittent spinning.
+DE110,2015-05-18,"Carolyn Knapper, Brett Johnson, Luke Rogers, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE111,2015-05-19,"Brett Johnson, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,5-10,NW,NA,NA,NA,1,standard,NA
+DE112,2015-05-20,"Brett Johnson, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,0.1-5,E,NA,NA,NA,1,standard,Salmon Farms: Brent Island NA; Venture Point 12 pens stocked; Okisolo Channel no nets in pens; Barnes Bay no nets in pens. 
+DE113,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,3,0.1-5,NW,NA,NA,NA,0,standard,From LR logbook
+DE114,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE115,2015-05-21,"Carolyn Knapper, Luke Rogers, Kristi Inman, Samantha Crowley",none,0,2,10-15,NE,NA,NA,NA,2,standard,NA
+DE116,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,100,1,0,NA,NA,NA,NA,1,standard,NA
+DE117,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,50,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE118,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,0,1,0.1-5,SE,NA,NA,NA,0,standard,From LR logbook
+DE119,2015-05-23,"Carolyn Knapper, Luke Rogers, Brett Johnson",none,25,1,0.1-5,SE,NA,NA,NA,0,standard,From LR logbook
+DE120,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,50,1,5-10,W,NA,NA,NA,2,standard,NA
+DE121,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,0,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+DE122,2015-05-24,"Carolyn Knapper, Luke Rogers, Brett Johnson, Katie Chan",none,0,1,0.1-5,N,NA,NA,NA,0,standard,NA
+DE123,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE124,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,2,5-10,W,NA,NA,NA,1,standard,NA
+DE125,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,100,2,5-10,NW,NA,NA,NA,1,standard,"Set on 1 slider, no catch"
+DE126,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,50,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE127,2015-05-25,"Luke Rogers, Brett Johnson, Kristi Inman, Katie Chan",none,25,2,5-10,W,NA,NA,NA,0,standard,NA
+DE128,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,100,1,0.1-5,NW,NA,NA,NA,4,standard,NA
+DE129,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,0,2,10-15,W,NA,NA,NA,0,standard,NA
+DE130,2015-05-26,"Luke Rogers, Carolyn Knapper, Kristi Inman",none,0,1,0.1-5,W,NA,NA,NA,1,standard,Nordic Queen (Chrys Neville's DFO chartered commercial seiner) set 500 m W of us 1.5 hours after our set.
+DE131,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,50,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE132,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,25,1,0.1-5,N,NA,NA,NA,0,standard,NA
+DE133,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,25,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE134,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE135,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE136,2015-05-27,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,0.1-5,N,NA,NA,NA,0,standard,NA
+DE137,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE138,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,0,2,5-10,W,NA,NA,NA,1,standard,NA
+DE139,2015-05-28,"Luke Rogers, Brett Johnson, Kristi Inman, Donnah MacKinnon",none,0,1,NA,NA,NA,NA,NA,1,standard,NA
+DE140,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,2,5-10,NW,NA,NA,NA,1,standard,NA
+DE141,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,1,0.1-5,SE,NA,NA,NA,0,standard,NA
+DE142,2015-05-30,"Luke Rogers, Kristi Inman, Donnah MacKinnon",none,0,1,0.1-5,SE,NA,NA,NA,0,standard,NA
+DE143,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,Salmon Farms: Raza Island 10 pens stocked.
+DE144,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,0,0,NA,NA,NA,NA,0,standard,NA
+DE145,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+DE146,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,50,0,0,NA,NA,NA,NA,1,standard,NA
+DE147,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,75,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE148,2015-05-31,"Brett Johnson, Luke Rogers, Carolyn Knapper",none,75,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE149,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,75,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE150,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,75,2,0.1-5,W,NA,NA,NA,3,standard,NA
+DE151,2015-06-01,"Carolyn Knapper, Brett Johnson, Luke Rogers",light,100,0,0,NA,NA,NA,NA,1,standard,NA
+DE152,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,100,0,0,NA,NA,NA,NA,3,standard,NA
+DE153,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,100,1,0.1-5,W,NA,NA,NA,2,standard,Salmon Farms: North Nodales nets being delivered.
+DE154,2015-06-03,"Kristi Inman, Luke Rogers, Carolyn Knapper, Dylan Smyth",none,25,2,10-15,W,NA,NA,NA,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.
+DE155,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0,NA,NA,NA,NA,1,standard,Salmon Farms: Raza Island 10 pens stocked. Sockeye miscount: new convention two independent counts of fish taken prior to net release.
+DE156,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE157,2015-06-04,"Luke Rogers, Carolyn Knapper, Brett Johnson, Dylan Smyth",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE158,2015-06-04,"Luke Rogers, Carolyn Knapper, Brett Johnson, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,2,standard,"Sighted outside of sets: 10,000 herring 30-40 mm length."
+DE159,2015-06-04,"Carolyn Knapper, Brett Johnson, Luke Rogers, Dylan Smyth",none,0,1,0.1-5,SE,NA,NA,NA,0,standard,NA
+DE160,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE161,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,5-10,NW,NA,NA,NA,0,standard,NA
+DE162,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,0,0,0,NA,NA,NA,NA,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel NA; Barnes Bay NA.
+DE163,2015-06-05,"Luke Rogers, Brett Johnson, Kristi Inman",none,75,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE164,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE165,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,2,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE166,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,S,NA,NA,NA,0,standard,NA
+DE167,2015-06-06,"Luke Rogers, Kristi Inman, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE168,2015-06-07,"Luke Rogers, Brett Johnson, Dylan Smyth, Midoli Bresch",none,0,2,5-10,W,NA,NA,NA,1,standard,Salmon Farms: Brent Island 12 pens stocked; Venture Point 12 pens stocked; Okisolo Channel nets in bags on walkways; Barnes Bay NA.
+DE169,2015-06-07,"Luke Rogers, Brett Johnson, Dylan Smyth, Midoli Bresch",none,0,1,0.1-5,E,NA,NA,NA,2,standard,NA
+DE170,2015-06-09,"Luke Rogers, Carson White, Kristi Inman, Brian Hunt",none,25,2,5-10,W,NA,NA,NA,2,standard,NA
+DE171,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,1,0.1-5,S,NA,NA,NA,2,standard,NA
+DE172,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,4,10-15,W,NA,NA,NA,0,standard,fish too sparse to target
+DE173,2015-06-09,"Luke Rogers, Kristi Inman, Carson White, Brian Hunt",none,0,1,5-10,NW,NA,NA,NA,1,standard,NA
+DE174,2015-06-11,"Brett Johnson, Luke Rogers, Carolyn Knapper, Grant Callegri",none,75,2,0.1-5,W,NA,NA,NA,1,standard,Samples marked D09(2). Initial set removed due to potential bias from snag on bottom.
+DE175,2015-06-11,"Brett Johnson, Luke Rogers, Carolyn Knapper, Grant Callegri",none,0,3,0.1-5,E,NA,NA,NA,1,standard,NA
+DE176,2015-06-12,"Brett Johnson, Kristi Inman, Luke Rogers",none,25,1,5-10,NW,NA,NA,NA,0,standard,Too sparse to target
+DE177,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,2,5-10,NW,NA,NA,NA,0,standard,No surface activity
+DE178,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,No surface activity
+DE179,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,2,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE180,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,3,5-10,NA,NA,NA,NA,0,standard,No surface activity
+DE181,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,0.1-5,N,NA,NA,NA,0,standard,No surface activity
+DE182,2015-06-13,"Brett Johnson, Kristi Inman, Luke Rogers",none,0,1,5-10,NW,NA,NA,NA,1,standard,NA
+DE183,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,0,0,NA,NA,NA,NA,2,standard,NA
+DE184,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE185,2015-06-14,"Luke Rogers, Carolyn Knapper, Brett Johnson",none,0,0,0,NA,NA,NA,NA,2,standard,No sockeye in sets
+DE186,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,SW,NA,NA,NA,1,standard,No sockeye in set
+DE187,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,No surface activity
+DE188,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,NE,NA,NA,NA,0,standard,No surface activity
+DE189,2015-06-15,"Luke Rogers, Brett Johnson, Alex Hare",none,0,1,0.1-5,N,NA,NA,NA,1,standard,No sockeye in set
+DE190,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,0.1-5,W,NA,NA,NA,1,standard,No sockeye in set
+DE191,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,5-10,NW,NA,NA,NA,0,standard,Too sparse to target
+DE192,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,0,1,5-10,NW,NA,NA,NA,3,standard,NA
+DE193,2015-06-16,"Luke Rogers, Kristi Inman, Chris Guinchard, Grant Callegari",none,25,1,0.1-5,NE,NA,NA,NA,1,standard,No sockeye in set
+DE194,2015-06-17,"Carolyn Knapper, Kristi Inman, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE195,2015-06-17,"Luke Rogers, Kristi Inman, Carolyn Knapper",none,25,1,0.1-5,ES,NA,NA,NA,1,standard,No sockeye in set
+DE196,2015-06-17,"Luke Rogers, Kristi Inman, Carolyn Knapper",none,25,2,0.1-5,ES,NA,NA,NA,0,standard,No surface activity
+DE197,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,25,1,0.1-5,NW,NA,NA,NA,0,standard,Too sparse to target
+DE198,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,1,0.1-5,W,NA,NA,NA,2,standard,NA
+DE199,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,0,0,NA,NA,NA,NA,1,standard,NA
+DE200,2015-06-18,"Luke Rogers, Carolyn Knapper, Brett Johnson ",none,100,2,5-10,SE,NA,NA,NA,0,standard,Too sparse to target
+DE201,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",none,50,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE202,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",moderate,75,1,0.1-5,E,NA,NA,NA,0,standard,Too sparse to target
+DE203,2015-06-19,"Brett Johnson. Luke Rogers, Natalie Mahara ",light,75,1,0.1-5,NW,NA,NA,NA,0,standard,Too sparse to target
+DE204,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,Too sparse to target
+DE205,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,100,1,0.1-5,W,NA,NA,NA,2,standard,NA
+DE206,2015-06-20,"Brett Johnson. Kristi Inman, Luke Rogers",none,25,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE207,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,0,0,NA,NA,NA,NA,1,standard,NA
+DE208,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0,NW,NA,NA,NA,0,standard,No surface activity
+DE209,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,No surface activity
+DE210,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",none,0,1,0.1-5,W,NA,NA,NA,0,standard,No surface activity
+DE211,2015-06-21,"Brett Johnson. Kristi Inman, Luke Rogers",nonw,25,0,0,NA,NA,NA,NA,0,standard,Too sparse to target
+DE212,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,75,1,0.1-5,SE,NA,NA,NA,2,standard,NA
+DE213,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,25,1,0.1-5,S,NA,NA,NA,1,standard,No sockeye in set
+DE214,2015-06-22,"Luke Rogers, Caroyln Knapper, Alex Hare",none,25,1,0.1-5,SE,NA,NA,NA,1,standard,Data entry note: Seems secchi depth was not taken
+DE216,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,2,5-10,NW,NA,NA,NA,1,standard,No sockeye in set
+DE217,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+DE215,2015-06-23,"Luke Rogers, Carolyn Knapper, Natalie Mahara ",none,0,1,0.1-5,N,NA,NA,NA,0,standard,Too sparse to target
+DE218,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,0,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE219,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE220,2015-06-24,"Carolyn Knapper, Luke Rogers, Natalie Mahara",none,100,0,0,NA,NA,NA,NA,1,standard,NA
+DE221,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,2,5-10,W,NA,NA,NA,1,standard,NA
+DE222,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,50,1,0.1-5,W,NA,NA,NA,0,standard,No surface activity
+DE223,2015-06-27,"Luke Rogers, Brett Johnson, Kristi Inman",none,25,1,5-10,N,NA,NA,NA,0,standard,Too sparse to target
+DE224,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,Too sparse to target
+DE225,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,75,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE226,2015-06-29,"Brett Johnson, Luke Rogers, Leo Pontier",none,75,1,0.1-5,E,NA,NA,NA,2,standard,NA
+DE227,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,10-15,NW,NA,NA,NA,0,standard,No surface activity
+DE228,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,5-10,W,NA,NA,NA,0,standard,Too sparse to target
+DE229,2015-07-01,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0,NA,NA,NA,NA,0,standard,Too sparse to target
+DE231,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,1,0.1-5,W,NA,NA,NA,2,standard,NA
+DE232,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,10-15,NW,NA,NA,NA,0,standard,No surface activity
+DE230,2015-07-02,"Carolyn Knapper, Luke Rogers, Kristi Inman ",none,0,2,5-10,NE,NA,NA,NA,0,standard,No surface activity
+DE233,2015-07-05,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,"No salmon surface activity, all herring and stickleback"
+DE234,2015-07-05,"Carolyn Knapper, Brett Johnson, Luke Rogers",none,25,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE236,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+DE237,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE235,2015-07-06,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0.1-5,N,NA,NA,NA,0,standard,Too sparse to target
+DE238,2015-07-07,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE239,2015-07-07,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,0,0.1-5,E,NA,NA,NA,2,standard,NA
+DE240,2015-07-14,"Brett Johnson, Luke Rogers, Kristi Inman",none,50,0,0,NA,NA,NA,NA,1,standard,Sockeye very small
+DE241,2015-07-14,"Brett Johnson, Luke Rogers, Kristi Inman",none,25,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE242,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,25,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE243,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE244,2016-05-07,"Brett Johnson, Luke Rogers, Sam James",none,0,2,5-10,NW,NA,NA,NA,0,standard,NA
+DE245,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,1,0.1-5,NW,NA,NA,NA,2,standard,"Fish surface activity: rapid splashing as of many fish. Visual on several: small <7cm, some distinct popping also."
+DE247,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,2,5-10,NE,NA,NA,NA,0,standard,NA
+DE248,2016-05-09,"Luke Rogers, Yuliya Kuzmenko, Tim Spesivy",none,0,2,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE249,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE250,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,0,0,NA,NA,NA,NA,0,standard,NA
+DE251,2016-05-10,"Brett Johnson, Luke Rogers, Sam James",none,0,0,0,NA,NA,NA,NA,0,standard,NA
+DE252,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",light,100,1,5-10,W,NA,NA,NA,0,standard,Scan stopped at 0802 near Godwin Pt and restarted at 0804 in Bickley Bay.
+DE253,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",none,25,1,0.1-5,W,NA,NA,NA,0,standard,NA
+DE254,2016-05-11,"Luke Rogers, Tim Spesivy, Sam James",none,0,1,5-10,W,NA,NA,NA,0,standard,"Scan 11:14-11:30 at Turn Isl, 11:36-11:46 at Rock Bay"
+DE255,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,25,0,0.1-5,S,NA,NA,NA,2,standard,Saw fish immediately upon site arrival
+DE257,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,50,1,0.1-5,SE,NA,NA,NA,0,standard,NA
+DE258,2016-05-13,"Luke Rogers, Brett Johnson, TIm Spesivy",none,75,1,0.1-5,S,NA,NA,NA,1,standard,NA
+DE259,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+DE260,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,50,0,0,NA,NA,NA,NA,1,standard,NA
+DE261,2016-05-14,"Brett Johnson, Luke Rogers, Sam James",none,50,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE262,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,100,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE263,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,50,2,5-10,N,NA,NA,NA,1,standard,NA
+DE264,2016-05-15,"Luke Rogers, Tim Spesivy, Sam James",none,50,1,5-10,N,NA,NA,NA,2,standard,NA
+DE266,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,25,2,5-10,W,NA,NA,NA,0,standard,NA
+DE267,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,50,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE268,2016-05-16,"Brett Johnson, Tim Spesivy, Sam James",none,75,1,5-10,W,NA,NA,NA,0,standard,"2 Scans: 1: Shoal Bay + Godwin Pt (10 min), 2: Bickley Bay (10 min)"
+DE269,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,0,0.1-5,SE,NA,NA,NA,2,standard,"First set 06:20 mostly chum fry. Set on dimpling 2 and a single slider event(1) resume search 06:48, second set 06:58-targeted set."
+DE271,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,"1 single slider seen, nothing else"
+DE272,2016-05-18,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,5-10,NW,NA,NA,NA,2,standard,Resume search 13:05 after first set.
+DE274,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE275,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",none,100,1,5-10,W,NA,NA,NA,1,standard,NA
+DE276,2016-05-19,"Luke Rogers, Sam James, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE277,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,100,1,0,NA,NA,NA,NA,1,standard,YSI did not calibrate this morning- fluctuating readings. Coho neglected and in dry shipper.
+DE278,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,100,1,5-10,NW,NA,NA,NA,1,standard,NA
+DE279,2016-05-23,"Luke Rogers, Olivia Gutjahr, Tim Spesivy",none,25,2,10-15,N,NA,NA,NA,2,standard,NA
+DE281,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,50,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE282,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,75,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE283,2016-05-24,"Brett Johnson, Yulia Kuzmenko, Tim Spesivy",none,50,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE284,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,50,1,0.1-5,W,NA,NA,NA,2,standard,NA
+DE286,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE287,2016-05-26,"Luke Rogers, Lauren Portner, Sam James",none,100,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE288,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,75,1,10-15,NW,NA,NA,NA,1,standard,appr. 2 ml of zooplankton sample was lost
+DE289,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,50,2,10-15,NW,NA,NA,NA,0,standard,NA
+DE290,2016-05-27,"Luke Rogers, Lauren Portner, Sam James",none,75,1,5-10,NW,NA,NA,NA,2,standard,"Caught net on bottom, abandoned set to free net."
+DE292,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE293,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,50,1,0.1-5,NW,NA,NA,NA,1,standard,Starting to use 64 um sieved filter for zooplankton preservation
+DE294,2016-06-01,"Brett Johnson, Luke Rogers, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,First dayaltering search time method. First day with altered set/site-wide surface activity
+DE295,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",none,75,1,0,NA,NA,NA,NA,1,standard,NA
+DE296,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",none,75,0,0,NA,NA,NA,NA,1,standard,NA
+DE297,2016-06-02,"Brett Johnson, Tim Spesivy, Sam James",light,100,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE298,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,NE,NA,NA,NA,0,standard,NA
+DE299,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,NE,NA,NA,NA,1,standard,NA
+DE300,2016-06-03,"Luke Rogers, Sam James, Mirko Diaz",none,100,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE301,2016-06-07,"Brett Johnson, Sam James, Luke Rogers, Mirko Diaz",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,"Set concurrent with Chrys Set (Nordic Queen), Lenora set (Beach Seine 1), and Stephane Transects (Pellesi)."
+DE302,2016-06-07,"Luke Rogers, Sam James, Mirko Diaz",none,0,2,5-10,N,NA,NA,NA,1,standard,NA
+DE303,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,W,NA,NA,NA,1,standard,NA
+DE304,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,75,1,0.1-5,SW,NA,NA,NA,0,standard,NA
+DE305,2016-06-08,"Luke Rogers, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,No fish in first set.
+DE307,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,100,2,0.1-5,NW,NA,NA,NA,1,standard,NA
+DE309,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,25,3,10-15,SE,NA,NA,NA,0,standard,High wind and swell
+DE308,2016-06-09,"Brett Johnson, Tim Spesivy, Shannon Mendt",none,100,1,0.1-5,S,NA,NA,NA,1,standard,NA
+DE310,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",light,100,0,0,NA,NA,NA,NA,2,standard,NA
+DE312,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",none,100,0,0.1-5,N,NA,NA,NA,0,standard,NA
+DE313,2016-06-11,"Luke Rogers, Tim Spesivy, Yuliya Kuzmenko",none,100,0,0.1-5,N,NA,NA,NA,0,standard,NA
+DE314,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",none,100,1,0.1-5,W,NA,NA,NA,0,standard,NA
+DE315,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",none,100,1,0.1-5,NE,NA,NA,NA,1,standard,NA
+DE316,2016-06-13,"Luke Rogers, Brett Johnson, Brianna Knowles",light,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE317,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",NA,NA,NA,NA,NA,NA,NA,NA,3,standard,random blind set thus no other data collected
+DE320,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,25,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE321,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,100,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE322,2016-06-14,"Luke Rogers, Brianna Knowles, Sam James",none,50,1,0.1-5,S,NA,NA,NA,1,standard,"3 random sets conducted over DFO accoustic moorings. 1) 06:34 @ 50.305971N, 125.334369W - Dimpling observed but no fish in net. 2) 06:59 @ same as 1st set - some dimpling observed, no fish in net. 3) 07:40 @ western mooring. No surface activity observed, no fish."
+DE323,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0,NA,NA,NA,NA,2,standard,"Sampling with DFO. Chrys Neville/Nordic Queen first set time: 06:33. One splash and one dimple ovserved, but not deemed 'settable school'. No other surface activity observed in area. DFO also reported minimal fish in their catch, almost no sockeye."
+DE325,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0,NA,NA,NA,NA,2,standard,"Sparse splashing, no fish."
+DE327,2016-06-16,"Sam James, Kate Holmes, Luke Rogers",none,25,0,0.1-5,S,NA,NA,NA,2,standard,NA
+DE329,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,25,1,0,NA,NA,NA,NA,2,standard,"DFO set at 09:30. No fish in our first set but large school observed. 3 CTD drops total: 1 practice, 1 @ oceanography site (65m), 1 @ fish site (10m)"
+DE331,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,On site for 2 hours. Only 1 successful set conducted
+DE334,2016-06-21,"Brett Johnson, Brianna Knowles, Sam James",none,100,2,10-15,SE,NA,NA,NA,0,standard,NA
+DE335,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,0,0,NA,NA,NA,NA,2,standard,NA
+DE337,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,1,0.1-5,S,NA,NA,NA,1,standard,DFO set at 10:44 - Cameron & Julia report zero sockeye in set. 1st set 10:52 on one aggressive slider. Suspect coho
+DE338,2016-06-22,"Luke Rogers, Tim Spesivy, Brianna Knowles",none,100,1,0.1-5,N,NA,NA,NA,1,standard,NA
+DE340,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+DE341,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,S,NA,NA,NA,1,standard,NA
+DE339,2016-06-23,"Sam James, Tim Spesivy, Luke Rogers",moderate,100,1,0.1-5,N,NA,NA,NA,0,standard,NA
+DE342,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",light,100,0,0.1-5,NW,NA,NA,NA,1,standard,"Natalie asks that we write ""formalin"" on pet jar labels. CTD times stored on IPAD but IPAD touch screen not responding"
+DE343,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",none,75,1,0.1-5,N,NA,NA,NA,0,standard,"Ipad not working. Coordinates taken from phone in degree, minutes, seconds)"
+DE344,2016-06-24,"Brianna Knowles, Natalie Mahara, Luke Rogers",none,100,1,0.1-5,S,NA,NA,NA,1,standard,"1st set no fish, interupted oceanography to set. Crafty fish, very skittish. Gone Quickly. Ipad not working and coordinates were taken off phne in degree decimal minutes. 2nd set: after leaving the site. "
+DE345,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0.1-5,E,NA,NA,NA,0,standard,No CTD today due to malfunction
+DE346,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0,NA,NA,NA,NA,0,standard,No CTD today due to malfunction
+DE347,2016-06-28,"Luke Rogeres, Time Spesivy, Yuliya Kuzmenko",none,0,1,0.1-5,SE,NA,NA,NA,0,standard,No CTD today due to malfunction
+DE348,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,2,5-10,NW,NA,NA,NA,0,standard,For site-wide poppers: 2 single pops in 2 separate locations.
+DE349,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,1,0.1-5,NW,NA,NA,NA,0,standard,"Search paused at 07:19, continued at 07:41."
+DE350,2016-06-29,"Luke Rogers, Brett Johnson, Sam James, Grant Callegari",none,0,0,0.1-5,W,NA,NA,NA,2,standard,"Set 1 with DFO. DFO set at 09:22, Sloop Jo set at 09:24. Random set, no fish."
+DE352,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,100,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE353,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,0,1,5-10,W,NA,NA,NA,1,standard,Fucus caught on line for zoop tow. May have affected flowmeter.
+DE354,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,75,2,0.1-5,W,NA,NA,NA,0,standard,"DFO may have sampled in Knox Bay between 10:30-11, but couldn't make contact. Saw them pass through JS. No fish observed so no set conducted."
+DE355,2016-06-30,"Sam James, Luke Rogers, Brianna Knowles",none,75,1,0.1-5,NE,NA,NA,NA,1,standard,"Search paused at 14:51, continued at 15:08."
+DE356,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",light,100,1,0.1-5,S,NA,NA,NA,0,standard,NA
+DE357,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",light,100,0,0.1-5,NW,NA,NA,NA,2,standard,NA
+DE359,2016-07-05,"Sam James, Luke Rogers, Tim Spesivy",none,100,1,0.1-5,N,NA,NA,NA,0,standard,NA
+DE360,2016-07-06,"Brett Johnson, Luke Rogers, Sam James",none,75,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+DE361,2016-07-06,"Brett Johnson, Luke Rogers, Sam James",none,25,1,0.1-5,S,NA,NA,NA,2,standard,re set because there was lots of surface activity elsewhere
+DE363,2016-07-06,"Luke Rogers, Brett Johnson, Sam James",none,50,1,0.1-5,SE,NA,NA,NA,0,standard,NA
+DE408,2017-05-11,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",moderate,100,0,0.1-5,W,NA,11:04:00,11:19:00,0,standard,NA
+DE414,2017-05-15,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",light,100,0,0.1-5,S,NA,8:20:00,8:35:00,0,standard,NA
+DE426,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,100,0,0,NA,NA,7:35:00,7:50:00,0,standard,NA
+DE438,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,100,3,5-10,NW,NA,10:04:00,10:18:00,0,standard,NA
+DE404,2017-05-16,"Sam James, Luke Rogers, Carly Janusson",none,75,1,0.1-5,N,NA,10:49:00,11:02:00,0,standard,NA
+DE428,2017-05-17,"Brett Johnson, Julian Gan, Luke Rogers",none,100,0,0.1-5,E,NA,9:05:00,9:19:00,0,standard,NA
+DE416,2017-05-17,"Brett Johnson, Julian Gan, Luke Rogers",none,100,0,0,NA,NA,7:20:00,7:34:00,0,standard,NA
+DE440,2017-05-19,"Brett Johnson, Luke Rogers, Julian Gan",none,100,0,0,NA,NA,8:55:00,9:07:00,0,standard,"No Sliding after survey, saw sliders in the morning near Rebecca Spit"
+DE403,2017-05-19,"Brett Johnson, Luke Rogers, Julian Gan",none,100,1,0.1-5,W,flood,10:23:00,10:38:00,0,standard,saw sliders in the morning near Rebecca Spit
+DE415,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,25,2,5-10,N,ebb,8:05:00,8:20:00,0,standard,NA
+DE427,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,0,2,0.1-5,NW,high slack,9:38:00,9:53:00,0,standard,NA
+DE364,2017-05-23,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,0,0.1-5,N,flood,NA,NA,1,standard,"1 unknown mort. Non-formal visual survey conducted. Performed a trial run of collection procedure, in which the one set was both for retention and sea licing. Fish were anaesthetized (for sea licing), placed into recovery, and then euthanized for retention. Due to time restraints, we weren't able to collect complete packages of 10 fish per species."
+DE365,2017-05-25,"Brett Johnson, Sam James, Carly Janusson, Luke Rogers",none,0,2,0.1-5,W,high slack,7:14:00,7:29:00,1,standard,NA
+DE366,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,0,0,NA,ebb,NA,NA,1,standard,Informal site survery; did not have time for a lousing seine. First coho out at 11:26; in dewar at unknown time (in quickly though). Coho # 2 onwards out at 12:36
+DE439,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,0,0.1-5,NW,high slack,7:23:00,7:39:00,0,standard,synchronized one-off surface event after survey - herring forced to surface?
+DE405,2017-05-26,"Brett Johnson, Luke Rogers, Julian Gan, Carly Janusson",none,0,1,0.1-5,N,ebb,8:44:00,9:00:00,0,standard,NA
+DE417,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,2,5-10,NW,high slack,7:53:00,8:10:00,0,standard,NA
+DE429,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,50,1,0.1-5,NW,high slack,9:05:00,9:22:00,0,standard,NA
+DE367,2017-05-29,"Luke Rogers, Sam James, Julian Gan, Carly Janusson",none,75,0,0,NA,ebb,11:19:00,11:34:00,1,standard,NA
+DE441,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,1,0.1-5,SE,flood,6:57:00,7:13:00,0,standard,NA
+DE424,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,2,5-10,S,flood,10:03:00,10:18:00,0,standard,NA
+DE412,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,2,5-10,SE,flood,7:57:00,8:13:00,0,standard,"Observed sliding unlikely to be sockeye due to different appearance in behaviours; more like angular ""spy-hop"" sliding than textbook sliding; also fish much smaller (fry sized)"
+DE368,2017-05-31,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,100,1,0.1-5,S,ebb,11:16:00,11:30:00,1,standard,NA
+DE436,2017-06-01,"Brett Johnson, Carly Janusson, Sam James, Julian Gan",none,100,1,0,NA,ebb,7:05:00,7:20:00,1,standard,"One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general."
+DE369,2017-06-01,"Brett Johnson, Carly Janusson, Sam James, Julian Gan",none,100,1,0.1-5,SW,flood,9:38:00,9:53:00,1,standard,NA
+DE422,2017-06-05,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,0,1,0.1-5,N,ebb,7:50:00,8:05:00,0,standard,"Used Sean's 15 second observe time (data person kept track of time from ""mark"" called by observers. Attempted retention seine, but no SO caught."
+DE370,2017-06-05,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,25,1,5-10,SE,flood,10:45:00,11:00:00,1,standard,NA
+DE371,2017-06-07,"Luke Rogers, Julian Gan, Brenna Collicutt, Sam James",none,100,0,0,NA,ebb,7:26:00,7:41:00,2,standard,Hinch set @ 06:30; 100 SO retained by Hinch crew. 1 unhealthy SO released. 1 trainer CU taken.
+DE400,2017-06-09,"Luke Rogers, Carly Janusson, Brenna Collicut, Julian Gan",none,25,0,0.1-5,N,ebb,10:47:00,11:01:00,0,standard,NA
+DE434,2017-06-09,"Luke Rogers, Carly Janusson, Brenna Collicut, Julian Gan",none,100,1,0.1-5,NE,ebb,9:03:00,9:19:00,0,standard,Took ~ 300 fish from D09 (mix SO & other spp) for Hinch Lab crew
+DE372,2017-06-12,"Brett Johnson, Luke Rogers, Wade Smith, Sam James",none,25,1,0.1-5,NW,ebb,9:36:00,9:51:00,2,standard,NA
+DE396,2017-06-13,"Luke Rogers, Sam James, Julian Gan, Brenna Collicutt",none,75,1,0.1-5,,flood,6:00:00,6:15:00,0,standard,NA
+DE376,2017-06-13,"Luke Rogers, Julian Gan, Brenna Collicutt, Sam James",none,75,2,5-10,NW,ebb,8:32:00,8:47:00,2,standard,NA
+DE402,2017-06-14,"Luke Rogers, Julian Gan, Brenna Collicutt, Gideon Mordecai",light,100,1,0.1-5,S,ebb,10:53:00,11:08:00,0,standard,NA
+DE420,2017-06-14,"Luke Rogers, Julian Gan, Brenna Collicutt, Gideon Mordecai",none,100,1,0.1-5,N,ebb,12:26:00,12:41:00,0,standard,NA
+DE454A,2017-06-14,"Sam James, DFO",,,,,,,,,5,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
+DE454B,2017-06-15,"Sam James, DFO",,,,,,,,,3,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
+DE377,2017-06-19,"Luke Rogers, Carly Janusson, Julian Gan, Tianyi Chang",moderate,100,1,0.1-5,N,ebb,7:02:00,7:17:00,1,standard,"Set twice at D09 to collect fish for Tianyi Chen, Sam James, & Hinch lab. First set at 11:15, retained 1 CU for TC (released 100 CU, 1 unhealthy SO). Second set at 12:15, retained 1 CU for GM & 18 CU for TC (released 150 CU)."
+DE382,2017-06-19,"Luke Rogers, Carly Janusson, Julian Gan, Tianyi Chang",NA,NA,NA,NA,NA,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
+DE378,2017-06-20,"Brett Johnson, Luke Rogers, Carly Janusson, Brenna Collicutt",none,100,1,0.1-5,NW,ebb,6:28:00,6:43:00,1,standard,NA
+DE432,2017-06-20,"Brett Johnson, Sam James, Luke Rogers, Christine Stevenson",none,0,3,5-10,NW,flood,11:37:00,11:50:00,0,standard,NA
+DE398,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",none,25,2,5-10,NW,low slack,9:26:00,9:39:00,0,standard,NA
+DE410,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",none,50,2,5-10,NW,low slack,10:41:00,10:56:00,0,standard,NA
+DE383,2017-06-21,"Brett Johnson, Luke Rogers, Julian Gan, Brenna Collicutt",NA,NA,NA,NA,NA,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
+DE373,2017-06-26,"Luke Rogers, Carly Janusson, Sam James, Julian Gan",none,75,1,0.1-5,NW,flood,6:37:00,6:55:00,2,standard,NA
+DE384,2017-06-26,NA,NA,NA,NA,NA,NA,NA,NA,NA,1,non-standard,Survey conducted to obtain fish for Hinch crew
+DE394,2017-06-27,"Brett Johnson, Luke Rogers, Carly Janusson, Julian Gan",none,50,2,5-10,NW,flood,6:10:00,6:23:00,0,standard,NA
+DE406,2017-06-27,"Brett Johnson, Luke Rogers, Carly Janusson, Julian Gan",none,75,2,5-10,NW,flood,8:08:00,8:24:00,0,standard,NA
+DE374,2017-06-28,"Carly Janusson, Julian Gan Brett Johnson, Luke Rogers",none,100,0,0.1-5,NW,flood,6:59:00,7:12:00,1,standard,NA
+DE457,2017-06-29,"Sam James, Luke Rogers, Julian Gan",none,0,0,0,NA,flood,NA,NA,3,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE458,2017-06-29,"Sam James, Luke Rogers, Julian Gan",none,0,0,0,NA,flood,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE459,2017-06-29,"Brett Johnson, Sam James, Brianna Knowles",none,0,0,0,NA,ebb,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE460,2017-06-29,"Brett Johnson, Sam James, Brianna Knowles",none,0,0,0.1-5,W,ebb,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE461,2017-06-30,"Sam James, Luke Rogers, Carly Janusson",none,25,1,0.1-5,NW,ebb,NA,NA,1,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE462,2017-06-30,"Sam James, Luke Rogers, Carly Janusson",none,25,1,0.1-5,NW,ebb,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE463,2017-06-30,"Sam James, Brett Johnson, Brianna Knowles",none,0,1,0.1-5,NW,flood,NA,NA,3,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE464,2017-06-30,"Sam James, Brett Johnson, Brianna Knowles",none,0,1,0.1-5,NW,flood,NA,NA,2,non-standard,Sam James' UBC diet study (24-hour). Fish batch euthanized in MS222.
+DE379,2017-07-04,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,50,2,5-10,NW,ebb,6:21:00,6:35:00,1,standard,NA
+DE375,2017-07-04,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,25,1,0.1-5,NW,high slack,9:02:00,9:16:00,1,standard,NA
+DE380,2017-07-05,"Luke Rogers, Carly Janusson, Melissa Orobko",none,75,0,0.1-5,NW,ebb,7:01:00,7:15:00,1,standard,NA
+DE395,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,1,0.1-5,W,ebb,6:57:00,7:14:00,0,standard,Site activity survey conducted in 50% shade. Set activity survey conducted in full sun.
+DE397,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,0,0,NA,ebb,9:58:00,10:12:00,0,standard,NA
+DE399,2017-07-06,"Luke Rogers, Julian Gan, Melissa Orobko",none,0,1,0.1-5,W,flood,11:11:00,11:25:00,0,standard,NA
+DE381,2017-07-10,"Brett Johnson, Sam James, Carly Janusson, Julian Gan",none,75,2,5-10,W,high slack,7:47:00,8:02:00,1,standard,"Trial run of combining retention & lousing duties in one set. Took all chum as substitute for SO and other species, retained as trainer fish. Liced 10 chum."
+DE455A,2017-07-12,"Sam James, DFO",,,,,,,,,4,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
+DE455B,2017-07-13,"Sam James, DFO",,,,,,,,,4,DFO,Sam onboard DFO vessel Nordic Queen to collect fish for her UBC 24-hour feeding study
+JE100,2015-05-20,"Sean Godwin, Donnah MacKinnon, Dylan Smyth",light,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE101,2015-05-20,"Sean Godwin, Donnah MacKinnon, Dylan Smyth",light,100,2,5-10,NW,NA,NA,NA,1,standard,NA
+JE102,2015-05-21,"Sean Godwin, Brendan Connors, Carson White",none,100,2,5-10,NW,NA,NA,NA,2,standard,NA
+JE103,2015-05-21,"Sean Godwin, Donnah MacKinnon, Carson White",none,100,3,5-10,NW,NA,NA,NA,2,standard,NA
+JE104,2015-05-22,"Sean Godwin, Dylan Smyth, Carson White",none,100,2,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE105,2015-05-22,"Sean Godwin, Carson White, Dylan Smyth",none,100,2,5-10,NW,NA,NA,NA,2,standard,NA
+JE106,2015-05-22,"Sean Godwin, Carson White, Dylan Smyth",none,75,2,10-15,NW,NA,NA,NA,4,standard,NA
+JE107,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,0,0,NW,NA,NA,NA,2,standard,NA
+JE108,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,0,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE109,2015-05-23,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,25,2,5-10,NW,NA,NA,NA,3,standard,NA
+JE110,2015-05-24,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,1,0.1-5,W,NA,NA,NA,2,standard,NA
+JE111,2015-05-24,"Sean Godwin, Mack Barlett, Samantha Crowley",none,75,2,5-10,NW,NA,NA,NA,0,standard,NA
+JE112,2015-05-24,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,25,3,15-20,SW,NA,NA,NA,1,standard,NA
+JE113,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",light,100,2,5-10,SW,NA,NA,NA,1,standard,NA
+JE114,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",none,100,2,5-10,SW,NA,NA,NA,1,standard,NA
+JE115,2015-05-25,"Sean Godwin, Chris Guinchard, Samantha Crowley",none,100,2,5-10,W,NA,NA,NA,1,standard,NA
+JE116,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,100,2,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE117,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,75,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE118,2015-05-26,"Sean Godwin, Mack Bartlett, Chris Guinchard",none,75,1,5-10,W,NA,NA,NA,1,standard,NA
+JE119,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE120,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,S,NA,NA,NA,0,standard,NA
+JE121,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0,S,NA,NA,NA,0,standard,NA
+JE122,2015-05-27,"Lauren Portner, Carson White, Dylan Smyth",none,100,1,5-10,NW,NA,NA,NA,2,standard,NA
+JE123,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,100,0,0.1-5,NW,NA,NA,NA,3,standard,NA
+JE124,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,100,3,10-15,NW,NA,NA,NA,0,standard,"fish not at depth, close to beach"
+JE125,2015-05-28,"Carson White, Lauren Portner, Katie Chan",none,25,4,15-20,NW,NA,NA,NA,0,standard,"fish not at depth, close to beach"
+JE126,2015-05-29,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE127,2015-05-29,"Lauren Portner, Katie Chan, Dylan Smyth",none,0,4,15-20,NW,NA,NA,NA,1,standard,"one net set, no fish caught"
+JE128,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE129,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,100,1,0.1-5,NA,NA,NA,NA,3,standard,NA
+JE130,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,0,3,10-15,NW,NA,NA,NA,0,standard,net not set because no fish
+JE131,2015-05-30,"Lauren Portner, Carson White, Dylan Smyth",none,0,4,10-15,NW,NA,NA,NA,1,standard,NA
+JE132,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE133,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE134,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,50,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE135,2015-05-31,"Lauren Portner, Katie Chan, Carson White",none,0,2,5-10,NW,NA,NA,NA,0,standard,fish not at depth
+JE136,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,1,0,NA,NA,NA,NA,1,standard,NA
+JE137,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE138,2015-06-01,"Lauren Portner, Katie Chan, Dylan Smyth",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE139,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",light,100,1,0-5,NW,NA,NA,NA,1,standard,NA
+JE140,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE141,2015-06-02,"Carson White, Donnah MacKinnon, Lauren Portner",none,0,3,5-10,NW,NA,NA,NA,1,standard,snagged net on bottom- no fish. strong current dragged us into the shallows 
+JE142,2015-06-03,"Carson White, Katie Chan, Lauren Portner",none,100,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE143,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,75,1,0.1-5,NW,NA,NA,NA,1,standard,"could not find herring again because too many fish; unsure of herring, pink, and coho numbers because too many fish"
+JE144,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",light,75,3,5-10,SW,NA,NA,NA,0,standard,NA
+JE145,2015-06-03,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,75,1,0.1-5,W,NA,NA,NA,1,standard,NA
+JE146,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,50,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE147,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,25,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE148,2015-06-04,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,NW,NA,NA,NA,3,standard,NA
+JE149,2015-06-05,"Sean Godwin, Samantha Crowley, Donnah MacKinnon",none,25,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE150,2015-06-05,"Sean Godwin, Samantha Crowley, Donnah MacKinnon",none,25,1,0.1-5,NE,NA,NA,NA,1,standard,NA
+JE151,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,3,5-10,SW,NA,NA,NA,0,standard,NA
+JE152,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,100,2,5-10,N,NA,NA,NA,1,standard,Ipad forms won't open- error message (note after data entry: ipad form fixed and submitted)
+JE153,2015-06-06,"Sean Godwin, Mack Bartlett, Samantha Crowley",none,25,3,10-15,NW,NA,NA,NA,1,standard,NA
+JE154,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,1,standard,NA
+JE155,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE156,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,0,standard,net not set due to poor weather and lack of fish
+JE157,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,5-10,SW,NA,NA,NA,2,standard,NA
+JE158,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,2,0.1-5,SW,NA,NA,NA,0,standard,lack of fish
+JE159,2015-06-07,"Sean Godwin, Mack Bartlett, Donnah MacKinnon",none,0,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE160,2015-06-08,"Sean Godwin, Mack Bartlett, Samantha Crowley",light,100,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE161,2015-06-08,"Lauren Portner, Chris Guinchard, Stephanie Peacock",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE162,2015-06-08,"Lauren Portner, Chris Guinchard, Stephanie Peacock",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE163,2015-06-09,"Mack Bartlett, Chris Guinchard, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE164,2015-06-09,"Mack Bartlett, Chris Guinchard, Katie Chan",none,75,3,10-15,SW,NA,NA,NA,0,standard,net not set due to unfavourable conditions
+JE165,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,75,2,0.1-5,NE,NA,NA,NA,1,standard,NA
+JE166,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,50,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE167,2015-06-11,"Lauren Portner, Chris Guinchard, Katie Chan",none,50,4,15-20,NW,NA,NA,NA,0,standard,"fish not at depth, poor weather"
+JE168,2015-06-12,"Lauren Portner, Mack Bartlett, Katie Chan",none,75,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE169,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,50,2,5-10,SW,NA,NA,NA,0,standard,"fish not at depth, poor weather"
+JE170,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,25,3,5-10,N,NA,NA,NA,0,standard,"fish not at depth, poor weather"
+JE171,2015-06-13,"Lauren Portner, Mack Bartlett, Chris Guinchard",none,25,1,5-10,SW,NA,NA,NA,2,standard,NA
+JE172,2015-06-14,"Sean Godwin, Donnah MacKinnon, Samantha Crowley",none,0,1,5-10,SW,NA,NA,NA,4,standard,NA
+JE173,2015-06-14,"Sean Godwin, Donnah MacKinnon, Samantha Crowley",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE174,2015-06-14,"Sean Godwin, Carson White, Melissa Orobko",none,25,3,10-15,S,NA,NA,NA,1,standard,NA
+JE175,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon",none,100,1,0.1-5,SW,NA,NA,NA,1,standard,NA
+JE176,2015-06-15,"Sean Godwin, Donnah MacKinnon, Martin Krkosek",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE177,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon",none,100,1,5-10,W,NA,NA,NA,2,standard,NA
+JE178,2015-06-15,"Sean Godwin, Carson White, Donnah MacKinnon, Melissa Orobko",none,25,2,5-10,SW,NA,NA,NA,1,standard,NA
+JE179,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE180,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE181,2015-06-16,"Samantha Crowley, Carson White, Donnah MacKinnon",none,75,1,5-10,NW,NA,NA,NA,2,standard,NA
+JE182,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,100,1,0,NA,NA,NA,NA,1,standard,NA
+JE183,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,75,1,0.1-5,N,NA,NA,NA,1,standard,NA
+JE184,2015-06-17,"Sean Godwin, Carson White, Samantha Crowley",none,25,1,0,NA,NA,NA,NA,1,standard,NA
+JE185,2015-06-18,"Sean Godwin, Dylan Smyth, Katie Chan",none,50,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+JE186,2015-06-18,"Sean Godwin, Dylan Smyth, Katie Chan",none,100,1,0,NA,NA,NA,NA,1,standard,NA
+JE187,2015-06-18,"Sean Godwin, Dylan Smyth, Sean Godwin, Melissa Orobko",none,100,1,0.1-5,W,NA,NA,NA,1,standard,NA
+JE188,2015-06-18,"Sean Godwin, Dylan Smyth, Sean Godwin, Melissa Orobko",light,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE189,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",none,75,0,0.1-5,E,NA,NA,NA,2,standard,NA
+JE190,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",none,75,0,0.1-5,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE191,2015-06-19,"Sean Godwin, Lauren Portner, Dylan Smyth",light,100,1,0.1-5,SE,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE192,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE193,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",light,100,1,0.1-5,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE194,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,50,2,10-15,NW,NA,NA,NA,0,standard,NA
+JE195,2015-06-20,"Lauren Portner, Dylan Smyth, Katie Chan",none,25,1,5-10,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE196,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,100,1,0.1-5,SE,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE197,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,25,0,0.1-5,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE198,2015-06-21,"Lauren Portner, Carson White, Katie Chan",none,0,1,0.1-5,NW,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE199,2015-06-23,"Lauren Portner, Carson White, Dylan Smyth",none,0,0,0.1-5,NW,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE200,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman, Katie Pocock",none,0,0,0.1-5,N,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE201,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman",none,25,1,0.1-5,NW,NA,NA,NA,3,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE202,2015-06-23,"Sean Godwin, Chris Guinchard, Andrew Bateman",none,50,0,0.1-5,N,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE203,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",light,100,0,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE204,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",none,100,0,0.1-5,NE,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE205,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",moderate,100,0,0.1-5,SE,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE206,2015-06-24,"Sean Godwin, Samantha Crowley, Andrew Bateman",moderate,100,2,0.1-5,NE,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE207,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,100,0,0.1-5,S,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE208,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,100,0,0.1-5,N,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE209,2015-06-27,"Carson White, Dylan Smyth, Peter Harrington",none,0,0,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE210,2015-06-28,"Carson White, Dylan Smyth, Peter Harrington",none,0,0,0,NA,NA,NA,NA,2,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE211,2015-06-28,"Carson White, Dylan Smyth, Peter Harrington",none,0,1,5-10,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE212,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,0,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE213,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE214,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,100,2,5-10,NW,NA,NA,NA,0,standard,"fish not at depth, only saw 2 poppers over total search time."
+JE215,2015-06-29,"Carson White, Peter Harrington, Lauren Portner",none,75,2,5-10,NW,NA,NA,NA,0,standard,"fish not at depth, saw one popper over total search time."
+JE216,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,50,1,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE217,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,50,0,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball. Whale activity"
+JE218,2015-07-01,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,1,standard,"Secchi depth not possible. Tape broke, lost disc and cannon ball."
+JE219,2015-07-02,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,1,0,NA,NA,NA,NA,1,standard,NA
+JE220,2015-07-02,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,1,10-15,NW,NA,NA,NA,1,standard,NA
+JE221,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE222,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,0,standard,net not set because no smolt activity
+JE223,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,0,standard,net not set because no smolt activity
+JE224,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE225,2015-07-07,"Sean Godwin, Lauren Portner, Carson White",none,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE226,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,0,standard,net not set because no smolt activity
+JE227,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,1,standard,NA
+JE228,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,1,standard,"net set on possible smolt school, fish not caught or seen again. Otherwise no smolt activity."
+JE229,2015-07-10,"Sean Godwin, Mack Bartlett, Dylan Smyth",none,0,0,0,NA,NA,NA,NA,2,standard,NA
+JE230,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz",none,50,2,5-10,SE,NA,NA,NA,0,standard,NA
+JE231,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz",none,50,2,5-10,SE,NA,NA,NA,1,standard,NA
+JE232,2016-05-20,"Sean Godwin, Chris Guinchard, Mirko Diaz, Clare Atkinson",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE233,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,0,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE234,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,0,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE235,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson, Mirko Diaz",none,0,1,0.1-5,NW,NA,NA,NA,3,standard,"few small cryptic schools, unable to catch"
+JE236,2016-05-21,"Sean Godwin, Chris Guinchard, Clare Atkinson",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE237,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,0,0,NA,NA,NA,NA,1,standard,forgot Secchi
+JE238,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,0,0,NA,NA,NA,NA,1,standard,NA
+JE239,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,3,10-15,NW,NA,NA,NA,2,standard,"Few good schools, bad current and wind. Set twice, difficult condition, no fish, forgot YSI and secchi"
+JE240,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,25,2,10-15,NW,NA,NA,NA,1,standard,NA
+JE241,2016-05-22,"Sean Godwin, Mirko Diaz, Clare Atkinson",none,50,3,5-10,NW,NA,NA,NA,0,standard,"Bad weather, no fish"
+JE242,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,2,0.1-5,NW,NA,NA,NA,0,standard,NA
+JE243,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,"flow-meter did not rotate, did not retain sample"
+JE244,2016-05-26,"Sean Godwin, Shannon Mendt, Brett Johnson",none,100,3,5-10,NW,NA,NA,NA,1,standard,NA
+JE245,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",none,75,2,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE246,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",none,50,3,5-10,NW,NA,NA,NA,1,standard,NA
+JE247,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",light,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+JE248,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson, Jack Goldman",light,100,0,0,NA,NA,NA,NA,1,standard,NA 
+JE249,2016-05-27,"Sean Godwin, Brianna Knowles, Brett Johnson",light,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE250,2016-05-28,"Brett Johnson, Shannon Mendt, Brianna Knowles",light,100,0,0,NA,NA,NA,NA,2,standard,No fish on first set
+JE251,2016-05-28,"Brett Johnson, Shannon Mendt, Brianna Knowles, Jack Goldman",none,25,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+JE252,2016-06-01,"Chris Guinchard, Lauren Portner, Dylan Smyth.",none,75,0,0,NA,NA,NA,NA,1,standard,Secchi left onboard Madrona
+JE253,2016-06-01,"Chris Guinchard, Lauren Portner, Dylan Smyth.",none,100,0,0.1-5,N,NA,NA,NA,1,standard,Morts due to misidentification
+JE254,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,50,1,0.1-5,SE,NA,NA,NA,1,standard,NA
+JE255,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,50,1,5-10,S,NA,NA,NA,2,standard,Couldn't locate whatman paper for JS00541-JS00660
+JE256,2016-06-02,"Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,1,5-10,SE,NA,NA,NA,1,standard,NA
+JE257,2016-06-03,"Chris Guinchard, Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,2,5-10,SE,NA,NA,NA,1,standard,NA
+JE258,2016-06-03,"Chris Guinchard, Lauren Portner, Dylan Smyth, Olivia Gutjahr",none,100,2,5-10,SE,NA,NA,NA,1,standard,NA
+JE259,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,50,0,0.1-5,SE,NA,NA,NA,3,standard,NA
+JE260,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,50,2,10-15,NW,NA,NA,NA,1,standard,"no fish, stopped for weather"
+JE261,2016-06-04,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr",none,0,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE262,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James",none,0,0,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE263,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James",moderate,100,0,0.1-5,SE,NA,NA,NA,1,standard,NA
+JE264,2016-06-09,"Lauren Portner, Brianna Knowles, Sam James, Melissa Orobko",none,25,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE265,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,1,0.1-5,NE,NA,NA,NA,1,standard,NA
+JE266,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,3,5-10,NW,NA,NA,NA,1,standard,NA
+JE267,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson",none,100,0,0.1-5,SE,NA,NA,NA,1,standard,NA
+JE268,2016-06-10,"Lauren Portner, Sam James, Claire Atkinson, Melissa Orobko",moderate,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE269,2016-06-11,"Lauren Portner, Sam James, Brianna Knowles",none,100,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE270,2016-06-11,"Sam James, Clare Atkinson, Brianna Knowles",none,100,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE271,2016-06-11,"Sam James, Clare Atkinson, Brianna Knowles, Melissa Orobko",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE272,2016-06-17,"Mirko Diaz, Chris Guinchard, Olivia Gutjahr",none,75,0,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE273,2016-06-17,"Mirko Diaz, Chris Guinchard, Olivia Gutjahr",none,25,0,5-10,NW,NA,NA,NA,1,standard,NA
+JE274,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,50,0,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE275,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,No setable fish. Called it after 1 hour of searching. 
+JE276,2016-06-18,"Stephanie Peacock, Chris Guinchard, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE277,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Andrew Bateman",none,100,0,0.1-5,NW,NA,NA,NA,0,standard,"Searched for 1 hour and 40 minutes, dimpling seen at the end of survey turned out to be perch."
+JE278,2016-06-19,"Chris Guinchard, Olivia Gutjahr, Stephanie Peacock, Dylan Smyth",none,100,1,0.1-5,NW,NA,NA,NA,3,standard,Three seperate sets no sockeye. No fish collected.
+JE281,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Stephanie Peacock",none,75,2,5-10,NW,NA,NA,NA,1,standard,NA
+JE282,2016-06-19,"Dylan Smyth, Chris Guinchard, Olivia Gutjahr, Stephanie Peacock",none,75,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE283,2016-06-20,"Dylan Smyth, Stephanie Peacock, Mirko Diaz, Olivia Guinchard",none,0,0,0,NA,NA,NA,NA,1,standard,NA
+JE284,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",moderate,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE285,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,0,0,NA,NA,NA,NA,1,standard,NA
+JE286,2016-06-23,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,1,0.1-5,NE,NA,NA,NA,1,standard,NA
+JE287,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",light,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+JE288,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",moderate,100,1,0,NA,NA,NA,NA,1,standard,"Other activity in area, but no distinct sockeye. Difficult catching consditions, so kept school. Herring was small (~6cm) and dead when net was brought in."
+JE289,2016-06-24,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,SW,NA,NA,NA,0,standard,NA
+JE290,2016-06-24,"Andrew Bateman, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE291,2016-06-25,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE292,2016-06-25,"Sean Godwin, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,5-10,NW,NA,NA,NA,1,standard,NA
+JE293,2016-06-25,"Andrew Bateman, Shannon Mendt, Clare Atkinson, Fiona Francis",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE294,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,2,standard,NA
+JE295,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,75,1,0.1-5,N,NA,NA,NA,1,standard,NA
+JE296,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,0,standard,NA
+JE297,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",light,100,1,0.1-5,N,NA,NA,NA,0,standard,NA
+JE298,2016-07-04,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,50,2,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE299,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+JE300,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,1,standard,NA
+JE301,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,100,1,0.1-5,NW,NA,NA,NA,0,standard,NA
+JE302,2016-07-05,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,25,1,5-10,N,NA,NA,NA,1,standard,NA
+JE303,2016-07-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Olivia Gutjahr",none,25,0,0,NW,NA,NA,NA,1,standard,left YSI on Madrona
+JE324,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,1,0.1-5,NW,ebb,6:17:00,6:32:00,0,standard,No CTD on board and no flow meter on board so no zoop tow completed.
+JE325,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,ebb,7:08:00,7:24:00,0,standard,No CTD on board.
+JE326,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,ebb,8:00:00,8:24:00,0,standard,No CTD on board.
+JE327,2017-05-26,"Lauren Portner, Dylan Smyth, Mirko Diaz, Sean Godwin.",none,100,0,0,NA,flood,10:38:00,10:53:00,0,standard,No CTD or flow meter on board so no zoop tow.
+JE328,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",light,50,2,10-15,SW,ebb,12:58:00,13:14:00,0,standard,Observed popping behavior to be salmon fry or small smolts
+JE329,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,5-10,SE,ebb,13:58:00,14:14:00,0,standard,No salmon or surface activity observed
+JE330,2017-06-02,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,5-10,SE,ebb,14:38:00,14:53:00,0,standard,"Wind gusting 15SE, heavy wave action on shore, Beaufort of B2-B3."
+JE331,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,10-15,NW,flood,5:36:00,5:49:00,0,standard,CTD hand dropped.
+JE332,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,50,1,0.1-5,E,flood,6:58:00,7:15:00,0,standard,CTD failed to record cast
+JE333,2017-06-03,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,0.1-5,SE,flood,8:19:00,8:35:00,0,standard,"CTD hand dropped. No other surface activity observed beyond dimpling, and unsure whether dimpling behaviour was indeed salmon."
+JE304,2017-06-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,0,1,0.1-5,SW,ebb,6:27:00,6:43:00,3,standard,Missed fish on first set. Had to wait for cruise ship wake to do second set. Long search time after first set (fish dove?). No CTD on board. Secchi drop on datasheet only (not on digital form).
+JE305,2017-06-06,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,25,0,0,NA,ebb,14:18:00,14:34:00,1,standard,"No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing."
+JE334,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,100,1,5-10,SE,ebb,7:16:00,7:32:00,0,standard,No slides observed on visual survey. Did full oceanography and moved to secondary site.
+JE335,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,100,2,5-10,SE,flood,8:14:00,8:29:00,0,standard,Reduced visibility due to heavy wave action and gusting wind.
+JE336,2017-06-07,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,2,5-10,SE,flood,8:52:00,9:06:00,0,standard,Reduced visibility due to heavy wave action and gusting wind.
+JE306,2017-06-13,"Dylan Smyth, Emma Atkinson, Lauren Portner, Dylan Shea",none,100,1,0,NA,ebb,6:36:00,6:52:00,2,standard,NA
+JE307,2017-06-14,"Lauren Portner, Dylan Smyth, Emma Atkinson, Dylan Shea",none,100,1,0.1-5,SE,ebb,5:51:00,6:04:00,1,standard,CTD failed to record cast
+JE337,2017-06-20,"Emma Atkinson, Lauren Portner, Dylan Smyth, Mirko Diaz",none,100,2,5-10,NW,flood,6:32:00,6:46:00,1,standard,Weather picked up. Unable to complete a set.
+JE308,2017-06-20,"Emma Atkinson, Lauren Portner, Dylan Smyth, Mirko Diaz",none,100,1,0.1-5,NW,flood,8:36:00,8:52:00,2,standard,"Last half of visual survey was a B2-3, so visibility was difficult. We caught 3 local pink fry. CTD not recording drops (turning off spontaneously)."
+JE309,2017-06-21,"Lauren Portner, Dylan Smyth, Mirko Diaz, Emma Atkinson",none,75,1,0.1-5,NW,ebb,5:56:00,6:10:00,2,standard,NA
+JE310,2017-06-27,"Dylan Smyth, Emma Atkinson, Lauren Portner, Mirko Diaz",none,100,2,10-15,NW,ebb,5:56:00,6:11:00,2,standard,NA
+JE311,2017-06-28,"Dylan Smyth, Emma Atkinson, Lauren Portner, Mirko Diaz",none,75,2,5-10,NW,ebb,5:42:00,5:57:00,5,standard,"First half of visual survey was a B2, second half was a B3. Secchi hit the bottom at 7.5m."
+JE314,2017-07-06,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,100,0,0,NA,ebb,6:04:00,6:20:00,2,standard,NA
+JE312,2017-07-07,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,75,0,0,NA,ebb,6:17:00,6:32:00,1,standard,NA
+JE313,2017-07-07,"Dylan Smyth, Dylan Shea, Lauren Portner, Mirko Diaz",none,100,0,0.1-5,NW,flood,9:29:00,9:46:00,1,standard,NA
+JE316,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,1,0,NA,ebb,6:27:00,6:43:00,1,standard,NA
+JE338,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,0,0,NA,ebb,8:27:00,8:41:00,0,standard,NA
+JE363,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,0,0,NA,ebb,9:12:00,9:28:00,0,standard,NA
+JE315,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,100,1,0,NA,ebb,10:01:00,10:16:00,1,standard,NA
+JE340,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,0,0,NA,flood,12:32:00,12:50:00,0,standard,NA
+JE341,2017-07-12,"Lauren Portner, Dylan Smyth, Mirko Diaz, Griffin Kelly",none,75,1,0.1-5,NW,flood,14:09:00,14:26:00,0,standard,NA
+DE500,2018-05-01,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,ebb tide,NA,NA,0,non-standard,Boat training
+DE501,2018-05-09,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,75,1,5-10,SE,low slack,7:40:00,7:52:00,0,standard,No settable activity
+DE502,2018-05-10,"Brett Johnson, Krystal Bachen, Katie Davidson, Sara Tremblay-Boyer",light,100,1,0,NA,flood,9:47:00,10:01:00,0,standard,no settable activity
+DE503,2018-05-10,"Brett Johnson, Krystal Bachen, Katie Davidson, Sara Tremblay-Boyer",light,100,0,0,NA,ebb tide,7:24:00,7:30:00,0,standard,no settable activity
+DE504,2018-05-11,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,75,2,10-15,NW,ebb tide,7:59:00,8:12:00,0,standard,no settable activity
+DE505,2018-05-11,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,2,10-15,NW,ebb tide,9:42:00,9:57:00,2,standard,
+DE506,2018-05-14,"Carly Janusson, Brett Johnson, Sara Boyer-Tremblay, Katie Davidson",none,25,1,5-10,N,ebb tide,6:52:00,7:05:00,1,standard,
+DE507,2018-05-14,"Carly Janusson, Brett Johnson, Sara Boyer-Tremblay, Katie Davidson",none,0,0,0.1-5,NW,low slack,NA,NA,0,standard,
+DE508,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,2,10-15,NW,ebb tide,6:39:00,6:54:00,0,standard,
+DE509,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,1,0.1-5,NW,ebb tide,8:09:00,8:22:00,0,standard,
+DE510,2018-05-15,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,25,1,0.1-5,NW,ebb tide,9:19:00,9:33:00,1,standard,
+JE409,2018-05-16,"Dylan Smyth, Mirko Diaz, Erin Pippus, Julian Gan",none,75,0,0.1-5,NW,flood,6:03:00,6:18:00,0,standard,no settable activity
+JE410,2018-05-16,"Dylan Smyth, Mirko Diaz, Erin Pippus, Julian Gan",none,75,1,5-10,NW,flood,7:21:00,7:39:00,0,standard,no settable activity
+JE411,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,0,1,0,NA,ebb tide,6:11:00,6:26:00,0,standard,no settable activity
+JE412,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,25,1,0,NA,ebb tide,7:33:00,7:47:00,1,standard,No setttable activity for a second set.
+JE413,2018-05-17,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Julian Gan",none,0,1,0.1-5,NW,ebb tide,10:17:00,10:32:00,0,standard,no settable activity
+DE511,2018-05-17,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,2,0.1-5,NW,ebb tide,6:52:00,7:06:00,0,standard,no settable activity
+DE516,2018-05-17,"Sam James, Brett Johnson, Sara Tremblay-Boyer, Katie Davidson",none,0,0,0.1-5,NW,ebb tide,8:20:00,8:34:00,2,standard,
+JE401,2018-05-21,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,flood,6:24:00,6:39:00,1,standard,~120 rockfish were caught first set. No further settable activity
+JE402,2018-05-21,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,1,0.1-5,SE,flood,8:01:00,8:16:00,1,standard,
+JE403,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,low slack,6:14:00,6:28:00,0,standard,no settable activity
+JE404,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,75,0,0,NA,flood,7:19:00,7:37:00,0,standard,no settable activity
+JE405,2018-05-22,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,100,1,0,NA,flood,8:09:00,8:28:00,0,standard,no settable activity
+DE517,2018-05-22,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Steve Johnson, Noah Kussin, Carly Janusson, Jessica Garzke",none,0,0,0,NA,flood,7:21:00,7:34:00,2,standard,Ebb tide & 25% CC during oceanography survey
+DE515,2018-05-23,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,2,5-10,NW,ebb tide,6:51:00,7:04:00,0,standard,"no settable activity, strong wind and choppy conditions"
+DE531,2018-05-23,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",none,0,1,0.1-5,NW,flood,8:28:00,8:43:00,1,standard,
+DE518,2018-05-24,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan, JESSICA GARZKE",none,100,0,10-15,NW,flood,7:38:00,7:53:00,0,standard,no settable activity
+DE512,2018-05-24,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan, JESSICA GARZKE",none,50,0,5-10,NW,flood,9:20:00,9:34:00,1,standard,
+DE513,2018-05-28,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Stephen Johnston",none,100,1,0.1-5,NW,ebb tide,6:43:00,6:58:00,2,standard,
+DE519,2018-05-29,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Alicia Anderson",none,75,0,10-15,NW,ebb tide,6:28:00,6:43:00,1,standard,
+JE406,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,1,0.1-5,NW,ebb tide,6:22:00,6:37:00,0,standard,no settable activity
+JE407,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,2,0.1-5,NW,ebb tide,7:21:00,7:36:00,0,standard,no settable activity
+JE408,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,25,2,0.1-5,NW,ebb tide,9:06:00,9:21:00,0,standard,no settable activity
+JE416,2018-05-30,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,50,1,5-10,NW,ebb tide,11:09:00,11:26:00,0,standard,no settable activity
+DE514,2018-05-30,"Sara Tremblay-Boyer, Katie Davidson, Brett Johnson, Julian Gan, Brian Hendricks",none,0,1,5-10,NW,ebb tide,7:34:00,7:47:00,1,standard,
+JE417,2018-05-31,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,75,2,0.1-5,NW,ebb tide,6:20:00,6:35:00,2,standard,No net. Unable to do Zooptow
+JE418,2018-06-03,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,1,0.1-5,SE,flood,6:10:00,6:25:00,1,standard,
+DE520,2018-06-04,"Julian Gan, Katie Davidson, Noah Kussin-Bordo, Brian Hendriks",none,0,0,0.1-5,N,flood,6:49:00,7:04:00,3,standard,
+DE521,2018-06-05,"Katie Davidson, Sara Tremblay-Boyer, Julian Gan, Lauren Portner",none,100,0,0.1-5,SE,flood,6:18:00,6:30:00,1,standard,
+JE414,2018-06-07,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",light,100,0,0.1-5,SE,high slack,6:21:00,6:37:00,1,standard,
+DE522,2018-06-07,"Katie Davidson, Sara Tremblay-Boyer, Brian Hendricks, Lauren Portner",light,100,1,0.1-5,SE,flood,7:07:00,7:20:00,1,standard,no settable activity
+DE523,2018-06-11,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Chris O'Sullivan",none,0,0,0.1-5,NW,ebb tide,6:24:00,6:39:00,1,standard,
+JE415,2018-06-12,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,100,1,0.1-5,SE,ebb tide,6:19:00,6:37:00,2,standard,no visual survey at primary site due to poor weather.
+DE524,2018-06-12,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Chris O'Sullivan",none,100,1,0.1-5,NW,ebb tide,6:07:00,6:19:00,4,standard,
+DE525,2018-06-12,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan, Chris O'Sullivan",none,100,2,0.1-5,SE,low slack,10:40:00,10:55:00,1,standard,
+DE526,2018-06-13,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer, Julian Gan",light,100,1,0.1-5,SE,ebb tide,6:48:00,7:01:00,1,standard,
+JE419,2018-06-14,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0.1-5,NW,ebb tide,6:09:00,6:24:00,1,standard,So many logs
+DE527,2018-06-18,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan,",none,0,1,0.1-5,NW,flood,6:20:00,6:35:00,3,standard,
+DE528,2018-06-18,"Sara Tremblay-Boyer, Katie Davidson, ulian Gan,",none,0,1,0,NA,low slack,12:07:00,12:22:00,1,standard,No surface activity indicating sockeye
+DE529,2018-06-19,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,25,1,0.1-5,SE,flood,6:22:00,6:36:00,2,standard,
+DE530,2018-06-19,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,0,1,0.1-5,SE,flood,9:20:00,9:34:00,2,standard,
+JE420,2018-06-20,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",light,100,1,0.1-5,NW,flood,8:29:00,8:45:00,1,standard,Heavy fog during transit and transect. Could not reach primary site. Three sets attempted at secondary site.
+DE532,2018-06-20,"Sara Tremblay-Boyer, Katie Davidson, David Costalago, Julian Gan",none,75,1,0.1-5,SE,flood,7:40:00,7:53:00,3,standard,"Set #2 herring released poor condition, no ice packs for cooling fish, first 3 herring in 12:20"
+JE421,2018-06-21,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0.1-5,NW,flood,6:49:00,7:04:00,2,standard,
+JE422,2018-06-23,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,75,2,0.1-5,NW,ebb tide,6:15:00,6:30:00,2,standard,
+DE533,2018-06-25,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Eva Jordinson",none,100,1,10-15,NW,ebb tide,6:32:00,6:46:00,2,standard,
+DE534,2018-06-26,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Eva Jordinson",none,0,1,0.1-5,NW,ebb tide,6:08:00,6:21:00,2,standard,
+DE535,2018-06-27,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brett Johnson",none,75,2,10-15,NW,ebb tide,6:44:00,6:57:00,1,standard,
+DE536,2018-06-27,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brett Johnson, Brian Hendriks, Steve Johnston",none,50,2,5-10,NW,flood,NA,NA,1,non-standard,Set for Hinch crew to get samples for holding study. Retained incidental sockeye & 1 diseased-looking chum for Gideon Mordecai (UBC Suttle lab virology)
+JE423,2018-06-28,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",light,100,0,0,NA,ebb tide,6:22:00,6:39:00,2,standard,
+JE424,2018-06-29,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",none,100,2,5-10,SE,ebb tide,6:14:00,6:30:00,0,standard,Weather too poor to set
+JE425,2018-06-29,"Dylan Smyth, Michelle Douglas, Erin Pippus, Mirko Diaz",moderate,100,0,0,NA,ebb tide,7:20:00,7:38:00,1,standard,Current too strong to keep the fish or set again safely.
+DE537,2018-07-03,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Carly Janusson",none,75,1,5-10,NW,flood,6:29:00,6:43:00,1,standard,
+JE426,2018-07-03,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,75,1,0.1-5,SE,flood,6:05:00,6:21:00,1,standard,
+DE538,2018-07-04,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Tyrel Froese",none,25,2,10-15,NW,flood,6:05:00,6:19:00,2,standard,
+JE427,2018-07-04,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,25,0,0,NA,flood,6:09:00,6:24:00,2,standard,
+DE539,2018-07-05,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer, Brian Hendriks",none,100,1,0.1-5,N,flood,6:41:00,6:54:00,2,standard,
+JE428,2018-07-09,"Dylan Smyth, Mirko Diaz, Michelle Douglas, Erin Pippus",none,100,0,0,NA,ebb tide,6:04:00,6:19:00,1,standard,
+JE429,2018-07-09,"Dylan Smyth, Mirko Diaz, Erin Pippus, Michelle Douglas",none,100,1,0,NA,flood,9:00:00,9:15:00,1,standard,
+DE540,2018-07-17,"Sara Tremblay-Boyer, Katie Davidson, Julian Gan, Carly Janusson",none,50,1,5-10,NW,high slack,7:15:00,7:28:00,1,standard,
+DE541,2018-08-01,"Brett Johnson, Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,high slack,8:05:00,8:19:00,1,standard,
+DE546,2018-08-08,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,high slack,8:02:00,8:17:00,2,standard,
+DE542,2018-08-15,"Brett Johnson, Katie Davidson, Sara Tremblay-Boyer",none,0,1,0.1-5,NW,flood,7:50:00,8:03:00,2,standard,
+DE543,2018-08-22,"Julian Gan, Katie Davidson, Sara Tremblay-Boyer",none,100,1,0.1-5,NW,flood,8:02:00,8:15:00,1,standard,very smokey
