@@ -1,42 +1,42 @@
-site_id,site_name,region,zone,lat,long,pfma
-D01,Hurtado Point,DI,E,49.9613,-124.747,
-D02,Kinghorn Island,DI,E,50.07902,-124.8509,
-D03,Sutil Narrows,DI,E,50.11842,-125.07512,
-D04,Francisco Point,DI,NA,49.996445,-125.147117,13-1
-D05,Lewis Channel,DI,E,50.1659,-124.8888,
-D06,Gowlland Harbour,DI,W,50.10015,-125.27265,
-D07,Hoskyn Channel,DI,C,50.190769,-125.143142,13-12
-D08,Calm Channel,DI,E,50.319983,-125.040963,13-18
-D09,Okisollo Channel,DI,C,50.307276,-125.329834,13-10
-D10,Hall Point,DI,E,50.44365,-125.279,13-23
-D11,Turn Island,DI,NA,50.34815,-125.45565,
-D12,Hyacinthe Bay,DI,C,50.116886,-125.210626,13-28
-D20,Godwin Point,DI,NA,50.462122,-125.364704,13-26
-D21,Hemming Bay,DI,NA,50.390937,-125.372675,13-26
-D22,McMullen Point,DI,W,50.244069,-125.397371,13-7
-D23,Discovery East,DI,W,50.207638,-125.356127,13-7
-D24,Surge Narrows,DI,C,50.238061,-125.117914,13-12
-D25,Twin Islands,DI,E,50.022465,-124.916635,15-3
-D26,Oyster Bay,DI,W,49.917057,-125.164744,13-2
-D27,Granite Point,DI,W,50.274476,-125.377946,13-11
-D28,Knox Bay,DI,NA,50.38992,-125.613237,
-D29,Raza Island,DI,E,50.303175,-125.031603,13-19
-D30,Chonat Bay,DI,C,50.291829,-125.320003,13-10
-D31,Barnes Bay,DI,C,50.31975,-125.270167,13-10
-D32,Deepwater Bay,DI,W,50.178767,-125.338256,13-6
-D33,South Raza Island,DI,E,50.286961,-124.977972,15-5
-D34,Penn Islands,DI,E,50.186914,-125.034097,13-17
-J01,Hanson North,JS,N,50.578487,-126.721845,
-J02,Swanson Island,JS,N,50.599433,-126.703364,12-5
-J03,Cracroft Point,JS,N,50.546936,-126.671869,12-3
-J04,Forward Bay,JS,N,50.526352,-126.38762,
-J05,Stimpson Point,JS,N,50.498735,-126.212568,
-J06,Blenkinsop Bay,JS,N,50.475081,-126.033922,
-J07,South Mouth,JS,S,50.457325,-126.165533,
-J08,Naka Creek,JS,S,50.480604,-126.409614,
-J09,Blinkhorn Peninsula,JS,S,50.544011,-126.814611,12-4
-J10,Hanson South,JS,N,50.558034,-126.734633,
-J11,Blinkhorn Bay,JS,S,50.539058,-126.777119,12-4
-J12,West Kaikash Creek,JS,S,50.526406,-126.727619,12-3
-J13,Sophia Islands,JS,N,50.53779,-126.63191,12-21
-D35,Denham Bay,DI,E,,,13-23
+site_id,site_name,region,zone,priority,notes
+D01,Hurtado Point,DI,E,NA,
+D02,Kinghorn Island,DI,E,NA,
+D03,Sutil Narrows,DI,E,NA,
+D04,Francisco Point,DI,NA,NA,
+D05,Lewis Channel,DI,E,NA,
+D06,Gowlland Harbour,DI,W,NA,
+D07,Hoskyn Channel,DI,C,NA,
+D08,Calm Channel,DI,E,NA,Primary site in 2017. Discontinued in 2018
+D09,Okisollo Channel,DI,C,1,
+D10,Hall Point,DI,E,1,
+D11,Turn Island,DI,NA,NA,
+D12,Hyacinthe Bay,DI,C,NA,
+D20,Godwin Point,DI,NA,NA,
+D21,Hemming Bay,DI,NA,NA,
+D22,McMullen Point,DI,W,2,Primary site in 2017 and first half of 2018
+D23,Discovery East,DI,W,NA,
+D24,Surge Narrows,DI,C,NA,
+D25,Twin Islands,DI,E,NA,
+D26,Oyster Bay,DI,W,NA,
+D27,Granite Point,DI,W,1,Secondary site in 2017 and second half of 2018
+D28,Knox Bay,DI,NA,NA,
+D29,Raza Island,DI,E,NA,Secondary site in 2017. Discontinued in 2018
+D30,Chonat Bay,DI,C,2,
+D31,Barnes Bay,DI,C,3,Established 2017. No set survey transect start/end coordinates as of 2019
+D32,Deepwater Bay,DI,W,NA,Established 2017. No set survey transect start/end coordinates as of 2019
+D33,South Raza Island,DI,E,3,Established 2017. No set survey transect start/end coordinates as of 2019
+D34,Penn Islands,DI,E,3,Established 2017. No set survey transect start/end coordinates as of 2019
+J01,Hanson North,JS,N,NA,
+J02,Swanson Island,JS,N,2,
+J03,Cracroft Point,JS,N,1,
+J04,Forward Bay,JS,N,NA,
+J05,Stimpson Point,JS,N,NA,
+J06,Blenkinsop Bay,JS,N,NA,
+J07,South Mouth,JS,S,NA,
+J08,Naka Creek,JS,S,NA,
+J09,Blinkhorn Peninsula,JS,S,1,
+J10,Hanson South,JS,N,NA,
+J11,Blinkhorn Bay,JS,S,2,
+J12,West Kaikash Creek,JS,S,3,
+J13,Sophia Islands,JS,N,3,
+D35,Denham Bay,DI,E,2,No set survey transect start/end cooordinates as of 2019
