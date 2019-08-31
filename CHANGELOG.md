@@ -6,19 +6,34 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [1.0.0]
 ### Added
 - 2018 fish dissections and sea-louse enumeration
-- New sample tables `rna_dna_samples`, `rna_pathogen_samples`, `fatty_acid_samples`, `isotope_samples`, `extra_muscle_samples`, `stock_id_samples` (combination of DNA and fin clip collections),
-`stomach_samples`, `otolith_samples`, `scale_samples`, `sealice_samples`
 - Fish that previously did not have 'fork_length_lab' measurements now have a modeled value generated from 'standard_length_lab' measurements using lab data from 2015 to February 2019 (`juvenile-salmon` repository release 2019-02-21)
+- In `site_activity`, surveys with no observations (ie., no activity sighted) have a single record where 'school_number' == 0
+- New column 'lice_id_protocol_field' to `fish_field_data`
 
 ### Changed
-- All data tables are now downloaded from the Hakai Ecological Integrated Management System (EIMS) Data Portal. As a result, some column names have been modified in accordance with the EIMS database structure. Please refer to the Data Dictionary for definitions.  
 - Species in `bycatch_mort` no longer use four-letter codes; instead, their common names are fully spelled out 
+- In `sites`, site "J09" renamed to "Bauza Cove"
+- All timestamps reformatted to "yyyy-mm-dd hh:mm Z"
+- In `survey_data`, renamed "ebb tide" to "ebb" for consistency
+- All fish with only SEMSP IDs (undissected specimens from 2015-16) have now been retroactively assigned
+UFNs for database consistency
 
 ### Fixed
+- In `survey_data`, blank cells for DFO surveys changed to NA (no data)
 - Surveys DE278, DE289, DE293, DE321, DE334, DE348, and DE360 incorrectly had their zone listed as "E"; corrected to "W"
+- In `sealice_field`, replaced cal & mot counts from 0 to NA for all fish with 'lice_id_protocol_field
+ == "salmoncoast_motiles"
+- In `fish_lab_data`, sealice_protocol_lab changed to NA for 2015/2016 fish dissected 2018-07 only for DNA collection
 
 ### Removed
 - Removed the following records from `sealice_finescale` due to no results: U41, U148, U150, U1189, U1375, U1393, U1397, U1411 
+- 'preservation_status' no longer an attribute of `seine_data`, and is being migrated to `package_data` upon next release
+- In survey_data, ysi_cast_id, ctd_cast_id, secchi, and zoop_sample_id columns (must manually join oceanography data by date, site, etc)
+- Removed 'preservation_status' from `seine_data`	
+- `photo_number` from `fish_lab_data`
+- 1 chum from seine DE371N1 with no UFN or SEMSP ID (trainer fish)
+- 'dissection_status' from `fish_field_data` (can determine if a fish has been dissected by joining it with fish_lab_data to see if it has a 'date_processed' value
+- Removed from `sealice_lab_fs` any UFNs that do not exist in fish_lab_data (discarded due to qc) or do not have results (i.e., unprocessed samples)
 
 
 ## [0.2.0] - 2018-10-15
