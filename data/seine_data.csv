@@ -1,4 +1,4 @@
-seine_id,survey_id,set_number,set_type,lat,long,set_time,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,collection_protocol,seine_notes
+seine_id,survey_id,set_number,set_type,lat,long,set_time,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,collection_protocol,seine_comments
 DE100N2,DE100,2,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE100N1,DE100,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE100N3,DE100,3,targeted,49.9613,-124.747,2015-05-12 11:40:00 PDT,40,NA,NA,NA,yes,30,NA,0,0,10,NA,1,NA,2,NA,NA,NA,SEMSP,NA
@@ -31,7 +31,7 @@ DE128N4,DE128,4,targeted,50.44466,-125.2804,2015-05-26 08:45:00 PDT,97,NA,NA,NA,
 DE130N1,DE130,1,targeted,50.30795,-125.32452,2015-05-26 12:29:00 PDT,11,NA,NA,NA,yes,30,40,0,0,10,10,0,0,0,0,NA,NA,SEMSP,NA
 DE137N1,DE137,1,targeted,50.44941,-125.33027,2015-05-28 06:45:00 PDT,28,NA,NA,NA,yes,30,30,0,0,5,10,0,0,1,1,NA,NA,SEMSP,NA
 DE138N1,DE138,1,targeted,NA,NA,2015-05-28 09:55:00 PDT,33,NA,NA,NA,no,0,0,0,0,0,0,0,6,0,0,NA,NA,SEMSP,"CO = 6 total, released"
-DE139N1,DE139,1,targeted,50.308839999999996,-125.32275,2015-05-28 11:10:00 PDT,10,NA,NA,NA,yes,30,200,0,0,10,10,0,0,3,3,NA,NA,SEMSP,NA
+DE139N1,DE139,1,targeted,50.30884,-125.32275,2015-05-28 11:10:00 PDT,10,NA,NA,NA,yes,30,200,0,0,10,10,0,0,3,3,NA,NA,SEMSP,NA
 DE140N1,DE140,1,targeted,50.10015,-125.27265,2015-05-30 10:19:00 PDT,36,NA,NA,NA,yes,30,40,0,0,10,200,0,0,0,0,NA,NA,SEMSP,NA
 DE143N1,DE143,1,targeted,50.31763,-125.04942,2015-05-31 06:25:00 PDT,5,NA,NA,NA,yes,2,2,1,1,10,60,0,0,0,0,NA,NA,SEMSP,NA
 DE145N1,DE145,1,targeted,50.06119,-124.87916,2015-05-31 09:32:00 PDT,22,NA,NA,NA,no,0,0,0,0,0,10,0,10,0,0,NA,NA,SEMSP,NA
@@ -69,7 +69,7 @@ DE179N1,DE179,1,targeted,NA,NA,2015-06-13 11:30:00 PDT,21,NA,NA,NA,no,0,0,NA,NA,
 DE182N1,DE182,1,targeted,50.19051,-125.1444,2015-06-13 14:29:00 PDT,10,NA,NA,NA,yes,22,23,3,3,10,100,5,6,0,0,NA,NA,SEMSP,Fish with lesions SO # 10
 DE183N1,DE183,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE183N2,DE183,2,targeted,50.30767,-125.33023,2015-06-14 07:30:00 PDT,31,NA,NA,NA,yes,26,26,1,1,10,200,0,0,2,2,NA,NA,SEMSP,SO 2 and 26 had lesions on dorasl surface of body. SO 4 had hemorrhaging gills. HE 1 had hem. fins.
-DE184N1,DE184,1,targeted,50.347410000000004,-125.45333,2015-06-14 10:58:00 PDT,17,NA,NA,NA,yes,30,600,2,10,10,400,1,1,0,0,NA,NA,SEMSP,NA
+DE184N1,DE184,1,targeted,50.34741,-125.45333,2015-06-14 10:58:00 PDT,17,NA,NA,NA,yes,30,600,2,10,10,400,1,1,0,0,NA,NA,SEMSP,NA
 DE185N1,DE185,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE185N2,DE185,2,targeted,NA,NA,2015-06-14 13:56:00 PDT,33,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE186N1,DE186,1,targeted,NA,NA,2015-06-15 07:50:00 PDT,54,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
@@ -77,7 +77,7 @@ DE189N1,DE189,1,targeted,NA,NA,2015-06-15 12:21:00 PDT,44,NA,NA,NA,no,0,0,NA,NA,
 DE190N1,DE190,1,targeted,NA,NA,2015-06-16 01:50:00 PDT,28,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE192N2,DE192,2,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE192N1,DE192,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
-DE192N3,DE192,3,targeted,50.34866,-125.44482000000001,2015-06-16 09:41:00 PDT,48,NA,NA,NA,yes,30,200,1,1,10,100,1,1,0,1,NA,NA,SEMSP,NA
+DE192N3,DE192,3,targeted,50.34866,-125.44482,2015-06-16 09:41:00 PDT,48,NA,NA,NA,yes,30,200,1,1,10,100,1,1,0,1,NA,NA,SEMSP,NA
 DE193N1,DE193,1,targeted,NA,NA,2015-06-16 15:44:00 PDT,15,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,10,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
 DE194N1,DE194,1,targeted,50.32119,-125.03856,2015-06-17 11:02:00 PDT,36,NA,NA,NA,yes,12,13,0,0,10,18,2,2,1,1,NA,NA,SEMSP,NA
 DE195N1,DE195,1,targeted,NA,NA,2015-06-17 14:12:00 PDT,38,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate
