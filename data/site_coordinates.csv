@@ -1,4 +1,4 @@
-site_id,coordinate_type,lat,long
+site_id,coordinate_type,site_lat,site_long
 D09,survey_start,50.302844,-125.339717
 D30,survey_start,50.294022,-125.316457
 D22,survey_start,50.245625,-125.396517
