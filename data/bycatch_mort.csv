@@ -1,202 +1,202 @@
-seine_id,bm_species,bm_status,bm_ageclass,bm_count,bm_notes
-DE100N3,Sockeye salmon,M,J,7,NA
-DE104N1,Chinook salmon,B,NA,1,NA
-DE106N1,Threespine stickleback,B,NA,6,NA
-DE107N1,Trout,B,NA,2,NA
-DE108N1,Flatfish,B,J,1,NA
-DE120N2,Sockeye salmon,M,J,1,NA
-DE120N2,Chum salmon,M,J,1,NA
-DE140N1,Sockeye salmon,M,J,1,NA
-DE150N3,Chinook salmon,B,NA,1,NA
-DE154N1,Tidepool sculpin,B,NA,1,NA
-DE154N1,Threespine stickleback,B,NA,4,NA
-DE154N1,Sockeye salmon,M,J,1,NA
-DE158N2,Threespine stickleback,B,NA,400,NA
-DE158N2,Sculpin,B,NA,2,NA
-DE163N1,Chum salmon,M,J,1,NA
-DE169N2,Chinook salmon,B,NA,2,NA
-DE169N2,Sockeye salmon,M,J,1,NA
-DE169N2,Chinook salmon,M,J,1,NA
-DE170N2,Chinook salmon,B,NA,1,NA
-DE182N1,Chinook salmon,B,NA,2,NA
-DE182N1,Chinook salmon,M,J,1,NA
-DE185N2,Quillback Rockfish,B,NA,1,NA
-DE192N3,Chinook salmon,B,NA,2,NA
-DE192N3,Chum salmon,M,J,1,NA
-DE193N1,Pacific Pacific herring,B,Y,5000,NA
-DE193N1,Sandlance,B,NA,1,NA
-DE195N1,Squid,M,NA,1,NA
-DE198N2,Chinook salmon,B,NA,1,NA
-DE198N2,Chum salmon,M,J,1,NA
-DE214N1,Chinook salmon,B,NA,1,NA
-DE214N1,Threespine stickleback,B,NA,1,NA
-DE214N1,Chum salmon,M,J,1,NA
-DE216N1,Chinook salmon,B,NA,1,NA
-DE217N2,Chinook salmon,B,NA,10,NA
-DE217N2,Sandlance,M,NA,2,NA
-DE219N1,Chinook salmon,B,NA,6,NA
-DE220N1,Sockeye salmon,M,J,1,NA
-DE226N2,Chinook salmon,B,NA,2,NA
-DE226N2,Chinook salmon,M,J,1,NA
-DE234N1,Chum salmon,M,J,1,NA
-DE239N2,Chinook salmon,B,NA,2,NA
-DE240N1,Chinook salmon,B,NA,1,NA
-DE240N1,Threespine stickleback,B,J,30,NA
-DE241N1,Chinook salmon,B,NA,2,NA
-DE241N1,Pink salmon,M,J,36,NA
-DE241N1,Chum salmon,M,J,36,NA
-DE255N2,Squid,B,NA,2,NA
-DE264N2,Chinook salmon,B,NA,1,NA
-DE264N1,Sockeye salmon,M,J,1,NA
-DE275N1,Sockeye salmon,M,J,2,NA
-DE279N2,Sockeye salmon,M,J,1,NA
-DE284N1,Perch,B,NA,300,NA
-DE284N1,Bay pipefish,B,NA,2,NA
-DE284N1,Sandlance,B,NA,1,NA
-DE293N1,Chinook salmon,B,NA,1,NA
-DE293N1,Threespine stickleback,B,NA,1,NA
-DE293N1,Sockeye salmon,M,J,2,NA
-DE295N1,Sockeye salmon,M,J,1,NA
-DE299N1,Shiner perch,B,NA,1,NA
-DE301N1,Chinook salmon,B,NA,5,NA
-DE301N1,Chinook salmon,M,J,1,NA
-DE302N1,Sockeye salmon,M,J,3,NA
-DE307N1,Chinook salmon,B,NA,4,NA
-DE315N1,Pink salmon,M,J,1,NA
-DE321N1,Pink salmon,M,J,1,NA
-DE335N2,Chinook salmon,B,NA,1,NA
-DE353N1,Chinook salmon,B,NA,1,NA
-DE360N1,Chinook salmon,B,NA,2,NA
-DE370N1,Threespine stickleback,B,NA,10,NA
-DE371N2,Sockeye salmon,M,J,3,NA
-DE372N1,Chum salmon,M,J,1,NA
-DE378N1,Rockfish,B,J,1,NA
-DE462N2,Threespine stickleback,B,NA,1,NA
-DE463N1,Opalescent squid,B,NA,1,NA
-JE105N2,Dolly Varden trout,B,NA,5,NA
-JE106N4,Salmon,B,NA,4,NA
-JE107N2,Threespine stickleback,B,NA,1,NA
-JE112N1,Starry flounder,B,NA,1,NA
-JE115N1,Dolly Varden trout,B,J,1,NA
-JE116N1,Salmon,B,J,1,NA
-JE116N1,Sockeye salmon,M,J,6,NA
-JE116N1,Chum salmon,M,J,2,NA
-JE123N3,Chum salmon,M,J,2,NA
-JE146N1,Chum salmon,M,J,4,NA
-JE148N3,Chinook salmon,B,J,1,NA
-JE152N1,Sockeye salmon,M,J,1,NA
-JE162N1,Percy,B,NA,1,NA
-JE163N1,Gunnel,B,NA,3,NA
-JE163N1,Salmon,B,NA,3,NA
-JE163N1,Chum salmon,M,J,1,NA
-JE165N1,Chinook salmon,B,NA,1,NA
-JE165N1,Sockeye salmon,M,J,1,NA
-JE168N1,Threespine stickleback,B,NA,1,NA
-JE182N1,Tubesnout,B,NA,30,NA
-JE182N1,Chum salmon,M,J,2,NA
-JE186N1,Threespine stickleback,B,NA,1,NA
-JE195N1,Chinook salmon,B,NA,1,NA
-JE198N2,Chinook salmon,B,NA,1,NA
-JE201N3,Chinook salmon,B,NA,1,NA
-JE203N1,Chinook salmon,B,NA,3,NA
-JE205N1,Chinook salmon,B,NA,2,NA
-JE209N1,Chinook salmon,B,NA,1,NA
-JE210N2,Chinook salmon,B,NA,1,NA
-JE211N1,Tubesnout,B,NA,1,NA
-JE225N1,Chinook salmon,B,NA,1,NA
-JE231N1,Sockeye salmon,M,J,3,NA
-JE233N1,Threespine stickleback,B,NA,1,NA
-JE243N2,Threespine stickleback,B,NA,1,NA
-JE245N2,Threespine stickleback,B,NA,1,NA
-JE245N2,Chinook salmon,B,NA,1,NA
-JE245N2,Sockeye salmon,M,J,1,NA
-JE250N2,Sockeye salmon,M,J,3,NA
-JE253N1,Pink salmon,M,J,3,NA
-JE256N1,Pink salmon,M,J,1,NA
-JE258N1,Chinook salmon,B,NA,1,NA
-JE258N1,Sockeye salmon,M,J,1,NA
-JE259N3,Sockeye salmon,M,J,2,NA
-JE264N1,Chinook salmon,B,NA,1,NA
-JE264N1,Chinook salmon,B,NA,1,NA
-JE269N1,Chinook salmon,B,NA,1,NA
-JE269N1,Chinook salmon,B,NA,1,NA
-JE269N1,Pink salmon,M,J,1,NA
-JE269N1,Pink salmon,M,J,1,NA
-JE270N1,Pink salmon,M,J,1,NA
-JE270N1,Pink salmon,M,J,1,NA
-JE271N1,Chum salmon,M,J,1,NA
-JE271N1,Chum salmon,M,J,1,NA
-JE272N2,Sockeye salmon,M,J,3,NA
-JE273N1,Sockeye salmon,M,J,1,NA
-JE273N1,Sockeye salmon,M,J,1,NA
-JE273N1,Chum salmon,M,J,2,NA
-JE273N1,Chum salmon,M,J,2,NA
-JE273N1,Pink salmon,M,J,2,NA
-JE273N1,Pink salmon,M,J,2,NA
-JE276N1,Chum salmon,M,J,1,NA
-JE276N1,Pink salmon,M,J,1,NA
-JE276N1,Chinook salmon,M,J,1,NA
-JE283N1,Sockeye salmon,M,J,2,NA
-JE283N1,Pink salmon,M,J,1,NA
-JE285N1,Chinook salmon,B,NA,5,NA
-JE285N1,Pink salmon,M,J,1,NA
-JE286N1,Chum salmon,B,A,2,NA
-JE288N1,Chinook salmon,B,NA,6,NA
-JE288N1,Pacific herring,M,J,1,NA
-JE290N2,Chinook salmon,B,NA,1,NA
-JE290N2,Dolly Varden trout,B,NA,1,NA
-JE290N2,Tubesnout,B,NA,200,NA
-JE291N1,Chinook salmon,B,NA,2,NA
-JE292N1,Threespine stickleback,B,NA,1,NA
-JE292N1,Chum salmon,M,J,1,NA
-JE292N1,Pink salmon,M,J,1,NA
-JE293N2,Chinook salmon,B,NA,1,NA
-JE298N1,Chinook salmon,B,NA,1,NA
-JE300N1,Chinook salmon,B,NA,10,NA
-JE306N2,Pacific herring,M,J,1,NA
-JE306N1,Threespine stickleback,B,NA,1,NA
-JE306N1,Chum salmon,M,J,2,NA
-JE308N1,Sockeye salmon,M,J,1,NA
-JE310N2,Chum salmon,M,J,6,NA
-JE310N2,Sockeye salmon,M,J,1,NA
-JE310N1,Cutthroat trout,B,NA,1,NA
-JE310N1,Rockfish,B,J,144,NA
-JE312N1,Tubesnout,B,NA,1,NA
-JE313N1,Rockfish,B,J,1,NA
-JE313N1,Perch,B,NA,2,NA
-DE506N1,Threespine stickleback,B,NA,1,NA
-JE412N1,Dolly Varden trout,B,J,1,NA
-JE401N1,Rockfish,B,J,120,NA
-JE402N1,Pacific herring,M,J,2,NA
-DE531N1,Sockeye salmon,M,J,2,NA
-DE531N1,Kelp greenling,B,J,4,NA
-DE531N1,Lingcod,B,J,8,NA
-DE513N2,Pink salmon,M,J,1,NA
-DE519N1,Pink salmon,M,J,7,NA
-DE514N1,Chum salmon,M,J,1,NA
-JE414N1,Sockeye salmon,M,J,10,NA
-DE522N1,Chum salmon,M,J,1,NA
-DE522N1,Threespine stickleback,B,NA,1,NA
-DE523N3,Pink salmon,M,J,3,NA
-DE523N3,Chum salmon,M,J,2,NA
-DE523N1,Pink salmon,M,J,1,NA
-DE524N4,Threespine stickleback,B,A,1,NA
-DE524N3,Chum salmon,M,J,1,NA
-DE525N1,Chum salmon,M,J,11,NA
-DE525N1,Chum salmon,M,J,11,NA
-DE525N1,Chum salmon,M,J,11,NA
-DE525N1,Chum salmon,M,J,11,NA
-DE525N1,Pink salmon,M,J,6,NA
-DE525N1,Pink salmon,M,J,6,NA
-DE525N1,Pink salmon,M,J,6,NA
-DE525N1,Pink salmon,M,J,6,NA
-JE419N1,Chum salmon,M,J,1,NA
-DE528N1,Threespine stickleback,B,A,1,NA
-DE529N2,Threespine stickleback,B,A,1,NA
-DE529N1,Threespine stickleback,B,A,1,NA
-DE530N2,Threespine stickleback,B,A,2,NA
-DE530N2,Pink salmon,M,J,2,NA
-DE530N2,Chum salmon,M,J,1,NA
-DE537N1,Black-and-yellow rockfish,B,J,3,NA
-DE541N1,Threespine stickleback,B,A,1,NA
-DE546N2,Threespine stickleback,B,J,1,NA
+seine_id,bm_species,bm_status,bm_ageclass,bm_count
+DE100N3,Sockeye salmon,M,J,7
+DE104N1,Chinook salmon,B,NA,1
+DE106N1,Threespine stickleback,B,NA,6
+DE107N1,Trout,B,NA,2
+DE108N1,Flatfish,B,J,1
+DE120N2,Sockeye salmon,M,J,1
+DE120N2,Chum salmon,M,J,1
+DE140N1,Sockeye salmon,M,J,1
+DE150N3,Chinook salmon,B,NA,1
+DE154N1,Tidepool sculpin,B,NA,1
+DE154N1,Threespine stickleback,B,NA,4
+DE154N1,Sockeye salmon,M,J,1
+DE158N2,Threespine stickleback,B,NA,400
+DE158N2,Sculpin,B,NA,2
+DE163N1,Chum salmon,M,J,1
+DE169N2,Chinook salmon,B,NA,2
+DE169N2,Sockeye salmon,M,J,1
+DE169N2,Chinook salmon,M,J,1
+DE170N2,Chinook salmon,B,NA,1
+DE182N1,Chinook salmon,B,NA,2
+DE182N1,Chinook salmon,M,J,1
+DE185N2,Quillback Rockfish,B,NA,1
+DE192N3,Chinook salmon,B,NA,2
+DE192N3,Chum salmon,M,J,1
+DE193N1,Pacific Pacific herring,B,Y,5000
+DE193N1,Sandlance,B,NA,1
+DE195N1,Squid,M,NA,1
+DE198N2,Chinook salmon,B,NA,1
+DE198N2,Chum salmon,M,J,1
+DE214N1,Chinook salmon,B,NA,1
+DE214N1,Threespine stickleback,B,NA,1
+DE214N1,Chum salmon,M,J,1
+DE216N1,Chinook salmon,B,NA,1
+DE217N2,Chinook salmon,B,NA,10
+DE217N2,Sandlance,M,NA,2
+DE219N1,Chinook salmon,B,NA,6
+DE220N1,Sockeye salmon,M,J,1
+DE226N2,Chinook salmon,B,NA,2
+DE226N2,Chinook salmon,M,J,1
+DE234N1,Chum salmon,M,J,1
+DE239N2,Chinook salmon,B,NA,2
+DE240N1,Chinook salmon,B,NA,1
+DE240N1,Threespine stickleback,B,J,30
+DE241N1,Chinook salmon,B,NA,2
+DE241N1,Pink salmon,M,J,36
+DE241N1,Chum salmon,M,J,36
+DE255N2,Squid,B,NA,2
+DE264N2,Chinook salmon,B,NA,1
+DE264N1,Sockeye salmon,M,J,1
+DE275N1,Sockeye salmon,M,J,2
+DE279N2,Sockeye salmon,M,J,1
+DE284N1,Perch,B,NA,300
+DE284N1,Bay pipefish,B,NA,2
+DE284N1,Sandlance,B,NA,1
+DE293N1,Chinook salmon,B,NA,1
+DE293N1,Threespine stickleback,B,NA,1
+DE293N1,Sockeye salmon,M,J,2
+DE295N1,Sockeye salmon,M,J,1
+DE299N1,Shiner perch,B,NA,1
+DE301N1,Chinook salmon,B,NA,5
+DE301N1,Chinook salmon,M,J,1
+DE302N1,Sockeye salmon,M,J,3
+DE307N1,Chinook salmon,B,NA,4
+DE315N1,Pink salmon,M,J,1
+DE321N1,Pink salmon,M,J,1
+DE335N2,Chinook salmon,B,NA,1
+DE353N1,Chinook salmon,B,NA,1
+DE360N1,Chinook salmon,B,NA,2
+DE370N1,Threespine stickleback,B,NA,10
+DE371N2,Sockeye salmon,M,J,3
+DE372N1,Chum salmon,M,J,1
+DE378N1,Rockfish,B,J,1
+DE462N2,Threespine stickleback,B,NA,1
+DE463N1,Opalescent squid,B,NA,1
+JE105N2,Dolly Varden trout,B,NA,5
+JE106N4,Salmon,B,NA,4
+JE107N2,Threespine stickleback,B,NA,1
+JE112N1,Starry flounder,B,NA,1
+JE115N1,Dolly Varden trout,B,J,1
+JE116N1,Salmon,B,J,1
+JE116N1,Sockeye salmon,M,J,6
+JE116N1,Chum salmon,M,J,2
+JE123N3,Chum salmon,M,J,2
+JE146N1,Chum salmon,M,J,4
+JE148N3,Chinook salmon,B,J,1
+JE152N1,Sockeye salmon,M,J,1
+JE162N1,Percy,B,NA,1
+JE163N1,Gunnel,B,NA,3
+JE163N1,Salmon,B,NA,3
+JE163N1,Chum salmon,M,J,1
+JE165N1,Chinook salmon,B,NA,1
+JE165N1,Sockeye salmon,M,J,1
+JE168N1,Threespine stickleback,B,NA,1
+JE182N1,Tubesnout,B,NA,30
+JE182N1,Chum salmon,M,J,2
+JE186N1,Threespine stickleback,B,NA,1
+JE195N1,Chinook salmon,B,NA,1
+JE198N2,Chinook salmon,B,NA,1
+JE201N3,Chinook salmon,B,NA,1
+JE203N1,Chinook salmon,B,NA,3
+JE205N1,Chinook salmon,B,NA,2
+JE209N1,Chinook salmon,B,NA,1
+JE210N2,Chinook salmon,B,NA,1
+JE211N1,Tubesnout,B,NA,1
+JE225N1,Chinook salmon,B,NA,1
+JE231N1,Sockeye salmon,M,J,3
+JE233N1,Threespine stickleback,B,NA,1
+JE243N2,Threespine stickleback,B,NA,1
+JE245N2,Threespine stickleback,B,NA,1
+JE245N2,Chinook salmon,B,NA,1
+JE245N2,Sockeye salmon,M,J,1
+JE250N2,Sockeye salmon,M,J,3
+JE253N1,Pink salmon,M,J,3
+JE256N1,Pink salmon,M,J,1
+JE258N1,Chinook salmon,B,NA,1
+JE258N1,Sockeye salmon,M,J,1
+JE259N3,Sockeye salmon,M,J,2
+JE264N1,Chinook salmon,B,NA,1
+JE264N1,Chinook salmon,B,NA,1
+JE269N1,Chinook salmon,B,NA,1
+JE269N1,Chinook salmon,B,NA,1
+JE269N1,Pink salmon,M,J,1
+JE269N1,Pink salmon,M,J,1
+JE270N1,Pink salmon,M,J,1
+JE270N1,Pink salmon,M,J,1
+JE271N1,Chum salmon,M,J,1
+JE271N1,Chum salmon,M,J,1
+JE272N2,Sockeye salmon,M,J,3
+JE273N1,Sockeye salmon,M,J,1
+JE273N1,Sockeye salmon,M,J,1
+JE273N1,Chum salmon,M,J,2
+JE273N1,Chum salmon,M,J,2
+JE273N1,Pink salmon,M,J,2
+JE273N1,Pink salmon,M,J,2
+JE276N1,Chum salmon,M,J,1
+JE276N1,Pink salmon,M,J,1
+JE276N1,Chinook salmon,M,J,1
+JE283N1,Sockeye salmon,M,J,2
+JE283N1,Pink salmon,M,J,1
+JE285N1,Chinook salmon,B,NA,5
+JE285N1,Pink salmon,M,J,1
+JE286N1,Chum salmon,B,A,2
+JE288N1,Chinook salmon,B,NA,6
+JE288N1,Pacific herring,M,J,1
+JE290N2,Chinook salmon,B,NA,1
+JE290N2,Dolly Varden trout,B,NA,1
+JE290N2,Tubesnout,B,NA,200
+JE291N1,Chinook salmon,B,NA,2
+JE292N1,Threespine stickleback,B,NA,1
+JE292N1,Chum salmon,M,J,1
+JE292N1,Pink salmon,M,J,1
+JE293N2,Chinook salmon,B,NA,1
+JE298N1,Chinook salmon,B,NA,1
+JE300N1,Chinook salmon,B,NA,10
+JE306N2,Pacific herring,M,J,1
+JE306N1,Threespine stickleback,B,NA,1
+JE306N1,Chum salmon,M,J,2
+JE308N1,Sockeye salmon,M,J,1
+JE310N2,Chum salmon,M,J,6
+JE310N2,Sockeye salmon,M,J,1
+JE310N1,Cutthroat trout,B,NA,1
+JE310N1,Rockfish,B,J,144
+JE312N1,Tubesnout,B,NA,1
+JE313N1,Rockfish,B,J,1
+JE313N1,Perch,B,NA,2
+DE506N1,Threespine stickleback,B,NA,1
+JE412N1,Dolly Varden trout,B,J,1
+JE401N1,Rockfish,B,J,120
+JE402N1,Pacific herring,M,J,2
+DE531N1,Sockeye salmon,M,J,2
+DE531N1,Kelp greenling,B,J,4
+DE531N1,Lingcod,B,J,8
+DE513N2,Pink salmon,M,J,1
+DE519N1,Pink salmon,M,J,7
+DE514N1,Chum salmon,M,J,1
+JE414N1,Sockeye salmon,M,J,10
+DE522N1,Chum salmon,M,J,1
+DE522N1,Threespine stickleback,B,NA,1
+DE523N3,Pink salmon,M,J,3
+DE523N3,Chum salmon,M,J,2
+DE523N1,Pink salmon,M,J,1
+DE524N4,Threespine stickleback,B,A,1
+DE524N3,Chum salmon,M,J,1
+DE525N1,Chum salmon,M,J,11
+DE525N1,Chum salmon,M,J,11
+DE525N1,Chum salmon,M,J,11
+DE525N1,Chum salmon,M,J,11
+DE525N1,Pink salmon,M,J,6
+DE525N1,Pink salmon,M,J,6
+DE525N1,Pink salmon,M,J,6
+DE525N1,Pink salmon,M,J,6
+JE419N1,Chum salmon,M,J,1
+DE528N1,Threespine stickleback,B,A,1
+DE529N2,Threespine stickleback,B,A,1
+DE529N1,Threespine stickleback,B,A,1
+DE530N2,Threespine stickleback,B,A,2
+DE530N2,Pink salmon,M,J,2
+DE530N2,Chum salmon,M,J,1
+DE537N1,Black-and-yellow rockfish,B,J,3
+DE541N1,Threespine stickleback,B,A,1
+DE546N2,Threespine stickleback,B,J,1
