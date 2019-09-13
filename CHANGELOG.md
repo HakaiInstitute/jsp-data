@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [1.0.0]
 ### Added
+- New tables `sites` and `site_coordinates` that contain geographic metadata
 - 2018 fish dissections and sea-louse enumeration
 - Fish that previously did not have 'fork_length_lab' measurements now have a modeled value generated from 'standard_length_lab' measurements using lab data from 2015 to February 2019 (`juvenile-salmon` repository release 2019-02-21)
 - In `site_activity`, surveys with no observations (ie., no activity sighted) have a single record where 'school_number' == 0
@@ -26,6 +27,7 @@ UFNs for database consistency
 - In `fish_lab_data`, sealice_protocol_lab changed to NA for 2015/2016 fish dissected 2018-07 only for DNA collection
 
 ### Removed
+- Geographic site metadata from `survey_data` (migrated to new tables)
 - Removed the following records from `sealice_finescale` due to no results: U41, U148, U150, U1189, U1375, U1393, U1397, U1411 
 - 'preservation_status' no longer an attribute of `seine_data`, and is being migrated to `package_data` upon next release
 - In survey_data, ysi_cast_id, ctd_cast_id, secchi, and zoop_sample_id columns (must manually join oceanography data by date, site, etc)
