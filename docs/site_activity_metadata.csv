@@ -1,8 +1,0 @@
-"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
-"1","date","Date","date",NA,NA,NA,NA
-"2","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
-"3","school_number",NA,"integer",NA,NA,NA,NA
-"4","school_sliders",NA,"integer",NA,NA,NA,NA
-"5","school_poppers",NA,"integer",NA,NA,NA,NA
-"6","school_dimpling",NA,"integer",NA,NA,NA,NA
-"7","site_id","Site ID","text",NA,NA,NA,NA

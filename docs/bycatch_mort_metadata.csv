@@ -1,9 +1,0 @@
-"","database_column","display_column","type","unique_values","variable_units","variable_definition","variable_calculations"
-"1","jsp_survey_id","JSP Survey ID","text",NA,NA,"A unique survey ID assigned to every survey",NA
-"2","date","Date","date",NA,NA,NA,NA
-"3","seine_id","Seine ID","text",NA,NA,"Unique ID assigned to each seine conducted",NA
-"4","bm_species","Species","text",NA,NA,"First two letters of the first two words of the common name of the fish. Example TISC = Tide-pool Sculpin. Was either a part of seine bycatch, or died during holding in net",NA
-"5","bm_status","Status","text",NA,"bycatch or mort","whether the species was a bycatch or a mortality",NA
-"6","bm_ageclass","Age Class","text",NA,"Y, J, or A","Y = young-of-year, J = juvenile, A = adult",NA
-"7","bm_count","Count","smallint",NA,NA,"number of individuals of the species that was either bycatch or mortality",NA
-"8","bm_notes",NA,"text",NA,NA,NA,NA
