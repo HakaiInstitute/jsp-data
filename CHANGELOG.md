@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Fish that previously did not have 'fork_length_lab' measurements now have a modeled value generated from 'standard_length_lab' measurements using lab data from 2015 to February 2019 (`juvenile-salmon` repository release 2019-02-21)
 - In `site_activity`, surveys with no observations (ie., no activity sighted) have a single record where 'school_number' == 0
 - New column 'lice_id_protocol_field' to `fish_field_data`
+- New table `zoop_tax` for zooplankton taxonomy samples
+- Added additional metadata to `zoop_tows`: 'cast_num', 'tow_type', 'line_out', 'flow_flag', 'solo_id',	'solo_depth',	'tow_split', 'sample_collected', 'zoop_tow_comments'
+- Added 2018 zooplankton tow & sample metadata
+
 
 ### Changed
 - Species in `bycatch_mort` no longer use four-letter codes; instead, their common names are fully spelled out 
@@ -18,6 +22,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - In `survey_data`, renamed "ebb tide" to "ebb" for consistency
 - All fish with only SEMSP IDs (undissected specimens from 2015-16) have now been retroactively assigned
 UFNs for database consistency
+- 
 
 ### Fixed
 - In `survey_data`, blank cells for DFO surveys changed to NA (no data)
@@ -36,6 +41,7 @@ UFNs for database consistency
 - 1 chum from seine DE371N1 with no UFN or SEMSP ID (trainer fish)
 - 'dissection_status' from `fish_field_data` (can determine if a fish has been dissected by joining it with fish_lab_data to see if it has a 'date_processed' value
 - Removed from `sealice_lab_fs` any UFNs that do not exist in fish_lab_data (discarded due to qc) or do not have results (i.e., unprocessed samples)
+- Removed zooplankton sample IDs from `zoop_tows` and placed in new table with associated tow IDs
 
 
 ## [0.2.0] - 2018-10-15
