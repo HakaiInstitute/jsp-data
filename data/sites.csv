@@ -1,4 +1,4 @@
-site_id,site_name,region,zone,priority,notes
+site_id,site_name,region,zone,site_priority,site_notes
 D01,Hurtado Point,DI,E,NA,
 D02,Kinghorn Island,DI,E,NA,
 D03,Sutil Narrows,DI,E,NA,
