@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - New table `zoop_tax` for zooplankton taxonomy samples
 - Added additional metadata to `zoop_tows`: 'cast_num', 'tow_type', 'line_out', 'flow_flag', 'solo_id',	'solo_depth',	'tow_split', 'sample_collected', 'zoop_tow_comments'
 - Added 2018 zooplankton tow & sample metadata
+- Added 'ctd_drop' to `survey_data`
 
 
 ### Changed
@@ -42,6 +43,7 @@ UFNs for database consistency
 - 'dissection_status' from `fish_field_data` (can determine if a fish has been dissected by joining it with fish_lab_data to see if it has a 'date_processed' value
 - Removed from `sealice_lab_fs` any UFNs that do not exist in fish_lab_data (discarded due to qc) or do not have results (i.e., unprocessed samples)
 - Removed zooplankton sample IDs from `zoop_tows` and placed in new table with associated tow IDs
+- 'ctd_cast_id' no longer part of `survey_data`
 
 
 ## [0.2.0] - 2018-10-15
