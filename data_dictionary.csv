@@ -24,7 +24,8 @@ survey_data,survey_time_start,Survey Time - Start,timestamp with timezone,yyyy-m
 survey_data,survey_time_end,Survey Time - End,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of end of visual survey for site activity (only applies to surveys conducted from 2017 onwards).
 survey_data,net_sets,Number of Sets,integer,,,,"The number of times the seine was deployed in a survey, not counting botched sets"
 survey_data,secchi,Secchi Depth (m),numeric,n.n,,,Depth reading of the secchi disc
-survey_data,ctd_drop,CTD Drop Number,text,,,,"Sampling bout number for the CTD cast. Multiple casts within a survey are comma-delimited. Processed CTD files can be searched for in the portal using survey_date, site_id, and ctd_drop as filtering variables."
+survey_data,ctd_bout,CTD Drop Number,text,,,,"Sampling bout number for the CTD cast. Multiple casts within a survey are comma-delimited. Processed CTD files can be searched for in the portal using survey_date, site_id, and ctd_drop as filtering variables."
+survey_data,zoop_bout,Zooplankton Tow Number,text,,,,Sampling bout number for the zooplankton tow. Multiple tows within a survey are comma-delimited.
 survey_data,survey_type,Survey Type,text,,,,"Protocol under which the survey was conducted, used to differentiate surveys that were not done in accordance with the standard Hakai JSP sampling routine of that year."
 survey_data,survey_comments,Survey Comments,text,,,,
 site_activity,survey_id,Survey ID,text,,FK,survey_data,
