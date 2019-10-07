@@ -24,6 +24,7 @@ survey_data,survey_time_start,Survey Time - Start,timestamp with timezone,yyyy-m
 survey_data,survey_time_end,Survey Time - End,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of end of visual survey for site activity (only applies to surveys conducted from 2017 onwards).
 survey_data,net_sets,Number of Sets,integer,,,,"The number of times the seine was deployed in a survey, not counting botched sets"
 survey_data,secchi,Secchi Depth (m),numeric,n.n,,,Depth reading of the secchi disc
+survey_data,ysi_bout,YSI Event Number,text,,,,"Sampling bout number for the YSI collection. YSI data is always paired, sampled at surface (0 m) and 1 m depths. Multiple sampling events within a survey are comma-delimited."
 survey_data,ctd_bout,CTD Drop Number,text,,,,"Sampling bout number for the CTD cast. Multiple casts within a survey are comma-delimited. Processed CTD files can be searched for in the portal using survey_date, site_id, and ctd_drop as filtering variables."
 survey_data,zoop_bout,Zooplankton Tow Number,text,,,,Sampling bout number for the zooplankton tow. Multiple tows within a survey are comma-delimited.
 survey_data,survey_type,Survey Type,text,,,,"Protocol under which the survey was conducted, used to differentiate surveys that were not done in accordance with the standard Hakai JSP sampling routine of that year."
@@ -199,3 +200,46 @@ stock_id,analyzing_lab,Analyzing Lab,text,,,,
 stock_id,quality_level,,text,,,,
 stock_id,sample_comments,,text,,,,
 stock_id,quality_log,,text,,,,
+ysi,survey_date,Survey Date,text,yyyy-mm-dd,,,
+ysi,site_id,Site ID,text,,,,
+ysi,gather_lat,Gather Latitude (DD),decimal,nn.nnnnn,,,Instataneous location of the collection event
+ysi,gather_long,Gather Longitude (DD),decimal,nnn.nnnnn,,,Instataneous location of the collection event
+ysi,ysi_unit_sn,YSI Unit Serial Number,text,,,,
+ysi,sampling_bout,Sampling Bout,integer,,,,Sampling bout number for the collection event
+ysi,line_out_depth,Line Out Depth (m),integer,,,,Depth at which measurments were taken
+ysi,collected,Time Collected,timestamp with timezone,,,,Time at which measurements were taken
+ysi,temperature,Temperature (°C),numeric,n.n,,,
+ysi,salinity,Salinity (ppt),numeric,n.n,,,
+ysi,quality_level,,,,,,
+ysi,quality_log,,,,,,
+zoop_tax,sample_id,Sample ID,text,,,,Unique alphanumeric string used for tracking physical inventory of a sample
+zoop_tax,tow_id,Tow ID,text,,FK,zoop_tows,
+zoop_tax,preservation_method,Preservation Method,text,,,,The chemical medium in which the samples were preserved
+zoop_tax,analyzed_by,Analyzed By,text,,,,
+zoop_tax,sample_comments,,text,,,,
+zoop_tows,survey_date,Survey Date,date,yyyy-mm-dd,,,
+zoop_tows,site_id,Site ID,text,,,,
+zoop_tows,sampling_bout,Sampling Bout,integer,,,,Sampling bout number for the zooplankton tow.
+zoop_tows,tow_id,Tow ID,text,,PK,,"A concatenation of survey date, site ID, and sampling bout to create a unique string for samples collected to link to"
+zoop_tows,tow_type,Tow Type,text,,,,"Vertical, Surface, or Oblique"
+zoop_tows,line_out_depth,Line Out Depth (m),integer,n,,,"The targeted depth of the net. Surface tows should always be ""0"""
+zoop_tows,tow_lat,Latitude (DD),decimal,nn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
+zoop_tows,tow_long,Longitude (DD),decimal,nnn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
+zoop_tows,tow_start_time,Tow Start Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net enters the water
+zoop_tows,tow_bot_time,Tow Bottom Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net reaches target line out depth (NA for surface tows)
+zoop_tows,tow_end_time,Tow End Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net breaks the surface of the water during retrieval
+zoop_tows,tow_duration,Tow Duration,numeric,hh:mm:ss,,,"Total length of time net was submerged, calculated as the different between tow_end_time and tow_start_time"
+zoop_tows,flow_meter,Flowmeter ID,text,,,,Serial number of the flowmeter used
+zoop_tows,flowmeter_in,Flow Count In,integer,,,,Value of the flowmeter's counter wheel at the start of the tow
+zoop_tows,flowmeter_out,Flow Count Out,integer,,,,Value of the flowmeter's counter wheel at the end of the tow
+zoop_tows,flow_flag,,,,,,
+zoop_tows,revolutions,Number of Revolutions,integer,,,,Difference between flowmeter_out and flowmeter_in counts
+zoop_tows,corrected_volume,Corrected Volume (L),numeric,,,,"Total volume of water sampled, corrected for calibration drift over the course of the sampling season"
+zoop_tows,modelled_volume,Modelled Volume (L),numeric,,,,"Modeled volume of water sampled, when the flowmeter was not reading correctly and therefore counts could not be used to calculate volume normally (contact Brett Johnson for model equations)"
+zoop_tows,solo_id,RBR Solo ID,text,,,,"Hakai-assigned ID of the RBR solo depth logger, if one was attached to the ring of the net"
+zoop_tows,solo_depth,RBR Solo Depth,numeric,,,,Maximum depth recorded by the RBR solo
+zoop_tows,tow_split,Split Tow?,text,,,,"""Yes"" = tow collection was split into multiple samples. ""No"" = entire contents of the tow was used for a single sample"
+zoop_tows,sample_collected,Sample(s) Collected,text,,,,"""TAX"" = sample collected for taxonomic analysis. ""BIO"" = sample collected for energy density/forage quality analysis (""biomass"")"
+zoop_tows,zoop_tow_comments,,,,,,
+zoop_tows,quality_level,,,,,,
+zoop_tows,quality_log,,,,,,
