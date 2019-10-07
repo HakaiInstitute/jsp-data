@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Added additional metadata to `zoop_tows`: 'cast_num', 'tow_type', 'line_out', 'flow_flag', 'solo_id',	'solo_depth',	'tow_split', 'sample_collected', 'zoop_tow_comments'
 - Added 2018 zooplankton tow & sample metadata
 - Added 'ctd_drop' to `survey_data`
+- Added more sampling metadata to `ysi`, updated all records from the EIMS data portal
 
 
 ### Changed
