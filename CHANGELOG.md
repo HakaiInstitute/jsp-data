@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [1.0.0]
 ### Added
+- 2019 field collection data
 - New tables `sites` and `site_coordinates` that contain geographic metadata
 - 2018 fish dissections and sea-louse enumeration
 - Fish that previously did not have 'fork_length_lab' measurements now have a modeled value generated from 'standard_length_lab' measurements using lab data from 2015 to February 2019 (`juvenile-salmon` repository release 2019-02-21)
