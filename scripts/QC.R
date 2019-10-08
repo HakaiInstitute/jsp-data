@@ -1,21 +1,32 @@
-# Data QC scripts
+library(googlesheets)
+library(tidyverse)
+library(here)
+library(hakaiApi)
 
-# Use this script to QC all data tables and write unit tests to check for errors.
-# Any errors found should be corrected, tracked in the CHANGELOG,
-# and the data re-uploaded to the portal, re-downloaded from the portal and
-# run through QC scripts again
+survey_data <- read_csv(here("data", "survey_data.csv"), col_types = cols(zoop_bout = col_character()))
+seine_data <- read_csv(here("data", "seine_data.csv"))
+bycatch_mort <- read_csv(here("data", "bycatch_mort.csv"))
+ysi <- read_csv(here("data", "ysi.csv"))
+zoop_tows <- read_csv(here("data", "zoop_tows.csv"))
+zoop_tax <- read_csv(here("data", "zoop_tax.csv"))
+fish <- read_csv(here("data", "fish_field_data.csv"), guess_max = 10000)
+sealice <- read_csv(here("data", "sealice_field.csv"))
 
 
-# Notes
+field_2019 <- gs_key("1cHgZszv--FlV207cwSpe9hFJipb7HhS4IW9vVrUNg8M", visibility = "private", lookup = FALSE)
+survey_2019 <- gs_read(field_2019, ws = "survey_data")
 
-# For sealice_field, check that cal_mot = cm_field + cpaf_field + caf_field
-# Do fish that have a lice_id_protocol != NA have a value in lice?
-#   Conversely, check that for each fish with field_licing_protocol, they have data in the corresponding table
-# It seems inconsistent that licing_protocol_field is part of the lice dataset, but the lice_id_protocol and lice_collection_protocol is part of the fish dataset
-#   Perhaps move licing_protocol_field to `fish`, and all fish that did not get field-loused have NA/null?
-#   And then in the lice dataset (that gets distributed), can join lice_id_protocol
+ctd <- survey_2019 %>% 
+  drop_na(ctd_drop) %>% 
+  mutate(hakai_id = paste(site_id, survey_date, ctd_drop, sep="_")) %>% 
+  select(survey_id, survey_date, site_id, hakai_id)
 
-# QC flag columns for samples?
+client <- hakaiApi::Client$new()
+endpoint = sprintf("%s/%s", client$api_root, 'eims/views/output/ctd_drops?date>=2019-01-01&date<2019-09-01&survey&&{"DISOCKEYE","JSSOCKEYE"}&limit=-1')
+data <- client$get(endpoint)
 
-# Surveys - jsp_survey_id should be unique
-# Seines - lat & long are swapped
+ctd_data <- full_join(ctd,data, by = "hakai_id")
+
+ctd_data_err <- ctd_data %>% 
+  filter(is.na(pk) | is.na(survey_id) & miscast != "TRUE")
+
