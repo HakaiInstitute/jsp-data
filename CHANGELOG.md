@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
-## [1.0.0]
+## [1.0.0] - 2019-10-08
 ### Added
 - 2019 field collection data
 - New tables `sites` and `site_coordinates` that contain geographic metadata
