@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.0.1] - 2019-10-21
+### Changed
+- Fish U20371 species changed from "CU" to "SO"
+- Updated catch statistics for seine DE612N1 to reflect change to U20371 species ID
+
+
 ## [1.0.0] - 2019-10-08
 ### Added
 - 2019 field collection data
