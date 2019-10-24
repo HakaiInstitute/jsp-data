@@ -3,6 +3,20 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+
+## [1.0.2] - 2019-10-24
+### Fixed
+- Fish U20181 species changed from "CO" to "CK"
+- Updated catch statistics for seine DE617N1 to reflect change to U20181 species ID
+
+### Added
+- Chum retained for GM that wasn't originally entered into `fish_field_data` (U22681, JE524N2)
+
+### Changed
+- Updated 'cu_retained' for JE524N2 to reflect GM CU added
+- U20841 & U20844 given new package ID because they were pink that were originally packaged with chum
+
+
 ## [1.0.1] - 2019-10-21
 ### Fixed
 - Fish U20371 species changed from "CU" to "SO"
@@ -23,7 +37,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Added 'ctd_drop' to `survey_data`
 - Added more sampling metadata to `ysi`, updated all records from the EIMS data portal
 
-
 ### Changed
 - Species in `bycatch_mort` no longer use four-letter codes; instead, their common names are fully spelled out 
 - In `sites`, site "J09" renamed to "Bauza Cove"
@@ -31,7 +44,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - In `survey_data`, renamed "ebb tide" to "ebb" for consistency
 - All fish with only SEMSP IDs (undissected specimens from 2015-16) have now been retroactively assigned
 UFNs for database consistency
-- 
 
 ### Fixed
 - In `survey_data`, blank cells for DFO surveys changed to NA (no data)
