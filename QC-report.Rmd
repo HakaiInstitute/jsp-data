@@ -28,6 +28,9 @@ survey_seines_fish <- right_join(survey_seines, fish_data)
 
 # Summary
 
+Would be good to have some useful summary statistics about the data package here.
+
+
 ```{r}
 n_fish_captured <- nrow(survey_seines_fish)
 n_fish_dissected <- nrow(survey_seines_fish %>% drop_na(date_processed))
@@ -36,6 +39,9 @@ n_na_seine_id <- n_fish_captured - nrow(survey_seines_fish %>% drop_na(seine_id)
 # count number of NAs for every column and provide as a percent
 n_nas <- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_captured * 100)
 n_nas_map <- map(survey_seines_fish, ~sum(is.na(.)) / n_fish_captured * 100)
+
+#TODO: Plot or table of species catch broken out by species (pie or stacked barplot)
+#TODO: Calculate condition of fish to find outliers in length and weight
 ```
 
 We've captured `r n_fish_captured` fish and dissected `r n_fish_dissected`
@@ -51,6 +57,14 @@ knitr::kable(summary_quality_level, caption = "Table 1. The number of fish in va
 
 knitr::kable(survey_seines_fish %>% count(quality_flag), caption = "Table 2. The number of fish with quality flags")
 
+quality_comments <- survey_seines_fish %>% 
+   count(quality_log) %>% 
+   mutate(quality_log_group = word(quality_log, 1, 4)) %>% 
+   group_by(quality_log_group) %>% 
+   count() %>% 
+   filter(n> 1) 
+   
+knitr::kable(quality_comments, caption = "Table 3. Fish quality log comments grouped by the first four words and counted")
 ```
 
 # Relational Joins
