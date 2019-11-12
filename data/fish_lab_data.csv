@@ -1,4 +1,4 @@
-ufn,date_processed,cwt,adipose,weight,standard_length,fork_length,comments_protocol,comments_fish_health_lab,dissector,dissection_protocol,lice_collection_protocol,lice_id_protocol_lab,quality_level,quality_flag,quality_log
+ufn,date_processed,cwt,adipose,weight,standard_length,fork_length,comments_protocol,comments_fish_health_lab,dissector,dissection_protocol,lice_collection_protocol,lice_id_protocol_lab,quality_level,fish_lab_qc_flag,fish_lab_qc_log
 U01,2015-09-10,None,Present,NA,NA,118,From thawed JS fish. One otolith collected,NA,CK,no_cold_samples,lab_fine_2015,NA,Technicianmr,NA,NA
 U02,2015-09-10,None,Present,22.2,NA,128,From thawed JS fish,Small spleen,CK,no_cold_samples,lab_fine_2015,NA,Technicianmr,NA,NA
 U11,2015-09-10,None,Present,NA,NA,132,From thawed JS fish,NA,KI,no_cold_samples,lab_fine_2015,NA,Technicianmr,NA,NA
