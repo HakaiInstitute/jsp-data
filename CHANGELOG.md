@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 
+## [1.0.3]
+### Changed
+- Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
+
+
 ## [1.0.2] - 2019-10-24
 ### Fixed
 - Fish U20181 species changed from "CO" to "CK"

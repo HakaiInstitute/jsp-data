@@ -1,4 +1,4 @@
-seine_id,survey_id,set_number,set_type,lat,long,set_time,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,collection_protocol,seine_comments,qc_log
+seine_id,survey_id,set_number,set_type,lat,long,set_time,time_searching,set_sliders,set_poppers,set_dimpling,fish_retained,so_taken,so_total,pi_taken,pi_total,cu_taken,cu_total,co_taken,co_total,he_taken,he_total,ck_taken,ck_total,collection_protocol,seine_comments,seine_qc_log
 DE100N2,DE100,2,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate,
 DE100N1,DE100,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate,
 DE100N3,DE100,3,targeted,49.9613,-124.747,2015-05-12 11:40:00 PDT,40,NA,NA,NA,yes,30,NA,0,0,10,NA,1,NA,2,NA,NA,NA,SEMSP,NA,

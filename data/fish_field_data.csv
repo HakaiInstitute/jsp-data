@@ -1,4 +1,4 @@
-ufn,semsp_id,seine_id,species,package_id,fish_time_out,fish_time_dewar,fork_length_field,height_field,weight_field,lice_id_protocol_field,analysis_planned,fish_field_comments,qc_log
+ufn,semsp_id,seine_id,species,package_id,fish_time_out,fish_time_dewar,fork_length_field,height_field,weight_field,lice_id_protocol_field,analysis_planned,fish_field_comments,fish_field_qc_log
 U01,2015-05-20-J05-CU-6,JE101N1,CU,NA,NA,NA,NA,NA,NA,NA,SEMSP,,
 U02,2015-05-20-J05-CU-1,JE101N1,CU,NA,NA,NA,NA,NA,NA,NA,SEMSP,,
 U11,2015-05-20-J05-CU-10,JE101N1,CU,NA,NA,NA,NA,NA,NA,NA,SEMSP,,
