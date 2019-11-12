@@ -1,0 +1,146 @@
+---
+title: "Hakai Institute Juvenile Salmon Data Package Quality Report"
+author: "Brett Johnson"
+date: '`r date()`'
+output:
+ html_document:
+   theme: cosmo
+   code_folding: hide
+   toc: true
+   toc_float: true
+   number_sections: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
+library(tidyverse)
+library(lubridate)
+library(here)
+
+survey_data <- read_csv(here("data", "survey_data.csv"))
+seine_data <- read_csv(here("data", "seine_data.csv"))
+survey_seines <- left_join(seine_data, survey_data, by = "survey_id")
+
+fish_data <- left_join(read_csv(here("data","fish_field_data.csv"), guess_max = 20000), read_csv(here("data", "fish_lab_data.csv"), guess_max = 20000))
+
+survey_seines_fish <- right_join(survey_seines, fish_data) 
+```
+
+# Summary
+
+```{r}
+n_fish_captured <- nrow(survey_seines_fish)
+n_fish_dissected <- nrow(survey_seines_fish %>% drop_na(date_processed))
+n_na_seine_id <- n_fish_captured - nrow(survey_seines_fish %>% drop_na(seine_id))
+
+# count number of NAs for every column and provide as a percent
+n_nas <- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_captured * 100)
+n_nas_map <- map(survey_seines_fish, ~sum(is.na(.)) / n_fish_captured * 100)
+```
+
+We've captured `r n_fish_captured` fish and dissected `r n_fish_dissected`
+
+# Data Quality
+
+```{r}
+
+summary_quality_level <- survey_seines_fish %>% 
+   count(quality_level)
+
+knitr::kable(summary_quality_level, caption = "Table 1. The number of fish in various categories of quality level")
+
+knitr::kable(survey_seines_fish %>% count(quality_flag), caption = "Table 2. The number of fish with quality flags")
+
+```
+
+# Relational Joins
+
+Do all seines have a survey to match to?
+
+```{r}
+#antijoin should yield zero
+seines_match_surveys <-nrow(anti_join(seine_data, survey_data))
+
+ifelse(seines_match_surveys == 0, "yes, seines match surveys", "error: no, some seines don't have matching surveys")
+```
+
+Do all lab fish have a matching field fish?
+
+```{r}
+fish_field_data <- read_csv(here("data", "fish_field_data.csv"), guess_max = 20000)
+fish_lab_data <- read_csv(here("data", "fish_lab_data.csv"), guess_max = 20000)
+
+lab_match_field <- nrow(anti_join(fish_lab_data, fish_field_data))
+
+ifelse(lab_match_field == 0, "yes, all lab fish have a matching field fish", "error: no, some lab fish do not have a mathing field fish")
+```
+
+Do all fish have a matching seine?
+
+```{r}
+fish_data <- left_join(fish_field_data, fish_lab_data, by = "ufn")
+
+n_umatched_fish <- nrow(anti_join(fish_data, seine_data, by = 'seine_id'))
+
+ifelse(lab_match_field == 0, "yes, all fish have a matching seine they came from", "error: no, not all fish have a seine associated with it")
+```
+
+Do all sealice field samples match to a fish?
+
+```{r}
+sealice_field <- read_csv(here("data", "sealice_field.csv"))
+
+n_missed_field_lice <- nrow(anti_join(sealice_field, fish_data))
+
+ifelse(n_missed_field_lice == 0, "yes, all sealice counts belong to a fish we collected", "error: some sealice counts don't match to a fish in our database")
+```
+
+Do all finescale sealiced fish have a match in our fish data table?
+
+```{r}
+sealice_lab_fs <- read_csv(here("data", "sealice_lab_fs.csv"))
+
+fine_loused_matched_fish <- nrow(anti_join(sealice_lab_fs, fish_data, by = "ufn"))
+
+ifelse(fine_loused_matched_fish == 0, "yes", "error: no")
+```
+
+Do all lab mot sealice results have a match to a fish our fish data table?
+
+```{r}
+sealice_lab_mot <- read_csv(here("data", "sealice_lab_mot.csv"))
+
+n_unmatched_lab_mot <- nrow(anti_join(sealice_lab_mot, fish_data, by = "ufn"))
+
+ifelse(n_unmatched_lab_mot == 0, "yes", "error: no")
+```
+
+# Locations
+
+Visually check to see if any lat and longs are on land and then hover over the site to identify the problematic seine_id.
+
+```{r}
+library(leaflet)
+library(ggridges)
+library(leaflet.esri)
+map_data <- survey_seines %>% select(lat, lon = long, site = seine_id) %>% 
+   mutate(type = "seine") %>% 
+   group_by(site) %>% 
+   drop_na(lat) %>% 
+      ungroup()
+ 
+pal <- colorFactor(c("navy", "red"), domain = c("seine", "ocgy"))
+    
+    leaflet() %>% 
+      setView(lng = -125.7, lat = 50.4, zoom = 7) %>% 
+      addCircleMarkers(data = map_data, color = ~pal(type),
+                       stroke = FALSE, fillOpacity = 0.2,
+                    label = ~as.character(site),
+                       labelOptions = labelOptions(noHide = F, direction = "bottom")
+      ) %>%
+      addProviderTiles(providers$Esri.OceanBasemap,  options = providerTileOptions(opacity = 1)) %>%
+      addEsriTiledMapLayer(url = "https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer") %>%  
+      addProviderTiles(providers$CartoDB.VoyagerOnlyLabels) %>% 
+      addMiniMap()
+```
+
