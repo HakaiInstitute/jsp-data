@@ -22,11 +22,16 @@ seine_data <- read_csv(here("data", "seine_data.csv"))
 survey_seines <- left_join(seine_data, survey_data, by = "survey_id")
 
 fish_data <- left_join(read_csv(here("data","fish_field_data.csv"), guess_max = 20000), read_csv(here("data", "fish_lab_data.csv"), guess_max = 20000))
-
 survey_seines_fish <- right_join(survey_seines, fish_data) 
+
+#TODO: improve the outputs of QC checks to be in tables or plots and out of inline text sentences.
 ```
 
+
 # Summary
+
+Would be good to have some useful summary statistics about the data package here.
+
 
 ```{r}
 n_fish_captured <- nrow(survey_seines_fish)
@@ -36,22 +41,61 @@ n_na_seine_id <- n_fish_captured - nrow(survey_seines_fish %>% drop_na(seine_id)
 # count number of NAs for every column and provide as a percent
 n_nas <- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_captured * 100)
 n_nas_map <- map(survey_seines_fish, ~sum(is.na(.)) / n_fish_captured * 100)
+# It might be useful to consider which columns should have zero NAs and select those out to have fewer variables to read. Which ones should be 100% filled in? ufn, semsp_id, survey_id, seine_id....
+
+#TODO: Plot or table of species catch broken out by species (pie or stacked barplot)
+#TODO: Calculate condition of fish to find outliers in length and weight
 ```
 
 We've captured `r n_fish_captured` fish and dissected `r n_fish_dissected`
 
 # Data Quality
 
+
+## survey_seines joined
+
 ```{r}
+survey_seines <- right_join(survey_data, seine_data, by = "survey_id")
+
+std_survey_seines_w_catch <- survey_seines %>%
+   filter(fish_retained == "yes",
+          survey_type == "standard",
+          collection_protocol == "SEMSP")
+
+no_lat <- std_survey_seines_w_catch %>% filter(is.na(lat)) %>% 
+   select(survey_id, seine_id, survey_type, collection_protocol, fish_retained, lat, long)
+
+knitr::kable(no_lat, caption = "Table. Seines with no associated location information")
+```
+
+
+
+
+```{r}
+
+n_fish_no_latlon <- sum(is.na(survey_seines_fish$lat))
 
 summary_quality_level <- survey_seines_fish %>% 
    count(quality_level)
 
+no_fish_loc <- survey_seines_fish %>% filter(
+                                     is.na(survey_seines_fish$lat))
+no_loc_df <-
 knitr::kable(summary_quality_level, caption = "Table 1. The number of fish in various categories of quality level")
 
 knitr::kable(survey_seines_fish %>% count(quality_flag), caption = "Table 2. The number of fish with quality flags")
 
+quality_comments <- survey_seines_fish %>% 
+   count(quality_log) %>% 
+   mutate(quality_log_group = word(quality_log, 1, 4)) %>% 
+   group_by(quality_log_group) %>% 
+   count() %>% 
+   filter(n> 1) 
+   
+knitr::kable(quality_comments, caption = "Table 3. Fish quality log comments grouped by the first four words and counted by that group")
 ```
+
+`r nrow(no_fish_loc)` fish have no location information associated with them.
 
 # Relational Joins
 
