@@ -146,7 +146,7 @@ DE288N1,DE288,1,targeted,50.243773,-125.397476,2016-05-27 07:00:00 PDT,9,NA,NA,N
 DE290N2,DE290,2,targeted,50.304166,-125.333511,2016-05-27 12:32:00 PDT,5,NA,NA,NA,yes,30,200,9,9,10,13,0,0,4,4,NA,NA,SEMSP,NA,
 DE290N1,DE290,1,targeted,50.304166,-125.333511,2016-05-27 11:30:00 PDT,5,NA,NA,NA,no,0,0,0,0,0,0,0,0,0,0,NA,NA,SEMSP,"Caught net on bottom, abandoned set to free net.",
 DE292N1,DE292,1,targeted,50.308769,-125.326765,2016-06-01 07:47:00 PDT,0,NA,NA,NA,yes,30,200,3,3,10,60,0,0,0,0,NA,NA,SEMSP,NA,
-DE293N1,DE293,1,targeted,50.274425,-125.379303,2016-06-01 10:50:00 PDT,0,NA,NA,NA,yes,30,1000,10,100,10,100,1,2,10,13,NA,NA,SEMSP,NA,
+DE293N1,DE293,1,targeted,50.274425,-125.379303,2016-06-01 10:50:00 PDT,0,NA,NA,NA,yes,30,1000,10,100,10,100,1,2,10,13,NA,NA,SEMSP,NA,Replaced lat/long with zoop tow coordinates because original lat/long referred to a land position (2019-11-13 JG)
 DE294N1,DE294,1,targeted,50.24565,-125.396035,2016-06-01 14:35:00 PDT,2,NA,NA,NA,yes,30,50,10,100,10,10,0,0,0,0,NA,NA,SEMSP,First dayaltering search time method. First day with altered set/site-wide surface activity,
 DE295N1,DE295,1,targeted,50.347739,-125.45463,2016-06-02 07:17:00 PDT,7,NA,NA,NA,yes,30,400,4,4,10,100,0,0,3,3,NA,NA,SEMSP,Boat/Net pushed around in current while maneuvering boat into ssafe position. Significant scale loss. Fish may not be suitable for sea lice enumeration.,
 DE296N1,DE296,1,targeted,50.386065,-125.376067,2016-06-02 10:38:00 PDT,5,NA,NA,NA,yes,30,200,6,6,10,200,0,0,0,0,NA,NA,SEMSP,NA,
@@ -396,7 +396,7 @@ JE219N1,JE219,1,targeted,NA,NA,2015-07-02 07:30:00 PDT,40,NA,NA,NA,no,0,0,0,300,
 JE220N1,JE220,1,targeted,NA,NA,2015-07-02 09:18:00 PDT,20,NA,NA,NA,no,0,0,0,100,0,100,0,5,0,20,0,10,SEMSP,"SO = 0, CU = 100, HE = 20, CO = 5, PI = 100, chinook = 10",
 JE221N1,JE221,1,targeted,NA,NA,2015-07-07 05:54:00 PDT,4,NA,NA,NA,no,0,0,0,0,0,40,0,10,0,0,0,2,SEMSP,"SO = 0, CU = 40, HE = 0, CO = 10, PI = 0, chinook = 2",
 JE224N1,JE224,1,targeted,NA,NA,2015-07-07 09:10:00 PDT,20,NA,NA,NA,no,0,0,0,10,0,300,0,5,0,1,0,0,SEMSP,"SO = 0, CU = 300, HE = 1, CO = 5, PI = 10",
-JE225N1,JE225,1,targeted,NA,NA,2015-07-07 10:30:00 PDT,30,NA,NA,NA,yes,30,30,10,300,NA,10,1,1,0,0,NA,NA,SEMSP,"28 or 29 of sockeye were very small, likely from Nimpkish or other local watershed",
+JE225N1,JE225,1,targeted,50.5412,-126.77998,2015-07-07 10:30:00 PDT,30,NA,NA,NA,yes,30,30,10,300,NA,10,1,1,0,0,NA,NA,SEMSP,"28 or 29 of sockeye were very small, likely from Nimpkish or other local watershed",Added missing lat/long (2019-11-03 JG)
 JE227N1,JE227,1,targeted,NA,NA,2015-07-10 07:35:00 PDT,35,NA,NA,NA,no,0,0,0,100,0,100,0,0,0,0,0,0,SEMSP,"SO = 0, CU = 100, HE = 0, CO = 0, PI = 100",
 JE228N1,JE228,1,targeted,NA,NA,2015-07-10 08:40:00 PDT,40,NA,NA,NA,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,"net set on possible smolt school, fish not caught or seen again. Otherwise no smolt activity.",
 JE229N1,JE229,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate,

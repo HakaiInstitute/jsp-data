@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Fixed
 - U20251 species ID corrected from CO to CK
 - Updated seine DE607N1 to reflect change in species ID
+- Used zooplankton tow coordinates for seine DE293N1 due to transcribed seine coordinates being on land
 
 ### Changed
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
