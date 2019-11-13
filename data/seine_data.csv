@@ -195,63 +195,63 @@ DE357N1,DE357,1,targeted,50.240733,-125.12055,2016-07-05 08:30:00 PDT,7,NA,NA,NA
 DE360N1,DE360,1,targeted,50.275178,-125.378066,2016-07-06 06:40:00 PDT,8,NA,NA,NA,yes,24,24,10,200,10,40,0,0,0,0,NA,NA,SEMSP,NA,
 DE361N2,DE361,2,targeted,50.307066,-125.322977,2016-07-06 10:15:00 PDT,NA,NA,NA,NA,yes,8,8,10,100,10,100,1,1,0,0,NA,NA,SEMSP,"DFO set: @ 09:55. Luke thinks they fd (net twist) But SJ and BJ think different. LR probably correct because we heard swearing from DFO boat during their net retrieval. Our catch enumerated: 195 fish. DFO caught chum, coho, no sox. DFO earlier in the day caight ~ 300 fish mostly pink + chum with chinook at Deep Water Bay.",
 DE361N1,DE361,1,targeted,50.304502,-125.336639,2016-07-06 09:45:00 PDT,3,NA,NA,NA,no,0,1,0,40,0,20,0,0,0,0,NA,NA,SEMSP,re set because there was lots of surface activity elsewhere,
-DE364N1,DE364,1,targeted,50.18049002,-125.330849,2017-05-23 11:12:00 PDT,NA,0,0,10,yes,0,0,4,25,4,15,0,0,0,0,0,0,SEMSP,"1 unknown mort. Non-formal visual survey conducted. Performed a trial run of collection procedure, in which the one set was both for retention and sea licing. Fish were anaesthetized (for sea licing), placed into recovery, and then euthanized for retention. Due to time restraints, we werent able to collect complete packages of 10 fish per species.. Seine ID formerly DN1",
-DE365N1,DE365,1,targeted,50.309067,-125.3257,2017-05-25 08:50:00 PDT,NA,1,0,10,yes,30,30,2,2,10,50,4,4,0,0,0,0,SEMSP,9th chum & water poured out of whirl pack by accident. Seine ID formerly DN3,
-DE366N1,DE366,1,targeted,50.17999062,-125.0189455,2017-05-26 10:47:00 PDT,NA,1,0,10,yes,30,168,0,0,0,0,5,5,1,1,0,0,SEMSP,Informal site survery; did not have time for a lousing seine. First coho out at 11:26; in dewar at unknown time (in quickly though). Coho # 2 onwards out at 12:36. Seine ID formerly DN5,
-DE367N1,DE367,1,targeted,50.309278,-125.320699,2017-05-29 11:43:00 PDT,NA,1,0,10,yes,8,8,1,1,10,105,0,0,1,1,0,0,SEMSP,Seine ID formerly DN7,
-DE368N1,DE368,1,targeted,50.301803,-125.03049,2017-05-31 12:00:00 PDT,NA,0,0,0,yes,0,0,3,3,10,56,4,4,0,0,1,1,SEMSP,Set targeted based on visual sighting of fish (not surface activity). No time left (or container) for zoop sample. Seine ID formerly DN9,
-DE436N1,DE436,1,NA,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,"One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.. Seine ID formerly DN123",
-DE369N1,DE369,1,targeted,50.305482,-125.024803,2017-06-01 10:10:00 PDT,NA,1,0,0,yes,11,11,0,0,10,100,0,0,1,1,0,0,SEMSP,Seine ID formerly DN11,
-DE370N1,DE370,1,targeted,50.274875,-125.376937,2017-06-05 11:15:00 PDT,NA,1,0,1,yes,30,420,10,20,10,50,0,0,3,3,0,0,SEMSP,Time out of water for PI estimated.. Seine ID formerly DN13,
-DE371N2,DE371,2,targeted,50.306252,-125.336051,2017-06-07 11:00:00 PDT,NA,1,0,0,no,0,105,0,0,0,70,0,0,0,0,0,0,SEMSP,Seine ID formerly DN16,
-DE371N1,DE371,1,targeted,50.307761,-125.325384,2017-06-07 08:00:00 PDT,NA,1,0,10,yes,30,380,5,5,11,160,0,0,3,3,0,0,SEMSP,Hinch set @ 06:30; 100 SO retained by Hinch crew. 1 unhealthy SO released. 1 trainer CU taken.. Seine ID formerly DN15,
-DE372N2,DE372,2,targeted,50.307811,-125.329505,2017-06-12 12:40:00 PDT,NA,1,0,0,no,0,30,0,0,0,270,0,0,0,0,0,0,SEMSP,Seine ID formerly DN18,
-DE372N1,DE372,1,targeted,50.3041,-125.33841,2017-06-12 10:05:00 PDT,NA,1,0,0,yes,30,85,0,0,10,128,0,0,1,1,0,0,SEMSP,1 chum trainer sample. Seine ID formerly DN17,
-DE376N2,DE376,2,targeted,50.274783,-125.377569,2017-06-13 12:25:00 PDT,NA,1,0,0,no,0,21,0,0,0,384,0,0,0,0,0,0,SEMSP,U14004 adipose. Seine ID formerly DN26,
-DE376N1,DE376,1,targeted,50.274596,-125.377527,2017-06-13 09:10:00 PDT,NA,1,0,1,yes,30,130,0,0,10,505,0,0,3,3,2,2,SEMSP,U14004 adipose. Seine ID formerly DN25,
-DE454AN5,DE454A,5,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN65,
-DE454AN4,DE454A,4,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN64,
-DE454AN3,DE454A,3,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN63,
-DE454AN2,DE454A,2,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN62,
-DE454AN1,DE454A,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN61,
-DE454BN8,DE454B,8,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN71,
-DE454BN7,DE454B,7,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN70,
-DE454BN6,DE454B,6,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN69,
-DE377N1,DE377,1,targeted,50.236254,-125.398402,2017-06-19 08:20:00 PDT,NA,1,0,0,yes,30,40,0,0,12,320,0,0,0,0,0,0,SEMSP,"U11070 touched deck. 2 CU from DN27 retained for Gideon Mordecai (Freezer 3, Shelf 2). Set twice at D09 to collect fish for Tianyi Chen, Sam James, & Hinch lab. First set at 11:15, retained 1 CU for TC (released 100 CU, 1 unhealthy SO). Second set at 12:15, retained 1 CU for GM & 18 CU for TC (released 150 CU). . Seine ID formerly DN27",
-DE382N1,DE382,1,targeted,NA,NA,2017-06-19 12:15:00 PDT,NA,NA,NA,NA,yes,0,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. Seine ID formerly DN37,
-DE378N1,DE378,1,targeted,50.304561,-125.337253,2017-06-20 07:20:00 PDT,NA,1,1,0,yes,10,10,0,0,10,240,0,0,0,0,0,0,SEMSP,Seine ID formerly DN29,
-DE383N1,DE383,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,2,NA,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. Seine ID formerly DN39,
-DE373N2,DE373,2,targeted,50.297362,-125.339472,2017-06-26 11:52:00 PDT,NA,1,0,0,yes,8,14,0,0,0,120,0,0,0,0,0,0,SEMSP,Seine ID formerly DN20,
-DE373N1,DE373,1,targeted,50.29725,-125.338485,2017-06-26 09:15:00 PDT,NA,1,0,0,yes,23,23,2,3,10,285,0,0,2,2,0,0,SEMSP,"U10762 - some water dumped out of bag. 1 trainer PI retained. 1 SO retained for GM (M7, MP4). Seine ID formerly DN19",
-DE384N1,DE384,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,1,NA,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. Seine ID formerly DN41,
-DE374N1,DE374,1,targeted,50.434701,-125.26607,2017-06-28 07:30:00 PDT,NA,1,10,0,yes,10,10,0,0,10,535,0,0,1,1,0,0,SEMSP,Seine ID formerly DN21,
-DE457N3,DE457,3,targeted,50.297141,-125.340397,2017-06-29 06:25:00 PDT,NA,NA,NA,NA,yes,2,2,7,7,0,118,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN97C,
-DE457N2,DE457,2,targeted,50.297141,-125.340397,2017-06-29 05:30:00 PDT,NA,NA,NA,NA,yes,3,3,0,0,0,200,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN97B,
-DE457N1,DE457,1,targeted,50.297141,-125.340397,2017-06-29 04:50:00 PDT,NA,1,0,10,yes,2,2,0,10,10,218,0,0,0,1,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN97A,
-DE458N1,DE458,1,targeted,50.30969,-125.321237,2017-06-29 07:30:00 PDT,NA,10,0,10,yes,10,35,10,10,10,875,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN98,
-DE459N2,DE459,2,targeted,50.30955,-125.306633,2017-06-29 11:40:00 PDT,NA,NA,NA,NA,yes,8,8,0,0,0,149,0,0,0,1,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN99B,
-DE459N1,DE459,1,targeted,50.30955,-125.306633,2017-06-29 10:55:00 PDT,NA,1,0,10,yes,2,2,2,2,10,83,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN99A,
-DE460N1,DE460,1,targeted,50.29885,-125.337833,2017-06-29 13:50:00 PDT,NA,1,0,1,yes,10,10,1,1,10,226,0,0,0,2,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN100,
-DE461N1,DE461,1,targeted,50.306507,-125.330603,2017-06-30 13:30:00 PDT,NA,1,0,1,yes,9,9,5,5,10,480,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN101,
-DE462N2,DE462,2,targeted,50.308201,-125.327355,2017-06-30 17:15:00 PDT,NA,NA,NA,NA,yes,4,9,0,0,0,545,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN102B,
-DE462N1,DE462,1,targeted,50.308201,-125.327355,2017-06-30 16:30:00 PDT,NA,1,0,1,yes,6,6,3,3,10,664,0,0,0,5,0,1,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN102A,
-DE463N3,DE463,3,targeted,50.299822,-125.3415,2017-06-30 20:52:00 PDT,NA,NA,NA,NA,yes,3,3,5,15,0,842,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN103C,
-DE463N2,DE463,2,targeted,50.308112,-125.326899,2017-06-30 20:25:00 PDT,NA,NA,NA,NA,no,0,0,0,0,0,169,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Seine ID formerly DN103B,
-DE463N1,DE463,1,targeted,50.308112,-125.326899,2017-06-30 19:20:00 PDT,NA,1,0,1,yes,1,1,5,5,10,1300,0,0,0,5,0,1,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN103A,
-DE464N2,DE464,2,targeted,50.300978,-125.341211,2017-06-30 23:20:00 PDT,NA,0,0,1,yes,0,0,0,0,3,23,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN104B,
-DE464N1,DE464,1,targeted,50.300978,-125.341211,2017-06-30 22:25:00 PDT,NA,1,0,1,yes,5,5,4,4,7,170,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. Seine ID formerly DN104A,
-DE379N1,DE379,1,targeted,50.237837,-125.396111,2017-07-04 07:45:00 PDT,NA,1,0,0,yes,0,0,0,0,10,145,0,0,0,0,0,0,SEMSP,Field liced chum in seine. Seine ID formerly DN31,
-DE375N1,DE375,1,targeted,50.27485,-125.377707,2017-07-04 11:15:00 PDT,NA,1,0,0,yes,3,4,8,8,10,1962,0,0,2,2,1,2,SEMSP,Seine ID formerly DN23,
-DE380N1,DE380,1,targeted,50.307981,-125.320206,2017-07-05 07:40:00 PDT,NA,1,0,0,yes,2,2,1,1,10,126,0,0,0,0,0,0,SEMSP,Seine ID formerly DN33,
-DE381N1,DE381,1,targeted,50.305134,-125.337052,2017-07-10 08:15:00 PDT,NA,0,10,0,yes,0,0,0,0,10,63,0,0,0,0,0,0,SEMSP,"Trial run of combining retention & lousing duties in one set. Retained 10 CU as normal and 45 as ""mock sockeye"" (designated as trainer fish and thus excluded from retention data). Liced 10 chum.. Seine ID formerly DN35",
-DE455AN4,DE455A,4,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN76,
-DE455AN3,DE455A,3,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN75,
-DE455AN2,DE455A,2,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN74,
-DE455AN1,DE455A,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN73,
-DE455BN8,DE455B,8,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN80,
-DE455BN7,DE455B,7,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN79,
-DE455BN6,DE455B,6,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN78,
-DE455BN5,DE455B,5,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). Seine ID formerly DN77,
+DE364N1,DE364,1,targeted,50.18049002,-125.330849,2017-05-23 11:12:00 PDT,NA,0,0,10,yes,0,0,4,25,4,15,0,0,0,0,0,0,SEMSP,"1 unknown mort. Non-formal visual survey conducted. Performed a trial run of collection procedure, in which the one set was both for retention and sea licing. Fish were anaesthetized (for sea licing), placed into recovery, and then euthanized for retention. Due to time restraints, we werent able to collect complete packages of 10 fish per species.. ",Seine ID formerly DN1
+DE365N1,DE365,1,targeted,50.309067,-125.3257,2017-05-25 08:50:00 PDT,NA,1,0,10,yes,30,30,2,2,10,50,4,4,0,0,0,0,SEMSP,9th chum & water poured out of whirl pack by accident. ,Seine ID formerly DN3
+DE366N1,DE366,1,targeted,50.17999062,-125.0189455,2017-05-26 10:47:00 PDT,NA,1,0,10,yes,30,168,0,0,0,0,5,5,1,1,0,0,SEMSP,Informal site survery; did not have time for a lousing seine. First coho out at 11:26; in dewar at unknown time (in quickly though). Coho # 2 onwards out at 12:36. ,Seine ID formerly DN5
+DE367N1,DE367,1,targeted,50.309278,-125.320699,2017-05-29 11:43:00 PDT,NA,1,0,10,yes,8,8,1,1,10,105,0,0,1,1,0,0,SEMSP,NA,Seine ID formerly DN7
+DE368N1,DE368,1,targeted,50.301803,-125.03049,2017-05-31 12:00:00 PDT,NA,0,0,0,yes,0,0,3,3,10,56,4,4,0,0,1,1,SEMSP,Set targeted based on visual sighting of fish (not surface activity). No time left (or container) for zoop sample. ,Seine ID formerly DN9
+DE436N1,DE436,1,NA,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,"One set attempted; did not catch SO and school otherwise too small for worthwhile retention (~20 fish in net). Noticed drastic decrease in surface activity following end of site-wide survey, and almost no activity noticed following oceanographic survey. Schools very elusive, in general.. ",Seine ID formerly DN123
+DE369N1,DE369,1,targeted,50.305482,-125.024803,2017-06-01 10:10:00 PDT,NA,1,0,0,yes,11,11,0,0,10,100,0,0,1,1,0,0,SEMSP,NA,Seine ID formerly DN11
+DE370N1,DE370,1,targeted,50.274875,-125.376937,2017-06-05 11:15:00 PDT,NA,1,0,1,yes,30,420,10,20,10,50,0,0,3,3,0,0,SEMSP,Time out of water for PI estimated.. ,Seine ID formerly DN13
+DE371N2,DE371,2,targeted,50.306252,-125.336051,2017-06-07 11:00:00 PDT,NA,1,0,0,no,0,105,0,0,0,70,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly DN16
+DE371N1,DE371,1,targeted,50.307761,-125.325384,2017-06-07 08:00:00 PDT,NA,1,0,10,yes,30,380,5,5,11,160,0,0,3,3,0,0,SEMSP,Hinch set @ 06:30; 100 SO retained by Hinch crew. 1 unhealthy SO released. 1 trainer CU taken.. ,Seine ID formerly DN15
+DE372N2,DE372,2,targeted,50.307811,-125.329505,2017-06-12 12:40:00 PDT,NA,1,0,0,no,0,30,0,0,0,270,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly DN18
+DE372N1,DE372,1,targeted,50.3041,-125.33841,2017-06-12 10:05:00 PDT,NA,1,0,0,yes,30,85,0,0,10,128,0,0,1,1,0,0,SEMSP,1 chum trainer sample. ,Seine ID formerly DN17
+DE376N2,DE376,2,targeted,50.274783,-125.377569,2017-06-13 12:25:00 PDT,NA,1,0,0,no,0,21,0,0,0,384,0,0,0,0,0,0,SEMSP,U14004 adipose. ,Seine ID formerly DN26
+DE376N1,DE376,1,targeted,50.274596,-125.377527,2017-06-13 09:10:00 PDT,NA,1,0,1,yes,30,130,0,0,10,505,0,0,3,3,2,2,SEMSP,U14004 adipose. ,Seine ID formerly DN25
+DE454AN5,DE454A,5,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN65
+DE454AN4,DE454A,4,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN64
+DE454AN3,DE454A,3,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN63
+DE454AN2,DE454A,2,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN62
+DE454AN1,DE454A,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN61
+DE454BN8,DE454B,8,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN71
+DE454BN7,DE454B,7,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN70
+DE454BN6,DE454B,6,targeted,NA,NA,NA,NA,NA,NA,NA,yes,10,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN69
+DE377N1,DE377,1,targeted,50.236254,-125.398402,2017-06-19 08:20:00 PDT,NA,1,0,0,yes,30,40,0,0,12,320,0,0,0,0,0,0,SEMSP,"U11070 touched deck. 2 CU from DN27 retained for Gideon Mordecai (Freezer 3, Shelf 2). Set twice at D09 to collect fish for Tianyi Chen, Sam James, & Hinch lab. First set at 11:15, retained 1 CU for TC (released 100 CU, 1 unhealthy SO). Second set at 12:15, retained 1 CU for GM & 18 CU for TC (released 150 CU). . ",Seine ID formerly DN27
+DE382N1,DE382,1,targeted,NA,NA,2017-06-19 12:15:00 PDT,NA,NA,NA,NA,yes,0,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. ,Seine ID formerly DN37
+DE378N1,DE378,1,targeted,50.304561,-125.337253,2017-06-20 07:20:00 PDT,NA,1,1,0,yes,10,10,0,0,10,240,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly DN29
+DE383N1,DE383,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,2,NA,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. ,Seine ID formerly DN39
+DE373N2,DE373,2,targeted,50.297362,-125.339472,2017-06-26 11:52:00 PDT,NA,1,0,0,yes,8,14,0,0,0,120,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly DN20
+DE373N1,DE373,1,targeted,50.29725,-125.338485,2017-06-26 09:15:00 PDT,NA,1,0,0,yes,23,23,2,3,10,285,0,0,2,2,0,0,SEMSP,"U10762 - some water dumped out of bag. 1 trainer PI retained. 1 SO retained for GM (M7, MP4). ",Seine ID formerly DN19
+DE384N1,DE384,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,1,NA,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,GM_UBC,Seine conducted to obtain fish for Hinch crew. Fish retained for GM. ,Seine ID formerly DN41
+DE374N1,DE374,1,targeted,50.434701,-125.26607,2017-06-28 07:30:00 PDT,NA,1,10,0,yes,10,10,0,0,10,535,0,0,1,1,0,0,SEMSP,NA,Seine ID formerly DN21
+DE457N3,DE457,3,targeted,50.297141,-125.340397,2017-06-29 06:25:00 PDT,NA,NA,NA,NA,yes,2,2,7,7,0,118,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN97C
+DE457N2,DE457,2,targeted,50.297141,-125.340397,2017-06-29 05:30:00 PDT,NA,NA,NA,NA,yes,3,3,0,0,0,200,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN97B
+DE457N1,DE457,1,targeted,50.297141,-125.340397,2017-06-29 04:50:00 PDT,NA,1,0,10,yes,2,2,0,10,10,218,0,0,0,1,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN97A
+DE458N1,DE458,1,targeted,50.30969,-125.321237,2017-06-29 07:30:00 PDT,NA,10,0,10,yes,10,35,10,10,10,875,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN98
+DE459N2,DE459,2,targeted,50.30955,-125.306633,2017-06-29 11:40:00 PDT,NA,NA,NA,NA,yes,8,8,0,0,0,149,0,0,0,1,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN99B
+DE459N1,DE459,1,targeted,50.30955,-125.306633,2017-06-29 10:55:00 PDT,NA,1,0,10,yes,2,2,2,2,10,83,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN99A
+DE460N1,DE460,1,targeted,50.29885,-125.337833,2017-06-29 13:50:00 PDT,NA,1,0,1,yes,10,10,1,1,10,226,0,0,0,2,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN100
+DE461N1,DE461,1,targeted,50.306507,-125.330603,2017-06-30 13:30:00 PDT,NA,1,0,1,yes,9,9,5,5,10,480,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN101
+DE462N2,DE462,2,targeted,50.308201,-125.327355,2017-06-30 17:15:00 PDT,NA,NA,NA,NA,yes,4,9,0,0,0,545,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN102B
+DE462N1,DE462,1,targeted,50.308201,-125.327355,2017-06-30 16:30:00 PDT,NA,1,0,1,yes,6,6,3,3,10,664,0,0,0,5,0,1,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN102A
+DE463N3,DE463,3,targeted,50.299822,-125.3415,2017-06-30 20:52:00 PDT,NA,NA,NA,NA,yes,3,3,5,15,0,842,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN103C
+DE463N2,DE463,2,targeted,50.308112,-125.326899,2017-06-30 20:25:00 PDT,NA,NA,NA,NA,no,0,0,0,0,0,169,0,0,0,5,0,0,SJ_UBC,Sam James UBC diet study (24-hour). ,Seine ID formerly DN103B
+DE463N1,DE463,1,targeted,50.308112,-125.326899,2017-06-30 19:20:00 PDT,NA,1,0,1,yes,1,1,5,5,10,1300,0,0,0,5,0,1,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN103A
+DE464N2,DE464,2,targeted,50.300978,-125.341211,2017-06-30 23:20:00 PDT,NA,0,0,1,yes,0,0,0,0,3,23,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN104B
+DE464N1,DE464,1,targeted,50.300978,-125.341211,2017-06-30 22:25:00 PDT,NA,1,0,1,yes,5,5,4,4,7,170,0,0,0,0,0,0,SJ_UBC,Sam James UBC diet study (24-hour). Fish batch euthanized in MS222.. ,Seine ID formerly DN104A
+DE379N1,DE379,1,targeted,50.237837,-125.396111,2017-07-04 07:45:00 PDT,NA,1,0,0,yes,0,0,0,0,10,145,0,0,0,0,0,0,SEMSP,Field liced chum in seine. ,Seine ID formerly DN31
+DE375N1,DE375,1,targeted,50.27485,-125.377707,2017-07-04 11:15:00 PDT,NA,1,0,0,yes,3,4,8,8,10,1962,0,0,2,2,1,2,SEMSP,NA,Seine ID formerly DN23
+DE380N1,DE380,1,targeted,50.307981,-125.320206,2017-07-05 07:40:00 PDT,NA,1,0,0,yes,2,2,1,1,10,126,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly DN33
+DE381N1,DE381,1,targeted,50.305134,-125.337052,2017-07-10 08:15:00 PDT,NA,0,10,0,yes,0,0,0,0,10,63,0,0,0,0,0,0,SEMSP,"Trial run of combining retention & lousing duties in one set. Retained 10 CU as normal and 45 as ""mock sockeye"" (designated as trainer fish and thus excluded from retention data). Liced 10 chum.. ",Seine ID formerly DN35
+DE455AN4,DE455A,4,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN76
+DE455AN3,DE455A,3,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN75
+DE455AN2,DE455A,2,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN74
+DE455AN1,DE455A,1,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN73
+DE455BN8,DE455B,8,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN80
+DE455BN7,DE455B,7,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN79
+DE455BN6,DE455B,6,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN78
+DE455BN5,DE455B,5,targeted,NA,NA,NA,NA,NA,NA,NA,yes,0,NA,0,NA,10,NA,0,NA,0,NA,0,NA,DFO,Sam James UBC diet study (fish collected by DFO). ,Seine ID formerly DN77
 JE100N1,JE100,1,targeted,NA,NA,2015-05-20 07:10:00 PDT,30,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate,
 JE101N1,JE101,1,targeted,50.50535,-126.24163,2015-05-20 09:50:00 PDT,10,NA,NA,NA,yes,30,300,1,1,10,20,6,6,4,4,NA,NA,SEMSP,fish not labelled in order,
 JE102N1,JE102,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate,
@@ -478,29 +478,29 @@ JE298N1,JE298,1,targeted,50.543818,-126.794456,2016-07-04 13:35:00 PDT,18,NA,NA,
 JE300N1,JE300,1,targeted,50.47779,-126.429726,2016-07-05 07:38:00 PDT,1,NA,NA,NA,no,0,0,0,20,0,80,0,1,0,0,0,10,SEMSP,NA,
 JE302N1,JE302,1,targeted,50.456886,-126.162647,2016-07-05 12:45:00 PDT,3,NA,NA,NA,yes,30,200,10,300,10,300,0,0,1,1,NA,NA,SEMSP,NA,
 JE303N1,JE303,1,targeted,50.457049,-126.162651,2016-07-06 07:05:00 PDT,7,NA,NA,NA,yes,22,22,10,300,10,300,1,2,0,0,NA,NA,SEMSP,NA,
-JE304N1,JE304,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. Seine ID formerly JE304N1,
-JE304N2,JE304,2,targeted,50.54522,-126.65949,2017-06-06 08:20:00 PDT,NA,10,0,10,yes,23,23,0,0,10,59,8,8,0,0,0,0,SEMSP,Seine ID formerly JN1,
-JE305N1,JE305,1,targeted,50.6022,-126.70567,2017-06-06 15:27:00 PDT,NA,10,0,1000,yes,7,600,0,0,0,100,0,100,0,10,0,0,SEMSP,"No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing. . Seine ID formerly JN4",
-JE306N2,JE306,2,targeted,50.54393,-126.8131,2017-06-13 11:20:00 PDT,NA,10,0,100,no,0,130,0,10,0,10,0,10,0,1,0,0,SEMSP,Seine ID formerly JN6,
-JE306N1,JE306,1,targeted,50.5438,-126.80927,2017-06-13 07:10:00 PDT,NA,10,0,100,yes,30,325,0,0,10,50,10,45,0,0,0,0,SEMSP,Seine ID formerly JN5,
-JE307N1,JE307,1,targeted,50.54411,-126.65398,2017-06-14 06:23:00 PDT,NA,10,0,100,yes,30,300,0,0,10,250,10,25,10,25,1,1,SEMSP,Chinook in package JP25 (UFN14037). First chum of JP29 (UFN12681) had a cal mot that came out of the bag. First chinook out at 6:50 and straight into dewar (package JP25). Used remaining fish in net from retention set in place of lousing set due to weather. Only loused 10 chum. . Seine ID formerly JN7,
-JE308N2,JE308,2,random,50.60224,-126.70529,2017-06-20 14:22:00 PDT,NA,1,0,0,no,0,40,0,0,0,160,0,0,0,3,0,1,SEMSP,Seine ID formerly JN10,
-JE308N1,JE308,1,targeted,50.60233,-126.70309,2017-06-20 09:37:00 PDT,NA,1,0,100,yes,30,200,1,4,10,500,5,5,10,30,1,1,SEMSP,"Last half of visual survey was a B2-3, so visibility was difficult. We caught 3 local pink fry.. Seine ID formerly JN9",
-JE309N2,JE309,2,targeted,50.54628,-126.81474,2017-06-21 11:11:00 PDT,NA,10,0,10,no,0,120,0,0,0,180,0,0,0,1,0,0,SEMSP,Seine ID formerly JN12,
-JE309N1,JE309,1,targeted,50.54487,-126.81252,2017-06-21 06:37:00 PDT,NA,1,0,10,yes,30,175,0,0,10,75,0,0,2,2,0,0,SEMSP,Seine ID formerly JN11,
-JE310N2,JE310,2,targeted,50.54582,-126.81618,2017-06-27 11:17:00 PDT,NA,1,1,0,yes,4,390,0,60,0,660,0,10,0,10,0,0,SEMSP,Seine ID formerly JN14,
-JE310N1,JE310,1,targeted,50.54574,-126.81679,2017-06-27 07:10:00 PDT,NA,1,1,0,yes,26,26,3,3,10,58,2,2,1,1,0,0,SEMSP,"20 sockeye in retention set were bucketed, and then returned to the bunt before individual fish collection occured.. Seine ID formerly JN13",
-JE311N4,JE311,4,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. Seine ID formerly JE311N4,
-JE311N3,JE311,3,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. Seine ID formerly JE311N3,
-JE311N2,JE311,2,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. Seine ID formerly JE311N2,
-JE311N1,JE311,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. Seine ID formerly JE311N1,
-JE311N5,JE311,5,targeted,50.60278,-126.70284,2017-06-28 10:27:00 PDT,NA,10,0,100,yes,30,43,10,15,10,530,4,4,4,5,2,2,SEMSP,"First half of visual survey was a B2, second half was a B3. Loused 10 chum and 10 pink from retention set instead of setting the net again. Secchi hit the bottom at 7.5m.. Seine ID formerly JN15",
-JE314N2,JE314,2,targeted,50.54454,-126.81227,2017-07-06 09:59:00 PDT,NA,1,0,100,no,0,0,0,20,0,230,0,0,0,0,0,0,SEMSP,Seine ID formerly JN22,
-JE314N1,JE314,1,targeted,50.54372,-126.81769,2017-07-06 06:45:00 PDT,NA,100,1,100,yes,1,1,10,15,10,580,2,4,2,2,0,0,SEMSP,"2 coho not retained, did not fit through milk jug. Seine ID formerly JN21",
-JE312N1,JE312,1,targeted,50.54505,-126.65729,2017-07-07 06:56:00 PDT,NA,10,1,100,yes,0,0,6,6,10,425,0,0,10,20,0,0,SEMSP,Seine ID formerly JN17,
-JE313N1,JE313,1,targeted,50.60144,-126.70046,2017-07-07 10:16:00 PDT,NA,10,0,10,no,0,0,0,1,0,119,0,6,0,2,0,2,SEMSP,Seine ID formerly JN20,
-JE316N1,JE316,1,targeted,50.546,-126.81509,2017-07-12 07:13:00 PDT,NA,10,1,100,no,0,0,0,3,0,95,0,1,0,1,0,0,SEMSP,Seine ID formerly JN25,
-JE315N1,JE315,1,targeted,50.54533,-126.65855,2017-07-12 11:06:00 PDT,NA,10,0,10,no,0,0,0,90,0,450,0,0,0,60,0,0,SEMSP,Seine ID formerly JN23,
+JE304N1,JE304,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE304N1
+JE304N2,JE304,2,targeted,50.54522,-126.65949,2017-06-06 08:20:00 PDT,NA,10,0,10,yes,23,23,0,0,10,59,8,8,0,0,0,0,SEMSP,NA,Seine ID formerly JN1
+JE305N1,JE305,1,targeted,50.6022,-126.70567,2017-06-06 15:27:00 PDT,NA,10,0,1000,yes,7,600,0,0,0,100,0,100,0,10,0,0,SEMSP,"No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing. . ",Seine ID formerly JN4
+JE306N2,JE306,2,targeted,50.54393,-126.8131,2017-06-13 11:20:00 PDT,NA,10,0,100,no,0,130,0,10,0,10,0,10,0,1,0,0,SEMSP,NA,Seine ID formerly JN6
+JE306N1,JE306,1,targeted,50.5438,-126.80927,2017-06-13 07:10:00 PDT,NA,10,0,100,yes,30,325,0,0,10,50,10,45,0,0,0,0,SEMSP,NA,Seine ID formerly JN5
+JE307N1,JE307,1,targeted,50.54411,-126.65398,2017-06-14 06:23:00 PDT,NA,10,0,100,yes,30,300,0,0,10,250,10,25,10,25,1,1,SEMSP,Chinook in package JP25 (UFN14037). First chum of JP29 (UFN12681) had a cal mot that came out of the bag. First chinook out at 6:50 and straight into dewar (package JP25). Used remaining fish in net from retention set in place of lousing set due to weather. Only loused 10 chum. . ,Seine ID formerly JN7
+JE308N2,JE308,2,random,50.60224,-126.70529,2017-06-20 14:22:00 PDT,NA,1,0,0,no,0,40,0,0,0,160,0,0,0,3,0,1,SEMSP,NA,Seine ID formerly JN10
+JE308N1,JE308,1,targeted,50.60233,-126.70309,2017-06-20 09:37:00 PDT,NA,1,0,100,yes,30,200,1,4,10,500,5,5,10,30,1,1,SEMSP,"Last half of visual survey was a B2-3, so visibility was difficult. We caught 3 local pink fry.. ",Seine ID formerly JN9
+JE309N2,JE309,2,targeted,50.54628,-126.81474,2017-06-21 11:11:00 PDT,NA,10,0,10,no,0,120,0,0,0,180,0,0,0,1,0,0,SEMSP,NA,Seine ID formerly JN12
+JE309N1,JE309,1,targeted,50.54487,-126.81252,2017-06-21 06:37:00 PDT,NA,1,0,10,yes,30,175,0,0,10,75,0,0,2,2,0,0,SEMSP,NA,Seine ID formerly JN11
+JE310N2,JE310,2,targeted,50.54582,-126.81618,2017-06-27 11:17:00 PDT,NA,1,1,0,yes,4,390,0,60,0,660,0,10,0,10,0,0,SEMSP,NA,Seine ID formerly JN14
+JE310N1,JE310,1,targeted,50.54574,-126.81679,2017-06-27 07:10:00 PDT,NA,1,1,0,yes,26,26,3,3,10,58,2,2,1,1,0,0,SEMSP,"20 sockeye in retention set were bucketed, and then returned to the bunt before individual fish collection occured.. ",Seine ID formerly JN13
+JE311N4,JE311,4,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE311N4
+JE311N3,JE311,3,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE311N3
+JE311N2,JE311,2,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE311N2
+JE311N1,JE311,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE311N1
+JE311N5,JE311,5,targeted,50.60278,-126.70284,2017-06-28 10:27:00 PDT,NA,10,0,100,yes,30,43,10,15,10,530,4,4,4,5,2,2,SEMSP,"First half of visual survey was a B2, second half was a B3. Loused 10 chum and 10 pink from retention set instead of setting the net again. Secchi hit the bottom at 7.5m.. ",Seine ID formerly JN15
+JE314N2,JE314,2,targeted,50.54454,-126.81227,2017-07-06 09:59:00 PDT,NA,1,0,100,no,0,0,0,20,0,230,0,0,0,0,0,0,SEMSP,NA,Seine ID formerly JN22
+JE314N1,JE314,1,targeted,50.54372,-126.81769,2017-07-06 06:45:00 PDT,NA,100,1,100,yes,1,1,10,15,10,580,2,4,2,2,0,0,SEMSP,"2 coho not retained, did not fit through milk jug. ",Seine ID formerly JN21
+JE312N1,JE312,1,targeted,50.54505,-126.65729,2017-07-07 06:56:00 PDT,NA,10,1,100,yes,0,0,6,6,10,425,0,0,10,20,0,0,SEMSP,NA,Seine ID formerly JN17
+JE313N1,JE313,1,targeted,50.60144,-126.70046,2017-07-07 10:16:00 PDT,NA,10,0,10,no,0,0,0,1,0,119,0,6,0,2,0,2,SEMSP,NA,Seine ID formerly JN20
+JE316N1,JE316,1,targeted,50.546,-126.81509,2017-07-12 07:13:00 PDT,NA,10,1,100,no,0,0,0,3,0,95,0,1,0,1,0,0,SEMSP,NA,Seine ID formerly JN25
+JE315N1,JE315,1,targeted,50.54533,-126.65855,2017-07-12 11:06:00 PDT,NA,10,0,10,no,0,0,0,90,0,450,0,0,0,60,0,0,SEMSP,NA,Seine ID formerly JN23
 DE505N2,DE505,2,targeted,50.3154,-125.053,2018-05-11 10:55:00 PDT,NA,0,0,0,no,0,0,0,1,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE505N1,DE505,1,random,50.316217,-125.052033,2018-05-11 10:30:00 PDT,NA,0,0,0,no,0,0,0,0,0,2,0,0,0,0,0,0,SEMSP,NA,
 DE506N1,DE506,1,targeted,50.18167,-125.1523,2018-05-14 07:25:00 PDT,NA,0,1,10,yes,0,0,10,30,10,70,2,2,0,0,0,0,SEMSP,NA,
@@ -583,114 +583,114 @@ DE542N1,DE542,1,targeted,50.30865,-125.3255,2018-08-15 08:20:00 PDT,NA,0,0,1,no,
 DE543N1,DE543,1,targeted,50.30945,-125.324067,2018-08-22 08:47:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE601N1,DE601,1,random,50.3056,-125.33005,2019-05-10 10:55:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,confirmation of 0 fish on-site at the start of the season,
 DE602N1,DE602,1,random,50.3081,-125.32895,2019-05-13 09:25:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,practice set,
-JE501N1,JE501,1,random,50.54511,-126.65926,2019-05-17 07:11:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE502N1,JE502,1,random,50.60154,-126.70369,2019-05-17 10:05:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE503N1,JE503,1,targeted,50.53936,-126.78008,2019-05-20 07:27:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE503N2,JE503,2,targeted,50.55895,-126.77763,2019-05-20 08:15:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE503N3,JE503,3,targeted,50.53912,-126.77922,2019-05-20 09:00:00 PDT,NA,0,1,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE504N1,JE504,1,random,50.54301,-126.81448,2019-05-20 11:40:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE504N2,JE504,2,random,50.54359,-126.81538,2019-05-20 12:15:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+JE501N1,JE501,1,random,50.54511,-126.65926,2019-05-17 07:11:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE502N1,JE502,1,random,50.60154,-126.70369,2019-05-17 10:05:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE503N1,JE503,1,targeted,50.53936,-126.78008,2019-05-20 07:27:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE503N2,JE503,2,targeted,50.55895,-126.77763,2019-05-20 08:15:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE503N3,JE503,3,targeted,50.53912,-126.77922,2019-05-20 09:00:00 PDT,NA,0,1,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE504N1,JE504,1,random,50.54301,-126.81448,2019-05-20 11:40:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE504N2,JE504,2,random,50.54359,-126.81538,2019-05-20 12:15:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE602N2,DE602,2,random,50.3081,-125.32895,2019-05-13 09:45:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,practice set,
 DE602N3,DE602,3,targeted,50.3081,-125.32895,2019-05-13 10:00:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,"set on area where dimples and poppers seen, but didn't capture any fish. Potentially pink and chum",
-DE605N1,DE605,1,random,50.24247,-125.3975,2019-05-15 08:00:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+DE605N1,DE605,1,random,50.24247,-125.3975,2019-05-15 08:00:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE607N1,DE607,1,targeted,50.31025,-125.320467,2019-05-21 09:00:00 PDT,NA,10,0,10,yes,30,1498,0,0,3,18,0,1,0,2,2,4,SEMSP,"4 sockeye in poor condition when released, 1 trainer SO taken","Removed 1 CO from ""retained"" nnd ""total"" and added 1 CK (mis-ID) 2019-11-12"
 DE608N1,DE608,1,targeted,50.2688,-125.357533,2019-05-22 08:25:00 PDT,NA,0,10,0,yes,0,0,10,456,3,3,0,0,0,0,0,0,SEMSP,1 pink escaped; collected 376 pink for Andrea Frommer's ocean acidification experiment,
 DE609N1,DE609,1,targeted,50.442683,-125.277333,2019-05-23 08:30:00 PDT,NA,0,0,10,yes,30,90,0,0,0,0,1,1,0,0,0,0,SEMSP,Net collapsed during retrieval so no licing was done; 1 trainer sockeye taken,
-JE505N1,JE505,1,random,50.54622,-126.66857,2019-05-23 09:48:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE506N1,JE506,1,targeted,50.54025,-126.78289,2019-05-26 07:16:00 PDT,NA,10,1,10,yes,10,195,0,0,10,528,0,37,0,0,0,0,SEMSP,,
-DE610N1,DE610,1,targeted,50.305683,-125.3377,2019-05-25 07:35:00 PDT,NA,10,0,1,yes,30,1667,1,1,0,0,0,0,0,0,0,0,SEMSP,,
+JE505N1,JE505,1,random,50.54622,-126.66857,2019-05-23 09:48:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE506N1,JE506,1,targeted,50.54025,-126.78289,2019-05-26 07:16:00 PDT,NA,10,1,10,yes,10,195,0,0,10,528,0,37,0,0,0,0,SEMSP,NA,
+DE610N1,DE610,1,targeted,50.305683,-125.3377,2019-05-25 07:35:00 PDT,NA,10,0,1,yes,30,1667,1,1,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE612N1,DE612,1,targeted,50.2692,-125.360867,2019-05-26 06:53:00 PDT,NA,0,10,0,yes,2,2,10,4690,3,523,0,0,0,0,1,1,SEMSP,"Number of fish remaining in net was enumerated to several thousand, then estimated from that point forward",Added 1 SO and removed 1 CU due to misidentified CU in the field; verified in-lab (2019-10-21 JG)
-DE613N1,DE613,1,targeted,50.241902,-125.397842,2019-05-26 10:56:00 PDT,NA,10,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE613N2,DE613,2,targeted,50.24135,-125.398056,2019-05-26 11:20:00 PDT,NA,10,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE613N3,DE613,3,random,50.2453,-125.395267,2019-05-26 11:40:00 PDT,NA,0,0,0,yes,5,5,0,0,7,7,1,1,0,0,0,0,SEMSP,,
+DE613N1,DE613,1,targeted,50.241902,-125.397842,2019-05-26 10:56:00 PDT,NA,10,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE613N2,DE613,2,targeted,50.24135,-125.398056,2019-05-26 11:20:00 PDT,NA,10,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE613N3,DE613,3,random,50.2453,-125.395267,2019-05-26 11:40:00 PDT,NA,0,0,0,yes,5,5,0,0,7,7,1,1,0,0,0,0,SEMSP,NA,
 DE615N1,DE615,1,targeted,50.442917,-125.27725,2019-05-27 08:20:00 PDT,NA,1,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,No fish were caught,
 DE615N2,DE615,2,targeted,50.440383,-125.2715,2019-05-27 09:00:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,No fish were caught,
 DE616N1,DE616,1,targeted,50.45645,-125.2677,2019-05-27 09:55:00 PDT,NA,1,0,10,yes,30,215,0,0,11,91,1,1,6,6,0,0,SEMSP,1 trainer CU taken,
-DE614N1,DE614,1,targeted,50.30545,-125.33815,2019-05-28 07:45:00 PDT,NA,10,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE614N2,DE614,2,targeted,50.305267,-125.33815,2019-05-28 08:05:00 PDT,NA,10,0,10,no,0,2,0,0,0,3,0,0,0,0,0,0,SEMSP,,
-DE614N3,DE614,3,targeted,50.304033,-125.3394,2019-05-28 08:25:00 PDT,NA,10,0,10,yes,30,280,10,14,6,6,0,1,1,1,0,0,SEMSP,,
+DE614N1,DE614,1,targeted,50.30545,-125.33815,2019-05-28 07:45:00 PDT,NA,10,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE614N2,DE614,2,targeted,50.305267,-125.33815,2019-05-28 08:05:00 PDT,NA,10,0,10,no,0,2,0,0,0,3,0,0,0,0,0,0,SEMSP,NA,
+DE614N3,DE614,3,targeted,50.304033,-125.3394,2019-05-28 08:25:00 PDT,NA,10,0,10,yes,30,280,10,14,6,6,0,1,1,1,0,0,SEMSP,NA,
 DE614N4,DE614,4,targeted,50.30215,-125.339583,2019-05-28 12:40:00 PDT,NA,10,0,1000,no,0,693,0,0,0,77,0,0,0,5,0,0,SEMSP,Conducted set to try to get more accurate count of presence correlated to surface activity observed.,
-JE508N1,JE508,1,targeted,50.60181,-126.70432,2019-05-29 08:40:00 PDT,NA,10,10,10,yes,30,2868,0,0,5,34,0,0,10,39,0,0,SEMSP,,
-JE509N1,JE509,1,targeted,50.53974,-126.78125,2019-05-30 07:23:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE509N2,JE509,2,targeted,50.54062,-126.78237,2019-05-30 07:59:00 PDT,NA,1,1,1,yes,30,201,0,0,2,2,0,0,6,6,0,0,SEMSP,,
-DE617N1,DE617,1,targeted,50.275033,-125.378217,2019-05-29 06:55:00 PDT,NA,0,10,0,yes,3,3,10,760,6,6,0,0,0,0,2,2,SEMSP,,One chinook misidentified as CO; species ID verified in lab (2019-10-23 JG)
-JE510N1,JE510,1,targeted,50.54637,-126.66978,2019-05-31 07:30:00 PDT,NA,1,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE510N2,JE510,2,targeted,50.54552,-126.66193,2019-05-31 08:03:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE510N3,JE510,3,targeted,50.54615,-126.6701,2019-05-31 08:40:00 PDT,NA,1,1,10,yes,30,71,0,0,10,16,1,12,10,24,0,0,SEMSP,,
+JE508N1,JE508,1,targeted,50.60181,-126.70432,2019-05-29 08:40:00 PDT,NA,10,10,10,yes,30,2868,0,0,5,34,0,0,10,39,0,0,SEMSP,NA,
+JE509N1,JE509,1,targeted,50.53974,-126.78125,2019-05-30 07:23:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE509N2,JE509,2,targeted,50.54062,-126.78237,2019-05-30 07:59:00 PDT,NA,1,1,1,yes,30,201,0,0,2,2,0,0,6,6,0,0,SEMSP,NA,
+DE617N1,DE617,1,targeted,50.275033,-125.378217,2019-05-29 06:55:00 PDT,NA,0,10,0,yes,3,3,10,760,6,6,0,0,0,0,2,2,SEMSP,NA,One chinook misidentified as CO; species ID verified in lab (2019-10-23 JG)
+JE510N1,JE510,1,targeted,50.54637,-126.66978,2019-05-31 07:30:00 PDT,NA,1,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE510N2,JE510,2,targeted,50.54552,-126.66193,2019-05-31 08:03:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE510N3,JE510,3,targeted,50.54615,-126.6701,2019-05-31 08:40:00 PDT,NA,1,1,10,yes,30,71,0,0,10,16,1,12,10,24,0,0,SEMSP,NA,
 DE618N1,DE618,1,targeted,50.442933,-125.278717,2019-05-30 08:00:00 PDT,NA,0,10,0,no,0,0,0,300,0,0,0,0,0,0,0,0,SEMSP,~300 sand lance were gill-netted by fine mesh; released 300-400 pinks in order to deal with bycatch so no sampling or enumeration was conducted. Approx. half of sand lance that were released looked unhealthy,
 DE619N1,DE619,1,targeted,50.456733,-125.268833,2019-05-30 09:45:00 PDT,NA,10,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,No fish were caught,
-DE619N2,DE619,2,targeted,50.45715,-125.268117,2019-05-30 10:15:00 PDT,NA,10,0,0,yes,33,801,0,0,10,18,0,0,3,4,0,0,SEMSP,,
-DE620N1,DE620,1,targeted,50.271417,-125.366183,2019-06-01 07:30:00 PDT,NA,0,0,10,yes,1,1,10,288,10,428,0,0,0,0,1,1,SEMSP,,
-DE626N1,DE626,1,targeted,50.3055,-125.3351,2019-06-05 07:14:00 PDT,NA,0,0,10,yes,31,72,10,73,10,71,0,0,1,1,0,0,SEMSP,,
-DE621N1,DE621,1,targeted,50.308217,-125.327317,2019-06-02 07:25:00 PDT,NA,10,0,100,no,0,1,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE621N2,DE621,2,targeted,50.308533,-125.3281,2019-06-02 07:50:00 PDT,NA,1,0,10,yes,30,42,10,604,10,604,1,1,3,6,0,0,SEMSP,,
+DE619N2,DE619,2,targeted,50.45715,-125.268117,2019-05-30 10:15:00 PDT,NA,10,0,0,yes,33,801,0,0,10,18,0,0,3,4,0,0,SEMSP,NA,
+DE620N1,DE620,1,targeted,50.271417,-125.366183,2019-06-01 07:30:00 PDT,NA,0,0,10,yes,1,1,10,288,10,428,0,0,0,0,1,1,SEMSP,NA,
+DE626N1,DE626,1,targeted,50.3055,-125.3351,2019-06-05 07:14:00 PDT,NA,0,0,10,yes,31,72,10,73,10,71,0,0,1,1,0,0,SEMSP,NA,
+DE621N1,DE621,1,targeted,50.308217,-125.327317,2019-06-02 07:25:00 PDT,NA,10,0,100,no,0,1,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE621N2,DE621,2,targeted,50.308533,-125.3281,2019-06-02 07:50:00 PDT,NA,1,0,10,yes,30,42,10,604,10,604,1,1,3,6,0,0,SEMSP,NA,
 JE511N1,JE511,1,targeted,50.53986,-126.77921,2019-06-05 05:56:00 PDT,NA,10,0,0,yes,10,505,0,0,0,55,0,0,0,0,0,0,SEMSP,"too choppy to keep fish, estimated total # in net and released. Estimated totals for chum and sockeye based on ""in net estimate"" not ""census"". Numbers for pink/coho/herring could be off, but unlikely we missed them in the net",
-JE513N1,JE513,1,random,50.601398,-126.702403,2019-06-05 11:00:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE513N2,JE513,2,random,50.601457,-126.702725,2019-06-05 11:30:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+JE513N1,JE513,1,random,50.601398,-126.702403,2019-06-05 11:00:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE513N2,JE513,2,random,50.601457,-126.702725,2019-06-05 11:30:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 JE514N1,JE514,1,targeted,50.54037,-126.78188,2019-06-06 06:06:00 PDT,NA,1,0,10,yes,30,280,0,0,2,30,0,0,0,3,0,0,SEMSP,10 sockeye released in poor condition,
-JE515N1,JE515,1,targeted,50.6018,-126.70077,2019-06-06 12:15:00 PDT,NA,0,0,10,yes,7,7,0,0,8,8,10,15,2,2,0,0,SEMSP,,
-JE516N1,JE516,1,targeted,50.5447,-126.66235,2019-06-09 06:45:00 PDT,NA,0,0,10,yes,30,58,0,0,10,37,2,2,0,0,0,0,SEMSP,,
-JE517N1,JE517,1,targeted,50.54026,-126.78209,2019-06-10 07:06:00 PDT,NA,1,0,10,yes,30,81,0,0,10,51,0,0,1,1,0,0,SEMSP,,
-DE623N1,DE623,1,targeted,50.457167,-125.262433,2019-06-03 08:28:00 PDT,NA,1,0,0,yes,30,80,0,0,0,0,0,0,1,1,0,0,SEMSP,,
-DE624N1,DE624,1,targeted,50.274683,-125.377683,2019-06-04 07:30:00 PDT,NA,0,1,0,yes,1,1,10,273,10,122,0,0,0,0,0,0,SEMSP,,
-DE627N1,DE627,1,targeted,50.44365,-125.27435,2019-06-06 08:10:00 PDT,NA,1,0,10,yes,30,35,0,0,10,46,0,1,0,1,0,0,SEMSP,,
-DE628N1,DE628,1,targeted,50.306067,-125.330583,2019-06-10 07:15:00 PDT,NA,10,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE628N2,DE628,2,targeted,50.304683,-125.331683,2019-06-10 07:32:00 PDT,NA,10,0,10,no,0,0,0,0,0,8,0,0,0,0,0,0,SEMSP,,
-DE628N3,DE628,3,targeted,50.303733,-125.3323,2019-06-10 07:40:00 PDT,NA,10,0,10,yes,30,68,0,0,10,67,0,1,1,1,0,0,SEMSP,,
-JE518N1,JE518,1,targeted,50.54608,-126.66772,2019-06-11 07:12:00 PDT,NA,1,0,100,yes,30,73,0,0,10,397,0,0,2,3,0,0,SEMSP,,
-DE629N1,DE629,1,targeted,50.2772,-125.376983,2019-06-11 07:00:00 PDT,NA,0,0,10,yes,3,3,10,165,11,385,0,0,0,0,0,0,SEMSP,,
-DE630N1,DE630,1,targeted,50.243817,-125.3971,2019-06-11 09:55:00 PDT,NA,1,0,0,yes,30,180,2,2,10,235,0,0,3,3,0,0,SEMSP,,
-DE631N1,DE631,1,targeted,50.43845,-125.267033,2019-06-12 07:50:00 PDT,NA,0,0,10,yes,11,11,0,0,10,53,0,1,0,0,0,0,SEMSP,,
-JE519N1,JE519,1,targeted,50.5392,-126.77885,2019-06-16 07:50:00 PDT,NA,1,0,10,yes,30,155,10,10,10,135,5,5,7,9,0,0,SEMSP,,
-DE632N1,DE632,1,targeted,50.305667,-125.33775,2019-06-17 07:20:00 PDT,NA,1,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE632N2,DE632,2,targeted,50.30785,-125.329683,2019-06-17 07:50:00 PDT,NA,1,0,10,yes,13,13,12,115,10,78,0,0,3,6,1,1,SEMSP,,
-DE633N1,DE633,1,targeted,50.275117,-125.37835,2019-06-18 07:30:00 PDT,NA,0,0,10,no,0,1,0,76,0,33,0,0,0,0,0,0,SEMSP,,
+JE515N1,JE515,1,targeted,50.6018,-126.70077,2019-06-06 12:15:00 PDT,NA,0,0,10,yes,7,7,0,0,8,8,10,15,2,2,0,0,SEMSP,NA,
+JE516N1,JE516,1,targeted,50.5447,-126.66235,2019-06-09 06:45:00 PDT,NA,0,0,10,yes,30,58,0,0,10,37,2,2,0,0,0,0,SEMSP,NA,
+JE517N1,JE517,1,targeted,50.54026,-126.78209,2019-06-10 07:06:00 PDT,NA,1,0,10,yes,30,81,0,0,10,51,0,0,1,1,0,0,SEMSP,NA,
+DE623N1,DE623,1,targeted,50.457167,-125.262433,2019-06-03 08:28:00 PDT,NA,1,0,0,yes,30,80,0,0,0,0,0,0,1,1,0,0,SEMSP,NA,
+DE624N1,DE624,1,targeted,50.274683,-125.377683,2019-06-04 07:30:00 PDT,NA,0,1,0,yes,1,1,10,273,10,122,0,0,0,0,0,0,SEMSP,NA,
+DE627N1,DE627,1,targeted,50.44365,-125.27435,2019-06-06 08:10:00 PDT,NA,1,0,10,yes,30,35,0,0,10,46,0,1,0,1,0,0,SEMSP,NA,
+DE628N1,DE628,1,targeted,50.306067,-125.330583,2019-06-10 07:15:00 PDT,NA,10,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE628N2,DE628,2,targeted,50.304683,-125.331683,2019-06-10 07:32:00 PDT,NA,10,0,10,no,0,0,0,0,0,8,0,0,0,0,0,0,SEMSP,NA,
+DE628N3,DE628,3,targeted,50.303733,-125.3323,2019-06-10 07:40:00 PDT,NA,10,0,10,yes,30,68,0,0,10,67,0,1,1,1,0,0,SEMSP,NA,
+JE518N1,JE518,1,targeted,50.54608,-126.66772,2019-06-11 07:12:00 PDT,NA,1,0,100,yes,30,73,0,0,10,397,0,0,2,3,0,0,SEMSP,NA,
+DE629N1,DE629,1,targeted,50.2772,-125.376983,2019-06-11 07:00:00 PDT,NA,0,0,10,yes,3,3,10,165,11,385,0,0,0,0,0,0,SEMSP,NA,
+DE630N1,DE630,1,targeted,50.243817,-125.3971,2019-06-11 09:55:00 PDT,NA,1,0,0,yes,30,180,2,2,10,235,0,0,3,3,0,0,SEMSP,NA,
+DE631N1,DE631,1,targeted,50.43845,-125.267033,2019-06-12 07:50:00 PDT,NA,0,0,10,yes,11,11,0,0,10,53,0,1,0,0,0,0,SEMSP,NA,
+JE519N1,JE519,1,targeted,50.5392,-126.77885,2019-06-16 07:50:00 PDT,NA,1,0,10,yes,30,155,10,10,10,135,5,5,7,9,0,0,SEMSP,NA,
+DE632N1,DE632,1,targeted,50.305667,-125.33775,2019-06-17 07:20:00 PDT,NA,1,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE632N2,DE632,2,targeted,50.30785,-125.329683,2019-06-17 07:50:00 PDT,NA,1,0,10,yes,13,13,12,115,10,78,0,0,3,6,1,1,SEMSP,NA,
+DE633N1,DE633,1,targeted,50.275117,-125.37835,2019-06-18 07:30:00 PDT,NA,0,0,10,no,0,1,0,76,0,33,0,0,0,0,0,0,SEMSP,NA,
 DE633N2,DE633,2,targeted,50.275117,-125.37835,2019-06-18 08:05:00 PDT,NA,0,0,10,yes,0,0,10,175,10,175,0,0,0,0,0,0,SEMSP,3 PI and 3 CU released in poor condition,
-DE634N1,DE634,1,targeted,50.456533,-125.268783,2019-06-20 08:28:00 PDT,NA,1,1,0,yes,12,12,10,116,10,256,0,1,1,1,1,1,SEMSP,,
-JE520N1,JE520,1,random,50.5458,-126.66536,2019-06-23 07:09:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE520N2,JE520,2,random,50.54616,-126.66828,2019-06-23 08:03:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE520N3,JE520,3,random,50.54602,-126.66768,2019-06-23 08:47:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,1,SEMSP,,
-DE636N1,DE636,1,targeted,50.307533,-125.33005,2019-06-24 07:15:00 PDT,NA,1,1,0,no,0,0,0,10,0,24,0,0,0,0,0,0,SEMSP,,
-DE636N2,DE636,2,targeted,50.309833,-125.330533,2019-06-24 07:43:00 PDT,NA,1,1,0,yes,1,1,11,254,10,463,0,0,0,0,3,3,SEMSP,,
-JE522N1,JE522,1,targeted,50.53839,-126.77386,2019-06-24 07:03:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+DE634N1,DE634,1,targeted,50.456533,-125.268783,2019-06-20 08:28:00 PDT,NA,1,1,0,yes,12,12,10,116,10,256,0,1,1,1,1,1,SEMSP,NA,
+JE520N1,JE520,1,random,50.5458,-126.66536,2019-06-23 07:09:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE520N2,JE520,2,random,50.54616,-126.66828,2019-06-23 08:03:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE520N3,JE520,3,random,50.54602,-126.66768,2019-06-23 08:47:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,1,SEMSP,NA,
+DE636N1,DE636,1,targeted,50.307533,-125.33005,2019-06-24 07:15:00 PDT,NA,1,1,0,no,0,0,0,10,0,24,0,0,0,0,0,0,SEMSP,NA,
+DE636N2,DE636,2,targeted,50.309833,-125.330533,2019-06-24 07:43:00 PDT,NA,1,1,0,yes,1,1,11,254,10,463,0,0,0,0,3,3,SEMSP,NA,
+JE522N1,JE522,1,targeted,50.53839,-126.77386,2019-06-24 07:03:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 JE522N2,JE522,2,targeted,50.53825,-126.77136,2019-06-24 07:32:00 PDT,NA,10,10,10,yes,14,14,10,46,10,94,0,0,3,3,0,0,SEMSP,Lots of the sockeye looked as if they had been caught previously (roughed up). A few fish escaped from net. 2 lice found in draining bucket,
-DE638N1,DE638,1,targeted,50.272117,-125.37515,2019-06-25 06:44:00 PDT,NA,0,10,1,yes,0,0,1,1,10,58,0,0,0,0,0,0,SEMSP,,
-DE639N1,DE639,1,targeted,50.24475,-125.396667,2019-06-25 09:05:00 PDT,NA,1,1,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+DE638N1,DE638,1,targeted,50.272117,-125.37515,2019-06-25 06:44:00 PDT,NA,0,10,1,yes,0,0,1,1,10,58,0,0,0,0,0,0,SEMSP,NA,
+DE639N1,DE639,1,targeted,50.24475,-125.396667,2019-06-25 09:05:00 PDT,NA,1,1,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE639N2,DE639,2,targeted,50.23995,-125.396583,2019-06-25 09:30:00 PDT,NA,1,1,0,yes,4,39,10,80,8,253,0,0,0,3,0,3,SEMSP,Ended processing early due to harassment by camper,
-DE641N1,DE641,1,targeted,50.452067,-125.247833,2019-06-26 08:23:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE641N2,DE641,2,targeted,50.457617,-125.2586,2019-06-26 08:50:00 PDT,NA,0,10,0,yes,0,0,11,3873,10,213,0,0,1,2,0,0,SEMSP,,
-JE523N1,JE523,1,random,50.54513,-126.66184,2019-06-28 07:13:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE523N2,JE523,2,random,50.54599,-126.66737,2019-06-28 07:46:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE523N3,JE523,3,random,50.5458,-126.66183,2019-06-28 08:10:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE524N1,JE524,1,targeted,50.6012,-126.7028,2019-06-28 10:24:00 PDT,NA,0,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE524N2,JE524,2,targeted,50.60129,-126.70315,2019-06-28 11:10:00 PDT,NA,0,1,10,yes,2,2,0,0,11,51,0,0,6,6,0,0,SEMSP,,Added 1 CU to cu_retained to account for fish caught for Gideon Mordecai (2019-10-24 JG)
+DE641N1,DE641,1,targeted,50.452067,-125.247833,2019-06-26 08:23:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE641N2,DE641,2,targeted,50.457617,-125.2586,2019-06-26 08:50:00 PDT,NA,0,10,0,yes,0,0,11,3873,10,213,0,0,1,2,0,0,SEMSP,NA,
+JE523N1,JE523,1,random,50.54513,-126.66184,2019-06-28 07:13:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE523N2,JE523,2,random,50.54599,-126.66737,2019-06-28 07:46:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE523N3,JE523,3,random,50.5458,-126.66183,2019-06-28 08:10:00 PDT,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE524N1,JE524,1,targeted,50.6012,-126.7028,2019-06-28 10:24:00 PDT,NA,0,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE524N2,JE524,2,targeted,50.60129,-126.70315,2019-06-28 11:10:00 PDT,NA,0,1,10,yes,2,2,0,0,11,51,0,0,6,6,0,0,SEMSP,NA,Added 1 CU to cu_retained to account for fish caught for Gideon Mordecai (2019-10-24 JG)
 JE525N1,JE525,1,targeted,50.54023,-126.78136,2019-06-29 07:02:00 PDT,NA,1,0,10,no,0,0,0,0,0,1,0,0,0,0,0,1,SEMSP,Botched set - net tangled,
-JE525N2,JE525,2,targeted,50.53973,-126.77827,2019-06-29 07:26:00 PDT,NA,1,1,10,yes,1,1,10,90,10,130,0,0,4,4,0,0,SEMSP,,
-DE642N1,DE642,1,targeted,50.305633,-125.337583,2019-07-02 07:24:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE642N2,DE642,2,targeted,50.304533,-125.336083,2019-07-02 07:43:00 PDT,NA,10,0,0,yes,3,3,10,10,10,194,1,1,4,4,0,0,SEMSP,,
-DE642N3,DE642,3,targeted,50.308817,-125.325983,2019-07-02 11:24:00 PDT,NA,10,1,10,yes,14,17,0,440,1,440,0,0,0,3,0,0,SEMSP,,
-DE643N1,DE643,1,targeted,50.2727,-125.376983,2019-07-03 06:59:00 PDT,NA,1,0,0,yes,0,0,10,76,10,165,0,0,1,1,1,1,SEMSP,,
-DE644N1,DE644,1,targeted,50.234917,-125.394583,2019-07-03 10:13:00 PDT,NA,1,0,1,no,0,0,0,99,0,99,0,0,0,3,0,0,SEMSP,,
-DE644N2,DE644,2,targeted,50.232967,-125.393833,2019-07-03 10:42:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+JE525N2,JE525,2,targeted,50.53973,-126.77827,2019-06-29 07:26:00 PDT,NA,1,1,10,yes,1,1,10,90,10,130,0,0,4,4,0,0,SEMSP,NA,
+DE642N1,DE642,1,targeted,50.305633,-125.337583,2019-07-02 07:24:00 PDT,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE642N2,DE642,2,targeted,50.304533,-125.336083,2019-07-02 07:43:00 PDT,NA,10,0,0,yes,3,3,10,10,10,194,1,1,4,4,0,0,SEMSP,NA,
+DE642N3,DE642,3,targeted,50.308817,-125.325983,2019-07-02 11:24:00 PDT,NA,10,1,10,yes,14,17,0,440,1,440,0,0,0,3,0,0,SEMSP,NA,
+DE643N1,DE643,1,targeted,50.2727,-125.376983,2019-07-03 06:59:00 PDT,NA,1,0,0,yes,0,0,10,76,10,165,0,0,1,1,1,1,SEMSP,NA,
+DE644N1,DE644,1,targeted,50.234917,-125.394583,2019-07-03 10:13:00 PDT,NA,1,0,1,no,0,0,0,99,0,99,0,0,0,3,0,0,SEMSP,NA,
+DE644N2,DE644,2,targeted,50.232967,-125.393833,2019-07-03 10:42:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
 DE644N3,DE644,3,targeted,50.23085,-125.394533,2019-07-03 10:59:00 PDT,NA,1,0,0,yes,0,0,10,34,0,72,0,0,0,0,0,0,SEMSP,"Thought there was one sockeye and therefore retained 10 pink; however, no sockeye found upon subsequent inspection, so discontinued retention",
-JE526N1,JE526,1,targeted,50.54523,-126.66216,2019-07-04 07:12:00 PDT,NA,0,1,10,yes,2,2,10,67,11,144,0,1,0,0,1,1,SEMSP,,
-DE646N1,DE646,1,targeted,50.457633,-125.259917,2019-07-04 09:01:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE646N2,DE646,2,targeted,50.456783,-125.264833,2019-07-04 09:23:00 PDT,NA,1,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE646N3,DE646,3,targeted,50.456867,-125.26715,2019-07-04 10:14:00 PDT,NA,1,0,10,yes,5,5,2,2,12,421,1,1,0,0,0,0,SEMSP,,
-JE527N1,JE527,1,targeted,50.53932,-126.78125,2019-07-06 07:48:00 PDT,NA,0,10,10,yes,2,2,10,117,10,258,0,0,0,0,0,0,SEMSP,,
-DE647N1,DE647,1,targeted,50.305917,-125.333817,2019-07-08 06:52:00 PDT,NA,1,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE647N2,DE647,2,targeted,50.3076,-125.327583,2019-07-08 07:16:00 PDT,NA,1,0,1,no,0,0,0,11,0,26,0,0,0,0,0,0,SEMSP,,
-DE647N3,DE647,3,targeted,50.312667,-125.32365,2019-07-08 07:43:00 PDT,NA,0,1,0,yes,1,1,10,72,12,105,0,0,4,4,0,0,SEMSP,,
-DE648N1,DE648,1,targeted,50.26936667,-125.3628167,2019-07-09 06:27:00 PDT,NA,0,0,10,yes,0,0,10,72,10,43,0,0,8,8,0,0,SEMSP,,
-DE649N1,DE649,1,targeted,50.24285,-125.3972667,2019-07-09 08:49:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE649N2,DE649,2,targeted,50.24078333,-125.3993833,2019-07-09 09:05:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE649N3,DE649,3,targeted,50.23451667,-125.39835,2019-07-09 09:35:00 PDT,NA,1,0,10,no,0,0,0,8,0,40,0,1,0,1,0,0,SEMSP,,
-JE528N1,JE528,1,targeted,50.54463,-126.65824,2019-07-09 07:09:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE528N2,JE528,2,targeted,50.54428,-126.6545,2019-07-09 07:35:00 PDT,NA,1,1,10,yes,5,5,10,78,10,280,0,0,10,11,0,0,SEMSP,,
-JE529N1,JE529,1,targeted,50.54004,-126.78122,2019-07-11 07:34:00 PDT,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE529N2,JE529,2,targeted,50.53959,-126.77962,2019-07-11 08:20:00 PDT,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-JE529N3,JE529,3,targeted,50.54053,-126.78,2019-07-11 08:50:00 PDT,NA,0,10,10,yes,3,3,10,142,12,320,0,1,4,4,0,0,SEMSP,,
-DE651N1,DE651,1,targeted,50.4573,-125.265333,2019-07-11 08:51:00 PDT,NA,0,0,1,yes,1,1,10,148,10,45,0,0,10,10,0,0,SEMSP,,
-DE652N1,DE652,1,targeted,50.308483,-125.324317,2019-07-22 08:20:00 PDT,NA,0,0,10,yes,2,2,10,71,10,10,0,0,0,0,0,0,SEMSP,,
-DE652N2,DE652,2,targeted,50.30645,-125.325817,2019-07-22 10:45:00 PDT,NA,0,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
-DE652N3,DE652,3,targeted,50.308717,-125.323283,2019-07-22 11:11:00 PDT,NA,0,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,,
+JE526N1,JE526,1,targeted,50.54523,-126.66216,2019-07-04 07:12:00 PDT,NA,0,1,10,yes,2,2,10,67,11,144,0,1,0,0,1,1,SEMSP,NA,
+DE646N1,DE646,1,targeted,50.457633,-125.259917,2019-07-04 09:01:00 PDT,NA,1,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE646N2,DE646,2,targeted,50.456783,-125.264833,2019-07-04 09:23:00 PDT,NA,1,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE646N3,DE646,3,targeted,50.456867,-125.26715,2019-07-04 10:14:00 PDT,NA,1,0,10,yes,5,5,2,2,12,421,1,1,0,0,0,0,SEMSP,NA,
+JE527N1,JE527,1,targeted,50.53932,-126.78125,2019-07-06 07:48:00 PDT,NA,0,10,10,yes,2,2,10,117,10,258,0,0,0,0,0,0,SEMSP,NA,
+DE647N1,DE647,1,targeted,50.305917,-125.333817,2019-07-08 06:52:00 PDT,NA,1,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE647N2,DE647,2,targeted,50.3076,-125.327583,2019-07-08 07:16:00 PDT,NA,1,0,1,no,0,0,0,11,0,26,0,0,0,0,0,0,SEMSP,NA,
+DE647N3,DE647,3,targeted,50.312667,-125.32365,2019-07-08 07:43:00 PDT,NA,0,1,0,yes,1,1,10,72,12,105,0,0,4,4,0,0,SEMSP,NA,
+DE648N1,DE648,1,targeted,50.26936667,-125.3628167,2019-07-09 06:27:00 PDT,NA,0,0,10,yes,0,0,10,72,10,43,0,0,8,8,0,0,SEMSP,NA,
+DE649N1,DE649,1,targeted,50.24285,-125.3972667,2019-07-09 08:49:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE649N2,DE649,2,targeted,50.24078333,-125.3993833,2019-07-09 09:05:00 PDT,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE649N3,DE649,3,targeted,50.23451667,-125.39835,2019-07-09 09:35:00 PDT,NA,1,0,10,no,0,0,0,8,0,40,0,1,0,1,0,0,SEMSP,NA,
+JE528N1,JE528,1,targeted,50.54463,-126.65824,2019-07-09 07:09:00 PDT,NA,1,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE528N2,JE528,2,targeted,50.54428,-126.6545,2019-07-09 07:35:00 PDT,NA,1,1,10,yes,5,5,10,78,10,280,0,0,10,11,0,0,SEMSP,NA,
+JE529N1,JE529,1,targeted,50.54004,-126.78122,2019-07-11 07:34:00 PDT,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE529N2,JE529,2,targeted,50.53959,-126.77962,2019-07-11 08:20:00 PDT,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+JE529N3,JE529,3,targeted,50.54053,-126.78,2019-07-11 08:50:00 PDT,NA,0,10,10,yes,3,3,10,142,12,320,0,1,4,4,0,0,SEMSP,NA,
+DE651N1,DE651,1,targeted,50.4573,-125.265333,2019-07-11 08:51:00 PDT,NA,0,0,1,yes,1,1,10,148,10,45,0,0,10,10,0,0,SEMSP,NA,
+DE652N1,DE652,1,targeted,50.308483,-125.324317,2019-07-22 08:20:00 PDT,NA,0,0,10,yes,2,2,10,71,10,10,0,0,0,0,0,0,SEMSP,NA,
+DE652N2,DE652,2,targeted,50.30645,-125.325817,2019-07-22 10:45:00 PDT,NA,0,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
+DE652N3,DE652,3,targeted,50.308717,-125.323283,2019-07-22 11:11:00 PDT,NA,0,0,1,no,0,0,0,0,0,0,0,0,0,0,0,0,SEMSP,NA,
