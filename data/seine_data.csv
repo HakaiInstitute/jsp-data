@@ -478,8 +478,7 @@ JE298N1,JE298,1,targeted,50.543818,-126.794456,2016-07-04 13:35:00 PDT,18,NA,NA,
 JE300N1,JE300,1,targeted,50.47779,-126.429726,2016-07-05 07:38:00 PDT,1,NA,NA,NA,no,0,0,0,20,0,80,0,1,0,0,0,10,SEMSP,NA,
 JE302N1,JE302,1,targeted,50.456886,-126.162647,2016-07-05 12:45:00 PDT,3,NA,NA,NA,yes,30,200,10,300,10,300,0,0,1,1,NA,NA,SEMSP,NA,
 JE303N1,JE303,1,targeted,50.457049,-126.162651,2016-07-06 07:05:00 PDT,7,NA,NA,NA,yes,22,22,10,300,10,300,1,2,0,0,NA,NA,SEMSP,NA,
-JE304N1,JE304,1,targeted,NA,NA,NA,NA,NA,NA,NA,no,0,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEMSP,No sockeye in set; did not enumerate. ,Seine ID formerly JE304N1
-JE304N2,JE304,2,targeted,50.54522,-126.65949,2017-06-06 08:20:00 PDT,NA,10,0,10,yes,23,23,0,0,10,59,8,8,0,0,0,0,SEMSP,NA,Seine ID formerly JN1
+JE304N2,JE304,1,targeted,50.54522,-126.65949,2017-06-06 08:20:00 PDT,NA,10,0,10,yes,23,23,0,0,10,59,8,8,0,0,0,0,SEMSP,Missed fish on first set; did not record any data.,Seine ID formerly JN1
 JE305N1,JE305,1,targeted,50.6022,-126.70567,2017-06-06 15:27:00 PDT,NA,10,0,1000,yes,7,600,0,0,0,100,0,100,0,10,0,0,SEMSP,"No oceanography completed due to sudden change in weather. Trialled live-licing and anaesthatization protocols, but could not finish due to weather. Some morphological measurements missing. . ",Seine ID formerly JN4
 JE306N2,JE306,2,targeted,50.54393,-126.8131,2017-06-13 11:20:00 PDT,NA,10,0,100,no,0,130,0,10,0,10,0,10,0,1,0,0,SEMSP,NA,Seine ID formerly JN6
 JE306N1,JE306,1,targeted,50.5438,-126.80927,2017-06-13 07:10:00 PDT,NA,10,0,100,yes,30,325,0,0,10,50,10,45,0,0,0,0,SEMSP,NA,Seine ID formerly JN5

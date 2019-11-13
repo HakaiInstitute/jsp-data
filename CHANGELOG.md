@@ -15,6 +15,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Changed
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
 
+### Removed
+- Deleted seine with no data due to being botched: JE304N1
+
 
 ## [1.0.2] - 2019-10-24
 ### Fixed
