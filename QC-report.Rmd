@@ -97,6 +97,18 @@ knitr::kable(quality_comments, caption = "Table 3. Fish quality log comments gro
 
 `r nrow(no_fish_loc)` fish have no location information associated with them.
 
+## Sample results
+
+### Sockeye Diets
+
+```{r}
+sockeye_diets <- read_csv(here("data", "sample_results", "sockeye_diets.csv"))
+
+test_join <- anti_join(sockeye_diets, fish_data)
+```
+
+We have `r length(unique(sockeye_diets$ufn))` diet results for juvenile sockeye
+
 # Relational Joins
 
 Do all seines have a survey to match to?
