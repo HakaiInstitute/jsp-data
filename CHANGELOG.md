@@ -12,10 +12,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Fixed
 - U20251 species ID corrected from CO to CK
 - Updated seine DE607N1 to reflect change in species ID
+- Used zooplankton tow coordinates for seine DE293N1 due to transcribed seine coordinates being on land
+- Added missing lat/long for JE225N1
+- Fixed incorrect lat value for DE526N1
 
 ### Changed
 - Renamed samples folder to sample_results
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
+
+### Removed
+- Deleted seine with no data due to being botched: JE304N1
 
 
 ## [1.0.2] - 2019-10-24
