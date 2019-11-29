@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 
-## [1.0.3]
+## Unreleased
+
+### Added
+- Sockeye diet results (see: data > sample_results > sockeye_diets) from 302 sockeye caught in 2015 and 2016 from Sam James' MSc. thesis
+
 ### Fixed
 - U20251 species ID corrected from CO to CK
 - Updated seine DE607N1 to reflect change in species ID
@@ -13,6 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Fixed incorrect lat value for DE526N1
 
 ### Changed
+- Renamed samples folder to sample_results
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
 
 ### Removed
