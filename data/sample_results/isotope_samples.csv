@@ -2951,7 +2951,7 @@ S3257IS1,isotope,U3257,NA,DCostalago_UBC,raw,NA
 S3258IS1,isotope,U3258,NA,DCostalago_UBC,raw,NA
 S3259IS1,isotope,U3259,NA,DCostalago_UBC,raw,NA
 S3260IS1,isotope,U3260,NA,DCostalago_UBC,raw,NA
-S3261IS1,isotope,U3261,NA,DCostalago_UBC,raw,NA
+S3261IS1,isotope,U3261,NA,DCostalago_UBC,raw,Verify that this is an actual sample vial and not a legacy placeholder
 S3262IS1,isotope,U3262,NA,DCostalago_UBC,raw,NA
 S3263IS1,isotope,U3263,NA,DCostalago_UBC,raw,NA
 S3264IS1,isotope,U3264,NA,DCostalago_UBC,raw,NA
@@ -3678,7 +3678,7 @@ SIS4598,isotope,U4198,NA,DCostalago_UBC,raw,NA
 SIS4599,isotope,U4199,NA,DCostalago_UBC,raw,NA
 SIS4600,isotope,U4200,NA,DCostalago_UBC,raw,NA
 SIS4601,isotope,U4201,NA,DCostalago_UBC,raw,NA
-SIS4602,isotope,U4202,NA,DCostalago_UBC,raw,NA
+SIS4602,isotope,U4202,NA,DCostalago_UBC,raw,Determine whether there is actually a sample or is a relic
 SIS4603,isotope,U4203,NA,DCostalago_UBC,raw,NA
 SIS4604,isotope,U4204,NA,DCostalago_UBC,raw,NA
 SIS4605,isotope,U4205,NA,DCostalago_UBC,raw,NA
