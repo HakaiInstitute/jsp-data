@@ -1,18 +1,11 @@
 library(tidyverse)
 library(here)
 library(googlesheets4)
+library(lubridate)
 
 fish_f <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/data/fish_field_data.csv", guess_max = 20000)
 fish_l <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/data/fish_lab_data.csv", guess_max = 20000)
 fish <- full_join(fish_f, fish_l, by = "ufn")
-
-
-
-# RNA:DNA -----------------------------------------------------------------
-
-
-
-
 
 # Fatty Acid --------------------------------------------------------------
 
@@ -161,6 +154,7 @@ whatman_fish <- whatman_gs %>%
 dna_fish_all <- bind_rows(whatman_fish,dna_fish)
 write_csv(dna_fish_all, here::here("data", "sample_inventory", "dna_samples.csv"))
 
+
 # Otolith --------------------------------------------------------------
 oto_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "otolith_metadata")
 oto_ship_log <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "otolith")
@@ -214,6 +208,20 @@ sl_id_fish <- left_join(sl_id_gs, select(fish_l, ufn, date_processed), by = "ufn
          analyzing_lab)
 
 write_csv(sl_id_fish, here::here("data", "sample_inventory", "sea_lice_id_samples.csv"))
+sl_id_fish <- read_csv(here::here("data", "sample_inventory", "sea_lice_id_samples.csv")) %>% 
+  mutate(sample_subtype = case_when(sample_type == "sealice_id_fs" ~ "finescale",
+                                    str_detect(sample_id, "LC") ~ "mot_cal",
+                                    str_detect(sample_id, "LL") ~ "mot_lep",
+                                    str_detect(sample_id, "SL1") ~ "mot_pool"),
+         sample_type = "sealice_id") %>% 
+  select(sample_id,
+         sample_type,
+         sample_subtype,
+         ufn,
+         sample_comments,
+         analyzing_lab)
+write_csv(sl_id_fish, here::here("data", "sample_inventory", "sea_lice_id_samples.csv"))
+
 
 # Scales --------------------------------------------------------------
 scales_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "scale_metadata")
@@ -232,4 +240,112 @@ scales_fish <- left_join(scales_gs, select(fish_l, ufn, date_processed), by = "u
 write_csv(scales_fish, here::here("data", "sample_inventory", "scale_samples.csv"))
 
 # Carcass/Dissected Fish --------------------------------------------------------------
+carc_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "carcass_metadata")
+carc_ship_log <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "carcass")
+        
+carc_qc <- left_join(fish_l, carc_gs, by = "ufn") %>% 
+  filter(is.na(sample_id))
 
+carc_fish <- left_join(carc_gs, select(fish_l, ufn, date_processed)) %>% 
+  filter(!str_detect(sample_id, "U")) %>% 
+  mutate(sample_type = "carcass",
+         sample_subtype = ifelse(date_processed > as.Date("2018-01-08"), "muscle", "whole")) %>% 
+  drop_na(date_processed) %>% 
+  filter(sample_id != "UNKNOWN") %>% 
+  select(sample_id,
+         sample_type,
+         sample_subtype,
+         ufn,
+         sample_comments = comments_sample)
+
+write_csv(carc_fish, here::here("data", "sample_inventory", "carcasses_samples.csv"))
+
+# RNA:DNA --------------------------------------------------------------
+rd_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-muscle_metadata")
+rd_ship_log <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "rna_dna")
+
+rd_qc <- left_join(fish_l, rd_gs, by = "ufn") %>% 
+  filter(is.na(sample_id)) %>% 
+  # group_by(dissection_protocol) %>% 
+  # summarize(count=n()) %>% 
+  filter(dissection_protocol == "full1")
+
+rd_fish <- left_join(rd_gs, select(fish_l, ufn, date_processed), by = "ufn") %>% 
+  drop_na(date_processed) %>% 
+  filter(sample_id != "UNKNOWN") %>% 
+  left_join(select(rd_ship_log, container_id, destination), by = "container_id") %>% 
+  mutate(analyzing_lab = case_when(destination == "UBC Hunt Lab (Jessica Garzke)" ~ "JGarzke_UBC",
+                                   destination == "Hakai Marna Lab" ~ "Hakai",
+                                   sample_id %in% list1$sample_id ~ "Hakai",
+                                   sample_id %in% list2$sample_id ~ "Hakai",
+                                   sample_id %in% list3$sample_id ~ "Hakai",
+                                   ufn %in% list4$ufn ~ "Hakai")) %>% 
+  select(ufn,
+         sample_type,
+         sample_id,
+         sample_comments = comments_sample,
+         analyzing_lab)
+
+list1 <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/juvenile-salmon/master/Sample%20Requests/RNA-DNA/2019-07-26_cjanusson_2017-18_D09_SO_subsample.csv?token=AHVGT6WQTSLZCFCJJGPUGGS6EI3JA")
+list2 <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/juvenile-salmon/master/Sample%20Requests/RNA-DNA/2019-08-13_cjanusson_RNA-DNA_2019_D09_SO.csv?token=AHVGT6V7RDEURBAZNNQH3MC6EI75Y")
+list3 <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/juvenile-salmon/master/Sample%20Requests/RNA-DNA/2019-08-14_cjanusson_2017-18_D09_SO_subsample2.csv?token=AHVGT6SE6S3RUQNRFNXS62C6EI75U")
+list4 <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/juvenile-salmon/master/Sample%20Requests/RNA-DNA/2019-08-30_cjanusson_RNA-DNA_2019_D09_SO.csv?token=AHVGT6UUPAOTSVQVO3C37I26EI75S")
+
+write_csv(rd_fish, here::here("data", "sample_inventory", "rna_dna_samples.csv"))
+# Make sure to update samples with 2019 data, and that some exist in list 1-4 that need to have their analyzing lab set to 'Hakai'
+
+# RNA-Pathogen --------------------------------------------------------------
+rna_gill <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-gill_metadata")
+rna_brain <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-brain_metadata")
+rna_spleen <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-spleen_metadata")
+rna_liver <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-liver_metadata")
+rna_heart <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-heart_metadata")
+rna_kidney <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "rna-kidney_metadata")
+
+rna_containers <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "sample_container_inventory") %>% 
+  filter(str_detect(container_type, "pathogens"))
+
+rna_gill <- rna_gill %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "gill",
+         sample_id = paste("U", substr(ufn, 2,8), "RG1", sep=""))
+
+rna_brain <- rna_brain %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "brain",
+         sample_id = paste("U", substr(ufn, 2,8), "RB1", sep=""))
+
+rna_spleen <- rna_spleen %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "spleen",
+         sample_id = paste("U", substr(ufn, 2,8), "RS1", sep=""))
+
+rna_liver <- rna_liver %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "liver",
+         sample_id = paste("U", substr(ufn, 2,8), "RL1", sep=""))
+
+rna_heart <- rna_heart %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "heart",
+         sample_id = paste("U", substr(ufn, 2,8), "RH1", sep=""))
+
+rna_kidney <- rna_kidney %>% 
+  mutate(sample_type = "RNA_pathogens",
+         sample_subtype = "kidney",
+         sample_id = paste("U", substr(ufn, 2,8), "RK1", sep=""))
+
+rna_path <- bind_rows(rna_gill, rna_brain, rna_spleen, rna_liver, rna_heart, rna_kidney) %>% 
+  left_join(rna_containers, by = "container_id") %>% 
+  left_join(fish_l) %>% 
+  drop_na(sample_id) %>% 
+  mutate(analyzing_lab = case_when(current_location == "Hakai Quadra Marna Lab" ~ "PBS",
+                                   current_location == "Pacific Biological Station" ~ "PBS")) %>% 
+  select(sample_id,
+         sample_type,
+         sample_subtype,
+         ufn,
+         sample_comments = comments_sample,
+         analyzing_lab)
+
+write_csv(rna_path, here::here("data", "sample_inventory", "rna_pathogen_samples.csv"))
