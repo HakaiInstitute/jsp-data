@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 - Sockeye diet results (see: data > sample_results > sockeye_diets) from 302 sockeye caught in 2015 and 2016 from Sam James' MSc. thesis
+- Sample inventory for all tissue samples collected from dissections: RNA:DNA,  RNA-pathogens, fatty acid, stable isotope, stomach, scale, otolith, sea lice ID, sea lice microbiome,
+DNA, extra muscle, and carcass. This is just the complete list of samples taken and does not contain any physical location data. Location data can be found on eLabJournal.
 
 ### Fixed
 - U20251 species ID corrected from CO to CK
@@ -17,11 +19,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Fixed incorrect lat value for DE526N1
 
 ### Changed
-- Renamed samples folder to sample_results
+- Folder sample_results contains sockeye_diets, sealice_lab_fs, and stock_id
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
+- Dissection protocol categories in fish_lab_data renamed for better readibility (also updated in data dictionary)
+- Renamed stock_id qc level category in accordance with Hakai Data Standards document drafted by Brett Johnson
 
 ### Removed
 - Deleted seine with no data due to being botched: JE304N1
+- UFNs from stock_id with no results; those samples can now be found in data/sample_inventory/dna_samples.csv
 
 
 ## [1.0.2] - 2019-10-24
