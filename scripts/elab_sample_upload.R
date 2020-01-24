@@ -4,11 +4,9 @@ library(googlesheets4)
 library(here)
 library(xlsx)
 library(gtools)
-library(naturalsort)
 
 fish_f <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/data/fish_field_data.csv", guess_max = 20000)
 fish_l <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/data/fish_lab_data.csv", guess_max = 10000)
-
 
 ## Carcasses -----------------------------------------------------------------------------------------------------------------------------
 carcass_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "carcass_metadata") %>% 
@@ -104,6 +102,7 @@ slmb_db <- read_csv(here("data", "sample_inventory", "sea_lice_microbiome_sample
   full_join(select(slmb_gs,
                    ufn, sample_id, container_id, container_cell)
             ) %>% 
+  # filter(!ufn %in% fish_l$ufn) %>% # There are 2019 samples that are not in fish_l
   mutate(location_qc = paste(container_id, container_cell, sep = "-")) %>% 
   group_by(location_qc) %>% 
   mutate(sample_quality_flag = case_when(location_qc == "NA-NA" ~ "AV",
@@ -124,3 +123,15 @@ slmb_db <- read_csv(here("data", "sample_inventory", "sea_lice_microbiome_sample
   select(sample_id, sample_type, sample_subtype, ufn, sample_comments, analyzing_lab, sample_quality_flag, sample_quality_log)
 
 write_csv(slmb_db, here("data", "sample_inventory", "sea_lice_microbiome_samples.csv"))
+
+
+## Sea Lice ID -----------------------------------------------------------------------------------------------------------------------------
+slid_gs <- sl_gs %>% 
+  filter(!str_detect(sample_type, "cryo")) %>% 
+  filter(ufn %in% fish_l$ufn) %>% 
+  arrange(container_id)
+write_csv(slid_gs, here("elab_temp", "elab_slid_upload.csv"))
+
+
+## DNA -----------------------------------------------------------------------------------------------------------------------------
+ 
