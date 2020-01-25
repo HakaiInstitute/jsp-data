@@ -17,16 +17,19 @@ DNA, extra muscle, and carcass. This is just the complete list of samples taken 
 - Used zooplankton tow coordinates for seine DE293N1 due to transcribed seine coordinates being on land
 - Added missing lat/long for JE225N1
 - Fixed incorrect lat value for DE526N1
+- Incorrect DNA sample_ids for U3984-U3993
 
 ### Changed
 - Folder sample_results contains sockeye_diets, sealice_lab_fs, and stock_id
 - Added prefixes to qc_flag and qc_log fields in `seine_data`, `fish_field_data`, and `fish_lab_data` so they don't conflict when merging tables
 - Dissection protocol categories in fish_lab_data renamed for better readibility (also updated in data dictionary)
 - Renamed stock_id qc level category in accordance with Hakai Data Standards document drafted by Brett Johnson
+- UFN assignment of undissected fish from 2015-2016 now follow the relative order of the SEMSP IDs
 
 ### Removed
 - Deleted seine with no data due to being botched: JE304N1
 - UFNs from stock_id with no results; those samples can now be found in data/sample_inventory/dna_samples.csv
+- Fish SEMSP IDs 2016-06-22-D21-SO-31 to SO-60 and U19102-U19131 because these were trainer fish and not part of the standard processing stream
 
 
 ## [1.0.2] - 2019-10-24
