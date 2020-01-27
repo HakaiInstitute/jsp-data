@@ -134,4 +134,51 @@ write_csv(slid_gs, here("elab_temp", "elab_slid_upload.csv"))
 
 
 ## DNA -----------------------------------------------------------------------------------------------------------------------------
- 
+
+dna_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "dna_metadata") %>% 
+  select(sample_id,container_id, container_cell) %>% 
+  mutate(container_cell = as.character(container_cell))
+whatman_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "whatman_ids") %>% 
+  filter(!stock_id %in% dna_gs$sample_id) %>% 
+  select(sample_id = stock_id, container_id = whatman_sheet) %>% 
+  mutate(container_cell = "NA")
+dna_ws_gs <- bind_rows(dna_gs, whatman_gs)
+dna_db <- read_csv(here::here("data", "sample_inventory", "dna_samples.csv"), guess_max=10000) %>% 
+  left_join(dna_ws_gs, by = "sample_id")
+
+missing <- dna_db %>% 
+  filter(!sample_id %in% dna_ws_gs$sample_id)
+
+## Extra Muscle -----------------------------------------------------------------------------------------------------------------------------
+xm_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "xm_metadata")
+xm_db <- read_csv(here("data", "sample_inventory", "extra_muscle_samples.csv"), guess_max = 10000) %>% 
+  full_join(xm_gs) %>% 
+  mutate(location_qc = paste(container_id, container_cell, sep = "-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(container_id == "UNKNOWN" ~ "MV",
+                                         n() != 1 ~ "SVC",
+                                         n() == 1 ~ "AV")
+  ) %>% 
+  ungroup() %>%
+  mutate(sample_quality_log = NA) %>% 
+  select(sample_id:analyzing_lab, sample_quality_flag, sample_quality_log)
+
+write_csv(xm_db, here("data", "sample_inventory", "extra_muscle_samples.csv"))
+
+freezer <- read_sheet("1v0MVKUKd526wOUXNSHsKNr1a9xLqRywfrs22smnpk2Y", sheet = "RNA, FA, XM, SL") %>% 
+  mutate(location = paste(destination, name, sep = " / ")) %>% 
+  select(container_id = name, location)
+
+xm_boxes <- freezer %>% 
+  filter(str_detect(container_id, "BXM"))
+
+xm_elab <- xm_db %>% 
+  filter(sample_quality_flag == "AV") %>% 
+  left_join(select(xm_gs, sample_id, container_cell, container_id)) %>% 
+  left_join(xm_boxes) %>% 
+  mutate(container_cell = as.numeric(container_cell)) %>% 
+  arrange(container_id, container_cell)
+xm_elab <- xm_elab[mixedorder(xm_elab$container_id),]
+  
+write_csv(xm_elab, here("elab_temp", "elab_xm_upload.csv"))
+
