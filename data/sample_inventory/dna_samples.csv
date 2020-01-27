@@ -278,7 +278,7 @@ S10930DN1,DNA,liver,U10930,NA,NA,AV,NA
 SDN1026,DNA,liver,U1094,NA,PBS,AV,NA
 S10941DN1,DNA,liver,U10941,NA,NA,AV,NA
 S10942DN1,DNA,liver,U10942,NA,NA,AV,NA
-S1095DN1,DNA,liver,U1095,NA,NA,MV,Sample location unknown & cannot be verified
+S1095DN1,DNA,liver,U1095,NA,NA,MV,Last transcribed sample location cannot be verified (SO10-76) 2018-01-27 JG
 SDN1038,DNA,fin_clip,U1096,Fin clip taken,PBS,AV,NA
 SDN1039,DNA,liver,U1097,NA,PBS,AV,NA
 SDN1040,DNA,liver,U1098,NA,PBS,AV,NA
@@ -338,7 +338,7 @@ S11169DN1,DNA,liver,U11169,NA,NA,AV,NA
 SDN1363,DNA,liver,U1117,NA,PBS,AV,NA
 S11170DN1,DNA,liver,U11170,NA,NA,AV,NA
 SDN1364,DNA,liver,U1118,NA,PBS,AV,NA
-S1119DN1,DNA,liver,U1119,NA,NA,MV,Sample location unknown & cannot be verified
+S1119DN1,DNA,liver,U1119,NA,NA,MV,Last transcribed sample location cannot be verified (SO14-29) 2018-01-27 JG
 S112DN1,DNA,liver,U112,NA,NA,AV,NA
 SDN1366,DNA,liver,U1120,NA,PBS,AV,NA
 SDN1049,DNA,liver,U1121,NA,PBS,AV,NA
@@ -404,7 +404,7 @@ SDN1094,DNA,liver,U1147,NA,PBS,AV,NA
 SDN1095,DNA,liver,U1148,NA,PBS,AV,NA
 SDN1096,DNA,liver,U1149,NA,PBS,AV,NA
 S115DN1,DNA,liver,U115,NA,NA,AV,NA
-S1150DN1,DNA,liver,U1150,NA,NA,MV,Sample location unknown & cannot be verified
+S1150DN1,DNA,liver,U1150,NA,NA,MV,Last transcribed sample location cannot be verified (SO11-62) 2018-01-27 JG
 SDN1087,DNA,liver,U1151,NA,PBS,AV,NA
 SDN1088,DNA,liver,U1152,NA,PBS,AV,NA
 SDN1089,DNA,liver,U1153,NA,PBS,AV,NA
@@ -501,7 +501,7 @@ SDN1168,DNA,liver,U1234,NA,PBS,AV,NA
 SDN1191,DNA,liver,U1235,NA,PBS,AV,NA
 SDN1192,DNA,liver,U1236,NA,PBS,AV,NA
 SDN1193,DNA,liver,U1237,NA,PBS,AV,NA
-S1238DN1,DNA,liver,U1238,NA,NA,MV,Sample location unknown & cannot be verified
+S1238DN1,DNA,liver,U1238,NA,NA,MV,Last transcribed sample location cannot be verified (SO12-53) 2018-01-27 JG
 SDN1209,DNA,liver,U1239,NA,PBS,AV,NA
 S124DN1,DNA,liver,U124,NA,NA,AV,NA
 SDN1210,DNA,liver,U1240,NA,PBS,AV,NA
@@ -829,7 +829,7 @@ SDN1303,DNA,liver,U1349,NA,PBS,AV,NA
 SDN148,DNA,liver,U135,NA,PBS,AV,NA
 SDN1304,DNA,liver,U1350,NA,PBS,AV,NA
 SDN1263,DNA,liver,U1351,NA,PBS,AV,NA
-S1352DN1,DNA,liver,U1352,NA,NA,MV,Sample location unknown & cannot be verified
+S1352DN1,DNA,liver,U1352,NA,NA,MV,Last transcribed sample location cannot be verified (SO13-26) 2018-01-27 JG
 SDN1275,DNA,liver,U1353,NA,PBS,AV,NA
 SDN1276,DNA,liver,U1354,NA,PBS,AV,NA
 SDN1277,DNA,liver,U1355,NA,PBS,AV,NA
@@ -1081,7 +1081,7 @@ S2626DN1,DNA,liver,U2626,NA,NA,AV,NA
 S2627DN1,DNA,liver,U2627,NA,NA,AV,NA
 S2628DN1,DNA,liver,U2628,NA,NA,AV,NA
 S2629DN1,DNA,liver,U2629,NA,NA,AV,NA
-S263DN1,DNA,liver,U263,NA,NA,MV,Sample location unknown & cannot be verified
+S263DN1,DNA,liver,U263,NA,NA,MV,Last transcribed sample location cannot be verified (SO3-11) 2018-01-27 JG
 S2630DN1,DNA,liver,U2630,NA,NA,AV,NA
 S2631DN1,DNA,liver,U2631,NA,NA,AV,NA
 S2632DN1,DNA,liver,U2632,NA,NA,AV,NA
@@ -1103,7 +1103,7 @@ S2646DN1,DNA,liver,U2646,NA,NA,AV,NA
 S2647DN1,DNA,liver,U2647,NA,NA,AV,NA
 S2648DN1,DNA,liver,U2648,NA,NA,AV,NA
 S2649DN1,DNA,liver,U2649,NA,NA,AV,NA
-S265DN1,DNA,liver,U265,NA,NA,MV,Sample location unknown & cannot be verified
+S265DN1,DNA,liver,U265,NA,NA,MV,Last transcribed sample location cannot be verified (SO3-19) 2018-01-27 JG
 S2650DN1,DNA,liver,U2650,NA,NA,AV,NA
 S2651DN1,DNA,liver,U2651,NA,NA,AV,NA
 S2652DN1,DNA,liver,U2652,NA,NA,AV,NA
@@ -1608,7 +1608,7 @@ SDN325,DNA,liver,U334,NA,PBS,AV,NA
 SDN327,DNA,liver,U335,NA,PBS,AV,NA
 SDN328,DNA,liver,U336,NA,PBS,AV,NA
 SDN329,DNA,liver,U337,NA,PBS,AV,NA
-S338DN1,DNA,liver,U338,NA,NA,MV,Sample location unknown & cannot be verified
+S338DN1,DNA,liver,U338,NA,NA,MV,Last transcribed sample location cannot be verified (SO3-97) 2018-01-27 JG
 SDN331,DNA,liver,U339,NA,PBS,AV,NA
 S34DN1,DNA,liver,U34,NA,NA,AV,NA
 SDN332,DNA,liver,U340,NA,PBS,AV,NA
@@ -1619,7 +1619,7 @@ SDN335,DNA,liver,U344,NA,PBS,AV,NA
 SDN336,DNA,liver,U345,NA,PBS,AV,NA
 SDN337,DNA,liver,U346,NA,PBS,AV,NA
 SDN338,DNA,liver,U347,NA,PBS,AV,NA
-S348DN1,DNA,liver,U348,NA,NA,MV,Sample location unknown & cannot be verified
+S348DN1,DNA,liver,U348,NA,NA,MV,Last transcribed sample location cannot be verified (SO4-1) 2018-01-27 JG
 SDN347,DNA,liver,U349,NA,PBS,AV,NA
 SDN27,DNA,liver,U35,NA,PBS,AV,NA
 SDN348,DNA,liver,U350,NA,PBS,AV,NA
@@ -2078,7 +2078,7 @@ SDN425,DNA,liver,U441,NA,PBS,AV,NA
 SDN426,DNA,liver,U442,NA,PBS,AV,NA
 SDN431,DNA,liver,U443,NA,PBS,AV,NA
 SDN432,DNA,liver,U444,NA,PBS,AV,NA
-S445DN1,DNA,liver,U445,NA,NA,MV,Sample location unknown & cannot be verified
+S445DN1,DNA,liver,U445,NA,NA,MV,Last transcribed sample location cannot be verified (SO4-91) 2018-01-27 JG
 SDN434,DNA,liver,U446,NA,PBS,AV,NA
 SDN435,DNA,liver,U447,NA,PBS,AV,NA
 SDN436,DNA,liver,U448,NA,PBS,AV,NA
@@ -2104,7 +2104,7 @@ SDN452,DNA,liver,U465,NA,PBS,AV,NA
 SDN457,DNA,liver,U466,NA,PBS,AV,NA
 SDN458,DNA,liver,U467,NA,PBS,AV,NA
 SDN459,DNA,liver,U468,NA,PBS,AV,NA
-S469DN1,DNA,liver,U469,NA,NA,MV,Sample location unknown & cannot be verified
+S469DN1,DNA,liver,U469,NA,NA,MV,Last transcribed sample location cannot be verified (SO5-18) 2018-01-27 JG
 S47DN1,DNA,liver,U47,NA,NA,AV,NA
 SDN461,DNA,liver,U470,NA,PBS,AV,NA
 SDN5154,DNA,liver,U4704,NA,NA,AV,NA
@@ -2396,7 +2396,7 @@ SDN5545,DNA,liver,U5006,NA,NA,AV,NA
 SDN5546,DNA,liver,U5007,NA,NA,AV,NA
 SDN5547,DNA,liver,U5008,NA,NA,AV,NA
 SDN5548,DNA,liver,U5009,NA,NA,AV,NA
-S501DN1,DNA,liver,U501,NA,NA,MV,Sample location unknown & cannot be verified
+S501DN1,DNA,liver,U501,NA,NA,MV,Last transcribed sample location cannot be verified (SO5-47) 2018-01-27 JG
 SDN5549,DNA,liver,U5010,NA,NA,AV,NA
 SDN5550,DNA,liver,U5011,NA,NA,AV,NA
 SDN5551,DNA,liver,U5012,NA,NA,AV,NA
@@ -2673,7 +2673,7 @@ SDN617,DNA,liver,U644,NA,PBS,AV,NA
 SDN618,DNA,liver,U645,NA,PBS,AV,NA
 SDN625,DNA,liver,U646,NA,PBS,AV,NA
 SDN626,DNA,liver,U647,NA,PBS,AV,NA
-S648DN1,DNA,liver,U648,NA,NA,MV,Sample location unknown & cannot be verified
+S648DN1,DNA,liver,U648,NA,NA,MV,Last transcribed sample location cannot be verified (SO6-88) 2018-01-27 JG
 SDN628,DNA,liver,U649,NA,PBS,AV,NA
 S65DN1,DNA,liver,U65,NA,NA,AV,NA
 SDN629,DNA,liver,U650,NA,PBS,AV,NA
@@ -2814,7 +2814,7 @@ SDN731,DNA,liver,U773,NA,PBS,AV,NA
 SDN741,DNA,liver,U774,NA,PBS,AV,NA
 SDN742,DNA,liver,U775,NA,PBS,AV,NA
 SDN743,DNA,liver,U776,NA,PBS,AV,NA
-S777DN1,DNA,liver,U777,NA,NA,MV,Sample location unknown & cannot be verified
+S777DN1,DNA,liver,U777,NA,NA,MV,Last transcribed sample location cannot be verified (SO8-5) 2018-01-27 JG
 SDN745,DNA,liver,U778,NA,PBS,AV,NA
 SDN746,DNA,liver,U779,NA,PBS,AV,NA
 S78DN1,DNA,liver,U78,NA,NA,AV,NA
@@ -2831,7 +2831,7 @@ SDN735,DNA,liver,U789,NA,PBS,AV,NA
 S79DN1,DNA,liver,U79,NA,NA,AV,NA
 SDN736,DNA,liver,U790,NA,PBS,AV,NA
 SDN737,DNA,liver,U791,NA,PBS,AV,NA
-S792DN1,DNA,liver,U792,NA,NA,MV,Sample location unknown & cannot be verified
+S792DN1,DNA,liver,U792,NA,NA,MV,Last transcribed sample location cannot be verified (SO7-94) 2018-01-27 JG
 SDN748,DNA,liver,U793,NA,PBS,AV,NA
 SDN749,DNA,liver,U794,NA,PBS,AV,NA
 SDN750,DNA,liver,U795,NA,PBS,AV,NA
@@ -2884,7 +2884,7 @@ SDN791,DNA,liver,U837,NA,PBS,AV,NA
 SDN792,DNA,liver,U838,NA,PBS,AV,NA
 SDN793,DNA,liver,U839,NA,PBS,AV,NA
 S84DN1,DNA,liver,U84,NA,NA,AV,NA
-S840DN1,DNA,liver,U840,NA,NA,MV,Sample location unknown & cannot be verified
+S840DN1,DNA,liver,U840,NA,NA,MV,Last transcribed sample location cannot be verified (SO8-68) 2018-01-27 JG
 SDN794,DNA,liver,U841,NA,PBS,AV,NA
 SDN795,DNA,liver,U842,NA,PBS,AV,NA
 SDN796,DNA,liver,U843,NA,PBS,AV,NA
