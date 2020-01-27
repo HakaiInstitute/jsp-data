@@ -2,7 +2,7 @@ library(tidyverse)
 library(lubridate)
 library(googlesheets4)
 library(here)
-library(xlsx)
+#library(xlsx)
 library(gtools)
 
 fish_f <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/data/fish_field_data.csv", guess_max = 20000)
@@ -135,19 +135,60 @@ write_csv(slid_gs, here("elab_temp", "elab_slid_upload.csv"))
 
 ## DNA -----------------------------------------------------------------------------------------------------------------------------
 
-dna_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "dna_metadata") %>% 
-  select(sample_id,container_id, container_cell) %>% 
-  mutate(container_cell = as.character(container_cell))
-whatman_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "whatman_ids") %>% 
-  filter(!stock_id %in% dna_gs$sample_id) %>% 
-  select(sample_id = stock_id, container_id = whatman_sheet) %>% 
-  mutate(container_cell = "NA")
-dna_ws_gs <- bind_rows(dna_gs, whatman_gs)
-dna_db <- read_csv(here::here("data", "sample_inventory", "dna_samples.csv"), guess_max=10000) %>% 
-  left_join(dna_ws_gs, by = "sample_id")
+dna_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "dna_metadata") 
+whatman_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "whatman_ids")
+stock_id <- read_csv(here::here("data", "sample_results", "stock_id.csv"))
+dna_ship <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "dna_finclip")
 
-missing <- dna_db %>% 
-  filter(!sample_id %in% dna_ws_gs$sample_id)
+dna <- dna_gs %>%
+  filter(str_detect(ufn, "U")) %>%
+  filter(ufn %in% fish_f$ufn) %>%
+  mutate(container_cell = as.character(container_cell),
+         sample_type = "DNA",) %>% 
+  select(
+    sample_id,
+    sample_type,
+    sample_subtype = tissue_type,
+    ufn,
+    container_id,
+    container_cell,
+    sample_comments = comments_sample
+  )
+
+whatman <- whatman_gs %>% 
+  select(-ufn) %>% 
+  left_join(select(fish_f, semsp_id, ufn)) %>% 
+  filter(ufn %in% fish_f$ufn) %>% 
+  filter(!stock_id %in% dna$sample_id) %>% 
+  mutate(sample_comments = "NA",
+         sample_type = "DNA",
+         sample_subtype = "fin_clip",
+         container_cell = "NA") %>% 
+  select(sample_id = stock_id,
+         sample_type,
+         sample_subtype,
+         ufn,
+         container_id = whatman_sheet,
+         container_cell,
+         sample_comments)
+
+dna_all <- bind_rows(dna,whatman) %>% 
+  mutate(location_qc = paste(container_id, container_cell, sep = "-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(analyzing_lab = case_when(container_id %in% dna_ship$container_id ~ "PBS",
+                                   sample_id %in% stock_id$sample_id ~ "PBS"),
+         sample_quality_flag = ifelse(container_cell == "UNKNOWN", "MV", "AV"),
+         sample_quality_log = case_when(sample_quality_flag == "MV" ~ paste("Sample location unknown & cannot be verified"))) %>% 
+  ungroup() %>% 
+  select(-container_id, container_cell, location_qc)
+
+write_csv(dna_all, here::here("data", "sample_inventory", "dna_samples.csv"))
+
+# TODO: Write a CSV with grid coordinates of 2016 fin clips & match to create eLab upload
+
+
+
+  
 
 ## Extra Muscle -----------------------------------------------------------------------------------------------------------------------------
 xm_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "xm_metadata")
