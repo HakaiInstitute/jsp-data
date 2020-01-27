@@ -17,7 +17,7 @@ DNA, extra muscle, and carcass. This is just the complete list of samples taken 
 - Used zooplankton tow coordinates for seine DE293N1 due to transcribed seine coordinates being on land
 - Added missing lat/long for JE225N1
 - Fixed incorrect lat value for DE526N1
-- Incorrect DNA sample_ids for U3984-U3993
+- Incorrect DNA sample_ids for U3984-U3993 (changed from DH00041-DH00050 to DH00051-DH00060)
 
 ### Changed
 - Folder sample_results contains sockeye_diets, sealice_lab_fs, and stock_id
