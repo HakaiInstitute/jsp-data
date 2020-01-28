@@ -133,6 +133,40 @@ slid_gs <- sl_gs %>%
 write_csv(slid_gs, here("elab_temp", "elab_slid_upload.csv"))
 
 
+## Extra Muscle -----------------------------------------------------------------------------------------------------------------------------
+xm_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "xm_metadata")
+xm_db <- read_csv(here("data", "sample_inventory", "extra_muscle_samples.csv"), guess_max = 10000) %>% 
+  full_join(xm_gs) %>% 
+  mutate(location_qc = paste(container_id, container_cell, sep = "-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(container_id == "UNKNOWN" ~ "MV",
+                                         n() != 1 ~ "SVC",
+                                         n() == 1 ~ "AV")
+  ) %>% 
+  ungroup() %>%
+  mutate(sample_quality_log = NA) %>% 
+  select(sample_id:analyzing_lab, sample_quality_flag, sample_quality_log)
+
+write_csv(xm_db, here("data", "sample_inventory", "extra_muscle_samples.csv"))
+
+freezer <- read_sheet("1v0MVKUKd526wOUXNSHsKNr1a9xLqRywfrs22smnpk2Y", sheet = "RNA, FA, XM, SL") %>% 
+  mutate(location = paste(destination, name, sep = " / ")) %>% 
+  select(container_id = name, location)
+
+xm_boxes <- freezer %>% 
+  filter(str_detect(container_id, "BXM"))
+
+xm_elab <- xm_db %>% 
+  filter(sample_quality_flag == "AV") %>% 
+  left_join(select(xm_gs, sample_id, container_cell, container_id)) %>% 
+  left_join(xm_boxes) %>% 
+  mutate(container_cell = as.numeric(container_cell)) %>% 
+  arrange(container_id, container_cell)
+xm_elab <- xm_elab[mixedorder(xm_elab$container_id),]
+  
+write_csv(xm_elab, here("elab_temp", "elab_xm_upload.csv"))
+
+
 ## DNA -----------------------------------------------------------------------------------------------------------------------------
 
 dna_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "dna_metadata") 
@@ -184,42 +218,59 @@ dna_all <- bind_rows(dna,whatman) %>%
 
 write_csv(dna_all, here::here("data", "sample_inventory", "dna_samples.csv"))
 
-# TODO: Write a CSV with grid coordinates of 2016 fin clips & match to create eLab upload
+
+stockid_position_convert <- read_csv(here::here("elab_temp", "stockid_position_convert.csv")) %>% 
+  select(-species)
+dna <- read_csv(here::here("data", "sample_inventory", "dna_samples.csv"))
+
+elab_finclip_2015_2016 <- dna %>% 
+  left_join(stockid_position_convert) %>% 
+  drop_na(container_id) %>% 
+  mutate(location = paste("Prep Salmon Shelves / JSP Fin Clip Binder 2016 / ", container_id, sep="")) %>% 
+  select(sample_id, position, location) %>% 
+  arrange(position)
+
+elab_finclip_2015_2016 <- elab_finclip_2015_2016[mixedorder(elab_finclip_2015_2016$location),]
+write_csv(elab_finclip_2015_2016, here::here("elab_temp", "elab_finclip2015-16_upload.csv"))  
 
 
+dna_containers <- read_csv("G:/Shared drives/Juvenile Salmon Program/Sample Management/eLab Container Upload/elab_jsp_dna.csv") %>% 
+  select(-tray)
+dna_remaining <- dna %>% 
+  filter(!sample_id %in% elab_finclip_2015_2016$sample_id) %>% 
+  left_join(select(dna_gs, sample_id, container_id, container_cell)) %>% 
+  left_join(dna_containers, by = c("container_id" = "name"))
 
-  
+elab_dna_boxes <- dna_remaining[mixedorder(dna_remaining$location),] %>% 
+  filter(sample_subtype != "fin_clip" & !is.na(location)) %>% 
+  mutate(container_cell = as.numeric(ifelse(container_cell == "NA", "", container_cell))) %>% 
+  select(sample_id, position = container_cell, location)
+write_csv(elab_dna_boxes, here::here("elab_temp", "elab_dna_box_upload.csv"))
 
-## Extra Muscle -----------------------------------------------------------------------------------------------------------------------------
-xm_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "xm_metadata")
-xm_db <- read_csv(here("data", "sample_inventory", "extra_muscle_samples.csv"), guess_max = 10000) %>% 
-  full_join(xm_gs) %>% 
-  mutate(location_qc = paste(container_id, container_cell, sep = "-")) %>% 
-  group_by(location_qc) %>% 
-  mutate(sample_quality_flag = case_when(container_id == "UNKNOWN" ~ "MV",
-                                         n() != 1 ~ "SVC",
-                                         n() == 1 ~ "AV")
-  ) %>% 
-  ungroup() %>%
-  mutate(sample_quality_log = NA) %>% 
-  select(sample_id:analyzing_lab, sample_quality_flag, sample_quality_log)
+elab_finclip_2017_2018 <- dna %>% 
+  filter(!sample_id %in% elab_finclip_2015_2016$sample_id & !sample_id %in% elab_dna_boxes$sample_id & sample_subtype == "fin_clip") %>% 
+  left_join(select(dna_gs, sample_id, container_id, container_cell))
 
-write_csv(xm_db, here("data", "sample_inventory", "extra_muscle_samples.csv"))
+fc2018_convert <- read_sheet("1AXbYFbl52gXBeCxdMGyG1vNThQMV3TnhicQb_753qsY", sheet = "Sheet5") %>% 
+  uncount(weights = 30, .id = "position", .remove = F) %>% 
+  mutate(location = paste(container_id, 1:n(), sep="-"))
 
-freezer <- read_sheet("1v0MVKUKd526wOUXNSHsKNr1a9xLqRywfrs22smnpk2Y", sheet = "RNA, FA, XM, SL") %>% 
-  mutate(location = paste(destination, name, sep = " / ")) %>% 
-  select(container_id = name, location)
+elab_finclip_2018 <- elab_finclip_2017_2018 %>% 
+  filter(str_detect(container_id, "BWS")) %>% 
+  mutate(location = paste(container_id, container_cell, sep="-")) %>% 
+  left_join(select(fc2018_convert, position, location)) %>% 
+  arrange(position)
+elab_finclip_2018 <- elab_finclip_2018[mixedorder(elab_finclip_2018$container_id),] %>% 
+  select(sample_id, position, container_id)
+write_csv(elab_finclip_2018, here::here("elab_temp", "elab_finclip2018_upload.csv"))
 
-xm_boxes <- freezer %>% 
-  filter(str_detect(container_id, "BXM"))
+whatman_2017_convert <- stockid_position_convert %>% 
+  filter(container_id == "DW1" & position <= 30) %>% 
+  select(position, whatman_cell)
 
-xm_elab <- xm_db %>% 
-  filter(sample_quality_flag == "AV") %>% 
-  left_join(select(xm_gs, sample_id, container_cell, container_id)) %>% 
-  left_join(xm_boxes) %>% 
-  mutate(container_cell = as.numeric(container_cell)) %>% 
-  arrange(container_id, container_cell)
-xm_elab <- xm_elab[mixedorder(xm_elab$container_id),]
-  
-write_csv(xm_elab, here("elab_temp", "elab_xm_upload.csv"))
-
+elab_finclip_2017 <- elab_finclip_2017_2018 %>% 
+  filter(str_detect(container_id, "DW") | str_detect(container_id, "JW")) %>% 
+  mutate(container_cell = as.character(container_cell)) %>% 
+  left_join(whatman_2017_convert, by = c("container_cell" = "whatman_cell")) %>% 
+  select(sample_id, position, container_id)
+write_csv(elab_finclip_2017, here::here("elab_temp", "elab_finclip2017_upload.csv"))
