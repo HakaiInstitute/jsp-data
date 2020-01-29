@@ -25,6 +25,9 @@ DNA, extra muscle, and carcass. This is just the complete list of samples taken 
 - Dissection protocol categories in fish_lab_data renamed for better readibility (also updated in data dictionary)
 - Renamed stock_id qc level category in accordance with Hakai Data Standards document drafted by Brett Johnson
 - UFN assignment of undissected fish from 2015-2016 now follow the relative order of the SEMSP IDs
+- Updated comments_protocol for: U17095 & U17096 in fish_lab_data to state that these fish do not have gill samples;
+U5030 has no RNA-muscle sample;
+U13005 has no RNA-kidney sample
 
 ### Removed
 - Deleted seine with no data due to being botched: JE304N1

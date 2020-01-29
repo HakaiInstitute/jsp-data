@@ -4546,7 +4546,7 @@ U5026,2017-11-25,None,Present,18.9,121,127,NA,NA,KDB,full2,lab_motiles_cryo,lab_
 U5027,2017-11-25,None,Present,15.9,115,121,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
 U5028,2017-11-26,None,Present,22.4,127,134,NA,hemorrhaging gills,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U5029,2017-11-26,None,Present,23,129,135,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
-U5030,2017-11-26,None,Present,13,115,121,NA,"gills and liver very pale, liver is greenish",KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
+U5030,2017-11-26,None,Present,13,115,121,Lost RNA-muscle sample,"gills and liver very pale, liver is greenish",KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
 U5031,2017-11-26,None,Present,19.6,119,125,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
 U5004,2017-11-27,None,Present,29.1,140,146,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U5005,2017-11-27,None,Present,35.2,142,148,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
@@ -6141,8 +6141,8 @@ U16344,2018-10-29,None,Present,42.2,157,164,NA,NA,KB,streamlined1,lab_motiles_et
 U16350,2018-10-29,None,Present,29.5,138,142,NA,NA,KB,streamlined1,lab_motiles_etoh,NA,Technicianmr,NA,NA
 U17093,2018-10-29,None,Present,13.6,100,105,NA,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
 U17094,2018-10-29,None,Present,13.7,106,112,NA,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
-U17095,2018-10-29,None,Present,14.2,108,114,NA,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
-U17096,2018-10-29,None,Present,11.2,107,112,NA,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
+U17095,2018-10-29,None,Present,14.2,108,114,Lost gill sample during capping process,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
+U17096,2018-10-29,None,Present,11.2,107,112,Lost gill sample during capping process,NA,KB,streamlined1,lab_motiles_cryo,NA,Technicianmr,NA,NA
 U16661,2018-10-31,None,Present,14.3,112,117,NA,NA,EJ,streamlined1,lab_motiles_etoh,NA,Technicianmr,NA,NA
 U16662,2018-10-31,None,Present,9.7,97,102,NA,NA,EJ,streamlined1,lab_motiles_etoh,NA,Technicianmr,NA,NA
 U16663,2018-10-31,None,Present,5.6,83,88,NA,NA,EJ,streamlined1,lab_motiles_etoh,NA,Technicianmr,NA,NA
