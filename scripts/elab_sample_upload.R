@@ -274,3 +274,64 @@ elab_finclip_2017 <- elab_finclip_2017_2018 %>%
   left_join(whatman_2017_convert, by = c("container_cell" = "whatman_cell")) %>% 
   select(sample_id, position, container_id)
 write_csv(elab_finclip_2017, here::here("elab_temp", "elab_finclip2017_upload.csv"))
+
+## Stomachs ---------------------------------------------------------------------------------------------------------
+stom_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "stomach_metadata", guess_max = 10000)
+stom_ship <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "stomach")
+stom_db <- read_csv(here::here("data", "sample_inventory", "stomach_samples.csv"))
+
+stom_missing <- stom_gs %>% 
+  filter(!ufn %in% stom_db$ufn)
+
+stom <- stom_gs %>% 
+  filter(ufn %in% fish_l$ufn) %>% 
+  select(sample_id, sample_type, ufn, sample_comments = comments_sample) %>% 
+  mutate(analyzing_lab = "UBC",
+         sample_quality_flag = "AV",
+         sample_quality_log = NA)
+write_csv(stom, here::here("data", "sample_inventory", "stomach_samples.csv"))
+
+stom_elab <- stom_gs %>% 
+  filter(ufn %in% fish_l$ufn) %>% 
+  left_join(stom_ship, by = "container_id") %>% 
+  mutate(location = case_when(shipping_box != "NA" ~ paste("Offsite - UBC Hunt Lab / JSP Stomachs / ",shipping_box," / ",container_id),
+                              shipping_box == "NA" ~ paste("Offsite - UBC Hunt Lab / JSP Stomachs / ",container_id))) %>% 
+  select(sample_id, location)
+write_csv(stom_elab, here::here("elab_temp", "elap_jsp_stomachs_upload.csv"))
+
+
+qc <- stom_elab %>% 
+  filter(is.na(location))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Isotopes
+
+iso_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "iso_metadata")
+iso_ship <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "isotope")
+iso_db <- read_csv(here::here("data", "Sample_inventory", "isotope_samples.csv"))
+
+iso <- iso_gs %>% 
+  filter(ufn %in% fish_l$ufn) %>% 
+  mutate(location_qc = paste(container_id, container_cell, sep="-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(n() !=1 ~ "SVC",
+                                        n() == 1 ~ "AV")) %>% 
+  ungroup() %>% 
+  mutate(sample_subtype = case_when(str_detect(sample_id,"SIS") | str_detect(sample_id,"IS1") ~ "bulk",
+                                    str_detect(sample_id, "IS2") ~ "CSIA"),
+         analyzing_lab = ifelse(container_id %in% iso_ship$container_id, "UBC_Hunt", NA),
+         sample_quality_log = case_when(sample_quality_flag == "SVC" ~ paste("Cannot be verified. Transcribed duplicate location", location_qc))) %>% 
+  select(sample_id, sample_type, sample_subtype, ufn, sample_comments = comments_sample, analyzing_lab, sample_quality_flag, sample_quality_log)
