@@ -5191,7 +5191,7 @@ U13001,2018-03-15,None,Present,14.9,113,118,NA,anisakis,KDB,full2,lab_motiles_cr
 U13002,2018-03-15,None,Present,15.5,112,117,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U13003,2018-03-15,None,Present,15.2,107,112,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
 U13004,2018-03-15,None,Present,20.2,115,121,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
-U13005,2018-03-15,None,Present,18.2,117,122,NA,liver pale and on wrong side. small spleen,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
+U13005,2018-03-15,None,Present,18.2,117,122,Forgot kidney,liver pale and on wrong side. small spleen,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U13006,2018-03-15,None,Present,22.5,127,132,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U13007,2018-03-15,None,Present,14.3,110,115,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,NA
 U13009,2018-03-15,None,Present,17.6,113,118,fish fell on bench,NA,KDB,full2,lab_motiles_cryo,lab_motiles,Technicianmr,NA,1: Fork length generated with species-specific linear regression model (2019-02-01 JG)
