@@ -305,19 +305,7 @@ qc <- stom_elab %>%
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Isotopes
+## Isotopes ---------------------------------------------------------------------------------------------------------
 
 iso_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "iso_metadata")
 iso_ship <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "isotope")
@@ -335,3 +323,55 @@ iso <- iso_gs %>%
          analyzing_lab = ifelse(container_id %in% iso_ship$container_id, "UBC_Hunt", NA),
          sample_quality_log = case_when(sample_quality_flag == "SVC" ~ paste("Cannot be verified. Transcribed duplicate location", location_qc))) %>% 
   select(sample_id, sample_type, sample_subtype, ufn, sample_comments = comments_sample, analyzing_lab, sample_quality_flag, sample_quality_log)
+
+iso_elab <- iso_gs %>% 
+  filter(ufn %in% fish_l$ufn) %>% 
+  mutate(location_qc = paste(container_id, container_cell, sep="-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(n() !=1 ~ "SVC",
+                                         n() == 1 ~ "AV")) %>% 
+  ungroup() %>% 
+  filter(sample_quality_flag == "AV") %>% 
+  left_join(iso_ship, by = "container_id") %>% 
+  mutate(location = paste("Offsite - UBC Hunt Lab / JSP Isotopes / ",container_id, sep="")) %>% 
+  select(sample_id, container_cell, location) %>% 
+  arrange(location,container_cell)
+
+write_csv(iso_elab, here::here("elab_temp", "elab_isotope_upload.csv"))
+
+## Fatty Acids ---------------------------------------------------------------------------------------------------
+fa_ship <- read_sheet("1RF5yuH5bZj4fGrdXEdxgqCkr1MD2YaPX7UzS-MywhDQ", sheet = "fatty_acid") %>% 
+  mutate(location = paste("Offsite - UBC Hunt Lab / JSP Fatty Acids / ", container_id, sep="")) %>% 
+  select(container_id, location)
+fa_box_hakai <- read_csv("F:/Shared drives/Juvenile Salmon Program/Sample Management/-80 Freezer Defrost Logs/2019/elab_JSP_New_Sample_Containers_-80_Nov2019.csv") %>% 
+  mutate(location = paste(destination,name, sep=" / ")) %>% 
+  select(container_id = name, location)
+fa_boxes <- bind_rows(fa_ship, fa_box_hakai)
+
+fa_gs <- read_sheet("1Ti5gGvakA4DUTjCUZ_VYHULU_FJCK05-zdly5E80Tzs", sheet = "fa_metadata")
+fa_db <- read_csv(here::here("data", "sample_inventory", "fatty_acid_samples.csv")) %>%
+  left_join(select(fa_gs, sample_id, container_id, container_cell), by = "sample_id") %>% 
+  mutate(analyzing_lab = ifelse(container_id %in% fa_ship$container_id, "UBC_Hunt",NA),
+         location_qc = paste(container_id, container_cell, sep="-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(n() !=1 ~ "SVC",
+                                         n() == 1 ~ "AV")) %>% 
+  ungroup() %>% 
+  mutate(sample_quality_log = case_when(sample_quality_flag == "SVC" ~ paste("Cannot be verified. Transcribed duplicate location", location_qc))) %>%
+  select(sample_id, sample_type, ufn, sample_comments, analyzing_lab, sample_quality_flag, sample_quality_log)
+
+write_csv(fa_db, here::here("data", "sample_inventory", "fatty_acid_samples.csv"))
+
+
+fa_elab <- fa_db <- read_csv(here::here("data", "sample_inventory", "fatty_acid_samples.csv"), guess_max = 10000) %>%
+  left_join(select(fa_gs, sample_id, container_id, container_cell), by = "sample_id") %>% 
+  mutate(analyzing_lab = ifelse(container_id %in% fa_ship$container_id, "UBC_Hunt",NA),
+         location_qc = paste(container_id, container_cell, sep="-")) %>% 
+  group_by(location_qc) %>% 
+  mutate(sample_quality_flag = case_when(n() !=1 ~ "SVC",
+                                         n() == 1 ~ "AV")) %>% 
+  ungroup() %>% 
+  left_join(fa_boxes) %>% 
+  filter(sample_quality_flag == "AV") %>% 
+  select(sample_id, location)
+write_csv(fa_elab, here::here("elab_temp", "elab_fa_upload.csv"))
