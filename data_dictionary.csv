@@ -1,245 +1,261 @@
-﻿table,column,name,data_type,data_format,key,references,description
-sites,site_id,Site ID,text,,PK,,Unique alphanumeric ID assigned to each site
-sites,site_name,Site Name,text,,,,Chart name for the location of a survey site
-sites,region,Region,text,,,,"General geographic zone. ""DI"" (Discovery Islands) or ""JS"" (Johnstone Strait)"
-sites,zone,Zone,text,,,,"Categorization of the generalized migration route taken by outmigrating juvenile salmon. For DI: ""W"" (west), ""C"" (central), or ""E"" (east). For JS: ""N"" (north) or ""S"" (south)"
-sites,priority,Priority,text,,,,Order in which a site was surveyed within a region
-sites,pfma,Pacific Fisheries Management Area,text,,,,DFO management area and subarea designation
-sites,notes,Notes,text,,,,
-site_coordinates,site_id,Site ID,text,,FK,sites,
-site_coordinates,coordinate_type,Location Type,text,,,,"""survey_start"" = start location of the visual survey transect. ""survey_end"" = end location of the visual survey transect. ""ocgy_std"" = location of the standard oceanographic sampling station within the site."
-site_coordinates,site_lat,Latitude (DD),decimal,nn.nnnnn,,,Location in decimal degrees
-site_coordinates,site_long,Latitude (DD),decimal,nnn.nnnnn,,,Location in decimal degrees
-survey_data,survey_id,Survey ID,text,,PK,,Unique alphanumeric ID assigned to each survey
-survey_data,survey_date,Survey Date,date,yyyy-mm-dd,,,Date upon which the survey was conducted
-survey_data,site_id,Site ID,text,,FK,sites,
-survey_data,crew,Crew,text,,,,Full names of crew members
-survey_data,precip,Precipitation,text,,,,"""none"", ""light"", ""moderate"", ""heavy"""
-survey_data,cloud_cover,Cloud Cover (%),text,,,,"Visual approximation of the percent of cloud cover overhead, ± 12.5 %. ""0"", ""25"", ""50"", ""75"", ""100"""
-survey_data,sea_state,Sea State,text,,,,"Sea surface conditions. ""0"" = sea-surface smooth and mirror-like. ""1"" = scaly ripples, no foam crests. ""2"" = small wavelets, crests glassy, no breaking. ""3"" = large wavelets, crests begin to break, scattered whitecaps. ""4"" = small waves 1-4 ft. becoming longer, numerous whitecaps. ""5"" = moderate waves 4-8 ft. taking longer form, many whitecaps, some spray."
-survey_data,wind_speed,Wind Speed (knots),text,,,,"Estimated wind speed range observed. ""0"", ""0.1-5"", ""5-10"", ""10-15"", ""15-20"", ""20-30"""
-survey_data,wind_direction,Wind Direction,text,,,,"Approximation of which way the wind was coming from. ""N"", ""S"", ""E"", ""W"", ""NW"", ""NE"", ""SE"", ""SW"""
-survey_data,tide_state,Tidal State,text,,,,"""flood"", ""ebb"", ""high slack"", ""low slack"""
-survey_data,survey_time_start,Survey Time - Start,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of commencing visual survey for site activity (only applies to surveys conducted from 2017 onwards).
-survey_data,survey_time_end,Survey Time - End,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of end of visual survey for site activity (only applies to surveys conducted from 2017 onwards).
-survey_data,net_sets,Number of Sets,integer,,,,"The number of times the seine was deployed in a survey, not counting botched sets"
-survey_data,secchi,Secchi Depth (m),numeric,n.n,,,Depth reading of the secchi disc
-survey_data,ysi_bout,YSI Event Number,text,,,,"Sampling bout number for the YSI collection. YSI data is always paired, sampled at surface (0 m) and 1 m depths. Multiple sampling events within a survey are comma-delimited."
-survey_data,ctd_bout,CTD Drop Number,text,,,,"Sampling bout number for the CTD cast. Multiple casts within a survey are comma-delimited. Processed CTD files can be searched for in the portal using survey_date, site_id, and ctd_drop as filtering variables."
-survey_data,zoop_bout,Zooplankton Tow Number,text,,,,Sampling bout number for the zooplankton tow. Multiple tows within a survey are comma-delimited.
-survey_data,survey_type,Survey Type,text,,,,"Protocol under which the survey was conducted, used to differentiate surveys that were not done in accordance with the standard Hakai JSP sampling routine of that year."
-survey_data,survey_comments,Survey Comments,text,,,,
-site_activity,survey_id,Survey ID,text,,FK,survey_data,
-site_activity,school_number,School Number,integer,,,,A sequential number assigned to a discrete group of surface activity that we considered a school of fish
-site_activity,school_sliders,Sliders,integer,,,,"Approximate logarithmic-scale category of surface 'sliding' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
-site_activity,school_poppers,Poppers,integer,,,,"Approximate logarithmic-scale category of surface 'popping' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
-site_activity,school_dimpling,Dimpling,integer,,,,"Approximate logarithmic-scale category of surface 'dimpling' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
-seine_data,seine_id,Seine ID,text,,PK,,"Unique alphanumeric ID assigned to each seine, which is a concatenation of a seine's survey ID and the set number."
-seine_data,survey_id,Survey ID,,,FK,surveys,
-seine_data,set_number,Set Number,integer,,,,The order in which the seine(s) was/were deployed in a survey
-seine_data,set_type,Set Type,,,,,"""Targeted"" = set was doncuted upon an observed school of fish. ""Random"" = set upon a random area with no surface activity detected."
-seine_data,lat,Latitude (DD),decimal,nn.nnnnn,,,Coordinates of fish capture
-seine_data,long,Longitude (DD),decimal,nnn.nnnnn,,,Coordinates of fish capture
-seine_data,set_time,Set Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,"Bunt time, i.e., when the trailing sternward end of the seine is tied onto the boat and a school of fish has been concentrated within the seine."
-seine_data,time_searching,Time Searching (min),integer,,,,"Length of time visually searching for fish before setting the net (only recorded in 2015/2016, replaced with recording start/end times of visual surveys from 2017 onwards)."
-seine_data,set_sliders,Set Sliders,text,,,,"Approximate logarithmic-scale category of surface 'sliding' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
-seine_data,set_poppers,Set Poppers,text,,,,"Approximate logarithmic-scale category of surface 'popping' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
-seine_data,set_dimpling,Set Dimpling,text,,,,"Approximate logarithmic-scale category of surface 'dimpling' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
-seine_data,fish_retained,Fish Retained?,text,,,,"""yes"", ""no"""
-seine_data,so_taken,Sockeye Taken,integer,,,,Number of sockeye retained
-seine_data,so_total,Total Sockeye,integer,,,,Total number of sockeye caught in the seine
-seine_data,pi_taken,Pink Taken,integer,,,,Number of pink retained
-seine_data,pi_total,Total Pink,integer,,,,Total number of pink caught in the seine. NA = individuals of this species were not enumerated
-seine_data,cu_taken,Chum Taken,integer,,,,Number of chum retained
-seine_data,cu_total,Total Chum,integer,,,,Total number of chum caught in the seine. NA = individuals of this species were not enumerated
-seine_data,co_taken,Coho Taken,integer,,,,Number of coho retained
-seine_data,co_total,Total Coho,integer,,,,Total number of coho caught in the seine. NA = individuals of this species were not enumerated
-seine_data,he_taken,Herring Taken,integer,,,,Number of herring retained
-seine_data,he_total,Total Herring,integer,,,,Total number of herring caught in the seine. NA = individuals of this species were not enumerated
-seine_data,ck_taken,Chinook Taken,integer,,,,Number of chinook retained
-seine_data,ck_total,Total Chinook,integer,,,,Total number of chinook caught in the seine. NA = individuals of this species were not enumerated
-seine_data,collection_protocol,Collection Protocol,text,,,,"The decision-making guidelines that dictate how fish were sampled in the field. ""SEMSP"" = standard Hakai JSP field protocol. ""DFO"" = collection aboard the Nordic Queen purse seine vessel. ""SJ_UBC"" = fish collected for Sam James's diel feeding study for her M.Sc research at UBC. ""GM_UBC"" = sickly-looking fish collected for Gideon Mordecai's postdoctoral research at UBC."
-seine_data,seine_comments,Seine Comments,text,,,,
-bycatch_mort,seine_id,Seine ID,text,,FK,seine_data,
-bycatch_mort,bm_species,Species Name,text,,,,Common name of the species
-bycatch_mort,bm_status,Bycatch/Mortality,text,,,,"""B"" = bycatch, ""M"" = mortality"
-bycatch_mort,bm_ageclass,Age Class,text,,,,"Approximate age. ""Y"" = young-of-year, ""J"" = juvenile"", ""A"" = adult"
-bycatch_mort,bm_count,Count,integer,,,,The number of individuals of the species
-fish_field_data,ufn,Universal Fish Number,text,,PK,,Unique alphanumeric ID assigned to each fish
-fish_field_data,semsp_id,SEMSP ID,text,,,,"Unique ID assigned to retained fish that is a concatenation of survey_date, site_id, species, and the order the fish was pulled out of the net. From 2017 onwards, this was replaced by UFN."
-fish_field_data,seine_id,Seine ID,text,,,,
-fish_field_data,species,Species,text,,,,"""SO"" = sockeye, ""PI"" = pink, ""CU"" = chum, ""CO"" = coho, ""CK"" = chinook, ""HE"" = Pacific herring"
-fish_field_data,package_id,Package ID,text,,,,"An alphanumeric code used to identify the package (aka. ""bundle"") that a fish was grouped with in the field, and then subsequently stored with in the freezer until it was dissected."
-fish_field_data,fish_time_out,Fish Time Out,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time the fish was taken out of the water and euthanized. In conjunction with fish_time_dewar you can calculate the handling time of the fish before being flash frozen.
-fish_field_data,fish_time_dewar,Fish Time in Dewar,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time the fish was put into the nitrogen-filled dewar for flash cryogenic preservation. In conjunction with fish_time_dewar you can calculate the handling time of the fish before being frozen
-fish_field_data,fork_length_field,Field Fork Length (mm),numeric,n,,,The fork length of the fish measured while in the field using a 15 cm flexible ruler
-fish_field_data,height_field,Height (mm),numeric,n,,,The height of the fish measured perpendicular to the lateral line from the anterior insertion of the dorsal fin to the ventral side of the fish
-fish_field_data,weight_field,Field Weight (g),numeric,n.n,,,The weight of the fish measured in the field using a spring scale
-fish_field_data,lice_id_protocol_field,Field Lice ID Protocol,text,,,,"The set of guidelines used to identify sea lice in the field. ""salmoncoast_allstages"" = enumeration of attached and motile life stages of Caligus clemensi and Lepeophtheirus salmonis (C. clemensi motiles were aggregated in one category, with the exception of gravid/egg-bearing females). ""salmoncoast_motiles"" = enumeration of only the motile (pre/adult) stages of both species of lice."
-fish_field_data,analysis_planned,Analysis Planned,text,,,,"The type of processing/analysis the fish is to undergo (or has underwent). ""Field loused only"" = fish are not retained"
-fish_lab_data,ufn,Universal Fish Number,text,,"PK, FK",fish_field_data,
-fish_lab_data,date_processed,Date Processed,date,yyyy-mm-dd,,,
-fish_lab_data,cwt,Coded Wire Tag,text,,,,"""none"", ""cwt"""
-fish_lab_data,adipose,Adipose Fin,text,,,,"""present"", ""absent"""
-fish_lab_data,weight,Lab Weight (g),numeric,n.n,,,Weight of the fish measured in the lab using Pro Scout scales with 0.1 g precision
-fish_lab_data,standard_length,Standard Length (mm),numeric,n,,,The length of the fish measured from the tip of the snout to the caudal peduncle where scales give way to caudal fin rays
-fish_lab_data,fork_length,Lab Fork Length (mm),numeric,n,,,The length of the fish meadured from the tip of the snout to the fork of the caudal fin
-fish_lab_data,comments_protocol,Protocol Comments,text,,,,Comments related to deviations to standard dissection protocols
-fish_lab_data,comments_fish_health_lab,Fish Health Comments (Lab),text,,,,"Comments to describe any abnormal/unique observations about the fish itself (e.g. lesions, non-louse parasites, tissue discolouration, scale loss, etc.)"
-fish_lab_data,dissector,Dissector,text,,,,The initials of the technician who performed the dissection
-fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,"""full1"" = procedure for 2015 & 2016 samples (RNA:DNA from muscle; RNA-pathogen from gill, brain, spleen, liver, heart & kidney; fatty acid; stable isotope; DNA (if no fin clips were taken in the field); stomach; otolith; and scales). 
+﻿table,column,name,data_type,units,data_format,key,references,description
+sites,site_id,Site ID,text,,,PK,,Unique alphanumeric ID assigned to each site
+sites,site_name,Site Name,text,,,,,Chart name for the location of a survey site
+sites,region,Region,text,,,,,"General geographic zone. ""DI"" (Discovery Islands) or ""JS"" (Johnstone Strait)"
+sites,zone,Zone,text,,,,,"Categorization of the generalized migration route taken by outmigrating juvenile salmon. For DI: ""W"" (west), ""C"" (central), or ""E"" (east). For JS: ""N"" (north) or ""S"" (south)"
+sites,priority,Priority,text,,,,,Order in which a site was surveyed within a region
+sites,pfma,Pacific Fisheries Management Area,text,,,,,DFO management area and subarea designation
+sites,notes,Notes,text,,,,,
+site_coordinates,site_id,Site ID,text,,,FK,sites,
+site_coordinates,coordinate_type,Location Type,text,,,,,"""survey_start"" = start location of the visual survey transect. ""survey_end"" = end location of the visual survey transect. ""ocgy_std"" = location of the standard oceanographic sampling station within the site."
+site_coordinates,site_lat,Latitude,decimal,decimal.degree,nn.nnnnn,,,Location in decimal degrees
+site_coordinates,site_long,Latitude,decimal,decimal.degree,nnn.nnnnn,,,Location in decimal degrees
+survey_data,survey_id,Survey ID,text,,,PK,,Unique alphanumeric ID assigned to each survey
+survey_data,survey_date,Survey Date,date,,yyyy-mm-dd,,,Date upon which the survey was conducted
+survey_data,site_id,Site ID,text,,,FK,sites,
+survey_data,crew,Crew,text,,,,,Full names of crew members
+survey_data,precip,Precipitation,text,,,,,"""none"", ""light"", ""moderate"", ""heavy"""
+survey_data,cloud_cover,Cloud Cover,text,percent,,,,"Visual approximation of the percent of cloud cover overhead, ± 12.5 %. ""0"", ""25"", ""50"", ""75"", ""100"""
+survey_data,sea_state,Sea State,text,,,,,"Sea surface conditions. ""0"" = sea-surface smooth and mirror-like. ""1"" = scaly ripples, no foam crests. ""2"" = small wavelets, crests glassy, no breaking. ""3"" = large wavelets, crests begin to break, scattered whitecaps. ""4"" = small waves 1-4 ft. becoming longer, numerous whitecaps. ""5"" = moderate waves 4-8 ft. taking longer form, many whitecaps, some spray."
+survey_data,wind_speed,Wind Speed,text,knot,,,,"Estimated wind speed range observed. ""0"", ""0.1-5"", ""5-10"", ""10-15"", ""15-20"", ""20-30"""
+survey_data,wind_direction,Wind Direction,text,,,,,"Approximation of which way the wind was coming from. ""N"", ""S"", ""E"", ""W"", ""NW"", ""NE"", ""SE"", ""SW"""
+survey_data,tide_state,Tidal State,text,,,,,"""flood"", ""ebb"", ""high slack"", ""low slack"""
+survey_data,survey_time_start,Survey Time - Start,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of commencing visual survey for site activity (only applies to surveys conducted from 2017 onwards).
+survey_data,survey_time_end,Survey Time - End,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,24-hour time of end of visual survey for site activity (only applies to surveys conducted from 2017 onwards).
+survey_data,net_sets,Number of Sets,integer,,,,,"The number of times the seine was deployed in a survey, not counting botched sets"
+survey_data,secchi,Secchi Depth,numeric,m,n.n,,,Depth reading of the secchi disc
+survey_data,ysi_bout,YSI Event Number,text,,,,,"Sampling bout number for the YSI collection. YSI data is always paired, sampled at surface (0 m) and 1 m depths. Multiple sampling events within a survey are comma-delimited."
+survey_data,ctd_bout,CTD Drop Number,text,,,,,"Sampling bout number for the CTD cast. Multiple casts within a survey are comma-delimited. Processed CTD files can be searched for in the portal using survey_date, site_id, and ctd_drop as filtering variables."
+survey_data,zoop_bout,Zooplankton Tow Number,text,,,,,Sampling bout number for the zooplankton tow. Multiple tows within a survey are comma-delimited.
+survey_data,survey_type,Survey Type,text,,,,,"Protocol under which the survey was conducted, used to differentiate surveys that were not done in accordance with the standard Hakai JSP sampling routine of that year."
+survey_data,survey_comments,Survey Comments,text,,,,,
+site_activity,survey_id,Survey ID,text,,,FK,survey_data,
+site_activity,school_number,School Number,integer,,,,,A sequential number assigned to a discrete group of surface activity that we considered a school of fish
+site_activity,school_sliders,Sliders,integer,,,,,"Approximate logarithmic-scale category of surface 'sliding' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
+site_activity,school_poppers,Poppers,integer,,,,,"Approximate logarithmic-scale category of surface 'popping' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
+site_activity,school_dimpling,Dimpling,integer,,,,,"Approximate logarithmic-scale category of surface 'dimpling' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
+seine_data,seine_id,Seine ID,text,,,PK,,"Unique alphanumeric ID assigned to each seine, which is a concatenation of a seine's survey ID and the set number."
+seine_data,survey_id,Survey ID,,,,FK,surveys,
+seine_data,set_number,Set Number,integer,,,,,The order in which the seine(s) was/were deployed in a survey
+seine_data,set_type,Set Type,,,,,,"""Targeted"" = set was doncuted upon an observed school of fish. ""Random"" = set upon a random area with no surface activity detected."
+seine_data,lat,Latitude,decimal,decimal.degree,nn.nnnnn,,,Coordinates of fish capture
+seine_data,long,Longitude,decimal,decimal.degree,nnn.nnnnn,,,Coordinates of fish capture
+seine_data,set_time,Set Time,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,"Bunt time, i.e., when the trailing sternward end of the seine is tied onto the boat and a school of fish has been concentrated within the seine."
+seine_data,time_searching,Time Searching,integer,minute,,,,"Length of time visually searching for fish before setting the net (only recorded in 2015/2016, replaced with recording start/end times of visual surveys from 2017 onwards)."
+seine_data,set_sliders,Set Sliders,text,,,,,"Approximate logarithmic-scale category of surface 'sliding' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
+seine_data,set_poppers,Set Poppers,text,,,,,"Approximate logarithmic-scale category of surface 'popping' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
+seine_data,set_dimpling,Set Dimpling,text,,,,,"Approximate logarithmic-scale category of surface 'dimpling' activity observed within the seine (recorded for seines from 2017 onwards). ""0"", ""1"", ""10"", ""100"", ""1000"""
+seine_data,fish_retained,Fish Retained?,text,,,,,"""yes"", ""no"""
+seine_data,so_taken,Sockeye Taken,integer,,,,,Number of sockeye retained
+seine_data,so_total,Total Sockeye,integer,,,,,Total number of sockeye caught in the seine
+seine_data,pi_taken,Pink Taken,integer,,,,,Number of pink retained
+seine_data,pi_total,Total Pink,integer,,,,,Total number of pink caught in the seine. NA = individuals of this species were not enumerated
+seine_data,cu_taken,Chum Taken,integer,,,,,Number of chum retained
+seine_data,cu_total,Total Chum,integer,,,,,Total number of chum caught in the seine. NA = individuals of this species were not enumerated
+seine_data,co_taken,Coho Taken,integer,,,,,Number of coho retained
+seine_data,co_total,Total Coho,integer,,,,,Total number of coho caught in the seine. NA = individuals of this species were not enumerated
+seine_data,he_taken,Herring Taken,integer,,,,,Number of herring retained
+seine_data,he_total,Total Herring,integer,,,,,Total number of herring caught in the seine. NA = individuals of this species were not enumerated
+seine_data,ck_taken,Chinook Taken,integer,,,,,Number of chinook retained
+seine_data,ck_total,Total Chinook,integer,,,,,Total number of chinook caught in the seine. NA = individuals of this species were not enumerated
+seine_data,collection_protocol,Collection Protocol,text,,,,,"The decision-making guidelines that dictate how fish were sampled in the field. ""SEMSP"" = standard Hakai JSP field protocol. ""DFO"" = collection aboard the Nordic Queen purse seine vessel. ""SJ_UBC"" = fish collected for Sam James's diel feeding study for her M.Sc research at UBC. ""GM_UBC"" = sickly-looking fish collected for Gideon Mordecai's postdoctoral research at UBC."
+seine_data,seine_comments,Seine Comments,text,,,,,
+bycatch_mort,seine_id,Seine ID,text,,,FK,seine_data,
+bycatch_mort,bm_species,Species Name,text,,,,,Common name of the species
+bycatch_mort,bm_status,Bycatch/Mortality,text,,,,,"""B"" = bycatch, ""M"" = mortality"
+bycatch_mort,bm_ageclass,Age Class,text,,,,,"Approximate age. ""Y"" = young-of-year, ""J"" = juvenile"", ""A"" = adult"
+bycatch_mort,bm_count,Count,integer,,,,,The number of individuals of the species
+fish_field_data,ufn,Universal Fish Number,text,,,PK,,Unique alphanumeric ID assigned to each fish
+fish_field_data,semsp_id,SEMSP ID,text,,,,,"Unique ID assigned to retained fish that is a concatenation of survey_date, site_id, species, and the order the fish was pulled out of the net. From 2017 onwards, this was replaced by UFN."
+fish_field_data,seine_id,Seine ID,text,,,,,
+fish_field_data,species,Species,text,,,,,"""SO"" = sockeye, ""PI"" = pink, ""CU"" = chum, ""CO"" = coho, ""CK"" = chinook, ""HE"" = Pacific herring"
+fish_field_data,package_id,Package ID,text,,,,,"An alphanumeric code used to identify the package (aka. ""bundle"") that a fish was grouped with in the field, and then subsequently stored with in the freezer until it was dissected."
+fish_field_data,fish_time_out,Fish Time Out,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,Time the fish was taken out of the water and euthanized. In conjunction with fish_time_dewar you can calculate the handling time of the fish before being flash frozen.
+fish_field_data,fish_time_dewar,Fish Time in Dewar,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,Time the fish was put into the nitrogen-filled dewar for flash cryogenic preservation. In conjunction with fish_time_dewar you can calculate the handling time of the fish before being frozen
+fish_field_data,fork_length_field,Field Fork Length (mm),numeric,millimetre,n,,,The fork length of the fish measured while in the field using a 15 cm flexible ruler
+fish_field_data,height_field,Height (mm),numeric,millimetre,n,,,The height of the fish measured perpendicular to the lateral line from the anterior insertion of the dorsal fin to the ventral side of the fish
+fish_field_data,weight_field,Field Weight (g),numeric,gram,n.n,,,The weight of the fish measured in the field using a spring scale
+fish_field_data,lice_id_protocol_field,Field Lice ID Protocol,text,,,,,"The set of guidelines used to identify sea lice in the field. ""salmoncoast_allstages"" = enumeration of attached and motile life stages of Caligus clemensi and Lepeophtheirus salmonis (C. clemensi motiles were aggregated in one category, with the exception of gravid/egg-bearing females). ""salmoncoast_motiles"" = enumeration of only the motile (pre/adult) stages of both species of lice."
+fish_field_data,analysis_planned,Analysis Planned,text,,,,,"The type of processing/analysis the fish is to undergo (or has underwent). ""Field loused only"" = fish are not retained"
+fish_lab_data,ufn,Universal Fish Number,text,,,"PK, FK",fish_field_data,
+fish_lab_data,date_processed,Date Processed,date,,yyyy-mm-dd,,,
+fish_lab_data,cwt,Coded Wire Tag,text,,,,,"""none"", ""cwt"""
+fish_lab_data,adipose,Adipose Fin,text,,,,,"""present"", ""absent"""
+fish_lab_data,weight,Lab Weight (g),numeric,gram,n.n,,,Weight of the fish measured in the lab using Pro Scout scales with 0.1 g precision
+fish_lab_data,standard_length,Standard Length (mm),numeric,millimetre,n,,,The length of the fish measured from the tip of the snout to the caudal peduncle where scales give way to caudal fin rays
+fish_lab_data,fork_length,Lab Fork Length (mm),numeric,millimetre,n,,,The length of the fish meadured from the tip of the snout to the fork of the caudal fin
+fish_lab_data,comments_protocol,Protocol Comments,text,,,,,Comments related to deviations to standard dissection protocols
+fish_lab_data,comments_fish_health_lab,Fish Health Comments (Lab),text,,,,,"Comments to describe any abnormal/unique observations about the fish itself (e.g. lesions, non-louse parasites, tissue discolouration, scale loss, etc.)"
+fish_lab_data,dissector,Dissector,text,,,,,The initials of the technician who performed the dissection
+fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,,"""full1"" = procedure for 2015 & 2016 samples (RNA:DNA from muscle; RNA-pathogen from gill, brain, spleen, liver, heart & kidney; fatty acid; stable isotope; DNA (if no fin clips were taken in the field); stomach; otolith; and scales). 
 ""full2"" = procedure for samples processed Oct. 2017 to Aug. 2018 ('full_1' with the addition of extra muscle tissue taken for -80C storage). 
-""full2_csia"" = procedure for fish subsampled for compount-specific stable isotope analysis (by David Costalago, UBC, Feb. 2018). All samples taken as in 'full_2' with the addition of a second isotope sample. 
-""nocold"" = 'full_1' without RNA, fatty acid, or isotope samples taken (i.e. only DNA, stomach, otolith, and scale samples taken)
+""full2_csia"" = procedure for fish subsampled for compount-specific stable isotope analysis (by David Costalago, UBC, Feb. 2018). All samples taken as in 'full2' with the addition of a second isotope sample. 
+""nocold"" = 'full1' without RNA, fatty acid, or isotope samples taken (i.e. only DNA, stomach, otolith, and scale samples taken)
 ""no80"" = procedure for fish previously stored at -20C before dissection. No RNA, fatty acid, or extra muscle samples taken (i.e., only isotope . Reduced sterilization between fish. 
 ""irregular"" = processing with at least one sample type not taken that doesn't conform to any preexisting protocol. 
 ""streamlined1"" = procedure for 2018 fish (RNA:DNA from muscle, RNA-pathogen from gill only, fatty acid, stable isotope, and DNA). 
 ""streamlined1_st"" = 'streamlined_1' with the addition of stomach samples taken and stored in 95% non-denatured ethanol for Vanessa Fladmark (UBC)'s pink and chum diet study."
-fish_lab_data,lice_collection_protocol,Lice Collection Protocol,text,,,,"""lab_fine_2015"" = attached & motile sea lice collected for identification and stored in buffered formalin. ""lab_motiles_etoh"" = motile sea lice collected for identification and stored in 95% non-denatured ethanol. ""lab_motiles_cryo"" = motile sea lice collected for Tianyi Chang's (UBC) microbiome research and stored at -80C."
-fish_lab_data,lice_id_protocol_lab,Lab Lice ID Protocol,text,,,,"""lportner_fine"" = fine-scale identification of sea lice collected in the lab by Lauren Portner. ""lab_motiles"" = identification of motile stages of sea lice only."
-fish_lab_data,quality_level,Quality Level,text,,,,
-fish_lab_data,quality_flag,Quality Flag,text,,,,
-fish_lab_data,quality_log,Quality Log,text,,,,
-sealice_field,ufn,Universal Fish Number,text,,FK,fish_field_data,
-sealice_field,cal_cope_field,Caligus copepodid,integer,,,,Count of C. clemensi copepodids
-sealice_field,lep_cope_field,Lep copepodid,integer,,,,Count of L. salmonis copepodids
-sealice_field,chal_a_field,Chalimus A,integer,,,,"Count of C. clemensi and L. salmonis lice at life-stage chalimus ""A"""
-sealice_field,chal_b_field,Chalimus B,integer,,,,"Count of C. clemensi and L. salmonis lice at life-stage chalimus ""B"""
-sealice_field,cal_mot_field,Caligus motile,integer,,,,"Count of C. clemensi motiles (aggregation of pre-adult males and females, excluding gravid)"
-sealice_field,cgf_field,Gravid Caligus,integer,,,,Count of gravid C. clemensi females
-sealice_field,lpam_field,Lep Pre-adult Male,integer,,,,Count of L. salmonis pre-adult males
-sealice_field,lpaf_field,Lep Pre-adult Female,integer,,,,Count of L. salmonis pre-adult females
-sealice_field,lam_field,Lep Adult Male,integer,,,,Count of L. salmonis adult males
-sealice_field,laf_field,Lep Adult Female,integer,,,,Count of L. salmonis adult females
-sealice_field,lgf_field,Gravid Lep,integer,,,,Count of gravid L. salmonis females
-sealice_field,unid_cope_field,Unidentified Copepodid,integer,,,,Count of unidentified copepodids (species unknown)
-sealice_field,unid_chal_field,Unidentified Chalimus,integer,,,,Count of unidentified chalmus-stage lice (sub-stage unknown)
-sealice_field,cs,Chalimus Scar,integer,,,,Count of chalimus scars on the host body
-sealice_field,ms,Motile Scar,integer,,,,Count of motile lice scars on the host body
-sealice_field,ps,Predator Scar,integer,,,,"Count of predator scars on the fish body (fish, bird, etc.)"
-sealice_field,hem,Hemorrhaging,integer,,,,Count of incidents of hemorrhaging observed on the fish
-sealice_field,egp,Eroded Gill Plate,integer,,,,Count of eroded gill plates observed on the fish
-sealice_field,ggp,Grazed Gill Plate,integer,,,,Count of grazed gill plates observed on the fish
-sealice_field,mg,Mate Guarding,integer,,,,Count of incidents of sea-louse mate guarding
-sealice_field,pb,Pinched Belly,integer,,,,"Observation of whether the fish has a ""pinched"" belly"
-sealice_field,comments_fish_health_field,Fish Health Comments (Field),text,,,,"Comments regarding observations of fish health abnormalities (including non-louse parasites), including the location of any observed body conditions"
-sealice_field,quality_log,Quality Log,text,,,,
-sealice_lab_fs,ufn,Universal Fish Number,text,,FK,"fish_field_data, fish_lab_data",
-sealice_lab_fs,sample_id,Sample ID,text,,,,Unique alphanumeric string used for tracking physical inventory of a sample
-sealice_lab_fs,date_liced,Date Liced,date,yyyy-mm-dd,,,Date the sample received louse identification
-sealice_lab_fs,lab_count_fine_no_id,,integer,,,,Enumeration of all sea lice collected upon first inspection
-sealice_lab_fs,lab_count_fine_total,,integer,,,,Second enumeration of collected sea lice after identification
-sealice_lab_fs,lep_cop,L. salmonis Copepodid,integer,,,,Fine-scale lab enumeration of Lepeophtheirus salmonis sea-louse copepodids
-sealice_lab_fs,lep_cunifer_cop,L. cunifer Copepodid,integer,,,,Fine-scale lab enumeration of Lepeophtheirus cuneifer sea-louse copepodids
-sealice_lab_fs,lep_chal_a,Lep Chalimus A,integer,,,,"Fine-scale lab enumeration of L. salmonis sea lice, chalimus stage ""A"""
-sealice_lab_fs,lep_chal_b,Lep Chalimus B,integer,,,,"Fine-scale lab enumeration of L. salmonis sea lice, chalimus stage ""B"""
-sealice_lab_fs,lep_pa_m_1,Lep Pre-adult Male Stage 1,integer,,,,"Fine-scale lab enumeration of pre-adult male L. salmonis sea lice, stage 1"
-sealice_lab_fs,lep_pa_m_2,Lep Pre-adult Male Stage 2,integer,,,,"Fine-scale lab enumeration of pre-adult male L. salmonis sea lice, stage 2"
-sealice_lab_fs,lep_pa_f_1,Lep Pre-adult Female Stage 1,integer,,,,"Fine-scale lab enumeration of pre-adult female L. salmonis sea lice, stage 1"
-sealice_lab_fs,lep_pa_f_2,Lep Pre-adult Female Stage 2,integer,,,,"Fine-scale lab enumeration of pre-adult female L. salmonis sea lice, stage 2"
-sealice_lab_fs,lep_pa_unid,Unidentified Lep Pre-adult,integer,,,,"Fine-scale lab enumeration of pre-adult L. salmonis sea lice, sex unknown"
-sealice_lab_fs,lep_a_m,Lep Adult Male,integer,,,,Fine-scale lab enumeration of L. salmonis adult males
-sealice_lab_fs,lep_a_f,Lep Adult Female,integer,,,,Fine-scale lab enumeration of L. salmonis adult females
-sealice_lab_fs,lep_grav_f,Gravid Lep Female,integer,,,,Fine-scale lab enumeration of gravid (egg-bearing) L. salmonis adult females
-sealice_lab_fs,cal_cop,Caligus copepodid,integer,,,,Fine-scale lab enumeration of Caligus clemensi sea-louse copepodids
-sealice_lab_fs,cal_chal_a_1,Caligus Chalimus A-1,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A1"""
-sealice_lab_fs,cal_chal_a_2,Caligus Chalimus A-2,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A2"""
-sealice_lab_fs,cal_chal_b_3,Caligus Chalimus B-3,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""B3"""
-sealice_lab_fs,cal_chal_b_4_f,Caligus Chalimus B-4 Female,integer,,,,"Fine-scale lab enumeration of female C. clemensi sea lice, chalimus stage ""B4"""
-sealice_lab_fs,cal_chal_b_4_m,Caligus Chalimus B-4 Male,integer,,,,"Fine-scale lab enumeration of male C. clemensi sea lice, chalimus stage ""B4"""
-sealice_lab_fs,cal_chal_4_unid,Unidentified Caligus Chalimus 4,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage 4, sex unknown"
-sealice_lab_fs,cal_chal_a_unid,Unidentified Caligus Chalimus A,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A"""
-sealice_lab_fs,cal_chal_b_unid,Unidentified Caligus Chalimus B,integer,,,,"Fine-scale lab enumeration of C. clemensi sea lice, stage ""B"""
-sealice_lab_fs,cal_pa_m,Caligus Pre-adult Male,integer,,,,Fine-scale lab enumeration of C. clemensi pre-adult males
-sealice_lab_fs,cal_pa_f,Caligus Pre-adult Female,integer,,,,Fine-scale lab enumeration of C. clemensi pre-adult females
-sealice_lab_fs,cal_a_m,Caligus Adult Male,integer,,,,Fine-scale lab enumeration of C. clemensi adult males
-sealice_lab_fs,cal_a_f,Caligus Adult Female,integer,,,,Fine-scale lab enumeration of C. clemensi adult females
-sealice_lab_fs,cal_grav_f,Gravid Caligus Female,integer,,,,Fine-scale lab enumeration of gravid C. clemensi adult females
-sealice_lab_fs,cal_mot_unid,Unidentified Caligus Motile,integer,,,,"Fine-scale lab enumeration of C. clemensi motile sea lice, sex and ageclass unknown"
-sealice_lab_fs,unid_louse,Unidentified Louse,integer,,,,Fine-scale lab enumeration of lice that could not be identified by species
-sealice_lab_fs,lab_staff,Lab Technician,text,,,,
-sealice_lab_fs,comments,,text,,,,
-sealice_lab_fs,quality_level,,text,,,,
-sealice_lab_fs,quality_log,,text,,,,
-sealice_lab_mot,ufn,Universal Fish Number,text,,FK,"fish_field_data, fish_lab_data",
-sealice_lab_mot,sample_id,Sample ID,text,,,,Unique alphanumeric string used for tracking physical inventory of a sample
-sealice_lab_mot,cm_lab,Caligus Male,integer,,,,Lab enumeration of motile male C. clemensi
-sealice_lab_mot,cpaf_lab,Caligus Pre-adult Female,integer,,,,Lab enumeration of C. clemensi pre-adult females
-sealice_lab_mot,caf_lab,Caligus Adult Female,integer,,,,Lab enumeration of C. clemensi adult males
-sealice_lab_mot,cgf_lab,Gravid Caligus Female,integer,,,,Lab enumeration of gravid C. clemensi adult females
-sealice_lab_mot,ucal_lab,Unidentified Caligus,integer,,,,Lab enumeration of unidentified C. clemensi sea lice
-sealice_lab_mot,lpaf_lab,Lep Pre-adult Female,integer,,,,Lab enumeration of L. salmonis pre-adult females
-sealice_lab_mot,lpam_lab,Lep Pre-adult Female,integer,,,,Lab enumeration of L. salmonis pre-adult males
-sealice_lab_mot,lam_lab,Lep Adult Male,integer,,,,Lab enumeration of L. salmonis adult females
-sealice_lab_mot,laf_lab,Lep Adult Female,integer,,,,Lab enumeration of L. salmonis adult males
-sealice_lab_mot,lgf_lab,Gravid Lep Female,integer,,,,Lab enumeration of gravid L. salmonis adult females
-sealice_lab_mot,ulep_lab,Unidentified Lep,integer,,,,Lab enumeration of unidentified L. salmonis sea lice
-sealice_lab_mot,lab_count_motiles,Motile Count,integer,,,,Total count of all motile sea lice found on a fish
-sealice_lab_mot,comments,,text,,,,
-sealice_lab_mot,quality_level,,text,,,,
-sealice_lab_mot,quality_log,,text,,,,
-stock_id,ufn,Universal Fish Number,text,,FK,"fish_field_data, fish_lab_data",
-stock_id,sample_id,Sample ID,text,,,,Unique alphanumeric string used for tracking physical inventory of a sample
-stock_id,tissue_type,Tissue Type,text,,,,"""fin_clip"", ""kidney"", ""muscle"", ""liver"", ""other"""
-stock_id,stock_1,Stock 1,text,,,,The genetic stock assigned with the highest probability. Request Molecular Genetics Laboratory documents for more information
-stock_id,region_1,Region 1,text,,,,The region associated with Stock 1. Request Molecular Genetics Laboratory documents for more information
-stock_id,prob_1,Probability 1,numeric,,,,The probablilty the fish originates from Stock 1. Request Molecular Genetics Laboratory documents for more information
-stock_id,stock_2,Stock 2,text,,,,The genetic stock assigned with the second highest probability. Request Molecular Genetics Laboratory documents for more information
-stock_id,region_2,Region 2,text,,,,The region associated with stock 2. Request Molecular Genetics Laboratory documents for more information
-stock_id,prob_2,Probability 2,numeric,,,,The probablilty the fish originates from stock 2. Request Molecular Genetics Laboratory documents for more information
-stock_id,stock_3,Stock 3,text,,,,The genetic stock assigned with the third highest probability. Request Molecular Genetics Laboratory documents for more information
-stock_id,region_3,Region 3,text,,,,The region associated with stock 3. Request Molecular Genetics Laboratory documents for more information
-stock_id,prob_3,Probability 3,numeric,,,,The probablilty the fish originates from stock 3. Request Molecular Genetics Laboratory documents for more information
-stock_id,stock_4,Stock 4,text,,,,The genetic stock assigned with the fourth highest probability. Request Molecular Genetics Laboratory documents for more information
-stock_id,region_4,Region 4,text,,,,The region associated with stock 4. Request Molecular Genetics Laboratory documents for more information
-stock_id,prob_4,Probability 4,numeric,,,,The probablilty the fish originates from stock 4. Request Molecular Genetics Laboratory documents for more information
-stock_id,stock_5,Stock 5,text,,,,The genetic stock assigned with the fifth highest probability. Request Molecular Genetics Laboratory documents for more information
-stock_id,region_5,Region 5,text,,,,The region associated with stock 5. Request Molecular Genetics Laboratory documents for more information
-stock_id,prob_5,Probability 5,numeric,,,,The probablilty the fish originates from stock 5. Request Molecular Genetics Laboratory documents for more information
-stock_id,analyzing_lab,Analyzing Lab,text,,,,
-stock_id,quality_level,,text,,,,
-stock_id,sample_comments,,text,,,,
-stock_id,quality_log,,text,,,,
-ysi,survey_date,Survey Date,text,yyyy-mm-dd,,,
-ysi,site_id,Site ID,text,,,,
-ysi,gather_lat,Gather Latitude (DD),decimal,nn.nnnnn,,,Instataneous location of the collection event
-ysi,gather_long,Gather Longitude (DD),decimal,nnn.nnnnn,,,Instataneous location of the collection event
-ysi,ysi_unit_sn,YSI Unit Serial Number,text,,,,
-ysi,sampling_bout,Sampling Bout,integer,,,,Sampling bout number for the collection event
-ysi,line_out_depth,Line Out Depth (m),integer,,,,Depth at which measurments were taken
-ysi,collected,Time Collected,timestamp with timezone,,,,Time at which measurements were taken
-ysi,temperature,Temperature (°C),numeric,n.n,,,
-ysi,salinity,Salinity (ppt),numeric,n.n,,,
-ysi,quality_level,,,,,,
-ysi,quality_log,,,,,,
-zoop_tax,sample_id,Sample ID,text,,,,Unique alphanumeric string used for tracking physical inventory of a sample
-zoop_tax,tow_id,Tow ID,text,,FK,zoop_tows,
-zoop_tax,preservation_method,Preservation Method,text,,,,The chemical medium in which the samples were preserved
-zoop_tax,analyzed_by,Analyzed By,text,,,,
-zoop_tax,sample_comments,,text,,,,
-zoop_tows,survey_date,Survey Date,date,yyyy-mm-dd,,,
-zoop_tows,site_id,Site ID,text,,,,
-zoop_tows,sampling_bout,Sampling Bout,integer,,,,Sampling bout number for the zooplankton tow.
-zoop_tows,tow_id,Tow ID,text,,PK,,"A concatenation of survey date, site ID, and sampling bout to create a unique string for samples collected to link to"
-zoop_tows,tow_type,Tow Type,text,,,,"Vertical, Surface, or Oblique"
-zoop_tows,line_out_depth,Line Out Depth (m),integer,n,,,"The targeted depth of the net. Surface tows should always be ""0"""
-zoop_tows,tow_lat,Latitude (DD),decimal,nn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
-zoop_tows,tow_long,Longitude (DD),decimal,nnn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
-zoop_tows,tow_start_time,Tow Start Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net enters the water
-zoop_tows,tow_bot_time,Tow Bottom Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net reaches target line out depth (NA for surface tows)
-zoop_tows,tow_end_time,Tow End Time,timestamp with timezone,yyyy-mm-dd hh:mm:ss Z,,,Time when the net breaks the surface of the water during retrieval
-zoop_tows,tow_duration,Tow Duration,numeric,hh:mm:ss,,,"Total length of time net was submerged, calculated as the different between tow_end_time and tow_start_time"
-zoop_tows,flow_meter,Flowmeter ID,text,,,,Serial number of the flowmeter used
-zoop_tows,flowmeter_in,Flow Count In,integer,,,,Value of the flowmeter's counter wheel at the start of the tow
-zoop_tows,flowmeter_out,Flow Count Out,integer,,,,Value of the flowmeter's counter wheel at the end of the tow
-zoop_tows,flow_flag,,,,,,
-zoop_tows,revolutions,Number of Revolutions,integer,,,,Difference between flowmeter_out and flowmeter_in counts
-zoop_tows,corrected_volume,Corrected Volume (L),numeric,,,,"Total volume of water sampled, corrected for calibration drift over the course of the sampling season"
-zoop_tows,modelled_volume,Modelled Volume (L),numeric,,,,"Modeled volume of water sampled, when the flowmeter was not reading correctly and therefore counts could not be used to calculate volume normally (contact Brett Johnson for model equations)"
-zoop_tows,solo_id,RBR Solo ID,text,,,,"Hakai-assigned ID of the RBR solo depth logger, if one was attached to the ring of the net"
-zoop_tows,solo_depth,RBR Solo Depth,numeric,,,,Maximum depth recorded by the RBR solo
-zoop_tows,tow_split,Split Tow?,text,,,,"""Yes"" = tow collection was split into multiple samples. ""No"" = entire contents of the tow was used for a single sample"
-zoop_tows,sample_collected,Sample(s) Collected,text,,,,"""TAX"" = sample collected for taxonomic analysis. ""BIO"" = sample collected for energy density/forage quality analysis (""biomass"")"
-zoop_tows,zoop_tow_comments,,,,,,
-zoop_tows,quality_level,,,,,,
-zoop_tows,quality_log,,,,,,
+fish_lab_data,lice_collection_protocol,Lice Collection Protocol,text,,,,,"""lab_fine_2015"" = attached & motile sea lice collected for identification and stored in buffered formalin. ""lab_motiles_etoh"" = motile sea lice collected for identification and stored in 95% non-denatured ethanol. ""lab_motiles_cryo"" = motile sea lice collected for Tianyi Chang's (UBC) microbiome research and stored at -80C."
+fish_lab_data,lice_id_protocol_lab,Lab Lice ID Protocol,text,,,,,"""lportner_fine"" = fine-scale identification of sea lice collected in the lab by Lauren Portner. ""lab_motiles"" = identification of motile stages of sea lice only."
+fish_lab_data,quality_level,Quality Level,text,,,,,
+fish_lab_data,quality_flag,Quality Flag,text,,,,,
+fish_lab_data,quality_log,Quality Log,text,,,,,
+sealice_field,ufn,Universal Fish Number,text,,,FK,fish_field_data,
+sealice_field,cal_cope_field,Caligus copepodid,integer,,,,,Count of C. clemensi copepodids
+sealice_field,lep_cope_field,Lep copepodid,integer,,,,,Count of L. salmonis copepodids
+sealice_field,chal_a_field,Chalimus A,integer,,,,,"Count of C. clemensi and L. salmonis lice at life-stage chalimus ""A"""
+sealice_field,chal_b_field,Chalimus B,integer,,,,,"Count of C. clemensi and L. salmonis lice at life-stage chalimus ""B"""
+sealice_field,cal_mot_field,Caligus motile,integer,,,,,"Count of C. clemensi motiles (aggregation of pre-adult males and females, excluding gravid)"
+sealice_field,cgf_field,Gravid Caligus,integer,,,,,Count of gravid C. clemensi females
+sealice_field,lpam_field,Lep Pre-adult Male,integer,,,,,Count of L. salmonis pre-adult males
+sealice_field,lpaf_field,Lep Pre-adult Female,integer,,,,,Count of L. salmonis pre-adult females
+sealice_field,lam_field,Lep Adult Male,integer,,,,,Count of L. salmonis adult males
+sealice_field,laf_field,Lep Adult Female,integer,,,,,Count of L. salmonis adult females
+sealice_field,lgf_field,Gravid Lep,integer,,,,,Count of gravid L. salmonis females
+sealice_field,unid_cope_field,Unidentified Copepodid,integer,,,,,Count of unidentified copepodids (species unknown)
+sealice_field,unid_chal_field,Unidentified Chalimus,integer,,,,,Count of unidentified chalmus-stage lice (sub-stage unknown)
+sealice_field,cs,Chalimus Scar,integer,,,,,Count of chalimus scars on the host body
+sealice_field,ms,Motile Scar,integer,,,,,Count of motile lice scars on the host body
+sealice_field,ps,Predator Scar,integer,,,,,"Count of predator scars on the fish body (fish, bird, etc.)"
+sealice_field,hem,Hemorrhaging,integer,,,,,Count of incidents of hemorrhaging observed on the fish
+sealice_field,egp,Eroded Gill Plate,integer,,,,,Count of eroded gill plates observed on the fish
+sealice_field,ggp,Grazed Gill Plate,integer,,,,,Count of grazed gill plates observed on the fish
+sealice_field,mg,Mate Guarding,integer,,,,,Count of incidents of sea-louse mate guarding
+sealice_field,pb,Pinched Belly,integer,,,,,"Observation of whether the fish has a ""pinched"" belly"
+sealice_field,comments_fish_health_field,Fish Health Comments (Field),text,,,,,"Comments regarding observations of fish health abnormalities (including non-louse parasites), including the location of any observed body conditions"
+sealice_field,quality_log,Quality Log,text,,,,,
+sealice_lab_fs,ufn,Universal Fish Number,text,,,FK,"fish_field_data, fish_lab_data",
+sealice_lab_fs,sample_id,Sample ID,text,,,,,Unique alphanumeric string used for tracking physical inventory of a sample
+sealice_lab_fs,date_liced,Date Liced,date,,yyyy-mm-dd,,,Date the sample received louse identification
+sealice_lab_fs,lab_count_fine_no_id,,integer,,,,,Enumeration of all sea lice collected upon first inspection
+sealice_lab_fs,lab_count_fine_total,,integer,,,,,Second enumeration of collected sea lice after identification
+sealice_lab_fs,lep_cop,L. salmonis Copepodid,integer,,,,,Fine-scale lab enumeration of Lepeophtheirus salmonis sea-louse copepodids
+sealice_lab_fs,lep_cunifer_cop,L. cunifer Copepodid,integer,,,,,Fine-scale lab enumeration of Lepeophtheirus cuneifer sea-louse copepodids
+sealice_lab_fs,lep_chal_a,Lep Chalimus A,integer,,,,,"Fine-scale lab enumeration of L. salmonis sea lice, chalimus stage ""A"""
+sealice_lab_fs,lep_chal_b,Lep Chalimus B,integer,,,,,"Fine-scale lab enumeration of L. salmonis sea lice, chalimus stage ""B"""
+sealice_lab_fs,lep_pa_m_1,Lep Pre-adult Male Stage 1,integer,,,,,"Fine-scale lab enumeration of pre-adult male L. salmonis sea lice, stage 1"
+sealice_lab_fs,lep_pa_m_2,Lep Pre-adult Male Stage 2,integer,,,,,"Fine-scale lab enumeration of pre-adult male L. salmonis sea lice, stage 2"
+sealice_lab_fs,lep_pa_f_1,Lep Pre-adult Female Stage 1,integer,,,,,"Fine-scale lab enumeration of pre-adult female L. salmonis sea lice, stage 1"
+sealice_lab_fs,lep_pa_f_2,Lep Pre-adult Female Stage 2,integer,,,,,"Fine-scale lab enumeration of pre-adult female L. salmonis sea lice, stage 2"
+sealice_lab_fs,lep_pa_unid,Unidentified Lep Pre-adult,integer,,,,,"Fine-scale lab enumeration of pre-adult L. salmonis sea lice, sex unknown"
+sealice_lab_fs,lep_a_m,Lep Adult Male,integer,,,,,Fine-scale lab enumeration of L. salmonis adult males
+sealice_lab_fs,lep_a_f,Lep Adult Female,integer,,,,,Fine-scale lab enumeration of L. salmonis adult females
+sealice_lab_fs,lep_grav_f,Gravid Lep Female,integer,,,,,Fine-scale lab enumeration of gravid (egg-bearing) L. salmonis adult females
+sealice_lab_fs,cal_cop,Caligus copepodid,integer,,,,,Fine-scale lab enumeration of Caligus clemensi sea-louse copepodids
+sealice_lab_fs,cal_chal_a_1,Caligus Chalimus A-1,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A1"""
+sealice_lab_fs,cal_chal_a_2,Caligus Chalimus A-2,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A2"""
+sealice_lab_fs,cal_chal_b_3,Caligus Chalimus B-3,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""B3"""
+sealice_lab_fs,cal_chal_b_4_f,Caligus Chalimus B-4 Female,integer,,,,,"Fine-scale lab enumeration of female C. clemensi sea lice, chalimus stage ""B4"""
+sealice_lab_fs,cal_chal_b_4_m,Caligus Chalimus B-4 Male,integer,,,,,"Fine-scale lab enumeration of male C. clemensi sea lice, chalimus stage ""B4"""
+sealice_lab_fs,cal_chal_4_unid,Unidentified Caligus Chalimus 4,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage 4, sex unknown"
+sealice_lab_fs,cal_chal_a_unid,Unidentified Caligus Chalimus A,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, chalimus stage ""A"""
+sealice_lab_fs,cal_chal_b_unid,Unidentified Caligus Chalimus B,integer,,,,,"Fine-scale lab enumeration of C. clemensi sea lice, stage ""B"""
+sealice_lab_fs,cal_pa_m,Caligus Pre-adult Male,integer,,,,,Fine-scale lab enumeration of C. clemensi pre-adult males
+sealice_lab_fs,cal_pa_f,Caligus Pre-adult Female,integer,,,,,Fine-scale lab enumeration of C. clemensi pre-adult females
+sealice_lab_fs,cal_a_m,Caligus Adult Male,integer,,,,,Fine-scale lab enumeration of C. clemensi adult males
+sealice_lab_fs,cal_a_f,Caligus Adult Female,integer,,,,,Fine-scale lab enumeration of C. clemensi adult females
+sealice_lab_fs,cal_grav_f,Gravid Caligus Female,integer,,,,,Fine-scale lab enumeration of gravid C. clemensi adult females
+sealice_lab_fs,cal_mot_unid,Unidentified Caligus Motile,integer,,,,,"Fine-scale lab enumeration of C. clemensi motile sea lice, sex and ageclass unknown"
+sealice_lab_fs,unid_louse,Unidentified Louse,integer,,,,,Fine-scale lab enumeration of lice that could not be identified by species
+sealice_lab_fs,lab_staff,Lab Technician,text,,,,,
+sealice_lab_fs,comments,,text,,,,,
+sealice_lab_fs,quality_level,,text,,,,,
+sealice_lab_fs,quality_log,,text,,,,,
+sealice_lab_mot,ufn,Universal Fish Number,text,,,FK,"fish_field_data, fish_lab_data",
+sealice_lab_mot,sample_id,Sample ID,text,,,,,Unique alphanumeric string used for tracking physical inventory of a sample
+sealice_lab_mot,cm_lab,Caligus Male,integer,,,,,Lab enumeration of motile male C. clemensi
+sealice_lab_mot,cpaf_lab,Caligus Pre-adult Female,integer,,,,,Lab enumeration of C. clemensi pre-adult females
+sealice_lab_mot,caf_lab,Caligus Adult Female,integer,,,,,Lab enumeration of C. clemensi adult males
+sealice_lab_mot,cgf_lab,Gravid Caligus Female,integer,,,,,Lab enumeration of gravid C. clemensi adult females
+sealice_lab_mot,ucal_lab,Unidentified Caligus,integer,,,,,Lab enumeration of unidentified C. clemensi sea lice
+sealice_lab_mot,lpaf_lab,Lep Pre-adult Female,integer,,,,,Lab enumeration of L. salmonis pre-adult females
+sealice_lab_mot,lpam_lab,Lep Pre-adult Female,integer,,,,,Lab enumeration of L. salmonis pre-adult males
+sealice_lab_mot,lam_lab,Lep Adult Male,integer,,,,,Lab enumeration of L. salmonis adult females
+sealice_lab_mot,laf_lab,Lep Adult Female,integer,,,,,Lab enumeration of L. salmonis adult males
+sealice_lab_mot,lgf_lab,Gravid Lep Female,integer,,,,,Lab enumeration of gravid L. salmonis adult females
+sealice_lab_mot,ulep_lab,Unidentified Lep,integer,,,,,Lab enumeration of unidentified L. salmonis sea lice
+sealice_lab_mot,lab_count_motiles,Motile Count,integer,,,,,Total count of all motile sea lice found on a fish
+sealice_lab_mot,comments,,text,,,,,
+sealice_lab_mot,quality_level,,text,,,,,
+sealice_lab_mot,quality_log,,text,,,,,
+stock_id,ufn,Universal Fish Number,text,,,FK,"fish_field_data, fish_lab_data",
+stock_id,sample_id,Sample ID,text,,,,,Unique alphanumeric string used for tracking physical inventory of a sample
+stock_id,tissue_type,Tissue Type,text,,,,,"""fin_clip"", ""kidney"", ""muscle"", ""liver"", ""other"""
+stock_id,stock_1,Stock 1,text,,,,,The genetic stock assigned with the highest probability. Request Molecular Genetics Laboratory documents for more information
+stock_id,region_1,Region 1,text,,,,,The region associated with Stock 1. Request Molecular Genetics Laboratory documents for more information
+stock_id,prob_1,Probability 1,numeric,,,,,The probablilty the fish originates from Stock 1. Request Molecular Genetics Laboratory documents for more information
+stock_id,stock_2,Stock 2,text,,,,,The genetic stock assigned with the second highest probability. Request Molecular Genetics Laboratory documents for more information
+stock_id,region_2,Region 2,text,,,,,The region associated with stock 2. Request Molecular Genetics Laboratory documents for more information
+stock_id,prob_2,Probability 2,numeric,,,,,The probablilty the fish originates from stock 2. Request Molecular Genetics Laboratory documents for more information
+stock_id,stock_3,Stock 3,text,,,,,The genetic stock assigned with the third highest probability. Request Molecular Genetics Laboratory documents for more information
+stock_id,region_3,Region 3,text,,,,,The region associated with stock 3. Request Molecular Genetics Laboratory documents for more information
+stock_id,prob_3,Probability 3,numeric,,,,,The probablilty the fish originates from stock 3. Request Molecular Genetics Laboratory documents for more information
+stock_id,stock_4,Stock 4,text,,,,,The genetic stock assigned with the fourth highest probability. Request Molecular Genetics Laboratory documents for more information
+stock_id,region_4,Region 4,text,,,,,The region associated with stock 4. Request Molecular Genetics Laboratory documents for more information
+stock_id,prob_4,Probability 4,numeric,,,,,The probablilty the fish originates from stock 4. Request Molecular Genetics Laboratory documents for more information
+stock_id,stock_5,Stock 5,text,,,,,The genetic stock assigned with the fifth highest probability. Request Molecular Genetics Laboratory documents for more information
+stock_id,region_5,Region 5,text,,,,,The region associated with stock 5. Request Molecular Genetics Laboratory documents for more information
+stock_id,prob_5,Probability 5,numeric,,,,,The probablilty the fish originates from stock 5. Request Molecular Genetics Laboratory documents for more information
+stock_id,analyzing_lab,Analyzing Lab,text,,,,,
+stock_id,quality_level,,text,,,,,
+stock_id,sample_comments,,text,,,,,
+stock_id,quality_log,,text,,,,,
+ysi,survey_date,Survey Date,text,,yyyy-mm-dd,,,
+ysi,site_id,Site ID,text,,,,,
+ysi,gather_lat,Gather Latitude (DD),decimal,decimal.degree,nn.nnnnn,,,Instataneous location of the collection event
+ysi,gather_long,Gather Longitude (DD),decimal,decimal.degree,nnn.nnnnn,,,Instataneous location of the collection event
+ysi,ysi_unit_sn,YSI Unit Serial Number,text,,,,,
+ysi,sampling_bout,Sampling Bout,integer,,,,,Sampling bout number for the collection event
+ysi,line_out_depth,Line Out Depth (m),integer,metre,,,,Depth at which measurments were taken
+ysi,collected,Time Collected,timestamp with timezone,,,,,Time at which measurements were taken
+ysi,temperature,Temperature (°C),numeric,degrees Celsisu,n.n,,,
+ysi,salinity,Salinity (ppt),numeric,parts per thousand,n.n,,,
+ysi,quality_level,,,,,,,
+ysi,quality_log,,,,,,,
+zoop_tax,sample_id,Sample ID,text,,,,,Unique alphanumeric string used for tracking physical inventory of a sample
+zoop_tax,tow_id,Tow ID,text,,,FK,zoop_tows,
+zoop_tax,preservation_method,Preservation Method,text,,,,,The chemical medium in which the samples were preserved
+zoop_tax,analyzed_by,Analyzed By,text,,,,,
+zoop_tax,sample_comments,,text,,,,,
+zoop_tows,survey_date,Survey Date,date,,yyyy-mm-dd,,,
+zoop_tows,site_id,Site ID,text,,,,,
+zoop_tows,sampling_bout,Sampling Bout,integer,,,,,Sampling bout number for the zooplankton tow.
+zoop_tows,tow_id,Tow ID,text,,,PK,,"A concatenation of survey date, site ID, and sampling bout to create a unique string for samples collected to link to"
+zoop_tows,tow_type,Tow Type,text,,,,,"Vertical, Surface, or Oblique"
+zoop_tows,line_out_depth,Line Out Depth (m),integer,metre,n,,,"The targeted depth of the net. Surface tows should always be ""0"""
+zoop_tows,tow_lat,Latitude (DD),decimal,decimal.degree,nn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
+zoop_tows,tow_long,Longitude (DD),decimal,decimal.degree,nnn.nnnnn,,,"The instantaneous location of the vessel at the start of the tow, when the net enters the water"
+zoop_tows,tow_start_time,Tow Start Time,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,Time when the net enters the water
+zoop_tows,tow_bot_time,Tow Bottom Time,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,Time when the net reaches target line out depth (NA for surface tows)
+zoop_tows,tow_end_time,Tow End Time,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,Time when the net breaks the surface of the water during retrieval
+zoop_tows,tow_duration,Tow Duration,numeric,,hh:mm:ss,,,"Total length of time net was submerged, calculated as the different between tow_end_time and tow_start_time"
+zoop_tows,flow_meter,Flowmeter ID,text,,,,,Serial number of the flowmeter used
+zoop_tows,flowmeter_in,Flow Count In,integer,,,,,Value of the flowmeter's counter wheel at the start of the tow
+zoop_tows,flowmeter_out,Flow Count Out,integer,,,,,Value of the flowmeter's counter wheel at the end of the tow
+zoop_tows,flow_flag,,,,,,,
+zoop_tows,revolutions,Number of Revolutions,integer,,,,,Difference between flowmeter_out and flowmeter_in counts
+zoop_tows,corrected_volume,Corrected Volume (L),numeric,litre,,,,"Total volume of water sampled, corrected for calibration drift over the course of the sampling season"
+zoop_tows,modelled_volume,Modelled Volume (L),numeric,litre,,,,"Modeled volume of water sampled, when the flowmeter was not reading correctly and therefore counts could not be used to calculate volume normally (contact Brett Johnson for model equations)"
+zoop_tows,solo_id,RBR Solo ID,text,,,,,"Hakai-assigned ID of the RBR solo depth logger, if one was attached to the ring of the net"
+zoop_tows,solo_depth,RBR Solo Depth,numeric,,,,,Maximum depth recorded by the RBR solo
+zoop_tows,tow_split,Split Tow?,text,,,,,"""Yes"" = tow collection was split into multiple samples. ""No"" = entire contents of the tow was used for a single sample"
+zoop_tows,sample_collected,Sample(s) Collected,text,,,,,"""TAX"" = sample collected for taxonomic analysis. ""BIO"" = sample collected for energy density/forage quality analysis (""biomass"")"
+zoop_tows,zoop_tow_comments,,,,,,,
+zoop_tows,quality_level,,,,,,,
+zoop_tows,quality_log,,,,,,,
+salmon_diets_coarse,sample_id,Sample ID,text,,,FK,stomach_samples,
+salmon_diets_coarse,date_processed,Date Processed,date,,yyyy-mm-dd,,,
+salmon_diets_coarse,content_weight,Content Weight (g),decimal,gram,,,,"Weight of the prey contents of the gut, as measured by a 0.1 mg precision microbalance"
+salmon_diets_coarse,digestive_state,Digestive State,text,,,,,0 = gut contents empty; 1-3 = degree of digestion in ascending order
+salmon_diets_coarse,dominant_taxa,Dominant Taxa,integer,,,,,The taxonomic category that was found in the highest percentage
+salmon_diets_coarse,per_amphipod,Amphipod,integer,percent,,,,
+salmon_diets_coarse,per_decapod,Decapod,integer,percent,,,,
+salmon_diets_coarse,per_euphausiid,Euphausiid,integer,percent,,,,
+salmon_diets_coarse,per_cop_lg,Large Copepodid (>2 mm),integer,percent,,,,
+salmon_diets_coarse,per_cop_sm,Small Copepodid (<2 mm),integer,percent,,,,
+salmon_diets_coarse,per_larvacean,Larvacean,integer,percent,,,,
+salmon_diets_coarse,per_other,Other,integer,percent,,,,Any organism that does not fall into one of the previous categories of classification
+salmon_diets_coarse,per_digested,Digested,integer,percent,,,,Prey matter that has been digested beyond the point of reasonable identification
+salmon_diets_coarse,other_dom_taxa,Other Dominant Taxa,text,,,,,Taxonomic category of organisms found in Other (%)
+salmon_diets_coarse,parasites,Parasites?,text,,,,,"""Y"" = signs of parasites present; ""N"" = no signs of parasites"
+salmon_diets_coarse,initials,Lab Technician Initials,text,,,,,
