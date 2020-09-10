@@ -5,7 +5,10 @@
 .httr-oauth
 QC-report.html
 .DS_Store
+<<<<<<< Updated upstream
 
 data/.DS_Store
 
 .DS_Store
+=======
+>>>>>>> Stashed changes
