@@ -3,8 +3,16 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.2.0] - 2021-01-28
+### Added
+- 2020 Field data results
+- New column added for sea lice presence absence in fish_field_data.
 
-## [1.1.0] - 2019-02-14
+### Changed
+
+
+
+## [1.1.0] - 2020-02-14
 ### Added
 - 2019 results to **fish_lab_data**
 - Sockeye diet results (see: data/sample_results/sockeye_diets) from 302 sockeye caught in 2015 and 2016 from Sam James' MSc. thesis

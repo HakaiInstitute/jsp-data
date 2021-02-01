@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -2612,7 +2611,7 @@ cursor: pointer;
 z-index: auto;
 }
 </style>
-<script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+<script>(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2799,8 +2798,7 @@ function getCRS(crsOptions) {
         crsOptions.options.transformation = _leaflet2.default.Transformation(crsOptions.options.transformation[0], crsOptions.options.transformation[1], crsOptions.options.transformation[2], crsOptions.options.transformation[3]);
       }
       // L.Proj.CRS.TMS is deprecated as of Leaflet 1.x, fall back to L.Proj.CRS
-      //crs = new Proj4Leaflet.CRS.TMS(crsOptions.code, crsOptions.proj4def,
-      //crsOptions.projectedBounds, crsOptions.options);
+      //crs = new Proj4Leaflet.CRS.TMS(crsOptions.code, crsOptions.proj4def, crsOptions.projectedBounds, crsOptions.options);
       crs = new _proj4leaflet2.default.CRS(crsOptions.code, crsOptions.proj4def, crsOptions.options);
       break;
   }
@@ -2814,8 +2812,6 @@ function getCRS(crsOptions) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -2899,17 +2895,11 @@ var DataFrame = function () {
 
       var colIndex = -1;
       if (typeof col === "undefined") {
-        var _ret = function () {
-          var rowData = {};
-          _this3.colnames.forEach(function (name, i) {
-            rowData[name] = _this3.columns[i][row % _this3.columns[i].length];
-          });
-          return {
-            v: rowData
-          };
-        }();
-
-        if ((typeof _ret === "undefined" ? "undefined" : _typeof(_ret)) === "object") return _ret.v;
+        var rowData = {};
+        this.colnames.forEach(function (name, i) {
+          rowData[name] = _this3.columns[i][row % _this3.columns[i].length];
+        });
+        return rowData;
       } else if (typeof col === "string") {
         colIndex = this._colIndex(col);
       } else if (typeof col === "number") {
@@ -3257,42 +3247,40 @@ _htmlwidgets2.default.widget({
 
         // Check if the map is rendered statically (no output binding)
         if (_htmlwidgets2.default.shinyMode && /\bshiny-bound-output\b/.test(el.className)) {
-          (function () {
 
-            map.id = el.id;
+          map.id = el.id;
 
-            // Store the map on the element so we can find it later by ID
-            (0, _jquery2.default)(el).data("leaflet-map", map);
+          // Store the map on the element so we can find it later by ID
+          (0, _jquery2.default)(el).data("leaflet-map", map);
 
-            // When the map is clicked, send the coordinates back to the app
-            map.on("click", function (e) {
-              _shiny2.default.onInputChange(map.id + "_click", {
-                lat: e.latlng.lat,
-                lng: e.latlng.lng,
-                ".nonce": Math.random() // Force reactivity if lat/lng hasn't changed
-              });
+          // When the map is clicked, send the coordinates back to the app
+          map.on("click", function (e) {
+            _shiny2.default.onInputChange(map.id + "_click", {
+              lat: e.latlng.lat,
+              lng: e.latlng.lng,
+              ".nonce": Math.random() // Force reactivity if lat/lng hasn't changed
             });
+          });
 
-            var groupTimerId = null;
+          var groupTimerId = null;
 
-            map.on("moveend", function (e) {
-              updateBounds(e.target);
-            }).on("layeradd layerremove", function (e) {
-              // If the layer that's coming or going is a group we created, tell
-              // the server.
-              if (map.layerManager.getGroupNameFromLayerGroup(e.layer)) {
-                // But to avoid chattiness, coalesce events
-                if (groupTimerId) {
-                  clearTimeout(groupTimerId);
-                  groupTimerId = null;
-                }
-                groupTimerId = setTimeout(function () {
-                  groupTimerId = null;
-                  _shiny2.default.onInputChange(map.id + "_groups", map.layerManager.getVisibleGroups());
-                }, 100);
+          map.on("moveend", function (e) {
+            updateBounds(e.target);
+          }).on("layeradd layerremove", function (e) {
+            // If the layer that's coming or going is a group we created, tell
+            // the server.
+            if (map.layerManager.getGroupNameFromLayerGroup(e.layer)) {
+              // But to avoid chattiness, coalesce events
+              if (groupTimerId) {
+                clearTimeout(groupTimerId);
+                groupTimerId = null;
               }
-            });
-          })();
+              groupTimerId = setTimeout(function () {
+                groupTimerId = null;
+                _shiny2.default.onInputChange(map.id + "_groups", map.layerManager.getVisibleGroups());
+              }, 100);
+            }
+          });
         }
         this.doRenderValue(data, map);
       },
@@ -3541,77 +3529,73 @@ var LayerManager = function () {
 
       // Update crosstalk group index
       if (ctGroup) {
-        (function () {
-          if (layer.setStyle) {
-            // Need to save this info so we know what to set opacity to later
-            layer.options.origOpacity = typeof layer.options.opacity !== "undefined" ? layer.options.opacity : 0.5;
-            layer.options.origFillOpacity = typeof layer.options.fillOpacity !== "undefined" ? layer.options.fillOpacity : 0.2;
-          }
+        if (layer.setStyle) {
+          // Need to save this info so we know what to set opacity to later
+          layer.options.origOpacity = typeof layer.options.opacity !== "undefined" ? layer.options.opacity : 0.5;
+          layer.options.origFillOpacity = typeof layer.options.fillOpacity !== "undefined" ? layer.options.fillOpacity : 0.2;
+        }
 
-          var ctg = _this._byCrosstalkGroup[ctGroup];
-          if (!ctg) {
-            (function () {
-              ctg = _this._byCrosstalkGroup[ctGroup] = {};
-              var crosstalk = global.crosstalk;
+        var ctg = this._byCrosstalkGroup[ctGroup];
+        if (!ctg) {
+          ctg = this._byCrosstalkGroup[ctGroup] = {};
+          var crosstalk = global.crosstalk;
 
-              var handleFilter = function handleFilter(e) {
-                if (!e.value) {
-                  var groupKeys = Object.keys(ctg);
-                  for (var i = 0; i < groupKeys.length; i++) {
-                    var key = groupKeys[i];
-                    var _layerInfo = _this._byStamp[ctg[key]];
-                    _this._setVisibility(_layerInfo, true);
-                  }
-                } else {
-                  var selectedKeys = {};
-                  for (var _i = 0; _i < e.value.length; _i++) {
-                    selectedKeys[e.value[_i]] = true;
-                  }
-                  var _groupKeys = Object.keys(ctg);
-                  for (var _i2 = 0; _i2 < _groupKeys.length; _i2++) {
-                    var _key = _groupKeys[_i2];
-                    var _layerInfo2 = _this._byStamp[ctg[_key]];
-                    _this._setVisibility(_layerInfo2, selectedKeys[_groupKeys[_i2]]);
-                  }
-                }
-              };
-              var filterHandle = new crosstalk.FilterHandle(ctGroup);
-              filterHandle.on("change", handleFilter);
+          var handleFilter = function handleFilter(e) {
+            if (!e.value) {
+              var groupKeys = Object.keys(ctg);
+              for (var i = 0; i < groupKeys.length; i++) {
+                var key = groupKeys[i];
+                var _layerInfo = _this._byStamp[ctg[key]];
+                _this._setVisibility(_layerInfo, true);
+              }
+            } else {
+              var selectedKeys = {};
+              for (var _i = 0; _i < e.value.length; _i++) {
+                selectedKeys[e.value[_i]] = true;
+              }
+              var _groupKeys = Object.keys(ctg);
+              for (var _i2 = 0; _i2 < _groupKeys.length; _i2++) {
+                var _key = _groupKeys[_i2];
+                var _layerInfo2 = _this._byStamp[ctg[_key]];
+                _this._setVisibility(_layerInfo2, selectedKeys[_groupKeys[_i2]]);
+              }
+            }
+          };
+          var filterHandle = new crosstalk.FilterHandle(ctGroup);
+          filterHandle.on("change", handleFilter);
 
-              var handleSelection = function handleSelection(e) {
-                if (!e.value || !e.value.length) {
-                  var groupKeys = Object.keys(ctg);
-                  for (var i = 0; i < groupKeys.length; i++) {
-                    var key = groupKeys[i];
-                    var _layerInfo3 = _this._byStamp[ctg[key]];
-                    _this._setOpacity(_layerInfo3, 1.0);
-                  }
-                } else {
-                  var selectedKeys = {};
-                  for (var _i3 = 0; _i3 < e.value.length; _i3++) {
-                    selectedKeys[e.value[_i3]] = true;
-                  }
-                  var _groupKeys2 = Object.keys(ctg);
-                  for (var _i4 = 0; _i4 < _groupKeys2.length; _i4++) {
-                    var _key2 = _groupKeys2[_i4];
-                    var _layerInfo4 = _this._byStamp[ctg[_key2]];
-                    _this._setOpacity(_layerInfo4, selectedKeys[_groupKeys2[_i4]] ? 1.0 : 0.2);
-                  }
-                }
-              };
-              var selHandle = new crosstalk.SelectionHandle(ctGroup);
-              selHandle.on("change", handleSelection);
+          var handleSelection = function handleSelection(e) {
+            if (!e.value || !e.value.length) {
+              var groupKeys = Object.keys(ctg);
+              for (var i = 0; i < groupKeys.length; i++) {
+                var key = groupKeys[i];
+                var _layerInfo3 = _this._byStamp[ctg[key]];
+                _this._setOpacity(_layerInfo3, 1.0);
+              }
+            } else {
+              var selectedKeys = {};
+              for (var _i3 = 0; _i3 < e.value.length; _i3++) {
+                selectedKeys[e.value[_i3]] = true;
+              }
+              var _groupKeys2 = Object.keys(ctg);
+              for (var _i4 = 0; _i4 < _groupKeys2.length; _i4++) {
+                var _key2 = _groupKeys2[_i4];
+                var _layerInfo4 = _this._byStamp[ctg[_key2]];
+                _this._setOpacity(_layerInfo4, selectedKeys[_groupKeys2[_i4]] ? 1.0 : 0.2);
+              }
+            }
+          };
+          var selHandle = new crosstalk.SelectionHandle(ctGroup);
+          selHandle.on("change", handleSelection);
 
-              setTimeout(function () {
-                handleFilter({ value: filterHandle.filteredKeys });
-                handleSelection({ value: selHandle.value });
-              }, 100);
-            })();
-          }
+          setTimeout(function () {
+            handleFilter({ value: filterHandle.filteredKeys });
+            handleSelection({ value: selHandle.value });
+          }, 100);
+        }
 
-          if (!ctg[ctKey]) ctg[ctKey] = [];
-          ctg[ctKey].push(stamp);
-        })();
+        if (!ctg[ctKey]) ctg[ctKey] = [];
+        ctg[ctKey].push(stamp);
       }
 
       // Add to container
@@ -3856,8 +3840,6 @@ exports.default = LayerManager;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 var _jquery = require("./global/jquery");
 
@@ -4185,68 +4167,62 @@ methods.addAwesomeMarkers = function (lat, lng, icon, layerId, group, options, p
 function addLayers(map, category, df, layerFunc) {
   var _loop3 = function _loop3(i) {
     (function () {
-      var _this4 = this;
-
       var layer = layerFunc(df, i);
       if (!_jquery2.default.isEmptyObject(layer)) {
-        (function () {
-          var thisId = df.get(i, "layerId");
-          var thisGroup = df.get(i, "group");
-          _this4.layerManager.addLayer(layer, category, thisId, thisGroup, df.get(i, "ctGroup", true), df.get(i, "ctKey", true));
-          if (layer.bindPopup) {
-            var popup = df.get(i, "popup");
-            var popupOptions = df.get(i, "popupOptions");
-            if (popup !== null) {
-              if (popupOptions !== null) {
-                layer.bindPopup(popup, popupOptions);
-              } else {
-                layer.bindPopup(popup);
-              }
+        var thisId = df.get(i, "layerId");
+        var thisGroup = df.get(i, "group");
+        this.layerManager.addLayer(layer, category, thisId, thisGroup, df.get(i, "ctGroup", true), df.get(i, "ctKey", true));
+        if (layer.bindPopup) {
+          var popup = df.get(i, "popup");
+          var popupOptions = df.get(i, "popupOptions");
+          if (popup !== null) {
+            if (popupOptions !== null) {
+              layer.bindPopup(popup, popupOptions);
+            } else {
+              layer.bindPopup(popup);
             }
           }
-          if (layer.bindTooltip) {
-            var label = df.get(i, "label");
-            var labelOptions = df.get(i, "labelOptions");
-            if (label !== null) {
-              if (labelOptions !== null) {
-                layer.bindTooltip(label, labelOptions);
-              } else {
-                layer.bindTooltip(label);
-              }
+        }
+        if (layer.bindTooltip) {
+          var label = df.get(i, "label");
+          var labelOptions = df.get(i, "labelOptions");
+          if (label !== null) {
+            if (labelOptions !== null) {
+              layer.bindTooltip(label, labelOptions);
+            } else {
+              layer.bindTooltip(label);
             }
           }
-          layer.on("click", mouseHandler(_this4.id, thisId, thisGroup, category + "_click"), _this4);
-          layer.on("mouseover", mouseHandler(_this4.id, thisId, thisGroup, category + "_mouseover"), _this4);
-          layer.on("mouseout", mouseHandler(_this4.id, thisId, thisGroup, category + "_mouseout"), _this4);
-          var highlightStyle = df.get(i, "highlightOptions");
+        }
+        layer.on("click", mouseHandler(this.id, thisId, thisGroup, category + "_click"), this);
+        layer.on("mouseover", mouseHandler(this.id, thisId, thisGroup, category + "_mouseover"), this);
+        layer.on("mouseout", mouseHandler(this.id, thisId, thisGroup, category + "_mouseout"), this);
+        var highlightStyle = df.get(i, "highlightOptions");
 
-          if (!_jquery2.default.isEmptyObject(highlightStyle)) {
-            (function () {
+        if (!_jquery2.default.isEmptyObject(highlightStyle)) {
 
-              var defaultStyle = {};
-              _jquery2.default.each(highlightStyle, function (k, v) {
-                if (k != "bringToFront" && k != "sendToBack") {
-                  if (df.get(i, k)) {
-                    defaultStyle[k] = df.get(i, k);
-                  }
-                }
-              });
+          var defaultStyle = {};
+          _jquery2.default.each(highlightStyle, function (k, v) {
+            if (k != "bringToFront" && k != "sendToBack") {
+              if (df.get(i, k)) {
+                defaultStyle[k] = df.get(i, k);
+              }
+            }
+          });
 
-              layer.on("mouseover", function (e) {
-                this.setStyle(highlightStyle);
-                if (highlightStyle.bringToFront) {
-                  this.bringToFront();
-                }
-              });
-              layer.on("mouseout", function (e) {
-                this.setStyle(defaultStyle);
-                if (highlightStyle.sendToBack) {
-                  this.bringToBack();
-                }
-              });
-            })();
-          }
-        })();
+          layer.on("mouseover", function (e) {
+            this.setStyle(highlightStyle);
+            if (highlightStyle.bringToFront) {
+              this.bringToFront();
+            }
+          });
+          layer.on("mouseout", function (e) {
+            this.setStyle(defaultStyle);
+            if (highlightStyle.sendToBack) {
+              this.bringToBack();
+            }
+          });
+        }
       }
     }).call(map);
   };
@@ -4393,7 +4369,7 @@ methods.addGeoJSON = function (data, layerId, group, style) {
         featureId: feature.id,
         properties: feature.properties
       };
-      var popup = feature.properties.popup;
+      var popup = feature.properties ? feature.properties.popup : null;
       if (typeof popup !== "undefined" && popup !== null) layer.bindPopup(popup);
       layer.on("click", mouseHandler(self.id, layerId, group, "geojson_click", extraInfo), this);
       layer.on("mouseover", mouseHandler(self.id, layerId, group, "geojson_mouseover", extraInfo), this);
@@ -4507,8 +4483,6 @@ methods.clearControls = function () {
 };
 
 methods.addLegend = function (options) {
-  var _this5 = this;
-
   var legend = _leaflet2.default.control({ position: options.position });
   var gradSpan = void 0;
 
@@ -4518,81 +4492,79 @@ methods.addLegend = function (options) {
         labels = options.labels,
         legendHTML = "";
     if (options.type === "numeric") {
-      (function () {
-        // # Formatting constants.
-        var singleBinHeight = 20; // The distance between tick marks, in px
-        var vMargin = 8; // If 1st tick mark starts at top of gradient, how
-        // many extra px are needed for the top half of the
-        // 1st label? (ditto for last tick mark/label)
-        var tickWidth = 4; // How wide should tick marks be, in px?
-        var labelPadding = 6; // How much distance to reserve for tick mark?
-        // (Must be >= tickWidth)
+      // # Formatting constants.
+      var singleBinHeight = 20; // The distance between tick marks, in px
+      var vMargin = 8; // If 1st tick mark starts at top of gradient, how
+      // many extra px are needed for the top half of the
+      // 1st label? (ditto for last tick mark/label)
+      var tickWidth = 4; // How wide should tick marks be, in px?
+      var labelPadding = 6; // How much distance to reserve for tick mark?
+      // (Must be >= tickWidth)
 
-        // # Derived formatting parameters.
+      // # Derived formatting parameters.
 
-        // What's the height of a single bin, in percentage (of gradient height)?
-        // It might not just be 1/(n-1), if the gradient extends past the tick
-        // marks (which can be the case for pretty cut points).
-        var singleBinPct = (options.extra.p_n - options.extra.p_1) / (labels.length - 1);
-        // Each bin is `singleBinHeight` high. How tall is the gradient?
-        var totalHeight = 1 / singleBinPct * singleBinHeight + 1;
-        // How far should the first tick be shifted down, relative to the top
-        // of the gradient?
-        var tickOffset = singleBinHeight / singleBinPct * options.extra.p_1;
+      // What's the height of a single bin, in percentage (of gradient height)?
+      // It might not just be 1/(n-1), if the gradient extends past the tick
+      // marks (which can be the case for pretty cut points).
+      var singleBinPct = (options.extra.p_n - options.extra.p_1) / (labels.length - 1);
+      // Each bin is `singleBinHeight` high. How tall is the gradient?
+      var totalHeight = 1 / singleBinPct * singleBinHeight + 1;
+      // How far should the first tick be shifted down, relative to the top
+      // of the gradient?
+      var tickOffset = singleBinHeight / singleBinPct * options.extra.p_1;
 
-        gradSpan = (0, _jquery2.default)("<span/>").css({
-          "background": "linear-gradient(" + colors + ")",
-          "opacity": options.opacity,
-          "height": totalHeight + "px",
-          "width": "18px",
-          "display": "block",
-          "margin-top": vMargin + "px"
-        });
-        var leftDiv = (0, _jquery2.default)("<div/>").css("float", "left"),
-            rightDiv = (0, _jquery2.default)("<div/>").css("float", "left");
-        leftDiv.append(gradSpan);
-        (0, _jquery2.default)(div).append(leftDiv).append(rightDiv).append((0, _jquery2.default)("<br>"));
+      gradSpan = (0, _jquery2.default)("<span/>").css({
+        "background": "linear-gradient(" + colors + ")",
+        "opacity": options.opacity,
+        "height": totalHeight + "px",
+        "width": "18px",
+        "display": "block",
+        "margin-top": vMargin + "px"
+      });
+      var leftDiv = (0, _jquery2.default)("<div/>").css("float", "left"),
+          rightDiv = (0, _jquery2.default)("<div/>").css("float", "left");
+      leftDiv.append(gradSpan);
+      (0, _jquery2.default)(div).append(leftDiv).append(rightDiv).append((0, _jquery2.default)("<br>"));
 
-        // Have to attach the div to the body at this early point, so that the
-        // svg text getComputedTextLength() actually works, below.
-        document.body.appendChild(div);
+      // Have to attach the div to the body at this early point, so that the
+      // svg text getComputedTextLength() actually works, below.
+      document.body.appendChild(div);
 
-        var ns = "http://www.w3.org/2000/svg";
-        var svg = document.createElementNS(ns, "svg");
-        rightDiv.append(svg);
-        var g = document.createElementNS(ns, "g");
-        (0, _jquery2.default)(g).attr("transform", "translate(0, " + vMargin + ")");
-        svg.appendChild(g);
+      var ns = "http://www.w3.org/2000/svg";
+      var svg = document.createElementNS(ns, "svg");
+      rightDiv.append(svg);
+      var g = document.createElementNS(ns, "g");
+      (0, _jquery2.default)(g).attr("transform", "translate(0, " + vMargin + ")");
+      svg.appendChild(g);
 
-        // max label width needed to set width of svg, and right-justify text
-        var maxLblWidth = 0;
+      // max label width needed to set width of svg, and right-justify text
+      var maxLblWidth = 0;
 
-        // Create tick marks and labels
-        _jquery2.default.each(labels, function (i, label) {
-          var y = tickOffset + i * singleBinHeight + 0.5;
+      // Create tick marks and labels
+      _jquery2.default.each(labels, function (i, label) {
+        var y = tickOffset + i * singleBinHeight + 0.5;
 
-          var thisLabel = document.createElementNS(ns, "text");
-          (0, _jquery2.default)(thisLabel).text(labels[i]).attr("y", y).attr("dx", labelPadding).attr("dy", "0.5ex");
-          g.appendChild(thisLabel);
-          maxLblWidth = Math.max(maxLblWidth, thisLabel.getComputedTextLength());
+        var thisLabel = document.createElementNS(ns, "text");
+        (0, _jquery2.default)(thisLabel).text(labels[i]).attr("y", y).attr("dx", labelPadding).attr("dy", "0.5ex");
+        g.appendChild(thisLabel);
+        maxLblWidth = Math.max(maxLblWidth, thisLabel.getComputedTextLength());
 
-          var thisTick = document.createElementNS(ns, "line");
-          (0, _jquery2.default)(thisTick).attr("x1", 0).attr("x2", tickWidth).attr("y1", y).attr("y2", y).attr("stroke-width", 1);
-          g.appendChild(thisTick);
-        });
+        var thisTick = document.createElementNS(ns, "line");
+        (0, _jquery2.default)(thisTick).attr("x1", 0).attr("x2", tickWidth).attr("y1", y).attr("y2", y).attr("stroke-width", 1);
+        g.appendChild(thisTick);
+      });
 
-        // Now that we know the max label width, we can right-justify
-        (0, _jquery2.default)(svg).find("text").attr("dx", labelPadding + maxLblWidth).attr("text-anchor", "end");
-        // Final size for <svg>
-        (0, _jquery2.default)(svg).css({
-          width: maxLblWidth + labelPadding + "px",
-          height: totalHeight + vMargin * 2 + "px"
-        });
+      // Now that we know the max label width, we can right-justify
+      (0, _jquery2.default)(svg).find("text").attr("dx", labelPadding + maxLblWidth).attr("text-anchor", "end");
+      // Final size for <svg>
+      (0, _jquery2.default)(svg).css({
+        width: maxLblWidth + labelPadding + "px",
+        height: totalHeight + vMargin * 2 + "px"
+      });
 
-        if (options.na_color && _jquery2.default.inArray(options.na_label, labels) < 0) {
-          (0, _jquery2.default)(div).append("<div><i style=\"" + "background:" + options.na_color + ";opacity:" + options.opacity + ";margin-right:" + labelPadding + "px" + ";\"></i>" + options.na_label + "</div>");
-        }
-      })();
+      if (options.na_color && _jquery2.default.inArray(options.na_label, labels) < 0) {
+        (0, _jquery2.default)(div).append("<div><i style=\"" + "background:" + options.na_color + ";opacity:" + options.opacity + ";margin-right:" + labelPadding + "px" + ";\"></i>" + options.na_label + "</div>");
+      }
     } else {
       if (options.na_color && _jquery2.default.inArray(options.na_label, labels) < 0) {
         colors.push(options.na_color);
@@ -4608,41 +4580,39 @@ methods.addLegend = function (options) {
   };
 
   if (options.group) {
-    (function () {
-      // Auto generate a layerID if not provided
-      if (!options.layerId) {
-        options.layerId = _leaflet2.default.Util.stamp(legend);
-      }
+    // Auto generate a layerID if not provided
+    if (!options.layerId) {
+      options.layerId = _leaflet2.default.Util.stamp(legend);
+    }
 
-      var map = _this5;
-      map.on("overlayadd", function (e) {
-        if (e.name === options.group) {
-          map.controls.add(legend, options.layerId);
-        }
-      });
-      map.on("overlayremove", function (e) {
-        if (e.name === options.group) {
-          map.controls.remove(options.layerId);
-        }
-      });
-      map.on("groupadd", function (e) {
-        if (e.name === options.group) {
-          map.controls.add(legend, options.layerId);
-        }
-      });
-      map.on("groupremove", function (e) {
-        if (e.name === options.group) {
-          map.controls.remove(options.layerId);
-        }
-      });
-    })();
+    var map = this;
+    map.on("overlayadd", function (e) {
+      if (e.name === options.group) {
+        map.controls.add(legend, options.layerId);
+      }
+    });
+    map.on("overlayremove", function (e) {
+      if (e.name === options.group) {
+        map.controls.remove(options.layerId);
+      }
+    });
+    map.on("groupadd", function (e) {
+      if (e.name === options.group) {
+        map.controls.add(legend, options.layerId);
+      }
+    });
+    map.on("groupremove", function (e) {
+      if (e.name === options.group) {
+        map.controls.remove(options.layerId);
+      }
+    });
   }
 
   this.controls.add(legend, options.layerId);
 };
 
 methods.addLayersControl = function (baseGroups, overlayGroups, options) {
-  var _this6 = this;
+  var _this4 = this;
 
   // Only allow one layers control at a time
   methods.removeLayersControl.call(this);
@@ -4650,23 +4620,23 @@ methods.addLayersControl = function (baseGroups, overlayGroups, options) {
   var firstLayer = true;
   var base = {};
   _jquery2.default.each((0, _util.asArray)(baseGroups), function (i, g) {
-    var layer = _this6.layerManager.getLayerGroup(g, true);
+    var layer = _this4.layerManager.getLayerGroup(g, true);
     if (layer) {
       base[g] = layer;
 
       // Check if >1 base layers are visible; if so, hide all but the first one
-      if (_this6.hasLayer(layer)) {
+      if (_this4.hasLayer(layer)) {
         if (firstLayer) {
           firstLayer = false;
         } else {
-          _this6.removeLayer(layer);
+          _this4.removeLayer(layer);
         }
       }
     }
   });
   var overlay = {};
   _jquery2.default.each((0, _util.asArray)(overlayGroups), function (i, g) {
-    var layer = _this6.layerManager.getLayerGroup(g, true);
+    var layer = _this4.layerManager.getLayerGroup(g, true);
     if (layer) {
       overlay[g] = layer;
     }
@@ -4700,23 +4670,23 @@ methods.removeScaleBar = function () {
 };
 
 methods.hideGroup = function (group) {
-  var _this7 = this;
+  var _this5 = this;
 
   _jquery2.default.each((0, _util.asArray)(group), function (i, g) {
-    var layer = _this7.layerManager.getLayerGroup(g, true);
+    var layer = _this5.layerManager.getLayerGroup(g, true);
     if (layer) {
-      _this7.removeLayer(layer);
+      _this5.removeLayer(layer);
     }
   });
 };
 
 methods.showGroup = function (group) {
-  var _this8 = this;
+  var _this6 = this;
 
   _jquery2.default.each((0, _util.asArray)(group), function (i, g) {
-    var layer = _this8.layerManager.getLayerGroup(g, true);
+    var layer = _this6.layerManager.getLayerGroup(g, true);
     if (layer) {
-      _this8.addLayer(layer);
+      _this6.addLayer(layer);
     }
   });
 };
@@ -4756,10 +4726,10 @@ function setupShowHideGroupsOnZoom(map) {
 }
 
 methods.setGroupOptions = function (group, options) {
-  var _this9 = this;
+  var _this7 = this;
 
   _jquery2.default.each((0, _util.asArray)(group), function (i, g) {
-    var layer = _this9.layerManager.getLayerGroup(g, true);
+    var layer = _this7.layerManager.getLayerGroup(g, true);
     // This slightly tortured check is because 0 is a valid value for zoomLevels
     if (typeof options.zoomLevels !== "undefined" && options.zoomLevels !== null) {
       layer.zoomLevels = (0, _util.asArray)(options.zoomLevels);
@@ -4911,131 +4881,123 @@ methods.addRasterImage = function (uri, bounds, opacity, attribution, layerId, g
 
     getImageData(function (imgData, w, h, mipmapper) {
       try {
-        var _ret8 = function () {
-          // The Context2D we'll being drawing onto. It's always 256x256.
-          var ctx = canvas.getContext("2d");
+        // The Context2D we'll being drawing onto. It's always 256x256.
+        var ctx = canvas.getContext("2d");
 
-          // Convert our image data's top-left and bottom-right locations into
-          // x/y tile coordinates. This is essentially doing a spherical mercator
-          // projection, then multiplying by 2^zoom.
-          var topLeft = degree2tile(bounds[0][0], bounds[0][1], zoom);
-          var bottomRight = degree2tile(bounds[1][0], bounds[1][1], zoom);
-          // The size of the image in x/y tile coordinates.
-          var extent = { x: bottomRight.x - topLeft.x, y: bottomRight.y - topLeft.y };
+        // Convert our image data's top-left and bottom-right locations into
+        // x/y tile coordinates. This is essentially doing a spherical mercator
+        // projection, then multiplying by 2^zoom.
+        var topLeft = degree2tile(bounds[0][0], bounds[0][1], zoom);
+        var bottomRight = degree2tile(bounds[1][0], bounds[1][1], zoom);
+        // The size of the image in x/y tile coordinates.
+        var extent = { x: bottomRight.x - topLeft.x, y: bottomRight.y - topLeft.y };
 
-          // Short circuit if tile is totally disjoint from image.
-          if (!overlap(tilePoint.x, tilePoint.x + 1, topLeft.x, bottomRight.x)) return {
-              v: void 0
-            };
-          if (!overlap(tilePoint.y, tilePoint.y + 1, topLeft.y, bottomRight.y)) return {
-              v: void 0
-            };
+        // Short circuit if tile is totally disjoint from image.
+        if (!overlap(tilePoint.x, tilePoint.x + 1, topLeft.x, bottomRight.x)) return;
+        if (!overlap(tilePoint.y, tilePoint.y + 1, topLeft.y, bottomRight.y)) return;
 
-          // The linear resolution of the tile we're drawing is always 256px per tile unit.
-          // If the linear resolution (in either direction) of the image is less than 256px
-          // per tile unit, then use nearest neighbor; otherwise, use the canvas's built-in
-          // scaling.
-          var imgRes = {
-            x: w / extent.x,
-            y: h / extent.y
+        // The linear resolution of the tile we're drawing is always 256px per tile unit.
+        // If the linear resolution (in either direction) of the image is less than 256px
+        // per tile unit, then use nearest neighbor; otherwise, use the canvas's built-in
+        // scaling.
+        var imgRes = {
+          x: w / extent.x,
+          y: h / extent.y
+        };
+
+        // We can do the actual drawing in one of three ways:
+        // - Call drawImage(). This is easy and fast, and results in smooth
+        //   interpolation (bilinear?). This is what we want when we are
+        //   reducing the image from its native size.
+        // - Call drawImage() with imageSmoothingEnabled=false. This is easy
+        //   and fast and gives us nearest-neighbor interpolation, which is what
+        //   we want when enlarging the image. However, it's unsupported on many
+        //   browsers (including QtWebkit).
+        // - Do a manual nearest-neighbor interpolation. This is what we'll fall
+        //   back to when enlarging, and imageSmoothingEnabled isn't supported.
+        //   In theory it's slower, but still pretty fast on my machine, and the
+        //   results look the same AFAICT.
+
+        // Is imageSmoothingEnabled supported? If so, we can let canvas do
+        // nearest-neighbor interpolation for us.
+        var smoothingProperty = getCanvasSmoothingProperty(ctx);
+
+        if (smoothingProperty || imgRes.x >= 256 && imgRes.y >= 256) {
+          // Use built-in scaling
+
+          // Turn off anti-aliasing if necessary
+          if (smoothingProperty) {
+            ctx[smoothingProperty] = imgRes.x >= 256 && imgRes.y >= 256;
+          }
+
+          // Don't necessarily draw with the full-size image; if we're
+          // downscaling, use the mipmapper to get a pre-downscaled image
+          // (see comments on Mipmapper class for why this matters).
+          mipmapper.getBySize(extent.x * 256, extent.y * 256, function (mip) {
+            // It's possible that the image will go off the edge of the canvas--
+            // that's OK, the canvas should clip appropriately.
+            ctx.drawImage(mip,
+            // Convert abs tile coords to rel tile coords, then *256 to convert
+            // to rel pixel coords
+            (topLeft.x - tilePoint.x) * 256, (topLeft.y - tilePoint.y) * 256,
+            // Always draw the whole thing and let canvas clip; so we can just
+            // convert from size in tile coords straight to pixels
+            extent.x * 256, extent.y * 256);
+          });
+        } else {
+          // Use manual nearest-neighbor interpolation
+
+          // Calculate the source image pixel coordinates that correspond with
+          // the top-left and bottom-right of this tile. (If the source image
+          // only partially overlaps the tile, we use max/min to limit the
+          // sourceStart/End to only reflect the overlapping portion.)
+          var sourceStart = {
+            x: Math.max(0, Math.floor((tilePoint.x - topLeft.x) * imgRes.x)),
+            y: Math.max(0, Math.floor((tilePoint.y - topLeft.y) * imgRes.y))
+          };
+          var sourceEnd = {
+            x: Math.min(w, Math.ceil((tilePoint.x + 1 - topLeft.x) * imgRes.x)),
+            y: Math.min(h, Math.ceil((tilePoint.y + 1 - topLeft.y) * imgRes.y))
           };
 
-          // We can do the actual drawing in one of three ways:
-          // - Call drawImage(). This is easy and fast, and results in smooth
-          //   interpolation (bilinear?). This is what we want when we are
-          //   reducing the image from its native size.
-          // - Call drawImage() with imageSmoothingEnabled=false. This is easy
-          //   and fast and gives us nearest-neighbor interpolation, which is what
-          //   we want when enlarging the image. However, it's unsupported on many
-          //   browsers (including QtWebkit).
-          // - Do a manual nearest-neighbor interpolation. This is what we'll fall
-          //   back to when enlarging, and imageSmoothingEnabled isn't supported.
-          //   In theory it's slower, but still pretty fast on my machine, and the
-          //   results look the same AFAICT.
+          // The size, in dest pixels, that each source pixel should occupy.
+          // This might be greater or less than 1 (e.g. if x and y resolution
+          // are very different).
+          var pixelSize = {
+            x: 256 / imgRes.x,
+            y: 256 / imgRes.y
+          };
 
-          // Is imageSmoothingEnabled supported? If so, we can let canvas do
-          // nearest-neighbor interpolation for us.
-          var smoothingProperty = getCanvasSmoothingProperty(ctx);
+          // For each pixel in the source image that overlaps the tile...
+          for (var row = sourceStart.y; row < sourceEnd.y; row++) {
+            for (var col = sourceStart.x; col < sourceEnd.x; col++) {
+              // ...extract the pixel data...
+              var i = (row * w + col) * 4;
+              var r = imgData[i];
+              var g = imgData[i + 1];
+              var b = imgData[i + 2];
+              var a = imgData[i + 3];
+              ctx.fillStyle = "rgba(" + [r, g, b, a / 255].join(",") + ")";
 
-          if (smoothingProperty || imgRes.x >= 256 && imgRes.y >= 256) {
-            // Use built-in scaling
+              // ...calculate the corresponding pixel coord in the dest image
+              // where it should be drawn...
+              var pixelPos = {
+                x: (col / imgRes.x + topLeft.x - tilePoint.x) * 256,
+                y: (row / imgRes.y + topLeft.y - tilePoint.y) * 256
+              };
 
-            // Turn off anti-aliasing if necessary
-            if (smoothingProperty) {
-              ctx[smoothingProperty] = imgRes.x >= 256 && imgRes.y >= 256;
-            }
-
-            // Don't necessarily draw with the full-size image; if we're
-            // downscaling, use the mipmapper to get a pre-downscaled image
-            // (see comments on Mipmapper class for why this matters).
-            mipmapper.getBySize(extent.x * 256, extent.y * 256, function (mip) {
-              // It's possible that the image will go off the edge of the canvas--
-              // that's OK, the canvas should clip appropriately.
-              ctx.drawImage(mip,
-              // Convert abs tile coords to rel tile coords, then *256 to convert
-              // to rel pixel coords
-              (topLeft.x - tilePoint.x) * 256, (topLeft.y - tilePoint.y) * 256,
-              // Always draw the whole thing and let canvas clip; so we can just
-              // convert from size in tile coords straight to pixels
-              extent.x * 256, extent.y * 256);
-            });
-          } else {
-            // Use manual nearest-neighbor interpolation
-
-            // Calculate the source image pixel coordinates that correspond with
-            // the top-left and bottom-right of this tile. (If the source image
-            // only partially overlaps the tile, we use max/min to limit the
-            // sourceStart/End to only reflect the overlapping portion.)
-            var sourceStart = {
-              x: Math.max(0, Math.floor((tilePoint.x - topLeft.x) * imgRes.x)),
-              y: Math.max(0, Math.floor((tilePoint.y - topLeft.y) * imgRes.y))
-            };
-            var sourceEnd = {
-              x: Math.min(w, Math.ceil((tilePoint.x + 1 - topLeft.x) * imgRes.x)),
-              y: Math.min(h, Math.ceil((tilePoint.y + 1 - topLeft.y) * imgRes.y))
-            };
-
-            // The size, in dest pixels, that each source pixel should occupy.
-            // This might be greater or less than 1 (e.g. if x and y resolution
-            // are very different).
-            var pixelSize = {
-              x: 256 / imgRes.x,
-              y: 256 / imgRes.y
-            };
-
-            // For each pixel in the source image that overlaps the tile...
-            for (var row = sourceStart.y; row < sourceEnd.y; row++) {
-              for (var col = sourceStart.x; col < sourceEnd.x; col++) {
-                // ...extract the pixel data...
-                var i = (row * w + col) * 4;
-                var r = imgData[i];
-                var g = imgData[i + 1];
-                var b = imgData[i + 2];
-                var a = imgData[i + 3];
-                ctx.fillStyle = "rgba(" + [r, g, b, a / 255].join(",") + ")";
-
-                // ...calculate the corresponding pixel coord in the dest image
-                // where it should be drawn...
-                var pixelPos = {
-                  x: (col / imgRes.x + topLeft.x - tilePoint.x) * 256,
-                  y: (row / imgRes.y + topLeft.y - tilePoint.y) * 256
-                };
-
-                // ...and draw a rectangle there.
-                ctx.fillRect(Math.round(pixelPos.x), Math.round(pixelPos.y),
-                // Looks crazy, but this is necessary to prevent rounding from
-                // causing overlap between this rect and its neighbors. The
-                // minuend is the location of the next pixel, while the
-                // subtrahend is the position of the current pixel (to turn an
-                // absolute coordinate to a width/height). Yes, I had to look
-                // up minuend and subtrahend.
-                Math.round(pixelPos.x + pixelSize.x) - Math.round(pixelPos.x), Math.round(pixelPos.y + pixelSize.y) - Math.round(pixelPos.y));
-              }
+              // ...and draw a rectangle there.
+              ctx.fillRect(Math.round(pixelPos.x), Math.round(pixelPos.y),
+              // Looks crazy, but this is necessary to prevent rounding from
+              // causing overlap between this rect and its neighbors. The
+              // minuend is the location of the next pixel, while the
+              // subtrahend is the position of the current pixel (to turn an
+              // absolute coordinate to a width/height). Yes, I had to look
+              // up minuend and subtrahend.
+              Math.round(pixelPos.x + pixelSize.x) - Math.round(pixelPos.x), Math.round(pixelPos.y + pixelSize.y) - Math.round(pixelPos.y));
             }
           }
-        }();
-
-        if ((typeof _ret8 === "undefined" ? "undefined" : _typeof(_ret8)) === "object") return _ret8.v;
+        }
       } catch (e) {
         error = e;
       } finally {
@@ -5072,7 +5034,7 @@ methods.removeMeasure = function () {
 };
 
 methods.addSelect = function (ctGroup) {
-  var _this10 = this;
+  var _this8 = this;
 
   methods.removeSelect.call(this);
 
@@ -5083,32 +5045,30 @@ methods.addSelect = function (ctGroup) {
       title: "Make a selection",
       onClick: function onClick(btn, map) {
         btn.state("select-active");
-        _this10._locationFilter = new _leaflet2.default.LocationFilter2();
+        _this8._locationFilter = new _leaflet2.default.LocationFilter2();
 
         if (ctGroup) {
-          (function () {
-            var selectionHandle = new global.crosstalk.SelectionHandle(ctGroup);
-            selectionHandle.on("change", function (e) {
-              if (e.sender !== selectionHandle) {
-                if (_this10._locationFilter) {
-                  _this10._locationFilter.disable();
-                  btn.state("select-inactive");
-                }
+          var selectionHandle = new global.crosstalk.SelectionHandle(ctGroup);
+          selectionHandle.on("change", function (e) {
+            if (e.sender !== selectionHandle) {
+              if (_this8._locationFilter) {
+                _this8._locationFilter.disable();
+                btn.state("select-inactive");
               }
-            });
-            var handler = function handler(e) {
-              _this10.layerManager.brush(_this10._locationFilter.getBounds(), { sender: selectionHandle });
-            };
-            _this10._locationFilter.on("enabled", handler);
-            _this10._locationFilter.on("change", handler);
-            _this10._locationFilter.on("disabled", function () {
-              selectionHandle.close();
-              _this10._locationFilter = null;
-            });
-          })();
+            }
+          });
+          var handler = function handler(e) {
+            _this8.layerManager.brush(_this8._locationFilter.getBounds(), { sender: selectionHandle });
+          };
+          _this8._locationFilter.on("enabled", handler);
+          _this8._locationFilter.on("change", handler);
+          _this8._locationFilter.on("disabled", function () {
+            selectionHandle.close();
+            _this8._locationFilter = null;
+          });
         }
 
-        _this10._locationFilter.addTo(map);
+        _this8._locationFilter.addTo(map);
       }
     }, {
       stateName: "select-active",
@@ -5116,9 +5076,9 @@ methods.addSelect = function (ctGroup) {
       title: "Dismiss selection",
       onClick: function onClick(btn, map) {
         btn.state("select-inactive");
-        _this10._locationFilter.disable();
+        _this8._locationFilter.disable();
         // If explicitly dismissed, clear the crosstalk selections
-        _this10.layerManager.unbrush();
+        _this8.layerManager.unbrush();
       }
     }]
   });
@@ -5160,7 +5120,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // pixel of the original image has some contribution to the downscaled image)
 // as opposed to a single-step downscaling which will discard a lot of data
 // (and with sparse images at small scales can give very surprising results).
-
 var Mipmapper = function () {
   function Mipmapper(img) {
     _classCallCheck(this, Mipmapper);
@@ -5347,26 +5306,13 @@ function asArray(value) {
 				};
 			}
 
-			// If retina option is set
-			if (provider.options.retina) {
-				// Check retina screen
-				if (options.detectRetina && L.Browser.retina) {
-					// The retina option will be active now
-					// But we need to prevent Leaflet retina mode
-					options.detectRetina = false;
-				} else {
-					// No retina, remove option
-					provider.options.retina = '';
-				}
-			}
-
 			// replace attribution placeholders with their values from toplevel provider attribution,
 			// recursively
 			var attributionReplacer = function (attr) {
 				if (attr.indexOf('{attribution.') === -1) {
 					return attr;
 				}
-				return attr.replace(/\{attribution.(\w*)\}/,
+				return attr.replace(/\{attribution.(\w*)\}/g,
 					function (match, attributionName) {
 						return attributionReplacer(providers[attributionName].options.attribution);
 					}
@@ -5391,16 +5337,10 @@ function asArray(value) {
 			options: {
 				maxZoom: 19,
 				attribution:
-					'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+					'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 			},
 			variants: {
 				Mapnik: {},
-				BlackAndWhite: {
-					url: 'http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
-					options: {
-						maxZoom: 18
-					}
-				},
 				DE: {
 					url: '//{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
 					options: {
@@ -5410,7 +5350,8 @@ function asArray(value) {
 				CH: {
 					url: '//tile.osm.ch/switzerland/{z}/{x}/{y}.png',
 					options: {
-						maxZoom: 18
+						maxZoom: 18,
+						bounds: [[45, 5], [48, 11]]
 					}
 				},
 				France: {
@@ -5423,30 +5364,19 @@ function asArray(value) {
 				HOT: {
 					url: '//{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 					options: {
-						attribution: '{attribution.OpenStreetMap}, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+						attribution:
+							'{attribution.OpenStreetMap}, ' +
+							'Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> ' +
+							'hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 					}
 				},
 				BZH: {
-					url: 'https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png',
+					url: '//tile.openstreetmap.bzh/br/{z}/{x}/{y}.png',
 					options: {
 						attribution: '{attribution.OpenStreetMap}, Tiles courtesy of <a href="http://www.openstreetmap.bzh/" target="_blank">Breton OpenStreetMap Team</a>',
 						bounds: [[46.2, -5.5], [50, 0.7]]
 					}
 				}
-			}
-		},
-		OpenInfraMap: {
-			url: 'https://tiles-{s}.openinframap.org/{variant}/{z}/{x}/{y}.png',
-			options: {
-				maxZoom: 18,
-				attribution:
-					'{attribution.OpenStreetMap}, <a href="http://www.openinframap.org/about.html">About OpenInfraMap</a>'
-			},
-			variants: {
-				  Power:       'power' ,
-				  Telecom:     'telecoms' ,
-				  Petroleum:   'petroleum' ,
-				  Water:       'water'
 			}
 		},
 		OpenSeaMap: {
@@ -5518,28 +5448,57 @@ function asArray(value) {
 				},
 				Landscape: 'landscape',
 				Outdoors: 'outdoors',
-				Pioneer: 'pioneer'
+				Pioneer: 'pioneer',
+				MobileAtlas: 'mobile-atlas',
+				Neighbourhood: 'neighbourhood'
 			}
 		},
 		OpenMapSurfer: {
-			url: 'https://korona.geog.uni-heidelberg.de/tiles/{variant}/x={x}&y={y}&z={z}',
+			url: 'https://maps.heigit.org/openmapsurfer/tiles/{variant}/webmercator/{z}/{x}/{y}.png',
 			options: {
-				maxZoom: 20,
+				maxZoom: 19,
 				variant: 'roads',
-				attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data {attribution.OpenStreetMap}'
+				attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> | Map data '
 			},
 			variants: {
-				Roads: 'roads',
+				Roads: {
+					options: {
+						variant: 'roads',
+						attribution: '{attribution.OpenMapSurfer}{attribution.OpenStreetMap}'
+					}
+				},
+				Hybrid: {
+					options: {
+						variant: 'hybrid',
+						attribution: '{attribution.OpenMapSurfer}{attribution.OpenStreetMap}'
+					}
+				},
 				AdminBounds: {
 					options: {
 						variant: 'adminb',
-						maxZoom: 19
+						maxZoom: 18,
+						attribution: '{attribution.OpenMapSurfer}{attribution.OpenStreetMap}'
 					}
 				},
-				Grayscale: {
+				ContourLines: {
 					options: {
-						variant: 'roadsg',
-						maxZoom: 19
+						variant: 'asterc',
+						maxZoom: 18,
+						minZoom: 13,
+						attribution: '{attribution.OpenMapSurfer} <a href="https://lpdaac.usgs.gov/products/aster_policies">ASTER GDEM</a>'
+					}
+				},
+				Hillshade: {
+					options: {
+						variant: 'asterh',
+						maxZoom: 18,
+						attribution: '{attribution.OpenMapSurfer} <a href="https://lpdaac.usgs.gov/products/aster_policies">ASTER GDEM</a>, <a href="http://srtm.csi.cgiar.org/">SRTM</a>'
+					}
+				},
+				ElementsAtRisk: {
+					options: {
+						variant: 'elements_at_risk',
+						attribution: '{attribution.OpenMapSurfer}{attribution.OpenStreetMap}'
 					}
 				}
 			}
@@ -5558,18 +5517,19 @@ function asArray(value) {
 			}
 		},
 		MapBox: {
-			url: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
+			url: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}{r}.png?access_token={accessToken}',
 			options: {
 				attribution:
-					'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; ' +
-					'Map data {attribution.OpenStreetMap}',
+					'<a href="https://www.mapbox.com/about/maps/" target="_blank">&copy; Mapbox</a> ' +
+					'{attribution.OpenStreetMap} ' +
+					'<a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a>',
 				subdomains: 'abcd',
-				id: 'streets',
+				id: 'mapbox.streets',
 				accessToken: '<insert your access token here>',
 			}
 		},
 		Stamen: {
-			url: '//stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}.{ext}',
+			url: '//stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}{r}.{ext}',
 			options: {
 				attribution:
 					'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
@@ -5589,8 +5549,10 @@ function asArray(value) {
 				TonerLabels: 'toner-labels',
 				TonerLite: 'toner-lite',
 				Watercolor: {
+					url: '//stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}.{ext}',
 					options: {
 						variant: 'watercolor',
+						ext: 'jpg',
 						minZoom: 1,
 						maxZoom: 16
 					}
@@ -5609,7 +5571,15 @@ function asArray(value) {
 						maxZoom: 18
 					}
 				},
+				TerrainLabels: {
+					options: {
+						variant: 'terrain-labels',
+						minZoom: 0,
+						maxZoom: 18
+					}
+				},
 				TopOSMRelief: {
+					url: '//stamen-tiles-{s}.a.ssl.fastly.net/{variant}/{z}/{x}/{y}.{ext}',
 					options: {
 						variant: 'toposm-color-relief',
 						ext: 'jpg',
@@ -5623,6 +5593,24 @@ function asArray(value) {
 						opacity: 0.9
 					}
 				}
+			}
+		},
+		TomTom: {
+			url: 'https://{s}.api.tomtom.com/map/1/tile/{variant}/{style}/{z}/{x}/{y}.{ext}?key={apikey}',
+			options: {
+				variant: 'basic',
+				maxZoom: 22,
+				attribution:
+					'<a href="https://tomtom.com" target="_blank">&copy;  1992 - ' + new Date().getFullYear() + ' TomTom.</a> ',
+				subdomains: 'abcd',
+				style: 'main',
+				ext: 'png',
+				apikey: '<insert your API key here>',
+			},
+			variants: {
+				Basic: 'basic',
+				Hybrid: 'hybrid',
+				Labels: 'labels'
 			}
 		},
 		Esri: {
@@ -5735,19 +5723,15 @@ function asArray(value) {
 			/*
 			 * HERE maps, formerly Nokia maps.
 			 * These basemaps are free, but you need an API key. Please sign up at
-			 * http://developer.here.com/getting-started
-			 *
-			 * Note that the base urls contain '.cit' whichs is HERE's
-			 * 'Customer Integration Testing' environment. Please remove for production
-			 * envirionments.
+			 * https://developer.here.com/plans
 			 */
 			url:
-				'//{s}.{base}.maps.cit.api.here.com/maptile/2.1/' +
+				'https://{s}.{base}.maps.api.here.com/maptile/2.1/' +
 				'{type}/{mapID}/{variant}/{z}/{x}/{y}/{size}/{format}?' +
 				'app_id={app_id}&app_code={app_code}&lg={language}',
 			options: {
 				attribution:
-					'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
+					'Map &copy; 1987-' + new Date().getFullYear() + ' <a href="http://developer.here.com">HERE</a>',
 				subdomains: '1234',
 				mapID: 'newest',
 				'app_id': '<insert your app_id here>',
@@ -5768,11 +5752,21 @@ function asArray(value) {
 				normalDayGreyMobile: 'normal.day.grey.mobile',
 				normalDayTransit: 'normal.day.transit',
 				normalDayTransitMobile: 'normal.day.transit.mobile',
+				normalDayTraffic: {
+					options: {
+						variant: 'normal.traffic.day',
+						base: 'traffic',
+						type: 'traffictile'
+					}
+				},
 				normalNight: 'normal.night',
 				normalNightMobile: 'normal.night.mobile',
 				normalNightGrey: 'normal.night.grey',
 				normalNightGreyMobile: 'normal.night.grey.mobile',
-
+				normalNightTransit: 'normal.night.transit',
+				normalNightTransitMobile: 'normal.night.transit.mobile',
+				reducedDay: 'reduced.day',
+				reducedNight: 'reduced.night',
 				basicMap: {
 					options: {
 						type: 'basetile'
@@ -5801,6 +5795,25 @@ function asArray(value) {
 					options: {
 						base: 'aerial',
 						variant: 'hybrid.day.mobile'
+					}
+				},
+				hybridDayTransit: {
+					options: {
+						base: 'aerial',
+						variant: 'hybrid.day.transit'
+					}
+				},
+				hybridDayGrey: {
+					options: {
+						base: 'aerial',
+						variant: 'hybrid.grey.day'
+					}
+				},
+				hybridDayTraffic: {
+					options: {
+						variant: 'hybrid.traffic.day',
+						base: 'traffic',
+						type: 'traffictile'
 					}
 				},
 				pedestrianDay: 'pedestrian.day',
@@ -5844,9 +5857,9 @@ function asArray(value) {
 			}
 		},
 		CartoDB: {
-			url: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/{variant}/{z}/{x}/{y}.png',
+			url: 'https://{s}.basemaps.cartocdn.com/{variant}/{z}/{x}/{y}{r}.png',
 			options: {
-				attribution: '{attribution.OpenStreetMap} &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+				attribution: '{attribution.OpenStreetMap} &copy; <a href="https://carto.com/attributions">CARTO</a>',
 				subdomains: 'abcd',
 				maxZoom: 19,
 				variant: 'light_all'
@@ -5857,11 +5870,15 @@ function asArray(value) {
 				PositronOnlyLabels: 'light_only_labels',
 				DarkMatter: 'dark_all',
 				DarkMatterNoLabels: 'dark_nolabels',
-				DarkMatterOnlyLabels: 'dark_only_labels'
+				DarkMatterOnlyLabels: 'dark_only_labels',
+				Voyager: 'rastertiles/voyager',
+				VoyagerNoLabels: 'rastertiles/voyager_nolabels',
+				VoyagerOnlyLabels: 'rastertiles/voyager_only_labels',
+				VoyagerLabelsUnder: 'rastertiles/voyager_labels_under'
 			}
 		},
 		HikeBike: {
-			url: 'http://{s}.tiles.wmflabs.org/{variant}/{z}/{x}/{y}.png',
+			url: 'https://tiles.wmflabs.org/{variant}/{z}/{x}/{y}.png',
 			options: {
 				maxZoom: 19,
 				attribution: '{attribution.OpenStreetMap}',
@@ -6027,11 +6044,61 @@ function asArray(value) {
 			}
 		},
 		Wikimedia: {
-			url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png',
+			url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png',
 			options: {
 				attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
 				minZoom: 1,
-				maxZoom: 18
+				maxZoom: 19
+			}
+		},
+		GeoportailFrance: {
+			url: 'https://wxs.ign.fr/{apikey}/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE={style}&TILEMATRIXSET=PM&FORMAT={format}&LAYER={variant}&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}',
+			options: {
+				attribution: '<a target="_blank" href="https://www.geoportail.gouv.fr/">Geoportail France</a>',
+				bounds: [[-75, -180], [81, 180]],
+				minZoom: 2,
+				maxZoom: 18,
+				// Get your own geoportail apikey here : http://professionnels.ign.fr/ign/contrats/
+				// NB : 'choisirgeoportail' is a demonstration key that comes with no guarantee
+				apikey: 'choisirgeoportail',
+				format: 'image/jpeg',
+				style : 'normal',
+				variant: 'GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD'
+			},
+			variants: {
+				parcels: {
+					options : {
+						variant: 'CADASTRALPARCELS.PARCELS',
+						maxZoom: 20,
+						style : 'bdparcellaire',
+						format: 'image/png'
+					}
+				},
+				ignMaps: 'GEOGRAPHICALGRIDSYSTEMS.MAPS',
+				maps: 'GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD',
+				orthos: {
+					options: {
+						maxZoom: 19,
+						variant: 'ORTHOIMAGERY.ORTHOPHOTOS'
+					}
+				}
+			}
+		},
+		OneMapSG: {
+			url: '//maps-{s}.onemap.sg/v3/{variant}/{z}/{x}/{y}.png',
+			options: {
+				variant: 'Default',
+				minZoom: 11,
+				maxZoom: 18,
+				bounds: [[1.56073, 104.11475], [1.16, 103.502]],
+				attribution: '<img src="https://docs.onemap.sg/maps/images/oneMap64-01.png" style="height:20px;width:20px;"/> New OneMap | Map data &copy; contributors, <a href="http://SLA.gov.sg">Singapore Land Authority</a>'
+			},
+			variants: {
+				Default: 'Default',
+				Night: 'Night',
+				Original: 'Original',
+				Grey: 'Grey',
+				LandLot: 'LandLot'
 			}
 		}
 	};
@@ -6219,6 +6286,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -6250,6 +6318,12 @@ summary {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -6330,34 +6404,29 @@ div.tocify {
 
 <h1 class="title toc-ignore">Hakai Institute Juvenile Salmon Data Package Quality Report</h1>
 <h4 class="author">Brett Johnson</h4>
-<h4 class="date">Mon Feb 3 19:54:04 2020</h4>
+<h4 class="date">Mon Feb 1 13:46:43 2021</h4>
 
 </div>
 
 
 <div id="summary" class="section level1">
 <h1><span class="header-section-number">1</span> Summary</h1>
-<p>Would be good to have some useful summary statistics about the data package here.</p>
-<pre class="r"><code>n_fish_captured &lt;- nrow(survey_seines_fish)
+<pre class="r"><code>n_fish_collected &lt;- nrow(survey_seines_fish)
 n_fish_dissected &lt;- nrow(survey_seines_fish %&gt;% drop_na(date_processed))
-n_na_seine_id &lt;- n_fish_captured - nrow(survey_seines_fish %&gt;% drop_na(seine_id))
+n_na_seine_id &lt;- n_fish_collected - nrow(survey_seines_fish %&gt;% drop_na(seine_id))
 
 # count number of NAs for every column and provide as a percent
-n_nas &lt;- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_captured * 100)
-n_nas_map &lt;- map(survey_seines_fish, ~sum(is.na(.)) / n_fish_captured * 100)
+n_nas &lt;- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_collected * 100)
 # It might be useful to consider which columns should have zero NAs and select those out to have fewer variables to read. Which ones should be 100% filled in? ufn, semsp_id, survey_id, seine_id....
 
 #TODO: Plot or table of species catch broken out by species (pie or stacked barplot)
 #TODO: Calculate condition of fish to find outliers in length and weight</code></pre>
-<p>We’ve captured 15717 fish and dissected 7159</p>
 </div>
 <div id="data-quality" class="section level1">
 <h1><span class="header-section-number">2</span> Data Quality</h1>
 <div id="survey_seines-joined" class="section level2">
 <h2><span class="header-section-number">2.1</span> survey_seines joined</h2>
-<pre class="r"><code>survey_seines &lt;- right_join(survey_data, seine_data, by = &quot;survey_id&quot;)
-
-std_survey_seines_w_catch &lt;- survey_seines %&gt;%
+<pre class="r"><code>std_survey_seines_w_catch &lt;- survey_seines %&gt;%
    filter(fish_retained == &quot;yes&quot;,
           survey_type == &quot;standard&quot;,
           collection_protocol == &quot;SEMSP&quot;)
@@ -6382,28 +6451,10 @@ knitr::kable(no_lat, caption = &quot;Table. Seines with no associated location i
 <tbody>
 </tbody>
 </table>
-<pre class="r"><code>n_fish_no_latlon &lt;- sum(is.na(survey_seines_fish$lat))
-
-summary_quality_level &lt;- survey_seines_fish %&gt;% 
-   count(quality_level)
-
-no_fish_loc &lt;- survey_seines_fish %&gt;% filter(
-                                     is.na(survey_seines_fish$lat))
-no_loc_df &lt;-
-knitr::kable(summary_quality_level, caption = &quot;Table 1. The number of fish in various categories of quality level&quot;)
-
-knitr::kable(survey_seines_fish %&gt;% count(quality_flag), caption = &quot;Table 2. The number of fish with quality flags&quot;)</code></pre>
-<pre><code>## Error: Column `quality_flag` is unknown</code></pre>
-<pre class="r"><code>quality_comments &lt;- survey_seines_fish %&gt;% 
-   count(quality_log) %&gt;% 
-   mutate(quality_log_group = word(quality_log, 1, 4)) %&gt;% 
-   group_by(quality_log_group) %&gt;% 
-   count() %&gt;% 
-   filter(n&gt; 1) </code></pre>
-<pre><code>## Error: Column `quality_log` is unknown</code></pre>
-<pre class="r"><code>knitr::kable(quality_comments, caption = &quot;Table 3. Fish quality log comments grouped by the first four words and counted by that group&quot;)</code></pre>
-<pre><code>## Error in knitr::kable(quality_comments, caption = &quot;Table 3. Fish quality log comments grouped by the first four words and counted by that group&quot;): object 'quality_comments' not found</code></pre>
-<p>234 fish have no location information associated with them.</p>
+<pre class="r"><code>no_fish_loc &lt;- survey_seines_fish %&gt;% filter(survey_type == &quot;standard&quot;,
+                                     is.na(survey_seines_fish$lat))</code></pre>
+<p>We’ve captured 16101 fish and dissected 8897</p>
+<p>0 fish have no location information associated with them.</p>
 </div>
 <div id="sample-results" class="section level2">
 <h2><span class="header-section-number">2.2</span> Sample results</h2>
@@ -6422,7 +6473,7 @@ test_join &lt;- anti_join(sockeye_diets, fish_data)</code></pre>
 <pre class="r"><code>#antijoin should yield zero
 seines_match_surveys &lt;-nrow(anti_join(seine_data, survey_data))
 
-ifelse(seines_match_surveys == 0, &quot;yes, seines match surveys&quot;, &quot;error: no, some seines don't have matching surveys&quot;)</code></pre>
+ifelse(seines_match_surveys == 0, &quot;yes, seines match surveys&quot;, &quot;error: no, some seines don&#39;t have matching surveys&quot;)</code></pre>
 <pre><code>## [1] &quot;yes, seines match surveys&quot;</code></pre>
 <p>Do all lab fish have a matching field fish?</p>
 <pre class="r"><code>fish_field_data &lt;- read_csv(here(&quot;data&quot;, &quot;fish_field_data.csv&quot;), guess_max = 20000)
@@ -6433,9 +6484,7 @@ lab_match_field &lt;- nrow(anti_join(fish_lab_data, fish_field_data))
 ifelse(lab_match_field == 0, &quot;yes, all lab fish have a matching field fish&quot;, &quot;error: no, some lab fish do not have a mathing field fish&quot;)</code></pre>
 <pre><code>## [1] &quot;yes, all lab fish have a matching field fish&quot;</code></pre>
 <p>Do all fish have a matching seine?</p>
-<pre class="r"><code>fish_data &lt;- left_join(fish_field_data, fish_lab_data, by = &quot;ufn&quot;)
-
-n_umatched_fish &lt;- nrow(anti_join(fish_data, seine_data, by = 'seine_id'))
+<pre class="r"><code>n_umatched_fish &lt;- nrow(anti_join(fish_data, seine_data, by = &#39;seine_id&#39;))
 
 ifelse(lab_match_field == 0, &quot;yes, all fish have a matching seine they came from&quot;, &quot;error: no, not all fish have a seine associated with it&quot;)</code></pre>
 <pre><code>## [1] &quot;yes, all fish have a matching seine they came from&quot;</code></pre>
@@ -6444,22 +6493,22 @@ ifelse(lab_match_field == 0, &quot;yes, all fish have a matching seine they came
 
 n_missed_field_lice &lt;- nrow(anti_join(sealice_field, fish_data))
 
-ifelse(n_missed_field_lice == 0, &quot;yes, all sealice counts belong to a fish we collected&quot;, &quot;error: some sealice counts don't match to a fish in our database&quot;)</code></pre>
+ifelse(n_missed_field_lice == 0, &quot;yes, all sealice counts belong to a fish we collected&quot;, &quot;error: some sealice counts don&#39;t match to a fish in our database&quot;)</code></pre>
 <pre><code>## [1] &quot;yes, all sealice counts belong to a fish we collected&quot;</code></pre>
 <p>Do all finescale sealiced fish have a match in our fish data table?</p>
-<pre class="r"><code>sealice_lab_fs &lt;- read_csv(here(&quot;data&quot;, &quot;sealice_lab_fs.csv&quot;))
+<pre class="r"><code>sealice_lab_fs &lt;- read_csv(here(&quot;data&quot;, &quot;sample_results&quot;, &quot;sealice_lab_fs.csv&quot;))
 
 fine_loused_matched_fish &lt;- nrow(anti_join(sealice_lab_fs, fish_data, by = &quot;ufn&quot;))
 
-ifelse(fine_loused_matched_fish == 0, &quot;yes&quot;, &quot;error: no&quot;)</code></pre>
-<pre><code>## [1] &quot;yes&quot;</code></pre>
-<p>Do all lab mot sealice results have a match to a fish our fish data table?</p>
+ifelse(fine_loused_matched_fish == 0, &quot;yes, all finescale sealiced fish have a match in our fish data table&quot;, &quot;error: no&quot;)</code></pre>
+<pre><code>## [1] &quot;yes, all finescale sealiced fish have a match in our fish data table&quot;</code></pre>
+<p>Do all lab mot sealice results have a match to a fish in our fish data table?</p>
 <pre class="r"><code>sealice_lab_mot &lt;- read_csv(here(&quot;data&quot;, &quot;sealice_lab_mot.csv&quot;))
 
 n_unmatched_lab_mot &lt;- nrow(anti_join(sealice_lab_mot, fish_data, by = &quot;ufn&quot;))
 
-ifelse(n_unmatched_lab_mot == 0, &quot;yes&quot;, &quot;error: no&quot;)</code></pre>
-<pre><code>## [1] &quot;yes&quot;</code></pre>
+ifelse(n_unmatched_lab_mot == 0, &quot;yes, all lab mot selice results have a match to a fish&quot;, &quot;error: no&quot;)</code></pre>
+<pre><code>## [1] &quot;yes, all lab mot selice results have a match to a fish&quot;</code></pre>
 </div>
 <div id="locations" class="section level1">
 <h1><span class="header-section-number">4</span> Locations</h1>
@@ -6486,8 +6535,8 @@ pal &lt;- colorFactor(c(&quot;navy&quot;, &quot;red&quot;), domain = c(&quot;sei
       addEsriTiledMapLayer(url = &quot;https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer&quot;) %&gt;%  
       addProviderTiles(providers$CartoDB.VoyagerOnlyLabels) %&gt;% 
       addMiniMap()</code></pre>
-<div id="htmlwidget-5f1c37a3e940e9a468db" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f1c37a3e940e9a468db">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[50.4,-125.7],7,[]],"calls":[{"method":"addCircleMarkers","args":[[49.9613,50.07902,49.99932,50.16142,50.08007,50.11842,50.08005,50.16412,50.08123,50.11405,50.1659,50.34273,50.30787,50.13705,50.18217,50.31962,50.44365,50.34655,50.30723,50.3153,50.44466,50.30795,50.44941,50.30884,50.10015,50.31763,50.06119,50.44527,50.34762,50.30492,50.44217,50.34851,50.30759,50.31954,50.07966,50.44342,50.30771,50.19112,50.30812,50.1915,50.30734,50.19077,50.30806,50.19017,50.19051,50.30767,50.34741,50.34866,50.32119,50.34829,50.30819,50.09809,50.34758,50.30597,50.44949,50,50.10264,50.44045,50.34969,50.30698,50.30702,50.34844,50.30764,50.30377,50.34874,50.30641,50.34825,50.34797,50.3079,50.30717,50.34811,50.318037,50.318037,50.023957,50.023957,49.9865,50.237386,50.32113,50.19304,50.287179,50.243454,50.208559,50.208559,50.393263,50.020465,50.020465,49.990151,49.990151,50.319977,50.241361,50.191099,50.30908,50.274701,50.224106,50.224106,50.392115,50.3175,50.3175,50.190737,50.243773,50.304166,50.304166,50.308769,50.274425,50.24565,50.347739,50.386065,50.462513,50.239953,50.190887,50.30436,50.242671,50.347862,50.461604,50.461604,50.31794,50.190683,50.021998,50.021998,50.391225,50.305971,50.305971,50.305971,50.235322,50.275083,50.307203,50.319224,50.319224,50.238067,50.238067,50.191383,50.191383,50.30661,50.30661,50.236643,50.382455,50.382455,50.38992,50.458706,50.24043,50.022465,49.997783,50.307068,50.307068,50.378699,50.348081,50.462531,50.240733,50.240733,50.275178,50.307066,50.304502,50.18049002,50.309067,50.17999062,50.309278,50.301803,50.305482,50.274875,50.306252,50.307761,50.307811,50.3041,50.274783,50.274596,50.236254,50.304561,50.297362,50.29725,50.434701,50.297141,50.297141,50.297141,50.30969,50.30955,50.30955,50.29885,50.306507,50.308201,50.308201,50.299822,50.308112,50.308112,50.300978,50.300978,50.237837,50.27485,50.307981,50.305134,50.50535,50.47479,50.45614,50.48078,50.52222,50.54648,50.54039,50.55787,50.60101,50.47696,50.49853,50.52363,50.48103,50.45622,50.54672,50.53989,50.55951,50.53957,50.57078,50.4838,50.50733,50.45679,50.48405,50.52152,50.54605,50.53808,50.60051,50.57871,50.55853,50.50763,50.45649,50.48189,50.48072,50.53944,50.52232,50.54216,50.5956,50.55855,50.56784,50.45987,50.47794,50.49983,50.47923,50.539,50.52411,50.54418,50.57687,50.59537,50.50008,50.45951,50.47959,50.53988,50.47679,50.45698,50.49881,50.52618,50.48035,50.54719,50.55792,50.58185,50.59549,50.54327,50.52491,50.47943,50.5463,50.47909,50.45747,50.49921,50.58086,50.54362,50.55814,50.60263,50.5194,50.48001,50.45804,50.4763,50.49608,50.55821,50.54774,50.58209,50.60237,50.54414,50.47705,50.45524,50.49837,50.4787,50.55961,50.58165,50.5438,50.60255,50.54277,50.47895,50.45942,50.55809,50.54703,50.54329,50.5412,50.506881,50.458043,50.473969,50.458043,50.526493,50.480359,50.543296,50.558361,50.54692,50.601718,50.522967,50.495266,50.477037,50.4559,50.543432,50.576696,50.60125,50.545897,50.60125,50.576696,50.477038,50.543432,50.540979,50.507301,50.459012,50.458983,50.525287,50.543029,50.544941,50.55543,50.602327,50.5771,50.547475,50.51821,50.480214,50.476173,50.456683,50.500269,50.602051,50.579213,50.579393,50.546326,50.483183,50.483183,50.483183,50.506302,50.506323,50.455728,50.54401,50.55803,50.55803,50.6017,50.4806,50.47508,50.45733,50.49874,50.601529,50.580247,50.543818,50.47779,50.456886,50.457049,50.54522,50.6022,50.54393,50.5438,50.54411,50.60224,50.60233,50.54628,50.54487,50.54582,50.54574,50.60278,50.54454,50.54372,50.54505,50.60144,50.546,50.54533,50.3154,50.316217,50.18167,50.309206,50.54526,50.53912,50.316117,50.316983,50.5429,50.53927,50.31006,50.271333,50.316807,50.30705,50.30785,50.27045,50.440686,50.54342,50.54561,50.306917,50.307767,50.305683,50.267967,50.54387,50.443485,50.30345,50.307183,50.3099,50.60197,50.60207,50.26805,50.270667,50.268817,50.27095,50.233733,50.442483,50.54416,50.308417,50.303167,50.30915,50.29,50.2693,50.268067,50.239,50.2351,50.60216,50.435,50.434567,50.434567,50.54314,50.54372,50.54267,50.54477,50.29995,50.305567,50.26815,50.267517,50.438867,50.298867,50.54343,50.54327,50.60151,50.3092,50.54591,50.268783,50.268383,50.54412,50.54367,50.435883,50.437217,50.54549,50.54308,50.309033,50.30655,50.300047,50.307068,50.308983,50.30865,50.30945,50.3056,50.3081,50.54511,50.60154,50.53936,50.55895,50.53912,50.54301,50.54359,50.3081,50.3081,50.24247,50.31025,50.2688,50.442683,50.54622,50.54025,50.305683,50.2692,50.241902,50.24135,50.2453,50.442917,50.440383,50.45645,50.30545,50.305267,50.304033,50.30215,50.60181,50.53974,50.54062,50.275033,50.54637,50.54552,50.54615,50.442933,50.456733,50.45715,50.271417,50.3055,50.308217,50.308533,50.53986,50.601398,50.601457,50.54037,50.6018,50.5447,50.54026,50.457167,50.274683,50.44365,50.306067,50.304683,50.303733,50.54608,50.2772,50.243817,50.43845,50.5392,50.305667,50.30785,50.275117,50.275117,50.456533,50.5458,50.54616,50.54602,50.307533,50.309833,50.53839,50.53825,50.272117,50.24475,50.23995,50.452067,50.457617,50.54513,50.54599,50.5458,50.6012,50.60129,50.54023,50.53973,50.305633,50.304533,50.308817,50.2727,50.234917,50.232967,50.23085,50.54523,50.457633,50.456783,50.456867,50.53932,50.305917,50.3076,50.312667,50.26936667,50.24285,50.24078333,50.23451667,50.54463,50.54428,50.54004,50.53959,50.54053,50.4573,50.308483,50.30645,50.308717],[-124.747,-124.8509,-125.1395,-124.8842,-124.8511,-125.07512,-125.2468,-125.1602,-124.8549,-125.0787,-124.8888,-125.0841,-125.3293,-125.1175,-125.1493,-125.0395,-125.279,-125.45602,-125.33345,-125.05186,-125.2804,-125.32452,-125.33027,-125.32275,-125.27265,-125.04942,-124.87916,-125.2774,-125.45358,-125.33058,-125.27406,-125.44831,-125.32969,-125.04247,-125.24845,-125.27904,-125.32864,-125.14202,-125.3269,-125.14292,-125.33514,-125.14249,-125.32972,-125.14437,-125.1444,-125.33023,-125.45333,-125.44482,-125.03856,-125.45001,-125.32694,-125.27142,-125.4553,-125.33588,-125.32427,-125,-125.27585,-125.27069,-125.44451,-125.3259,-125.33509,-125.44666,-125.33348,-125.33768,-125.44617,-125.31584,-125.44895,-125.45584,-125.32955,-125.33303,-125.454,-125.049415,-125.049415,-124.914675,-124.914675,-125.162953,-125.12002,-125.040588,-125.136573,-125.33416,-125.398108,-125.355064,-125.355064,-125.373514,-124.917743,-124.917743,-125.160818,-125.160818,-125.042165,-125.119113,-125.138578,-125.325703,-125.377445,-125.395004,-125.395004,-125.374782,-125.050736,-125.050736,-125.143169,-125.397476,-125.333511,-125.333511,-125.326765,-125.379303,-125.396035,-125.45463,-125.376067,-125.368231,-125.126574,-125.143416,-125.332956,-125.398265,-125.455554,-125.368943,-125.368943,-125.050807,-125.143138,-124.916211,-124.916211,-125.365332,-125.334369,-125.334369,-125.334369,-125.39888,-125.381356,-125.332605,-125.044219,-125.044219,-125.1179,-125.1179,-125.143884,-125.143884,-125.335266,-125.335266,-125.39734,-125.373533,-125.373533,-125.613237,-125.365059,-125.119941,-124.916635,-125.15945,-125.329361,-125.329361,-125.373927,-125.455923,-125.359047,-125.12055,-125.12055,-125.378066,-125.322977,-125.336639,-125.330849,-125.3257,-125.0189455,-125.320699,-125.03049,-125.024803,-125.376937,-125.336051,-125.325384,-125.329505,-125.33841,-125.377569,-125.377527,-125.398402,-125.337253,-125.339472,-125.338485,-125.26607,-125.340397,-125.340397,-125.340397,-125.321237,-125.306633,-125.306633,-125.337833,-125.330603,-125.327355,-125.327355,-125.3415,-125.326899,-125.326899,-125.341211,-125.341211,-125.396111,-125.377707,-125.320206,-125.337052,-126.24163,-126.03259,-126.11933,-126.41037,-126.39167,-126.67096,-126.78096,-126.73532,-126.70394,-126.0273,-126.21348,-126.39046,-126.41291,-126.11838,-126.67256,-126.78256,-126.75326,-126.7781,-126.70066,-126.01069,-126.24336,-126.16458,-126.3987,-126.40028,-126.66218,-126.77494,-126.70319,-126.72129,-126.73145,-126.24218,-126.16619,-126.01128,-126.40915,-126.78254,-126.39556,-126.63511,-126.69022,-126.73248,-126.69728,-126.16961,-126.02803,-126.20581,-126.41485,-126.7781,-126.39107,-126.63202,-126.72184,-126.69062,-126.20937,-126.16958,-126.02629,-126.78291,-126.02843,-126.16944,-126.21349,-126.38632,-126.41265,-126.67487,-126.73617,-126.71983,-126.69036,-126.81252,-126.38617,-126.41631,-126.66727,-126.02584,-126.16879,-126.20961,-126.72272,-126.81951,-126.73386,-126.70188,-126.40831,-126.41469,-126.16997,-126.02838,-126.21645,-126.73327,-126.67774,-126.71978,-126.70219,-126.81843,-126.02871,-126.11718,-126.21404,-126.41567,-126.7542,-126.71952,-126.81988,-126.70201,-126.64149,-126.41667,-126.16916,-126.73246,-126.67197,-126.8169,-126.77998,-126.247378,-126.152637,-126.247378,-126.152637,-126.38718,-126.412275,-126.816816,-126.732241,-126.67193,-126.701857,-126.377383,-126.211667,-126.028592,-126.1191,-126.8134,-126.721158,-126.704457,-126.668909,-126.704457,-126.721158,-126.028566,-126.8134,-126.78085,-126.24325,-126.1695,-126.169594,-126.390347,-126.632233,-126.816489,-126.724521,-126.701507,-126.721684,-126.676942,-126.406079,-126.4142,-126.029443,-126.153895,-126.209365,-126.704553,-126.71432,-126.714162,-126.669166,-126.403858,-126.403858,-126.403858,-126.24142,-126.241304,-126.116461,-126.81461,-126.73463,-126.73463,-126.70318,-126.40961,-126.03392,-126.16553,-126.21257,-126.703784,-126.721745,-126.794456,-126.429726,-126.162647,-126.162651,-126.65949,-126.70567,-126.8131,-126.80927,-126.65398,-126.70529,-126.70309,-126.81474,-126.81252,-126.81618,-126.81679,-126.70284,-126.81227,-126.81769,-126.65729,-126.70046,-126.81509,-126.65855,-125.053,-125.052033,-125.1523,-125.323291,-126.8154,-126.77893,-125.052167,-125.049967,-126.81615,-126.78078,-125.317963,-125.368,-125.050581,-125.332333,-125.328333,-125.3656,-125.294356,-126.81474,-126.66166,-125.3288,-125.32905,-125.336917,-125.358733,-126.80852,-125.28775,-125.33885,-125.335133,-125.319633,-126.70232,-126.70187,-125.358833,-125.365017,-125.359533,-125.365483,-125.395717,-125.273467,-126.80831,-125.3309,-125.3387,-125.32305,-125.317433,-125.360467,-125.35845,-125.401233,-125.397083,-126.70131,-125.263767,-125.261567,-125.261567,-126.81464,-126.81902,-126.65017,-126.65859,-125.341167,-125.337083,-125.360967,-125.35945,-125.267883,-125.337917,-126.81577,-126.81796,-126.70567,-125.325,-126.6658,-125.358283,-125.357783,-126.81375,-126.81252,-125.264217,-125.265083,-126.6642,-126.81553,-125.323467,-125.33625,-125.340866,-125.331276,-125.325167,-125.3255,-125.324067,-125.33005,-125.32895,-126.65926,-126.70369,-126.78008,-126.77763,-126.77922,-126.81448,-126.81538,-125.32895,-125.32895,-125.3975,-125.320467,-125.357533,-125.277333,-126.66857,-126.78289,-125.3377,-125.360867,-125.397842,-125.398056,-125.395267,-125.27725,-125.2715,-125.2677,-125.33815,-125.33815,-125.3394,-125.339583,-126.70432,-126.78125,-126.78237,-125.378217,-126.66978,-126.66193,-126.6701,-125.278717,-125.268833,-125.268117,-125.366183,-125.3351,-125.327317,-125.3281,-126.77921,-126.702403,-126.702725,-126.78188,-126.70077,-126.66235,-126.78209,-125.262433,-125.377683,-125.27435,-125.330583,-125.331683,-125.3323,-126.66772,-125.376983,-125.3971,-125.267033,-126.77885,-125.33775,-125.329683,-125.37835,-125.37835,-125.268783,-126.66536,-126.66828,-126.66768,-125.33005,-125.330533,-126.77386,-126.77136,-125.37515,-125.396667,-125.396583,-125.247833,-125.2586,-126.66184,-126.66737,-126.66183,-126.7028,-126.70315,-126.78136,-126.77827,-125.337583,-125.336083,-125.325983,-125.376983,-125.394583,-125.393833,-125.394533,-126.66216,-125.259917,-125.264833,-125.26715,-126.78125,-125.333817,-125.327583,-125.32365,-125.3628167,-125.3972667,-125.3993833,-125.39835,-126.65824,-126.6545,-126.78122,-126.77962,-126.78,-125.265333,-125.324317,-125.325817,-125.323283],10,null,null,{"interactive":true,"className":"","stroke":false,"color":["#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000"],"fillOpacity":0.2},null,null,null,null,["DE100N3","DE101N1","DE102N1","DE103N1","DE104N1","DE105N1","DE106N1","DE107N1","DE108N1","DE109N1","DE110N1","DE111N1","DE112N1","DE114N1","DE115N2","DE116N1","DE117N1","DE120N2","DE121N1","DE124N1","DE128N4","DE130N1","DE137N1","DE139N1","DE140N1","DE143N1","DE145N1","DE149N1","DE150N3","DE151N1","DE152N3","DE153N2","DE154N1","DE155N1","DE158N2","DE160N1","DE162N1","DE163N1","DE168N1","DE169N2","DE170N2","DE173N1","DE174N1","DE175N1","DE182N1","DE183N2","DE184N1","DE192N3","DE194N1","DE198N2","DE199N1","DE201N1","DE205N2","DE206N1","DE212N2","DE214N1","DE217N2","DE218N1","DE219N1","DE220N1","DE221N1","DE225N1","DE226N2","DE231N2","DE234N1","DE236N1","DE237N1","DE238N1","DE239N2","DE240N1","DE241N1","DE245N2","DE245N1","DE255N2","DE255N1","DE258N1","DE259N1","DE260N1","DE261N1","DE262N1","DE263N1","DE264N2","DE264N1","DE267N1","DE269N2","DE269N1","DE272N1","DE272N2","DE274N1","DE275N1","DE276N1","DE277N1","DE278N1","DE279N2","DE279N1","DE282N1","DE284N2","DE284N1","DE287N1","DE288N1","DE290N2","DE290N1","DE292N1","DE293N1","DE294N1","DE295N1","DE296N1","DE297N1","DE299N1","DE300N1","DE301N1","DE302N1","DE303N1","DE305N2","DE305N1","DE307N1","DE308N1","DE310N2","DE310N1","DE315N1","DE317N3","DE317N2","DE317N1","DE320N1","DE321N1","DE322N1","DE323N2","DE323N1","DE325N2","DE325N1","DE327N2","DE327N1","DE329N2","DE329N1","DE331N1","DE335N2","DE335N1","DE337N1","DE338N1","DE341N1","DE342N1","DE344N1","DE350N2","DE350N1","DE352N1","DE353N1","DE355N1","DE357N2","DE357N1","DE360N1","DE361N2","DE361N1","DE364N1","DE365N1","DE366N1","DE367N1","DE368N1","DE369N1","DE370N1","DE371N2","DE371N1","DE372N2","DE372N1","DE376N2","DE376N1","DE377N1","DE378N1","DE373N2","DE373N1","DE374N1","DE457N3","DE457N2","DE457N1","DE458N1","DE459N2","DE459N1","DE460N1","DE461N1","DE462N2","DE462N1","DE463N3","DE463N2","DE463N1","DE464N2","DE464N1","DE379N1","DE375N1","DE380N1","DE381N1","JE101N1","JE102N2","JE104N1","JE105N2","JE106N4","JE107N2","JE108N2","JE109N3","JE110N2","JE112N1","JE113N1","JE114N1","JE115N1","JE116N1","JE117N2","JE118N1","JE119N1","JE122N2","JE123N3","JE126N1","JE128N2","JE129N3","JE131N1","JE132N1","JE133N1","JE134N1","JE136N1","JE137N1","JE138N1","JE139N1","JE140N1","JE142N1","JE143N1","JE145N1","JE146N1","JE147N1","JE148N3","JE149N1","JE150N1","JE152N1","JE154N1","JE155N1","JE157N2","JE159N1","JE160N1","JE161N1","JE162N1","JE163N1","JE165N1","JE166N1","JE168N1","JE171N2","JE172N4","JE173N1","JE174N1","JE175N1","JE176N2","JE177N2","JE178N1","JE179N1","JE180N2","JE181N2","JE182N1","JE183N1","JE184N1","JE185N1","JE186N1","JE187N1","JE188N1","JE189N2","JE190N1","JE191N1","JE192N1","JE193N1","JE195N1","JE196N1","JE197N1","JE198N2","JE199N2","JE200N1","JE201N3","JE202N1","JE203N1","JE204N2","JE205N1","JE206N2","JE207N2","JE208N2","JE209N1","JE210N2","JE211N1","JE212N1","JE213N1","JE216N1","JE217N1","JE218N1","JE225N1","JE231N1","JE232N1","JE233N1","JE234N2","JE235N3","JE236N1","JE237N1","JE238N1","JE239N2","JE240N1","JE243N2","JE244N1","JE245N2","JE246N1","JE248N1","JE249N1","JE250N2","JE251N1","JE252N1","JE253N1","JE254N1","JE255N2","JE256N1","JE257N1","JE258N1","JE259N3","JE260N1","JE261N1","JE262N1","JE263N1","JE264N1","JE265N1","JE266N1","JE267N1","JE268N1","JE269N1","JE270N1","JE271N1","JE272N2","JE273N1","JE274N2","JE276N1","JE278N3","JE278N2","JE278N1","JE281N1","JE282N1","JE283N1","JE284N1","JE285N1","JE286N1","JE288N1","JE290N2","JE291N1","JE292N1","JE293N2","JE294N2","JE295N1","JE298N1","JE300N1","JE302N1","JE303N1","JE304N2","JE305N1","JE306N2","JE306N1","JE307N1","JE308N2","JE308N1","JE309N2","JE309N1","JE310N2","JE310N1","JE311N5","JE314N2","JE314N1","JE312N1","JE313N1","JE316N1","JE315N1","DE505N2","DE505N1","DE506N1","DE510N1","JE411N1","JE412N1","DE516N2","DE516N1","JE401N1","JE402N1","DE517N2","DE531N1","DE512N1","DE513N2","DE513N1","DE519N1","DE514N1","JE417N1","JE418N1","DE520N3","DE520N2","DE520N1","DE521N1","JE414N1","DE522N1","DE523N3","DE523N2","DE523N1","JE415N2","JE415N1","DE524N4","DE524N3","DE524N2","DE524N1","DE525N1","DE526N1","JE419N1","DE527N3","DE527N2","DE527N1","DE528N1","DE529N2","DE529N1","DE530N2","DE530N1","JE420N1","DE532N3","DE532N2","DE532N1","JE421N2","JE421N1","JE422N2","JE422N1","DE533N2","DE533N1","DE534N2","DE534N1","DE535N1","DE536N1","JE423N2","JE423N1","JE425N1","DE537N1","JE426N1","DE538N2","DE538N1","JE427N2","JE427N1","DE539N2","DE539N1","JE428N1","JE429N1","DE540N1","DE541N1","DE546N2","DE546N1","DE542N2","DE542N1","DE543N1","DE601N1","DE602N1","JE501N1","JE502N1","JE503N1","JE503N2","JE503N3","JE504N1","JE504N2","DE602N2","DE602N3","DE605N1","DE607N1","DE608N1","DE609N1","JE505N1","JE506N1","DE610N1","DE612N1","DE613N1","DE613N2","DE613N3","DE615N1","DE615N2","DE616N1","DE614N1","DE614N2","DE614N3","DE614N4","JE508N1","JE509N1","JE509N2","DE617N1","JE510N1","JE510N2","JE510N3","DE618N1","DE619N1","DE619N2","DE620N1","DE626N1","DE621N1","DE621N2","JE511N1","JE513N1","JE513N2","JE514N1","JE515N1","JE516N1","JE517N1","DE623N1","DE624N1","DE627N1","DE628N1","DE628N2","DE628N3","JE518N1","DE629N1","DE630N1","DE631N1","JE519N1","DE632N1","DE632N2","DE633N1","DE633N2","DE634N1","JE520N1","JE520N2","JE520N3","DE636N1","DE636N2","JE522N1","JE522N2","DE638N1","DE639N1","DE639N2","DE641N1","DE641N2","JE523N1","JE523N2","JE523N3","JE524N1","JE524N2","JE525N1","JE525N2","DE642N1","DE642N2","DE642N3","DE643N1","DE644N1","DE644N2","DE644N3","JE526N1","DE646N1","DE646N2","DE646N3","JE527N1","DE647N1","DE647N2","DE647N3","DE648N1","DE649N1","DE649N2","DE649N3","JE528N1","JE528N2","JE529N1","JE529N2","JE529N3","DE651N1","DE652N1","DE652N2","DE652N3"],{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,null,{"errorTileUrl":"","noWrap":false,"opacity":1,"detectRetina":false}]},{"method":"addEsriTiledMapLayer","args":["https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer",null,null,{"correctZoomLevels":true,"zoomOffsetAllowance":0.1,"useCors":true}]},{"method":"addProviderTiles","args":[null,null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMiniMap","args":[null,null,"bottomright",150,150,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]}],"limits":{"lat":[49.9613,50.60278],"lng":[-126.81988,-124.747]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ec0ec0fb6b38fd99b571" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ec0ec0fb6b38fd99b571">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[50.4,-125.7],7,[]],"calls":[{"method":"addCircleMarkers","args":[[49.9613,50.07902,49.99932,50.16142,50.08007,50.11842,50.08005,50.16412,50.08123,50.11405,50.1659,50.34273,50.30787,50.13705,50.18217,50.31962,50.44365,50.34655,50.30723,50.3153,50.44466,50.30795,50.44941,50.30884,50.10015,50.31763,50.06119,50.44527,50.34762,50.30492,50.44217,50.34851,50.30759,50.31954,50.07966,50.44342,50.30771,50.19112,50.30812,50.1915,50.30734,50.19077,50.30806,50.19017,50.19051,50.30767,50.34741,50.34866,50.32119,50.34829,50.30819,50.09809,50.34758,50.30597,50.44949,50,50.10264,50.44045,50.34969,50.30698,50.30702,50.34844,50.30764,50.30377,50.34874,50.30641,50.34825,50.34797,50.3079,50.30717,50.34811,50.318037,50.318037,50.023957,50.023957,49.9865,50.237386,50.32113,50.19304,50.287179,50.243454,50.208559,50.208559,50.393263,50.020465,50.020465,49.990151,49.990151,50.319977,50.241361,50.191099,50.30908,50.274701,50.224106,50.224106,50.392115,50.3175,50.3175,50.190737,50.243773,50.304166,50.304166,50.308769,50.274425,50.24565,50.347739,50.386065,50.462513,50.239953,50.190887,50.30436,50.242671,50.347862,50.461604,50.461604,50.31794,50.190683,50.021998,50.021998,50.391225,50.305971,50.305971,50.305971,50.235322,50.275083,50.307203,50.319224,50.319224,50.238067,50.238067,50.191383,50.191383,50.30661,50.30661,50.236643,50.382455,50.382455,50.38992,50.458706,50.24043,50.022465,49.997783,50.307068,50.307068,50.378699,50.348081,50.462531,50.240733,50.240733,50.275178,50.307066,50.304502,50.18049002,50.309067,50.17999062,50.309278,50.301803,50.305482,50.274875,50.306252,50.307761,50.307811,50.3041,50.274783,50.274596,50.236254,50.304561,50.297362,50.29725,50.434701,50.297141,50.297141,50.297141,50.30969,50.30955,50.30955,50.29885,50.306507,50.308201,50.308201,50.299822,50.308112,50.308112,50.300978,50.300978,50.237837,50.27485,50.307981,50.305134,50.50535,50.47479,50.45614,50.48078,50.52222,50.54648,50.54039,50.55787,50.60101,50.47696,50.49853,50.52363,50.48103,50.45622,50.54672,50.53989,50.55951,50.53957,50.57078,50.4838,50.50733,50.45679,50.48405,50.52152,50.54605,50.53808,50.60051,50.57871,50.55853,50.50763,50.45649,50.48189,50.48072,50.53944,50.52232,50.54216,50.5956,50.55855,50.56784,50.45987,50.47794,50.49983,50.47923,50.539,50.52411,50.54418,50.57687,50.59537,50.50008,50.45951,50.47959,50.53988,50.47679,50.45698,50.49881,50.52618,50.48035,50.54719,50.55792,50.58185,50.59549,50.54327,50.52491,50.47943,50.5463,50.47909,50.45747,50.49921,50.58086,50.54362,50.55814,50.60263,50.5194,50.48001,50.45804,50.4763,50.49608,50.55821,50.54774,50.58209,50.60237,50.54414,50.47705,50.45524,50.49837,50.4787,50.55961,50.58165,50.5438,50.60255,50.54277,50.47895,50.45942,50.55809,50.54703,50.54329,50.5412,50.506881,50.458043,50.473969,50.458043,50.526493,50.480359,50.543296,50.558361,50.54692,50.601718,50.522967,50.495266,50.477037,50.4559,50.543432,50.576696,50.60125,50.545897,50.60125,50.576696,50.477038,50.543432,50.540979,50.507301,50.459012,50.458983,50.525287,50.543029,50.544941,50.55543,50.602327,50.5771,50.547475,50.51821,50.480214,50.476173,50.456683,50.500269,50.602051,50.579213,50.579393,50.546326,50.483183,50.483183,50.483183,50.506302,50.506323,50.455728,50.54401,50.55803,50.55803,50.6017,50.4806,50.47508,50.45733,50.49874,50.601529,50.580247,50.543818,50.47779,50.456886,50.457049,50.54522,50.6022,50.54393,50.5438,50.54411,50.60224,50.60233,50.54628,50.54487,50.54582,50.54574,50.60278,50.54454,50.54372,50.54505,50.60144,50.546,50.54533,50.3154,50.316217,50.18167,50.309206,50.54526,50.53912,50.316117,50.316983,50.5429,50.53927,50.31006,50.271333,50.316807,50.30705,50.30785,50.27045,50.440686,50.54342,50.54561,50.306917,50.307767,50.305683,50.267967,50.54387,50.443485,50.30345,50.307183,50.3099,50.60197,50.60207,50.26805,50.270667,50.268817,50.27095,50.233733,50.442483,50.54416,50.308417,50.303167,50.30915,50.29,50.2693,50.268067,50.239,50.2351,50.60216,50.435,50.434567,50.434567,50.54314,50.54372,50.54267,50.54477,50.29995,50.305567,50.26815,50.267517,50.438867,50.298867,50.54343,50.54327,50.60151,50.3092,50.54591,50.268783,50.268383,50.54412,50.54367,50.435883,50.437217,50.54549,50.54308,50.309033,50.30655,50.300047,50.307068,50.308983,50.30865,50.30945,50.3056,50.3081,50.3081,50.3081,50.24247,50.54511,50.60154,50.53936,50.55895,50.53912,50.54301,50.54359,50.31025,50.2688,50.442683,50.54622,50.305683,50.54025,50.2692,50.241902,50.24135,50.2453,50.442917,50.440383,50.45645,50.30545,50.305267,50.304033,50.30215,50.60181,50.275033,50.53974,50.54062,50.442933,50.456733,50.45715,50.54637,50.54552,50.54615,50.271417,50.308217,50.308533,50.457167,50.274683,50.3055,50.53986,50.601398,50.601457,50.54037,50.6018,50.44365,50.5447,50.54026,50.306067,50.304683,50.303733,50.54608,50.2772,50.243817,50.43845,50.5392,50.305667,50.30785,50.275117,50.275117,50.456533,50.5458,50.54616,50.54602,50.307533,50.309833,50.53839,50.53825,50.272117,50.24475,50.23995,50.452067,50.457617,50.54513,50.54599,50.5458,50.6012,50.60129,50.54023,50.53973,50.305633,50.304533,50.308817,50.2727,50.234917,50.232967,50.23085,50.54523,50.457633,50.456783,50.456867,50.53932,50.305917,50.3076,50.312667,50.26936667,50.24285,50.24078333,50.23451667,50.54463,50.54428,50.54004,50.53959,50.54053,50.4573,50.308483,50.30645,50.308717,50.19111,50.307583,50.4383,50.46056,50.35722,50.190517,50.307117,50.306667,50.4531,50.434167,50.306333,50.27148,50.30703,50.44263,50.304917,50.307317,50.273933,50.4554,50.45666667,50.30915,50.44235,50.440917,50.306067,50.30685,50.26861667,50.26908333],[-124.747,-124.8509,-125.1395,-124.8842,-124.8511,-125.07512,-125.2468,-125.1602,-124.8549,-125.0787,-124.8888,-125.0841,-125.3293,-125.1175,-125.1493,-125.0395,-125.279,-125.45602,-125.33345,-125.05186,-125.2804,-125.32452,-125.33027,-125.32275,-125.27265,-125.04942,-124.87916,-125.2774,-125.45358,-125.33058,-125.27406,-125.44831,-125.32969,-125.04247,-125.24845,-125.27904,-125.32864,-125.14202,-125.3269,-125.14292,-125.33514,-125.14249,-125.32972,-125.14437,-125.1444,-125.33023,-125.45333,-125.44482,-125.03856,-125.45001,-125.32694,-125.27142,-125.4553,-125.33588,-125.32427,-125,-125.27585,-125.27069,-125.44451,-125.3259,-125.33509,-125.44666,-125.33348,-125.33768,-125.44617,-125.31584,-125.44895,-125.45584,-125.32955,-125.33303,-125.454,-125.049415,-125.049415,-124.914675,-124.914675,-125.162953,-125.12002,-125.040588,-125.136573,-125.33416,-125.398108,-125.355064,-125.355064,-125.373514,-124.917743,-124.917743,-125.160818,-125.160818,-125.042165,-125.119113,-125.138578,-125.325703,-125.377445,-125.395004,-125.395004,-125.374782,-125.050736,-125.050736,-125.143169,-125.397476,-125.333511,-125.333511,-125.326765,-125.379303,-125.396035,-125.45463,-125.376067,-125.368231,-125.126574,-125.143416,-125.332956,-125.398265,-125.455554,-125.368943,-125.368943,-125.050807,-125.143138,-124.916211,-124.916211,-125.365332,-125.334369,-125.334369,-125.334369,-125.39888,-125.381356,-125.332605,-125.044219,-125.044219,-125.1179,-125.1179,-125.143884,-125.143884,-125.335266,-125.335266,-125.39734,-125.373533,-125.373533,-125.613237,-125.365059,-125.119941,-124.916635,-125.15945,-125.329361,-125.329361,-125.373927,-125.455923,-125.359047,-125.12055,-125.12055,-125.378066,-125.322977,-125.336639,-125.330849,-125.3257,-125.0189455,-125.320699,-125.03049,-125.024803,-125.376937,-125.336051,-125.325384,-125.329505,-125.33841,-125.377569,-125.377527,-125.398402,-125.337253,-125.339472,-125.338485,-125.26607,-125.340397,-125.340397,-125.340397,-125.321237,-125.306633,-125.306633,-125.337833,-125.330603,-125.327355,-125.327355,-125.3415,-125.326899,-125.326899,-125.341211,-125.341211,-125.396111,-125.377707,-125.320206,-125.337052,-126.24163,-126.03259,-126.11933,-126.41037,-126.39167,-126.67096,-126.78096,-126.73532,-126.70394,-126.0273,-126.21348,-126.39046,-126.41291,-126.11838,-126.67256,-126.78256,-126.75326,-126.7781,-126.70066,-126.01069,-126.24336,-126.16458,-126.3987,-126.40028,-126.66218,-126.77494,-126.70319,-126.72129,-126.73145,-126.24218,-126.16619,-126.01128,-126.40915,-126.78254,-126.39556,-126.63511,-126.69022,-126.73248,-126.69728,-126.16961,-126.02803,-126.20581,-126.41485,-126.7781,-126.39107,-126.63202,-126.72184,-126.69062,-126.20937,-126.16958,-126.02629,-126.78291,-126.02843,-126.16944,-126.21349,-126.38632,-126.41265,-126.67487,-126.73617,-126.71983,-126.69036,-126.81252,-126.38617,-126.41631,-126.66727,-126.02584,-126.16879,-126.20961,-126.72272,-126.81951,-126.73386,-126.70188,-126.40831,-126.41469,-126.16997,-126.02838,-126.21645,-126.73327,-126.67774,-126.71978,-126.70219,-126.81843,-126.02871,-126.11718,-126.21404,-126.41567,-126.7542,-126.71952,-126.81988,-126.70201,-126.64149,-126.41667,-126.16916,-126.73246,-126.67197,-126.8169,-126.77998,-126.247378,-126.152637,-126.247378,-126.152637,-126.38718,-126.412275,-126.816816,-126.732241,-126.67193,-126.701857,-126.377383,-126.211667,-126.028592,-126.1191,-126.8134,-126.721158,-126.704457,-126.668909,-126.704457,-126.721158,-126.028566,-126.8134,-126.78085,-126.24325,-126.1695,-126.169594,-126.390347,-126.632233,-126.816489,-126.724521,-126.701507,-126.721684,-126.676942,-126.406079,-126.4142,-126.029443,-126.153895,-126.209365,-126.704553,-126.71432,-126.714162,-126.669166,-126.403858,-126.403858,-126.403858,-126.24142,-126.241304,-126.116461,-126.81461,-126.73463,-126.73463,-126.70318,-126.40961,-126.03392,-126.16553,-126.21257,-126.703784,-126.721745,-126.794456,-126.429726,-126.162647,-126.162651,-126.65949,-126.70567,-126.8131,-126.80927,-126.65398,-126.70529,-126.70309,-126.81474,-126.81252,-126.81618,-126.81679,-126.70284,-126.81227,-126.81769,-126.65729,-126.70046,-126.81509,-126.65855,-125.053,-125.052033,-125.1523,-125.323291,-126.8154,-126.77893,-125.052167,-125.049967,-126.81615,-126.78078,-125.317963,-125.368,-125.050581,-125.332333,-125.328333,-125.3656,-125.294356,-126.81474,-126.66166,-125.3288,-125.32905,-125.336917,-125.358733,-126.80852,-125.28775,-125.33885,-125.335133,-125.319633,-126.70232,-126.70187,-125.358833,-125.365017,-125.359533,-125.365483,-125.395717,-125.273467,-126.80831,-125.3309,-125.3387,-125.32305,-125.317433,-125.360467,-125.35845,-125.401233,-125.397083,-126.70131,-125.263767,-125.261567,-125.261567,-126.81464,-126.81902,-126.65017,-126.65859,-125.341167,-125.337083,-125.360967,-125.35945,-125.267883,-125.337917,-126.81577,-126.81796,-126.70567,-125.325,-126.6658,-125.358283,-125.357783,-126.81375,-126.81252,-125.264217,-125.265083,-126.6642,-126.81553,-125.323467,-125.33625,-125.340866,-125.331276,-125.325167,-125.3255,-125.324067,-125.33005,-125.32895,-125.32895,-125.32895,-125.3975,-126.65926,-126.70369,-126.78008,-126.77763,-126.77922,-126.81448,-126.81538,-125.320467,-125.357533,-125.277333,-126.66857,-125.3377,-126.78289,-125.360867,-125.397842,-125.398056,-125.395267,-125.27725,-125.2715,-125.2677,-125.33815,-125.33815,-125.3394,-125.339583,-126.70432,-125.378217,-126.78125,-126.78237,-125.278717,-125.268833,-125.268117,-126.66978,-126.66193,-126.6701,-125.366183,-125.327317,-125.3281,-125.262433,-125.377683,-125.3351,-126.77921,-126.702403,-126.702725,-126.78188,-126.70077,-125.27435,-126.66235,-126.78209,-125.330583,-125.331683,-125.3323,-126.66772,-125.376983,-125.3971,-125.267033,-126.77885,-125.33775,-125.329683,-125.37835,-125.37835,-125.268783,-126.66536,-126.66828,-126.66768,-125.33005,-125.330533,-126.77386,-126.77136,-125.37515,-125.396667,-125.396583,-125.247833,-125.2586,-126.66184,-126.66737,-126.66183,-126.7028,-126.70315,-126.78136,-126.77827,-125.337583,-125.336083,-125.325983,-125.376983,-125.394583,-125.393833,-125.394533,-126.66216,-125.259917,-125.264833,-125.26715,-126.78125,-125.333817,-125.327583,-125.32365,-125.3628167,-125.3972667,-125.3993833,-125.39835,-126.65824,-126.6545,-126.78122,-126.77962,-126.78,-125.265333,-125.324317,-125.325817,-125.323283,-125.144453,-125.33415,-125.2686,-125.38694,-125.46279,-125.1452,-125.331233,-125.332067,-125.25143,-125.26273,-125.336083,-125.3666,-125.33487,-125.2766,-125.33435,-125.333167,-125.377883,-125.2528667,-125.25465,-125.3247,-125.275617,-125.272733,-125.337867,-125.333,-125.3603667,-125.36],10,null,null,{"interactive":true,"className":"","stroke":false,"color":["#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000","#FF0000"],"fillOpacity":0.2},null,null,null,null,["DE100N3","DE101N1","DE102N1","DE103N1","DE104N1","DE105N1","DE106N1","DE107N1","DE108N1","DE109N1","DE110N1","DE111N1","DE112N1","DE114N1","DE115N2","DE116N1","DE117N1","DE120N2","DE121N1","DE124N1","DE128N4","DE130N1","DE137N1","DE139N1","DE140N1","DE143N1","DE145N1","DE149N1","DE150N3","DE151N1","DE152N3","DE153N2","DE154N1","DE155N1","DE158N2","DE160N1","DE162N1","DE163N1","DE168N1","DE169N2","DE170N2","DE173N1","DE174N1","DE175N1","DE182N1","DE183N2","DE184N1","DE192N3","DE194N1","DE198N2","DE199N1","DE201N1","DE205N2","DE206N1","DE212N2","DE214N1","DE217N2","DE218N1","DE219N1","DE220N1","DE221N1","DE225N1","DE226N2","DE231N2","DE234N1","DE236N1","DE237N1","DE238N1","DE239N2","DE240N1","DE241N1","DE245N2","DE245N1","DE255N2","DE255N1","DE258N1","DE259N1","DE260N1","DE261N1","DE262N1","DE263N1","DE264N2","DE264N1","DE267N1","DE269N2","DE269N1","DE272N1","DE272N2","DE274N1","DE275N1","DE276N1","DE277N1","DE278N1","DE279N2","DE279N1","DE282N1","DE284N2","DE284N1","DE287N1","DE288N1","DE290N2","DE290N1","DE292N1","DE293N1","DE294N1","DE295N1","DE296N1","DE297N1","DE299N1","DE300N1","DE301N1","DE302N1","DE303N1","DE305N2","DE305N1","DE307N1","DE308N1","DE310N2","DE310N1","DE315N1","DE317N3","DE317N2","DE317N1","DE320N1","DE321N1","DE322N1","DE323N2","DE323N1","DE325N2","DE325N1","DE327N2","DE327N1","DE329N2","DE329N1","DE331N1","DE335N2","DE335N1","DE337N1","DE338N1","DE341N1","DE342N1","DE344N1","DE350N2","DE350N1","DE352N1","DE353N1","DE355N1","DE357N2","DE357N1","DE360N1","DE361N2","DE361N1","DE364N1","DE365N1","DE366N1","DE367N1","DE368N1","DE369N1","DE370N1","DE371N2","DE371N1","DE372N2","DE372N1","DE376N2","DE376N1","DE377N1","DE378N1","DE373N2","DE373N1","DE374N1","DE457N3","DE457N2","DE457N1","DE458N1","DE459N2","DE459N1","DE460N1","DE461N1","DE462N2","DE462N1","DE463N3","DE463N2","DE463N1","DE464N2","DE464N1","DE379N1","DE375N1","DE380N1","DE381N1","JE101N1","JE102N2","JE104N1","JE105N2","JE106N4","JE107N2","JE108N2","JE109N3","JE110N2","JE112N1","JE113N1","JE114N1","JE115N1","JE116N1","JE117N2","JE118N1","JE119N1","JE122N2","JE123N3","JE126N1","JE128N2","JE129N3","JE131N1","JE132N1","JE133N1","JE134N1","JE136N1","JE137N1","JE138N1","JE139N1","JE140N1","JE142N1","JE143N1","JE145N1","JE146N1","JE147N1","JE148N3","JE149N1","JE150N1","JE152N1","JE154N1","JE155N1","JE157N2","JE159N1","JE160N1","JE161N1","JE162N1","JE163N1","JE165N1","JE166N1","JE168N1","JE171N2","JE172N4","JE173N1","JE174N1","JE175N1","JE176N2","JE177N2","JE178N1","JE179N1","JE180N2","JE181N2","JE182N1","JE183N1","JE184N1","JE185N1","JE186N1","JE187N1","JE188N1","JE189N2","JE190N1","JE191N1","JE192N1","JE193N1","JE195N1","JE196N1","JE197N1","JE198N2","JE199N2","JE200N1","JE201N3","JE202N1","JE203N1","JE204N2","JE205N1","JE206N2","JE207N2","JE208N2","JE209N1","JE210N2","JE211N1","JE212N1","JE213N1","JE216N1","JE217N1","JE218N1","JE225N1","JE231N1","JE232N1","JE233N1","JE234N2","JE235N3","JE236N1","JE237N1","JE238N1","JE239N2","JE240N1","JE243N2","JE244N1","JE245N2","JE246N1","JE248N1","JE249N1","JE250N2","JE251N1","JE252N1","JE253N1","JE254N1","JE255N2","JE256N1","JE257N1","JE258N1","JE259N3","JE260N1","JE261N1","JE262N1","JE263N1","JE264N1","JE265N1","JE266N1","JE267N1","JE268N1","JE269N1","JE270N1","JE271N1","JE272N2","JE273N1","JE274N2","JE276N1","JE278N3","JE278N2","JE278N1","JE281N1","JE282N1","JE283N1","JE284N1","JE285N1","JE286N1","JE288N1","JE290N2","JE291N1","JE292N1","JE293N2","JE294N2","JE295N1","JE298N1","JE300N1","JE302N1","JE303N1","JE304N2","JE305N1","JE306N2","JE306N1","JE307N1","JE308N2","JE308N1","JE309N2","JE309N1","JE310N2","JE310N1","JE311N5","JE314N2","JE314N1","JE312N1","JE313N1","JE316N1","JE315N1","DE505N2","DE505N1","DE506N1","DE510N1","JE411N1","JE412N1","DE516N2","DE516N1","JE401N1","JE402N1","DE517N2","DE531N1","DE512N1","DE513N2","DE513N1","DE519N1","DE514N1","JE417N1","JE418N1","DE520N3","DE520N2","DE520N1","DE521N1","JE414N1","DE522N1","DE523N3","DE523N2","DE523N1","JE415N2","JE415N1","DE524N4","DE524N3","DE524N2","DE524N1","DE525N1","DE526N1","JE419N1","DE527N3","DE527N2","DE527N1","DE528N1","DE529N2","DE529N1","DE530N2","DE530N1","JE420N1","DE532N3","DE532N2","DE532N1","JE421N2","JE421N1","JE422N2","JE422N1","DE533N2","DE533N1","DE534N2","DE534N1","DE535N1","DE536N1","JE423N2","JE423N1","JE425N1","DE537N1","JE426N1","DE538N2","DE538N1","JE427N2","JE427N1","DE539N2","DE539N1","JE428N1","JE429N1","DE540N1","DE541N1","DE546N2","DE546N1","DE542N2","DE542N1","DE543N1","DE601N1","DE602N1","DE602N2","DE602N3","DE605N1","JE501N1","JE502N1","JE503N1","JE503N2","JE503N3","JE504N1","JE504N2","DE607N1","DE608N1","DE609N1","JE505N1","DE610N1","JE506N1","DE612N1","DE613N1","DE613N2","DE613N3","DE615N1","DE615N2","DE616N1","DE614N1","DE614N2","DE614N3","DE614N4","JE508N1","DE617N1","JE509N1","JE509N2","DE618N1","DE619N1","DE619N2","JE510N1","JE510N2","JE510N3","DE620N1","DE621N1","DE621N2","DE623N1","DE624N1","DE626N1","JE511N1","JE513N1","JE513N2","JE514N1","JE515N1","DE627N1","JE516N1","JE517N1","DE628N1","DE628N2","DE628N3","JE518N1","DE629N1","DE630N1","DE631N1","JE519N1","DE632N1","DE632N2","DE633N1","DE633N2","DE634N1","JE520N1","JE520N2","JE520N3","DE636N1","DE636N2","JE522N1","JE522N2","DE638N1","DE639N1","DE639N2","DE641N1","DE641N2","JE523N1","JE523N2","JE523N3","JE524N1","JE524N2","JE525N1","JE525N2","DE642N1","DE642N2","DE642N3","DE643N1","DE644N1","DE644N2","DE644N3","JE526N1","DE646N1","DE646N2","DE646N3","JE527N1","DE647N1","DE647N2","DE647N3","DE648N1","DE649N1","DE649N2","DE649N3","JE528N1","JE528N2","JE529N1","JE529N2","JE529N3","DE651N1","DE652N1","DE652N2","DE652N3","DE700N1","DE701N2","DE702N1","DE703N1","DE704N1","DE705N1","DE706N1","DE706N2","DE708N1","DE708N2","DE709N1","DE710N1","DE711N1","DE713N1","DE714N1","DE714N2","DE715N1","DE716N1","DE716N2","DE718N1","DE720N1","DE720N2","DE721N1","DE721N2","DE722N1","DE722N2"],{"interactive":false,"permanent":false,"direction":"bottom","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,null,{"errorTileUrl":"","noWrap":false,"opacity":1,"detectRetina":false}]},{"method":"addEsriTiledMapLayer","args":["https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer",null,null,{"correctZoomLevels":true,"zoomOffsetAllowance":0.1,"useCors":true}]},{"method":"addProviderTiles","args":["CartoDB.VoyagerOnlyLabels",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMiniMap","args":[null,null,"bottomright",150,150,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]}],"limits":{"lat":[49.9613,50.60278],"lng":[-126.81988,-124.747]}},"evals":[],"jsHooks":[]}</script>
 </div>
 
 
