@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 - 2020 Field data results
 - New column added for sea lice presence absence in fish_field_data.
+- All CTD data for QU39 from Feb 1st 2015 to August 1st 2020
+- TODO: add variable definitions for qu39.csv CTD data into data dictionary file
 
 ### Changed
 
