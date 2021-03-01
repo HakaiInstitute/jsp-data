@@ -5,12 +5,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [1.2.0] - 2021-01-28
 ### Added
-- 2020 Field data results
+- 2020 field data results
+- 2020 fish dissection results
+- RNA pathogen results data from Kristi Miller's lab  at DFO for 2015 and 2016 sockeye, pink, and chum
 - New column added for sea lice presence absence in fish_field_data.
-- All CTD data for QU39 from Feb 1st 2015 to August 1st 2020
-- TODO: add variable definitions for qu39.csv CTD data into data dictionary file
+- All CTD data collected during juvenile salmon sampling
+- 
 
 ### Changed
+- 
 
 
 

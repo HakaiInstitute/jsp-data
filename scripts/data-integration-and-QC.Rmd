@@ -11,108 +11,196 @@ output:
    number_sections: true
 ---
 
+This scripts purpose is to ingest, join, and QC the various sources of data associated with the Hakai JSP. The tables in the raw_data folder are mostly exported directly from the JSP Master Data Tables googlesheets workbook and other various sources of 'raw data'. Most of these tables are not strictly 'raw data' because many of them have already undergone various levels of QA/QC before being added to this repository. The JSP tables are 'normalized' such that the database is split into multiple tables such that there's no unnecessary replication of data. This helps avoid storing the same piece of data in multiple tables where if something needed to be changed it would have to be changed in multiple places. This approach is sometimes known as the 'single point of truth'. It also provides the most felxible format for storing and joining data.  Some data sets are not strictly normalized in the raw_data folder and this is  likely for ease of data entry. Once all tables are QC'd here and some transformed to be more tidy, they are written to the tidy_data folder which is the 'publishable' data set that is  used  for reporting and analysis.
+
+If errors are found  in the data in this script, they can either be corrected in the JSP Master Data Tables google sheet as long as the updated googlesheet is exported again to this repository, or the edits can be made directly via this script depending on what makes most sense. 
+
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
+library(dm)
 library(tidyverse)
 library(lubridate)
 library(here)
 
-sites <- read_csv(here("data","sites.csv"))
-survey_data <- read_csv(here("data", "survey_data.csv"))%>% 
-  left_join(select(sites,
-                   site_id,
-                   site_name,
-                   region,
-                   zone),
-            by = "site_id")
-seine_data <- read_csv(here("data", "seine_data.csv"))
-survey_seines <- right_join(survey_data, seine_data, by = "survey_id")
+# Core tables
+sites <- read_csv(here("raw_data","sites.csv"))
+survey_data <- read_csv(here("raw_data", "survey_data.csv"))
+seine_data <- read_csv(here("raw_data", "seine_data.csv"))
+fish_field_data <- read_csv(here("raw_data","fish_field_data.csv"), guess_max = 20000)
+fish_lab_data <- read_csv(here("raw_data", "fish_lab_data.csv"), guess_max = 20000)
+site_activity <- read_csv(here("raw_data", "site_activity.csv")) %>% 
+   mutate(school_id = paste(survey_id, school_number, sep = "-"))
+zoop_tows <- read_csv(here("raw_data", "zoop_tows.csv")) 
+bycatch_mort <- read_csv(here("raw_data", "bycatch_mort.csv"))
+bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm_count), 1:4] %>%
+  mutate(prefix = "bycatch-",
+         suffix = 1:nrow(.),
+         occurrenceID = paste0(prefix, suffix)
+  ) %>% 
+  select(-prefix, -suffix)
 
-fish_data <- right_join(read_csv(here("data","fish_lab_data.csv"), guess_max = 20000), read_csv(here("data", "fish_field_data.csv"), guess_max = 20000), by = "ufn")
-survey_seines_fish <- right_join(survey_seines, fish_data, by = "seine_id") 
+# Environmental data from JSP sites and surveys
+ysi <- read_csv(here("raw_data", "ysi.csv"))
+ctd_jsp <- read_csv(here("raw_data", "ctd_jsp.csv"), guess_max = 100000)
+ctd_jsp_metadata <- read_csv(here("raw_data", "ctd_jsp_metadata.csv" ))
+
+# Sample inventory data
+dna_samples <- read_csv(here("raw_data", "sample_inventory", "dna_samples.csv"))
+zoop_tax_samples <- read_csv(here("raw_data", "sample_inventory", "zoop_tax.csv")) %>% 
+   filter(tow_id != '2018-08-22_D09_1') # removes zoop sample that has no matching tow
+stomach_samples <- read_csv(here("raw_data", "sample_inventory", "stomach_samples.csv"), guess_max = 5000)
+# sealice integration is long and complex so I broke it out into a separate script
+source(here::here("scripts", 'historic_sealice_integration.R'))
+sealice_id_samples <- read_csv(here("raw_data", "sample_inventory", "sea_lice_id_samples.csv"))
+carcasses_samples <- read_csv(here("raw_data", "sample_inventory", "carcasses_samples.csv"))
+isotope_samples <- read_csv(here("raw_data", "sample_inventory", "isotope_samples.csv"))
+otolith_samples <- read_csv(here("raw_data", "sample_inventory", "otolith_samples.csv"),  guess_max = 5000)
+extra_muscle_samples <- read_csv(here("raw_data", "sample_inventory", "extra_muscle_samples.csv"))
+fatty_acid_samples <- read_csv(here("raw_data", "sample_inventory", "fatty_acid_samples.csv"))
+scale_samples <- read_csv(here("raw_data", "sample_inventory", "scale_samples.csv"), guess_max = 6000)
+rna_dna_samples <- read_csv(here("raw_data", "sample_inventory", "rna_dna_samples.csv"))
+rna_pathogen_samples <- read_csv(here("raw_data", "sample_inventory", "rna_pathogen_samples.csv"),  guess_max = 30000)
+sealice_microbiome_samples <- read_csv(here("raw_data", "sample_inventory", "sea_lice_microbiome_samples.csv")) %>% 
+   distinct(sample_id, .keep_all = TRUE)
+fish_packages <- read_csv(here("raw_data", "sample_inventory", "fish_packages.csv"))
+
+# Sample results data
+# Various stock ID results are manually integrated in google sheets to produce this stock_id file that contains multiple years  of individual fish stock ID assignments. The underlying source  files  for that integration are stored in Hakai JSP Team Google Drive
+stock_id <- read_csv(here("raw_data", "sample_results", "stock_id.csv"))
+salmon_diets_coarse <- read_csv(here("raw_data", "sample_results", "salmon_diets_coarse.csv"))
+rna_pathogen_results <- read_csv(here("raw_data", "sample_results",  "rna_pathogen_data",
+                                      "Hakai_Full_Export_15Apr20", "Results Copy.csv")) %>% 
+   filter(ufn != "U2829") # this fish is removed because it doesn't exist in our records likely because metadata could not be confirmed so likely got excluded during QC
+
+#Krystals TODO's
+#TODO: Update all sample inventory files with 2020 dissection data
+#TODO: Add zooplankton results from JSP tows (found in Sam and Vanessa's data packages)
+#TODO: Integrate and then add sockeye, pink, and chum diet results from Vanessa and Sams data packages
+#TODO: As Brian if there any isotope sample results, if so add them here!
+#TODO: Integrate Jessica Garzke's RNA:DNA data results and Fatty  Acid results https://github.com/Pelagic-Ecosystems/Juvenile-Sockeye-RNA-DNA/tree/master/read_data
+#TODO: Update 2018 and 2019 stock_id results data
+
+#Brett TODOs:
+#TODO: Update species identifications based on 2018 and 2019 genetic stock ID results that show where we mis identified species in the field
 
 ```
 
-# Sea lice
+# Relational Data Model Integrity
 
-Sea lice is probably the most complicated set of data to combine largely because we used so many different methods. We counted lice in the field under different protocols, and we counted them in the lab under different protocols as well. Some methods produce a very fine level of resolution when it comes to species and stage ID whereas other methods are more coarse and only focus on larger 'motile' sealice that can be seen easier. 
+The JSP database is broken down into several tables that relate to each other via a column that is common between data tables that are used to be joined together. Every table must have one column that uniquely identifies a row. This is called a primary key. Other tables can be joined if they share that same column which in this case is known as a foreign key. Every foreign key must have a matching primary key in the parent table. This is known as referential integrity. In building the data model, I check for referential integrity through the process using `dm_examine_constraints`. Doing this after you add primary  keys checks that each primary key is unique, after adding foreign keys it checks that every foreign key value has a corresponding match in the table that contains the primary key so that there are no orphaned child records (that don't  have a  match  in  the  parent  table). As more results are added to this database, they  should be added to the data model with appropriate primary and foreign keys.
 
-Our goal is to create a time series of motile (adult, not attached and easy to see and ID) sea lice counts that use methods that are reasonably similar enough to warrant combining observations to make interannual comparisons. The lowest common denominator among all years is that motile sea lice where identified to species. Thus the time series doesn't contain any stage data.
+```{r Relational Data Model}
 
-Each year a new table that contains the motile caligus and lep counts should be added to the time series in a similar way to how the other sea lice tables are combined. Alternatively, if the motile lab method stays the same, the data can just be added to JSP Master Data Tables google sheet and then exported as a .csv and saved in this repository.
+# Create relational data model list object
+salmon_dm_no_keys <- dm(survey_data, seine_data, fish_field_data, fish_lab_data, 
+                        sites, bycatch_mort, site_activity, combined_motile_lice,
+                        ysi, ctd_jsp, ctd_jsp_metadata, dna_samples, stock_id,
+                        zoop_tax_samples, zoop_tows, stomach_samples, salmon_diets_coarse,
+                        sealice_id_samples, carcasses_samples, isotope_samples,
+                        rna_dna_samples, rna_pathogen_samples, otolith_samples,
+                        extra_muscle_samples, fatty_acid_samples, scale_samples,
+                        sealice_microbiome_samples, fish_packages, rna_pathogen_results)
 
-```{r historic sealice integration}
-# This script combines various field and lab sealice count methods, and shouldn't have to be modified between years which is why it's abstracted away into a separate script that  sources in an integrated field_lice table and an integrated lab_lice table. To update the annual time series, just add the current years data to either the lab or field lice table in the code chunk below.
-source(here::here("scripts", "time_series_data_wrangle","historic_sealice_integration.R"))
+# Add Primary Keys (column that has only unique values)
+salmon_only_pk <- salmon_dm_no_keys %>% 
+   dm_add_pk(survey_data, survey_id) %>% 
+   dm_add_pk(seine_data, seine_id) %>% 
+   dm_add_pk(fish_lab_data, ufn) %>% 
+   dm_add_pk(fish_field_data, ufn) %>% 
+   dm_add_pk(sites, site_id) %>% 
+   dm_add_pk(dna_samples, sample_id) %>% 
+   dm_add_pk(stock_id, sample_id) %>% 
+   dm_add_pk(bycatch_mort, occurrenceID) %>% 
+   dm_add_pk(site_activity, school_id) %>% 
+   dm_add_pk(combined_motile_lice, ufn) %>% 
+   dm_add_pk(zoop_tax_samples, sample_id) %>% 
+   dm_add_pk(zoop_tows, tow_id) %>% 
+   dm_add_pk(stomach_samples, sample_id) %>% 
+   dm_add_pk(salmon_diets_coarse, sample_id) %>% 
+   dm_add_pk(sealice_id_samples, ufn) %>% 
+   dm_add_pk(carcasses_samples, sample_id) %>% 
+   dm_add_pk(isotope_samples, sample_id) %>% 
+   dm_add_pk(rna_dna_samples, sample_id) %>% 
+   dm_add_pk(rna_pathogen_samples, sample_id) %>% 
+   dm_add_pk(otolith_samples, sample_id) %>% 
+   dm_add_pk(extra_muscle_samples, sample_id) %>% 
+   dm_add_pk(fatty_acid_samples, sample_id) %>% 
+   dm_add_pk(scale_samples, sample_id) %>% 
+   dm_add_pk(sealice_microbiome_samples, sample_id) %>% 
+   dm_add_pk(fish_packages, package_id)  %>% 
+   dm_add_pk(rna_pathogen_results, ufn)
+   
+salmon_only_pk %>% dm_examine_constraints() # checks for duplicates in PK
+
+# Add foreign keys   
+salmon_dm <- salmon_only_pk %>% 
+   dm_add_fk(seine_data, survey_id, survey_data) %>% 
+   dm_add_fk(fish_field_data, seine_id, seine_data) %>% 
+   dm_add_fk(fish_lab_data, ufn, fish_field_data) %>% 
+   dm_add_fk(survey_data, site_id, sites) %>% 
+   dm_add_fk(bycatch_mort, seine_id, seine_data) %>% 
+   dm_add_fk(dna_samples, ufn, fish_field_data) %>% 
+   dm_add_fk(stock_id, sample_id, dna_samples) %>% 
+   dm_add_fk(site_activity, survey_id, survey_data) %>% 
+   dm_add_fk(combined_motile_lice, ufn, fish_field_data) %>% 
+   dm_add_fk(zoop_tax_samples, tow_id, zoop_tows) %>% 
+   dm_add_fk(stomach_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(salmon_diets_coarse, sample_id, stomach_samples) %>% 
+   dm_add_fk(sealice_id_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(carcasses_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(isotope_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(rna_dna_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(rna_pathogen_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(otolith_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(extra_muscle_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(fatty_acid_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(scale_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(sealice_microbiome_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(fish_packages, seine_id, seine_data) %>% 
+   dm_add_fk(rna_pathogen_results, ufn, fish_lab_data)
+   
+
+salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
+
+# manually  export the drawing from the viewer pane to figs to update the data model image
 ```
-
-
-```{r current-year sea lice integration}
-
-# In 2020 the stages were not identified in the lab but just counts of motile leps, or caligus  were conducted. So I just downloaded the google sheet manually to jsp-data and import that table here separately and combine with lab_lice before joining with field_lice to produce the time series. In 2021 if the sea lice data are added to the JSP Master Data Tables googlesheet, just change the name of the .csv file when it's exported from googlesheets to indicate 2021 is included in that file as well, and then update the read_csv code below to refelect the name of the file.
-sealice_current <- read_csv(here("data", "sample_results", "sealice", "sealice_lab_mots_2020.csv")) %>%
-  rename(motile_caligus_lab = cal_count, motile_lep_lab = lep_count) %>% 
-  left_join(survey_seines_fish) %>% 
-  select(ufn, site_id, species, region, survey_date, motile_caligus_lab, 
-         motile_lep_lab)
-
-full_lab_lice <- bind_rows(lab_lice, sealice_current)
-rm(lab_lice, sealice_current)
-
-
-sealice_time_series <- full_join(full_lab_lice, field_lice) %>%
-  # with preference to lab ID, combine field and lab ID columns into one column
-  mutate(motile_caligus = coalesce(motile_caligus_lab, motile_caligus_field)) %>%
-  mutate(motile_lep = coalesce(motile_lep_lab, motile_lep_field)) %>%
-  mutate(all_lice = motile_caligus + motile_lep) %>%
-  select(ufn,
-         survey_date,
-         site_id,
-         region,
-         species,
-         motile_lep,
-         motile_caligus,
-         all_lice) %>%
-   gather(`motile_caligus`,
-         `motile_lep`,
-         `all_lice`,
-         key = louse_species,
-         value = n_lice) %>%
-  mutate(year = year(survey_date)) %>% 
-  filter(
-    site_id %in% consistent_sites
-    ) %>%
-  drop_na() %>%
-  filter(species %in% c("SO", "PI", "CU"))
-
-rm(full_lab_lice, field_lice)
-
-write_csv(sealice_time_series, here("data", "sealice_time_series.csv"))
-saveRDS(sealice_time_series,  here::here("data", "sealice_time_series.RDS"))
-```
-
-```{r}
-n_fish_collected <- nrow(survey_seines_fish)
-n_fish_dissected <- nrow(survey_seines_fish %>% drop_na(date_processed))
-n_na_seine_id <- n_fish_collected - nrow(survey_seines_fish %>% drop_na(seine_id))
-
-# count number of NAs for every column and provide as a percent
-n_nas <- sapply(survey_seines_fish, function(x) sum(is.na(x)) / n_fish_collected * 100)
-# It might be useful to consider which columns should have zero NAs and select those out to have fewer variables to read. Which ones should be 100% filled in? ufn, semsp_id, survey_id, seine_id....
-
-#TODO: Plot or table of species catch broken out by species (pie or stacked barplot)
-#TODO: Calculate condition of fish to find outliers in length and weight
-```
-
 
 
 # Data Quality
 
-## survey_seines joined
+Now that the data model integrity is established, we can check for various  data quality parameters. This barrage of tests are the result of thinking ahead about what might come up as  quality issues but also the result  finding errors through out the data processing, analysis,  and visualization  proccess that have  been included here as a result of experience finding outliers or issues. Thus it is encouraged to continue adding quality checks here as issues come up. Test even the most basic assumptions you might make about the data.
+
+## Summary of collections
 
 ```{r}
 
-std_survey_seines_w_catch <- survey_seines %>%
+n_fish_retained <- nrow(fish_field_data)
+
+n_fish_dissected <- nrow(fish_lab_data)
+
+n_seines <- nrow(seine_data)
+
+n_seasons <- max(year(survey_data$survey_date)) - min(year(survey_data$survey_date)) + 1
+```
+
+In total we have retained `r  n_fish_retained` fish, and dissected `r n_fish_dissected` and conducted `r n_seines` seines over `r n_seasons` years of repeated measurements. 
+
+```{r}
+fish_lab_data %>% group_by(dissector) %>% 
+   summarize(n_dissected = n()) %>% 
+   arrange(n_dissected, desc = TRUE) %>% 
+   knitr::kable()
+                
+```
+
+
+
+## Sampling Locations
+
+```{r}
+
+#Check that all  fish have a location associated with them
+std_survey_seines_w_catch <- survey_seines_fish %>%
    filter(fish_retained == "yes",
           survey_type == "standard",
           collection_protocol == "SEMSP")
@@ -120,103 +208,25 @@ std_survey_seines_w_catch <- survey_seines %>%
 no_lat <- std_survey_seines_w_catch %>% filter(is.na(lat)) %>% 
    select(survey_id, seine_id, survey_type, collection_protocol, fish_retained, lat, long)
 
-# Uncomment this to find out which seines have no associated location data
-# knitr::kable(no_lat, caption = "Table. Seines with no associated location information")
+nrow <- nrow(no_lat)
+
+ifelse(nrow == 0, paste0("All fish have locations"), (knitr::kable(no_lat, caption = "Table. Fish with no associated location information")))
+
+rm(std_survey_seines_w_catch, no_lat, nrow)
 ```
 
 
-```{r}
 
-no_fish_loc <- survey_seines_fish %>% filter(survey_type == "standard",
-                                     is.na(survey_seines_fish$lat))
-
-```
-
-We've captured `r n_fish_collected` fish and dissected `r n_fish_dissected`
-
-`r nrow(no_fish_loc)` fish have no location information associated with them.
-
-## Sample results
-
-### Sockeye Diets
-
-```{r}
-sockeye_diets <- read_csv(here("data", "sample_results", "sockeye_diets.csv"))
-
-test_join <- anti_join(sockeye_diets, fish_data)
-```
-
-We have `r length(unique(sockeye_diets$ufn))` diet results for juvenile sockeye
-
-# Relational Joins
-
-Do all seines have a survey to match to?
-
-```{r}
-#antijoin should yield zero
-seines_match_surveys <-nrow(anti_join(seine_data, survey_data))
-
-ifelse(seines_match_surveys == 0, "yes, seines match surveys", "error: no, some seines don't have matching surveys")
-```
-
-Do all lab fish have a matching field fish?
-
-```{r}
-fish_field_data <- read_csv(here("data", "fish_field_data.csv"), guess_max = 20000)
-fish_lab_data <- read_csv(here("data", "fish_lab_data.csv"), guess_max = 20000)
-
-lab_match_field <- nrow(anti_join(fish_lab_data, fish_field_data))
-
-ifelse(lab_match_field == 0, "yes, all lab fish have a matching field fish", "error: no, some lab fish do not have a mathing field fish")
-```
-
-Do all fish have a matching seine?
-
-```{r}
-
-n_umatched_fish <- nrow(anti_join(fish_data, seine_data, by = 'seine_id'))
-
-ifelse(lab_match_field == 0, "yes, all fish have a matching seine they came from", "error: no, not all fish have a seine associated with it")
-```
-
-Do all sealice field samples match to a fish?
-
-```{r}
-sealice_field <- read_csv(here("data", "sealice_field.csv"))
-
-n_missed_field_lice <- nrow(anti_join(sealice_field, fish_data))
-
-ifelse(n_missed_field_lice == 0, "yes, all sealice counts belong to a fish we collected", "error: some sealice counts don't match to a fish in our database")
-```
-
-Do all finescale sealiced fish have a match in our fish data table?
-
-```{r}
-sealice_lab_fs <- read_csv(here("data", "sample_results", "sealice_lab_fs.csv"))
-
-fine_loused_matched_fish <- nrow(anti_join(sealice_lab_fs, fish_data, by = "ufn"))
-
-ifelse(fine_loused_matched_fish == 0, "yes, all finescale sealiced fish have a match in our fish data table", "error: no")
-```
-
-Do all lab mot sealice results have a match to a fish in our fish data table?
-
-```{r}
-sealice_lab_mot <- read_csv(here("data", "sealice_lab_mot.csv"))
-
-n_unmatched_lab_mot <- nrow(anti_join(sealice_lab_mot, fish_data, by = "ufn"))
-
-ifelse(n_unmatched_lab_mot == 0, "yes, all lab mot selice results have a match to a fish", "error: no")
-```
-
-# Locations
-
-Visually check to see if any lat and longs are on land and then hover over the site to identify the problematic seine_id.
 
 ```{r}
 library(leaflet)
 library(ggridges)
 library(leaflet.esri)
+
+#Visually check to see if any lat and longs are on land and then hover over the site to identify the problematic seine_id.
+
+survey_seines <- left_join(survey_data, seine_data)
+
 map_data <- survey_seines %>% select(lat, lon = long, site = seine_id) %>% 
    mutate(type = "seine") %>% 
    group_by(site) %>% 
@@ -225,10 +235,10 @@ map_data <- survey_seines %>% select(lat, lon = long, site = seine_id) %>%
  
 pal <- colorFactor(c("navy", "red"), domain = c("seine", "ocgy"))
     
-    leaflet() %>% 
+leaflet() %>% 
       setView(lng = -125.7, lat = 50.4, zoom = 7) %>% 
       addCircleMarkers(data = map_data, color = ~pal(type),
-                       stroke = FALSE, fillOpacity = 0.2,
+                       stroke = FALSE, fillOpacity = 1,
                     label = ~as.character(site),
                        labelOptions = labelOptions(noHide = F, direction = "bottom")
       ) %>%
@@ -236,5 +246,37 @@ pal <- colorFactor(c("navy", "red"), domain = c("seine", "ocgy"))
       addEsriTiledMapLayer(url = "https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer") %>%  
       addProviderTiles(providers$CartoDB.VoyagerOnlyLabels) %>% 
       addMiniMap()
+    
+rm(map_data, survey_seines)
+```
+
+
+```{r fish condition}
+
+#sometimes fish lengths and weights are entered incorrectly and you end up with extreme  condition values.
+
+fish_k <- fish_lab_data %>% 
+   mutate(k = (weight * 10^5) / (fork_length^3)) %>%
+   drop_na(k) %>% 
+   select(ufn, fork_length, weight, k) %>% 
+   filter(k < .5 | k >  2)
+
+knitr::kable(fish_k)#Anything outside this range is suspect, though U1087 seems legit and has been double checked.
+
+
+rm(fish_k)
+```
+
+
+```{r}
+
+# List all data frames in env.
+dfs <- Filter(function(x) is(x, "data.frame"), mget(ls()))
+
+# Write all data frame objects as .csv files to tidy data
+for (i in 1:length(dfs)){
+  write_csv(dfs[[i]], here::here("tidy_data", paste(names(dfs[i]), ".csv",  sep = "")))
+}
+
 ```
 

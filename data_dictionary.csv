@@ -35,9 +35,9 @@ site_activity,school_sliders,Sliders,integer,,,,,"Approximate logarithmic-scale 
 site_activity,school_poppers,Poppers,integer,,,,,"Approximate logarithmic-scale category of surface 'popping' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
 site_activity,school_dimpling,Dimpling,integer,,,,,"Approximate logarithmic-scale category of surface 'dimpling' activity exhibited by fish within a school. ""0"", ""1"", ""10"", ""100"", ""1000"""
 seine_data,seine_id,Seine ID,text,,,PK,,"Unique alphanumeric ID assigned to each seine, which is a concatenation of a seine's survey ID and the set number."
-seine_data,survey_id,Survey ID,,,,FK,surveys,
+seine_data,survey_id,Survey ID,text,,,FK,surveys,
 seine_data,set_number,Set Number,integer,,,,,The order in which the seine(s) was/were deployed in a survey
-seine_data,set_type,Set Type,,,,,,"""Targeted"" = set was doncuted upon an observed school of fish. ""Random"" = set upon a random area with no surface activity detected."
+seine_data,set_type,Set Type,text,,,,,"""Targeted"" = set was doncuted upon an observed school of fish. ""Random"" = set upon a random area with no surface activity detected."
 seine_data,lat,Latitude,decimal,decimal.degree,nn.nnnnn,,,Coordinates of fish capture
 seine_data,long,Longitude,decimal,decimal.degree,nnn.nnnnn,,,Coordinates of fish capture
 seine_data,set_time,Set Time,timestamp with timezone,,yyyy-mm-dd hh:mm:ss Z,,,"Bunt time, i.e., when the trailing sternward end of the seine is tied onto the boat and a school of fish has been concentrated within the seine."
@@ -87,14 +87,14 @@ fish_lab_data,fork_length,Lab Fork Length (mm),numeric,millimetre,n,,,The length
 fish_lab_data,comments_protocol,Protocol Comments,text,,,,,Comments related to deviations to standard dissection protocols
 fish_lab_data,comments_fish_health_lab,Fish Health Comments (Lab),text,,,,,"Comments to describe any abnormal/unique observations about the fish itself (e.g. lesions, non-louse parasites, tissue discolouration, scale loss, etc.)"
 fish_lab_data,dissector,Dissector,text,,,,,The initials of the technician who performed the dissection
-fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,,"""full1"" = procedure for 2015 & 2016 samples (RNA:DNA from muscle; RNA-pathogen from gill, brain, spleen, liver, heart & kidney; fatty acid; stable isotope; DNA (if no fin clips were taken in the field); stomach; otolith; and scales). 
-""full2"" = procedure for samples processed Oct. 2017 to Aug. 2018 ('full_1' with the addition of extra muscle tissue taken for -80C storage). 
-""full2_csia"" = procedure for fish subsampled for compount-specific stable isotope analysis (by David Costalago, UBC, Feb. 2018). All samples taken as in 'full2' with the addition of a second isotope sample. 
-""nocold"" = 'full1' without RNA, fatty acid, or isotope samples taken (i.e. only DNA, stomach, otolith, and scale samples taken)
-""no80"" = procedure for fish previously stored at -20C before dissection. No RNA, fatty acid, or extra muscle samples taken (i.e., only isotope . Reduced sterilization between fish. 
-""irregular"" = processing with at least one sample type not taken that doesn't conform to any preexisting protocol. 
-""streamlined1"" = procedure for 2018 fish (RNA:DNA from muscle, RNA-pathogen from gill only, fatty acid, stable isotope, and DNA). 
-""streamlined1_st"" = 'streamlined_1' with the addition of stomach samples taken and stored in 95% non-denatured ethanol for Vanessa Fladmark (UBC)'s pink and chum diet study."
+fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,,"""full1"" = procedure for 2015 & 2016 samples (RNA:DNA from muscle; RNA-pathogen from gill, brain, spleen, liver, heart & kidney; fatty acid; stable isotope; DNA (if no fin clips were taken in the field); stomach; otolith; and scales). "
+"full2"""" = procedure for samples processed Oct. 2017 to Aug. 2018 ('full_1' with the addition of extra muscle tissue taken for -80C storage). ",,,,,,,,
+"full2_csia"""" = procedure for fish subsampled for compount-specific stable isotope analysis (by David Costalago", UBC, Feb. 2018). All samples taken as in 'full2' with the addition of a second isotope sample. ,,,,,,
+"nocold"""" = 'full1' without RNA", fatty acid, or isotope samples taken (i.e. only DNA, stomach, otolith, and scale samples taken),,,
+"no80"""" = procedure for fish previously stored at -20C before dissection. No RNA", fatty acid, or extra muscle samples taken (i.e., only isotope . Reduced sterilization between fish. ,,,,,
+"irregular"""" = processing with at least one sample type not taken that doesn't conform to any preexisting protocol. ",,,,,,,,
+"streamlined1"""" = procedure for 2018 fish (RNA:DNA from muscle", RNA-pathogen from gill only, fatty acid, stable isotope, and DNA). ,,,,
+"streamlined1_st"""" = 'streamlined_1' with the addition of stomach samples taken and stored in 95% non-denatured ethanol for Vanessa Fladmark (UBC)'s pink and chum diet study.""",,,,,,,,
 fish_lab_data,lice_collection_protocol,Lice Collection Protocol,text,,,,,"""lab_fine_2015"" = attached & motile sea lice collected for identification and stored in buffered formalin. ""lab_motiles_etoh"" = motile sea lice collected for identification and stored in 95% non-denatured ethanol. ""lab_motiles_cryo"" = motile sea lice collected for Tianyi Chang's (UBC) microbiome research and stored at -80C."
 fish_lab_data,lice_id_protocol_lab,Lab Lice ID Protocol,text,,,,,"""lportner_fine"" = fine-scale identification of sea lice collected in the lab by Lauren Portner. ""lab_motiles"" = identification of motile stages of sea lice only."
 fish_lab_data,quality_level,Quality Level,text,,,,,
@@ -206,10 +206,11 @@ ysi,gather_lat,Gather Latitude (DD),decimal,decimal.degree,nn.nnnnn,,,Instataneo
 ysi,gather_long,Gather Longitude (DD),decimal,decimal.degree,nnn.nnnnn,,,Instataneous location of the collection event
 ysi,ysi_unit_sn,YSI Unit Serial Number,text,,,,,
 ysi,sampling_bout,Sampling Bout,integer,,,,,Sampling bout number for the collection event
-ysi,line_out_depth,Line Out Depth (m),integer,metre,,,,Depth at which measurments were taken
+ysi,temperature_0m,Temperature (°C) at 0 meters,numeric,degrees Celsisu,,,,O meters or just below sea surface
+ysi,temperature_1m,Temperature (°C) at 1 meters,numeric,degrees Celsisu,,,,1 meter below sea surface
+ysi,salinity_0m,Salinity at 0 m,numeric,Practicial Salinity Units,,,,
+ysi,salinity_1m,Salinity at 1 m,numeric,Practicial Salinity Units,,,,
 ysi,collected,Time Collected,timestamp with timezone,,,,,Time at which measurements were taken
-ysi,temperature,Temperature (°C),numeric,degrees Celsisu,n.n,,,
-ysi,salinity,Salinity (ppt),numeric,parts per thousand,n.n,,,
 ysi,quality_level,,,,,,,
 ysi,quality_log,,,,,,,
 zoop_tax,sample_id,Sample ID,text,,,,,Unique alphanumeric string used for tracking physical inventory of a sample
