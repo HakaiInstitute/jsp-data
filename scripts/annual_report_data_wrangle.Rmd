@@ -7,13 +7,12 @@ output: html_document
 
 # Summary
 
-This script is meant to ingest all the relevant sources of data that the Juvenile salmon program produces and filters, structures, and processes the data into tidy tables that permit inter-annual comparison of the key migration variables. 
+This script is meant to read in the tidy data from the Hakai Juvenile Salmon Program, and filters data to something that permit inter-annual comparison of the key migration variables. 
 
-This script creates the tables that are used in our annual report for the North Pacific Anadromous Fisheries Commission Document.
+This script reads from tidy_data and writes to report_data and creates the tables that are used in our annual report for the North Pacific Anadromous Fisheries Commission Document.
 
 The key migration variables are migration timing, fish length, sea lice, catch intensity, species proportions, and 30 m depth integrated ocean temperatures. All these parameters are then plotted in a heatmap to provide a snapshot of each seasons variables in comparison to previous years as a hypothesis generating tool.
 
-The data folder is populated manually by exporting .csv files from our Master JSP Time Series google sheet. Not all of these tables are read into this report but remain for historical reference. After the data are filtered and wrangled they are saved to the processed_data folder which is what the Migration Observations Report reads from. 
 
 ```{r setup}
 library(tidyverse)
@@ -21,7 +20,6 @@ library(lubridate)
 library(knitr)
 library(here)
 library(car)
-library(googledrive)
 
 # I use this function to produce nice looking dates for plotting
 f <- function(x) {
@@ -32,16 +30,17 @@ f <- function(x) {
 consistent_sites <-  c("D07","D09","D22","D27","D10","D08","D34","D35",
                        "D20","J03","J02","J09","J11")
 
-survey_data <- read_csv(here("data", "survey_data.csv")) 
+sites <- read_csv(here("tidy_data", "sites.csv"))
 
+survey_data <- read_csv(here("tidy_data", "survey_data.csv")) %>% 
+  left_join(sites, by = 'site_id')
 
-seine_data <- read_csv(here("data", "seine_data.csv"))
+seine_data <- read_csv(here("tidy_data", "seine_data.csv"))
 
 survey_seines <- left_join(survey_data, seine_data, by = "survey_id") %>% 
   mutate(year = year(survey_date),
-         yday = yday(survey_date),
-         year = year(survey_date)) %>%
-  # remove ad-hoc collections from migration timing calcs & sampling events from normal sampling period (May 1 - July 9) and only select sites that were collected in every year, or atleast represent the various regions in an assumedly similar way
+         yday = yday(survey_date)) %>%
+  # remove ad-hoc collections from migration timing calcs & sampling events from normal sampling period (May 1 - July 9) and only select sites that were collected in every year, or at least represent the various regions in a similar way
   filter(
     collection_protocol == "SEMSP",
     set_type == "targeted",
@@ -49,20 +48,33 @@ survey_seines <- left_join(survey_data, seine_data, by = "survey_id") %>%
     site_id %in% consistent_sites
     )
 
-write_csv(survey_seines, here::here("processed_data", "survey_seines.csv"))
-saveRDS(survey_seines,  here::here("processed_data", "survey_seines.RDS"))
+write_csv(survey_seines, here::here("report_data", "survey_seines.csv"))
+saveRDS(survey_seines,  here::here("report_data", "survey_seines.RDS"))
 
-fish_field_data <- read_csv(here("data", "fish_field_data.csv"), guess_max = 20000)
+fish_field_data <- read_csv(here("raw_data", "fish_field_data.csv"), guess_max = 20000)
 
 survey_seines_fish <- left_join(survey_seines, fish_field_data, by = "seine_id") %>% 
-  drop_na(ufn)
+  drop_na(ufn) # drops seines for which there were no fish associated
 
-sealice_time_series <- read_csv(here("data", "sealice_time_series.csv")) %>%
+sealice_time_series <- read_csv(here("tidy_data", "combined_motile_lice.csv")) %>%
+   gather(`motile_caligus`,
+         `motile_lep`,
+         `all_lice`,
+         key = louse_species,
+         value = n_lice) %>%
+  mutate(year = year(survey_date)) %>% 
   filter(
     site_id %in% consistent_sites
     ) %>%
   drop_na() %>%
-  filter(species %in% c("SO", "PI", "CU"))
+  filter(species %in% c("SO", "PI", "CU")) %>% 
+  left_join(sites, by =  "site_id") %>% 
+  select(-c(site_name, zone, site_priority, pfma, site_notes, survey_start_lat,
+            survey_start_lon, survey_end_lat, survey_end_lon, ocgy_std_lat, 
+            ocgy_std_lon))
+
+write_csv(sealice_time_series, here("report_data", "sealice_time_series.csv"))
+saveRDS(sealice_time_series,  here::here("report_data", "sealice_time_series.RDS"))
 
 current_year <- max(survey_seines$year, na.rm = T)
 project_years <- current_year - 2015 + 1
@@ -119,8 +131,8 @@ sealice_summary_table <- full_join(abundance_df, prevalence) %>%
   rename(Year = year, Region = region, Species = species) %>% 
   mutate(Year = as.character(Year))
 
-write_csv(sealice_summary_table, here("processed_data", "sealice_summary_table.csv"))
-saveRDS(sealice_summary_table,  here::here("processed_data", "sealice_summary_table.RDS"))
+write_csv(sealice_summary_table, here("report_data", "sealice_summary_table.csv"))
+saveRDS(sealice_summary_table,  here::here("report_data", "sealice_summary_table.RDS"))
 ```
 
 ```{r sealice bootstrapping abundance}
@@ -166,8 +178,8 @@ lice_bootstraps <- extract.boot.CI %>%
 separate(category, into = c("year", "region", "site_id", "year2", "month", "day", "species", "stage", "louse_species")) %>% 
   select(-year, year = year2)
 
-readr::write_csv(lice_bootstraps, here("processed_data", "lice_bootstraps.csv"))
-saveRDS(lice_bootstraps,  here::here("processed_data", "lice_bootstraps.RDS"))
+readr::write_csv(lice_bootstraps, here("report_data", "lice_bootstraps.csv"))
+saveRDS(lice_bootstraps,  here::here("report_data", "lice_bootstraps.RDS"))
 beepr::beep(8)
 ```
 
@@ -194,8 +206,8 @@ catch_intensity <- catch_intensity %>%
   ungroup() %>% 
   mutate_if(is.numeric, round, 1)
 
-write_csv(catch_intensity, here::here("processed_data", "catch_intensity.csv"))
-saveRDS(catch_intensity,  here::here("processed_data", "catch_intensity.RDS"))
+write_csv(catch_intensity, here::here("report_data", "catch_intensity.csv"))
+saveRDS(catch_intensity,  here::here("report_data", "catch_intensity.RDS"))
 ```
 
 ```{r Migration Timing}
@@ -404,8 +416,8 @@ predict_average_prop$species <- factor(predict_average_prop$species) %>%
   fct_recode("Sockeye" = "so_total", "Pink" = "pi_total", "Chum" = "cu_total")
 
 write_csv(predict_average_prop,
-          here::here("processed_data", "predict_average_prop.csv"))
-saveRDS(predict_average_prop, here::here("processed_data", "predict_average_prop.RDS"))
+          here::here("report_data", "predict_average_prop.csv"))
+saveRDS(predict_average_prop, here::here("report_data", "predict_average_prop.RDS"))
 
 # ANNUAL CUMULATIVE ABUNDANCE CURVES FOR EACH SPECIES
 
@@ -514,8 +526,8 @@ cu_cum_abund_annual_DI_2017$species <- "Chum"
 
 # For now, I'll fjust use raw points without a line
 # TODO: Consider removing this data frame, depending on further model selection
-write_csv(cu_cum_abund_annual_DI_2017, here("processed_data", "cu_cum_abund_DI_2017.csv"))
-saveRDS(cu_cum_abund_annual_DI_2017, here::here("processed_data", "cu_cum_abund_annual_DI_2017.RDS"))          
+write_csv(cu_cum_abund_annual_DI_2017, here("report_data", "cu_cum_abund_DI_2017.csv"))
+saveRDS(cu_cum_abund_annual_DI_2017, here::here("report_data", "cu_cum_abund_annual_DI_2017.RDS"))          
 
 cu_predict_annual_prop_DI_2017 <-
   hakaisalmon::log_cumul_abund(cu_cum_abund_annual_DI_2017$percent,
@@ -528,8 +540,8 @@ cu_cum_abund_2017 <- cu_cum_abund_annual_DI_2017 %>%
   mutate(species = "Chum")
 
 # For now, I'll fjust use raw points without a line
-write_csv(cu_cum_abund_2017, here("processed_data", "cu_cum_abund_2017.csv"))
-saveRDS(cu_cum_abund_2017, here::here("processed_data", "cu_cum_abund_2017.RDS"))
+write_csv(cu_cum_abund_2017, here("report_data", "cu_cum_abund_2017.csv"))
+saveRDS(cu_cum_abund_2017, here::here("report_data", "cu_cum_abund_2017.RDS"))
 
 #2018 modeled cumulative abundance
 # sockeye
@@ -650,8 +662,8 @@ predict_annual_prop$species <- factor(predict_annual_prop$species) %>%
 
 colnames(predict_annual_prop)[1] <- "x"
 
-write_csv(predict_annual_prop, here::here("processed_data", "predict_annual_prop.csv"))
-saveRDS(predict_annual_prop, here::here("processed_data", "predict_annual_prop.RDS"))
+write_csv(predict_annual_prop, here::here("report_data", "predict_annual_prop.csv"))
+saveRDS(predict_annual_prop, here::here("report_data", "predict_annual_prop.RDS"))
 
 # Create data table for real (not modelled), q1, q2, q3 migration timing stats
 peak_dates <- tidy_catch[rep(row.names(tidy_catch), tidy_catch$n), 1:6] %>%
@@ -684,13 +696,13 @@ tsa_peak_dates <- peak_dates %>%
 
 peak_dates <- bind_rows(tsa_peak_dates, peak_dates)
 
-write_csv(peak_dates, here("processed_data","peak_dates.csv"))
-saveRDS(peak_dates, here::here("processed_data", "peak_dates.RDS"))
+write_csv(peak_dates, here("report_data","peak_dates.csv"))
+saveRDS(peak_dates, here::here("report_data", "peak_dates.RDS"))
 ```
 
 ```{r Lengths and Condition}
 
-fish_lab_data <- read_csv(here("data", "fish_lab_data.csv"), guess_max = 10000)
+fish_lab_data <- read_csv(here("tidy_data", "fish_lab_data.csv"), guess_max = 10000)
 
 fish_data <- left_join(survey_seines_fish, fish_lab_data, by = "ufn") %>%
   # combine both fork length measurements
@@ -708,8 +720,8 @@ length_histo <- fish_data %>%
   filter(species != "CK", species != "CO", species != "HE") %>%
   mutate(year = as.factor(year))
 
-saveRDS(length_histo, here::here("processed_data", "length_histo.RDS"))
-write_csv(length_histo, here::here("processed_data", "length_histo.csv"))
+saveRDS(length_histo, here::here("report_data", "length_histo.RDS"))
+write_csv(length_histo, here::here("report_data", "length_histo.csv"))
 
 #TODO: Filter lengths and weights to only fish from between May 1 and July 9
 
@@ -718,8 +730,8 @@ fish_cond <- fish_data %>%
   filter(species %in% c('SO', 'PI', 'CU', 'CO')) %>% 
   mutate(year = factor(year(survey_date))) 
 
-write_csv(fish_cond, here("processed_data", "fish_cond.csv"))
-saveRDS(fish_cond, here("processed_data", "fish_cond.RDS"))
+write_csv(fish_cond, here("report_data", "fish_cond.csv"))
+saveRDS(fish_cond, here("report_data", "fish_cond.RDS"))
 ```
 
 ```{r Species Proportions}
@@ -762,8 +774,8 @@ proportions <- spp_prop_expanded %>%
   mutate(proportion = n / sum(n)) %>%
   ungroup()
 
-write_csv(proportions, here::here("processed_data", "proportion.csv"))
-saveRDS(proportions, here::here("processed_data", "proportion.RDS"))
+write_csv(proportions, here::here("report_data", "proportion.csv"))
+saveRDS(proportions, here::here("report_data", "proportion.RDS"))
 ```
 
 ```{r SST}
@@ -820,8 +832,8 @@ qu39 <- qu39_all %>%
   ) %>% 
   ungroup()
 
-write_csv(qu39, here::here("processed_data", "ctd_all.csv"))
-saveRDS(qu39, here::here("processed_data", "ctd_all.RDS"))
+write_csv(qu39, here::here("report_data", "ctd_all.csv"))
+saveRDS(qu39, here::here("report_data", "ctd_all.RDS"))
 
 
 # SST ANOMALY DATA
@@ -911,18 +923,18 @@ qu39_min_max <- qu39_all %>%
 
 
 min_max_data <- qu39_min_max
-saveRDS(min_max_data,  here::here("processed_data", "min_max_temps.RDS"))
-write_csv(min_max_data,  here::here("processed_data", "min_max_temps.csv"))
+saveRDS(min_max_data,  here::here("report_data", "min_max_temps.RDS"))
+write_csv(min_max_data,  here::here("report_data", "min_max_temps.csv"))
 
 average_temps <- qu39_average
-saveRDS(average_temps, here::here("processed_data", "average_temps.RDS"))
-write_csv(average_temps, here::here("processed_data", "average_temps.csv"))
+saveRDS(average_temps, here::here("report_data", "average_temps.RDS"))
+write_csv(average_temps, here::here("report_data", "average_temps.csv"))
 
 temperature_anomaly_data <- qu39_temp_anomaly_data
 saveRDS(temperature_anomaly_data,
-        here::here("processed_data", "temperature_anomaly_data.RDS"))
+        here::here("report_data", "temperature_anomaly_data.RDS"))
 write_csv(temperature_anomaly_data,
-          here::here("processed_data", "temperature_anomaly_data.csv"))
+          here::here("report_data", "temperature_anomaly_data.csv"))
 ```
 
 # Heat Map
@@ -1188,8 +1200,8 @@ heatmap_data <- heatmap_data %>%
   select(year, Estimate, SD, Z, measure, spp)
 
 
-write_csv(heatmap_data, here("processed_data", "heatmap_data.csv"))
-saveRDS(heatmap_data, here("processed_data", "heatmap_data.RDS"))
+write_csv(heatmap_data, here("report_data", "heatmap_data.csv"))
+saveRDS(heatmap_data, here("report_data", "heatmap_data.RDS"))
 
 beepr::beep(1)
 ```
