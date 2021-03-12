@@ -22,7 +22,6 @@ library(hakaiR)
      # Survey Data
 survey_seines <- read_csv(here("report_data", "survey_seines.csv")) %>%
   rename("Sockeye" = "so_total", "Pink" = "pi_total", "Chum" = "cu_total")
-sealice_summary_table <- read_csv(here("report_data", "sealice_summary_table.csv"))
 lice_bootstraps <- read_csv(here("report_data", "lice_bootstraps.csv"))
 # Temp processed_data
 ctd_all <- read_csv(here("report_data", "ctd_all.csv"))
@@ -147,11 +146,29 @@ migration_timing <- peak_dates %>%
 
 ```{r catch intensity}
 current_catch_intensity <- catch_intensity %>% 
+  group_by(species) %>% 
+  mutate(rank =  row_number(-mean_catch)) %>% 
+  ungroup() %>% 
   filter(year == current_year) %>% 
   mutate(species = replace(species, species == "Sockeye", "sockeye")) %>% 
   mutate(species = replace(species, species == "Pink", "pink")) %>% 
   mutate(species = replace(species, species == "Chum", "chum")) %>% 
   arrange(desc(mean_catch))
+
+cu_ci <- current_catch_intensity %>%
+  filter(species == "chum") %>% 
+  select(mean_catch) %>% 
+  as.numeric()
+
+pi_ci <- current_catch_intensity %>% 
+  filter(species == "pink") %>% 
+  select(mean_catch) %>% 
+  as.numeric()
+
+so_ci <- current_catch_intensity  %>% 
+  filter(species == "sockeye") %>% 
+  select(mean_catch) %>% 
+  as.numeric()
 ```
 
 ```{r species proportions stats}
@@ -181,30 +198,87 @@ proportions_table <- proportion %>%
 
 ```{r sea lice stats}
 
-# treat year as character because range 2015-2018 is character
-sealice_summary_table$Year <- as.character(sealice_summary_table$Year)
-
-# Create pretty summary table to show in report
-sealice_summary_table$Species <- factor(sealice_summary_table$Species) %>% 
+lice_bootstraps$species <- factor(lice_bootstraps$species) %>% 
   fct_relevel("SO", "PI", "CU") %>% 
   fct_recode("Sockeye" = "SO", "Pink" = "PI", "Chum" = "CU")
 
-sealice_table_pretty <- sealice_summary_table %>%
-  filter(louse_species != "all_lice") %>% 
-  mutate("Abundance, 95% CI" = paste0(Abundance, " +/- ", abundance_ci))
+df <- lice_bootstraps %>% 
+  group_by(year, region, species, louse_species) %>% 
+  summarize(mean_abund = mean(estimate),
+            upper_ci = mean(`97.5%`),
+            lower_ci = mean(`2.5%`),
+            n = n()) %>% 
+  group_by(region, species, louse_species) %>% 
+  mutate(rank =  row_number(-mean_abund)) %>% 
+  ungroup()
 
+pretty_sealice_df <- df %>% 
+  ungroup() %>% 
+  mutate(
+         year = factor(year),
+         lower_ci = round(lower_ci, 2),
+         upper_ci = round(upper_ci, 2),
+         "95% CI" = paste(lower_ci, "-", upper_ci)) %>% 
+  select("Year" = "year", "Region" = "region", "Species" = "species",
+         "Louse Species" = "louse_species", "Mean Abundance" = "mean_abund",
+         "95% CI") %>% 
+  mutate_if(is.numeric, round, 2)
 
-sealice_table_pretty$louse_species <- dplyr::recode(sealice_table_pretty$louse_species,
-                                                    motile_caligus = "Motile Caligus",
-                                                    motile_lep = "Motile Lep")
-sealice_table_pretty <- sealice_table_pretty %>% 
-  select(Year, Region, Species, "Louse Species" = louse_species, n, "Abundance, 95% CI")
+current_sealice_stats <- pretty_sealice_df %>% 
+  filter(Year == current_year) %>% 
+  mutate(abund_ci = paste(`Mean Abundance`, "(95% CI", `95% CI`, ")"))
+
+so_cal <- current_sealice_stats %>% 
+  filter(Species == "Sockeye",
+         `Louse Species` == "caligus") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
+
+so_lep <- current_sealice_stats %>% 
+  filter(Species == "Sockeye",
+         `Louse Species` == "lep") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
+
+pi_cal <- current_sealice_stats %>% 
+  filter(Species == "Pink",
+         `Louse Species` == "caligus") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
+
+pi_lep <- current_sealice_stats %>% 
+  filter(Species == "Pink",
+         `Louse Species` == "lep") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
+
+cu_cal <- current_sealice_stats %>% 
+  filter(Species == "Chum",
+         `Louse Species` == "caligus") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
+
+cu_lep <- current_sealice_stats %>% 
+  filter(Species == "Chum",
+         `Louse Species` == "lep") %>% 
+  select(`Mean Abundance`) %>% 
+  as.numeric()
 ```
 
 ```{r length stats}
 length_histo_current <- length_histo %>% 
-  filter(year == current_year) %>% 
+  filter(year == current_year,
+         region == "DI") %>% 
   mutate(category = current_year)
+
+len_tt <- length_histo %>% 
+  filter(region == "DI",
+         year  != current_year) %>% 
+  mutate(category = 'tsa') %>% 
+  rbind(length_histo_current) %>% 
+  group_by(species) %>% 
+  do(broom::tidy(t.test(.$fork_length ~ .$category))) %>% 
+  arrange(desc(species))
 
 summary_lengths <- length_histo %>% 
   filter(region == "DI") %>% 
@@ -219,31 +293,8 @@ summary_lengths <- length_histo %>%
   mutate_if(is.numeric, round, 1) %>% 
   ungroup() %>% 
   mutate(year = as.character(year))
-
-tsa_length <- summary_lengths %>% 
-  ungroup() %>% 
-  group_by(species) %>% 
-  summarize(SD = sd(fork_length, na.rm = TRUE),
-            fork_length = round(mean(fork_length),1),
-            n = n()) %>% 
-  mutate(SE = SD / sqrt(n),
-         CI = qt(1 - (0.05 / 2), n - 1) * SE,
-         year = paste(2015, "-", current_year)) %>% 
-  arrange(year, desc(species)) %>% 
-  select(year, species, n, fork_length, CI) %>% 
-  mutate_if(is.numeric, round, 1) %>% 
-  bind_rows(summary_lengths) %>% 
-  mutate("95% CI" = paste(fork_length - CI, "-", fork_length + CI)) %>% 
-  rename(Year = year, Species = species, 
-         "Fork Length (mm)" = fork_length) %>% 
-  select(Year, Species, n, "Fork Length (mm)", "95% CI")
   
-len_tt <- length_histo %>% 
-  mutate(category = 'tsa') %>% 
-  rbind(length_histo_current) %>% 
-  group_by(species) %>% 
-  do(broom::tidy(t.test(.$fork_length ~ .$category))) %>% 
-  arrange(desc(species))
+
 
 ```
 
@@ -256,10 +307,12 @@ sst_annual_mean <- ctd_all %>%
   mutate(date = as_date(date)) %>%
   mutate(month = month(date), year = year(date)) %>%
   filter(month >= 5 & month <= 6, station == "QU39") %>%
-  select(year, mean_temp) %>%
+  select(year,  yday, mean_temp) %>%
   group_by(year) %>%
   summarise(sd_temp = sd(mean_temp),
-    mean_temp = mean(mean_temp, na.rm = T))
+    mean_temp = mean(mean_temp, na.rm = T),
+    n = n(),
+    yday  = mean(yday))
             
 
 sst_mean <- mean(sst_annual_mean$mean_temp)
@@ -286,39 +339,72 @@ sst_nice_table <- sst_annual_mean %>%
 
 ```
 
-```{r map, fig.cap = "Sampling locations in 2019", fig.align='left', out.width="90%"}
+```{r map, fig.cap = "Sampling locations in 2019", out.width="90%"}
 include_graphics(here('map.png'))
 ```
 
 # Abstract 
 
-The Hakai Institute Juvenile Salmon Program has been monitoring juvenile salmon migrations in the Discovery Islands and Johnstone Strait in British Columbia, Canada since 2015 with the specific purpose to understand how ocean conditions experienced by juvenile salmon during their early marine migration impact their growth, health, and ultimately survival. This report summarizes migration timing, purse seine catch intensity and composition, fish length and weight, sea-louse loads, and ocean temperatures observed from `r project_years` years of this research and monitoring program. Migration timing for sockeye, pink, and chum was not significantly different than respective time-series averages and occurred on `r f(so_q2_DI_current)` for sockeye, `r f(cu_q2_DI_current)` for chum, and on `r f(pi_q2_DI_current)` for pink salmon. In order of highest to smallest catch proportion seines were dominated by juvenile `r current_prop[[1,2]]`, `r current_prop[[2,2]]`, and `r current_prop[[3,2]]` salmon. Catch intensity (our relative abundance measurement) for chum was the lowest on record in the time series, though sockeye and chum catch intensity was nearer their time series averages. Mean annual fork length for sockeye, pink, and chum salmon were all shorter than the time series average. The abundance of pre-adult and adult _Caligus clemensi_ sea lice was relatively high on juvenile sockeye, pink, and chum salmon in 2020 compared to previous years. The salmonid-specialist sea louse, Lepeophtheirus salmonis, had relatively high abundance on pink and chum salmon but low abundance on sockeye. May--June 30 m depth integrated ocean temperature in the northern Strait of Georgia in `r current_year` was `r round(sst_stats_table$estimate, 2)` °C `r ifelse(sst_stats_table$estimate > 0, "warmer",  "colder")` than average for the time series (`r study_range`).
+The Hakai Institute Juvenile Salmon Program has been monitoring juvenile salmon migrations in the Discovery Islands and Johnstone Strait in British Columbia, Canada since 2015 with the specific purpose to understand how ocean conditions experienced by juvenile salmon during their early marine migration impact their growth, health, and ultimately survival. This report summarizes migration timing, purse seine catch intensity and composition, fish length and weight, sea-louse loads, and ocean temperatures observed from `r project_years` years of this research and monitoring program. Migration timing for sockeye, pink, and chum was not significantly different than respective time-series averages and occurred on `r f(so_q2_DI_current)` for sockeye, `r f(cu_q2_DI_current)` for chum, and on `r f(pi_q2_DI_current)` for pink salmon. In order of highest to smallest catch proportion seines were dominated by juvenile `r current_prop[[1,2]]`, `r current_prop[[2,2]]`, and `r current_prop[[3,2]]` salmon. Catch intensity (our relative abundance measurement) for chum was the lowest on record in the time series, though sockeye and chum catch intensity was nearer their time series averages. Mean annual fork length for sockeye, pink, and chum salmon were all shorter than the time series average. The abundance of pre-adult and adult _Caligus clemensi_ sea lice was relatively high on juvenile sockeye, pink, and chum salmon in 2020 compared to previous years. The salmonid-specialist sea louse, _Lepeophtheirus salmonis_, had relatively high abundance on pink and chum salmon but low abundance on sockeye. May--June 30 m depth integrated ocean temperature in the northern Strait of Georgia in `r current_year` was `r round(sst_stats_table$estimate, 2)` °C `r ifelse(sst_stats_table$estimate > 0, "warmer",  "colder")` than average for the time series (`r study_range`), the warmest we've observed in our time-series.
 
 # Results
 
-The peak migration date for sockeye in the Discovery Islands in `r current_year` was on `r f(so_q2_DI_current)`, `r round(so_timing_diff)` days `r so_later_or_earlier` than the study-period average of `r f(so_q2_DI_TSA)`. The peak migration date for chum in the Discovery Islands was on `r f(cu_q2_DI_current)`, `r round(cu_timing_diff)` day `r cu_later_or_earlier` than the average of `r f(cu_q2_DI_TSA)`. Peak migration timing for pink salmon in the Discovery Islands was on `r f(pi_q2_DI_current)`, `r round(pi_timing_diff)` days `r pi_later_or_earlier` than the average of `r f(pi_q2_DI_TSA)`. Catch intensity
-
-Catch proportion was dominated by `r current_prop[[1,2]]` salmon in the Discovery Islands in `r current_year` making up `r round(current_prop[[1,4]] * 100, 1)`% of the catch (Table \@ref(tab:proportion-table)) while the second highest catch proportion was `r current_prop[[2,2]]` salmon at `r round(current_prop[[2,4]] * 100, 1)`% and third highest was `r current_prop[[3,2]]` salmon at `r round(current_prop[[3,4]] * 100, 1)`% (Figure \@ref(fig:proportion-plot)). 
-
-Fish lengths varied between regions and among species and years (Figure \@ref(fig:length-plot)) though in `r current_year` sockeye were `r ifelse(len_tt[1,2] > 0, "longer", "shorter")`, pink were `r ifelse(len_tt[2,2] > 0, "longer", "shorter")`, and chum were `r ifelse(len_tt[3,2] > 0, "longer", "shorter")` than their respective study-period averages in the Discovery Islands and Johnstone Strait combined. Sockeye length was `r round(len_tt[1,3],1)` mm (Table \@ref(tab:length-table)), which is `r abs(round(len_tt[1,2],1))` mm `r ifelse(len_tt[1,2] > 0, "longer", "shorter")` than the study-period average (_p_ < 0.0001, 95% CI `r abs(round(len_tt[1,8],1))` -`r abs(round(len_tt[1,9],1))`). Average pink lengths were `r round(len_tt[2,3],1)` mm, which is `r abs(round(len_tt[2,2],1))` mm `r ifelse(len_tt[2,2] > 0, "longer", "shorter")` than the study-period average (_p_ < 0.0001, 95% CI `r abs(round(len_tt[2,8],1))`-`r abs(round(len_tt[2,9],1))`). Chum  were on average `r round(len_tt[3,3],1)` mm, which is `r abs(round(len_tt[3,2],1))` mm  `r ifelse(len_tt[3,2] > 0, "longer", "shorter")` than the study-period average (_p_ < 0.0001, 95% CI `r abs(round(len_tt[3,8],1))`-`r round(len_tt[3,9],1)`).
-
-Ocean temperature in the top 30 m of the water column May and June during the juvenile salmon out-migration at QU39 in the northern Strait of Georgia was `r round(sst_stats_table$estimate, 2)` degrees C different than average.
+## Migration Timing
+Sockeye:  `r f(so_q2_DI_current)`, `r round(so_timing_diff)` days `r so_later_or_earlier` than the time series average of `r f(so_q2_DI_TSA)`.
+Pink:  `r f(pi_q2_DI_current)`, `r round(pi_timing_diff)` days `r pi_later_or_earlier` than the average of `r f(pi_q2_DI_TSA)`. 
+Chum: `r f(cu_q2_DI_current)`, `r round(cu_timing_diff)` day `r cu_later_or_earlier` than the average of `r f(cu_q2_DI_TSA)`. 
 
 
-```{r heatmap,  fig.cap = paste("The number of standard deviations (z score) from the study-period average (2015-", current_year, " for key migration parameters. Size and colour saturation of circles indicates the magnitude of the anomaly. Blue colour indicates less than average; grey indicates average; red indicates greater than average. Peak migration date is based on the median date of fish capture in the Discovery Islands. Length is based on the average fork length from the Discovery Islands and Johnstone Strait combined. Parasite load is the average abundance of all sea-louse species in their motile life stages for both the Discovery Islands and Johnstone Strait regions. Ocean temperature describes the mean ocean temperature in the top 30 m at station QU39 in the northern Strait of Georgia in May and June.", sep=""), out.width = "100%", fig.height=11, fig.width=10}
+## Catch intensity 
+
+Sockeye: `r so_ci` 
+
+Pink: `r  pi_ci` 
+
+chum: `r cu_ci` 
+
+## Catch proportion
+
+Catch proportion was dominated by `r current_prop[[1,2]]` with `r round(current_prop[[1,4]] * 100, 1)`% of the catch.
+
+Second highest catch proportion was `r current_prop[[2,2]]` salmon at `r round(current_prop[[2,4]] * 100, 1)`%.
+
+Third highest was `r current_prop[[3,2]]` salmon at `r round(current_prop[[3,4]] * 100, 1)`% 
+
+## Lengths
+
+Sockeye length in `r current_year` was `r round(len_tt[1,3],1)` mm which compared to the time series average of `r round(len_tt[1,4],1)` mm results in a `r ifelse(len_tt$p.value[1] <  0.05, paste("statistically significant"), paste("statistically insignificant"))` difference of `r round(len_tt[1,2],1)`   mm (_p_ = `r round(len_tt$p.value[1],2)`, 95% CI `r round(len_tt$conf.low[1],1)`--`r round(len_tt$conf.high[1],1)` mm). 
+
+Average pink lengths in `r current_year` was `r round(len_tt[2,3],1)` mm which compared to the time series average of `r round(len_tt[2,4],1)` mm results in a `r ifelse(len_tt$p.value[2] <  0.05, paste("statistically significant"), paste("statistically insignificant"))` difference of `r round(len_tt[2,2],1)`   mm (_p_ = `r round(len_tt$p.value[2],2)`, 95% CI `r round(len_tt$conf.low[2],1)`--`r round(len_tt$conf.high[2],1)` mm). 
+
+Average chum lengths in `r current_year` was `r round(len_tt[3,3],1)` mm which compared to the time series average of `r round(len_tt[3,4],1)` mm results in a `r ifelse(len_tt$p.value[3] <  0.05, paste("statistically significant"), paste("statistically insignificant"))` difference of `r round(len_tt[3,2],1)`   mm (_p_ = `r round(len_tt$p.value[3],2)`, 95% CI `r round(len_tt$conf.low[3],1)`--`r round(len_tt$conf.high[3],1)` mm). 
+
+## Sea lice
+
+Sockeye salmnoh had an average of `r so_cal` _C. clemensi_ per fish and `r so_lep` _L. salmonis_ per fish.
+
+Chum salmon had `r cu_cal`  _Caligus clemensi_ per fish and `r cu_lep` _Lepeophtheirus salmonis_ per fish.  
+
+Pink salmon had `r pi_cal`  _C. clemensi_ per fish, and `r  pi_lep`  _L. salmonis_ per fish. 
+
+## Ocean temps
+
+Ocean temperature in the top 30 m of the water column in May and June during the juvenile salmon out-migration at QU39 in the northern Strait of Georgia was  `r round(sst_stats_table[1,2],1)` °C, `r round(sst_stats_table$estimate, 2)` `r ifelse(sst_stats_table$estimate > 0,  paste("warmer"), paster("colder"))` °C than average.
+
+
+```{r heatmap,  fig.cap = paste("The number of standard deviations (z score) from the time series average (2015-", current_year, " for key migration parameters. Size and colour saturation of circles indicates the magnitude of the anomaly. Blue colour indicates less than average; grey indicates average; red indicates greater than average. Peak migration date is based on the median date of fish capture in the Discovery Islands. Length is based on the average fork length from the Discovery Islands and Johnstone Strait combined. Parasite load is the average abundance of all sea-louse species in their motile life stages for both the Discovery Islands and Johnstone Strait regions. Ocean temperature describes the mean ocean temperature in the top 30 m at station QU39 in the northern Strait of Georgia in May and June.", sep=""), out.width = "100%", fig.height=11, fig.width=10}
 
 cols <- c("#4575b4",
           "lightgrey",
           "#d73027"
           )
 
-heatmap_data
 heatmap_data$measure <- heatmap_data$measure %>%
-    fct_recode("Fork Lengths" = "Length", "Sea-lice Abundance" = "Sea lice Abundance", "Ocean Temperature" = "Sea-surface Temperature")  %>% 
-  fct_relevel("Migration Timing", "Catch Intensity", "Fork Lengths", "Sea-lice Abundance", "Ocean Temperature")
+    fct_recode("Fork Lengths" = "Length", "Sea-louse Abundance" = "Sea lice Abundance", "Ocean Temperature" = "Sea-surface Temperature")  %>% 
+  fct_relevel("Migration Timing", "Catch Intensity", "Fork Lengths", "Sea-louse Abundance", "Ocean Temperature")
 #TODO: Enhancement - make it so the legend show 5 points of size
 (ggplot(heatmap_data, aes(year, spp, colour = Z)) +
-  geom_point(size = abs(10 * heatmap_data$Z), alpha = 0.1) +
+  geom_point(size = abs(10 * heatmap_data$Z), alpha = 0.00001) +
   geom_point(aes(size = abs(10 * Z)), show.legend = F) +
   scale_size_continuous(range = c(3,15)) +
   ylab("") +
@@ -329,8 +415,6 @@ heatmap_data$measure <- heatmap_data$measure %>%
   labs(color = "Z Score") +
   scale_y_discrete(expand = expand_scale(mult = c(.75, .75))) +
   scale_x_continuous(expand = expand_scale(mult = c(.1, .1)), minor_breaks = 0) +
-  labs(title = "Juvenile Salmon Migration Observations",
-    subtitle = "Migration parameter variability 2015-2019") +
   #theme(panel.grid.major.y= element_line("grey")) +
   facet_wrap(. ~ measure, ncol = 1, scales = "free")
 )
@@ -342,7 +426,8 @@ ggsave(here("figs", "heatmap.png"), width = 13, height = 11)
 ```{r migration-timing-plot, fig.cap = paste("Cumulative catch of sockeye, pink, and chum, in the Discovery Islands and Johnstone Strait between 2015 and ", current_year, ".", sep=""), out.width="100%"}
 shapes <-
   c(
-    "2015-2018" = "triangle",
+    "2015 - 2019" = "triangle",
+    "2020" = "circle",
     "2019" = "circle",
     "2018" = "circle",
     "2017" = "circle",
@@ -354,7 +439,7 @@ predict_average_prop <- predict_average_prop %>%
   filter(region == "DI")
 
 predict_average_prop$species <- factor(predict_average_prop$species) %>% 
-  fct_relevel(c("Sockeye", "Pink", "Chum"))
+  fct_relevel(c("Sockeye", "Pink", "Chum")) # contains only DI
 
 predict_annual_prop$species <- factor(predict_annual_prop$species) %>% 
   fct_relevel(c("Sockeye", "Pink", "Chum"))
@@ -364,50 +449,34 @@ cu_cum_abund_annual_DI_2017$species <- factor(cu_cum_abund_annual_DI_2017$specie
 
 # Remove 2017 chum logistic model, in favour of loess model.
 predict_annual_prop <- predict_annual_prop %>% 
-  filter(year != 2017 | species != "Chum")
+  filter(year == current_year)
 
 ggplot()+
       labs(x = 'Date', y = 'Cumulative Catch %') +
-  # Un comment below if you want to see the study-period average    
-  #geom_line(data = predict_average_prop, aes(x = x, y = y, color = year),
-  #size = 2, alpha = 0.75) +
-      geom_line(data = predict_annual_prop, aes(x = x, y = y,
+  geom_line(data = predict_average_prop, aes(x = x, y = y, color = year),
+  size = 1.25, alpha = 0.75) +
+  geom_line(data = predict_annual_prop, aes(x = x, y = y,
                                                 color = year),
-                linetype= 5, size = 1.25, alpha = 0.8) +
-   geom_smooth(data = cu_cum_abund_annual_DI_2017, aes(x = survey_date,
-                                                      y = percent,
-                                                      colour = factor(year)),
-              linetype = 5,
-              alpha = 0.8, size = 1.25,
-              se = FALSE, span = 1) +
+                linetype= 1, size = 1.25, alpha = 1) +
   scale_x_continuous(breaks = c(135, 152, 166, 182, 196), 
                      labels = c("May 15", "June 1", "June 15", 
                                 "July 1", "July 15")) +
       coord_cartesian(xlim = c(128, 190)) + 
-      #scale_shape_manual(values = shapes) +
-      scale_colour_manual(values = hakai_palette("hakai_web"), name="",
-                         breaks=c("2015-2018", "2015", "2016", 
-                                  "2017", "2018", "2019"),
-                         labels=c("Average", "2015", "2016", 
-                                  "2017", "2018", "2019")) +
+  scale_color_manual(values = c("grey", "black")) +
   theme(legend.position = c(0.9, 0.5)) +
-  # theme(panel.grid.major.y= element_line("#DCDCDC")) +
-  # theme(panel.grid.major.x= element_line("#DCDCDC")) +
-  facet_grid(species ~ .) +
-  ggtitle("Migration Timing") 
+  facet_grid(species ~ .)
     
 ggsave(here("figs", "migration_timing.png"), width = 9, height = 6)
 ```
 
-```{r catch-intensity-plot, fig.cap = "The catch intensity (our proxy for abundance) of sockeye, pink, and chum salmon in the Discovery Islands and Johnstone Strait. Numbers under each bar indicate the number of seines in which the species was caught, and error bars indicate the 95 percent confidence region.", out.width="90%"}
+```{r catch-intensity-plot, fig.cap = "The catch intensity (our proxy for abundance) of sockeye, pink, and chum salmon in the Discovery Islands. Numbers under each bar indicate the number of seines in which the species was caught, and error bars indicate the 95 percent confidence region.", out.width="90%"}
 
 catch_intensity$species <- catch_intensity$species %>% 
   fct_relevel("Sockeye", "Pink", "Chum")
 
 (ggplot(catch_intensity, aes(x = factor(year), y = mean_catch, fill = species)) +
   geom_bar(colour = "black",  stat="identity", position=position_dodge()) +
-  geom_errorbar(aes(ymin = if_else(mean_catch - lower_ci < 0, 0, mean_catch - lower_ci),
-                        ymax = mean_catch + upper_ci),
+  geom_errorbar(aes(ymin = mean_catch - se, ymax = mean_catch + se),
                     width = 0.2,
                     position = position_dodge(0.9)) +
   geom_text(aes(y = 0.0, label = paste0(n)), size = 3.15, vjust = 1.25,
@@ -415,8 +484,8 @@ catch_intensity$species <- catch_intensity$species %>%
   xlab("Year") +
   ylab("Catch Intensity") +
   labs(fill = "Species") +
-  ggtitle("Species Abundance Proxy") +
   scale_fill_manual(values = hakaiR::hakai_palette("hakai_salmon")))
+
 
 ggsave(here("figs", "catch_intesity.png"))
 ```
@@ -433,8 +502,7 @@ proportion$species <- proportion$species %>%
       xlab("Year") +
       ylab("Proportion") +
       scale_fill_manual(values = hakai_palette("hakai_salmon")) +
-      labs(fill = "Species") +
-      ggtitle("Species Proportions")
+      labs(fill = "Species") 
 
 ggsave(here("figs", "proportions.png"))
 ```
@@ -444,10 +512,11 @@ ggsave(here("figs", "proportions.png"))
 length_histo$species <- length_histo$species %>% 
   fct_relevel("SO", "PI", "CU")
 
+DI_length_histo <- length_histo %>% 
+  filter(region == "DI")
 
-
-ggplot(length_histo, aes(fork_length, y = fct_rev(factor(year)), fill = species)) +
-  geom_density_ridges(color='black', scale = 3, alpha = 0.9) +
+ggplot(DI_length_histo, aes(fork_length, y = fct_rev(factor(year)), fill = species)) +
+  geom_density_ridges(color='black', scale = 2.5, alpha = 0.9) +
   xlab("Fork Length (mm)") +
   facet_grid(species ~ ., labeller = labeller(region = spp_labels, species = spp_labels)) +
   ylab("Year") +
@@ -455,10 +524,9 @@ ggplot(length_histo, aes(fork_length, y = fct_rev(factor(year)), fill = species)
   scale_y_discrete(expand = expand_scale(add = c(0.2, 2.8))) +
   coord_cartesian(xlim = c(60, 160)) +
   guides(fill = FALSE) +
-  ggtitle("Fork Length Frequency Distributions") +
   scale_fill_manual(values = hakai_palette("hakai_salmon"))
 
-ggsave(here("figs", "lengths.png"), width = 8, height = 6)
+ggsave(here("figs", "lengths.png"), width = 8, height = 7)
 ```
 
 
@@ -468,7 +536,7 @@ library(ggpubr)
 time_series_fish_cond <- fish_cond %>% 
   mutate(year = factor(year(survey_date))) %>% 
   filter(species %in% c("Sockeye", "Pink", "Chum", "Coho"),
-         year != "2019") %>% 
+         year != current_year) %>% 
   mutate(Years = "Time Series")
 
 current_fish_cond <- fish_cond %>% 
@@ -480,11 +548,10 @@ current_fish_cond <- fish_cond %>%
 
 ggplot(data = fish_cond, aes(x = fork_length, y = weight, colour= Years)) +
   geom_point(data = time_series_fish_cond, alpha = .2, size = 3) +
-  geom_point(data = current_fish_cond, alpha = .2, size = 3) + 
+  geom_point(data = current_fish_cond, alpha = .3, size = 2) + 
   ylab('Weight (g)')+
   xlab('Length (mm)')+
-  labs(title = "Length Weight Relationships") +
-  coord_cartesian(xlim = c(60, 177), ylim = c(0, 80)) +
+  coord_cartesian(xlim = c(50, 177), ylim = c(0, 80)) +
   scale_color_manual(values=c("#B52025", "black")) +
   #theme(legend.position = c(.9, .9), legend.title=element_blank()) +
   facet_wrap(~species, nrow=2)
@@ -496,20 +563,10 @@ ggsave(here("figs", "length_weight.png"), width = 8, height = 6)
 
 ```{r sealice-abundance-plot, fig.cap="The abundance of motile sea lice on juvenile salmon in the Discovery Islands and Johnstone Strait. The numbers under each bar indicate the sample size and the error bars indicate the 95 percent confidence region.", out.width="85%"}
 
-lice_bootstraps$species <- factor(lice_bootstraps$species) %>% 
-  fct_relevel("SO", "PI", "CU") %>% 
-  fct_recode("Sockeye" = "SO", "Pink" = "PI", "Chum" = "CU")
-
-df <- lice_bootstraps %>% 
-  group_by(year, region, species, louse_species) %>% 
-  summarize(mean_abund = mean(estimate),
-            upper_ci = mean(`97.5%`),
-            lower_ci = mean(`2.5%`),
-            n = n())
-
-
-
-ggplot(data = df, aes(x = year, y = mean_abund, fill = louse_species)) +
+df %>% 
+  mutate(louse_species = replace(louse_species, louse_species == "caligus", "C. clemensi")) %>% 
+  mutate(louse_species = replace(louse_species, louse_species == "lep", "L. salmonis")) %>% 
+ggplot(aes(x = year, y = mean_abund, fill = louse_species)) +
       geom_bar(colour = "black", stat = "identity", position = position_dodge()) +
       geom_errorbar(aes(ymin = mean_abund - ((upper_ci - lower_ci) / 2), 
                         ymax = mean_abund + ((upper_ci - lower_ci) / 2)), 
@@ -527,76 +584,15 @@ ggplot(data = df, aes(x = year, y = mean_abund, fill = louse_species)) +
       #scale_y_continuous(expand = expand_scale(mult = c(.15, 0))) +
       #scale_fill_hakai() +
       labs(fill = "Louse Species") + 
-  theme(legend.text = element_text(face = "italic", size = 10)) +
+  theme(legend.text = element_text(face = "italic", size = 10)) 
   #coord_cartesian(ylim = c(0, 1.7)) +
-  ggtitle("Sea Lice Abundance")
+
 
 ggsave(here("figs", "sealice_abundance.png"), width = 7, height = 4)
 ```
 
-```{r sealice-prevalence-plot, eval = FALSE, fig.cap="The prevalence of motile sea lice on juvenile salmon in the Discovery Islands and Johnstone Strait. The numbers under each bar indicate the sample size and the error bars indicate the 95 percent confidence region.", out.width="90%"}
- 
-sealice_summary_table %>% 
-  select(Year, Region, Species, louse_species, n, Prevalence, prevalence_ci) %>% 
-  filter(louse_species != "all_lice") %>% 
-  mutate(louse_species = dplyr::recode(.$louse_species, motile_caligus = "C. clemensi", motile_lep = "L. salmonis")) %>% 
-  ggplot(aes(x = Year, y = Prevalence, fill = louse_species,
-                 group = louse_species)) +
-      geom_bar(colour = "black", stat = "identity", position = position_dodge()) +
-      geom_errorbar(aes(ymin = Prevalence - prevalence_ci, 
-                        ymax = Prevalence + prevalence_ci), 
-                    width = 0.2,
-                    position = position_dodge(0.9)) +
-      facet_grid(Region ~ Species, 
-                 labeller = labeller(Region = spp_labels)) +
-      labs(x = "Year", y = "Prevalence") +
-      theme(legend.position="bottom") +
-      geom_text(aes(label = ifelse(Prevalence == 0, round(Prevalence, 1), '')),
-               position = position_dodge(0.9), vjust = -0.5) +
-      # geom_text(aes(y = 0.0, label = paste0(n)), size = 3.15, vjust = 1.25,
-      #           position = position_dodge(0.9)) +
-      # scale_y_continuous(expand = expand_scale(mult = c(.15, 0))) +
-     # scale_fill_hakai() +
-      labs(fill = "Louse Species") + 
-      theme(legend.text = element_text(face = "italic", size = 10)) +
-      ggtitle("Sea Lice Prevalence")
 
-ggsave(here("figs", "sealice_prevalence.png"))
-
-```
-
-```{r sealice-intensity-plot, eval = FALSE, fig.cap="The intensity of motile sea lice (average number of lice when > 1 louse is present) on juvenile salmon in the Discovery Islands and Johnstone Strait. The numbers under each bar indicate the sample size and the error bars indicate the 95 percent confidence region.", out.width="90%"}
- 
-sealice_summary_table %>% 
-  select(Year, Region, Species, louse_species, n, Intensity, intensity_ci) %>% 
-  filter(louse_species != "all_lice") %>% 
-  mutate(louse_species = dplyr::recode(.$louse_species, motile_caligus = "C. clemensi", motile_lep = "L. salmonis")) %>% 
-  ggplot(aes(x = Year, y = Intensity, fill = louse_species,
-                 group = louse_species)) +
-      geom_bar(colour = "black", stat = "identity", position = position_dodge()) +
-      geom_errorbar(aes(ymin = Intensity - intensity_ci, 
-                        ymax = Intensity + intensity_ci), 
-                    width = 0.2,
-                    position = position_dodge(0.9)) +
-      facet_grid(Region ~ Species, 
-                 labeller = labeller(Region = spp_labels)) +
-      labs(x = "Year", y = "Intensity") +
-      theme(legend.position="bottom") +
-      geom_text(aes(label = ifelse(Intensity == 0, round(Intensity, 1), '')),
-               position = position_dodge(0.9), vjust = -0.5) +
-      # geom_text(aes(y = 0.0, label = paste0(n)), size = 3.15, vjust = 1.25,
-      #           position = position_dodge(0.9)) +
-      # scale_y_continuous(expand = expand_scale(mult = c(.15, 0))) +
-      #scale_fill_hakai() +
-  coord_cartesian(ylim = c(0,2.5)) +
-      labs(fill = "Louse Species") + 
-  theme(legend.text = element_text(face = "italic", size = 10)) +
-  ggtitle("Sea Lice Intensity")
-
-ggsave(here("figs", "sealice_intensity.png"))
-```
-
-```{r sst-plot, out.width="90%", fig.cap=paste("Thirty-meter depth-integrated ocean temperatures at station QU39 in the northern Strait of Georgia is the solid black line which represents average temperatures from 2015–2019. Blue areas represent temperatures from ", current_year, "that are below the 2015–", current_year, "average and red areas represent above average temperatures. The shaded grey area is 1 SE of the loess regression. The black dots are the daily minimum and maximum temperatures observed over the study-period.", sep="")}
+```{r sst-plot, out.width="90%", fig.cap=paste("Thirty-meter depth-integrated ocean temperatures at station QU39 in the northern Strait of Georgia is the solid black line which represents average temperatures from 2015–2019. Blue areas represent temperatures from ", current_year, "that are below the 2015–", current_year, "average and red areas represent above average temperatures. The shaded grey area is 1 SE of the loess regression. The black dots are the daily minimum and maximum temperatures observed over the time series.", sep="")}
 
 temperature_anomaly_data <- temperature_anomaly_data %>% 
       filter(station == "QU39")
@@ -627,9 +623,7 @@ ggplot(data = temperature_anomaly_data, aes(x = yday, y = mean_temp)) +
                          labels = (c("Feb", "Mar", "Apr", "May", "Jun", 
                                      "Jul", "Aug"))) +
       labs(x = "Date", y = "Temperature [°C]") +
-      coord_cartesian(xlim = c(32,213)) +
-  labs(title = "2019 Temperatures",
-       subtitle = "Compare 2019 (coloured red and blue) to study-period average (black line)") 
+      coord_cartesian(xlim = c(32,213))
 
 ggsave(here("figs", "sst.png"), width = 8, height = 6)
 
@@ -641,13 +635,6 @@ Some of the models and methods used to produce statistics and visualizations in 
 
 # Tables
 
-```{r z-scores-table}
-heatmap_data <- heatmap_data %>% 
-  select(spp, year, measure, Estimate, SD, Z)
-knitr::kable(heatmap_data, col.names = c("Species", "Year","Parameter", "Estimate", "SD", "Z score"), format = 'markdown')
-```
-Table: (\#tab:z-scores-table) Key salmon health, growth, and migration annual estimates. Migration timing estimates are the median capture date in the Discovery Islands, catch intensity estimates are the mean catch when greater than one sockeye are caught in the Discovery Islands and Johnstone Strait combined, length estimates are the mean fork length (mm) in both regions combined, parasite loads are mean abundance for motile lice from both regions combined, and SST is the mean sea-surface temperature in degrees celcius at station QU39 in the northern Strait of Georgia. Standard deviation is denoted by SD and is the within-year standard deviation (note no SD for median capture dates). Z score is the number of standard deviations the annual estimate is away from the time series mean.
-
 
 ```{r migration-timing-table}
 migration_timing$Species <- factor(migration_timing$Species) %>% 
@@ -655,56 +642,27 @@ migration_timing$Species <- factor(migration_timing$Species) %>%
   fct_recode("Sockeye" = "SO", "Pink" = "PI", "Chum" = "CU")
 
 migration_timing <- migration_timing %>% 
-  drop_na()
+  drop_na() %>% 
+  filter(Year %in% c(paste("2015", "-", current_year), current_year))
 knitr::kable(migration_timing, format = 'markdown')
 ```
 Table: (\#tab:migration-timing-table) Migration timing statistics for the cumulative catch of sockeye, pink, and chum salmon in the Discovery Islands in 2019, compared to the time-series average (2015 - `r current_year`). Q1 is when 25 % of the species passed through the regions, peak date is the median when 50 % passed through, Q3 is 75%, and Spread is the difference between Peak Date and Q1. The region DI indicates the Discovery Islands while for species SO is sockeye, PI is pink, and CU is chum. 
-
-```{r catch-intensity-table}
-catch_intensity <- catch_intensity %>% 
-  select("year", "species", "mean_catch")
-
-knitr::kable(catch_intensity, format = 'markdown', 
-             col.names = c("Year", "Species", "Catch Intensity"))
-```
-Table: (\#tab:catch-intensity-table) Catch intensity—our proxy for abundance—for sockeye, pink, and chum in the Discovery Islands and Johnstone Strait combined.
-
 
 ```{r length-table}
 summary_lengths$species <- factor(summary_lengths$species) %>% 
   fct_relevel("SO", "PI", "CU") %>% 
   fct_recode("Sockeye" = "SO", "Pink" = "PI", "Chum" = "CU")
 summary_lengths <- summary_lengths %>% 
-  select(Year = year, Region = region, Species = species, N = n, "Fork Length" = fork_length, CI = CI)
+  select(Year = year, Species = species, N = n, "Fork Length" = fork_length, CI = CI)
 knitr::kable(summary_lengths, format = 'markdown')
 ```
-Table: (\#tab:length-table) Mean fork lengths for each year, species, and region with the 95 % confidence interval (95% CI). The column n indicates the number of fish measured.
+Table: (\#tab:length-table) Mean fork lengths for each year, species, and region with the +/- 95 % confidence interval (95% CI). The column n indicates the number of fish measured.
 
 
-```{r proportion-table}
-knitr::kable(proportions_table, format = 'markdown')
+```{r sst table}
+kable(sst_nice_table, fomrat = 'markdown')
 ```
-Table: (\#tab:proportion-table) The species proportions of total catch in each year for sockeye, pink, chum, herring, coho, and Chinook.
 
-```{r sealice-table}
-
-df <- df %>% 
-  ungroup() %>% 
-  mutate(
-         year = factor(year),
-         lower_ci = round(lower_ci, 2),
-         upper_ci = round(upper_ci, 2),
-         "95% CI" = paste(lower_ci, "-", upper_ci)) %>% 
-  select("Year" = "year", "Region" = "region", "Species" = "species",
-         "Louse Species" = "louse_species", "Mean Abundance" = "mean_abund",
-         "95% CI") %>% 
-  mutate_if(is.numeric, round, 2)
-
-kable(df, format = 'markdown', caption = "Mean sea-lice abundance (with 95% CI) from annual averages) ")
-
-
-```
-Table: (\#tab:sealice-table) Mean sea-louse abundance, prevalence, and intensity (as defined in Margolis et al. 1990) across the time series (2015-`r current_year`) for each fish, region, and year. 95% confidence intervals were calculated from annual averages. The region DI indicates the Discovery Islands and JS Johnstone Strait.
 
 ```{r, include = FALSE}
 toc()

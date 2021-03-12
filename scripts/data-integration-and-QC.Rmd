@@ -76,7 +76,7 @@ rna_pathogen_results <- read_csv(here("raw_data", "sample_results",  "rna_pathog
 #TODO: Update all sample inventory files with 2020 dissection data
 #TODO: Add zooplankton results from JSP tows (found in Sam and Vanessa's data packages)
 #TODO: Integrate and then add sockeye, pink, and chum diet results from Vanessa and Sams data packages
-#TODO: As Brian if there any isotope sample results, if so add them here!
+#TODO: Ask Brian if there any isotope sample results, if so add them here!
 #TODO: Integrate Jessica Garzke's RNA:DNA data results and Fatty  Acid results https://github.com/Pelagic-Ecosystems/Juvenile-Sockeye-RNA-DNA/tree/master/read_data
 #TODO: Update 2018 and 2019 stock_id results data
 
@@ -259,9 +259,10 @@ fish_k <- fish_lab_data %>%
    mutate(k = (weight * 10^5) / (fork_length^3)) %>%
    drop_na(k) %>% 
    select(ufn, fork_length, weight, k) %>% 
-   filter(k < .5 | k >  2)
+   filter(k < .5 | k >  2) #Anything outside this range is suspect, though U1087 seems legit and has been double checked.
 
-knitr::kable(fish_k)#Anything outside this range is suspect, though U1087 seems legit and has been double checked.
+knitr::kable(fish_k)
+
 
 
 rm(fish_k)

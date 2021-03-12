@@ -4838,7 +4838,7 @@ U12416,2018-01-24,None,Present,11.4,99,104,NA,NA,KDB,full2,lab_motiles_cryo,lab_
 U12417,2018-01-24,None,Present,13.8,106,112,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
 U12418,2018-01-24,None,Present,11.4,100,106,NA,Lots of scales missing on right,KDB,full2,lab_motiles_cryo,lab_motiles
 U12419,2018-01-24,None,Present,8.8,89,93,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
-U12420,2018-01-24,None,Present,4,108,114,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
+U12420,2018-01-24,None,Present,NA,108,114,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
 U12661,2018-01-24,None,Present,15.2,102,108,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
 U12666,2018-01-24,None,Present,19.6,114,122,NA,NA,KDB,full2,lab_motiles_cryo,lab_motiles
 U10107,2018-01-24,None,Present,27.4,152,159,NA,NA,MF,full2,lab_motiles_cryo,lab_motiles
@@ -8667,7 +8667,7 @@ U21594,2020-10-20,none,present,8.3,92,96,NA,NA,KB,streamlined_workup_4,NA,lab_mo
 U21592,2020-10-20,none,present,7.5,90,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
 U21591,2020-10-20,none,present,9,96,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
 U21596,2020-10-20,none,present,17,113,119,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
-U21597,2020-10-20,none,present,12,105,10,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U21597,2020-10-20,none,present,12,105,109,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
 U21598,2020-10-20,none,present,10.6,100,105,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
 U23220,2020-10-20,none,present,5.4,81,85,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
 U23216,2020-10-20,none,present,4.8,77,81,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
