@@ -163,6 +163,7 @@ salmon_dm <- salmon_only_pk %>%
 salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
 
 # manually  export the drawing from the viewer pane to figs to update the data model image
+dm_draw(salmon_dm)
 ```
 
 
@@ -192,7 +193,6 @@ fish_lab_data %>% group_by(dissector) %>%
    knitr::kable()
                 
 ```
-
 
 
 ## Sampling Locations
@@ -270,7 +270,7 @@ rm(fish_k)
 
 
 ```{r}
-
+# Save all data frames currently in environment to tidy_data folder
 # List all data frames in env.
 dfs <- Filter(function(x) is(x, "data.frame"), mget(ls()))
 

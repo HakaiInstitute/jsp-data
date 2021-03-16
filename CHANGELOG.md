@@ -10,10 +10,18 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - RNA pathogen results data from Kristi Miller's lab  at DFO for 2015 and 2016 sockeye, pink, and chum
 - New column added for sea lice presence absence in fish_field_data.
 - All CTD data collected during juvenile salmon sampling
-- 
+- 2018 and 2019 Genetic stock ID
+- 2019 finclip dna sample inventory
 
-### Changed
-- 
+### Fixed
+- Species ID as sockeye was changed based on results of genetic stock ID for:
+  - U16451: Coho
+  - U17041: Coho
+  - U17291: Pink
+  - U20467: Coho
+  - U20469: Chum
+  - U20774: Chum
+  - U20864: Chum
 
 
 
