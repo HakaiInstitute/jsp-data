@@ -250,7 +250,6 @@ leaflet() %>%
 rm(map_data, survey_seines)
 ```
 
-
 ```{r fish condition}
 
 #sometimes fish lengths and weights are entered incorrectly and you end up with extreme  condition values.

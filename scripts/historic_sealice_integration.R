@@ -26,7 +26,7 @@ library(tidyverse)
 library(here)
 
 survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
-  left_join(fish_field_data, by = "seine_id")
+  right_join(fish_field_data, by = "seine_id")
 # In 2017, 2018, and 2019 we enumerated sea  lice in the field  using the salmon
 # coast method which uses a hand lens to identify various stages of both attached 
 # and motile sea lice. For the time series, we only report motiles because that 
@@ -92,8 +92,7 @@ rm(sealice_lab_mot, sealice_lab_fs_mot) # cleans up intermediate tables
 
 # add catch metadata to sealice counts
 lab_lice <- survey_seines_fish %>%
-  inner_join(sealice_lab_motiles, by = "ufn") %>%
-  #drop_na(cm_lab) %>% 
+  right_join(sealice_lab_motiles, by = "ufn") %>%
   # lump all sexes and stages of adult caligus
   mutate(
     motile_caligus_lab = rowSums(
