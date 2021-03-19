@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 ## [1.2.0] - 2021-01-28
+
+
 ### Added
 - 2020 field data results
 - 2020 fish dissection results
@@ -12,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - All CTD data collected during juvenile salmon sampling
 - 2018 and 2019 Genetic stock ID
 - 2019 finclip dna sample inventory
+- Data wrangling code and processed-data for OBIS (Ocean Biodiversity Information System)
 
 ### Fixed
 - Species ID as sockeye was changed based on results of genetic stock ID for:
@@ -23,7 +26,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
   - U20774: Chum
   - U20864: Chum
 
-
+### Changed
+- Combined the annual-observations-report (time-series) code and data into this repository and deprecated the `jsp-time-series` repo.
 
 ## [1.1.0] - 2020-02-14
 ### Added
