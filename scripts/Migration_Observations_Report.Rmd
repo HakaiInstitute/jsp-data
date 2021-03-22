@@ -564,6 +564,7 @@ ggsave(here("figs", "length_weight.png"), width = 8, height = 6)
 ```{r sealice-abundance-plot, fig.cap="The abundance of motile sea lice on juvenile salmon in the Discovery Islands and Johnstone Strait. The numbers under each bar indicate the sample size and the error bars indicate the 95 percent confidence region.", out.width="85%"}
 
 df %>% 
+  filter(region != "JS") %>% 
   mutate(louse_species = replace(louse_species, louse_species == "caligus", "C. clemensi")) %>% 
   mutate(louse_species = replace(louse_species, louse_species == "lep", "L. salmonis")) %>% 
 ggplot(aes(x = year, y = mean_abund, fill = louse_species)) +
