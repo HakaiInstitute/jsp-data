@@ -67,6 +67,7 @@ My process for conversion was to make a new table called `event` and map the sta
 ```{r event}
 
 #TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m)
+
 event <- tibble(eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
                 eventTime = paste(survey_seines$set_time, "-0700"),
