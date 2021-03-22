@@ -1,6 +1,6 @@
 # jsp-data
 
-Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository.
+Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository. This repository corresponds to the metadata record located at http://dx.doi.org/10.21966/1.566666
 
 
 # What's in the repository?
