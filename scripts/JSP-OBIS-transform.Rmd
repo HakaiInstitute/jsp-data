@@ -35,7 +35,10 @@ fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/js
   select(ufn, seine_id, species, fork_length_field, weight_field)
 
 fish_data <- full_join(fish_lab_data, fish_field_data)
-'paste3 <- function(...,sep=", ") {
+
+bycatch <- read_csv(here("tidy_data", 'bycatch_mort.csv'))
+
+paste3 <- function(...,sep=", ") {
      L <- list(...)
      L <- lapply(L,function(x) {x[is.na(x)] <- ""; x})
      ret <-gsub(paste0("(^",sep,"|",sep,"$)"),"",
@@ -70,7 +73,7 @@ My process for conversion was to make a new table called `event` and map the sta
 
 event <- tibble(eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
-                eventTime = paste(survey_seines$set_time, "-0700"),
+                eventTime = paste0(survey_seines$set_time, "-0700"),
                 eventRemarks = paste3(survey_seines$survey_comments, survey_seines$seine_comments),
                 decimalLatitude = survey_seines$lat,
                 decimalLongitude = survey_seines$long,
@@ -90,7 +93,7 @@ event <- tibble(eventID = survey_seines$seine_id,
                 institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, EDMO:5148"
                ) 
 
-write_csv(event, here::here("processed_data", "OBIS", "event.csv"))
+write_csv(event, here::here("OBIS_data", "event.csv"))
 ```
 
 
@@ -101,20 +104,19 @@ Next you'll want to determine what constitutes an occurrence for your data set. 
 Not every fish is actually collected and given a Universal Fish Number (UFN) in our fish data tables, so in our field data sheets we record the total number of fish captured and the total number retained. So to get an occurrence row for every fish captured I create a row for every fish caught (minus the number taken) and create a generic numeric id (ie hakai-jsp-1) in one table and then join that to the fish table that includes a row for every fish retained that already has a UFN. 
 
 ```{r occurrence}
-#TODO: Include bycatch data as well
 
 ## make table long first
 seines_total_long <- survey_seines %>% 
   select(seine_id, so_total, pi_total, cu_total, co_total, he_total, ck_total) %>% 
   pivot_longer(-seine_id, names_to = "scientificName", values_to = "n")
 
-seines_total_long$scientificName <- recode(seines_total_long$scientificName, so_total = "Oncorhynchus nerka", pi_total = "Oncorhynchus gorbushca", cu_total = "Oncorhynchus keta", co_total = "Oncorhynchus kisutch", ck_total = "Oncorhynchus tshawytscha", he_total = "Clupea pallasii") 
+seines_total_long$scientificName <- recode(seines_total_long$scientificName, so_total = "Oncorhynchus nerka", pi_total = "Oncorhynchus gorbuscha", cu_total = "Oncorhynchus keta", co_total = "Oncorhynchus kisutch", ck_total = "Oncorhynchus tshawytscha", he_total = "Clupea pallasii") 
 
 seines_taken_long <- survey_seines %>%
   select(seine_id, so_taken, pi_taken, cu_taken, co_taken, he_taken, ck_taken) %>% 
   pivot_longer(-seine_id, names_to = "scientificName", values_to = "n_taken") 
 
-seines_taken_long$scientificName <- recode(seines_taken_long$scientificName, so_taken = "Oncorhynchus nerka", pi_taken = "Oncorhynchus gorbushca", cu_taken = "Oncorhynchus keta", co_taken = "Oncorhynchus kisutch", ck_taken = "Oncorhynchus tshawytscha", he_taken = "Clupea pallasii") 
+seines_taken_long$scientificName <- recode(seines_taken_long$scientificName, so_taken = "Oncorhynchus nerka", pi_taken = "Oncorhynchus gorbuscha", cu_taken = "Oncorhynchus keta", co_taken = "Oncorhynchus kisutch", ck_taken = "Oncorhynchus tshawytscha", he_taken = "Clupea pallasii") 
 
 ## remove records that have already been assigned an ID because they were actually retained
 seines_long <-  full_join(seines_total_long, seines_taken_long, by = c("seine_id", "scientificName")) %>% 
@@ -146,29 +148,38 @@ fish_retained_data <- fish_data %>%
   select(seine_id, scientificName, occurrenceID)
 
 occurrence <- bind_rows(all_fish_caught, fish_retained_data) %>% 
-  mutate(basisOfRecord = "Human Observation",
-        occurenceStatus = "present") %>% 
   rename(eventID = seine_id)
-  
 
-```
+#include bycatch species
+bycatch_occ <- bycatch %>% 
+  rename(eventID = seine_id)
 
-For each occuerence of the six different fish species that I caught I need to match the species name that I provide with the official `scientificName` that is part of the World Register of Marine Species database http://www.marinespecies.org/
+unique_bycatch <- unique(bycatch_occ$scientificName) %>%  glimpse()
+by_worms_names <- wm_records_names(unique_bycatch) %>% 
+  bind_rows() %>% 
+  select(scientificName = scientificname,
+         scientificNameAuthorship = authority,
+         taxonRank = rank,
+         scientificNameID = lsid
+         )
 
-```{r}
-#TODO: get worrms to return all the data I need for taxonomy
-(species <- unique(occurrence$scientificName))
-class(species)
-wm_records_name(name = (unique(occurrence$scientificName)))
 
-# I went directly to the WoRMS website (http://www.marinespecies.org/) to download the full taxonomic levels for the salmon species I have and put the WoRMS output (species_matched.xls) table in this project directory which is read in below and joined with the occurrence table
+unique_taxa <- unique(occurrence$scientificName)  
+worms_names <- wm_records_names(unique_taxa) 
+df_worms_names <- bind_rows(worms_names) %>% 
+  select(scientificName = scientificname,
+         scientificNameAuthorship = authority,
+         taxonRank = rank,
+         scientificNameID = lsid
+         )
 
-species_matched <- readxl::read_excel(here::here("processed_data", "OBIS", "species_matched.xls"))
+combined_worms_names <- bind_rows(by_worms_names, df_worms_names)
 
-occurrence <- left_join(occurrence, species_matched, by = c("scientificName" = "ScientificName")) %>% 
-  select(occurrenceID, scientificNameID = LSID, basisOfRecord, scientificName, eventID, occurrenceStatus = occurenceStatus, Kingdom, Phylum, Class, Order, Family, Genus, Species)
+occurrence <- left_join(occurrence, combined_worms_names) %>% 
+    mutate(basisOfRecord = "Human Observation",
+        occurenceStatus = "present")
 
-write_csv(occurrence, here::here("processed_data", "OBIS", "occurrence.csv"))
+write_csv(occurrence, here::here("OBIS_data", "occurrence.csv"))
 
 ```
 
@@ -183,7 +194,6 @@ Here I convert length, and weight measurements that relate to an event and an oc
 fish_data$weight <- coalesce(fish_data$weight, fish_data$weight_field)
 fish_data$fork_length <- coalesce(fish_data$fork_length, fish_data$fork_length_field)
 
-#TODO add fork length from NVS vocab
 fish_length <- fish_data %>%
   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
   select(occurrenceID, eventID = seine_id, fork_length, weight) %>% 

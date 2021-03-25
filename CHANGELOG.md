@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.2.1] - *RELEASE DATE*
+
+### Added
+- Added fork length, weight, and bycatch to OBIS record
+- Added scientific name of each species to bycatch_mort.csv file
+
+### Fixed
+- Readme file's description of what the workflow is for progressing data through various folders and the function of each script
+
 ## [1.2.0] - 2021-03-22
 
 
