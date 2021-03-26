@@ -73,7 +73,7 @@ My process for conversion was to make a new table called `event` and map the sta
 
 ```{r event}
 
-#TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m)
+#TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m) to hang off eventID in the eMoF table
 
 event <- tibble(eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
@@ -81,6 +81,7 @@ event <- tibble(eventID = survey_seines$seine_id,
                 eventRemarks = paste3(survey_seines$survey_comments, survey_seines$seine_comments),
                 decimalLatitude = survey_seines$lat,
                 decimalLongitude = survey_seines$long,
+                locationID = survey_seines$site_id,
                 coordinatePrecision = 0.00001,
                 country = "Canada",
                 countryCode = "CA",
@@ -94,7 +95,8 @@ event <- tibble(eventID = survey_seines$seine_id,
                 license = "http://creativecommons.org/licenses/by/4.0/legalcode",
                 bibliographicCitation = "Johnson, B.T., J.C.L. Gan, S.C. Godwin, M. Krkosek, B.P.V. Hunt. 2020. Hakai Juvenile Salmon Program Time Series. Hakai Institute, Quadra Island Ecological Observatory, Heriot Bay, British Columbia, Canada. v#.#.#, http://dx.doi.org/10.21966/1.566666",
                 references = "https://github.com/HakaiInstitute/jsp-data",
-                institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, EDMO:5148"
+                institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, https://edmo.seadatanet.org/report/5148",
+                institutionCode = "Hakai"
                ) 
 
 write_csv(event, here::here("OBIS_data", "event.csv"))
@@ -153,7 +155,7 @@ fish_retained_data <- fish_data %>%
 
 occurrence <- bind_rows(all_fish_not_retained, fish_retained_data) %>% 
   rename(eventID = seine_id) %>% 
-  mutate(lifeStage = "juvenile")
+  mutate(`Life stage` = "juvenile")
 
 unique_taxa <- unique(occurrence$scientificName)  
 worms_names <- wm_records_names(unique_taxa) 
@@ -183,13 +185,14 @@ bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "J"] <- "juve
 bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "A"] <- "adult"
 bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "Y"] <- "Young of year"
 
-combined_worms_names <- bind_rows(by_worms_names, df_worms_names)
+combined_worms_names <- bind_rows(by_worms_names, df_worms_names) %>% 
+  distinct(scientificName, .keep_all = TRUE)
 
 occurrence <- bind_rows(bycatch_occurrence, occurrence)
 
 occurrence <- left_join(occurrence, combined_worms_names) %>% 
-    mutate(basisOfRecord = "Human Observation",
-        occurenceStatus = "present")
+    mutate(basisOfRecord = "HumanObservation",
+        occurrenceStatus = "present")
 
 write_csv(occurrence, here::here("OBIS_data", "occurrence.csv"))
 
@@ -210,7 +213,8 @@ fish_data$fork_length <- coalesce(fish_data$fork_length, fish_data$fork_length_f
 fish_data$`Life stage` <- "juvenile"
 
 
-fish_mof <- fish_data %>%
+
+measurementOrFact <- fish_data %>%
   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
   select(occurrenceID, eventID = seine_id, "Length (fork length)" = fork_length,
          "Standard length" = standard_length, "Weight" = weight, `Life stage`) %>% 
@@ -219,34 +223,10 @@ fish_mof <- fish_data %>%
                values_to = "measurementValue",
                values_transform = list(measurementValue = as.character)) %>%
   filter(measurementValue != "NA") %>%
-  left_join(mof_types,by = c("measurementType"))
+  left_join(mof_types,by = c("measurementType")) %>% 
+  mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"))
 
 
-write_csv(measurementOrFact, here::here("processed_data", "OBIS", "extendedMeasurementOrFact.csv"))
-```
-
-```{r}
-# 
-# fish_length <- fish_data %>%
-#   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
-#   select(occurrenceID, eventID = seine_id, fork_length, weight) %>% 
-#   mutate(measurementType = "Fork_length", measurementValue = fork_length) %>% 
-#   select(eventID, occurrenceID, measurementType, measurementValue) %>% 
-#   mutate(measurementTypeID = "http://vocab.nerc.ac.uk/collection/P01/current/FL01XX01/") %>% 
-#   mutate(measurementUnit = "Millimetres",
-#          measurementUnitID = "http://vocab.nerc.ac.uk/collection/P06/current/UXMM/")
-# 
-# fish_weight <- fish_data %>% 
-#   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
-#   select(occurrenceID, eventID = seine_id, fork_length, weight) %>% 
-#   mutate(measurementType = "Weight", measurementValue = weight) %>% 
-#   mutate(measurementTypeID = "http://vocab.nerc.ac.uk/collection/P01/current/SPWGXX01/") %>% 
-#   select(eventID, occurrenceID, measurementType, measurementTypeID, measurementValue) %>% 
-#   mutate(measurementUnit = "Grams",
-#          measurementUnitID = "http://vocab.nerc.ac.uk/collection/P06/current/UGRM/")
-# measurementOrFact <- bind_rows(fish_length, fish_weight) %>% 
-#   drop_na(measurementValue)
-
-# rm(fish_length, fish_weight)
+write_csv(measurementOrFact, here::here("Obis_data", "extendedMeasurementOrFact.csv"))
 ```
 

@@ -1,0 +1,5 @@
+measurementType,measurementTypeID,measurementUnit,measurementUnitID
+Length (fork length),http://vocab.nerc.ac.uk/collection/P01/current/FL01XX01/,mm,http://vocab.nerc.ac.uk/collection/P06/current/UXMM/
+Weight,http://vocab.nerc.ac.uk/collection/P01/current/SPWGXX01/,grams,http://vocab.nerc.ac.uk/collection/P06/current/UGRM/
+Life stage,http://vocab.nerc.ac.uk/collection/P01/current/LSTAGE01/,NA,NA
+Standard length,http://vocab.nerc.ac.uk/collection/P01/current/SL01XX01/,mm,http://vocab.nerc.ac.uk/collection/P06/current/UXMM/
