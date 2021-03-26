@@ -32,7 +32,7 @@ site_activity <- read_csv(here("raw_data", "site_activity.csv")) %>%
    mutate(school_id = paste(survey_id, school_number, sep = "-"))
 zoop_tows <- read_csv(here("raw_data", "zoop_tows.csv")) 
 bycatch_mort <- read_csv(here("raw_data", "bycatch_mort.csv"))
-bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm_count), 1:4] %>%
+bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm_count), 1:5] %>%
   mutate(prefix = "bycatch-",
          suffix = 1:nrow(.),
          occurrenceID = paste0(prefix, suffix)
