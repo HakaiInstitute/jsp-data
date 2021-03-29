@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 - Added fork length, weight, and bycatch to OBIS record
 - Added scientific name of each species to bycatch_mort.csv file
+- Added latitude and longitude for all sites in sites.csv
 
 ### Fixed
 - Readme file's description of what the workflow is for progressing data through various folders and the function of each script
