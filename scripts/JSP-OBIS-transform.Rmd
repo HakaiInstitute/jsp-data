@@ -20,13 +20,14 @@ library(tidyverse)
 library(here)
 library(lubridate)
 library(worrms)
+library(obistools)
 
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/survey_data.csv") 
 
-seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/seine_data.csv") %>% 
-  drop_na(lat)
+seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/seine_data.csv") 
 
+sites <- read_csv(here("tidy_data", 'sites.csv'))
 survey_seines <- right_join(survey_data, seine_data, by = "survey_id") # removes survey events where a seine wasn't set
 
 fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_lab_data.csv", guess_max = 8000)
@@ -34,7 +35,7 @@ fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-
 fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_field_data.csv", guess_max = 16000)
 
 
-
+#TODO: Update bycatch_mort to be read from git repo
 bycatch <- read_csv(here("tidy_data", 'bycatch_mort.csv'))
 
 sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/combined_motile_lice.csv")
@@ -83,6 +84,7 @@ event <- tibble(eventID = survey_seines$seine_id,
                 decimalLongitude = survey_seines$long,
                 locationID = survey_seines$site_id,
                 coordinatePrecision = 0.00001,
+                coordinateUncertaintyInMeters = 10,
                 country = "Canada",
                 countryCode = "CA",
                 stateProvince = "British Columbia",
@@ -99,7 +101,7 @@ event <- tibble(eventID = survey_seines$seine_id,
                 institutionCode = "Hakai"
                ) 
 
-write_csv(event, here::here("OBIS_data", "event.csv"))
+
 ```
 
 
@@ -196,6 +198,19 @@ occurrence <- left_join(occurrence, combined_worms_names) %>%
 
 write_csv(occurrence, here::here("OBIS_data", "occurrence.csv"))
 
+# This removes events that didn't result in any occurrences
+event <- dplyr::semi_join(event, occurrence, by = 'eventID') %>% 
+  mutate(coordinateUncertaintyInMeters = ifelse(is.na(decimalLatitude), 1852, coordinateUncertaintyInMeters))
+
+simple_sites <- sites %>% 
+  select(site_id, ocgy_std_lat, ocgy_std_lon)
+
+event <- dplyr::left_join(event, simple_sites, by = c("locationID" = "site_id")) %>% 
+  mutate(decimalLatitude = coalesce(decimalLatitude, ocgy_std_lat),
+         decimalLongitude = coalesce(decimalLongitude, ocgy_std_lon)) %>% 
+  select(-c(ocgy_std_lat, ocgy_std_lon))
+
+write_csv(event, here::here("OBIS_data", "event.csv"))
 ```
 
 
@@ -224,9 +239,32 @@ measurementOrFact <- fish_data %>%
                values_transform = list(measurementValue = as.character)) %>%
   filter(measurementValue != "NA") %>%
   left_join(mof_types,by = c("measurementType")) %>% 
-  mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"))
+  mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"),
+         measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"))
 
 
 write_csv(measurementOrFact, here::here("Obis_data", "extendedMeasurementOrFact.csv"))
+```
+
+```{r QC}
+
+tree <- treeStructure(event, occurrence, measurementOrFact)
+exportTree(tree, "tree.html")
+
+library(dm)
+#Check that every eventID in Occurrence occurs in event table
+no_keys <- dm(event, occurrence, measurementOrFact)
+only_pk <- no_keys %>% 
+  dm_add_pk(event, eventID) %>% 
+  dm_add_pk(occurrence, occurrenceID) %>% 
+  dm_add_pk(measurementOrFact, measurementID)
+dm_examine_constraints(only_pk)
+
+model <- only_pk %>% 
+  dm_add_fk(occurrence, eventID, event) %>% 
+  dm_add_fk(measurementOrFact, occurrenceID, occurrence)
+dm_examine_constraints(model)
+
+dm_draw(model, view_type = "all") 
 ```
 
