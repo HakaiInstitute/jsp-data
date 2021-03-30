@@ -181,7 +181,8 @@ by_worms_names <- wm_records_names(unique_bycatch) %>%
          )
 
 bycatch_occurrence <- bycatch %>% 
-  select(eventID = seine_id, occurrenceID, scientificName, `Life stage` = bm_ageclass)
+  select(eventID = seine_id, occurrenceID, scientificName, `Life stage` = bm_ageclass) %>% 
+  filter(scientificName != "unknown")
 
 bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "J"] <- "juvenile"
 bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "A"] <- "adult"
