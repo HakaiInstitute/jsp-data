@@ -737,31 +737,7 @@ client <- hakaiApi::Client$new()
 
 # You have to break up the data request into a few chunks and then combine because the API has a limit on how much data you can assess at once.
 
-qu39_endpoint_pre_2018 <- sprintf("%s/%s", client$api_root, "ctd/views/file/cast/data?station=QU39&start_dt>=2015-02-01&start_dt<=2018-08-01&limit=-1")
-
-qu39_pre_2018 <- client$get(qu39_endpoint_pre_2018) %>%
-  mutate(
-    year = year(start_dt),
-    date = as_date(start_dt),
-    yday = yday(start_dt),
-    week = week(start_dt)
-  ) %>% 
-  select(-weather) # removing column with different names in pre and post 2018 files
-
-qu39_endpoint_post_2018 <- sprintf("%s/%s", client$api_root, "ctd/views/file/cast/data?station=QU39&start_dt>2018-08-01&limit=-1")
-
-qu39_post_2018 <- client$get(qu39_endpoint_post_2018) %>%
-  mutate(
-    year = year(start_dt),
-    date = as_date(start_dt),
-    yday = yday(start_dt),
-    week = week(start_dt)
-  ) %>% 
-  select(-c(weather.sky_cover, weather.wind_speed, weather.swell_height)) # removing columns that don't exist in pre_2018 file.
-
-#make sure column names are the same and in the same order before binding rows
-qu39_all <- bind_rows(qu39_pre_2018, qu39_post_2018) %>% 
-  filter(yday > 32, yday < 213, depth <= 30)
+qu39_all <- client$get(paste0(client$api_root, "/ctd/views/file/cast/data?fields=start_dt,station,conductivity,temperature,depth,salinity,dissolved_oxygen_ml_l&start_dt.year>2014&station=QU39&start_dt.doy>32&start_dt.doy<213&depth<=30&limit=-1"))
 
 qu39 <- qu39_all %>% 
   select(
