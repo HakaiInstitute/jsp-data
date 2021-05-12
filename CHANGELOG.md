@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 - Readme file's description of what the workflow is for progressing data through various folders and the function of each script
+- Corrected Pacific Sand Lance scientific name from Ammodytes hexapterus to Ammodytes personatus
 
 ## [1.2.0] - 2021-03-22
 

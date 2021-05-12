@@ -274,6 +274,7 @@ rm(fish_k)
 dfs <- Filter(function(x) is(x, "data.frame"), mget(ls()))
 
 # Write all data frame objects as .csv files to tidy data
+#Uncomment below to save and replace all data frames listed in your Environement (only do this if you have a clean set of files)
 for (i in 1:length(dfs)){
   write_csv(dfs[[i]], here::here("tidy_data", paste(names(dfs[i]), ".csv",  sep = "")))
 }

@@ -24,7 +24,7 @@ DE185N2,Quillback Rockfish,Sebastes,B,NA,1
 DE192N3,Chinook salmon,Oncorhynchus tshawytscha,B,NA,2
 DE192N3,Chum salmon,Oncorhynchus keta,M,J,1
 DE193N1,Pacific herring,Clupea pallasii,B,Y,5000
-DE193N1,Sandlance,Ammodytes hexapterus,B,NA,1
+DE193N1,Sandlance,Ammodytes personatus,B,NA,1
 DE195N1,Squid,Decapodiformes,M,NA,1
 DE198N2,Chinook salmon,Oncorhynchus tshawytscha,B,NA,1
 DE198N2,Chum salmon,Oncorhynchus keta,M,J,1
@@ -33,7 +33,7 @@ DE214N1,Threespine stickleback,Gasterosteus aculeatus ,B,NA,1
 DE214N1,Chum salmon,Oncorhynchus keta,M,J,1
 DE216N1,Chinook salmon,Oncorhynchus tshawytscha,B,NA,1
 DE217N2,Chinook salmon,Oncorhynchus tshawytscha,B,NA,10
-DE217N2,Sandlance,Ammodytes hexapterus,M,NA,2
+DE217N2,Sandlance,Ammodytes personatus,M,NA,2
 DE219N1,Chinook salmon,Oncorhynchus tshawytscha,B,NA,6
 DE220N1,Sockeye salmon,Oncorhynchus nerka,M,J,1
 DE226N2,Chinook salmon,Oncorhynchus tshawytscha,B,NA,2
@@ -52,7 +52,7 @@ DE275N1,Sockeye salmon,Oncorhynchus nerka,M,J,2
 DE279N2,Sockeye salmon,Oncorhynchus nerka,M,J,1
 DE284N1,Perch,Percidae,B,NA,300
 DE284N1,Bay pipefish,Syngnathus leptorhynchus,B,NA,2
-DE284N1,Sandlance,Ammodytes hexapterus,B,NA,1
+DE284N1,Sandlance,Ammodytes personatus,B,NA,1
 DE293N1,Chinook salmon,Oncorhynchus tshawytscha,B,NA,1
 DE293N1,Threespine stickleback,Gasterosteus aculeatus ,B,NA,1
 DE293N1,Sockeye salmon,Oncorhynchus nerka,M,J,2
@@ -210,8 +210,8 @@ DE612N1,stickleback,Gasterosteus aculeatus ,B,NA,1
 DE612N1,tubesnout,Aulorhynchus flavidus,B,A,30
 DE614N2,stickleback,Gasterosteus aculeatus ,B,A,1
 DE617N1,lingcod,Ophiodon elongatus,M,J,1
-DE618N1,sand lance,Ammodytes hexapterus,B,A,300
-DE618N1,sand lance,Ammodytes hexapterus,M,A,10
+DE618N1,sand lance,Ammodytes personatus,B,A,300
+DE618N1,sand lance,Ammodytes personatus,M,A,10
 DE628N1,stickleback,Gasterosteus aculeatus ,B,A,1
 DE628N2,stickleback,Gasterosteus aculeatus ,B,A,1
 DE628N3,stickleback,Gasterosteus aculeatus ,B,A,1
@@ -227,6 +227,6 @@ DE704N1,ling cod,Ophiodon elongatus,B,Y,1
 DE706N1,tube snout,Aulorhynchus flavidus,B,A,70
 DE706N2,rockfish,Sebastes,B,J,1
 DE713N1,pink salmon,Oncorhynchus gorbuscha,M,J,1
-DE714N1,sandlance,Ammodytes hexapterus,B,J,1
+DE714N1,sandlance,Ammodytes personatus,B,J,1
 DE716N1,stickleback,Gasterosteus aculeatus ,B,A,3
 DE716N2,stickleback,Gasterosteus aculeatus ,B,J,18
