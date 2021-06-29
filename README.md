@@ -35,7 +35,7 @@ The historic_sealice_integration.R script joins together various sources of seal
 
 The annual_report_data_wrangle.Rmd script processes and joins the individual tables in the data folder so that annual comparisons can be made under the same assumptions and field methods.
 
-The Migration_Observations_Report.rmd reads in the data processed by the data_wrangle script, calculates statistics, produces figures, tables, and is where the report text can be written and compiled into a pdf report. The filtered and processed data that is used for interannual comparisons can be found in the processed_data folder.
+The Migration_Observations_Report.rmd reads in the data processed by the data_wrangle script, calculates statistics, produces figures, tables, and is where the report text can be written and compiled into a pdf report. The filtered and processed data that is used for interannual comparisons can be found in the report_data folder.
 
 # Other files
 
