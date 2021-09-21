@@ -27,7 +27,8 @@ survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-da
 
 seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/seine_data.csv") 
 
-sites <- read_csv(here("tidy_data", 'sites.csv'))
+sites <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/sites.csv")
+
 survey_seines <- right_join(survey_data, seine_data, by = "survey_id") # removes survey events where a seine wasn't set
 
 fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_lab_data.csv", guess_max = 8000)
@@ -35,8 +36,7 @@ fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-
 fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_field_data.csv", guess_max = 16000)
 
 
-#TODO: Update bycatch_mort to be read from git repo
-bycatch <- read_csv(here("tidy_data", 'bycatch_mort.csv'))
+bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/bycatch_mort.csv')
 
 sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/combined_motile_lice.csv")
 
@@ -52,7 +52,6 @@ paste3 <- function(...,sep=", ") {
      is.na(ret) <- ret==""
      ret
      }
-
 ```
 
 # Intro
@@ -76,7 +75,8 @@ My process for conversion was to make a new table called `event` and map the sta
 
 #TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m) to hang off eventID in the eMoF table
 
-event <- tibble(eventID = survey_seines$seine_id,
+event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
+                eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
                 eventTime = paste0(survey_seines$set_time, "-0700"),
                 eventRemarks = paste3(survey_seines$survey_comments, survey_seines$seine_comments),

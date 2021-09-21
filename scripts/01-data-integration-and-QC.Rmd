@@ -22,6 +22,7 @@ library(tidyverse)
 library(lubridate)
 library(here)
 
+# Replace all these files manually with updated versions
 # Core tables
 sites <- read_csv(here("raw_data","sites.csv"))
 survey_data <- read_csv(here("raw_data", "survey_data.csv"))

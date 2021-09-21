@@ -34,7 +34,6 @@ predict_average_prop <- read_csv(here("report_data", "predict_average_prop.csv")
 predict_annual_prop <- readRDS(here("report_data", "predict_annual_prop.RDS"))
 peak_dates <- read_csv(here("report_data", "peak_dates.csv"))
 catch_intensity <- read_csv(here("report_data", "catch_intensity.csv"))
-# I can't get 2017 chum logistic growth line (beause we didn't capture of the migration) so I use points instead
 cu_cum_abund_annual_DI_2017 <- read_csv(here("report_data", "cu_cum_abund_DI_2017.csv"))
 # Length processed_data
 length_histo <- read_csv(here("report_data", "length_histo.csv"))
