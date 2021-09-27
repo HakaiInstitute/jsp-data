@@ -73,16 +73,6 @@ rna_pathogen_results <- read_csv(here("raw_data", "sample_results",  "rna_pathog
                                       "Hakai_Full_Export_15Apr20", "Results Copy.csv")) %>% 
    filter(ufn != "U2829") # this fish is removed because it doesn't exist in our records likely because metadata could not be confirmed so likely got excluded during QC
 
-#Krystals TODO's
-#TODO: Update all sample inventory files with 2020 dissection data
-#TODO: Add zooplankton results from JSP tows (found in Sam and Vanessa's data packages)
-#TODO: Integrate and then add sockeye, pink, and chum diet results from Vanessa and Sams data packages
-#TODO: Ask Brian if there any isotope sample results, if so add them here!
-#TODO: Integrate Jessica Garzke's RNA:DNA data results and Fatty  Acid results https://github.com/Pelagic-Ecosystems/Juvenile-Sockeye-RNA-DNA/tree/master/read_data
-#TODO: Update 2018 and 2019 stock_id results data
-
-#Brett TODOs:
-#TODO: Update species identifications based on 2018 and 2019 genetic stock ID results that show where we mis identified species in the field
 
 ```
 
