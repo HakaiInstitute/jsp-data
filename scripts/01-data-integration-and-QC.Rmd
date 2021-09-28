@@ -21,6 +21,7 @@ library(dm)
 library(tidyverse)
 library(lubridate)
 library(here)
+library(googlesheets4)
 
 # Replace all these files manually with updated versions
 # Core tables
@@ -46,7 +47,15 @@ ctd_jsp <- read_csv(here("raw_data", "ctd_jsp.csv"), guess_max = 100000)
 ctd_jsp_metadata <- read_csv(here("raw_data", "ctd_jsp_metadata.csv" ))
 
 # Sample inventory data
-dna_samples <- read_csv(here("raw_data", "sample_inventory", "dna_samples.csv"))
+# Read from Master JSP Inventory googlesheets
+mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
+
+dna_samples <- read_sheet(mi_slug, sheet = "dna_samples")
+
+#TODO: replace reading in sample inventory file code with code to read from googlesheets
+# Remove as you go
+
+
 zoop_tax_samples <- read_csv(here("raw_data", "sample_inventory", "zoop_tax.csv")) %>% 
    filter(tow_id != '2018-08-22_D09_1') # removes zoop sample that has no matching tow
 stomach_samples <- read_csv(here("raw_data", "sample_inventory", "stomach_samples.csv"), guess_max = 5000)
