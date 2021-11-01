@@ -13,7 +13,11 @@
 # common denominator among all years is that motile sea lice were identified to 
 # species. Thus the time series doesn't contain any stage data.
 
-# Each year a new table that contains the motile caligus and lep counts should be added to the time series in a similar way to how the other sea lice tables are combined. Alternatively, if the motile lab method stays the same, the data can just be added to JSP Master Data Tables google sheet and then exported as a .csv and saved in this repository.
+# Each year a new table that contains the motile caligus and lep counts should 
+# be added to the time series in a similar way to how the other sea lice tables 
+# are combined. Alternatively, if the motile lab method stays the same, the data
+# can just be added to JSP Master Data Tables google sheet and then exported as 
+# a .csv and saved in this repository.
 
 # This script deals with combining field observations with fine scale stage data,
 # and coarser lab counts. Motile sea lice counted through each of these methods
