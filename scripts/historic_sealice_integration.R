@@ -68,7 +68,7 @@ field_lice <- read_csv(here("raw_data", "sample_results", "sealice", "sealice_fi
 
 #sealice_lab_mot is motile counts of sealice conducted during fish dissections
 # from 2015, 2016, 2017, and 2018
-sealice_lab_mot <- read_csv(here("raw_data", "sample_results", "sealice", "sealice_lab_mot.csv"))
+sealice_lab_mot <- read_csv(here("raw_data", "sample_results", "sealice", "sealice_lab_mot.csv")) 
 
 #sealice_lab_fs_mot are the data from Lauren Portner's fine scale taxonomic id
 # that includes chalimus stages etc. It's mostly from 2015 fish (642 fish), 
@@ -128,11 +128,13 @@ lab_lice <- survey_seines_fish %>%
 rm(sealice_lab_motiles)
 
 # In 2020 the stages were not identified in the lab but just counts of motile leps, or caligus  were conducted. So I just downloaded the google sheet manually to jsp-data and import that table here separately and combine with lab_lice before joining with field_lice to produce the time series. In 2021 if the sea lice data are added to the JSP Master Data Tables googlesheet, just change the name of the .csv file when it's exported from googlesheets to indicate 2021 is included in that file as well, and then update the read_csv code below to refelect the name of the file.
-sealice_current <- read_csv(here("raw_data", "sealice_lab_mots_simple.csv")) %>%
+sealice_current <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", sheet = "sealice_lab_motiles_simple") %>%
   rename(motile_caligus_lab = cal_count, motile_lep_lab = lep_count) %>% 
   left_join(survey_seines_fish) %>% 
   select(ufn, site_id, species, survey_date, motile_caligus_lab, 
-         motile_lep_lab)
+         motile_lep_lab) %>% 
+  mutate(motile_caligus_lab = as.numeric(motile_caligus_lab), 
+         motile_lep_lab = as.numeric(motile_lep_lab)) 
 
 full_lab_lice <- bind_rows(lab_lice, sealice_current)
 rm(lab_lice, sealice_current)

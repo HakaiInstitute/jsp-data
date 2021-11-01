@@ -51,28 +51,26 @@ ctd_jsp_metadata <- read_csv(here("raw_data", "ctd_jsp_metadata.csv" ))
 mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
 
 dna_samples <- read_sheet(mi_slug, sheet = "dna_samples")
+zoop_tax_samples <- read_sheet(mi_slug, sheet = "zoop_tax")  %>% 
+   filter(tow_id != '2018-08-22_D09_1') # removes zoop sample that has no matching tow, added because Julian had this in the original script. Not sure if needed
+stomach_samples <- read_sheet(mi_slug, sheet = "stomach_samples")
+carcasses_samples <- read_sheet(mi_slug, sheet = "carcasses_samples")
+isotope_samples <- read_sheet(mi_slug, sheet = "isotope_samples")
+otolith_samples <- read_sheet(mi_slug, sheet = "otolith_samples")
+extra_muscle_samples <- read_sheet(mi_slug, sheet ="extra_muscle_samples")
+fatty_acid_samples <- read_sheet(mi_slug, sheet = "fatty_acid_samples")
+scale_samples <- read_sheet(mi_slug, sheet = "scale_samples")
+rna_dna_samples <- read_sheet(mi_slug, sheet = "rna_dna_samples")
+rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples")
+sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples") %>% distinct(sample_id, .keep_all = TRUE)
+fish_packages <- read_sheet(mi_slug, sheet = "fish_packages")
 
-#TODO: replace reading in sample inventory file code with code to read from googlesheets
-# Remove as you go
-
-
-zoop_tax_samples <- read_csv(here("raw_data", "sample_inventory", "zoop_tax.csv")) %>% 
-   filter(tow_id != '2018-08-22_D09_1') # removes zoop sample that has no matching tow
-stomach_samples <- read_csv(here("raw_data", "sample_inventory", "stomach_samples.csv"), guess_max = 5000)
 # sealice integration is long and complex so I broke it out into a separate script
 source(here::here("scripts", 'historic_sealice_integration.R'))
 sealice_id_samples <- read_csv(here("raw_data", "sample_inventory", "sea_lice_id_samples.csv"))
-carcasses_samples <- read_csv(here("raw_data", "sample_inventory", "carcasses_samples.csv"))
-isotope_samples <- read_csv(here("raw_data", "sample_inventory", "isotope_samples.csv"))
-otolith_samples <- read_csv(here("raw_data", "sample_inventory", "otolith_samples.csv"),  guess_max = 5000)
-extra_muscle_samples <- read_csv(here("raw_data", "sample_inventory", "extra_muscle_samples.csv"))
-fatty_acid_samples <- read_csv(here("raw_data", "sample_inventory", "fatty_acid_samples.csv"))
-scale_samples <- read_csv(here("raw_data", "sample_inventory", "scale_samples.csv"), guess_max = 6000)
-rna_dna_samples <- read_csv(here("raw_data", "sample_inventory", "rna_dna_samples.csv"))
-rna_pathogen_samples <- read_csv(here("raw_data", "sample_inventory", "rna_pathogen_samples.csv"),  guess_max = 30000)
-sealice_microbiome_samples <- read_csv(here("raw_data", "sample_inventory", "sea_lice_microbiome_samples.csv")) %>% 
-   distinct(sample_id, .keep_all = TRUE)
-fish_packages <- read_csv(here("raw_data", "sample_inventory", "fish_packages.csv"))
+
+
+
 
 # Sample results data
 # Various stock ID results are manually integrated in google sheets to produce this stock_id file that contains multiple years  of individual fish stock ID assignments. The underlying source  files  for that integration are stored in Hakai JSP Team Google Drive
@@ -163,7 +161,7 @@ salmon_dm <- salmon_only_pk %>%
 salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
 
 # manually  export the drawing from the viewer pane to figs to update the data model image
-dm_draw(salmon_dm)
+#dm_draw(salmon_dm)
 ```
 
 
