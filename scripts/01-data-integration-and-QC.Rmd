@@ -51,6 +51,7 @@ ctd_jsp_metadata <- read_csv(here("raw_data", "ctd_jsp_metadata.csv" ))
 mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
 
 dna_samples <- read_sheet(mi_slug, sheet = "dna_samples")
+1
 zoop_tax_samples <- read_sheet(mi_slug, sheet = "zoop_tax")  %>% 
    filter(tow_id != '2018-08-22_D09_1') # removes zoop sample that has no matching tow, added because Julian had this in the original script. Not sure if needed
 stomach_samples <- read_sheet(mi_slug, sheet = "stomach_samples")
