@@ -19,31 +19,31 @@ library(hakaiR)
 
 
      # Survey Data
-survey_seines <- read_csv(here("report_data", "survey_seines.csv")) %>%
+survey_seines <- read_csv(here("supplemental_materials", "report_data", "survey_seines.csv")) %>%
   rename("Sockeye" = "so_total", "Pink" = "pi_total", "Chum" = "cu_total")
-lice_bootstraps <- read_csv(here("report_data", "lice_bootstraps.csv"))
+lice_bootstraps <- read_csv(here("supplemental_materials", "report_data", "lice_bootstraps.csv"))
 # Temp processed_data
-ctd_all <- read_csv(here("report_data", "ctd_all.csv"))
-temperature_anomaly_data <- read_csv(here("report_data", "temperature_anomaly_data.csv"))
-min_max_data <- read_csv(here("report_data", "min_max_temps.csv"))
-average_temps <- read_csv(here("report_data", "average_temps.csv"))
-proportion <- read_csv(here("report_data", "proportion.csv"))
+ctd_all <- read_csv(here("supplemental_materials", "report_data", "ctd_all.csv"))
+temperature_anomaly_data <- read_csv(here("supplemental_materials", "report_data", "temperature_anomaly_data.csv"))
+min_max_data <- read_csv(here("supplemental_materials", "report_data", "min_max_temps.csv"))
+average_temps <- read_csv(here("supplemental_materials", "report_data", "average_temps.csv"))
+proportion <- read_csv(here("supplemental_materials", "report_data", "proportion.csv"))
 # Migration Timing processed_data
-predict_average_prop <- read_csv(here("report_data", "predict_average_prop.csv"))
-predict_annual_prop <- readRDS(here("report_data", "predict_annual_prop.RDS"))
-peak_dates <- read_csv(here("report_data", "peak_dates.csv"))
-catch_intensity <- read_csv(here("report_data", "catch_intensity.csv"))
-cu_cum_abund_annual_DI_2017 <- read_csv(here("report_data", "cu_cum_abund_DI_2017.csv"))
+predict_average_prop <- read_csv(here("supplemental_materials", "report_data", "predict_average_prop.csv"))
+predict_annual_prop <- readRDS(here("supplemental_materials", "report_data", "predict_annual_prop.RDS"))
+peak_dates <- read_csv(here("supplemental_materials", "report_data", "peak_dates.csv"))
+catch_intensity <- read_csv(here("supplemental_materials", "report_data", "catch_intensity.csv"))
+cu_cum_abund_annual_DI_2017 <- read_csv(here("supplemental_materials", "report_data", "cu_cum_abund_DI_2017.csv"))
 # Length processed_data
-length_histo <- read_csv(here("report_data", "length_histo.csv"))
-fish_cond <- read_csv(here("report_data", "fish_cond.csv"))
+length_histo <- read_csv(here("supplemental_materials", "report_data", "length_histo.csv"))
+fish_cond <- read_csv(here("supplemental_materials", "report_data", "fish_cond.csv"))
 fish_cond$species <- factor(fish_cond$species)
 fish_cond$species <- fct_relevel(fish_cond$species, "Sockeye" = "SO", "Pink" = 'PI', 'Chum' = 'CU', 'Coho' = 'CO')
 # Must match the order of the species re ordered above
 levels(fish_cond$species) <- c('Sockeye', 'Pink', 'Chum', 'Coho')
 
 # Standardized z-scores
-heatmap_data <- readRDS(here("report_data", "heatmap_data.RDS"))
+heatmap_data <- readRDS(here("supplemental_materials", "report_data", "heatmap_data.RDS"))
 
 
 spp_labels <- c(CU = "Chum", PI = "Pink", SO = "Sockeye", DI = "Discovery Islands",
@@ -338,7 +338,7 @@ sst_nice_table <- sst_annual_mean %>%
 ```
 
 ```{r map, fig.cap = "Sampling locations in 2019", out.width="90%"}
-include_graphics(here('map.png'))
+include_graphics(here('supplemental_materials', 'map.png'))
 ```
 
 # Abstract 
@@ -417,7 +417,7 @@ heatmap_data$measure <- heatmap_data$measure %>%
   facet_wrap(. ~ measure, ncol = 1, scales = "free")
 )
 
-ggsave(here("figs", "heatmap.png"), width = 13, height = 11)
+ggsave(here("supplemental_materials", "figs", "heatmap.png"), width = 13, height = 11)
 ```
 
 
@@ -465,7 +465,7 @@ ggplot()+
   theme(legend.position = c(0.9, 0.5)) +
   facet_grid(species ~ .)
     
-ggsave(here("figs", "migration_timing.png"), width = 9, height = 6)
+ggsave(here("supplemental_materials", "figs", "migration_timing.png"), width = 9, height = 6)
 ```
 
 ```{r catch-intensity-plot, fig.cap = "The catch intensity (our proxy for abundance) of sockeye, pink, and chum salmon in the Discovery Islands. Numbers under each bar indicate the number of seines in which the species was caught, and error bars indicate the 95 percent confidence region.", out.width="90%"}
@@ -486,7 +486,7 @@ catch_intensity$species <- catch_intensity$species %>%
   scale_fill_manual(values = hakaiR::hakai_palette("hakai_salmon")))
 
 
-ggsave(here("figs", "catch_intesity.png"))
+ggsave(here("supplemental_materials", "figs", "catch_intesity.png"))
 ```
 
 ```{r proportion-plot, out.width="90%", fig.cap="The annual proportion of fish captured in the Discovery Islands and Johnstone Strait combined."}
@@ -503,7 +503,7 @@ proportion$species <- proportion$species %>%
       scale_fill_manual(values = hakai_palette("hakai_salmon")) +
       labs(fill = "Species") 
 
-ggsave(here("figs", "proportions.png"))
+ggsave(here("supplemental_materials", "figs", "proportions.png"))
 ```
 
 ```{r length-plot, out.width="90%", fig.cap="Distributions of juvenile salmon fork lengths for each year in the Discovery Islands and Johnstone Strait. Note that these distributions contain multiple age classes."}
@@ -525,7 +525,7 @@ ggplot(DI_length_histo, aes(fork_length, y = fct_rev(factor(year)), fill = speci
   guides(fill = FALSE) +
   scale_fill_manual(values = hakai_palette("hakai_salmon"))
 
-ggsave(here("figs", "lengths.png"), width = 8, height = 7)
+ggsave(here("supplemental_materials", "figs", "lengths.png"), width = 8, height = 7)
 ```
 
 
@@ -555,7 +555,7 @@ ggplot(data = fish_cond, aes(x = fork_length, y = weight, colour= Years)) +
   #theme(legend.position = c(.9, .9), legend.title=element_blank()) +
   facet_wrap(~species, nrow=2)
 
-ggsave(here("figs", "length_weight.png"), width = 8, height = 6)
+ggsave(here("supplemental_materials", "figs", "length_weight.png"), width = 8, height = 6)
 
 ```
 
@@ -588,7 +588,7 @@ ggplot(aes(x = year, y = mean_abund, fill = louse_species)) +
   #coord_cartesian(ylim = c(0, 1.7)) +
 
 
-ggsave(here("figs", "sealice_abundance.png"), width = 7, height = 4)
+ggsave(here("supplemental_materials", "figs", "sealice_abundance.png"), width = 7, height = 4)
 ```
 
 
@@ -616,7 +616,7 @@ ggplot(data = temperature_anomaly_data, aes(x = yday, y = mean_temp)) +
       labs(x = "Date", y = "Temperature [°C]") +
       coord_cartesian(xlim = c(32,213))
 
-ggsave(here("figs", "sst.png"), width = 8, height = 6)
+ggsave(here("supplemental_materials", "figs", "sst.png"), width = 8, height = 6)
 
 ```
 

@@ -20,13 +20,13 @@ year,Estimate,SD,Z,measure,spp
 2019,114.5,9.3,0.58,Length,Sockeye
 2020,107.8,10.41,-0.3,Length,Sockeye
 2021,106.7,13.95,-0.44,Length,Sockeye
-2015,0.78,0.53,1.45,Sea lice Abundance,Sockeye
-2016,0.26,0.2,-0.93,Sea lice Abundance,Sockeye
-2017,0.36,0.25,-0.47,Sea lice Abundance,Sockeye
-2018,0.21,0.2,-1.16,Sea lice Abundance,Sockeye
+2015,0.79,0.54,1.49,Sea lice Abundance,Sockeye
+2016,0.26,0.2,-0.91,Sea lice Abundance,Sockeye
+2017,0.34,0.24,-0.55,Sea lice Abundance,Sockeye
+2018,0.21,0.19,-1.14,Sea lice Abundance,Sockeye
 2019,0.66,0.93,0.9,Sea lice Abundance,Sockeye
-2020,0.61,0.64,0.67,Sea lice Abundance,Sockeye
-2021,0.36,0.3,-0.47,Sea lice Abundance,Sockeye
+2020,0.6,0.64,0.63,Sea lice Abundance,Sockeye
+2021,0.37,0.32,-0.41,Sea lice Abundance,Sockeye
 2015,NA,NA,NA,Migration Timing,Pink
 2016,June 15,NA,-0.16,Migration Timing,Pink
 2017,NA,NA,NA,Migration Timing,Pink
@@ -48,13 +48,13 @@ year,Estimate,SD,Z,measure,spp
 2019,99.5,16.65,0.41,Length,Pink
 2020,96.8,15.27,0.07,Length,Pink
 2021,88.3,11.02,-1.02,Length,Pink
-2015,0.8,0.82,1.77,Sea lice Abundance,Pink
-2016,0.31,0.26,-1.17,Sea lice Abundance,Pink
-2017,0.42,0.47,-0.51,Sea lice Abundance,Pink
-2018,0.38,0.39,-0.75,Sea lice Abundance,Pink
-2019,0.49,0.62,-0.09,Sea lice Abundance,Pink
-2020,0.64,0.54,0.81,Sea lice Abundance,Pink
-2021,0.49,0.54,-0.09,Sea lice Abundance,Pink
+2015,0.8,0.82,1.76,Sea lice Abundance,Pink
+2016,0.29,0.2,-1.25,Sea lice Abundance,Pink
+2017,0.42,0.47,-0.48,Sea lice Abundance,Pink
+2018,0.39,0.39,-0.66,Sea lice Abundance,Pink
+2019,0.48,0.6,-0.13,Sea lice Abundance,Pink
+2020,0.64,0.55,0.82,Sea lice Abundance,Pink
+2021,0.49,0.55,-0.07,Sea lice Abundance,Pink
 2015,June 05,NA,-1.61,Migration Timing,Chum
 2016,June 15,NA,-0.09,Migration Timing,Chum
 2017,June 26,NA,1.59,Migration Timing,Chum
@@ -77,16 +77,16 @@ year,Estimate,SD,Z,measure,spp
 2020,106,13.69,0.12,Length,Chum
 2021,99.1,15.01,-0.89,Length,Chum
 2015,0.51,0.43,0.15,Sea lice Abundance,Chum
-2016,0.22,0.23,-1.29,Sea lice Abundance,Chum
-2017,0.5,0.41,0.1,Sea lice Abundance,Chum
+2016,0.22,0.23,-1.3,Sea lice Abundance,Chum
+2017,0.51,0.4,0.15,Sea lice Abundance,Chum
 2018,0.21,0.26,-1.34,Sea lice Abundance,Chum
-2019,0.68,0.93,0.99,Sea lice Abundance,Chum
-2020,0.73,0.8,1.24,Sea lice Abundance,Chum
+2019,0.67,0.93,0.95,Sea lice Abundance,Chum
+2020,0.73,0.8,1.25,Sea lice Abundance,Chum
 2021,0.51,0.56,0.15,Sea lice Abundance,Chum
-2015,9.54,0.22,0.85,Sea-surface Temperature,Northern Strait of Georgia
-2016,9.79,0.16,1.78,Sea-surface Temperature,Northern Strait of Georgia
-2017,9.06,0.13,-0.95,Sea-surface Temperature,Northern Strait of Georgia
-2018,9.21,0.13,-0.4,Sea-surface Temperature,Northern Strait of Georgia
-2019,9.14,0.12,-0.66,Sea-surface Temperature,Northern Strait of Georgia
-2020,9.36,0.16,0.16,Sea-surface Temperature,Northern Strait of Georgia
-2021,9.11,0.19,-0.78,Sea-surface Temperature,Northern Strait of Georgia
+2015,11.28,0.98,-0.54,Sea-surface Temperature,Northern Strait of Georgia
+2016,11.63,0.93,0.21,Sea-surface Temperature,Northern Strait of Georgia
+2017,11.26,1.1,-0.58,Sea-surface Temperature,Northern Strait of Georgia
+2018,11.87,1.03,0.74,Sea-surface Temperature,Northern Strait of Georgia
+2019,11.03,1.03,-1.11,Sea-surface Temperature,Northern Strait of Georgia
+2020,12.36,1.06,1.81,Sea-surface Temperature,Northern Strait of Georgia
+2021,11.29,1.31,-0.53,Sea-surface Temperature,Northern Strait of Georgia
