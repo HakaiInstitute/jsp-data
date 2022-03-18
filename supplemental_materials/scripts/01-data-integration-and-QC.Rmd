@@ -1,0 +1,351 @@
+---
+title: "Hakai Institute Juvenile Salmon Data Package Quality Report"
+author: "Brett Johnson"
+date: '`r date()`'
+output:
+ html_document:
+   theme: cosmo
+   code_folding: hide
+   toc: true
+   toc_float: true
+   number_sections: true
+---
+
+This scripts purpose is to ingest, join, and QC the various sources of data associated with the Hakai JSP. The tables in the raw_data folder are mostly exported directly from the JSP Master Data Tables googlesheets workbook and other various sources of 'raw data'. Most of these tables are not strictly 'raw data' because many of them have already undergone various levels of QA/QC before being added to this repository. The JSP tables are 'normalized' such that the database is split into multiple tables such that there's no unnecessary replication of data. This helps avoid storing the same piece of data in multiple tables where if something needed to be changed it would have to be changed in multiple places. This approach is sometimes known as the 'single point of truth'. It also provides the most felxible format for storing and joining data.  Some data sets are not strictly normalized in the raw_data folder and this is  likely for ease of data entry. Once all tables are QC'd here and some transformed to be more tidy, they are written to the tidy_data folder which is the 'publishable' data set that is  used  for reporting and analysis.
+
+If errors are found  in the data in this script, they can either be corrected in the JSP Master Data Tables google sheet as long as the updated googlesheet is exported again to this repository, or the edits can be made directly via this script depending on what makes most sense. 
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
+library(dm)
+library(tidyverse)
+library(lubridate)
+library(here)
+library(googlesheets4)
+
+
+# Read tables in from master JSP database and write out to 'raw-data' folder
+# Core tables
+mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
+
+sites <- read_sheet(mdt_slug, sheet = "sites", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sites.csv"))
+1
+survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "survey_data.csv"))
+
+seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "seine_data.csv"))
+
+fish_field_data <- read_sheet(mdt_slug, sheet = "fish_field_data", na = c("NA", ""),
+                              guess_max = 20000) %>% 
+  write_csv(here("supplemental_materials", "raw_data", "fish_field_data.csv"))
+
+fish_lab_data <- read_sheet(mdt_slug, sheet = "fish_lab_data",
+                            na = c("NA", ""), guess_max = 8000) %>% 
+  write_csv(here("supplemental_materials", "raw_data", "fish_lab_data.csv"))
+
+site_activity <- read_sheet(mdt_slug, sheet = "site_activity",
+                            na = c("NA", "")) %>% 
+   mutate(school_id = paste(survey_id, school_number, sep = "-")) %>%
+  write_csv(here("supplemental_materials", "raw_data", "site_activity.csv"))
+
+zoop_tows <- read_csv(here("supplemental_materials", "raw_data", "zoop_tows.csv")) 
+
+bycatch_mort <- read_sheet(mdt_slug, "bycatch_mort", na = c("NA", "")) 
+bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm_count), 1:5] %>%
+  mutate(prefix = "bycatch-",
+         suffix = 1:nrow(.),
+         occurrenceID = paste0(prefix, suffix)
+  ) %>% 
+  select(-prefix, -suffix) %>% 
+  write_csv(here("supplemental_materials", "raw_data", "bycatch_mort.csv"))
+
+# Environmental data from JSP sites and surveys
+ysi <- read_sheet(mdt_slug, "ysi", na = c("NA", "")) %>% 
+  write_csv(here("supplemental_materials", "raw_data", "ysi.csv"))
+
+
+library(rerddap)
+url <- "https://catalogue.hakai.org/erddap/"
+
+qu39_ctd <- tabledap("HakaiWaterPropertiesInstrumentProfileProvisional", 
+                          url = url,
+                          'station="QU39"'
+                          ) %>% 
+  mutate(device_firmware = as.numeric(device_firmware))
+
+jsp_ctd_casts <- tabledap("HakaiWaterPropertiesInstrumentProfileProvisional", 
+                          url = url,
+                          'cruise=~"(DISOCKEYE|DI_W,DISOCKEYE|DI_C,DISOCKEYE|JSSOCKEYE)"'
+                          )
+
+ctd_all <- bind_rows(qu39_ctd, jsp_ctd_casts)
+rm(qu39_ctd, jsp_ctd_casts)
+
+# Sample inventory data
+# Read from Master JSP Inventory googlesheets
+mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
+
+dna_samples <- read_sheet(mi_slug, sheet = "dna_samples", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "dna_samples.csv"))
+zoop_tax_samples <- read_sheet(mi_slug, sheet = "zoop_tax", na = c("NA", ""))  %>% 
+   filter(tow_id != '2018-08-22_D09_1') %>% # removes zoop sample that has no matching tow, added because Julian had this in the original script. Not sure if needed
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "zoop_tax_samples.csv"))
+stomach_samples <- read_sheet(mi_slug, sheet = "stomach_samples", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "stomach_samples.csv"))
+carcasses_samples <- read_sheet(mi_slug, sheet = "carcasses_samples", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "carcasses_samples.csv"))
+isotope_samples <- read_sheet(mi_slug, sheet = "isotope_samples", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "isotope_samples.csv"))
+otolith_samples <- read_sheet(mi_slug, sheet = "otolith_samples", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "otolith_samples.csv"))
+extra_muscle_samples <- read_sheet(mi_slug, sheet ="extra_muscle_samples", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "extra_muscle_samples.csv"))
+fatty_acid_samples <- read_sheet(mi_slug, sheet = "fatty_acid_samples", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fatty_acid_samples.csv"))
+scale_samples <- read_sheet(mi_slug, sheet = "scale_samples", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "scale_samples.csv"))
+rna_dna_samples <- read_sheet(mi_slug, sheet = "rna_dna_samples", na = c("NA", "")) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_dna_samples.csv"))
+rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_pathogen_samples.csv"))
+sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples", na = c("NA", "")) %>% 
+  distinct(sample_id, .keep_all = TRUE) %>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sealice_microbiome_samples.csv"))
+fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
+
+# sealice integration is long and complex so I broke it out into a separate script
+source(here::here("supplemental_materials", "scripts", 'historic_sealice_integration.R'))
+sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sea_lice_id_samples.csv"))%>% 
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sea_lice_id_samples.csv"))
+
+
+# Sample results data
+# Various stock ID results are manually integrated in google sheets to produce this stock_id file that contains multiple years  of individual fish stock ID assignments. The underlying source  files  for that integration are stored in Hakai JSP Team Google Drive
+stock_id <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "stock_id.csv"))
+
+# salmon_diets_coarse.csv is the result of a short trial in 2019 to implement a coarse gut content assessment in the lab. The method was too time consuming and was abandoned. 
+# TODO Update zooplankton integration data source
+salmon_diets_coarse <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "salmon_diets_coarse.csv"))
+#source(here('scripts', 'zooplankton-integration.R'))
+rna_pathogen_results <- read_csv(here("supplemental_materials", "raw_data", "sample_results",  "rna_pathogen_data",
+                                      "Hakai_Full_Export_15Apr20", "Results Copy.csv")) %>% 
+   filter(ufn != "U2829") # this fish is removed because it doesn't exist in our records likely because metadata could not be confirmed so likely got excluded during QC
+
+
+```
+
+# Relational Data Model Integrity
+
+The JSP database is broken down into several tables that relate to each other via a column that is common between data tables that are used to be joined together. Every table must have one column that uniquely identifies a row. This is called a primary key. Other tables can be joined if they share that same column which in this case is known as a foreign key. Every foreign key must have a matching primary key in the parent table. This is known as referential integrity. In building the data model, I check for referential integrity through the process using `dm_examine_constraints`. Doing this after you add primary  keys checks that each primary key is unique, after adding foreign keys it checks that every foreign key value has a corresponding match in the table that contains the primary key so that there are no orphaned child records (that don't  have a  match  in  the  parent  table). As more results are added to this database, they  should be added to the data model with appropriate primary and foreign keys.
+
+```{r Relational Data Model}
+
+# Create relational data model list object
+salmon_dm_no_keys <- dm(survey_data, seine_data, fish_field_data, fish_lab_data, 
+                        sites, bycatch_mort, site_activity, combined_motile_lice,
+                        ysi, ctd_all, dna_samples, stock_id,
+                        zoop_tax_samples, zoop_tows, stomach_samples, salmon_diets_coarse,
+                        sealice_id_samples, carcasses_samples, isotope_samples,
+                        rna_dna_samples, rna_pathogen_samples, otolith_samples,
+                        extra_muscle_samples, fatty_acid_samples, scale_samples,
+                        sealice_microbiome_samples, fish_packages, rna_pathogen_results)
+
+# Add Primary Keys (column that has only unique values)
+salmon_only_pk <- salmon_dm_no_keys %>% 
+   dm_add_pk(survey_data, survey_id) %>% 
+   dm_add_pk(seine_data, seine_id) %>% 
+   dm_add_pk(fish_lab_data, ufn) %>% 
+   dm_add_pk(fish_field_data, ufn) %>% 
+   dm_add_pk(sites, site_id) %>% 
+   dm_add_pk(dna_samples, sample_id) %>% 
+   dm_add_pk(stock_id, sample_id) %>% 
+   dm_add_pk(bycatch_mort, occurrenceID) %>% 
+   dm_add_pk(site_activity, school_id) %>% 
+   dm_add_pk(combined_motile_lice, ufn) %>% 
+   dm_add_pk(zoop_tax_samples, sample_id) %>% 
+   dm_add_pk(zoop_tows, tow_id) %>% 
+   dm_add_pk(stomach_samples, sample_id) %>% 
+   dm_add_pk(salmon_diets_coarse, sample_id) %>% 
+   dm_add_pk(sealice_id_samples, ufn) %>% 
+   dm_add_pk(carcasses_samples, sample_id) %>% 
+   dm_add_pk(isotope_samples, sample_id) %>% 
+   dm_add_pk(rna_dna_samples, sample_id) %>% 
+   dm_add_pk(rna_pathogen_samples, sample_id) %>% 
+   dm_add_pk(otolith_samples, sample_id) %>% 
+   dm_add_pk(extra_muscle_samples, sample_id) %>% 
+   dm_add_pk(fatty_acid_samples, sample_id) %>% 
+   dm_add_pk(scale_samples, sample_id) %>% 
+   dm_add_pk(sealice_microbiome_samples, sample_id) %>% 
+   dm_add_pk(fish_packages, package_id)  %>% 
+   dm_add_pk(rna_pathogen_results, ufn)
+   
+salmon_only_pk %>% dm_examine_constraints() # checks for duplicates in PK
+
+# Add foreign keys   
+salmon_dm <- salmon_only_pk %>% 
+   dm_add_fk(seine_data, survey_id, survey_data) %>% 
+   dm_add_fk(fish_field_data, seine_id, seine_data) %>% 
+   dm_add_fk(fish_lab_data, ufn, fish_field_data) %>% 
+   dm_add_fk(survey_data, site_id, sites) %>% 
+   dm_add_fk(bycatch_mort, seine_id, seine_data) %>% 
+   dm_add_fk(dna_samples, ufn, fish_field_data) %>% 
+   dm_add_fk(stock_id, sample_id, dna_samples) %>% 
+   dm_add_fk(site_activity, survey_id, survey_data) %>% 
+   dm_add_fk(combined_motile_lice, ufn, fish_field_data) %>% 
+   dm_add_fk(zoop_tax_samples, tow_id, zoop_tows) %>% 
+   dm_add_fk(stomach_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(salmon_diets_coarse, sample_id, stomach_samples) %>% 
+   dm_add_fk(sealice_id_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(carcasses_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(isotope_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(rna_dna_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(rna_pathogen_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(otolith_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(extra_muscle_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(fatty_acid_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(scale_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(sealice_microbiome_samples, ufn, fish_lab_data) %>% 
+   dm_add_fk(fish_packages, seine_id, seine_data) %>% 
+   dm_add_fk(rna_pathogen_results, ufn, fish_lab_data)
+   
+
+salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
+
+# manually  export the drawing from the viewer pane to figs to update the data model image
+dm_draw(salmon_dm)
+```
+
+
+# Data Quality
+
+Now that the data model integrity is established, we can check for various  data quality parameters. This barrage of tests are the result of thinking ahead about what might come up as  quality issues but also the result  finding errors through out the data processing, analysis,  and visualization  proccess that have  been included here as a result of experience finding outliers or issues. Thus it is encouraged to continue adding quality checks here as issues come up. Test even the most basic assumptions you might make about the data.
+
+## Summary of collections
+
+```{r}
+
+n_fish_retained <- nrow(fish_field_data)
+
+n_fish_dissected <- nrow(fish_lab_data)
+
+n_seines <- nrow(seine_data)
+
+n_seasons <- max(year(survey_data$survey_date)) - min(year(survey_data$survey_date)) + 1
+```
+
+In total we have retained `r  n_fish_retained` fish, and dissected `r n_fish_dissected` and conducted `r n_seines` seines over `r n_seasons` years of repeated measurements. 
+
+```{r}
+fish_lab_data %>% group_by(dissector) %>% 
+   summarize(n_dissected = n()) %>% 
+   arrange(n_dissected, desc = TRUE) %>% 
+   knitr::kable()
+                
+```
+
+
+## Sampling Locations
+
+```{r}
+
+#Check that all  fish have a location associated with them
+std_survey_seines_w_catch <- survey_seines_fish %>%
+   filter(fish_retained == "yes",
+          survey_type == "standard",
+          collection_protocol == "SEMSP")
+
+no_lat <- std_survey_seines_w_catch %>% filter(is.na(lat)) %>% 
+   select(survey_id, seine_id, survey_type, collection_protocol, fish_retained, lat, long)
+
+nrow <- nrow(no_lat)
+
+no_long <- std_survey_seines_w_catch %>% filter(is.na(long)) %>% 
+   select(survey_id, seine_id, survey_type, collection_protocol, fish_retained, lat, long)
+
+long_nrow <- nrow(no_long)
+
+ifelse(nrow == 0, paste0("All fish have locations"), (knitr::kable(no_lat, caption = "Table. Fish with no associated location information")))
+
+rm(std_survey_seines_w_catch, no_lat, nrow)
+```
+
+
+```{r}
+library(leaflet)
+library(ggridges)
+library(leaflet.esri)
+
+#Visually check to see if any lat and longs are on land and then hover over the site to identify the problematic seine_id.
+
+survey_seines <- left_join(survey_data, seine_data)
+
+map_data <- survey_seines %>% select(lat, lon = long, site = seine_id) %>% 
+   mutate(type = "seine") %>% 
+  filter(lat != "NA",
+         lon != "NA") %>% 
+  group_by(site) %>% 
+   drop_na() %>% 
+      ungroup()
+ 
+pal <- colorFactor(c("navy", "red"), domain = c("seine", "ocgy"))
+    
+leaflet() %>% 
+      setView(lng = -125.7, lat = 50.4, zoom = 7) %>% 
+      addCircleMarkers(data = map_data, color = ~pal(type),
+                       stroke = FALSE, fillOpacity = 1,
+                    label = ~as.character(site),
+                       labelOptions = labelOptions(noHide = F, direction = "bottom")
+      ) %>%
+      addProviderTiles(providers$Esri.OceanBasemap,  options = providerTileOptions(opacity = 1)) %>%
+      addEsriTiledMapLayer(url = "https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer") %>%  
+      addProviderTiles(providers$CartoDB.VoyagerOnlyLabels) %>% 
+      addMiniMap()
+
+#TODO sort out  DE374N1, DE111N1 because they appear to be on land
+rm(map_data, survey_seines)
+```
+
+```{r fish condition}
+
+#sometimes fish lengths and weights are entered incorrectly and you end up with extreme  condition values.
+
+fish_k <- fish_lab_data %>% 
+   mutate(k = (weight * 10^5) / (fork_length^3)) %>%
+   drop_na(k) %>% 
+   select(ufn, fork_length, weight, k) %>% 
+   filter(k < .5 | k >  2) #Anything outside this range is suspect, though U1087 and U23712 seems legit and has been double checked.
+
+knitr::kable(fish_k)
+
+rm(fish_k)
+```
+
+```{r, create wide view of all fish data}
+stocks <- left_join(stock_id, dna_samples)
+
+jsp_catch_and_bio_data_complete <- survey_seines_fish %>% 
+  left_join(stocks, by = "ufn") %>% 
+  left_join(stock_id) %>% 
+  left_join(combined_motile_lice) %>% 
+  left_join(fish_lab_data)
+
+write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
+rm(jsp_catch_and_bio_data_complete)
+rm(stocks)
+```
+
+```{r}
+# Save all data frames currently in environment to tidy_data folder
+# List all data frames in env.
+dfs <- Filter(function(x) is(x, "data.frame"), mget(ls()))
+
+# Write all data frame objects as .csv files to tidy data
+#Uncomment below to save and replace all data frames listed in your Environement (only do this if you have a clean set of files)
+for (i in 1:length(dfs)){
+  write_csv(dfs[[i]], here::here("supplemental_materials","tidy_data", paste(names(dfs[i]), ".csv",  sep = "")))
+}
+
+```

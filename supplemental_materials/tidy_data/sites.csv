@@ -1,0 +1,42 @@
+site_id,site_name,region,zone,site_priority,pfma,site_notes,survey_start_lat,survey_start_lon,survey_end_lat,survey_end_lon,ocgy_std_lat,ocgy_std_lon
+D01,Hurtado Point,DI,E,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D02,Kinghorn Island,DI,E,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D03,Sutil Narrows,DI,E,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D04,Francisco Point,DI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D05,Lewis Channel,DI,E,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D06,Gowlland Harbour,DI,W,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D07,Hoskyn Channel,DI,C,NA,13-12,NA,NA,NA,NA,NA,NA,NA
+D08,Calm Channel,DI,E,NA,13-19,Primary site in 2017. Discontinued in 2018,50.314967,-125.054194,50.325114,-125.035103,50.319983,-125.040963
+D09,Okisollo Channel,DI,C,1,13-10,NA,50.302844,-125.339717,50.310328,-125.318125,50.307276,-125.329834
+D10,Hall Point,DI,E,1,13-23,NA,50.445504,-125.28319,50.435912,-125.263308,50.443069,-125.272498
+D11,Turn Island,DI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D12,Hyacinthe Bay,DI,C,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D20,Godwin Point,DI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D21,Hemming Bay,DI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D22,McMullen Point,DI,W,2,13-7,Primary site in 2017 and first half of 2018,50.245625,-125.396517,50.230994,-125.394444,50.244069,-125.397371
+D23,Discovery East,DI,W,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D24,Surge Narrows,DI,C,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D25,Twin Islands,DI,E,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D26,Oyster Bay,DI,W,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D27,Granite Point,DI,W,1,13-8,Secondary site in 2017 and second half of 2018,50.274449,-125.381286,50.269228,-125.360408,50.271879,-125.376922
+D28,Knox Bay,DI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+D29,Raza Island,DI,E,NA,13-19,Secondary site in 2017. Discontinued in 2018,50.302405,-125.03941,50.3101,-125.017897,50.303175,-125.031603
+D30,Chonat Bay,DI,C,2,13-10,NA,50.294022,-125.316457,50.289444,-125.322969,50.291829,-125.320003
+D31,Barnes Bay,DI,C,3,13-10,Established 2017. No set survey transect start/end coordinates as of 2019,NA,NA,NA,NA,50.31975,-125.270167
+D32,Deepwater Bay,DI,W,NA,13-7,Established 2017. No set survey transect start/end coordinates as of 2019,NA,NA,NA,NA,50.178767,-125.338256
+D33,South Raza Island,DI,E,3,15-5,Established 2017. No set survey transect start/end coordinates as of 2019,NA,NA,NA,NA,50.286961,-124.977972
+D34,Penn Islands,DI,E,3,13-17,Established 2017. No set survey transect start/end coordinates as of 2019,NA,NA,NA,NA,50.186914,-125.034097
+J01,Hanson North,JS,N,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J02,Swanson Island,JS,N,2,12-5,NA,50.60004,-126.69632,50.605248,-126.716388,50.599433,-126.703364
+J03,Cracroft Point,JS,N,1,12-3,NA,50.547536,-126.677272,50.544464,-126.652425,50.546936,-126.671869
+J04,Forward Bay,JS,N,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J05,Stimpson Point,JS,N,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J06,Blenkinsop Bay,JS,N,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J07,South Mouth,JS,S,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J08,Naka Creek,JS,S,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J09,Bauza Cove,JS,S,1,12-4,Formerly known as “Blinkhorn Peninsula” & renamed after conclusion of the 2019 field season. Erroneously treated as secondary site in 2019.,50.543639,-126.789411,50.544089,-126.815006,50.544011,-126.814611
+J10,Hanson South,JS,N,NA,NA,NA,NA,NA,NA,NA,NA,NA
+J11,Blinkhorn Bay,JS,S,2,12-3,Erroneously treated as primary site in 2019. Formerly classified as J09 in 2015-2016 until divergence in 2017 and establishment as separate site.,50.535756,-126.758967,50.539811,-126.783186,50.539058,-126.777119
+J12,West Kaikash Creek,JS,S,3,12-3,NA,50.526658,-126.723464,50.533069,-126.746053,50.526406,-126.727619
+J13,Sophia Islands,JS,N,3,12-21,NA,50.53372,-126.62317,50.5262,-126.61338,50.53779,-126.63191
+D35,Denham Bay,DI,E,2,13-23,No set survey transect start/end cooordinates as of 2019,NA,NA,NA,NA,50.456669,-125.267602

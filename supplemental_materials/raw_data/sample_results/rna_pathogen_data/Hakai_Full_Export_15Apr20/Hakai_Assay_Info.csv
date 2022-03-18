@@ -1,0 +1,49 @@
+Assay_Name_MGL,Agent Name,Category,Agent Type,Assay LOD Calc_95
+ae_sal,Aeromonas salmonicida,Pathogen,Bacterium,25.61
+Arena1,Salmon pescarenavirus-1,Pathogen,Virus,28.26
+arena2,Salmon pescarenavirus-2,Pathogen,Virus,28
+ascv,Atlantic salmon calicivirus,Pathogen,Virus,27.14
+c_b_cys,Candidatus Branchiomonas cysticola,Pathogen,Bacterium,25.71
+ce_sha,Ceratomyxa shasta,Pathogen,Parasite,28.5
+cov,Pacific salmon nidovirus,Pathogen,Virus,27.69
+cr_sal,Cryptobia salmositica,Pathogen,Parasite,24.34
+ctv,Cutthroat trout virus-2,Pathogen,Virus,28.16
+de_sal,Dermocystidium salmonis,Pathogen,Parasite,25.49
+fa_mar,Facilispora margolisi,Pathogen,Parasite,30.55
+fl_psy,Flavobacterium psychrophilum,Pathogen,Bacterium,29.46
+hkg,Housekeeping,Housekeeping,Housekeeping,45
+ic_hof,Ichthyophonus hoferi,Pathogen,Parasite,24.17
+ic_mul,Ichthyophthirius multifiliis,Pathogen,Parasite,23.7
+ihnv,Infectious hematopoietic necrosis virus,Pathogen,Virus,27.64
+ku_thy,Kudoa thyrsites,Pathogen,Parasite,26.23
+lo_sal,Loma salmonae,Pathogen,Parasite,25.42
+mitov,putative Narna-like virus,Pathogen,Virus,28.54
+my_arc,Myxobolus arcticus,Pathogen,Parasite,26.8
+my_ins,Myxobolus insidiosus,Pathogen,Parasite,26.43
+na_sal,Nanophyetus salmincola,Pathogen,Parasite,24.3
+ne_per,Neoparamoeba perurans,Pathogen,Parasite,25.39
+ortho,Rainbow trout orthomyxovirus (RbtOV) ,Pathogen,Virus,27.86
+pa_kab,Parvicapsula kabatai,Pathogen,Parasite,25.58
+pa_min,Parvicapsula minibicornis,Pathogen,Parasite,29.62
+pa_pse,Parvicapsula pseudobranchicola,Pathogen,Parasite,25.16
+pa_ther,Paranucleospora theridion,Pathogen,Parasite,28.16
+pch_sal,Piscichlamydia salmonis,Pathogen,Bacterium,30.72
+pisck_sal,Piscirickettsia salmonis,Pathogen,Bacterium,23.32
+prv,Piscine orthoreovirus -1,Pathogen,Virus,26.11
+pspv,Pacific salmon parvovirus,Pathogen,Virus,26.42
+re_sal,Renibacterium salmoninarum,Pathogen,Bacterium,25.91
+reov,Chinook aquareovirus,Pathogen,Virus,26.34
+rlo,Strawberry disease  (Rickettsia-like organism),Pathogen,Bacterium,25.23
+sch,Gill chlamydia (Sch),Pathogen,Bacterium,27.9
+SGPV,Salmon Gill Pox Virus,Pathogen,Virus,25.15
+smallUK,putative RNA virus-1,Pathogen,Virus,26.05
+sp_des,Sphaerothecum destruens,Pathogen,Parasite,26.5
+te_bry,Tetracapsuloides bryosalmonae,Pathogen,Parasite,24.98
+te_mar,Tenacibaculum maritimum,Pathogen,Bacterium,26.71
+toti,putative Toti-like virus,Pathogen,Virus,25.87
+ven,Erythrocytic necrosis virus,Pathogen,Virus,24.85
+ver,Viral encephalopathy and retinopathy virus,Pathogen,Virus,26.21
+vhsv,Viral hemorrhagic septicemia virus,Pathogen,Virus,26.86
+vi_ang,Vibrio anguillarum,Pathogen,Bacterium,26.41
+vi_sal,Vibrio salmonicida,Pathogen,Bacterium,25.84
+ye_ruc_glnA,Yersinia ruckeri (Enteric redmouth disease),Pathogen,Bacterium,28.13

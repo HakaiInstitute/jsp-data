@@ -1,0 +1,603 @@
+sample_id,sieve,fraction_proc,size_class,phylum,class,subclass,order,infraorder,family,genus,species,life_stage,sex,length,count,tot_count,abundance,lab_processor
+JSPK1031,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,7,1,1,0.038760637,Andrea Le
+JSPK1031,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,7,1,1,0.038760637,Andrea Le
+JSPK1031,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Anomura,Porcellanidae,,,larvae,,3.2,1,1,0.038760637,Andrea Le
+JSPK1031,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Anomura,Porcellanidae,,,larvae,,3.2,1,1,0.038760637,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.65,8,8,0.310085096,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,2,2,0.077521274,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.7,2,2,0.077521274,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,3.5,3,3,0.116281911,Andrea Le
+JSPK1031,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,6.5,1,1,0.038760637,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,3,1,1,0.038760637,Andrea Le
+JSPK1031,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,2.7,1,1,0.038760637,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,380,19000,736.4521036,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,51,2550,98.83962444,Andrea Le
+JSPK1031,250,0.02,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,1,50,1.938031852,Andrea Le
+JSPK1031,250,0.02,<1,Bryozoa,,,,,,,,cyphonaut,,<2,20,1000,38.76063703,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,<C5,,<2,1,50,1.938031852,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,1,50,1.938031852,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,<C5,,<2,1,50,1.938031852,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,9,450,17.44228667,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,3,150,5.814095555,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,2,100,3.876063703,Andrea Le
+JSPK1031,250,0.02,<1,,,,,,,Unknown,,egg,,<2,237,11850,459.3135489,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,<C5,,<2,2,100,3.876063703,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,<2,1,50,1.938031852,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,6,300,11.62819111,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,66,3300,127.9101022,Andrea Le
+JSPK1031,250,0.02,<1,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,<2,2,100,3.876063703,Andrea Le
+JSPK1031,250,0.02,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,27,1350,52.32686,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,2,100,3.876063703,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,9,450,17.44228667,Andrea Le
+JSPK1031,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,15,750,29.07047778,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,12,600,23.25638222,Andrea Le
+JSPK1031,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,4,200,7.752127407,Andrea Le
+JSPK1054,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,1,1,0.04,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,246,24600,927.47,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,43,4300,162.12,Andrea Le
+JSPK1054,250,0.01,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,1,100,3.77,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.6,101,101,3.81,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.8,12,12,0.45,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,2,200,7.54,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,2,200,7.54,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,2,200,7.54,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,13,1300,49.01,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,6,600,22.62,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,24,2400,90.48,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,3,300,11.31,Andrea Le
+JSPK1054,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,2,2,0.08,Andrea Le
+JSPK1054,250,0.01,<1,,,,,,,Unknown,,egg,,<2,165,16500,622.08,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,M,3.5,2,2,0.08,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,4.1,4,4,0.15,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,3.2,1,1,0.04,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,<2,1,100,3.77,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,5,500,18.85,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,21,2100,79.17,Andrea Le
+JSPK1054,2000,1,>10,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Gammaridae,,,,,18,1,1,0.04,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Grapsidae,,,larvae,,<2,1,100,3.77,Andrea Le
+JSPK1054,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Halitholus,,,,5,1,1,0.04,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,14,1400,52.78,Andrea Le
+JSPK1054,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,2,200,7.54,Andrea Le
+JSPK1054,1000,1,2 to 5,Cnidaria,,,,,,,,polyp,,4,1,1,0.04,Andrea Le
+JSPK1054,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,1,1,0.04,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,97,9700,365.71,Andrea Le
+JSPK1054,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,2,8,8,0.3,Andrea Le
+JSPK1054,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,F,2.3,13,13,0.49,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,4,400,15.08,Andrea Le
+JSPK1054,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,<C5,,<2,3,300,11.31,Andrea Le
+JSPK1093,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,8,8,0.49,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,3,3,0.18,Jihyun Kim
+JSPK1093,2000,1,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,megalopa,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,3,3,0.18,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,2,2,0.12,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,egg,,<2,215,215,13.1,Jihyun Kim
+JSPK1093,2000,1,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,nauplius,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Halitholus,,,,3.3,2,2,0.12,Jihyun Kim
+JSPK1093,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,2.9,1,1,0.06,Jihyun Kim
+JSPK1093,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,7,7,0.43,Jihyun Kim
+JSPK1093,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,<2,2,2,0.12,Jihyun Kim
+JSPK1093,2000,1,<1,,,,,,,Unknown,,trochophore,,<2,2,2,0.12,Jihyun Kim
+JSPK1093,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,8,8,0.49,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.8,4,4,0.24,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.6,9,9,0.55,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Axiidea,Callianassidae,,,zoea,,3.5,2,2,0.12,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,2.75,1,1,0.06,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,2,2,2,0.12,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,,,,,larvae,,4.5,1,1,0.06,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Insecta,,Diptera,,,,,,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,1000,1,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,egg,,<2,26,26,1.58,Jihyun Kim
+JSPK1093,1000,1,<1,Chordata,Actinopterygii,,,,,,,egg,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Hippolytidae,,,zoea,,3.25,2,2,0.12,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,2.7,7,7,0.43,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,4.75,12,12,0.73,Jihyun Kim
+JSPK1093,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,6,6,0.37,Jihyun Kim
+JSPK1093,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,2.1,55,55,3.35,Jihyun Kim
+JSPK1093,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,copepodite,,<2,1,1,0.06,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,57,5700,347.3,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,20,2000,121.86,Jihyun Kim
+JSPK1093,250,0.01,<1,Bryozoa,,,,,,,,cyphonaut,,<2,4,400,24.37,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,2 to 5,Chaetognatha,Sagittoidea,,,,,,,,,2.5,2,200,12.19,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,10,1000,60.93,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,2,200,12.19,Jihyun Kim
+JSPK1093,250,0.01,<1,,,,,,,Unknown,,egg,,<2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,<2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,egg,,<2,507,50700,3089.18,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,nauplius,,<2,3,300,18.28,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,7,700,42.65,Jihyun Kim
+JSPK1093,250,0.01,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,3,300,18.28,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,2,200,12.19,Jihyun Kim
+JSPK1093,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,28,2800,170.61,Jihyun Kim
+JSPK1093,250,0.01,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,2,1,100,6.09,Jihyun Kim
+JSPK1093,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,copepodite,,<2,2,200,12.19,Jihyun Kim
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,18,360,16.59,Andrea Le
+JSPK1112,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Aequoreidae,Aequorea,victoria,,,31,2,2,0.09,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,15,300,13.82,Andrea Le
+JSPK1112,250,0.05,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,2,40,1.84,Andrea Le
+JSPK1112,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.6,3,3,0.14,Andrea Le
+JSPK1112,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.9,7,7,0.32,Andrea Le
+JSPK1112,250,0.05,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,1,20,0.92,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,6,120,5.53,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,5,100,4.61,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,7,140,6.45,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,9,180,8.29,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,68,1360,62.66,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,5,100,4.61,Andrea Le
+JSPK1112,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,2,2,0.09,Andrea Le
+JSPK1112,250,0.05,<1,,,,,,,Unknown,,egg,,<2,6,120,5.53,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,<C5,,<2,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,<2,1,20,0.92,Andrea Le
+JSPK1112,1000,1,5 to 10,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Eucalanidae,Eucalanus,,,,6,1,1,0.05,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,16,320,14.74,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,120,2400,110.57,Andrea Le
+JSPK1112,250,0.05,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,47,940,43.31,Andrea Le
+JSPK1112,250,0.05,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,20,0.92,Andrea Le
+JSPK1112,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Halitholus,,,,3.3,3,3,0.14,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Harpacticoida,,,,,,,<2,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,1 to 2,Cnidaria,Hydrozoa,,,,,,,,,<2,2,40,1.84,Andrea Le
+JSPK1112,1000,1,5 to 10,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,8.4,2,2,0.09,Andrea Le
+JSPK1112,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Leukartiara,,,,8,4,4,0.18,Andrea Le
+JSPK1112,250,0.05,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,2.5,1,20,0.92,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Harpacticoida,,Ectinosomatidae,Microsetella,,,,<2,3,60,2.76,Andrea Le
+JSPK1112,250,0.05,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,2,40,1.84,Andrea Le
+JSPK1112,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.7,1,1,0.05,Andrea Le
+JSPK1112,250,0.05,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,2.7,2,40,1.84,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,15,300,13.82,Andrea Le
+JSPK1112,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,3.3,1,1,0.05,Andrea Le
+JSPK1112,250,0.05,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,20,0.92,Andrea Le
+JSPK1112,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,1,1,0.05,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,77,1540,70.95,Andrea Le
+JSPK1112,250,0.05,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,3,60,2.76,Andrea Le
+JSPK1118,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,<2,1,1,0.050791155,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,megalopa,,5.1,2,2,0.101582311,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,zoea,,<2,9,9,0.457120398,Jihyun Kim
+JSPK1118,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,1,1,0.050791155,Jihyun Kim
+JSPK1118,2000,1,>10,Chaetognatha,Sagittoidea,,,,,,,,,19.8,5,5,0.253955777,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,<2,1,1,0.050791155,Jihyun Kim
+JSPK1118,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,61,61,3.098260476,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Ochrophyta,Bacillariophyceae,,Fragilariales,,Fragilariaceae,Ctenophora,,,,4.95,2,2,0.101582311,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,3.566666667,3,3,0.152373466,Jihyun Kim
+JSPK1118,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,zoea,,<2,3,3,0.152373466,Jihyun Kim
+JSPK1118,2000,1,>10,Chordata,Actinopterygii,,Pleuronectiformes,,Pleuronectidae,,,larvae,,15.8,1,1,0.050791155,Jihyun Kim
+JSPK1118,2000,1,1 to 2,Cnidaria,Hydrozoa,Hydroidolina,Siphonophorae,,,,,,,<2,1,1,0.050791155,Jihyun Kim
+JSPK1118,2000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,<2,6,6,0.304746932,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,<2,128,256,13.00253577,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,<2,96,192,9.751901825,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,megalopa,,4.1,1,2,0.101582311,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,zoea,,<2,11,22,1.117405417,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,1,2,0.101582311,Jihyun Kim
+JSPK1118,1000,0.5,>10,Chaetognatha,Sagittoidea,,,,,,,,,23,1,2,0.101582311,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,<2,61,122,6.196520951,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,furcilia,,<2,4,8,0.406329243,Jihyun Kim
+JSPK1118,1000,0.5,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,Fabia,subquadrata,zoea,,<2,1,2,0.101582311,Jihyun Kim
+JSPK1118,1000,0.5,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,<2,11,22,1.117405417,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,45,1500,76.18673301,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Aetideidae,Aetidius,diveregns,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,6,200,10.15823107,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,,copepodite,,<2,17,566.6666667,28.78165469,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,<2,7,233.3333333,11.85126958,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,7,233.3333333,11.85126958,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C3,,<2,3,100,5.079115534,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,3,100,5.079115534,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,212,7066.666667,358.9241644,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,<1,,,,,,,Unknown,,egg,,0.4,5,166.6666667,8.465192558,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oncaeidae,Oncaea,,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,<1,Annelida,Polychaeta,Sedentaria,Spionida,,Spionidae,,,nectochaete,,<2,1,33.33333333,1.693038511,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,58,1933.333333,98.19623364,Jihyun Kim
+JSPK1118,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,,<2,2,66.66666667,3.386077023,Jihyun Kim
+JSPK1122,2000,1,5 to 10,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,6.5,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,5 to 10,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,6.5,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,4.5,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,4.5,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,13,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,13,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,4.25,6,6,0.385177081,Andrea Le
+JSPK1122,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,4.25,6,6,0.385177081,Andrea Le
+JSPK1122,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,4.8,1,1,0.06419618,Andrea Le
+JSPK1122,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,4.8,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.5,19,19,1.219727424,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,39,39,2.503651028,Andrea Le
+JSPK1122,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,4,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,M,3.3,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.8,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,3.4,3,3,0.192588541,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,2.5,2,2,0.12839236,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,3.2,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.1,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,3.9,10,10,0.641961802,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Anomura,Porcellanidae,,,larvae,,2.5,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,2.4,1,1,0.06419618,Andrea Le
+JSPK1122,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,F,2.2,11,11,0.706157982,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,129,6450,414.0653623,Andrea Le
+JSPK1122,250,0.02,1 to 2,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,18,900,57.77656218,Andrea Le
+JSPK1122,250,0.02,<1,Bryozoa,,,,,,,,cyphonaut,,<2,2,100,6.41961802,Andrea Le
+JSPK1122,250,0.02,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,C5,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,<C5,,<2,3,150,9.62942703,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,6,300,19.25885406,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C3,,<2,3,150,9.62942703,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,2,100,6.41961802,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,4,200,12.83923604,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,12,600,38.51770812,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,<1,Echinodermata,,,,,,,,larvae,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,<1,,,,,,,Unknown,,egg,,<2,39,1950,125.1825514,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,<C5,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,5,250,16.04904505,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,15,750,48.14713515,Andrea Le
+JSPK1122,250,0.02,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,<2,2,100,6.41961802,Andrea Le
+JSPK1122,250,0.02,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,3,150,9.62942703,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,5,250,16.04904505,Andrea Le
+JSPK1122,250,0.02,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,2.5,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,130,6500,417.2751713,Andrea Le
+JSPK1122,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,50,3.20980901,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,80,4000,256.7847208,Andrea Le
+JSPK1122,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,<C5,,<2,1,50,3.20980901,Andrea Le
+JSPK1123,2000,1,5 to 10,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,5.05,4,4,0.260166012,Andrea Le
+JSPK1123,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Annatiara,affinis,,,3.3,1,1,0.065041503,Andrea Le
+JSPK1123,2000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Siphonostomatoida,,Caligidae,Caligus,,,,4.5,1,1,0.065041503,Andrea Le
+JSPK1123,2000,1,>10,Chaetognatha,Sagittoidea,,,,,,,,,13,2,2,0.130083006,Andrea Le
+JSPK1123,2000,1,5 to 10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,5.9,5,5,0.325207515,Andrea Le
+JSPK1123,2000,1,2 to 5,Ochrophyta,Bacillariophyceae,,Fragilariales,,Fragilariaceae,Ctenophora,,,,4,1,1,0.065041503,Andrea Le
+JSPK1123,2000,1,5 to 10,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Eucalanidae,Eucalanus,,,,5,1,1,0.065041503,Andrea Le
+JSPK1123,2000,1,>10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,19,1,1,0.065041503,Andrea Le
+JSPK1123,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,7.75,7,7,0.455290521,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Aetideidae,Aetidius,diveregns,,,2.2,4,4,0.260166012,Andrea Le
+JSPK1123,1000,1,2 to 5,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,3.7,1,1,0.065041503,Andrea Le
+JSPK1123,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Annatiara,affinis,,,2.7,2,2,0.130083006,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.5,21,21,1.365871564,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,7,7,0.455290521,Andrea Le
+JSPK1123,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,3,3,0.195124509,Andrea Le
+JSPK1123,1000,1,>10,Chaetognatha,Sagittoidea,,,,,,,,,13.5,2,2,0.130083006,Andrea Le
+JSPK1123,1000,1,2 to 5,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,2.8,1,1,0.065041503,Andrea Le
+JSPK1123,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,1,1,0.065041503,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,,2.6,2,2,0.130083006,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Eucalanidae,Eucalanus,,,,4.4,2,2,0.130083006,Andrea Le
+JSPK1123,1000,1,5 to 10,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,5.4,3,3,0.195124509,Andrea Le
+JSPK1123,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,3.25,2,2,0.130083006,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,2.8,31,31,2.016286594,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.25,7,7,0.455290521,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,3.7,3,3,0.195124509,Andrea Le
+JSPK1123,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,6,6,0.390249018,Andrea Le
+JSPK1123,1000,1,5 to 10,Annelida,Polychaeta,Errantia,Phyllodocida,,Syllidae,,,,,6.25,3,3,0.195124509,Andrea Le
+JSPK1123,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,F,2.2,2,2,0.130083006,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,34,1133.333333,73.71370341,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Aetideidae,Aetidius,diveregns,<C5,,<2,1,33.33333333,2.168050101,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,20,666.6666667,43.36100202,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,<C5,,<2,3,100,6.504150303,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,<C5,,<2,3,100,6.504150303,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,6,200,13.00830061,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C3,,<2,6,200,13.00830061,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,2,66.66666667,4.336100202,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,5,166.6666667,10.84025051,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,49,1633.333333,106.2344549,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,13,433.3333333,28.18465131,Andrea Le
+JSPK1123,250,0.03,<1,,,,,,,Unknown,,egg,,<2,4,133.3333333,8.672200402,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,<C5,,<2,2,66.66666667,4.336100202,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,19,633.3333333,41.19295192,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,8,266.6666667,17.34440081,Andrea Le
+JSPK1123,250,0.03,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,,,,,,2.25,2,66.66666667,4.336100202,Andrea Le
+JSPK1123,250,0.03,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,4,133.3333333,8.672200402,Andrea Le
+JSPK1123,250,0.03,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,33.33333333,2.168050101,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Harpacticoida,,,,,,,<2,2,66.66666667,4.336100202,Andrea Le
+JSPK1123,250,0.03,1 to 2,Cnidaria,Hydrozoa,,,,,,,,,<2,6,200,13.00830061,Andrea Le
+JSPK1123,250,0.03,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,2,11,366.6666667,23.84855111,Andrea Le
+JSPK1123,250,0.03,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,11,366.6666667,23.84855111,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,10,333.3333333,21.68050101,Andrea Le
+JSPK1123,250,0.03,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,2.4,2,66.66666667,4.336100202,Andrea Le
+JSPK1123,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,49,1633.333333,106.2344549,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,97,3233.333333,210.3008598,Andrea Le
+JSPK1123,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,<C5,,<2,1,33.33333333,2.168050101,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,90,3000,199.48,Andrea Le
+JSPK1135,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Aequoreidae,Aequorea,victoria,,,60,1,1,0.07,Andrea Le
+JSPK1135,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Aequoreidae,Aequorea,victoria,,,60,1,1,0.07,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Aetideidae,Aetidius,diveregns,,,2,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,7,233,15.52,Andrea Le
+JSPK1135,250,0.03,<1,Bryozoa,,,,,,,,cyphonaut,,<2,8,267,17.73,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.6,119,119,7.91,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.9,44,44,2.93,Andrea Le
+JSPK1135,250,0.03,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.4,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,C5,,<2,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,1,33,2.22,Andrea Le
+JSPK1135,1000,1,5 to 10,Chaetognatha,Sagittoidea,,,,,,,,,9.5,6,6,0.4,Andrea Le
+JSPK1135,250,0.03,2 to 5,Chaetognatha,Sagittoidea,,,,,,,,,3,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,9,300,19.95,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,2,67,4.43,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,3,100,6.65,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,<1,,,,,,,Unknown,,egg,,<2,208,6933,461.03,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,3.5,1,1,0.07,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.8,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,9,300,19.95,Andrea Le
+JSPK1135,250,0.03,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,3,100,6.65,Andrea Le
+JSPK1135,250,0.03,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,33,2.22,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Grapsidae,,,larvae,,2.7,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Harpacticoida,,,,,,,<2,1,33,2.22,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,3,1,1,0.07,Andrea Le
+JSPK1135,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Leukartiara,,,,8.5,1,1,0.07,Andrea Le
+JSPK1135,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Leukartiara,,,,8.5,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,<2,2,67,4.43,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,3,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,4,133,8.87,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,4.1,3,3,0.2,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,<2,2,67,4.43,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,18,600,39.9,Andrea Le
+JSPK1135,2000,1,5 to 10,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,6,1,1,0.07,Andrea Le
+JSPK1135,2000,1,5 to 10,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,6,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,33,2.22,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,85,2833,188.4,Andrea Le
+JSPK1135,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,7.75,3,3,0.2,Andrea Le
+JSPK1135,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,7.75,3,3,0.2,Andrea Le
+JSPK1135,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,F,2.3,1,1,0.07,Andrea Le
+JSPK1135,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,1,33,2.22,Andrea Le
+QPK1019,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,5,250,22.22,Andrea Le
+QPK1019,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Annatiara,affinis,,,6.8,1,1,0.09,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,179,8950,795.42,Andrea Le
+QPK1019,250,0.02,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,8,400,35.55,Andrea Le
+QPK1019,1000,1,2 to 5,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,3.5,1,1,0.09,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,3,150,13.33,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,11,550,48.88,Andrea Le
+QPK1019,250,0.02,<1,Echinodermata,,,,,,,,larvae,,<2,39,1950,173.3,Andrea Le
+QPK1019,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,2,2,0.18,Andrea Le
+QPK1019,250,0.02,<1,,,,,,,Unknown,,egg,,<2,20,1000,88.87,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,207,10350,919.84,Andrea Le
+QPK1019,250,0.02,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,13,650,57.77,Andrea Le
+QPK1019,250,0.02,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,1,50,4.44,Andrea Le
+QPK1019,250,0.02,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,50,2500,222.18,Andrea Le
+QPK1019,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,,,larvae,,5.25,2,2,0.18,Andrea Le
+QPK1019,250,0.02,<1,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,,,larvae,,<2,1,50,4.44,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,7,350,31.11,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,4,200,17.77,Andrea Le
+QPK1019,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,45,2250,199.96,Andrea Le
+QPK1019,250,0.02,<1,Annelida,Polychaeta,,,,,,,trochophore,,<2,1,50,4.44,Andrea Le
+QPK1041,250,0.0106,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,M,<2,1,94,6.26,Sam James
+QPK1041,250,0.0106,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,F,<2,1,94,6.26,Sam James
+QPK1041,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,Aequoreidae,Aequorea,victoria,,,49,1,1,0.07,Sam James
+QPK1041,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Anomura,,,,larvae,,2.9,1,1,0.07,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,120,11321,751.67,Sam James
+QPK1041,250,0.0106,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,11,1038,68.9,Sam James
+QPK1041,250,0.0106,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,1,94,6.26,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,4,377,25.06,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,8,755,50.11,Sam James
+QPK1041,2000,1,1 to 2,Ctenophora,,,,,,,,,,15,6,6,0.4,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,35,3302,219.24,Sam James
+QPK1041,1000,1,<1,,,,,,,Unknown,,egg,,1.5,2,2,0.13,Sam James
+QPK1041,250,0.0106,<1,,,,,,,Unknown,,egg,,<2,3,283,18.79,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,270,25472,1691.25,Sam James
+QPK1041,250,0.0106,<1,Platyhelminthes,,,,,,,,,,<2,1,94,6.26,Sam James
+QPK1041,250,0.0106,<1,Mollusca,Gastropoda,,,,,,,,,<2,1,94,6.26,Sam James
+QPK1041,250,0.0106,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Grapsidae,,,larvae,,<2,1,94,6.26,Sam James
+QPK1041,250,0.0106,<1,Cnidaria,Hydrozoa,,,,,,,,,<2,8,755,50.11,Sam James
+QPK1041,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,,,,,4.35,2,2,0.13,Sam James
+QPK1041,250,0.0106,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,11,1038,68.9,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,parvus,,,<2,76,7170,476.06,Sam James
+QPK1041,250,0.0106,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,62,5849,388.36,Sam James
+QPK1043,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Aequoreidae,Aequorea,victoria,,,12,1,1,0.069656653,Andrea Le
+QPK1043,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,6.9,1,1,0.069656653,Andrea Le
+QPK1043,2000,1,5 to 10,Ochrophyta,Bacillariophyceae,,Fragilariales,,Fragilariaceae,Ctenophora,,,,9.7,1,1,0.069656653,Andrea Le
+QPK1043,1000,1,2 to 5,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,4.5,3,3,0.208969959,Andrea Le
+QPK1043,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,2,2,0.139313306,Andrea Le
+QPK1043,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,M,3.1,1,1,0.069656653,Andrea Le
+QPK1043,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.8,1,1,0.069656653,Andrea Le
+QPK1043,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.5,2,2,0.139313306,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,2,200,13.93133059,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,23,2300,160.2103018,Andrea Le
+QPK1043,250,0.01,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,6,600,41.79399177,Andrea Le
+QPK1043,250,0.01,<1,Bryozoa,,,,,,,,cyphonaut,,<2,4,400,27.86266118,Andrea Le
+QPK1043,250,0.01,2 to 5,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,2,1,100,6.965665295,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,1,100,6.965665295,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,2,200,13.93133059,Andrea Le
+QPK1043,250,0.01,<1,Echinodermata,,,,,,,,larvae,,<2,9,900,62.69098766,Andrea Le
+QPK1043,250,0.01,<1,,,,,,,Unknown,,egg,,<2,1,100,6.965665295,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,1,100,6.965665295,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,215,21500,1497.618039,Andrea Le
+QPK1043,250,0.01,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,1,100,6.965665295,Andrea Le
+QPK1043,250,0.01,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,11,1100,76.62231825,Andrea Le
+QPK1043,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,24,2400,167.1759671,Andrea Le
+QPK1043,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,44,4400,306.489273,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,25,139,8.23,Andrea Le
+QPK1049,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Annatiara,affinis,,,3.5,1,1,0.06,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,2,11,0.66,Andrea Le
+QPK1049,250,0.18,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,2,11,0.66,Andrea Le
+QPK1049,250,0.18,<1,Bryozoa,,,,,,,,cyphonaut,,<2,1,6,0.33,Andrea Le
+QPK1049,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,2,2,0.12,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.3,3,17,0.99,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,C5,,<2,3,17,0.99,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,12,67,3.95,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,1,6,0.33,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,5,28,1.65,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,1,6,0.33,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C3,,<2,3,17,0.99,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,39,217,12.84,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,5,28,1.65,Andrea Le
+QPK1049,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,3.7,3,3,0.18,Andrea Le
+QPK1049,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.8,2,2,0.12,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,<C5,,<2,1,6,0.33,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,22,122,7.24,Andrea Le
+QPK1049,250,0.18,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,128,711,42.13,Andrea Le
+QPK1049,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,2.9,2,2,0.12,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,<2,4,22,1.32,Andrea Le
+QPK1049,250,0.18,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,4,22,1.32,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,1,6,0.33,Andrea Le
+QPK1049,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.9,1,1,0.06,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,74,411,24.35,Andrea Le
+QPK1049,250,0.18,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,1,6,0.33,Andrea Le
+QPK1049,250,0.18,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,11,61,3.62,Andrea Le
+QPK711,2000,1,>10,Cnidaria,Hydrozoa,,Leptothecata,,Aequoreidae,Aequorea,victoria,,,14,1,1,0.40667017,Andrea Le
+QPK711,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Halimedusidae,Halimedusa,typus,,,3.9,1,1,0.40667017,Andrea Le
+QPK711,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,5,1,1,0.40667017,Andrea Le
+QPK711,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,1,1,0.40667017,Andrea Le
+QPK711,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,4,1,1,0.40667017,Andrea Le
+QPK711,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.2,1,1,0.40667017,Andrea Le
+QPK711,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Halimedusidae,Halimedusa,typus,,,3.5,1,1,0.40667017,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,17,1700,691.3392889,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,127,12700,5164.711159,Andrea Le
+QPK711,250,0.01,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,8,800,325.336136,Andrea Le
+QPK711,250,0.01,<1,Bryozoa,,,,,,,,cyphonaut,,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,11,1100,447.337187,Andrea Le
+QPK711,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,11,1100,447.337187,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,21,2100,854.0073569,Andrea Le
+QPK711,250,0.01,<1,,,,,,,Unknown,,egg,,<2,76,7600,3090.693292,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,1,100,40.667017,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,356,35600,14477.45805,Andrea Le
+QPK711,250,0.01,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,3,300,122.001051,Andrea Le
+QPK711,250,0.01,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,81,8100,3294.028377,Andrea Le
+QPK711,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,7,700,284.669119,Andrea Le
+QPK711,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,56,5600,2277.352952,Andrea Le
+QPK711,250,0.01,1 to 2,Annelida,Polychaeta,Sedentaria,Spionida,,Spionidae,,,nectochaete,,<2,1,100,40.667017,Andrea Le
+QPK731,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,8.75,2,2,0.38,Andrea Le
+QPK731,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,5.4,3,3,0.57,Andrea Le
+QPK731,250,0.01,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Gammaridae,,,juvenile,,<2,1,100,18.92,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,44,4400,832.49,Andrea Le
+QPK731,250,0.01,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,3,300,56.76,Andrea Le
+QPK731,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.3,1,1,0.19,Andrea Le
+QPK731,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.5,2,2,0.38,Andrea Le
+QPK731,250,0.01,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,3,300,56.76,Andrea Le
+QPK731,1000,1,5 to 10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,8,1,1,0.19,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,8,800,151.36,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,15,1500,283.8,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,6,600,113.52,Andrea Le
+QPK731,250,0.01,<1,Echinodermata,,,,,,,,larvae,,<2,84,8400,1589.3,Andrea Le
+QPK731,250,0.01,<1,,,,,,,Unknown,,egg,,<2,1,100,18.92,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,135,13500,2554.23,Andrea Le
+QPK731,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Gammaridae,,,,,2.8,2,2,0.38,Andrea Le
+QPK731,250,0.01,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,2,200,37.84,Andrea Le
+QPK731,250,0.01,<1,Cnidaria,Hydrozoa,,,,,,,,,<2,4,400,75.68,Andrea Le
+QPK731,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,2.9,1,1,0.19,Andrea Le
+QPK731,250,0.01,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,62,6200,1173.05,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,109,10900,2062.3,Andrea Le
+QPK731,2000,1,>10,Ctenophora,Tentaculata,,Cydippida,,Pleurobrachiidae,,,,,13,1,1,0.19,Andrea Le
+QPK731,1000,1,5 to 10,Ctenophora,Tentaculata,,Cydippida,,Pleurobrachiidae,,,,,8.5,8,8,1.51,Andrea Le
+QPK731,250,0.01,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,29,2900,548.69,Andrea Le
+QPK731,250,0.01,1 to 2,Annelida,Polychaeta,,,,,,,trochophore,,<2,1,100,18.92,Andrea Le
+QPK731,1000,1,2 to 5,Cnidaria,Hydrozoa,,Siphonophorae,,,,,,,2.8,1,1,0.19,Andrea Le
+QPK731,250,0.01,1 to 2,Annelida,Polychaeta,Sedentaria,Spionida,,Spionidae,,,nectochaete,,<2,1,100,18.92,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,7.5,1,1,0.040301304,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,7.5,1,1,0.040301304,Andrea Le
+QPK734,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,4.5,1,1,0.040301304,Andrea Le
+QPK734,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,4.5,1,1,0.040301304,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,9.85,3,3,0.120903911,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,9.85,3,3,0.120903911,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corymorphidae,Euphysa,,,,6.5,2,2,0.080602607,Andrea Le
+QPK734,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corymorphidae,Euphysa,,,,6.5,2,2,0.080602607,Andrea Le
+QPK734,2000,1,>10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,24,1,1,0.040301304,Andrea Le
+QPK734,2000,1,>10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,,,,,,24,1,1,0.040301304,Andrea Le
+QPK734,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,4,1,1,0.040301304,Andrea Le
+QPK734,2000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,4,1,1,0.040301304,Andrea Le
+QPK734,2000,1,>10,Chordata,Actinopterygii,,Pleuronectiformes,,Pleuronectidae,,,,,28,1,1,0.040301304,Andrea Le
+QPK734,2000,1,>10,Chordata,Actinopterygii,,Pleuronectiformes,,Pleuronectidae,,,,,28,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Cnidaria,Hydrozoa,Trachylinae,Trachymedusae,,Rhopalonematidae,Aglantha,digitale,,,2.9,11,11,0.44331434,Andrea Le
+QPK734,1000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,5.5,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,marshallae,,,3.7,8,8,0.322410429,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.7,44,44,1.773257359,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Cancridae,,,larvae,,3.15,13,13,0.523916947,Andrea Le
+QPK734,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,2,24,24,0.967231287,Andrea Le
+QPK734,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,3,3,0.120903911,Andrea Le
+QPK734,1000,1,5 to 10,Chaetognatha,Sagittoidea,,,,,,,,,6.5,5,5,0.201506518,Andrea Le
+QPK734,1000,1,5 to 10,Cnidaria,Hydrozoa,,Leptothecata,,Campanulariidae,Clytia,,,,8,1,1,0.040301304,Andrea Le
+QPK734,1000,1,5 to 10,Ochrophyta,Bacillariophyceae,,Fragilariales,,Fragilariaceae,Ctenophora,,,,7,1,1,0.040301304,Andrea Le
+QPK734,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,F,3.75,5,5,0.201506518,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,,M,3.5,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Pontellidae,Epilabidocera,longipedata,C5,,2.5,4,4,0.161205214,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Eucalanidae,Eucalanus,,,,4.5,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Halimedusidae,Halimedusa,typus,,,3.45,2,2,0.080602607,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Amphipoda,,Hyperiidae,Themisto,,,,4.05,5,5,0.201506518,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,2.2,28,28,1.128436501,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Metridinidae,Metridia,,,,2.3,1,1,0.040301304,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,3.8,19,19,0.765724768,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Pinnotheridae,,,larvae,,2,2,2,0.080602607,Andrea Le
+QPK734,1000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Corynidae,Sarsia,,,,3.65,2,2,0.080602607,Andrea Le
+QPK734,1000,1,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,7,7,0.282109125,Andrea Le
+QPK734,1000,1,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,F,2.3,7,7,0.282109125,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,50,2500,100.753259,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,39,1950,78.58754203,Andrea Le
+QPK734,250,0.02,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,3,150,6.045195541,Andrea Le
+QPK734,250,0.02,2 to 5,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Calanidae,Calanus,pacificus,,,2.5,4,200,8.060260721,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,,<2,11,550,22.16571698,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,11,550,22.16571698,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,M,<2,12,600,24.18078216,Andrea Le
+QPK734,250,0.02,1 to 2,Chaetognatha,Sagittoidea,,,,,,,,,<2,1,50,2.01506518,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,5,250,10.0753259,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C3,,<2,3,150,6.045195541,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,140,7000,282.1091252,Andrea Le
+QPK734,250,0.02,2 to 5,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Crangonidae,,,larvae,,3,1,50,2.01506518,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,12,600,24.18078216,Andrea Le
+QPK734,250,0.02,<1,,,,,,,Unknown,,egg,,<2,1,50,2.01506518,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Malacostraca,Eumalacostraca,Euphausiacea,,Euphausiidae,,,calyptopis,,<2,3,150,6.045195541,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,14,700,28.21091252,Andrea Le
+QPK734,250,0.02,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,1 to 2,Mollusca,Gastropoda,,,,,,,veliger,,<2,7,350,14.10545626,Andrea Le
+QPK734,250,0.02,1 to 2,Cnidaria,Hydrozoa,,,,,,,,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Brachyura,Majidae,,,larvae,,<2,7,350,14.10545626,Andrea Le
+QPK734,250,0.02,1 to 2,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,48,2400,96.72312865,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Oithonidae,Oithona,,,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Malacostraca,Eumalacostraca,Decapoda,Caridea,Pandalidae,,,larvae,,<2,3,150,6.045195541,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,128,6400,257.9283431,Andrea Le
+QPK734,250,0.02,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,3,150,6.045195541,Andrea Le
+QPK734,250,0.02,<1,Annelida,Polychaeta,,,,,,,trochophore,,<2,1,50,2.01506518,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Clausocalanidae,Pseudocalanus,,,,<2,32,1600,64.48208577,Andrea Le
+QPK734,250,0.02,1 to 2,Annelida,Polychaeta,Sedentaria,Spionida,,Spionidae,,,nectochaete,,<2,2,100,4.03013036,Andrea Le
+QPK734,250,0.02,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Tortanidae,Tortanus,,,M,<2,1,50,2.01506518,Andrea Le
+QPK747,250,0.1,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,12,120,8.653850907,Jessica Schaub
+QPK747,250,0.1,<1,Bryozoa,Gymnolaemata,,,,,,,cyphonaut,M,<2,7,70,5.048079696,Jessica Schaub
+QPK747,250,0.1,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,181,1810,130.5289179,Jessica Schaub
+QPK747,250,0.1,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,,M,<2,187,1870,134.8558433,Jessica Schaub
+QPK747,250,0.1,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,26,260,18.7500103,Jessica Schaub
+QPK747,250,0.1,<1,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,M,<2,56,560,40.38463757,Jessica Schaub
+QPK747,250,0.1,<1,Ctenophora,Tentaculata,,Cydippida,,,,,,,<2,6,60,4.326925454,Jessica Schaub
+QPK747,250,0.1,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,M,<2,108,1080,77.88465817,Jessica Schaub
+QPK747,250,0.1,<1,Mollusca,Gastropoda,,,,,,,veliger,,<2,8,80,5.769233938,Jessica Schaub
+QPK747,250,0.1,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,,,,,M,<2,4,40,2.884616969,Jessica Schaub
+QPK747,250,0.1,<1,Echinodermata,Echnoidea,,,,,,,pluteus,,<2,2,20,1.442308485,Jessica Schaub
+QPK747,250,0.1,<1,Annelida,Polychaeta,,,,,,,trochophore,M,<2,1,10,0.721154242,Jessica Schaub
+QPK751,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Acartiidae,Acartia,,,,<2,1,33,4.58,Andrea Le
+QPK751,2000,1,>10,Cnidaria,Hydrozoa,Hydroidolina,Leptothecata,,Aequoreidae,Aequorea,victoria,,,20,1,1,0.14,Andrea Le
+QPK751,2000,1,5 to 10,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Amphinema,platyhedos,,,5.4,2,2,0.27,Andrea Le
+QPK751,2000,1,2 to 5,Cnidaria,Hydrozoa,Hydroidolina,Anthoathecata,,Pandeidae,Annatiara,affinis,,,3.5,1,1,0.14,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,nauplius,,<2,94,3133,430.55,Andrea Le
+QPK751,250,0.03,<1,Mollusca,Bivalvia,,,,,,,veliger,,<2,10,333,45.8,Andrea Le
+QPK751,250,0.03,<1,Bryozoa,,,,,,,,cyphonaut,,<2,2,67,9.16,Andrea Le
+QPK751,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Centropagidae,Centropages,abdominalis,,F,<2,2,67,9.16,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,,,,,,nauplius,,<2,82,2733,375.59,Andrea Le
+QPK751,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C1,,<2,18,600,82.45,Andrea Le
+QPK751,250,0.03,1 to 2,Arthropoda,Hexanauplia,Copepoda,Calanoida,,,,,C2,,<2,1,33,4.58,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Cyclopoida,,Corycaeidae,Corycaeus,,,,<2,33,1100,151.15,Andrea Le
+QPK751,2000,1,5 to 10,Ctenophora,,,,,,,,,,8,1,1,0.14,Andrea Le
+QPK751,1000,1,2 to 5,Ctenophora,,,,,,,,,,4.2,1,1,0.14,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Hexanauplia,Thecostraca,Sessilia,Balanomorpha,,,,cyprid,,<2,4,133,18.32,Andrea Le
+QPK751,1000,1,1 to 2,Chordata,Actinopterygii,,,,,,,egg,,<2,1,1,0.14,Andrea Le
+QPK751,250,0.03,<1,,,,,,,Unknown,,egg,,<2,4,133,18.32,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Evadne,,,,<2,10,333,45.8,Andrea Le
+QPK751,250,0.03,<1,Mollusca,Gastropoda,,,,,,,egg,,<2,4,133,18.32,Andrea Le
+QPK751,250,0.03,<1,Cnidaria,Hydrozoa,,,,,,,,,<2,6,200,27.48,Andrea Le
+QPK751,250,0.03,2 to 5,Chordata,Appendicularia,,Copelata,,Oikopleuridae,Oikopleura,,,,<2,51,1700,233.6,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Hexanauplia,Copepoda,Calanoida,,Paracalanidae,Paracalanus,,,,<2,144,4800,659.57,Andrea Le
+QPK751,250,0.03,<1,Arthropoda,Branchiopoda,Diplostraca,Onychopoda,,Podonidae,Podon,,,,<2,3,100,13.74,Andrea Le
