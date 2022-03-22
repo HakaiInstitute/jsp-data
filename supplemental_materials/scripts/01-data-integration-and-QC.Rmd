@@ -68,8 +68,7 @@ ysi <- read_sheet(mdt_slug, "ysi", na = c("NA", "")) %>%
 
 client <- hakaiApi::Client$new()
 # You have to break up the data request into a few chunks and then combine because the API has a limit on how much data you can assess at once.
-qu39_all <- client$get(paste0(client$api_root, 
-                              "/ctd/views/file/cast/data?fields=start_dt,station,conductivity,temperature,depth,salinity,dissolved_oxygen_ml_l&start_dt.year>2014&station=QU39&start_dt.doy>32&start_dt.doy<213&depth<=30&limit=-1"))
+qu39_all <- client$get(paste0(client$api_root, "/ctd/views/file/cast/data?direction_flag=d&fields=start_dt,station,conductivity,temperature,depth,salinity,dissolved_oxygen_ml_l&start_dt.year>2014&station=QU39&start_dt.doy>32&start_dt.doy<213&depth<=30&limit=-1"))
 
 qu39_ctd <- qu39_all %>% 
   mutate(year = year(start_dt),
