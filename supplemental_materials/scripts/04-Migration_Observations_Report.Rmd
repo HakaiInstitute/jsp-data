@@ -23,7 +23,7 @@ survey_seines <- read_csv(here("supplemental_materials", "report_data", "survey_
   rename("Sockeye" = "so_total", "Pink" = "pi_total", "Chum" = "cu_total")
 lice_bootstraps <- read_csv(here("supplemental_materials", "report_data", "lice_bootstraps.csv"))
 # Temp processed_data
-ctd_all <- read_csv(here("supplemental_materials", "report_data", "ctd_all.csv"))
+qu39_ctd <- read_csv(here("supplemental_materials", "report_data", "qu39_ctd.csv"))
 temperature_anomaly_data <- read_csv(here("supplemental_materials", "report_data", "temperature_anomaly_data.csv"))
 min_max_data <- read_csv(here("supplemental_materials", "report_data", "min_max_temps.csv"))
 average_temps <- read_csv(here("supplemental_materials", "report_data", "average_temps.csv"))
@@ -300,7 +300,7 @@ summary_lengths <- length_histo %>%
 # SST z-score
 ## I'm going to filter the time period down to May and Juen because that's the most relevant period that juvenile salmon are likely to be in the Strait of Georgia
 
-sst_annual_mean <- ctd_all %>%
+sst_annual_mean <- qu39_ctd %>%
   ungroup() %>%
   mutate(date = as_date(date)) %>%
   mutate(month = month(date), year = year(date)) %>%
@@ -318,7 +318,7 @@ sst_sd <- sd(sst_annual_mean$mean_temp)
 
 sst_z <- (sst_annual_mean$mean_temp - sst_mean) / sst_sd
 
-sst_time_series_stats <- ctd_all %>%
+sst_time_series_stats <- qu39_ctd %>%
   ungroup() %>%
   mutate(date = as_date(date)) %>%
   mutate(month = month(date), year = year(date)) %>%

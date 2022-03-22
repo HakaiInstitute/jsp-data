@@ -759,20 +759,13 @@ proportions <- spp_prop_expanded %>%
 write_csv(proportions, here::here("supplemental_materials", "report_data", "proportion.csv"))
 saveRDS(proportions, here::here("supplemental_materials", "report_data", "proportion.RDS"))
 
-beepr::beep(3)
+
 ```
 
 
-```{r SST, cache=TRUE}
+```{r SST}
 
-qu39_ctd <- read_csv(here("supplemental_materials", "tidy_data", "ctd_all.csv")) %>% 
-  filter(station == "QU39",
-         depth <= 30) %>% 
-  mutate(year = as.character(substr(time,1,4)),
-         date = sub(".*_", "", hakai_id),
-         yday = yday(date),
-         week = week(date)
-  )
+qu39_ctd <- read_csv(here("supplemental_materials", "tidy_data", "qu39_ctd.csv"))
 
 qu39 <- qu39_ctd %>% 
   select(
@@ -795,8 +788,8 @@ qu39 <- qu39_ctd %>%
   ) %>% 
   ungroup()
 
-write_csv(qu39, here::here("supplemental_materials", "report_data", "ctd_all.csv"))
-saveRDS(qu39, here::here("supplemental_materials", "report_data", "ctd_all.RDS"))
+write_csv(qu39, here::here("supplemental_materials", "report_data", "qu39_ctd.csv"))
+saveRDS(qu39, here::here("supplemental_materials", "report_data", "qu39_ctd.RDS"))
 
 
 # SST ANOMALY DATA
@@ -887,7 +880,6 @@ saveRDS(temperature_anomaly_data,
 write_csv(temperature_anomaly_data,
           here::here("supplemental_materials", "report_data", "temperature_anomaly_data.csv"))
 
-beepr::beep(8)
 ```
 
 # Heat Map
