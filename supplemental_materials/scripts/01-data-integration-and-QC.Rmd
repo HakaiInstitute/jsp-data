@@ -65,9 +65,8 @@ bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm
 ysi <- read_sheet(mdt_slug, "ysi", na = c("NA", "")) %>% 
   write_csv(here("supplemental_materials", "raw_data", "ysi.csv"))
 
-
+library(hakaiApi)
 client <- hakaiApi::Client$new()
-# You have to break up the data request into a few chunks and then combine because the API has a limit on how much data you can assess at once.
 qu39_all <- client$get(paste0(client$api_root, "/ctd/views/file/cast/data?direction_flag=d&fields=start_dt,station,conductivity,temperature,depth,salinity,dissolved_oxygen_ml_l&start_dt.year>2014&station=QU39&start_dt.doy>32&start_dt.doy<213&depth<=30&limit=-1"))
 
 qu39_ctd <- qu39_all %>% 
@@ -134,6 +133,7 @@ sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sampl
 stock_id <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "stock_id.csv"))
 
 # salmon_diets_coarse.csv is the result of a short trial in 2019 to implement a coarse gut content assessment in the lab. The method was too time consuming and was abandoned. 
+
 # TODO Update zooplankton integration data source
 salmon_diets_coarse <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "salmon_diets_coarse.csv"))
 #source(here('scripts', 'zooplankton-integration.R'))
@@ -276,7 +276,7 @@ long_nrow <- nrow(no_long)
 
 ifelse(nrow == 0, paste0("All fish have locations"), (knitr::kable(no_lat, caption = "Table. Fish with no associated location information")))
 
-rm(std_survey_seines_w_catch, no_lat, nrow)
+rm(std_survey_seines_w_catch, no_lat, nrow, survey_seines_fish)
 ```
 
 
@@ -331,14 +331,17 @@ rm(fish_k)
 ```
 
 ```{r, create wide view of all fish data}
-stocks <- left_join(stock_id, dna_samples)
+stocks <- left_join(stock_id, dna_samples, by = "sample_id")
 
-jsp_catch_and_bio_data_complete <- survey_seines_fish %>% 
-  left_join(stocks, by = "ufn") %>% 
-  left_join(stock_id) %>% 
-  left_join(combined_motile_lice) %>% 
-  left_join(fish_lab_data)
-
+jsp_catch_and_bio_data_complete <- left_join(survey_data, seine_data, by = "survey_id") %>% 
+  left_join(fish_field_data, by = 'seine_id') %>% 
+  left_join(fish_lab_data, by = 'ufn') %>% 
+  left_join(stocks, by = 'ufn') %>% 
+  left_join(combined_motile_lice, by = 'ufn') %>% 
+  select(-survey_date.y, -site_id.y, -species.y) %>% 
+  rename(survey_date = survey_date.x, site_id = site_id.x, species = species.x)
+  
+# write complete file to root of data folder
 write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
 rm(jsp_catch_and_bio_data_complete)
 rm(stocks)

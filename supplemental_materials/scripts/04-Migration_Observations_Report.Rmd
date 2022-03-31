@@ -408,13 +408,14 @@ heatmap_data$measure <- heatmap_data$measure %>%
   ylab("") +
   xlab("Year") +
   scale_colour_gradientn(colours = cols) +
-  theme(legend.position = "bottom") +
   guides(color = guide_legend(override.aes = list(size = c(10, 3, 10), alpha = 1)), name = "Z score") +
   labs(color = "Z Score") +
   scale_y_discrete(expand = expand_scale(mult = c(.75, .75))) +
-  scale_x_continuous(expand = expand_scale(mult = c(.1, .1)), minor_breaks = 0) +
+  scale_x_continuous(expand = expand_scale(mult = c(.1, .1)), n.breaks = project_years) +
   #theme(panel.grid.major.y= element_line("grey")) +
-  facet_wrap(. ~ measure, ncol = 1, scales = "free")
+  facet_wrap(. ~ measure, ncol = 1, scales = "free") +
+  hakademic_theme(base_size = 18)+
+  theme(legend.position = "bottom")
 )
 
 ggsave(here("supplemental_materials", "figs", "heatmap.png"), width = 13, height = 11)
@@ -501,7 +502,9 @@ proportion$species <- proportion$species %>%
       xlab("Year") +
       ylab("Proportion") +
       scale_fill_manual(values = hakai_palette("hakai_salmon")) +
-      labs(fill = "Species") 
+      labs(fill = "Species") +
+      scale_x_continuous(n.breaks = project_years)
+      
 
 ggsave(here("supplemental_materials", "figs", "proportions.png"))
 ```
@@ -509,7 +512,7 @@ ggsave(here("supplemental_materials", "figs", "proportions.png"))
 ```{r length-plot, out.width="90%", fig.cap="Distributions of juvenile salmon fork lengths for each year in the Discovery Islands and Johnstone Strait. Note that these distributions contain multiple age classes."}
 
 length_histo$species <- length_histo$species %>% 
-  fct_relevel("SO", "PI", "CU")
+  fct_relevel("SO", "PI", "CU", "CO")
 
 DI_length_histo <- length_histo %>% 
   filter(region == "DI")
@@ -549,7 +552,7 @@ ggplot(data = fish_cond, aes(x = fork_length, y = weight, colour= Years)) +
   geom_point(data = time_series_fish_cond, alpha = .2, size = 3) +
   geom_point(data = current_fish_cond, alpha = .3, size = 2) + 
   ylab('Weight (g)')+
-  xlab('Length (mm)')+
+  xlab('Fork Length (mm)')+
   coord_cartesian(xlim = c(50, 177), ylim = c(0, 80)) +
   scale_color_manual(values=c("#B52025", "black")) +
   #theme(legend.position = c(.9, .9), legend.title=element_blank()) +
@@ -572,7 +575,7 @@ ggplot(aes(x = year, y = mean_abund, fill = louse_species)) +
                         ymax = mean_abund + ((upper_ci - lower_ci) / 2)), 
                     width = 0.2,
                     position = position_dodge(0.9)) +
-      facet_grid(region ~ species,
+      facet_grid(. ~ species,
                  labeller = labeller(region = spp_labels)) +
       labs(x = "Year", y = "Abundance") +
       scale_fill_manual(values = hakai_palette("hakai_web")) +
@@ -584,7 +587,10 @@ ggplot(aes(x = year, y = mean_abund, fill = louse_species)) +
       #scale_y_continuous(expand = expand_scale(mult = c(.15, 0))) +
       #scale_fill_hakai() +
       labs(fill = "Louse Species") + 
-  theme(legend.text = element_text(face = "italic", size = 10)) 
+  theme(legend.text = element_text(face = "italic", size = 10))+
+  scale_x_continuous(n.breaks = project_years)+
+  theme(axis.text.x = element_text(angle=90, vjust=.5, hjust=1))
+
   #coord_cartesian(ylim = c(0, 1.7)) +
 
 

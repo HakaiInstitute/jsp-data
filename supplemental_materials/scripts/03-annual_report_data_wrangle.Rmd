@@ -828,19 +828,14 @@ qu39_temp_anomaly_data <-
   mutate(diff = if_else(mean_temp > predicted_mean_temp, "pos", "neg")) %>%
   drop_na(diff) %>% # run up to just this line to see where diff changes from pos to neg and then add a row that is the will be the mid point between the two days and add the predicted value from the loess regression and then run the whole chunk
   add_row(
-    yday = (35 + 39) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (35 + 39) / 2),
-    mean_temp = predict(temp.lo_qu39, (35 + 39) / 2)
-  ) %>% 
-  add_row(
     yday = (39 + 41) / 2,
     predicted_mean_temp = predict(temp.lo_qu39, (39 + 41) / 2),
     mean_temp = predict(temp.lo_qu39, (39 + 41) / 2)
   ) %>% 
   add_row(
-    yday = (41 + 50) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (41 + 50) / 2),
-    mean_temp = predict(temp.lo_qu39, (41 + 50) / 2)
+    yday = (50 + 54) / 2,
+    predicted_mean_temp = predict(temp.lo_qu39, (50 + 54) / 2),
+    mean_temp = predict(temp.lo_qu39, (50 + 54) / 2)
   ) %>% 
   add_row(
     yday = (140 + 148) / 2,
@@ -851,6 +846,26 @@ qu39_temp_anomaly_data <-
     yday = (166 + 173) / 2,
     predicted_mean_temp = predict(temp.lo_qu39, (166 + 173) / 2),
     mean_temp = predict(temp.lo_qu39, (166 + 173) / 2)
+  ) %>% 
+  add_row(
+    yday = (173 + 179) / 2,
+    predicted_mean_temp = predict(temp.lo_qu39, (173 + 179) / 2),
+    mean_temp = predict(temp.lo_qu39, (173 + 179) / 2)
+  ) %>% 
+  add_row(
+    yday = (179 + 187) / 2,
+    predicted_mean_temp = predict(temp.lo_qu39, (179 + 187) / 2),
+    mean_temp = predict(temp.lo_qu39, (179 + 187) / 2)
+  ) %>% 
+  add_row(
+    yday = (194 + 201) / 2,
+    predicted_mean_temp = predict(temp.lo_qu39, (194 + 201) / 2),
+    mean_temp = predict(temp.lo_qu39, (194 + 201) / 2)
+  ) %>% 
+  add_row(
+    yday = (203 + 208) / 2,
+    predicted_mean_temp = predict(temp.lo_qu39, (203 + 208) / 2),
+    mean_temp = predict(temp.lo_qu39, (203 + 208) / 2)
   )
  
 
