@@ -2,11 +2,11 @@
 
 Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository.
 
-The complete data file that's ready for analysis is called 'jsp_catch_and_bio_data_complete.csv' and is built from the tidy_data folder in the supplemental material. Each row represents one fish that has been dissected and includes (repeated) metadata from the seine it was captured in, as well as the survey metadata (repeated).
+The complete data file that's ready for analysis is called 'jsp_catch_and_bio_data_complete.csv' and is built from the tidy_data folder in the supplemental material. Each row represents one fish that has been dissected and includes data from the survvey and seine it was captured in.
 
 ## CHANGELOG
 
-Here we track what changes between different versions of the dataset. Different versions of the data set will be tagged on github with a release tag showing the version (eg. v1.2.0) that should  be cited when using these data to be clear which version of the data you used  for an analysis.
+Here we track what changes between different versions of the dataset. Different versions of the data set will be tagged on github with a release tag showing the version (eg. v1.2.0) that should be cited when using these data to be clear which version of the data you used for an analysis.
 
 ## Data dictionary
 

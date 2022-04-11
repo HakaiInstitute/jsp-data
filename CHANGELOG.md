@@ -3,12 +3,14 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
-## [1.3.0] - *RELEASE DATE*
+## [1.3.0] - 2022-04-11
 
 ### Changed
 - CTD data now only includes data from the downcast, and not the upcast
+- Restructured the repository folders so that one flat and wide data file (jsp_catch_and_bio_data_complete.csv) is joined and available in the root of the repo.
 
 ### Added
+- 2021 Field season data from field and lab
 - Added fork length, weight, and bycatch to OBIS record
 - Added scientific name of each species to bycatch_mort.csv file
 - Added latitude and longitude for all sites in sites.csv
