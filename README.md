@@ -2,8 +2,21 @@
 
 Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository. This repository corresponds to the metadata record located at http://dx.doi.org/10.21966/1.566666
 
+The complete data file that's ready for analysis is called 'jsp_catch_and_bio_data_complete.csv' and is built from the tidy_data folder in the supplemental material. Each row represents one fish that has been dissected and includes data from the survvey and seine it was captured in.
 
-# What's in the repository?
+## CHANGELOG
+
+Here we track what changes between different versions of the dataset. Different versions of the data set will be tagged on github with a release tag showing the version (eg. v1.2.0) that should be cited when using these data to be clear which version of the data you used for an analysis.
+
+## Data dictionary
+
+In the data dictionary we aim to provide  definitions of all the core tables. Definitions of variables in sample result data may have there own separate data dictionary  or readme file in  the raw_data folder and sub folders.
+
+## License
+
+This repository is public and so the data and code are licensed under the [Creative Commons By Attribution 4.0 (CC BY4)](https://creativecommons.org/licenses/by/4.0/) license. Download the data files you'd like or clone this Git repository and copy the data to your computer but you must attribute the work to the authors. To cite this work please see http://dx.doi.org/10.21966/1.566666 Please collaborate with the authors of this dataset if you plan to analyze it. They represent a significant public resource, and time investment.
+
+# What's in the supplemental material?
 
 ## Data folders
 
@@ -36,17 +49,3 @@ The historic_sealice_integration.R script joins together various sources of seal
 The annual_report_data_wrangle.Rmd script processes and joins the individual tables in the data folder so that annual comparisons can be made under the same assumptions and field methods.
 
 The Migration_Observations_Report.rmd reads in the data processed by the data_wrangle script, calculates statistics, produces figures, tables, and is where the report text can be written and compiled into a pdf report. The filtered and processed data that is used for interannual comparisons can be found in the report_data folder.
-
-# Other files
-
-## CHANGELOG
-
-Here we track what changes between different versions of the dataset. Different versions of the data set will be tagged on github with a release tag showing the version (eg. v1.2.0) that should  be cited when using these data to be clear which version of the data you used  for an analysis.
-
-## Data dictionary
-
-In the data dictionary we aim to provide  definitions of all the core tables. Definitions of variables in sample result data may have there own separate data dictionary  or readme file in  the raw_data folder and sub folders.
-
-## License
-
-This repository is public and so the data and code are licensed under the [Creative Commons By Attribution 4.0 (CC BY4)](https://creativecommons.org/licenses/by/4.0/) license. Download the data files you'd like or clone this Git repository and copy the data to your computer but you must attribute the work to the authors. To cite this work please see http://dx.doi.org/10.21966/1.566666 Please collaborate with the authors of this dataset if you plan to analyze it. They represent a significant public resource, and time investment.
