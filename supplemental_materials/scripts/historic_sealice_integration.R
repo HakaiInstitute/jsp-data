@@ -30,7 +30,8 @@ library(tidyverse)
 library(here)
 
 survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
-  right_join(fish_field_data, by = "seine_id")
+  right_join(fish_field_data, by = "seine_id") %>% 
+  left_join(sites)
 # In 2017, 2018, and 2019 we enumerated sea  lice in the field  using the salmon
 # coast method which uses a hand lens to identify various stages of both attached 
 # and motile sea lice. For the time series, we only report motiles because that 
