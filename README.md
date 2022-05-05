@@ -30,7 +30,7 @@ Data in the tidy_data folder are what we consider the fully QC'd relational data
 
 There are a number of data tables that come together to form a relational data model. The figure below details how each table is joined together via primary and foreign keys. 
 
-![Juvenile Salmon Data Model](figs/data_model.png)
+![Juvenile Salmon Data Model](supplemental_materials/figs/data_model.png)
 
 ### report_data
 
