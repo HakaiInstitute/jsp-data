@@ -1,6 +1,6 @@
 # jsp-data
 
-Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository.
+Welcome to [Hakai Institute](www.hakai.org) Juvenile Salmon Program data repository. This repository corresponds to the metadata record located at http://dx.doi.org/10.21966/1.566666
 
 The complete data file that's ready for analysis is called 'jsp_catch_and_bio_data_complete.csv' and is built from the tidy_data folder in the supplemental material. Each row represents one fish that has been dissected and includes data from the survvey and seine it was captured in.
 
@@ -30,7 +30,7 @@ Data in the tidy_data folder are what we consider the fully QC'd relational data
 
 There are a number of data tables that come together to form a relational data model. The figure below details how each table is joined together via primary and foreign keys. 
 
-![Juvenile Salmon Data Model](figs/data_model.png)
+![Juvenile Salmon Data Model](supplemental_materials/figs/data_model.png)
 
 ### report_data
 
@@ -48,4 +48,4 @@ The historic_sealice_integration.R script joins together various sources of seal
 
 The annual_report_data_wrangle.Rmd script processes and joins the individual tables in the data folder so that annual comparisons can be made under the same assumptions and field methods.
 
-The Migration_Observations_Report.rmd reads in the data processed by the data_wrangle script, calculates statistics, produces figures, tables, and is where the report text can be written and compiled into a pdf report. The filtered and processed data that is used for interannual comparisons can be found in the processed_data folder.
+The Migration_Observations_Report.rmd reads in the data processed by the data_wrangle script, calculates statistics, produces figures, tables, and is where the report text can be written and compiled into a pdf report. The filtered and processed data that is used for interannual comparisons can be found in the report_data folder.
