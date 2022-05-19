@@ -23,6 +23,7 @@ library(lubridate)
 library(here)
 library(googlesheets4)
 
+client <- hakaiApi::Client$new()
 
 # Read tables in from master JSP database and write out to 'raw-data' folder
 # Core tables
@@ -65,9 +66,7 @@ bycatch_mort <- bycatch_mort[rep(seq.int(1, nrow(bycatch_mort)), bycatch_mort$bm
 ysi <- read_sheet(mdt_slug, "ysi", na = c("NA", "")) %>% 
   write_csv(here("supplemental_materials", "raw_data", "ysi.csv"))
 
-beepr::beep()
 
-client <- hakaiApi::Client$new()
 qu39_all <- client$get(paste0(client$api_root, "/ctd/views/file/cast/data?direction_flag=d&fields=start_dt,station,conductivity,temperature,depth,salinity,dissolved_oxygen_ml_l&start_dt.year>2014&station=QU39&start_dt.doy>32&start_dt.doy<213&depth<=30&limit=-1"))
 
 qu39_ctd <- qu39_all %>% 
@@ -342,7 +341,11 @@ jsp_catch_and_bio_data_complete <- left_join(survey_data, seine_data, by = "surv
   left_join(stocks, by = 'ufn') %>% 
   left_join(combined_motile_lice, by = 'ufn') %>% 
   select(-survey_date.y, -site_id.y, -species.y) %>% 
-  rename(survey_date = survey_date.x, site_id = site_id.x, species = species.x)
+  rename(survey_date = survey_date.x, site_id = site_id.x, species = species.x) %>% 
+  mutate(survey_date = ymd(survey_date)) %>% 
+  arrange(survey_date) %>% 
+  select(-c(ysi_bout, ctd_bout, zoop_bout, time_searching, analyzing_lab.y), 
+         analyzing_lab = analyzing_lab.x)
   
 # write complete file to root of data folder
 write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
@@ -361,4 +364,5 @@ for (i in 1:length(dfs)){
   write_csv(dfs[[i]], here::here("supplemental_materials","tidy_data", paste(names(dfs[i]), ".csv",  sep = "")))
 }
 
+beepr::beep(7)
 ```
