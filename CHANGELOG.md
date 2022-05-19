@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.3.1] - 2022-05-19
+
+### Fixed
+- corrected date formatting issues for survey_date, set_time, survey_time_start, survey_time_end which were introduced by googlesheets4 package not handling time of the day as time but rather as date time and therefore was appending or prepending incorrect date or times (eg set_time was 1899-12-30T06:30:00 but now correctly reads 06:30:00)
+- YSI data was blank because of an incorrect file path which is now updated.
+
 ## [1.3.0] - 2022-04-11
 
 ### Changed
