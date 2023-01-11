@@ -89,6 +89,9 @@ qu39_ctd <- qu39_all %>%
   ) %>% 
   write_csv(here("supplemental_materials", "raw_data", "qu39_ctd.csv"))
 rm(qu39_all)
+
+Sys.sleep(30) # pauses for 30 seconds so as to not overwhelm google servers with too many requests
+
 # Sample inventory data
 # Read from Master JSP Inventory googlesheets
 mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
@@ -126,6 +129,7 @@ sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_sa
 fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
 
+#TODO: dive deeper into sealice dataset given work done for in-season report
 # sealice integration is long and complex so I broke it out into a separate script
 source(here::here("supplemental_materials", "scripts", 'historic_sealice_integration.R'))
 sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sea_lice_id_samples.csv"))%>% 
@@ -135,11 +139,15 @@ sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sampl
 # Sample results data
 # Various stock ID results are manually integrated in google sheets to produce this stock_id file that contains multiple years  of individual fish stock ID assignments. The underlying source  files  for that integration are stored in Hakai JSP Team Google Drive
 stock_id <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "stock_id.csv"))
+rerun_stock_id <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "rerun_stock_id.csv")) |> 
+  drop_na(Stock_1)
 
+#TODO breakout diets into a separate dataset
 # salmon_diets_coarse.csv is the result of a short trial in 2019 to implement a coarse gut content assessment in the lab. The method was too time consuming and was abandoned. 
 
 salmon_diets_coarse <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "salmon_diets_coarse.csv"))
 
+#TODO: read rna_pathogen_results from new Dryad data package
 rna_pathogen_results <- read_csv(here("supplemental_materials", "raw_data", "sample_results",  "rna_pathogen_data",
                                       "Hakai_Full_Export_15Apr20", "Results Copy.csv")) %>% 
    filter(ufn != "U2829") # this fish is removed because it doesn't exist in our records likely because metadata could not be confirmed so likely got excluded during QC
@@ -156,7 +164,7 @@ The JSP database is broken down into several tables that relate to each other vi
 # Create relational data model list object
 salmon_dm_no_keys <- dm(survey_data, seine_data, fish_field_data, fish_lab_data, 
                         sites, bycatch_mort, site_activity, combined_motile_lice,
-                        ysi, qu39_ctd, dna_samples, stock_id,
+                        ysi, qu39_ctd, dna_samples, stock_id, rerun_stock_id,
                         zoop_tax_samples, zoop_tows, stomach_samples, salmon_diets_coarse,
                         sealice_id_samples, carcasses_samples, isotope_samples,
                         rna_dna_samples, rna_pathogen_samples, otolith_samples,
@@ -190,7 +198,8 @@ salmon_only_pk <- salmon_dm_no_keys %>%
    dm_add_pk(scale_samples, sample_id) %>% 
    dm_add_pk(sealice_microbiome_samples, sample_id) %>% 
    dm_add_pk(fish_packages, package_id)  %>% 
-   dm_add_pk(rna_pathogen_results, ufn)
+   dm_add_pk(rna_pathogen_results, ufn) |> 
+   dm_add_pk(rerun_stock_id, sample_id)
    
 salmon_only_pk %>% dm_examine_constraints() # checks for duplicates in PK
 
@@ -203,6 +212,7 @@ salmon_dm <- salmon_only_pk %>%
    dm_add_fk(bycatch_mort, seine_id, seine_data) %>% 
    dm_add_fk(dna_samples, ufn, fish_field_data) %>% 
    dm_add_fk(stock_id, sample_id, dna_samples) %>% 
+   dm_add_fk(rerun_stock_id, sample_id, dna_samples) |> 
    dm_add_fk(site_activity, survey_id, survey_data) %>% 
    dm_add_fk(combined_motile_lice, ufn, fish_field_data) %>% 
    dm_add_fk(zoop_tax_samples, tow_id, zoop_tows) %>% 
@@ -366,3 +376,25 @@ for (i in 1:length(dfs)){
 
 beepr::beep(7)
 ```
+
+```{r}
+crew_days <- left_join(survey_data, sites)
+
+crew <- crew_days |> 
+  distinct(region, survey_date, .keep_all = TRUE)
+
+crew <- stringr::str_split(crew$crew, ", ") |> 
+  unlist() |> 
+  tibble() |> 
+  select(names = "unlist(stringr::str_split(crew$crew, \", \"))")
+
+crew$names2 <- str_replace(crew$names, " ", "")
+
+wordcloud::wordcloud(crew$names2)
+
+crew_count <- crew |> 
+  count(names)
+
+
+```
+

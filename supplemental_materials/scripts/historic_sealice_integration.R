@@ -11,7 +11,7 @@
 # see and ID) sea lice counts that use methods that are reasonably similar enough
 # to warrant combining observations to make interannual comparisons. The lowest 
 # common denominator among all years is that motile sea lice were identified to 
-# species. Thus the time series doesn't contain any stage data.
+# species. Thus the time series doesn't contain any stage or sex data.
 
 # Each year a new table that contains the motile caligus and lep counts should 
 # be added to the time series in a similar way to how the other sea lice tables 
@@ -24,6 +24,18 @@
 # forms the basis of our time series. We are confident that identification
 # accuracy between methods and years for motile sea lice is precise.
 
+# History of sampling
+# In 2015: 
+# 
+# In 2017, 2018, and 2019 we enumerated sea  lice in the field  using the salmon
+# coast method which uses a hand lens to identify various stages of both attached 
+# and motile sea lice. In 2017 we conducted two sets. The first one we counted sea attached sealice on 10 sockeye. 
+# On the second set we counted sea lice on 10 sockeye, pink, and chum (and didn't retain anything unless our quota was not filld during seine 1.
+# In 2018 we only enumerated 10 sockeye for attached stages and pink and chum were motile only. 
+# In 2019 we enumerated 10 sockeye and 3 pink and 3 chum for attached stages. 
+# For the time series, we only report motiles because that 
+# is what was done consistently between all years.
+
 # Summarize field counts of motile sea lice only
 
 library(tidyverse)
@@ -32,10 +44,7 @@ library(here)
 survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
   right_join(fish_field_data, by = "seine_id") %>% 
   left_join(sites)
-# In 2017, 2018, and 2019 we enumerated sea  lice in the field  using the salmon
-# coast method which uses a hand lens to identify various stages of both attached 
-# and motile sea lice. For the time series, we only report motiles because that 
-# is what was done consistently between all years.
+
 field_lice <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "sealice", "sealice_field.csv")) %>% 
   left_join(survey_seines_fish, by = "ufn") %>%
   drop_na(cal_mot_field) %>% 
@@ -155,4 +164,4 @@ combined_motile_lice <- full_join(full_lab_lice, field_lice) %>%
 
 write_csv(combined_motile_lice, here::here("supplemental_materials", "tidy_data", "combined_motile_lice.csv"))
 
-rm(field_lice, full_lab_lice)
+rm(field_lice, full_lab_lice, survey_seines_fish)
