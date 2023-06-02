@@ -40,6 +40,14 @@
 
 library(tidyverse)
 library(here)
+library(googlesheets4)
+
+mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
+survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) 
+
+1
+
+seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
 
 survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
   right_join(fish_field_data, by = "seine_id") %>% 

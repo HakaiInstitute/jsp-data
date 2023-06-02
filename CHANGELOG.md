@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [1.4.0] - Unreleased
+
+### Added
+- 2022 Field and lab data
+- New sea lice time series includes all stages (not only motiles but also chalimus and copepodites) as per the new format for the time series moving forward which includes copepodite stages down to species, chalimus stages (with species not identified in the field but estimated based on proportion of species in the cope and motile stages within each year). This file is in the supplemental_data folder in the tidy_data folder names sealice_all_stages_ts.csv
+
+### Changed
+- Removed sealice from the 'jsp_catch_and_bio_data_complete.csv' because the new sealice time series table is formatted as one row per louse species and stage, not one row per fish as in the jsp_catch_and_bio_data_complete.csv file
+- Changed the name of the script that produced the old sea lice time series which was motiles only from `historic_sealice_integration.R` to `historic_motile_sealice_intergration.R`.
+
 ## [1.3.1] - 2022-05-19
 
 ### Fixed
