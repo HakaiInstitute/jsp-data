@@ -52,7 +52,7 @@ seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
 
 survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
   right_join(fish_field_data, by = "seine_id") %>% 
-  left_join(sites)
+  left_join(sites, by = "site_id")
 
 field_lice <- read_csv(here("supplemental_materials", "raw_data", 
                             "sample_results", "sealice", "sealice_field.csv")) %>% 
@@ -160,6 +160,7 @@ sealice_current <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", sh
          motile_lep_lab = as.numeric(motile_lep_lab)) 
 
 full_lab_lice <- bind_rows(lab_lice, sealice_current)
+
 rm(lab_lice, sealice_current)
 
 combined_motile_lice <- full_join(full_lab_lice, field_lice) %>%
@@ -174,6 +175,17 @@ combined_motile_lice <- full_join(full_lab_lice, field_lice) %>%
          motile_lep,
          motile_caligus,
          all_lice) 
+
+
+# Include data from when we switched back to sealice ID in the field using a modified salmon coast protocol
+sealice_mod_sc <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", sheet = "sealice_field", guess_max = 500) |> 
+  mutate(motile_caligus = cam + caf + cgf,
+         motile_lep = lam + laf + lgf,
+         all_lice = motile_caligus + motile_lep) |> 
+  left_join(survey_seines_fish, by = 'ufn') |> 
+  select(ufn, survey_date, site_id, species, motile_lep, motile_caligus, all_lice)
+
+combined_motile_lice <- bind_rows(combined_motile_lice, sealice_mod_sc)
 
 write_csv(combined_motile_lice, here::here("supplemental_materials", "tidy_data", "combined_motile_lice.csv"))
 
