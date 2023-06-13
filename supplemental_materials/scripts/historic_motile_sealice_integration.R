@@ -42,9 +42,10 @@ library(tidyverse)
 library(here)
 library(googlesheets4)
 
+#mdt_slug is the id for the master data table google sheet
 mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
 survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) 
-
+# providng `1` fulfills auth request, assuming the correct gmail account is option 1
 1
 
 seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
@@ -53,7 +54,8 @@ survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>%
   right_join(fish_field_data, by = "seine_id") %>% 
   left_join(sites)
 
-field_lice <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "sealice", "sealice_field.csv")) %>% 
+field_lice <- read_csv(here("supplemental_materials", "raw_data", 
+                            "sample_results", "sealice", "sealice_field.csv")) %>% 
   left_join(survey_seines_fish, by = "ufn") %>%
   drop_na(cal_mot_field) %>% 
   mutate(
@@ -86,12 +88,15 @@ field_lice <- read_csv(here("supplemental_materials", "raw_data", "sample_result
 
 #sealice_lab_mot is motile counts of sealice conducted during fish dissections
 # from 2015, 2016, 2017, and 2018
-sealice_lab_mot <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "sealice", "sealice_lab_mot.csv")) 
+sealice_lab_mot <- read_csv(here("supplemental_materials", "raw_data", 
+                                 "sample_results", "sealice", "sealice_lab_mot.csv")) 
 
 #sealice_lab_fs_mot are the data from Lauren Portner's fine scale taxonomic id
 # that includes chalimus stages etc. It's mostly from 2015 fish (642 fish), 
 # and some from 2017 (63 fish)
-sealice_lab_fs_mot <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "sealice", "sealice_lab_fs.csv")) %>%
+sealice_lab_fs_mot <- read_csv(here("supplemental_materials", "raw_data", 
+                                    "sample_results", "sealice", 
+                                    "sealice_lab_fs.csv")) %>%
   #combine stages 1 and 2 or pre adults
   mutate(lpam_lab = lep_pa_m_1 + lep_pa_m_2,
          lpaf_lab = lep_pa_f_1 + lep_pa_f_2,

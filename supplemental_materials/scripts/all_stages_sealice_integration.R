@@ -7,6 +7,11 @@ library(googlesheets4)
 
 # In 2019 we field liced (including attached stages) 10 sockeye, and only 3 pink and 3 chum from every seine
 
+mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
+
+sites <- read_sheet(mdt_slug, sheet = "sites", na = c("NA", "")) %>% 
+  write_csv(here("supplemental_materials", "raw_data", "sites.csv"))
+1
 catch_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/jsp_catch_and_bio_data_complete.csv", guess_max = 1600) |> left_join(sites, by = "site_id")
 
 # Define sites that can be compared between years
@@ -132,6 +137,7 @@ sealice_lab_fs_n <- sealice_lab_fs |>
 seine_ids <- catch_data |> 
   select(seine_id, ufn)
 
+# Note 
 lab_mots_ts <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/supplemental_materials/report_data/sealice_time_series.csv") |> 
   filter(region == "DI", 
          year == year(survey_date),
@@ -141,7 +147,7 @@ lab_mots_ts <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-da
   left_join(seine_ids, by = 'ufn') |> 
   select(survey_date, seine_id, species, ufn, louse_species, life_stage, 
          count = n_lice) |> 
-  mutate(origin = "lab_mots_ts")
+  mutate(origin = "mots_ts") 
 
 lab_mots_ts_n <- lab_mots_ts |> 
   mutate(year = year(survey_date)) |> 
@@ -150,7 +156,7 @@ lab_mots_ts_n <- lab_mots_ts |>
   tally() |> 
   mutate(n_hosts_attached = 0,
          n_hosts_motile = n,
-         origin = "lab_mots")
+         origin = "mots_ts")
 
 
 # Third read in the field data to pull out 
@@ -223,7 +229,7 @@ sealice_df_long <- bind_rows(sealice_lab_fs, current_lice, sealice_field, lab_mo
   left_join(hosts, by = c("species", "year", "life_stage")) |> 
   ungroup()
 
-#write_csv(sealice_df_long, here("supplemental_data", "tidy_data", "sealice_df_long.csv"))
+write_csv(sealice_df_long, here("supplemental_materials", "tidy_data", "sealice_all_stages_ts_long.csv"))
 
 sealice_df <- sealice_df_long |> 
   dplyr::group_by(year, species, louse_species, life_stage) |> 

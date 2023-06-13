@@ -9271,3 +9271,287 @@ U23541,2022-02-23T00:00:00Z,none,present,10.5,97,102,NA,"Possible 1 lep, cannot 
 U23892,2022-02-23T00:00:00Z,none,present,8.2,91,96,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
 U23893,2022-02-23T00:00:00Z,none,present,8.7,91,97,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
 U23891,2022-02-23T00:00:00Z,none,present,6,80,85,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24287,2022-10-19T00:00:00Z,none,present,NA,128,134,"weight forgotten, after dissection it was 18.9g",NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24284,2022-10-19T00:00:00Z,none,present,23.7,133,139,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24283,2022-10-19T00:00:00Z,none,present,27.4,136,142,bit of ice around body,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24288,2022-10-19T00:00:00Z,none,present,34.1,146,152,ice around body,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24282,2022-10-19T00:00:00Z,none,present,24.3,130,135,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24281,2022-10-19T00:00:00Z,none,present,15.9,115,121,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24290,2022-10-19T00:00:00Z,none,present,17.7,117,122,fell on dissection table,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24285,2022-10-19T00:00:00Z,none,present,24.3,130,136,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24286,2022-10-19T00:00:00Z,none,present,22.6,129,135,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24289,2022-10-19T00:00:00Z,none,present,26.4,139,145,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U22988,2022-10-19T00:00:00Z,none,present,14.9,109,115,NA,"scale loss on right side, possibly from net",KB,streamlined_workup_4,NA,lab_motiles
+U22990,2022-10-19T00:00:00Z,none,present,18,123,128,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22985,2022-10-19T00:00:00Z,none,present,23,130,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22981,2022-10-19T00:00:00Z,none,present,19.5,120,126,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22982,2022-10-19T00:00:00Z,none,present,19.4,123,128,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22983,2022-10-19T00:00:00Z,none,present,23.7,130,136,NA,scale loss on right side with some scratches,KB,streamlined_workup_4,NA,lab_motiles
+U22984,2022-10-20T00:00:00Z,none,present,23.5,137,142,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22987,2022-10-20T00:00:00Z,none,present,38,158,NA,NA,"left gill damaged, scale loss on upper body on both sides, right side has large gash to belly",KB,streamlined_workup_4,NA,lab_motiles
+U22989,2022-10-20T00:00:00Z,none,present,20.6,125,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22986,2022-10-20T00:00:00Z,none,present,21.1,124,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24901,2022-10-20T00:00:00Z,none,present,13.8,107,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22991,2022-10-20T00:00:00Z,none,present,15.4,113,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24621,2022-10-20T00:00:00Z,none,present,10.8,98,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24421,2022-10-20T00:00:00Z,none,present,5.5,80,85,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24941,2022-10-20T00:00:00Z,none,present,16.4,115,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24280,2022-10-24T00:00:00Z,none,present,25.7,135,NA,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24274,2022-10-24T00:00:00Z,none,present,6.8,86,90,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24271,2022-10-24T00:00:00Z,none,present,10.2,97,101,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24277,2022-10-24T00:00:00Z,none,present,7.6,93,97,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24272,2022-10-24T00:00:00Z,none,present,7.3,91,95,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24278,2022-10-24T00:00:00Z,none,present,17.5,123,NA,fish fell on dissection table,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24273,2022-10-24T00:00:00Z,none,present,9.4,95,100,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24279,2022-10-24T00:00:00Z,none,present,27.2,137,142,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24275,2022-10-24T00:00:00Z,none,present,11,103,107,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24276,2022-10-24T00:00:00Z,none,present,10,99,103,fish fell on dissection table,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24251,2022-10-24T00:00:00Z,none,present,20,122,128,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24257,2022-10-24T00:00:00Z,none,present,17.6,123,129,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24258,2022-10-24T00:00:00Z,none,present,19.9,125,131,NA,scale loss on left side,KB,streamlined_workup_4,NA,lab_motiles
+U24256,2022-10-24T00:00:00Z,none,present,23.3,127,134,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24254,2022-10-24T00:00:00Z,none,present,13.6,108,113,NA,scale loss on right side,KB,streamlined_workup_4,NA,lab_motiles
+U24253,2022-10-24T00:00:00Z,none,present,33,140,145,NA,predator scaring on right by anal fin,KB,streamlined_workup_4,NA,lab_motiles
+U24252,2022-10-24T00:00:00Z,none,present,21.8,123,129,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24259,2022-10-24T00:00:00Z,none,present,30.2,139,145,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24255,2022-10-24T00:00:00Z,none,present,24.3,130,136,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24260,2022-10-24T00:00:00Z,none,present,28.2,132,138,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23177,2022-10-25T00:00:00Z,none,present,27,135,140,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23176,2022-10-25T00:00:00Z,none,present,18.8,116,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23171,2022-10-25T00:00:00Z,none,present,23.2,125,131,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23175,2022-10-25T00:00:00Z,none,present,17.4,117,123,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23174,2022-10-25T00:00:00Z,none,present,9.1,97,101,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23173,2022-10-25T00:00:00Z,none,present,18,120,125,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U23172,2022-10-25T00:00:00Z,none,present,25.6,128,133,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22966,2022-10-25T00:00:00Z,none,present,5.9,86,90,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22970,2022-10-25T00:00:00Z,none,present,5.9,85,90,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22969,2022-10-25T00:00:00Z,none,present,7.4,89,94,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22968,2022-10-25T00:00:00Z,none,present,4.8,77,82,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22967,2022-10-25T00:00:00Z,none,present,4.1,76,79,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22962,2022-10-25T00:00:00Z,none,present,4.9,79,82,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22965,2022-10-25T00:00:00Z,none,present,5.2,80,84,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24608,2022-10-25T00:00:00Z,none,present,8.3,92,96,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24602,2022-10-25T00:00:00Z,none,present,8.7,94,99,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24601,2022-10-25T00:00:00Z,none,present,7.7,89,92,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24610,2022-10-25T00:00:00Z,none,present,6.7,90,93,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24607,2022-10-25T00:00:00Z,none,present,7.3,91,95,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24609,2022-10-25T00:00:00Z,none,present,8.6,95,99,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24606,2022-10-25T00:00:00Z,none,present,6.3,86,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24603,2022-10-25T00:00:00Z,none,present,8.7,93,96,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24604,2022-10-25T00:00:00Z,none,present,8.9,94,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24605,2022-10-25T00:00:00Z,none,present,9.2,95,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24726,2022-10-26T00:00:00Z,none,present,5.9,82,85,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24727,2022-10-26T00:00:00Z,none,present,4.7,NA,NA,"could not measure length because head got cut off, not sure if any scales were collected in smear","big wound posterior of dorsal fin,",TVDS,streamlined_workup_4,NA,lab_motiles
+U24729,2022-10-26T00:00:00Z,none,present,5.8,86,91,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24730,2022-10-26T00:00:00Z,none,present,7.6,92,96,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24722,2022-10-26T00:00:00Z,none,present,9.3,100,104,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24724,2022-10-26T00:00:00Z,none,present,4.6,78,82,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24721,2022-10-26T00:00:00Z,none,present,8.3,94,NA,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24723,2022-10-26T00:00:00Z,none,present,5,76,78,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24728,2022-10-26T00:00:00Z,none,present,6,83,NA,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24725,2022-10-26T00:00:00Z,none,present,6,80,85,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U22961,2022-10-26T00:00:00Z,none,present,5.2,84,88,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22963,2022-10-26T00:00:00Z,none,present,4.4,79,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U22964,2022-10-26T00:00:00Z,none,present,6,88,92,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24709,2022-10-26T00:00:00Z,none,present,3.5,79,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24708,2022-10-26T00:00:00Z,none,present,2.5,64,68,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24710,2022-10-26T00:00:00Z,none,present,4,81,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24707,2022-10-26T00:00:00Z,none,present,3,69,72,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24703,2022-10-26T00:00:00Z,none,present,3.7,72,NA,fish cut in half,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24706,2022-10-26T00:00:00Z,none,present,4.3,77,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24705,2022-10-26T00:00:00Z,none,present,3.7,75,78,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24704,2022-10-26T00:00:00Z,none,present,2.2,62,65,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24702,2022-10-26T00:00:00Z,none,present,4.3,71,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24701,2022-10-26T00:00:00Z,none,present,3.8,69,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24088,2022-10-31T00:00:00Z,none,present,6.3,86,90,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24086,2022-10-31T00:00:00Z,none,present,8.2,91,95,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24084,2022-10-31T00:00:00Z,none,present,6.1,82,86,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24090,2022-10-31T00:00:00Z,none,present,8.1,93,97,fish fell on table,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24089,2022-10-31T00:00:00Z,none,present,5.8,85,89,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24083,2022-10-31T00:00:00Z,none,present,8.1,93,97,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24082,2022-10-31T00:00:00Z,none,present,8.2,93,97,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24085,2022-10-31T00:00:00Z,none,present,5.1,79,83,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24087,2022-10-31T00:00:00Z,none,present,7.6,90,94,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24081,2022-10-31T00:00:00Z,none,present,4.4,76,80,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24940,2022-10-31T00:00:00Z,none,present,4.6,78,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24939,2022-10-31T00:00:00Z,none,present,3.2,71,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24931,2022-10-31T00:00:00Z,none,present,18.8,119,125,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24936,2022-10-31T00:00:00Z,none,present,5.3,81,89,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24935,2022-10-31T00:00:00Z,none,present,5.9,85,89,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24938,2022-10-31T00:00:00Z,none,present,4.2,77,81,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24933,2022-10-31T00:00:00Z,none,present,12.4,105,110,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24934,2022-10-31T00:00:00Z,none,present,15.5,114,119,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24937,2022-10-31T00:00:00Z,none,present,6.1,87,NA,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24932,2022-10-31T00:00:00Z,none,present,14.7,107,112,NA,NA,KB,streamlined_workup_3,NA,lab_motiles
+U24780,2022-10-31T00:00:00Z,none,present,6.1,87,91,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24775,2022-10-31T00:00:00Z,none,present,4.7,80,84,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24776,2022-10-31T00:00:00Z,none,present,9.2,98,103,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24777,2022-10-31T00:00:00Z,none,present,6,86,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24778,2022-10-31T00:00:00Z,none,present,5.3,82,86,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24779,2022-10-31T00:00:00Z,none,present,5.8,87,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24774,2022-10-31T00:00:00Z,none,present,6.9,91,96,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24771,2022-10-31T00:00:00Z,none,present,7.2,90,94,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24773,2022-10-31T00:00:00Z,none,present,6.1,87,91,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24772,2022-10-31T00:00:00Z,none,present,6.1,86,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24767,2022-11-01T00:00:00Z,none,present,6.2,82,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24768,2022-11-01T00:00:00Z,none,present,4.5,75,79,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24769,2022-11-01T00:00:00Z,none,present,6.3,82,86,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24770,2022-11-01T00:00:00Z,none,present,6.3,86,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24766,2022-11-01T00:00:00Z,none,present,7,93,97,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24764,2022-11-01T00:00:00Z,none,present,6.4,87,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24401,2022-11-01T00:00:00Z,none,present,4.4,77,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24408,2022-11-01T00:00:00Z,none,present,4.9,76,80,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24402,2022-11-01T00:00:00Z,none,present,6.6,85,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24407,2022-11-01T00:00:00Z,none,present,27.1,140,NA,NA,lesions across body,TVDS,streamlined_workup_3,NA,lab_motiles
+U24762,2022-11-02T00:00:00Z,none,present,5.6,86,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24763,2022-11-02T00:00:00Z,none,present,5.9,82,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24761,2022-11-02T00:00:00Z,none,present,7.4,90,95,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24765,2022-11-02T00:00:00Z,none,present,4.7,79,83,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24448,2022-11-02T00:00:00Z,none,present,8.6,96,100,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24447,2022-11-02T00:00:00Z,none,present,5.9,87,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24445,2022-11-02T00:00:00Z,none,present,6.3,86,89,NA,scale loss and cut to tail on both sides,KB,streamlined_workup_4,NA,lab_motiles
+U24444,2022-11-02T00:00:00Z,none,present,9.4,99,103,NA,"lots of scale loss on both sides, both sides slightly abraded",KB,streamlined_workup_4,NA,lab_motiles
+U24446,2022-11-02T00:00:00Z,none,present,7.7,92,96,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24450,2022-11-02T00:00:00Z,none,present,6.7,90,94,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24449,2022-11-02T00:00:00Z,none,present,9,97,101,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24441,2022-11-02T00:00:00Z,none,present,5.7,81,85,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24442,2022-11-02T00:00:00Z,none,present,6,85,89,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24443,2022-11-02T00:00:00Z,none,present,6.6,88,92,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24406,2022-11-03T00:00:00Z,none,present,4.7,80,83,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24405,2022-11-03T00:00:00Z,none,present,6.7,85,90,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24410,2022-11-03T00:00:00Z,none,present,4.8,77,81,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24409,2022-11-03T00:00:00Z,none,present,5.7,81,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24404,2022-11-03T00:00:00Z,none,present,10.1,101,106,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24403,2022-11-03T00:00:00Z,none,present,5.1,82,85,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24797,2022-11-03T00:00:00Z,none,present,18.1,118,123,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24792,2022-11-03T00:00:00Z,none,present,9,98,102,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24791,2022-11-03T00:00:00Z,none,present,20.2,126,131,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24793,2022-11-03T00:00:00Z,none,present,21.3,128,133,NA,NA,TVDS,streamlined_workup_4,NA,lab_motiles
+U24269,2022-11-10T00:00:00Z,none,present,12.6,107,113,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24265,2022-11-10T00:00:00Z,none,present,20.4,127,132,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24268,2022-11-10T00:00:00Z,none,present,15.9,114,120,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24270,2022-11-10T00:00:00Z,none,present,28.2,140,146,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24264,2022-11-10T00:00:00Z,none,present,22.4,128,135,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24266,2022-11-10T00:00:00Z,none,present,18,117,123,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24263,2022-11-10T00:00:00Z,none,present,17.7,118,123,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24262,2022-11-10T00:00:00Z,none,present,20.7,124,130,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24267,2022-11-10T00:00:00Z,none,present,27.2,136,143,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24261,2022-11-10T00:00:00Z,none,present,22.5,125,130,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23181,2022-11-14T00:00:00Z,none,present,12.8,105,109,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23190,2022-11-14T00:00:00Z,none,present,20.5,121,127,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23188,2022-11-14T00:00:00Z,none,present,7.6,91,95,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23182,2022-11-14T00:00:00Z,none,present,12.1,106,112,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23183,2022-11-14T00:00:00Z,none,present,11.2,100,104,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23184,2022-11-14T00:00:00Z,none,present,10.2,100,105,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23185,2022-11-14T00:00:00Z,none,present,10,98,103,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23186,2022-11-14T00:00:00Z,none,present,13,105,110,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23187,2022-11-14T00:00:00Z,none,present,6,87,91,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U23189,2022-11-14T00:00:00Z,none,present,12.7,105,110,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24747,2022-11-14T00:00:00Z,none,present,23.7,130,135,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24749,2022-11-14T00:00:00Z,none,present,21.9,124,130,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24745,2022-11-14T00:00:00Z,none,present,30.5,140,146,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24742,2022-11-14T00:00:00Z,none,present,16,118,123,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24748,2022-11-14T00:00:00Z,none,present,12,103,108,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24750,2022-11-14T00:00:00Z,none,present,15.6,116,120,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24741,2022-11-14T00:00:00Z,none,present,19.2,123,128,NA,Lesions across right side of body.,TVDS,streamlined_workup_3,NA,lab_motiles
+U24668,2022-11-03T00:00:00Z,none,present,6.3,85,89,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24669,2022-11-03T00:00:00Z,none,present,13.5,115,119,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24670,2022-11-03T00:00:00Z,none,present,7.4,90,95,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24661,2022-11-03T00:00:00Z,none,present,5.9,83,87,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24662,2022-11-03T00:00:00Z,none,present,6,86,91,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24663,2022-11-03T00:00:00Z,none,present,5.3,82,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24664,2022-11-03T00:00:00Z,none,present,7.1,89,93,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24665,2022-11-03T00:00:00Z,none,present,6.6,88,92,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24666,2022-11-03T00:00:00Z,none,present,9.5,95,100,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24667,2022-11-03T00:00:00Z,none,present,7.3,92,97,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22971,2022-11-04T00:00:00Z,none,present,9,90,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24291,2022-11-04T00:00:00Z,none,present,12.2,106,110,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24800,2022-11-04T00:00:00Z,none,present,9.1,97,101,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24798,2022-11-04T00:00:00Z,none,present,16.8,120,125,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24796,2022-11-04T00:00:00Z,none,present,10.1,100,105,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24799,2022-11-04T00:00:00Z,none,present,12.5,105,110,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24795,2022-11-04T00:00:00Z,none,present,17.3,118,123,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24794,2022-11-04T00:00:00Z,none,present,11.5,104,NA,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24916,2022-11-15T00:00:00Z,none,present,7.6,89,93,NA,Fish head twisted and smashed slightly.,KB,streamlined_workup_4,NA,lab_motiles
+U24919,2022-11-15T00:00:00Z,none,present,8.5,94,98,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24920,2022-11-15T00:00:00Z,none,present,8.1,92,97,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24917,2022-11-15T00:00:00Z,none,present,7,79,84,NA,Hemorrhage around lower jaw and gill on both sides,KB,streamlined_workup_4,NA,lab_motiles
+U24918,2022-11-15T00:00:00Z,none,present,8.2,94,99,NA,Hemorrhage around lower jaw and gill on both sides,KB,streamlined_workup_4,NA,lab_motiles
+U24912,2022-11-15T00:00:00Z,none,present,10.1,98,102,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24911,2022-11-15T00:00:00Z,none,present,11,104,108,NA,Anisakiss,KB,streamlined_workup_4,NA,lab_motiles
+U24914,2022-11-15T00:00:00Z,none,present,8.6,95,100,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24913,2022-11-15T00:00:00Z,none,present,12.5,103,111,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24915,2022-11-15T00:00:00Z,none,present,9,97,102,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24751,2022-11-15T00:00:00Z,none,present,4.8,76,80,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24752,2022-11-15T00:00:00Z,none,present,6.8,89,94,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24753,2022-11-15T00:00:00Z,none,present,16.5,111,117,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24754,2022-11-15T00:00:00Z,none,present,6.8,87,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24755,2022-11-15T00:00:00Z,none,present,6.1,87,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24760,2022-11-15T00:00:00Z,none,present,3.1,68,NA,Fish fell on table.,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24759,2022-11-15T00:00:00Z,none,present,5.9,85,89,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24756,2022-11-15T00:00:00Z,none,present,10.6,102,107,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24757,2022-11-15T00:00:00Z,none,present,8.8,92,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24758,2022-11-15T00:00:00Z,none,present,5.7,84,88,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24927,2022-11-16T00:00:00Z,none,present,12.7,111,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24926,2022-11-16T00:00:00Z,none,present,18.8,120,125,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24921,2022-11-16T00:00:00Z,none,present,17.7,113,117,Fish fell on floor (RNA-side),NA,KB,streamlined_workup_4,NA,lab_motiles
+U24922,2022-11-16T00:00:00Z,none,present,8.3,92,97,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24923,2022-11-16T00:00:00Z,none,present,12.9,105,110,Isopod,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24924,2022-11-16T00:00:00Z,none,present,14.2,109,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24925,2022-11-16T00:00:00Z,none,present,13.7,107,112,NA,Head of fish is bent,KB,streamlined_workup_4,NA,lab_motiles
+U24928,2022-11-16T00:00:00Z,none,present,18.4,115,121,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24929,2022-11-16T00:00:00Z,none,present,16.4,111,116,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24930,2022-11-16T00:00:00Z,none,present,13.3,108,113,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24790,2022-11-16T00:00:00Z,none,present,6.7,86,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24789,2022-11-16T00:00:00Z,none,present,7,85,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24788,2022-11-16T00:00:00Z,none,present,4.1,71,75,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24781,2022-11-16T00:00:00Z,none,present,8.2,94,98,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24787,2022-11-16T00:00:00Z,none,present,8.3,95,98,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24782,2022-11-16T00:00:00Z,none,present,5.5,83,87,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24786,2022-11-16T00:00:00Z,none,present,8.3,96,101,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24785,2022-11-16T00:00:00Z,none,present,8.1,92,96,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24784,2022-11-16T00:00:00Z,none,present,3.8,74,78,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24783,2022-11-16T00:00:00Z,none,present,5.1,79,84,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24615,2022-11-17T00:00:00Z,none,present,18.9,116,122,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24618,2022-11-17T00:00:00Z,none,present,13.4,105,110,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24614,2022-11-17T00:00:00Z,none,present,13.9,107,112,NA,Isopod friend.,KB,streamlined_workup_4,NA,lab_motiles
+U24613,2022-11-17T00:00:00Z,none,present,14,113,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24612,2022-11-17T00:00:00Z,none,present,9.2,96,101,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24611,2022-11-17T00:00:00Z,none,present,21,123,128,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24619,2022-11-17T00:00:00Z,none,present,7.9,94,98,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24616,2022-11-17T00:00:00Z,none,present,8.6,96,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24617,2022-11-17T00:00:00Z,none,present,12.2,109,114,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24620,2022-11-17T00:00:00Z,none,present,11.3,103,107,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22957,2022-11-17T00:00:00Z,none,present,4.7,76,81,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22958,2022-11-17T00:00:00Z,none,present,4.8,77,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22959,2022-11-17T00:00:00Z,none,present,6.2,84,88,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22956,2022-11-17T00:00:00Z,none,present,6.6,85,90,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22960,2022-11-17T00:00:00Z,none,present,5.4,81,85,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22953,2022-11-17T00:00:00Z,none,present,7.7,91,95,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22952,2022-11-17T00:00:00Z,none,present,8.2,94,98,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22954,2022-11-17T00:00:00Z,none,present,4.9,79,83,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22951,2022-11-17T00:00:00Z,none,present,12.8,108,112,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U22955,2022-11-17T00:00:00Z,none,present,7.4,91,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24744,2022-11-17T00:00:00Z,none,present,21,123,128,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24743,2022-11-17T00:00:00Z,none,present,17.7,115,121,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24746,2022-11-17T00:00:00Z,none,present,17.3,116,121,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24431,2022-11-17T00:00:00Z,none,present,8.8,93,97,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24432,2022-11-17T00:00:00Z,none,present,6.8,88,NA,NA,"Tail broken, can't measure FL.",TVDS,streamlined_workup_3,NA,lab_motiles
+U24433,2022-11-17T00:00:00Z,none,present,6.5,80,85,NA,"Scale loss, likely net marks",TVDS,streamlined_workup_3,NA,lab_motiles
+U24651,2022-11-17T00:00:00Z,none,present,10.8,99,103,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24654,2022-11-17T00:00:00Z,none,present,5.1,79,83,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24653,2022-11-17T00:00:00Z,none,present,3.5,67,71,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24652,2022-11-17T00:00:00Z,none,present,3.4,58,62,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24712,2022-11-18T00:00:00Z,none,present,3.9,68,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24714,2022-11-18T00:00:00Z,none,present,3.8,71,75,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24715,2022-11-18T00:00:00Z,none,present,3.7,71,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24716,2022-11-18T00:00:00Z,none,present,4,75,79,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24717,2022-11-18T00:00:00Z,none,present,4.8,76,81,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24711,2022-11-18T00:00:00Z,none,present,4.2,73,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24720,2022-11-18T00:00:00Z,none,present,4.6,74,78,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24719,2022-11-18T00:00:00Z,none,present,3.3,69,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24718,2022-11-18T00:00:00Z,none,present,4.6,79,NA,NA,NA,KB,streamlined_workup_4,NA,lab_motiles
+U24713,2022-11-18T00:00:00Z,none,present,4.6,77,NA,NA,"Abbrasion on right side tail, skin serrated(?)",KB,streamlined_workup_4,NA,lab_motiles
+U24413,2022-11-18T00:00:00Z,none,present,6.2,80,NA,NA,"Tail broken, couldn't measure FL.",TVDS,streamlined_workup_3,NA,lab_motiles
+U24412,2022-11-18T00:00:00Z,none,present,7.3,85,90,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
+U24411,2022-11-18T00:00:00Z,none,present,9.9,100,105,NA,NA,TVDS,streamlined_workup_3,NA,lab_motiles
