@@ -87,16 +87,9 @@ fish_lab_data,fork_length,Lab Fork Length (mm),numeric,millimetre,n,,,The length
 fish_lab_data,comments_protocol,Protocol Comments,text,,,,,Comments related to deviations to standard dissection protocols
 fish_lab_data,comments_fish_health_lab,Fish Health Comments (Lab),text,,,,,"Comments to describe any abnormal/unique observations about the fish itself (e.g. lesions, non-louse parasites, tissue discolouration, scale loss, etc.)"
 fish_lab_data,dissector,Dissector,text,,,,,The initials of the technician who performed the dissection
-fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,,"""full1"" = procedure for 2015 & 2016 samples (RNA:DNA from muscle; RNA-pathogen from gill, brain, spleen, liver, heart & kidney; fatty acid; stable isotope; DNA (if no fin clips were taken in the field); stomach; otolith; and scales). "
-"full2"""" = procedure for samples processed Oct. 2017 to Aug. 2018 ('full_1' with the addition of extra muscle tissue taken for -80C storage). ",,,,,,,,
-"full2_csia"""" = procedure for fish subsampled for compount-specific stable isotope analysis (by David Costalago", UBC, Feb. 2018). All samples taken as in 'full2' with the addition of a second isotope sample. ,,,,,,
-"nocold"""" = 'full1' without RNA", fatty acid, or isotope samples taken (i.e. only DNA, stomach, otolith, and scale samples taken),,,
-"no80"""" = procedure for fish previously stored at -20C before dissection. No RNA", fatty acid, or extra muscle samples taken (i.e., only isotope . Reduced sterilization between fish. ,,,,,
-"irregular"""" = processing with at least one sample type not taken that doesn't conform to any preexisting protocol. ",,,,,,,,
-"streamlined1"""" = procedure for 2018 fish (RNA:DNA from muscle", RNA-pathogen from gill only, fatty acid, stable isotope, and DNA). ,,,,
-"streamlined1_st"""" = 'streamlined_1' with the addition of stomach samples taken and stored in 95% non-denatured ethanol for Vanessa Fladmark (UBC)'s pink and chum diet study.""",,,,,,,,
-fish_lab_data,lice_collection_protocol,Lice Collection Protocol,text,,,,,"""lab_fine_2015"" = attached & motile sea lice collected for identification and stored in buffered formalin. ""lab_motiles_etoh"" = motile sea lice collected for identification and stored in 95% non-denatured ethanol. ""lab_motiles_cryo"" = motile sea lice collected for Tianyi Chang's (UBC) microbiome research and stored at -80C."
-fish_lab_data,lice_id_protocol_lab,Lab Lice ID Protocol,text,,,,,"""lportner_fine"" = fine-scale identification of sea lice collected in the lab by Lauren Portner. ""lab_motiles"" = identification of motile stages of sea lice only."
+fish_lab_data,dissection_protocol,Dissection Protocol,text,,,,,For complete account of different protocols see: https://docs.google.com/spreadsheets/d/1FKhgSYfDm5xR7Pw4xesg0ZfMDZgE-KJoeN_qilGMi5M/edit?usp=sharing
+fish_lab_data,lice_collection_protocol,Lice Collection Protocol,text,,,,,
+fish_lab_data,lice_id_protocol_lab,Lab Lice ID Protocol,text,,,,,
 fish_lab_data,quality_level,Quality Level,text,,,,,
 fish_lab_data,quality_flag,Quality Flag,text,,,,,
 fish_lab_data,quality_log,Quality Log,text,,,,,

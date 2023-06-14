@@ -24,7 +24,10 @@ library(here)
 library(googlesheets4)
 
 client <- hakaiApi::Client$new()
+## IMPORTANT: In a new environment, run the all_stages_sealice_integration.R script
+```
 
+```{r}
 # Read tables in from master JSP database and write out to 'raw-data' folder
 # Core tables
 mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
@@ -89,6 +92,9 @@ qu39_ctd <- qu39_all %>%
   ) %>% 
   write_csv(here("supplemental_materials", "raw_data", "qu39_ctd.csv"))
 rm(qu39_all)
+
+Sys.sleep(30) # pauses for 30 seconds so as to not overwhelm google servers with too many requests
+
 # Sample inventory data
 # Read from Master JSP Inventory googlesheets
 mi_slug <- "1opdGSi-BIJtgCJgv2X-6-dBRFIFyOtVvvtjy9eQ18nc"
@@ -126,8 +132,14 @@ sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_sa
 fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
 
-# sealice integration is long and complex so I broke it out into a separate script
-source(here::here("supplemental_materials", "scripts", 'historic_sealice_integration.R'))
+
+## Source motile sealice time series integration script
+source(here::here("supplemental_materials", "scripts", 'historic_motile_sealice_integration.R'))
+
+# Read in sealice_all_stages_ts_long which is an output from the all_stages_sealice_integration.R script
+sealice_all_stages_ts_long <- read_csv(here("supplemental_materials", "tidy_data",
+                                  "sealice_all_stages_ts_long.csv"))
+
 sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sea_lice_id_samples.csv"))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sea_lice_id_samples.csv"))
 
@@ -136,10 +148,14 @@ sealice_id_samples <- read_csv(here("supplemental_materials", "raw_data", "sampl
 # Various stock ID results are manually integrated in google sheets to produce this stock_id file that contains multiple years  of individual fish stock ID assignments. The underlying source  files  for that integration are stored in Hakai JSP Team Google Drive
 stock_id <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "stock_id.csv"))
 
+
 # salmon_diets_coarse.csv is the result of a short trial in 2019 to implement a coarse gut content assessment in the lab. The method was too time consuming and was abandoned. 
 
 salmon_diets_coarse <- read_csv(here("supplemental_materials", "raw_data", "sample_results", "salmon_diets_coarse.csv"))
 
+# RNA pathogen results include 2015 sockeye pink and chum, and 2016 pink and chum
+#TODO Need to updated sample results when we get a new export from Kristi Miller 
+# lab that includes 2016 sockeye currently being analyzed.
 rna_pathogen_results <- read_csv(here("supplemental_materials", "raw_data", "sample_results",  "rna_pathogen_data",
                                       "Hakai_Full_Export_15Apr20", "Results Copy.csv")) %>% 
    filter(ufn != "U2829") # this fish is removed because it doesn't exist in our records likely because metadata could not be confirmed so likely got excluded during QC
@@ -155,13 +171,15 @@ The JSP database is broken down into several tables that relate to each other vi
 
 # Create relational data model list object
 salmon_dm_no_keys <- dm(survey_data, seine_data, fish_field_data, fish_lab_data, 
-                        sites, bycatch_mort, site_activity, combined_motile_lice,
+                        sites, bycatch_mort, site_activity,
                         ysi, qu39_ctd, dna_samples, stock_id,
-                        zoop_tax_samples, zoop_tows, stomach_samples, salmon_diets_coarse,
-                        sealice_id_samples, carcasses_samples, isotope_samples,
+                        zoop_tax_samples, zoop_tows, stomach_samples,
+                        salmon_diets_coarse, sealice_id_samples, carcasses_samples,
                         rna_dna_samples, rna_pathogen_samples, otolith_samples,
                         extra_muscle_samples, fatty_acid_samples, scale_samples,
-                        sealice_microbiome_samples, fish_packages, rna_pathogen_results)
+                        sealice_microbiome_samples, fish_packages,
+                        rna_pathogen_results, isotope_samples,
+                        combined_motile_lice, sealice_all_stages_ts_long)
 
 # Add Primary Keys (column that has only unique values)
 salmon_only_pk <- salmon_dm_no_keys %>% 
@@ -196,6 +214,7 @@ salmon_only_pk %>% dm_examine_constraints() # checks for duplicates in PK
 
 # Add foreign keys   
 salmon_dm <- salmon_only_pk %>% 
+   dm_add_fk(sealice_all_stages_ts_long, ufn, fish_field_data) |> 
    dm_add_fk(seine_data, survey_id, survey_data) %>% 
    dm_add_fk(fish_field_data, seine_id, seine_data) %>% 
    dm_add_fk(fish_lab_data, ufn, fish_field_data) %>% 
@@ -221,11 +240,10 @@ salmon_dm <- salmon_only_pk %>%
    dm_add_fk(fish_packages, seine_id, seine_data) %>% 
    dm_add_fk(rna_pathogen_results, ufn, fish_lab_data)
    
-
 salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
 
 # manually  export the drawing from the viewer pane to figs to update the data model image
-dm_draw(salmon_dm)
+dm_draw(salmon_dm, rankdir = "BT")
 ```
 
 
@@ -260,7 +278,9 @@ fish_lab_data %>% group_by(dissector) %>%
 ## Sampling Locations
 
 ```{r}
-
+survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
+  right_join(fish_field_data, by = "seine_id") %>% 
+  left_join(sites)
 #Check that all  fish have a location associated with them
 std_survey_seines_w_catch <- survey_seines_fish %>%
    filter(fish_retained == "yes",
@@ -310,7 +330,7 @@ leaflet() %>%
                        labelOptions = labelOptions(noHide = F, direction = "bottom")
       ) %>%
       addProviderTiles(providers$Esri.OceanBasemap,  options = providerTileOptions(opacity = 1)) %>%
-      addEsriTiledMapLayer(url = "https://ags.hakai.org:6443/arcgis/rest/services/AGOL_basemaps/Marine_charts/MapServer") %>%  
+      addEsriTiledMapLayer(url = "https://geospatial.hakai.org/ags/rest/services/Basemaps/Nautical_Charts/MapServer") %>%  
       addProviderTiles(providers$CartoDB.VoyagerOnlyLabels) %>% 
       addMiniMap()
 
@@ -344,13 +364,17 @@ jsp_catch_and_bio_data_complete <- left_join(survey_data, seine_data, by = "surv
   rename(survey_date = survey_date.x, site_id = site_id.x, species = species.x) %>% 
   mutate(survey_date = ymd(survey_date)) %>% 
   arrange(survey_date) %>% 
-  select(-c(ysi_bout, ctd_bout, zoop_bout, time_searching, analyzing_lab.y), 
-         analyzing_lab = analyzing_lab.x)
+  select(-c(ysi_bout, ctd_bout, zoop_bout, time_searching))
   
 # write complete file to root of data folder
 write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
 rm(jsp_catch_and_bio_data_complete)
 rm(stocks)
+
+test <- read_csv(here("jsp_catch_and_bio_data_complete.csv"))
+problems()
+print(problems(), n = 29)
+rm(test)
 ```
 
 ```{r}
@@ -366,3 +390,25 @@ for (i in 1:length(dfs)){
 
 beepr::beep(7)
 ```
+
+```{r}
+crew_days <- left_join(survey_data, sites)
+
+crew <- crew_days |> 
+  distinct(region, survey_date, .keep_all = TRUE)
+
+crew <- stringr::str_split(crew$crew, ", ") |> 
+  unlist() |> 
+  tibble() |> 
+  select(names = "unlist(stringr::str_split(crew$crew, \", \"))")
+
+crew$names2 <- str_replace(crew$names, " ", "")
+
+wordcloud::wordcloud(crew$names2)
+
+crew_count <- crew |> 
+  count(names)
+
+
+```
+

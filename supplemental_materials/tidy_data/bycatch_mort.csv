@@ -437,7 +437,7 @@ DE170N2,Chinook salmon,Oncorhynchus tshawytscha,B,NA,bycatch-435
 DE182N1,Chinook salmon,Oncorhynchus tshawytscha,B,NA,bycatch-436
 DE182N1,Chinook salmon,Oncorhynchus tshawytscha,B,NA,bycatch-437
 DE182N1,Chinook salmon,Oncorhynchus tshawytscha,M,J,bycatch-438
-DE185N2,Quillback Rockfish,Sebastes,B,NA,bycatch-439
+DE185N2,Quillback Rockfish,Sebastes maliger,B,NA,bycatch-439
 DE192N3,Chinook salmon,Oncorhynchus tshawytscha,B,NA,bycatch-440
 DE192N3,Chinook salmon,Oncorhynchus tshawytscha,B,NA,bycatch-441
 DE192N3,Chum salmon,Oncorhynchus keta,M,J,bycatch-442
@@ -7390,3 +7390,62 @@ DE810N4,tube snout,Aulorhynchus flavidus,B,A,bycatch-7388
 DE811N2,cabezon,Scorpaenichthys marmoratus,B,J,bycatch-7389
 DE813N2,chum,Oncorhynchus keta,M,J,bycatch-7390
 DE814N2,sandlance,Ammodytes personatus,B,A,bycatch-7391
+DE902N1,cod,Gadidae,B,J,bycatch-7392
+DE902N1,cod,Gadidae,B,J,bycatch-7393
+DE902N1,cod,Gadidae,B,J,bycatch-7394
+DE902N1,cod,Gadidae,B,J,bycatch-7395
+DE902N1,cod,Gadidae,B,J,bycatch-7396
+DE902N1,cod,Gadidae,B,J,bycatch-7397
+DE902N1,cod,Gadidae,B,J,bycatch-7398
+DE902N1,cod,Gadidae,B,J,bycatch-7399
+DE902N1,cod,Gadidae,B,J,bycatch-7400
+DE902N1,cod,Gadidae,B,J,bycatch-7401
+DE902N1,cod,Gadidae,B,J,bycatch-7402
+DE902N1,cod,Gadidae,B,J,bycatch-7403
+DE902N1,cod,Gadidae,B,J,bycatch-7404
+DE902N1,cod,Gadidae,B,J,bycatch-7405
+DE902N1,cod,Gadidae,B,J,bycatch-7406
+DE902N1,cod,Gadidae,B,J,bycatch-7407
+DE902N1,cod,Gadidae,B,J,bycatch-7408
+DE902N1,cod,Gadidae,B,J,bycatch-7409
+DE902N1,cod,Gadidae,B,J,bycatch-7410
+DE902N1,cod,Gadidae,B,J,bycatch-7411
+DE903N1,rockfish,Sebastes,B,A,bycatch-7412
+DE903N2,rockfish,Sebastes,B,A,bycatch-7413
+DE903N2,rockfish,Sebastes,B,A,bycatch-7414
+DE903N2,rockfish,Sebastes,B,A,bycatch-7415
+DE903N2,tubesnout,Aulorhynchus flavidus,B,Y,bycatch-7416
+DE903N2,tubesnout,Aulorhynchus flavidus,B,Y,bycatch-7417
+DE903N2,greenling,Hexagrammos,B,A,bycatch-7418
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7419
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7420
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7421
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7422
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7423
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7424
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7425
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7426
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7427
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7428
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7429
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7430
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7431
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7432
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7433
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7434
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7435
+DE903N2,stickleback,Gasterosteus aculeatus,B,Y,bycatch-7436
+DE903N2,cod,Gadidae,B,J,bycatch-7437
+DE903N3,cod,Gadidae,B,J,bycatch-7438
+DE906N1,Manacled Sculpin,Synchirus gilli,B,A,bycatch-7439
+DE906N1,Quill Back,Sebastes maliger,M,A,bycatch-7440
+DE907N1,cod,Gadidae,B,J,bycatch-7441
+DE907N1,cod,Gadidae,B,J,bycatch-7442
+DE907N1,cod,Gadidae,B,J,bycatch-7443
+DE910N1,greenling,Hexagrammos,B,J,bycatch-7444
+DE910N1,greenling,Hexagrammos,B,J,bycatch-7445
+DE910N1,greenling,Hexagrammos,B,J,bycatch-7446
+DE912N1,pink salmon,Oncorhynchus gorbuscha,M,J,bycatch-7447
+DE912N1,soft sculpin,Psychrolutes sigalutes,B,NA,bycatch-7448
+DE913N1,pink salmon,Oncorhynchus gorbuscha,M,J,bycatch-7449
+DE914N1,stickleback,Gasterosteus aculeatus,B,A,bycatch-7450

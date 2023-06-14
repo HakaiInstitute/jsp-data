@@ -23,22 +23,22 @@ library(worrms)
 library(obistools)
 
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
-survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/survey_data.csv") 
+survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") 
 
-seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/seine_data.csv") 
+seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/seine_data.csv") 
 
-sites <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/sites.csv")
+sites <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/sites.csv")
 
 survey_seines <- right_join(survey_data, seine_data, by = "survey_id") # removes survey events where a seine wasn't set
 
-fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_lab_data.csv", guess_max = 8000)
+fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/fish_lab_data.csv", guess_max = 8000)
 
-fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/fish_field_data.csv", guess_max = 16000)
+fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/fish_field_data.csv", guess_max = 16000)
 
 
-bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/bycatch_mort.csv')
+bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/bycatch_mort.csv')
 
-sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/tidy_data/combined_motile_lice.csv")
+sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv")
 
 fish_data <- full_join(fish_lab_data, fish_field_data) %>% 
   left_join(sealice)
@@ -95,7 +95,7 @@ event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 samplingProtocol = "http://dx.doi.org/10.21966/1.566666", # This is the DOI for the Hakai Salmon Data Package that contains the smnpling protocol, as well as the complete data package
                 language = "en",
                 license = "http://creativecommons.org/licenses/by/4.0/legalcode",
-                bibliographicCitation = "Johnson, B.T., J.C.L. Gan, S.C. Godwin, M. Krkosek, B.P.V. Hunt. 2020. Hakai Juvenile Salmon Program Time Series. Hakai Institute, Quadra Island Ecological Observatory, Heriot Bay, British Columbia, Canada. v#.#.#, http://dx.doi.org/10.21966/1.566666",
+                bibliographicCitation = "Johnson B, Gan J, Godwin S, Bachen K, van der Stap T, Krkosek M, Rogers L, Lauren P, Janusson C, Hunt B (2021). Hakai Institute Juvenile Salmon Program. Version 1.26. Canadian node of the Ocean Biogeographic Information System (OBIS Canada). Samplingevent dataset. http://dx.doi.org/10.21966/1.566666",
                 references = "https://github.com/HakaiInstitute/jsp-data",
                 institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, https://edmo.seadatanet.org/report/5148",
                 institutionCode = "Hakai"
@@ -197,7 +197,7 @@ occurrence <- left_join(occurrence, combined_worms_names) %>%
     mutate(basisOfRecord = "HumanObservation",
         occurrenceStatus = "present")
 
-write_csv(occurrence, here::here("OBIS_data", "occurrence.csv"))
+write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
 
 # This removes events that didn't result in any occurrences
 event <- dplyr::semi_join(event, occurrence, by = 'eventID') %>% 
@@ -211,7 +211,7 @@ event <- dplyr::left_join(event, simple_sites, by = c("locationID" = "site_id"))
          decimalLongitude = coalesce(decimalLongitude, ocgy_std_lon)) %>% 
   select(-c(ocgy_std_lat, ocgy_std_lon))
 
-write_csv(event, here::here("OBIS_data", "event.csv"))
+write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
 ```
 
 
@@ -222,7 +222,7 @@ Here I convert length, and weight measurements that relate to an event and an oc
 
 ```{r measurementOrFact}
 
-mof_types <- read_csv(here("OBIS_data", "mof_type_units_id.csv"))
+mof_types <- read_csv(here("supplemental_materials", "OBIS_data", "mof_type_units_id.csv"))
 
 fish_data$weight <- coalesce(fish_data$weight, fish_data$weight_field)
 fish_data$fork_length <- coalesce(fish_data$fork_length, fish_data$fork_length_field)
@@ -244,7 +244,7 @@ measurementOrFact <- fish_data %>%
          measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"))
 
 
-write_csv(measurementOrFact, here::here("Obis_data", "extendedMeasurementOrFact.csv"))
+write_csv(measurementOrFact, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
 ```
 
 ```{r QC}

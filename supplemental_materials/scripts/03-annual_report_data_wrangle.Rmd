@@ -63,9 +63,6 @@ sealice_time_series <- read_csv(here("supplemental_materials", "tidy_data", "com
          key = louse_species,
          value = n_lice) %>%
   mutate(year = year(survey_date)) %>% 
-  filter(
-    site_id %in% consistent_sites
-    ) %>%
   drop_na() %>%
   filter(species %in% c("SO", "PI", "CU")) %>% 
   left_join(sites, by =  "site_id") %>% 
@@ -96,10 +93,15 @@ mean_n_lice <- function(splits) {
   mean(x$n_lice)
 }
 
+sealice_time_series <- sealice_time_series |> 
+    filter(
+    site_id %in% consistent_sites
+    )
+
 # this_is_it correctly nests the data into its hierarchical form
 this_is_it <- sealice_time_series %>% 
   filter(louse_species != "all_lice") %>% 
-  split(list(.$year, .$region, .$site_id, .$survey_date, .$species, .$louse_species))
+  base::split(list(.$year, .$region, .$site_id, .$survey_date, .$species, .$louse_species))
 
 # remove empty permutations
 row_lt1 <- which(sapply(this_is_it, nrow) < 1)
@@ -171,8 +173,10 @@ dbl_effort_2019 <- survey_seines %>%
   group_by(site_week) %>% 
   mutate(count=n()) %>% 
   filter(count>1) %>% 
-  mutate_at(c("so_total", "pi_total", "cu_total", "co_total", "he_total"), mean) %>% 
-  mutate_at(c("so_total", "pi_total", "cu_total", "co_total", "he_total"), funs(round(.,0)))
+  mutate_at(c("so_total", "pi_total", "cu_total", "co_total", "he_total"),
+            mean) %>% 
+  mutate_at(c("so_total", "pi_total", "cu_total", "co_total", "he_total"),
+            round)
 
 # I first take Cumulative abundance
 tidy_catch <- survey_seines %>%
@@ -252,7 +256,8 @@ so_total_daily_mean_cumul_abund <- tidy_catch %>%
 
 so_total_catch_expanded_cum_DI <-
   so_total_daily_mean_cumul_abund %>%
-  filter(region == "DI")
+  filter(region == "DI") |> 
+  ungroup()
 
 so_total_predict_average_prop_DI <-
   hakaisalmon::log_cumul_abund(
@@ -820,55 +825,36 @@ sim_temp_data_qu39$predicted_mean_temp <-
 
 # Create a linear interpolation of points that have zero difference between
 # loess model and 'observed data' so that an area plot will look right
-# manually identify intersections and create values that fall on the line so that colour of plot will change above and below the trend line.
-# This code will have to be re-written manually each yeat to interpolate the mid points for when current year trend line crosses over the trendline
-# See https://stackoverflow.com/questions/27135962/how-to-fill-geom-polygon-with-different-colors-above-and-below-y-0
-qu39_temp_anomaly_data <-
-  left_join(sim_temp_data_qu39, qu39_this_year) %>%
-  mutate(diff = if_else(mean_temp > predicted_mean_temp, "pos", "neg")) %>%
-  drop_na(diff) %>% # run up to just this line to see where diff changes from pos to neg and then add a row that is the will be the mid point between the two days and add the predicted value from the loess regression and then run the whole chunk
-  add_row(
-    yday = (39 + 41) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (39 + 41) / 2),
-    mean_temp = predict(temp.lo_qu39, (39 + 41) / 2)
-  ) %>% 
-  add_row(
-    yday = (50 + 54) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (50 + 54) / 2),
-    mean_temp = predict(temp.lo_qu39, (50 + 54) / 2)
-  ) %>% 
-  add_row(
-    yday = (140 + 148) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (140 + 148) / 2),
-    mean_temp = predict(temp.lo_qu39, (140 + 148) / 2)
-  ) %>% 
-  add_row(
-    yday = (166 + 173) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (166 + 173) / 2),
-    mean_temp = predict(temp.lo_qu39, (166 + 173) / 2)
-  ) %>% 
-  add_row(
-    yday = (173 + 179) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (173 + 179) / 2),
-    mean_temp = predict(temp.lo_qu39, (173 + 179) / 2)
-  ) %>% 
-  add_row(
-    yday = (179 + 187) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (179 + 187) / 2),
-    mean_temp = predict(temp.lo_qu39, (179 + 187) / 2)
-  ) %>% 
-  add_row(
-    yday = (194 + 201) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (194 + 201) / 2),
-    mean_temp = predict(temp.lo_qu39, (194 + 201) / 2)
-  ) %>% 
-  add_row(
-    yday = (203 + 208) / 2,
-    predicted_mean_temp = predict(temp.lo_qu39, (203 + 208) / 2),
-    mean_temp = predict(temp.lo_qu39, (203 + 208) / 2)
-  )
- 
+#### #TEST automated function:
+library(purrr)
+# Function to calculate the midpoint row
+calc_midpoint_row <- function(df, i) {
+  yday = (df$yday[i] + df$yday[i+1]) / 2
+  predicted_mean_temp = (df$predicted_mean_temp[i] + 
+                           df$predicted_mean_temp[i+1]) / 2
+  mean_temp = (df$mean_temp[i] + 
+                           df$mean_temp[i+1]) / 2
+  return(data.frame(yday = yday, predicted_mean_temp = predicted_mean_temp, mean_temp = mean_temp))
+}
 
+# Generate the initial data
+qu39_temp_anomaly_data <- left_join(sim_temp_data_qu39, qu39_this_year) %>%
+  mutate(diff = if_else(mean_temp > predicted_mean_temp, "pos", "neg")) %>%
+  drop_na(diff)
+
+# Generate mid-point rows
+mid_points <- map_dfr(1:(nrow(qu39_temp_anomaly_data) - 1), ~ {
+  if(qu39_temp_anomaly_data$diff[.x] != qu39_temp_anomaly_data$diff[.x + 1]) {
+    calc_midpoint_row(qu39_temp_anomaly_data, .x)
+  }
+})
+
+# Combine original data with the new mid-point rows
+qu39_temp_anomaly_data <- bind_rows(qu39_temp_anomaly_data, mid_points) %>%
+  arrange(yday)  # make sure data is in order by yday
+
+# See https://stackoverflow.com/questions/27135962/how-to-fill-geom-polygon-with-different-colors-above-and-below-y-0
+ 
 # Create min and max temp value for any given week of the time series
 qu39_min_max <- qu39_ctd %>%
   group_by(year, yday) %>%
@@ -1144,6 +1130,7 @@ sst_annual_mean <- qu39 %>%
   mutate(month = month(date), year = year(date)) %>% 
   filter(month >= 5 & month <= 6, station == "QU39") %>% 
   select(year, mean_temp) %>% 
+  filter(year <= current_year) |> 
   group_by(year) %>% 
   summarise(sd_temp = sd(mean_temp, na.rm = TRUE),
             mean_temp = mean(mean_temp, na.rm = TRUE))
