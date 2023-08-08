@@ -1,28 +1,17 @@
 # Sea lice
 
-# Sea lice is probably the most complicated set of data to combine largely because 
+# Sea lice are the most complex to combine largely because 
 # we used so many different methods. We counted lice in the field under different 
 # protocols, and we counted them in the lab under different protocols as well. 
 # Some methods produce a very fine level of resolution when it comes to species 
 # and stage ID whereas other methods are more coarse and only focus on larger 
 # 'motile' sealice that can be seen easier. 
 
-# Our goal is to create a time series of motile (adult, not attached and easy to
-# see and ID) sea lice counts that use methods that are reasonably similar enough
+# The goal of this script is to create a time series of motile (adult, not attached and easy to
+# see and ID) sea lice counts that use methods that are similar enough
 # to warrant combining observations to make interannual comparisons. The lowest 
 # common denominator among all years is that motile sea lice were identified to 
 # species. Thus the time series doesn't contain any stage or sex data.
-
-# Each year a new table that contains the motile caligus and lep counts should 
-# be added to the time series in a similar way to how the other sea lice tables 
-# are combined. Alternatively, if the motile lab method stays the same, the data
-# can just be added to JSP Master Data Tables google sheet and then exported as 
-# a .csv and saved in this repository.
-
-# This script deals with combining field observations with fine scale stage data,
-# and coarser lab counts. Motile sea lice counted through each of these methods
-# forms the basis of our time series. We are confident that identification
-# accuracy between methods and years for motile sea lice is precise.
 
 # History of sampling
 # In 2015: 
@@ -36,22 +25,24 @@
 # For the time series, we only report motiles because that 
 # is what was done consistently between all years.
 
+# In 2020 the stages were not identified in the lab but just counts of motile leps, or caligus  were conducted.
+# 2021, 2022, and 2023 when we switched back to sealice ID in the field using a modified salmon coast protocol that included attached stages
+
 # Summarize field counts of motile sea lice only
 
-library(tidyverse)
-library(here)
-library(googlesheets4)
-
+#TODO delete the commented code if everything works and this can be sources in line with 01-data-integration...Rmd
 #mdt_slug is the id for the master data table google sheet
-mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
-survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) 
-# providng `1` fulfills auth request, assuming the correct gmail account is option 1
-1
+#mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
+# survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) 
+# # providng `1` fulfills auth request, assuming the correct gmail account is option 1
+# 1
+# 
+# seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
 
-seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
+survey_seines <- left_join(survey_data, seine_data, by = 'survey_id') |> 
+  filter(fish_retained == "yes")
 
-survey_seines_fish <- left_join(survey_data, seine_data, by = 'survey_id') %>% 
-  right_join(fish_field_data, by = "seine_id") %>% 
+survey_seines_fish <- left_join(fish_field_data, survey_seines, by = "seine_id") |> 
   left_join(sites, by = "site_id")
 
 field_lice <- read_csv(here("supplemental_materials", "raw_data", 
@@ -151,7 +142,7 @@ lab_lice <- survey_seines_fish %>%
 rm(sealice_lab_motiles)
 
 # In 2020 the stages were not identified in the lab but just counts of motile leps, or caligus  were conducted.
-sealice_current <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", sheet = "sealice_lab_motiles_simple", guess_max = 500) %>%
+sealice_current <- read_sheet(mdt_slug, sheet = "sealice_lab_motiles_simple", guess_max = 500) %>%
   rename(motile_caligus_lab = cal_count, motile_lep_lab = lep_count) %>% 
   left_join(survey_seines_fish) %>% 
   select(ufn, site_id, species, survey_date, motile_caligus_lab, 
@@ -177,7 +168,7 @@ combined_motile_lice <- full_join(full_lab_lice, field_lice) %>%
          all_lice) 
 
 
-# Include data from when we switched back to sealice ID in the field using a modified salmon coast protocol
+# Include data from 2021-2023 when we switched back to sealice ID in the field using a modified salmon coast protocol
 sealice_mod_sc <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", sheet = "sealice_field", guess_max = 500) |> 
   mutate(motile_caligus = cam + caf + cgf,
          motile_lep = lam + laf + lgf,

@@ -774,3 +774,38 @@ DE916N1,DE916,1,targeted,50.27418333,-125.3774833,8:02,NA,0,1,10,yes,0,0,10,302,
 DE917N1,DE917,1,targeted,50.30825,-125.32915,7:50,NA,1,100,0,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
 DE917N2,DE917,2,targeted,50.307917,-125.3301,8:04,NA,1,10,1,yes,1,1,10,572,3,14,0,0,0,0,1,1,SEMSP,NA,NA
 DE918N1,DE918,1,targeted,50.436683,-125.2645,8:11,NA,0,10,1,yes,1,28,10,2624,10,64,0,0,0,0,0,0,SEMSP,NA,NA
+DE1001N1,DE1001,1,targeted,50.307167,-125.332833,6:45,NA,0,1,0,yes,4,4,0,0,2,2,0,15,1,1,5,141,SEMSP,Coho not collected because we had the fish for 2 hours and we wanted to do a second set,NA
+DE1002N1,DE1002,1,targeted,50.290883,-125.310617,12:25,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1003N1,DE1003,1,targeted,50.4426,-125.277033,7:30,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1003N2,DE1003,2,targeted,50.43945,-125.270433,8:14,NA,0,1,10,yes,0,0,3,6,10,283,0,0,0,0,0,0,SEMSP,one fish was very small and might have been a SO or CU fry. Were unsure and didn't retain it,NA
+DE1004N1,DE1004,1,targeted,50.271783,-125.364417,6:44,NA,0,0,10,yes,0,0,57,1526,10,179,0,0,0,0,0,0,SEMSP,47 pink mortality in bottom of net under the kelp,NA
+DE1005N1,DE1005,1,targeted,50.440633,-125.272833,7:50,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1005N2,DE1005,2,targeted,50.4428,-125.278933,8:59,NA,0,10,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1007N1,DE1007,1,targeted,50.3076,-125.33465,6:49,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1007N2,DE1007,2,targeted,50.306767,-125.336333,7:05,NA,0,1,10,yes,10,20,10,684,10,46,1,2,0,0,0,0,SEMSP,NA,NA
+DE1010N1,DE1010,1,targeted,50.442667,-125.278533,7:39,NA,0,10,10,no,0,0,2,4545,0,46,0,0,0,0,0,0,NA,"emptied most of the net because there were so many fish; saw a chum but chouldn't catch it because of the volume of pink, so estimated there was about 1% in the net, 2 pink mortality in the net",NA
+DE1011N1,DE1011,1,targeted,50.306967,-125.3359,7:12,NA,0,0,1,yes,0,0,10,112,10,112,0,0,0,0,0,0,SEMSP,NA,NA
+DE1012N1,DE1012,1,targeted,50.271167,-125.36715,7:26,NA,0,1,0,yes,0,0,0,32,1,2,0,0,0,0,0,0,NA,chum taken was a mortality from gill clipping,NA
+DE1013N1,DE1013,1,targeted,50.442917,-125.27885,7:26,NA,0,1,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1013N2,DE1013,2,targeted,50.443167,-125.27915,8:13,NA,0,1,1,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1014N1,DE1014,1,targeted,50.457717,-125.2602,8:46,NA,1,1,0,no,0,0,0,1,0,1,0,0,0,0,0,0,NA,fish not retaind because there were only 2,NA
+DE1014N2,DE1014,2,targeted,50.457183,-125.2577,10:05,NA,0,0,0,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1015N1,DE1015,1,targeted,50.3068,-125.3326,6:46,NA,10,1,10,yes,30,823,10,341,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1016N1,DE1016,1,random,50.271683,-125.370883,7:20,NA,0,1,0,no,0,0,0,599,0,729,0,1,0,0,0,0,NA,NA,NA
+DE1017N1,DE1017,1,targeted,50.442417,-125.277167,7:20,NA,0,1,0,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1017N2,DE1017,2,targeted,50.442567,-125.278,7:37,NA,0,10,0,no,0,7,23,6736,0,214,0,0,0,2,0,0,NA,23 pink mortality,NA
+DE1018N1,DE1018,1,targeted,50.3068,-125.335467,6:54,NA,0,1,0,yes,30,183,5,36,10,132,0,0,0,0,0,0,SEMSP,NA,NA
+DE1019N1,DE1019,1,targeted,50.269333,-125.3613,6:33,NA,1,1,0,yes,0,16,5,49,5,227,0,0,0,1,0,0,SEMSP,NA,NA
+DE1020N1,DE1020,1,targeted,50.44355,-125.27955,7:11,NA,0,10,0,yes,0,11,6,276,3,185,0,0,0,0,0,2,SEMSP,"6 pink mortalities , pink also not recovering  as quickly as expected from the gill clippings",NA
+DE1021N1,DE1021,1,targeted,50.305667,-125.331217,6:34,NA,1,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1021N2,DE1021,2,targeted,50.305683,-125.33125,6:50,NA,0,0,10,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1021N3,DE1021,3,targeted,50.306683,-125.332517,7:09,NA,1,1,10,yes,1,2,10,15,11,53,0,0,0,0,0,0,SEMSP,"one sockeye got out through a hole in the net, net pacthed up right away, 1 cu euthinized by accident and kept as a trainer fish",NA
+DE1022N1,DE1022,1,targeted,50.26985,-125.362833,6:16,NA,0,1,100,no,0,0,0,30,0,120,0,0,0,1,0,0,NA,NA,NA
+DE1023N1,DE1023,1,targeted,50.44285,-125.278683,7:26,NA,0,1,1,no,0,0,0,699,0,17,0,0,0,1,0,0,NA,NA,NA
+DE1024N1,DE1024,1,targeted,50.305633,-125.338,6:39,NA,1,10,0,no,0,0,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+DE1024N2,DE1024,2,targeted,50.3055,-125.337867,7:13,NA,1,1,1,yes,3,3,3,3,10,281,0,0,1,1,0,0,SEMSP,had one botched set between 1 and 2 due to net knot,NA
+DE1025N1,DE1025,1,targeted,50.27465,-125.377267,6:50,NA,0,1,0,no,0,0,1,155,2,36,0,1,0,0,0,0,NA,1 pink and 2 chum mortalities from field processing; 1 hatchery coho ID'd later;,NA
+DE1026N1,DE1026,1,targeted,50.4434,-125.279283,6:20,NA,1,10,0,no,0,2,1,811,0,210,0,0,0,0,0,0,NA,"1 pink mort in net. Tim note (July 26, 2023) pink mort added to pi_total",NA
+DE1027N1,DE1027,1,targeted,50.3077,-125.333783,6:37,NA,1,1,0,yes,1,1,10,25,10,68,0,0,1,1,1,1,SEMSP,at least 3 lesioned fish in the net,NA
+DE1028N1,DE1028,1,targeted,50.2746,-125.37745,7:00,NA,0,1,0,no,0,0,0,5,0,0,0,0,0,0,0,2,NA,NA,NA
+DE1028N2,DE1028,2,targeted,50.272067,-125.372017,8:05,NA,0,1,0,no,0,0,0,93,0,135,0,0,0,0,0,0,NA,lesioned chum in set 2 ( not sampled). Set_time is approximate.,NA

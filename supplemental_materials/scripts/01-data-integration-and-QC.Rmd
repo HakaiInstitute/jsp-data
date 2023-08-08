@@ -17,13 +17,18 @@ If errors are found  in the data in this script, they can either be corrected in
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
+source(here::here("supplemental_materials", "scripts", "all_stages_sealice_integration.R"))
+# Restart session after sourcing
+
 library(dm)
 library(tidyverse)
 library(lubridate)
 library(here)
 library(googlesheets4)
+library(hakaiApi)
 
 client <- hakaiApi::Client$new()
+
 ## IMPORTANT: In a new environment, run the all_stages_sealice_integration.R script
 ```
 
@@ -124,11 +129,14 @@ Sys.sleep(30) # pauses for 30 seconds so as to not overwhelm google servers with
 
 rna_dna_samples <- read_sheet(mi_slug, sheet = "rna_dna_samples", na = c("NA", "")) %>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_dna_samples.csv"))
-rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples", na = c("NA", ""))%>% 
+rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples", 
+                                   na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_pathogen_samples.csv"))
-sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples", na = c("NA", "")) %>% 
+sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples", 
+                                         na = c("NA", "")) %>% 
   distinct(sample_id, .keep_all = TRUE) %>% 
-   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sealice_microbiome_samples.csv"))
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory",
+                  "sealice_microbiome_samples.csv"))
 fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
 
@@ -241,8 +249,6 @@ salmon_dm <- salmon_only_pk %>%
    dm_add_fk(rna_pathogen_results, ufn, fish_lab_data)
    
 salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
-
-# manually  export the drawing from the viewer pane to figs to update the data model image
 dm_draw(salmon_dm, rankdir = "BT")
 ```
 
