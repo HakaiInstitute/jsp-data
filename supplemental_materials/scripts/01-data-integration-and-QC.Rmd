@@ -140,7 +140,6 @@ sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_sa
 fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
 
-
 ## Source motile sealice time series integration script
 source(here::here("supplemental_materials", "scripts", 'historic_motile_sealice_integration.R'))
 

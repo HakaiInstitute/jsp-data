@@ -30,18 +30,8 @@
 
 # Summarize field counts of motile sea lice only
 
-#TODO delete the commented code if everything works and this can be sources in line with 01-data-integration...Rmd
-#mdt_slug is the id for the master data table google sheet
-#mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
-# survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) 
-# # providng `1` fulfills auth request, assuming the correct gmail account is option 1
-# 1
-# 
-# seine_data <- read_sheet(mdt_slug, sheet = "seine_data", na = c("NA", ""))
-
-survey_seines <- left_join(survey_data, seine_data, by = 'survey_id') |> 
-  filter(fish_retained == "yes")
-
+survey_seines <- left_join(survey_data, seine_data, by = 'survey_id') 
+  
 survey_seines_fish <- left_join(fish_field_data, survey_seines, by = "seine_id") |> 
   left_join(sites, by = "site_id")
 
@@ -177,6 +167,7 @@ sealice_mod_sc <- read_sheet("1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI", she
   select(ufn, survey_date, site_id, species, motile_lep, motile_caligus, all_lice)
 
 combined_motile_lice <- bind_rows(combined_motile_lice, sealice_mod_sc)
+rm(sealice_mod_sc)
 
 write_csv(combined_motile_lice, here::here("supplemental_materials", "tidy_data", "combined_motile_lice.csv"))
 
