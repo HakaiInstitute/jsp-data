@@ -20,10 +20,12 @@ library(tidyverse)
 library(here)
 library(lubridate)
 library(worrms)
-library(obistools)
 
+#TODO replace develop with master once the most recent verion of the dataset is published
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
-survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") 
+#TODO include genetic stock ID
+survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
+  mutate(date_site = paste(survey_date, site_id, sep = "_"))
 
 seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/seine_data.csv") 
 
@@ -35,10 +37,13 @@ fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-
 
 fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/fish_field_data.csv", guess_max = 16000)
 
-
 bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/bycatch_mort.csv')
 
 sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv")
+
+ysi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/ysi.csv") |> 
+  mutate(date_site = paste(survey_date, site_id, sep = "_")) |> 
+  distinct(date_site, .keep_all = TRUE)
 
 fish_data <- full_join(fish_lab_data, fish_field_data) %>% 
   left_join(sealice)
@@ -73,8 +78,6 @@ My process for conversion was to make a new table called `event` and map the sta
 
 ```{r event}
 
-#TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m) to hang off eventID in the eMoF table
-
 event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
@@ -92,14 +95,16 @@ event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 geodeticDatum = "EPSG:4326 WGS84",
                 minimumDepthInMeters = 0,
                 maximumDepthInMeters = 9, # seine depth is 9 m
-                samplingProtocol = "http://dx.doi.org/10.21966/1.566666", # This is the DOI for the Hakai Salmon Data Package that contains the smnpling protocol, as well as the complete data package
+                samplingProtocol = "http://dx.doi.org/10.21966/1.566666", # This is the DOI for the Hakai Salmon Data Package that contains the samnpling protocol, as well as the complete data package
                 language = "en",
                 license = "http://creativecommons.org/licenses/by/4.0/legalcode",
                 bibliographicCitation = "Johnson B, Gan J, Godwin S, Bachen K, van der Stap T, Krkosek M, Rogers L, Lauren P, Janusson C, Hunt B (2021). Hakai Institute Juvenile Salmon Program. Version 1.26. Canadian node of the Ocean Biogeographic Information System (OBIS Canada). Samplingevent dataset. http://dx.doi.org/10.21966/1.566666",
                 references = "https://github.com/HakaiInstitute/jsp-data",
                 institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, https://edmo.seadatanet.org/report/5148",
-                institutionCode = "Hakai"
-               ) 
+                institutionCode = "Hakai",
+                date_site = survey_seines$date_site
+               ) |> 
+  dplyr::left_join(select(ysi, date_site), relationship = "many-to-many")
 
 
 ```
@@ -211,7 +216,7 @@ event <- dplyr::left_join(event, simple_sites, by = c("locationID" = "site_id"))
          decimalLongitude = coalesce(decimalLongitude, ocgy_std_lon)) %>% 
   select(-c(ocgy_std_lat, ocgy_std_lon))
 
-write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
+
 ```
 
 
@@ -225,11 +230,11 @@ Here I convert length, and weight measurements that relate to an event and an oc
 mof_types <- read_csv(here("supplemental_materials", "OBIS_data", "mof_type_units_id.csv"))
 
 fish_data$weight <- coalesce(fish_data$weight, fish_data$weight_field)
-fish_data$fork_length <- coalesce(fish_data$fork_length, fish_data$fork_length_field)
+fish_data$fork_length <- coalesce(fish_data$fork_length,
+                                  fish_data$fork_length_field)
 fish_data$`Life stage` <- "juvenile"
 
-
-
+# Add fish measurements
 measurementOrFact <- fish_data %>%
   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
   select(occurrenceID, eventID = seine_id, "Length (fork length)" = fork_length,
@@ -243,8 +248,30 @@ measurementOrFact <- fish_data %>%
   mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"),
          measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"))
 
+# Add abiotic temp and salinity
+emof_ysi <- ysi |> 
+  left_join(distinct(select(event, date_site, eventID), .keep_all= TRUE)) |> 
+  drop_na(eventID) |> 
+  select(eventID, sea_surface_temperature = temperature_0m, sea_surface_salinity = salinity_0m) |> 
+  mutate(occurrence_ID = "NA") |> 
+  pivot_longer(c(sea_surface_temperature, sea_surface_salinity), names_to = "measurementType", values_to = "measurementValue") |> 
+  mutate(measurementValue = as.character(measurementValue),
+    measurementTypeID = case_when(measurementType == "sea_surface_temperature" ~  "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0381/",
+                                       measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0376/"),
+         measurementUnit = case_when(measurementType == "sea_surface_temperature" ~ "degC",
+                                     measurementType == "sea_surface_salinity" ~  "ppt"),
+         measurementUnitID = case_when(measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPPT/",
+                                       measurementType == "sea_surface_temperature" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPAA/"),
+         measurementID = paste(eventID, measurementType, sep = "_"))
+
+measurementOrFact <- bind_rows(measurementOrFact, emof_ysi)
 
 write_csv(measurementOrFact, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
+
+event <- event |> 
+  select(-date_site)
+
+write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
 ```
 
 ```{r QC}
