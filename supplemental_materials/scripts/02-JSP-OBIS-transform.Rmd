@@ -23,7 +23,7 @@ library(worrms)
 
 #TODO replace develop with master once the most recent verion of the dataset is published
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
-#TODO include genetic stock ID
+
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_"))
 
@@ -41,12 +41,18 @@ bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/d
 
 sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv")
 
+gsi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/jsp_catch_and_bio_data_complete.csv", guess_max = 20000) |> 
+  filter(prob_1 >= 0.7) |>
+  select(ufn, stock_1)
+  
+
 ysi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/ysi.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_")) |> 
   distinct(date_site, .keep_all = TRUE)
 
 fish_data <- full_join(fish_lab_data, fish_field_data) %>% 
-  left_join(sealice)
+  left_join(sealice) |> 
+  left_join(gsi, by = "ufn")
 
 paste3 <- function(...,sep=", ") {
      L <- list(...)
@@ -264,9 +270,41 @@ emof_ysi <- ysi |>
                                        measurementType == "sea_surface_temperature" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPAA/"),
          measurementID = paste(eventID, measurementType, sep = "_"))
 
-measurementOrFact <- bind_rows(measurementOrFact, emof_ysi)
+# Add genetic stock ID to emof
+stock_id <- fish_data |> 
+  drop_na(stock_1) |> 
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
+         eventID = seine_id,
+         measurementType = "Genetic stock",
+         measurementValue = stock_1,
+         measurementTypeID = "http://aims.fao.org/aos/agrovoc/c_489af625",
+         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")) |> 
+  select(occurrenceID, eventID, measurementType, measurementValue, measurementTypeID, measurementID)
 
-write_csv(measurementOrFact, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
+# Include sealice counts
+cal_emof <- fish_data |> 
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
+         eventID = seine_id,
+         measurementType = "count of Caligus clemensi sea louse",
+         measurementValue = as.character(motile_caligus),
+         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")
+         ) |> 
+  select(occurrenceID, eventID, measurementType, measurementValue, measurementID) |> 
+  drop_na()
+
+lep_emof <- fish_data |> 
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
+         eventID = seine_id,
+         measurementType = "count of Lepeophtheirus salmonis sea louse",
+         measurementValue = as.character(motile_lep),
+         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")
+         ) |> 
+  select(occurrenceID, eventID, measurementType, measurementValue, measurementID) |> 
+  drop_na()
+
+emof <- bind_rows(measurementOrFact, emof_ysi, stock_id, cal_emof, lep_emof)
+
+write_csv(emof, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
 
 event <- event |> 
   select(-date_site)
@@ -281,16 +319,16 @@ exportTree(tree, "tree.html")
 
 library(dm)
 #Check that every eventID in Occurrence occurs in event table
-no_keys <- dm(event, occurrence, measurementOrFact)
+no_keys <- dm(event, occurrence, emof)
 only_pk <- no_keys %>% 
   dm_add_pk(event, eventID) %>% 
   dm_add_pk(occurrence, occurrenceID) %>% 
-  dm_add_pk(measurementOrFact, measurementID)
+  dm_add_pk(emof, measurementID)
 dm_examine_constraints(only_pk)
 
 model <- only_pk %>% 
   dm_add_fk(occurrence, eventID, event) %>% 
-  dm_add_fk(measurementOrFact, occurrenceID, occurrence)
+  dm_add_fk(emof, occurrenceID, occurrence)
 dm_examine_constraints(model)
 
 dm_draw(model, view_type = "all") 
