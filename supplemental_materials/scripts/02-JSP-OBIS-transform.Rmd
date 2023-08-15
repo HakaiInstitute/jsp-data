@@ -24,6 +24,10 @@ library(worrms)
 #TODO replace develop with master once the most recent verion of the dataset is published
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
 
+#TODO figure out why there are some NAs in survey date at the moment
+
+#TODO initialize .renv file for package dependencies
+
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_"))
 
