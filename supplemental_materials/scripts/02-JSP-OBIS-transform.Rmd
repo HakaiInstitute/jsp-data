@@ -235,24 +235,47 @@ Here I convert length, and weight measurements that relate to an event and an oc
 
 mof_types <- read_csv(here("supplemental_materials", "OBIS_data", "mof_type_units_id.csv"))
 
-fish_data$weight <- coalesce(fish_data$weight, fish_data$weight_field)
-fish_data$fork_length <- coalesce(fish_data$fork_length,
-                                  fish_data$fork_length_field)
 fish_data$`Life stage` <- "juvenile"
 
 # Add fish measurements
 measurementOrFact <- fish_data %>%
   mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
-  select(occurrenceID, eventID = seine_id, "Length (fork length)" = fork_length,
-         "Standard length" = standard_length, "Weight" = weight, `Life stage`) %>% 
-  pivot_longer(`Length (fork length)`:`Life stage`,
+  select(occurrenceID, eventID = seine_id, fork_length, fork_length_field,
+          standard_length, weight, weight_field, `Life stage`) %>% 
+  pivot_longer(fork_length:`Life stage`,
                names_to = "measurementType",
                values_to = "measurementValue",
                values_transform = list(measurementValue = as.character)) %>%
-  filter(measurementValue != "NA") %>%
+  mutate(measurementMethod = case_when(measurementType == "fork_length" ~ "laboratory fish board",
+                                       measurementType == "fork_length_fild" ~ "field ruler",
+                                       measurementType == "weight" ~ "laboratory balance",
+                                       measurementType == "weight_field" ~ "field spring scale")) |> 
+  drop_na(measurementValue) %>%
+  group_by(occurrenceID) %>%
+  # Remove fork_length_field rows where fork_length exists for the same fish
+  filter(!(measurementType == "fork_length_field" & "fork_length" %in% measurementType)) %>%
+  # Remove weight_field rows where weight exists for the same fish
+  filter(!(measurementType == "weight_field" & "weight" %in% measurementType)) %>%
+  ungroup() |> 
   left_join(mof_types,by = c("measurementType")) %>% 
   mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"),
-         measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"))
+         measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"),
+         measurementMethod = case_when(measurementType == "weight" ~ "Digital laboratory scale",
+                                       measurementType == "weight_field" ~ "Field spring-scale",
+                                       measurementType == "fork_length" ~ "In the laboratory",
+                                       measurementType == "fork_length_field" ~ "In the field")) |> 
+  mutate(measurementType = if_else(measurementType %in% c("fork_length", "fork_length_field"), 
+                                   "Length (fork length)", 
+                                   measurementType),
+         measurementType = if_else(measurementType %in% c("weight", "weight_field"), 
+                                   "Weight",
+                                   measurementType))
+
+# convert back to "Standard length" , "Length (fork length)" "Weight"
+
+measurementMethod = case_when(
+is.na(fork_length) == FALSE ~ "laboratory fish board",
+is.na(fork_length_field) == FALSE & is.na(fork_length) == TRUE ~ "field ruler")
 
 # Add abiotic temp and salinity
 emof_ysi <- ysi |> 
