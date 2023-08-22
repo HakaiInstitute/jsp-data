@@ -24,9 +24,11 @@ library(worrms)
 #TODO replace develop with master once the most recent verion of the dataset is published
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
 
-#TODO figure out why there are some NAs in survey date at the moment
-
 #TODO initialize .renv file for package dependencies
+
+#TODO collapse not retained fish in the occurrence table and add number caught as organismQuantity, organismQuantityType, organismQuanityRemarks, annd differentiate between 2015 2016 visual estimates and latter clicker counts
+
+#TODO add organismQuantity and organismQuantityType to retained/measured fish
 
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_"))
@@ -43,13 +45,16 @@ fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/js
 
 bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/bycatch_mort.csv')
 
-sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv")
+sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv") |> 
+  select(-c("survey_date", "species", "site_id"))
 
-gsi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/jsp_catch_and_bio_data_complete.csv", guess_max = 20000) |> 
+gsi_samples <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/supplemental_materials/raw_data/sample_inventory/dna_samples.csv")
+
+gsi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/raw_data/sample_results/stock_id.csv", guess_max = 20000) |> 
   filter(prob_1 >= 0.7) |>
+  left_join(gsi_samples) |> 
   select(ufn, stock_1)
   
-
 ysi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/ysi.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_")) |> 
   distinct(date_site, .keep_all = TRUE)
@@ -359,5 +364,26 @@ model <- only_pk %>%
 dm_examine_constraints(model)
 
 dm_draw(model, view_type = "all") 
+```
+
+```{r}
+# Determine sites and coordinates for map
+
+ocgy_coords <- event |> 
+  distinct(locationID) |> 
+  left_join(sites, by = c("locationID" = "site_id")) |> 
+  select(locationID, site_name, lat = ocgy_std_lat, long = ocgy_std_lon)
+
+avg_coords <- event |> 
+  group_by(locationID) |> 
+  summarize(lat_avg = mean(decimalLatitude, na.rm = TRUE),
+            long_avg  = mean(decimalLongitude, na.rm = TRUE))
+
+map_coords <- left_join(ocgy_coords, avg_coords) |> 
+  mutate(lat = coalesce(lat, lat_avg),
+         long = coalesce(long, long_avg)) |> 
+  select(-c(lat_avg, long_avg))
+
+
 ```
 
