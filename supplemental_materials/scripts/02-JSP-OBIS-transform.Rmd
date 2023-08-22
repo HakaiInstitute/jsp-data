@@ -26,10 +26,6 @@ library(worrms)
 
 #TODO initialize .renv file for package dependencies
 
-#TODO collapse not retained fish in the occurrence table and add number caught as organismQuantity, organismQuantityType, organismQuanityRemarks, annd differentiate between 2015 2016 visual estimates and latter clicker counts
-
-#TODO add organismQuantity and organismQuantityType to retained/measured fish
-
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_"))
 
@@ -127,9 +123,12 @@ event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
 
 # occurrence
 
-Next you'll want to determine what constitutes an occurrence for your data set. Because each event captures fish, I consider each fish to be an occurrence. Therefore, the unit of observation (each row) in the occurrence table is a fish. To link each occurrence to an event you need to include the `eventID` column for every occurrence so that you know what seine (event) each fish (occurrence) came from. You must also provide a globally unique identifier for each occurrence. I already have a locally unique identifier for each fish in the original `fish_data` table called `ufn`. To make it globally unique I pre-pend the organization and research program metadata to the `ufn` column. 
+Next you'll want to determine what constitutes an occurrence for your data set. Because each event captures fish, I consider each fish to be an occurrence. However, only fish that were retained receive their own row because we are confident in that fish identification and that occurrence with have related measurements/facts. Visual estimates of abundance of fish remaining in the net after collecting fish for retention will receive one row per species estimate. The two types or occurrences are differentiated by organismQuanityType and orgamsimQuantityRemarks. 
 
-Not every fish is actually collected and given a Universal Fish Number (UFN) in our fish data tables, so in our field data sheets we record the total number of fish captured and the total number retained. So to get an occurrence row for every fish captured I create a row for every fish caught (minus the number taken) and create a generic numeric id (ie hakai-jsp-1) in one table and then join that to the fish table that includes a row for every fish retained that already has a UFN. 
+To link each occurrence to an event you need to include the `eventID` column for every occurrence so that you know what seine (event) each fish (occurrence) came from. You must also provide a globally unique identifier for each occurrence. I already have a locally unique identifier for each fish in the original `fish_data` table called `ufn`. To make it globally unique I pre-pend the organization and research program metadata to the `ufn` column. 
+
+Not every fish is actually collected and given a Universal Fish Number (UFN) in our fish data tables, so in our field data sheets we record the total number of fish captured and the total number retained. 
+
 
 ```{r occurrence}
 
@@ -147,22 +146,16 @@ seines_taken_long <- survey_seines %>%
 seines_taken_long$scientificName <- recode(seines_taken_long$scientificName, so_taken = "Oncorhynchus nerka", pi_taken = "Oncorhynchus gorbuscha", cu_taken = "Oncorhynchus keta", co_taken = "Oncorhynchus kisutch", ck_taken = "Oncorhynchus tshawytscha", he_taken = "Clupea pallasii") 
 
 ## remove records that have already been assigned an ID because they were actually retained
-seines_long <-  full_join(seines_total_long, seines_taken_long, by = c("seine_id", "scientificName")) %>% 
+all_fish_not_retained <-  full_join(seines_total_long, seines_taken_long, by = c("seine_id", "scientificName")) %>% 
   drop_na() %>% 
   mutate(n_not_taken = n - n_taken) %>% #so_total includes the number taken so I subtract n_taken to get n_not_taken
   select(-n_taken, -n) %>% 
-  filter(n_not_taken > 0)
-
-all_fish_not_retained <-
-  seines_long[rep(seq.int(1, nrow(seines_long)), seines_long$n_not_taken), 1:3] %>% 
-  select(-n_not_taken) %>% 
-  mutate(prefix = "hakai-jsp-",
-         suffix = 1:nrow(.),
-         occurrenceID = paste0(prefix, suffix)
-  ) %>% 
-  select(-prefix, -suffix)
-
-#
+  filter(n_not_taken > 0) |> 
+  #create an occurrenceID
+  mutate(occurrenceID = paste(seine_id, scientificName, "estimate", sep = "-"),
+         organismQuantity = n_not_taken,
+         organismQuantityType = "visually estimated number of individuals") |> 
+  select(seine_id, scientificName, occurrenceID, organismQuantity, organismQuantityType)
 
 # Change species names to full Scientific names 
 latin <- fct_recode(fish_data$species, "Oncorhynchus nerka" = "SO", "Oncorhynchus gorbuscha" = "PI", "Oncorhynchus keta" = "CU", "Oncorhynchus kisutch" = "CO", "Clupea pallasii" = "HE", "Oncorhynchus tshawytscha" = "CK") %>% 
@@ -172,12 +165,39 @@ fish_retained_data <- fish_data %>%
   mutate(scientificName = latin) %>% 
   select(-species) %>% 
   mutate(prefix = "hakai-jsp-",
-         occurrenceID = paste0(prefix, ufn)) %>% 
-  select(seine_id, scientificName, occurrenceID)
+         occurrenceID = paste0(prefix, ufn),
+         organismQuantity = 1,
+         organismQuantityType = "individuals",
+         retained = "retained") %>% # create column to filter on
+  select(seine_id, scientificName, occurrenceID, organismQuantity,
+         organismQuantityType, retained)
+
+lice_occ <- fish_data |> 
+  select(ufn, eventID = seine_id, "Lepeophtheirus salmonis" = motile_lep, "Caligus clemensi" = motile_caligus) |>
+  pivot_longer(cols = `Lepeophtheirus salmonis`:`Caligus clemensi`, names_to = "scientificName", values_to = "organismQuantity")|> 
+  drop_na() |> 
+  filter(organismQuantity > 0) |> 
+  mutate(organismQuantityType = "individuals",
+         occurrenceID = paste0(ufn, "-hakai-jsp-sea-louse-", scientificName),
+         lifeStage = "motile")
 
 occurrence <- bind_rows(all_fish_not_retained, fish_retained_data) %>% 
   rename(eventID = seine_id) %>% 
-  mutate(`Life stage` = "juvenile")
+  left_join(select(event, eventDate, eventID)) |> 
+  # call organismType 'individuals' for retained fish, all non retained fish from 2015 and 2016 as "individuals visually estimated individuals", and all non retained fish after 2016 as "individuals 
+  mutate(year = as.numeric(year(eventDate)),
+    organismQuantityType = 
+      case_when(retained == "retained" ~ 
+                  "individuals",
+                is.na(retained) == TRUE ~ 
+                  "individuals counted during release with tally counter device"),
+    organismQuantityType = if_else(year < 2017 & is.na(retained) == TRUE, 
+                                   "individuals visually estimated", 
+                                   organismQuantityType), 
+    `Life stage` = "juvenile") |> 
+  select(-c("retained", "year")) |> 
+  bind_rows(lice_occ)
+  
 
 unique_taxa <- unique(occurrence$scientificName)  
 worms_names <- wm_records_names(unique_taxa) 
@@ -234,6 +254,20 @@ event <- dplyr::left_join(event, simple_sites, by = c("locationID" = "site_id"))
 
 ```
 
+# Resource Relationship extension
+
+```{r}
+rr_ext <- occurrence |> 
+  drop_na(ufn) |> 
+  mutate(resourceID = occurrenceID,
+         relatedResourceID = paste0("hakai-jsp-", ufn),
+         relationshipOfResource = "ectopatasite of",
+         relationshipOfResourceID = "http://purl.obolibrary.org/obo/RO_0002632" ) |> 
+  select(eventID, resourceID, relationshipOfResource, relationshipOfResourceID,
+         relatedResourceID)
+
+write_csv(rr_ext, here("supplemental_materials", "OBIS_data", "resource_relationship.csv"))
+```
 
 # measurementOrFact
 To convert all your measurements or facts from your normal format to Darwin Core you essentially need to put all your measurements into one column called measurementType and a corresponding column called MeasurementValue. This standardizes the column names are in the `measurementOrFact` table. There are a number of predefined `measurementType`s listed on the [NERC](https://www.bodc.ac.uk/resources/vocabularies/) database that should be used where possible. I found it difficult to navigate this page to find the correct `measurementType`. 
@@ -248,59 +282,100 @@ fish_data$`Life stage` <- "juvenile"
 
 # Add fish measurements
 measurementOrFact <- fish_data %>%
-  mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
-  select(occurrenceID, eventID = seine_id, fork_length, fork_length_field,
-          standard_length, weight, weight_field, `Life stage`) %>% 
-  pivot_longer(fork_length:`Life stage`,
-               names_to = "measurementType",
-               values_to = "measurementValue",
-               values_transform = list(measurementValue = as.character)) %>%
-  mutate(measurementMethod = case_when(measurementType == "fork_length" ~ "laboratory fish board",
-                                       measurementType == "fork_length_fild" ~ "field ruler",
-                                       measurementType == "weight" ~ "laboratory balance",
-                                       measurementType == "weight_field" ~ "field spring scale")) |> 
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>%
+  select(
+    occurrenceID,
+    eventID = seine_id,
+    fork_length,
+    fork_length_field,
+    standard_length,
+    weight,
+    weight_field,
+    `Life stage`
+  ) %>%
+  pivot_longer(
+    fork_length:`Life stage`,
+    names_to = "measurementType",
+    values_to = "measurementValue",
+    values_transform = list(measurementValue = as.character)
+  ) %>%
+  mutate(
+    measurementMethod = case_when(
+      measurementType == "fork_length" ~ "laboratory fish board",
+      measurementType == "fork_length_fild" ~ "field ruler",
+      measurementType == "weight" ~ "laboratory balance",
+      measurementType == "weight_field" ~ "field spring scale"
+    )
+  ) |>
   drop_na(measurementValue) %>%
   group_by(occurrenceID) %>%
   # Remove fork_length_field rows where fork_length exists for the same fish
-  filter(!(measurementType == "fork_length_field" & "fork_length" %in% measurementType)) %>%
+  filter(!(
+    measurementType == "fork_length_field" &
+      "fork_length" %in% measurementType
+  )) %>%
   # Remove weight_field rows where weight exists for the same fish
-  filter(!(measurementType == "weight_field" & "weight" %in% measurementType)) %>%
-  ungroup() |> 
-  left_join(mof_types,by = c("measurementType")) %>% 
-  mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"),
-         measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"),
-         measurementMethod = case_when(measurementType == "weight" ~ "Digital laboratory scale",
-                                       measurementType == "weight_field" ~ "Field spring-scale",
-                                       measurementType == "fork_length" ~ "In the laboratory",
-                                       measurementType == "fork_length_field" ~ "In the field")) |> 
-  mutate(measurementType = if_else(measurementType %in% c("fork_length", "fork_length_field"), 
-                                   "Length (fork length)", 
-                                   measurementType),
-         measurementType = if_else(measurementType %in% c("weight", "weight_field"), 
-                                   "Weight",
-                                   measurementType))
-
-# convert back to "Standard length" , "Length (fork length)" "Weight"
-
-measurementMethod = case_when(
-is.na(fork_length) == FALSE ~ "laboratory fish board",
-is.na(fork_length_field) == FALSE & is.na(fork_length) == TRUE ~ "field ruler")
+  filter(!(
+    measurementType == "weight_field" &
+      "weight" %in% measurementType
+  )) %>%
+  ungroup() |>
+  left_join(mof_types, by = c("measurementType")) %>%
+  mutate(
+    measurementValueID = case_when(
+      measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"
+    ),
+    measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"),
+    measurementMethod =
+      case_when(
+        measurementType == "weight" ~ "Digital laboratory scale",
+        measurementType == "weight_field" ~ "Field spring-scale",
+        measurementType == "fork_length" ~ "In the laboratory",
+        measurementType == "fork_length_field" ~ "In the field"
+      )
+  ) |>
+  mutate(
+    measurementType = if_else(
+      measurementType %in% c("fork_length", "fork_length_field"),
+      "Length (fork length)",
+      measurementType
+    ),
+    measurementType = if_else(
+      measurementType %in% c("weight", "weight_field"),
+      "Weight",
+      measurementType
+    )
+  )
 
 # Add abiotic temp and salinity
-emof_ysi <- ysi |> 
-  left_join(distinct(select(event, date_site, eventID), .keep_all= TRUE)) |> 
-  drop_na(eventID) |> 
-  select(eventID, sea_surface_temperature = temperature_0m, sea_surface_salinity = salinity_0m) |> 
-  mutate(occurrence_ID = "NA") |> 
-  pivot_longer(c(sea_surface_temperature, sea_surface_salinity), names_to = "measurementType", values_to = "measurementValue") |> 
-  mutate(measurementValue = as.character(measurementValue),
-    measurementTypeID = case_when(measurementType == "sea_surface_temperature" ~  "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0381/",
-                                       measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0376/"),
-         measurementUnit = case_when(measurementType == "sea_surface_temperature" ~ "degC",
-                                     measurementType == "sea_surface_salinity" ~  "ppt"),
-         measurementUnitID = case_when(measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPPT/",
-                                       measurementType == "sea_surface_temperature" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPAA/"),
-         measurementID = paste(eventID, measurementType, sep = "_"))
+emof_ysi <- ysi |>
+  left_join(distinct(select(event, date_site, eventID), .keep_all = TRUE)) |>
+  drop_na(eventID) |>
+  select(eventID,
+         sea_surface_temperature = temperature_0m,
+         sea_surface_salinity = salinity_0m) |>
+  mutate(occurrence_ID = "NA") |>
+  pivot_longer(
+    c(sea_surface_temperature, sea_surface_salinity),
+    names_to = "measurementType",
+    values_to = "measurementValue"
+  ) |>
+  mutate(
+    measurementValue = as.character(measurementValue),
+    measurementTypeID = case_when(
+      measurementType == "sea_surface_temperature" ~  "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0381/",
+      measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0376/"
+    ),
+    measurementUnit = case_when(
+      measurementType == "sea_surface_temperature" ~ "degC",
+      measurementType == "sea_surface_salinity" ~  "ppt"
+    ),
+    measurementUnitID = case_when(
+      measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPPT/",
+      measurementType == "sea_surface_temperature" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPAA/"
+    ),
+    measurementID = paste(eventID, measurementType, sep = "_")
+  )
 
 # Add genetic stock ID to emof
 stock_id <- fish_data |> 
@@ -313,28 +388,7 @@ stock_id <- fish_data |>
          measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")) |> 
   select(occurrenceID, eventID, measurementType, measurementValue, measurementTypeID, measurementID)
 
-# Include sealice counts
-cal_emof <- fish_data |> 
-  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
-         eventID = seine_id,
-         measurementType = "count of Caligus clemensi sea louse",
-         measurementValue = as.character(motile_caligus),
-         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")
-         ) |> 
-  select(occurrenceID, eventID, measurementType, measurementValue, measurementID) |> 
-  drop_na()
-
-lep_emof <- fish_data |> 
-  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
-         eventID = seine_id,
-         measurementType = "count of Lepeophtheirus salmonis sea louse",
-         measurementValue = as.character(motile_lep),
-         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")
-         ) |> 
-  select(occurrenceID, eventID, measurementType, measurementValue, measurementID) |> 
-  drop_na()
-
-emof <- bind_rows(measurementOrFact, emof_ysi, stock_id, cal_emof, lep_emof)
+emof <- bind_rows(measurementOrFact, emof_ysi, stock_id)
 
 write_csv(emof, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
 
@@ -345,22 +399,22 @@ write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
 ```
 
 ```{r QC}
-
-tree <- treeStructure(event, occurrence, measurementOrFact)
-exportTree(tree, "tree.html")
-
 library(dm)
 #Check that every eventID in Occurrence occurs in event table
-no_keys <- dm(event, occurrence, emof)
+no_keys <- dm(event, occurrence, rr_ext, emof)
 only_pk <- no_keys %>% 
   dm_add_pk(event, eventID) %>% 
   dm_add_pk(occurrence, occurrenceID) %>% 
-  dm_add_pk(emof, measurementID)
+  dm_add_pk(emof, measurementID) |> 
+  dm_add_pk(rr_ext, resourceID)
+
 dm_examine_constraints(only_pk)
 
 model <- only_pk %>% 
   dm_add_fk(occurrence, eventID, event) %>% 
-  dm_add_fk(emof, occurrenceID, occurrence)
+  dm_add_fk(emof, occurrenceID, occurrence) |> 
+  dm_add_fk(rr_ext, resourceID, occurrence)
+
 dm_examine_constraints(model)
 
 dm_draw(model, view_type = "all") 
