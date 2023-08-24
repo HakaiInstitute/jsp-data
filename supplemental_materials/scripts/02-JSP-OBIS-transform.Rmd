@@ -21,11 +21,7 @@ library(here)
 library(lubridate)
 library(worrms)
 
-#TODO replace develop with master once the most recent verion of the dataset is published
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
-
-#TODO initialize .renv file for package dependencies
-
 survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
   mutate(date_site = paste(survey_date, site_id, sep = "_"))
 
@@ -413,7 +409,9 @@ dm_examine_constraints(only_pk)
 model <- only_pk %>% 
   dm_add_fk(occurrence, eventID, event) %>% 
   dm_add_fk(emof, occurrenceID, occurrence) |> 
-  dm_add_fk(rr_ext, resourceID, occurrence)
+  dm_add_fk(rr_ext, resourceID, occurrence) |> 
+  dm_add_fk(rr_ext, eventID, event) |> 
+  dm_add_fk(emof, eventID, event)
 
 dm_examine_constraints(model)
 
