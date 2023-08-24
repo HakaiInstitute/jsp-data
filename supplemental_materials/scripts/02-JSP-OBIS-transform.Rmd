@@ -102,7 +102,7 @@ event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 geodeticDatum = "EPSG:4326 WGS84",
                 minimumDepthInMeters = 0,
                 maximumDepthInMeters = 9, # seine depth is 9 m
-                samplingProtocol = "http://dx.doi.org/10.21966/1.566666", # This is the DOI for the Hakai Salmon Data Package that contains the samnpling protocol, as well as the complete data package
+                samplingProtocol = "https://doi.org/10.5281/zenodo.8237301", # This is the DOI for the Hakai Juvenile Salmon Program sampling protocol
                 language = "en",
                 license = "http://creativecommons.org/licenses/by/4.0/legalcode",
                 bibliographicCitation = "Johnson B, Gan J, Godwin S, Bachen K, van der Stap T, Krkosek M, Rogers L, Lauren P, Janusson C, Hunt B (2021). Hakai Institute Juvenile Salmon Program. Version 1.26. Canadian node of the Ocean Biogeographic Information System (OBIS Canada). Samplingevent dataset. http://dx.doi.org/10.21966/1.566666",
@@ -233,8 +233,6 @@ occurrence <- left_join(occurrence, combined_worms_names) %>%
     mutate(basisOfRecord = "HumanObservation",
         occurrenceStatus = "present")
 
-write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
-
 # This removes events that didn't result in any occurrences
 event <- dplyr::semi_join(event, occurrence, by = 'eventID') %>% 
   mutate(coordinateUncertaintyInMeters = ifelse(is.na(decimalLatitude), 1852, coordinateUncertaintyInMeters))
@@ -350,7 +348,7 @@ emof_ysi <- ysi |>
   select(eventID,
          sea_surface_temperature = temperature_0m,
          sea_surface_salinity = salinity_0m) |>
-  mutate(occurrence_ID = "NA") |>
+  mutate(occurrenceID = "NA") |>
   pivot_longer(
     c(sea_surface_temperature, sea_surface_salinity),
     names_to = "measurementType",
@@ -392,6 +390,11 @@ event <- event |>
   select(-date_site)
 
 write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
+
+occurrence <- occurrence |> 
+  select(-c(ufn, eventDate))
+
+write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
 ```
 
 ```{r QC}
