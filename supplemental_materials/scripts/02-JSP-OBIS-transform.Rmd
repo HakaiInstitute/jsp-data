@@ -190,7 +190,7 @@ occurrence <- bind_rows(all_fish_not_retained, fish_retained_data) %>%
     organismQuantityType = if_else(year < 2017 & is.na(retained) == TRUE, 
                                    "individuals visually estimated", 
                                    organismQuantityType), 
-    `Life stage` = "juvenile") |> 
+    lifeStage = "juvenile") |> 
   select(-c("retained", "year")) |> 
   bind_rows(lice_occ)
   
@@ -217,12 +217,14 @@ by_worms_names <- wm_records_names(unique_bycatch) %>%
          )
 
 bycatch_occurrence <- bycatch %>% 
-  select(eventID = seine_id, occurrenceID, scientificName, `Life stage` = bm_ageclass) %>% 
-  filter(scientificName != "unknown")
+  select(eventID = seine_id, occurrenceID, scientificName, lifeStage = bm_ageclass) %>% 
+  filter(scientificName != "unknown") |> 
+  mutate(organismQuantity = 1,
+         organismQuantityType = "individuals")
 
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "J"] <- "juvenile"
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "A"] <- "adult"
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "Y"] <- "Young of year"
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "J"] <- "juvenile"
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "A"] <- "adult"
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "Y"] <- "Young of year"
 
 combined_worms_names <- bind_rows(by_worms_names, df_worms_names) %>% 
   distinct(scientificName, .keep_all = TRUE)
@@ -272,7 +274,7 @@ Here I convert length, and weight measurements that relate to an event and an oc
 
 mof_types <- read_csv(here("supplemental_materials", "OBIS_data", "mof_type_units_id.csv"))
 
-fish_data$`Life stage` <- "juvenile"
+fish_data$lifeStage <- "juvenile"
 
 # Add fish measurements
 measurementOrFact <- fish_data %>%
@@ -285,10 +287,10 @@ measurementOrFact <- fish_data %>%
     standard_length,
     weight,
     weight_field,
-    `Life stage`
+    lifeStage
   ) %>%
   pivot_longer(
-    fork_length:`Life stage`,
+    fork_length:lifeStage,
     names_to = "measurementType",
     values_to = "measurementValue",
     values_transform = list(measurementValue = as.character)
