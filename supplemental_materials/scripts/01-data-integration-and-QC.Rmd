@@ -16,7 +16,6 @@ This scripts purpose is to ingest, join, and QC the various sources of data asso
 If errors are found  in the data in this script, they can either be corrected in the JSP Master Data Tables google sheet as long as the updated googlesheet is exported again to this repository, or the edits can be made directly via this script depending on what makes most sense. 
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
 source(here::here("supplemental_materials", "scripts", "all_stages_sealice_integration.R"))
 # Restart session after sourcing
 
@@ -28,7 +27,7 @@ library(googlesheets4)
 library(hakaiApi)
 
 client <- hakaiApi::Client$new()
-
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
 ## IMPORTANT: In a new environment, run the all_stages_sealice_integration.R script
 ```
 
@@ -370,13 +369,16 @@ jsp_catch_and_bio_data_complete <- left_join(survey_data, seine_data, by = "surv
   mutate(survey_date = ymd(survey_date)) %>% 
   arrange(survey_date) %>% 
   select(-c(ysi_bout, ctd_bout, zoop_bout, time_searching))
-  
+
+sum(is.na(jsp_catch_and_bio_data_complete$survey_date))  
+sum(is.na(jsp_catch_and_bio_data_complete$site_id))  
+
 # write complete file to root of data folder
 write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
 rm(jsp_catch_and_bio_data_complete)
 rm(stocks)
 
-test <- read_csv(here("jsp_catch_and_bio_data_complete.csv"))
+test <- read_csv(here("jsp_catch_and_bio_data_complete.csv"), guess_max = 100000)
 problems()
 print(problems(), n = 29)
 rm(test)
