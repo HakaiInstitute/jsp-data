@@ -12,7 +12,7 @@ mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
 sites <- read_sheet(mdt_slug, sheet = "sites", na = c("NA", "")) %>% 
   write_csv(here("supplemental_materials", "raw_data", "sites.csv"))
 1
-catch_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/jsp_catch_and_bio_data_complete.csv", guess_max = 1600) |> left_join(sites, by = "site_id")
+catch_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/jsp_catch_and_bio_data_complete.csv", guess_max = 20000) |> left_join(sites, by = "site_id")
 
 # Define sites that can be compared between years
 consistent_sites <-  c("D07","D09","D22","D27","D10","D08","D34","D35",
@@ -20,17 +20,17 @@ consistent_sites <-  c("D07","D09","D22","D27","D10","D08","D34","D35",
 
 # build table for attached stage lice
 
-#TODO: Update the field_data_url anually with the current years google sheet URL
 sites <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/supplemental_materials/tidy_data/sites.csv")
 
-field_data_url <- "https://docs.google.com/spreadsheets/d/1ezxMrD7g-0ExabJv6mLWg4gPthOSiEyLo5vi-D-BGxI/edit#gid=0"
+#TODO: Update the field_data_url annually with the current years google sheet URL
+field_data_url <- "https://docs.google.com/spreadsheets/d/1Y8Nw82hHSb_GDXYzwg5hKI34bYlFnkLsir_V_fGdVCw/edit#gid=364784709"
 # Read in current year lice data
 
-surveys_2022 <- read_sheet(field_data_url, sheet = "survey_data") |> 
+surveys_2023 <- read_sheet(field_data_url, sheet = "survey_data") |> 
   drop_na(survey_id) |> 
   mutate(sampling_week = as.numeric((yday(survey_date) + 4) %/% 7))
 
-surveys_2022$sampling_week <- recode_factor(surveys_2022$sampling_week, 
+surveys_2023$sampling_week <- recode_factor(surveys_2023$sampling_week, 
                                             `18` = "May 5",
                                             `19` = "May 12" ,
                                             `20` = "May 19", 
@@ -43,23 +43,23 @@ surveys_2022$sampling_week <- recode_factor(surveys_2022$sampling_week,
                                             `27` = "July 6", 
                                             `28` = "July 13")
 
-seines_2022 <- read_sheet(field_data_url, sheet = "seine_data") |> 
+seines_2023 <- read_sheet(field_data_url, sheet = "seine_data") |> 
   drop_na(seine_id)
 
-ss_2022 <- left_join(surveys_2022, seines_2022, by = "survey_id") |> 
+ss_2023 <- left_join(surveys_2023, seines_2023, by = "survey_id") |> 
   left_join(select(sites, site_id, zone), by = "site_id") |> 
   mutate(year = year(survey_date)) |> 
   drop_na(survey_id)
 
-fish_field_2022 <- read_sheet(field_data_url, sheet = "fish_field_data") |> 
+fish_field_2023 <- read_sheet(field_data_url, sheet = "fish_field_data") |> 
   drop_na(ufn) |> 
   mutate(region = "DI")
 
-ss_fish_2022 <- left_join(fish_field_2022, ss_2022)
+ss_fish_2023 <- left_join(fish_field_2023, ss_2023)
 
 current_lice <- read_sheet(field_data_url, sheet = "sealice_field_data") |> 
   # Join sea lice data to seine and survey_data by ufn and seine id
-  right_join(ss_fish_2022, by = c('ufn', 'seine_id')) |> 
+  right_join(ss_fish_2023, by = c('ufn', 'seine_id')) |> 
   # select relevant columns and all sea lice counts
   select(survey_date, seine_id, ufn, species, lep_cope, lam, laf, lgf, cal_cope, cam, caf, cgf,
          chal_a_b, unid_cope, unid_chal) |> 
@@ -96,7 +96,7 @@ current_lice_n <- current_lice |>
   distinct(ufn, species) |> 
   group_by(species) |> 
   tally() |> 
-  mutate(year = 2022,
+  mutate(year = 2023,
          n_hosts_attached = n,
          n_hosts_motile = n,
          origin = "current_lice")
@@ -248,3 +248,6 @@ sealice_df$species <- factor(sealice_df$species) |>
   fct_relevel("Sockeye", "Pink", "Chum")
 
 write_csv(sealice_df, here("supplemental_materials", "tidy_data", "sealice_all_stages_ts.csv"))
+
+# Remove all objects from .GlobalEnv
+rm(list = ls())

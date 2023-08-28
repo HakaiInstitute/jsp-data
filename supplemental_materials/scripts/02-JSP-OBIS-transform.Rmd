@@ -22,26 +22,43 @@ library(lubridate)
 library(worrms)
 library(obistools)
 
+#TODO re run 01-data-integration script and push to dev and rerun this script
 # Reads data from the most recent official version of the Hakai Juvenile Salmon Program time series
-survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") 
+survey_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/survey_data.csv") |> 
+  mutate(date_site = paste(survey_date, site_id, sep = "_")) |> 
+  filter(survey_type == "standard")
 
-seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/seine_data.csv") 
+seine_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/seine_data.csv") |> 
+  filter(collection_protocol == "SEMSP")
 
 sites <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/sites.csv")
 
-survey_seines <- right_join(survey_data, seine_data, by = "survey_id") # removes survey events where a seine wasn't set
+survey_seines <- dplyr::right_join(survey_data, seine_data, by = "survey_id") # removes survey events where a seine wasn't set
 
 fish_lab_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/fish_lab_data.csv", guess_max = 8000)
 
 fish_field_data <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/fish_field_data.csv", guess_max = 16000)
 
+bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/bycatch_mort.csv') 
 
-bycatch <- read_csv('https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/bycatch_mort.csv')
+sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv") |> 
+  select(-c("survey_date", "species", "site_id"))
 
-sealice <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/combined_motile_lice.csv")
+gsi_samples <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/master/supplemental_materials/raw_data/sample_inventory/dna_samples.csv")
 
-fish_data <- full_join(fish_lab_data, fish_field_data) %>% 
-  left_join(sealice)
+gsi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/raw_data/sample_results/stock_id.csv", guess_max = 20000) |> 
+  filter(prob_1 >= 0.7) |>
+  dplyr::left_join(gsi_samples) |> 
+  select(ufn, stock_1)
+  
+ysi <- read_csv("https://raw.githubusercontent.com/HakaiInstitute/jsp-data/develop/supplemental_materials/tidy_data/ysi.csv") |> 
+  mutate(date_site = paste(survey_date, site_id, sep = "_")) |> 
+  distinct(date_site, .keep_all = TRUE)
+
+fish_data <- dplyr::full_join(fish_lab_data, fish_field_data) %>% 
+  dplyr::left_join(sealice) |> 
+  dplyr::left_join(gsi, by = "ufn") |> 
+  dplyr::semi_join(survey_seines)
 
 paste3 <- function(...,sep=", ") {
      L <- list(...)
@@ -73,18 +90,17 @@ My process for conversion was to make a new table called `event` and map the sta
 
 ```{r event}
 
-#TODO: Include abiotic measurements (YSI temp and salinity from 0 and 1 m) to hang off eventID in the eMoF table
-
 event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 eventID = survey_seines$seine_id,
                 eventDate = date(survey_seines$survey_date),
                 eventTime = paste0(survey_seines$set_time, "-0700"),
-                eventRemarks = paste3(survey_seines$survey_comments, survey_seines$seine_comments),
+                eventRemarks = paste3(survey_seines$survey_comments,
+                                      survey_seines$seine_comments),
                 decimalLatitude = survey_seines$lat,
                 decimalLongitude = survey_seines$long,
                 locationID = survey_seines$site_id,
                 coordinatePrecision = 0.00001,
-                coordinateUncertaintyInMeters = 10,
+                coordinateUncertaintyInMeters = if_else(is.na(decimalLatitude) == TRUE, 1852, 10), #increase coordinate uncertainty for inferred coords to 1 nm (1852 m)
                 country = "Canada",
                 countryCode = "CA",
                 stateProvince = "British Columbia",
@@ -92,24 +108,37 @@ event <- tibble(datasetName = "Hakai Institute Juvenile Salmon Program",
                 geodeticDatum = "EPSG:4326 WGS84",
                 minimumDepthInMeters = 0,
                 maximumDepthInMeters = 9, # seine depth is 9 m
-                samplingProtocol = "http://dx.doi.org/10.21966/1.566666", # This is the DOI for the Hakai Salmon Data Package that contains the smnpling protocol, as well as the complete data package
+                samplingProtocol = "https://doi.org/10.5281/zenodo.8237301", # This is the DOI for the Hakai Juvenile Salmon Program sampling protocol
                 language = "en",
                 license = "http://creativecommons.org/licenses/by/4.0/legalcode",
                 bibliographicCitation = "Johnson B, Gan J, Godwin S, Bachen K, van der Stap T, Krkosek M, Rogers L, Lauren P, Janusson C, Hunt B (2021). Hakai Institute Juvenile Salmon Program. Version 1.26. Canadian node of the Ocean Biogeographic Information System (OBIS Canada). Samplingevent dataset. http://dx.doi.org/10.21966/1.566666",
                 references = "https://github.com/HakaiInstitute/jsp-data",
                 institutionID = "https://www.gbif.org/publisher/55897143-3f69-42f1-810d-ae94b55fde24, https://oceanexpert.org/institution/20121, https://edmo.seadatanet.org/report/5148",
-                institutionCode = "Hakai"
-               ) 
+                institutionCode = "Hakai",
+                date_site = survey_seines$date_site
+               ) |> 
+  dplyr::left_join(select(ysi, date_site), relationship = "many-to-many") # add foreign key to YSI table
 
+# In 2015 and 2016 we did not always collect coordinates if sockeye were not caught and thus pink and chum were released. To address this I just use the coordinates of the site and increase the coordinateUncertaintyInMeters
+avg_sites <- survey_seines |> 
+  group_by(site_id) |> 
+  summarize(lat = mean(lat, na.rm = TRUE),
+            long = mean(long, na.rm = TRUE))
 
+event <- dplyr::left_join(event, avg_sites, by = c("locationID" = "site_id")) |> 
+  mutate(decimalLatitude = coalesce(decimalLatitude, lat),
+         decimalLongitude = coalesce(decimalLongitude, long))
 ```
 
 
 # occurrence
 
-Next you'll want to determine what constitutes an occurrence for your data set. Because each event captures fish, I consider each fish to be an occurrence. Therefore, the unit of observation (each row) in the occurrence table is a fish. To link each occurrence to an event you need to include the `eventID` column for every occurrence so that you know what seine (event) each fish (occurrence) came from. You must also provide a globally unique identifier for each occurrence. I already have a locally unique identifier for each fish in the original `fish_data` table called `ufn`. To make it globally unique I pre-pend the organization and research program metadata to the `ufn` column. 
+Next you'll want to determine what constitutes an occurrence for your data set. Because each event captures fish, I consider each fish to be an occurrence. However, only fish that were retained receive their own row because we are confident in that fish identification and that occurrence with have related measurements/facts. Visual estimates of abundance of fish remaining in the net after collecting fish for retention will receive one row per species estimate. The two types or occurrences are differentiated by organismQuanityType and orgamsimQuantityRemarks. 
 
-Not every fish is actually collected and given a Universal Fish Number (UFN) in our fish data tables, so in our field data sheets we record the total number of fish captured and the total number retained. So to get an occurrence row for every fish captured I create a row for every fish caught (minus the number taken) and create a generic numeric id (ie hakai-jsp-1) in one table and then join that to the fish table that includes a row for every fish retained that already has a UFN. 
+To link each occurrence to an event you need to include the `eventID` column for every occurrence so that you know what seine (event) each fish (occurrence) came from. You must also provide a globally unique identifier for each occurrence. I already have a locally unique identifier for each fish in the original `fish_data` table called `ufn`. To make it globally unique I pre-pend the organization and research program metadata to the `ufn` column. 
+
+Not every fish is actually collected and given a Universal Fish Number (UFN) in our fish data tables, so in our field data sheets we record the total number of fish captured and the total number retained. 
+
 
 ```{r occurrence}
 
@@ -127,22 +156,17 @@ seines_taken_long <- survey_seines %>%
 seines_taken_long$scientificName <- recode(seines_taken_long$scientificName, so_taken = "Oncorhynchus nerka", pi_taken = "Oncorhynchus gorbuscha", cu_taken = "Oncorhynchus keta", co_taken = "Oncorhynchus kisutch", ck_taken = "Oncorhynchus tshawytscha", he_taken = "Clupea pallasii") 
 
 ## remove records that have already been assigned an ID because they were actually retained
-seines_long <-  full_join(seines_total_long, seines_taken_long, by = c("seine_id", "scientificName")) %>% 
-  drop_na() %>% 
+all_fish_not_retained <-  dplyr::full_join(seines_total_long, seines_taken_long, by = c("seine_id", "scientificName")) %>% 
+  drop_na(n_taken) %>% 
   mutate(n_not_taken = n - n_taken) %>% #so_total includes the number taken so I subtract n_taken to get n_not_taken
   select(-n_taken, -n) %>% 
-  filter(n_not_taken > 0)
-
-all_fish_not_retained <-
-  seines_long[rep(seq.int(1, nrow(seines_long)), seines_long$n_not_taken), 1:3] %>% 
-  select(-n_not_taken) %>% 
-  mutate(prefix = "hakai-jsp-",
-         suffix = 1:nrow(.),
-         occurrenceID = paste0(prefix, suffix)
-  ) %>% 
-  select(-prefix, -suffix)
-
-#
+  drop_na() |> 
+  filter(n_not_taken > 0) |> 
+  #create an occurrenceID
+  mutate(occurrenceID = paste(seine_id, scientificName, "estimate", sep = "-"),
+         organismQuantity = n_not_taken,
+         organismQuantityType = "visually estimated number of individuals") |> 
+  select(seine_id, scientificName, occurrenceID, organismQuantity, organismQuantityType)
 
 # Change species names to full Scientific names 
 latin <- fct_recode(fish_data$species, "Oncorhynchus nerka" = "SO", "Oncorhynchus gorbuscha" = "PI", "Oncorhynchus keta" = "CU", "Oncorhynchus kisutch" = "CO", "Clupea pallasii" = "HE", "Oncorhynchus tshawytscha" = "CK") %>% 
@@ -152,12 +176,44 @@ fish_retained_data <- fish_data %>%
   mutate(scientificName = latin) %>% 
   select(-species) %>% 
   mutate(prefix = "hakai-jsp-",
-         occurrenceID = paste0(prefix, ufn)) %>% 
-  select(seine_id, scientificName, occurrenceID)
+         occurrenceID = paste0(prefix, ufn),
+         organismQuantity = 1,
+         organismQuantityType = "individuals",
+         retained = "retained") %>% # create column to filter on
+  select(seine_id, scientificName, occurrenceID, organismQuantity,
+         organismQuantityType, retained)
+
+#Create lice occurrence table
+lice_occ <- fish_data |> 
+  select(ufn, eventID = seine_id, "Lepeophtheirus salmonis" = motile_lep, 
+         "Caligus clemensi" = motile_caligus) |>
+  pivot_longer(cols = `Lepeophtheirus salmonis`:`Caligus clemensi`, 
+               names_to = "scientificName", values_to = "organismQuantity")|> 
+  drop_na() |> 
+  filter(organismQuantity > 0) |> 
+  mutate(organismQuantityType = "individuals",
+         occurrenceID = paste0(ufn, "-hakai-jsp-sea-louse-", scientificName),
+         lifeStage = "motile") |> 
+  left_join(select(event, eventID, eventDate, decimalLatitude, decimalLongitude))
 
 occurrence <- bind_rows(all_fish_not_retained, fish_retained_data) %>% 
   rename(eventID = seine_id) %>% 
-  mutate(`Life stage` = "juvenile")
+  dplyr::left_join(select(event, eventDate, eventID, decimalLatitude, 
+                          decimalLongitude)) |> 
+  # call organismType 'individuals' for retained fish, all non retained fish from 2015 and 2016 as "individuals visually estimated individuals", and all non retained fish after 2016 as "individuals 
+  mutate(year = as.numeric(year(eventDate)),
+    organismQuantityType = 
+      case_when(retained == "retained" ~ 
+                  "individuals",
+                is.na(retained) == TRUE ~ 
+                  "individuals counted during release with tally counter device"),
+    organismQuantityType = if_else(year < 2017 & is.na(retained) == TRUE, 
+                                   "individuals visually estimated", 
+                                   organismQuantityType), 
+    lifeStage = "juvenile") |> 
+  select(-c("retained", "year")) |> 
+  bind_rows(lice_occ)
+  
 
 unique_taxa <- unique(occurrence$scientificName)  
 worms_names <- wm_records_names(unique_taxa) 
@@ -181,39 +237,48 @@ by_worms_names <- wm_records_names(unique_bycatch) %>%
          )
 
 bycatch_occurrence <- bycatch %>% 
-  select(eventID = seine_id, occurrenceID, scientificName, `Life stage` = bm_ageclass) %>% 
-  filter(scientificName != "unknown")
+  select(eventID = seine_id, occurrenceID, scientificName,
+         lifeStage = bm_ageclass) %>% 
+  filter(scientificName != "unknown") |> 
+  mutate(organismQuantity = 1,
+         organismQuantityType = "individuals")
 
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "J"] <- "juvenile"
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "A"] <- "adult"
-bycatch_occurrence$`Life stage`[bycatch_occurrence$`Life stage` == "Y"] <- "Young of year"
+bycatch_occurrence <- left_join(bycatch_occurrence, select(event, eventID, eventDate, decimalLatitude, decimalLongitude)) |> 
+  drop_na(decimalLatitude) #removes bycatch from Sam James' work
+
+
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "J"] <- "juvenile"
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "A"] <- "adult"
+bycatch_occurrence$`lifeStage`[bycatch_occurrence$`lifeStage` == "Y"] <- "Young of year"
 
 combined_worms_names <- bind_rows(by_worms_names, df_worms_names) %>% 
   distinct(scientificName, .keep_all = TRUE)
 
 occurrence <- bind_rows(bycatch_occurrence, occurrence)
 
-occurrence <- left_join(occurrence, combined_worms_names) %>% 
+occurrence <- dplyr::left_join(occurrence, combined_worms_names) %>% 
     mutate(basisOfRecord = "HumanObservation",
         occurrenceStatus = "present")
 
-write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
-
 # This removes events that didn't result in any occurrences
-event <- dplyr::semi_join(event, occurrence, by = 'eventID') %>% 
-  mutate(coordinateUncertaintyInMeters = ifelse(is.na(decimalLatitude), 1852, coordinateUncertaintyInMeters))
+event <- dplyr::semi_join(event, occurrence, by = 'eventID')
 
-simple_sites <- sites %>% 
-  select(site_id, ocgy_std_lat, ocgy_std_lon)
-
-event <- dplyr::left_join(event, simple_sites, by = c("locationID" = "site_id")) %>% 
-  mutate(decimalLatitude = coalesce(decimalLatitude, ocgy_std_lat),
-         decimalLongitude = coalesce(decimalLongitude, ocgy_std_lon)) %>% 
-  select(-c(ocgy_std_lat, ocgy_std_lon))
-
-write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
 ```
 
+# Resource Relationship extension
+
+```{r rr_ext}
+rr_ext <- occurrence |> 
+  drop_na(ufn) |> 
+  mutate(resourceID = occurrenceID,
+         relatedResourceID = paste0("hakai-jsp-", ufn),
+         relationshipOfResource = "ectopatasite of",
+         relationshipOfResourceID = "http://purl.obolibrary.org/obo/RO_0002632" ) |> 
+  select(eventID, resourceID, relationshipOfResource, relationshipOfResourceID,
+         relatedResourceID)
+
+write_csv(rr_ext, here("supplemental_materials", "OBIS_data", "resource_relationship.csv"))
+```
 
 # measurementOrFact
 To convert all your measurements or facts from your normal format to Darwin Core you essentially need to put all your measurements into one column called measurementType and a corresponding column called MeasurementValue. This standardizes the column names are in the `measurementOrFact` table. There are a number of predefined `measurementType`s listed on the [NERC](https://www.bodc.ac.uk/resources/vocabularies/) database that should be used where possible. I found it difficult to navigate this page to find the correct `measurementType`. 
@@ -224,48 +289,185 @@ Here I convert length, and weight measurements that relate to an event and an oc
 
 mof_types <- read_csv(here("supplemental_materials", "OBIS_data", "mof_type_units_id.csv"))
 
-fish_data$weight <- coalesce(fish_data$weight, fish_data$weight_field)
-fish_data$fork_length <- coalesce(fish_data$fork_length, fish_data$fork_length_field)
-fish_data$`Life stage` <- "juvenile"
+fish_data$lifeStage <- "juvenile"
 
-
-
+# Add fish measurements
 measurementOrFact <- fish_data %>%
-  mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>% 
-  select(occurrenceID, eventID = seine_id, "Length (fork length)" = fork_length,
-         "Standard length" = standard_length, "Weight" = weight, `Life stage`) %>% 
-  pivot_longer(`Length (fork length)`:`Life stage`,
-               names_to = "measurementType",
-               values_to = "measurementValue",
-               values_transform = list(measurementValue = as.character)) %>%
-  filter(measurementValue != "NA") %>%
-  left_join(mof_types,by = c("measurementType")) %>% 
-  mutate(measurementValueID = case_when(measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"),
-         measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"))
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn)) %>%
+  select(
+    occurrenceID,
+    eventID = seine_id,
+    fork_length,
+    fork_length_field,
+    standard_length,
+    weight,
+    weight_field,
+    lifeStage
+  ) %>%
+  pivot_longer(
+    fork_length:lifeStage,
+    names_to = "measurementType",
+    values_to = "measurementValue",
+    values_transform = list(measurementValue = as.character)
+  ) %>%
+  mutate(
+    measurementMethod = case_when(
+      measurementType == "fork_length" ~ "laboratory fish board",
+      measurementType == "fork_length_fild" ~ "field ruler",
+      measurementType == "weight" ~ "laboratory balance",
+      measurementType == "weight_field" ~ "field spring scale"
+    )
+  ) |>
+  drop_na(measurementValue) %>%
+  group_by(occurrenceID) %>%
+  # Remove fork_length_field rows where fork_length exists for the same fish
+  filter(!(
+    measurementType == "fork_length_field" &
+      "fork_length" %in% measurementType
+  )) %>%
+  # Remove weight_field rows where weight exists for the same fish
+  filter(!(
+    measurementType == "weight_field" &
+      "weight" %in% measurementType
+  )) %>%
+  ungroup() |>
+  dplyr::left_join(mof_types, by = c("measurementType")) %>%
+  mutate(
+    measurementValueID = case_when(
+      measurementValue == "juvenile" ~ "http://vocab.nerc.ac.uk/collection/S11/current/S1127/"
+    ),
+    measurementID = paste(eventID, measurementType, occurrenceID, sep = "-"),
+    measurementMethod =
+      case_when(
+        measurementType == "weight" ~ "Digital laboratory scale",
+        measurementType == "weight_field" ~ "Field spring-scale",
+        measurementType == "fork_length" ~ "In the laboratory",
+        measurementType == "fork_length_field" ~ "In the field"
+      )
+  ) |>
+  mutate(
+    measurementType = if_else(
+      measurementType %in% c("fork_length", "fork_length_field"),
+      "Length (fork length)",
+      measurementType
+    ),
+    measurementType = if_else(
+      measurementType %in% c("weight", "weight_field"),
+      "Weight",
+      measurementType
+    )
+  )
+
+# Add abiotic temp and salinity
+emof_ysi <- ysi |>
+  dplyr::left_join(distinct(select(event, date_site, eventID), .keep_all = TRUE)) |>
+  drop_na(eventID) |>
+  select(eventID,
+         sea_surface_temperature = temperature_0m,
+         sea_surface_salinity = salinity_0m) |>
+  mutate(occurrenceID = NA) |>
+  pivot_longer(
+    c(sea_surface_temperature, sea_surface_salinity),
+    names_to = "measurementType",
+    values_to = "measurementValue"
+  ) |>
+  mutate(
+    measurementValue = as.character(measurementValue),
+    measurementTypeID = case_when(
+      measurementType == "sea_surface_temperature" ~  "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0381/",
+      measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0376/"
+    ),
+    measurementUnit = case_when(
+      measurementType == "sea_surface_temperature" ~ "degC",
+      measurementType == "sea_surface_salinity" ~  "ppt"
+    ),
+    measurementUnitID = case_when(
+      measurementType == "sea_surface_salinity" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPPT/",
+      measurementType == "sea_surface_temperature" ~ "http://vocab.nerc.ac.uk/collection/P06/current/UPAA/"
+    ),
+    measurementID = paste(eventID, measurementType, sep = "_")
+  )
+
+# Add genetic stock ID to emof
+stock_id <- fish_data |> 
+  drop_na(stock_1) |> 
+  mutate(occurrenceID = paste0("hakai-jsp-", ufn),
+         eventID = seine_id,
+         measurementType = "Genetic stock",
+         measurementValue = stock_1,
+         measurementTypeID = "http://aims.fao.org/aos/agrovoc/c_489af625",
+         measurementID = paste0(eventID, measurementType, occurrenceID, sep = "_")) |> 
+  select(occurrenceID, eventID, measurementType, measurementValue, measurementTypeID, measurementID)
+
+emof <- bind_rows(measurementOrFact, emof_ysi, stock_id)
+
+write_csv(emof, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
+
+event <- event |> 
+  select(-date_site)
+
+write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
+
+occurrence <- occurrence |> 
+  select(-c(ufn)) |> 
+  dplyr::left_join(select(survey_seines, seine_id, lat, long ), by = c("eventID" = "seine_id"))
 
 
-write_csv(measurementOrFact, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
+write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
 ```
 
 ```{r QC}
-
-tree <- treeStructure(event, occurrence, measurementOrFact)
-exportTree(tree, "tree.html")
-
 library(dm)
 #Check that every eventID in Occurrence occurs in event table
-no_keys <- dm(event, occurrence, measurementOrFact)
+no_keys <- dm(event, occurrence, rr_ext, emof)
 only_pk <- no_keys %>% 
   dm_add_pk(event, eventID) %>% 
   dm_add_pk(occurrence, occurrenceID) %>% 
-  dm_add_pk(measurementOrFact, measurementID)
+  dm_add_pk(emof, measurementID) |> 
+  dm_add_pk(rr_ext, resourceID)
+
 dm_examine_constraints(only_pk)
 
 model <- only_pk %>% 
   dm_add_fk(occurrence, eventID, event) %>% 
-  dm_add_fk(measurementOrFact, occurrenceID, occurrence)
+  dm_add_fk(rr_ext, resourceID, occurrence) |> 
+  dm_add_fk(rr_ext, eventID, event) |> 
+  dm_add_fk(emof, eventID, event)
+
 dm_examine_constraints(model)
 
 dm_draw(model, view_type = "all") 
+
+# OBISTools checks
+check_fields(occurrence)
+
+check_eventids(event)
+check_extension_eventids(event, occurrence)
+check_extension_eventids(event, measurementOrFact)
+check_extension_eventids(event, rr_ext)
+check_eventdate(event)
+check_eventdate(occurrence)
+
+```
+
+```{r mapp coords}
+# Determine sites and coordinates for map
+
+ocgy_coords <- event |> 
+  distinct(locationID) |> 
+  dplyr::left_join(sites, by = c("locationID" = "site_id")) |> 
+  select(locationID, site_name, lat = ocgy_std_lat, long = ocgy_std_lon)
+
+avg_coords <- event |> 
+  group_by(locationID) |> 
+  summarize(lat_avg = mean(decimalLatitude, na.rm = TRUE),
+            long_avg  = mean(decimalLongitude, na.rm = TRUE))
+
+map_coords <- dplyr::left_join(ocgy_coords, avg_coords) |> 
+  mutate(lat = coalesce(lat, lat_avg),
+         long = coalesce(long, long_avg)) |> 
+  select(-c(lat_avg, long_avg))
+
+
 ```
 

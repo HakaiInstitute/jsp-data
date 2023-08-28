@@ -15,15 +15,22 @@ This scripts purpose is to ingest, join, and QC the various sources of data asso
 
 If errors are found  in the data in this script, they can either be corrected in the JSP Master Data Tables google sheet as long as the updated googlesheet is exported again to this repository, or the edits can be made directly via this script depending on what makes most sense. 
 
+```{r eval = FALSE}
+source(here::here("supplemental_materials", "scripts",
+                  "all_stages_sealice_integration.R"))
+```
+
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
+
 library(dm)
 library(tidyverse)
 library(lubridate)
 library(here)
 library(googlesheets4)
+library(hakaiApi)
 
 client <- hakaiApi::Client$new()
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = FALSE, error = TRUE)
 ## IMPORTANT: In a new environment, run the all_stages_sealice_integration.R script
 ```
 
@@ -34,7 +41,7 @@ mdt_slug <- "1RLrGasI-KkF_h6O5TIEMoWawQieNbSZExR0epHa5qWI"
 
 sites <- read_sheet(mdt_slug, sheet = "sites", na = c("NA", "")) %>% 
    write_csv(here("supplemental_materials", "raw_data", "sites.csv"))
-1
+
 survey_data <- read_sheet(mdt_slug, sheet = "survey_data", na = c("NA", "")) %>% 
    write_csv(here("supplemental_materials", "raw_data", "survey_data.csv"))
 
@@ -124,14 +131,16 @@ Sys.sleep(30) # pauses for 30 seconds so as to not overwhelm google servers with
 
 rna_dna_samples <- read_sheet(mi_slug, sheet = "rna_dna_samples", na = c("NA", "")) %>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_dna_samples.csv"))
-rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples", na = c("NA", ""))%>% 
+rna_pathogen_samples <- read_sheet(mi_slug, sheet ="rna_pathogen_samples", 
+                                   na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "rna_pathogen_samples.csv"))
-sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples", na = c("NA", "")) %>% 
+sealice_microbiome_samples <- read_sheet(mi_slug, sheet ="sea_lice_microbiome_samples", 
+                                         na = c("NA", "")) %>% 
   distinct(sample_id, .keep_all = TRUE) %>% 
-   write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "sealice_microbiome_samples.csv"))
+   write_csv(here("supplemental_materials", "raw_data", "sample_inventory",
+                  "sealice_microbiome_samples.csv"))
 fish_packages <- read_sheet(mi_slug, sheet = "fish_packages", na = c("NA", ""))%>% 
    write_csv(here("supplemental_materials", "raw_data", "sample_inventory", "fish_packages.csv"))
-
 
 ## Source motile sealice time series integration script
 source(here::here("supplemental_materials", "scripts", 'historic_motile_sealice_integration.R'))
@@ -241,8 +250,6 @@ salmon_dm <- salmon_only_pk %>%
    dm_add_fk(rna_pathogen_results, ufn, fish_lab_data)
    
 salmon_dm %>% dm_examine_constraints() # checks that foreign keys all have a matching primary key in  the parent table
-
-# manually  export the drawing from the viewer pane to figs to update the data model image
 dm_draw(salmon_dm, rankdir = "BT")
 ```
 
@@ -365,13 +372,16 @@ jsp_catch_and_bio_data_complete <- left_join(survey_data, seine_data, by = "surv
   mutate(survey_date = ymd(survey_date)) %>% 
   arrange(survey_date) %>% 
   select(-c(ysi_bout, ctd_bout, zoop_bout, time_searching))
-  
+
+sum(is.na(jsp_catch_and_bio_data_complete$survey_date))  
+sum(is.na(jsp_catch_and_bio_data_complete$site_id))  
+
 # write complete file to root of data folder
 write_csv(jsp_catch_and_bio_data_complete, here("jsp_catch_and_bio_data_complete.csv"))
 rm(jsp_catch_and_bio_data_complete)
 rm(stocks)
 
-test <- read_csv(here("jsp_catch_and_bio_data_complete.csv"))
+test <- read_csv(here("jsp_catch_and_bio_data_complete.csv"), guess_max = 100000)
 problems()
 print(problems(), n = 29)
 rm(test)

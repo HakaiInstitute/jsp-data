@@ -813,7 +813,7 @@ qu39_average <- qu39 %>%
 
 # Here I generate a loess regression for the average temperature based on the time series. Loess and the span variable are both rather arbitrary and more of a statistical convenience than perhaps a more rigorous model?
 temp.lo_qu39 <-
-  loess(mean_temp ~ yday, qu39_average, SE = T, span = 0.35)
+  loess(mean_temp ~ yday, qu39_average, SE = T, span = 0.65)
 
 #create table for predicitions from loess function
 sim_temp_data_qu39 <-
@@ -832,8 +832,7 @@ calc_midpoint_row <- function(df, i) {
   yday = (df$yday[i] + df$yday[i+1]) / 2
   predicted_mean_temp = (df$predicted_mean_temp[i] + 
                            df$predicted_mean_temp[i+1]) / 2
-  mean_temp = (df$mean_temp[i] + 
-                           df$mean_temp[i+1]) / 2
+  mean_temp = predicted_mean_temp
   return(data.frame(yday = yday, predicted_mean_temp = predicted_mean_temp, mean_temp = mean_temp))
 }
 

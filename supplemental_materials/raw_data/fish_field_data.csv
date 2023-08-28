@@ -16760,3 +16760,487 @@ U24607,NA,DE918N1,PI,P1661,9:16,9:45,96,17,6.9,modified_salmoncaost_allstages,NA
 U24608,NA,DE918N1,PI,P1661,9:17,9:49,101,19,8.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
 U24609,NA,DE918N1,PI,P1661,9:19,9:52,102,18,9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
 U24610,NA,DE918N1,PI,P1661,9:20,9:55,97,16,7.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22751,NA,DE1001N1,CU,P1476,NA,NA,66,9,1.9,modified_salmoncaost_allstages,NA,SEMSP,serious predator damage; fish fell out of bag,NA
+U22752,NA,DE1001N1,CU,P1476,NA,NA,100,18,8.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding post gill clip,NA
+U22761,NA,DE1001N1,SO,P1477,NA,NA,144,26,22.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding post gill clip,NA
+U22762,NA,DE1001N1,SO,P1477,NA,NA,103,19,10.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding post gill clip,NA
+U22763,NA,DE1001N1,SO,P1477,NA,NA,94,17,8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22764,NA,DE1001N1,SO,P1477,NA,NA,114,21,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22781,NA,DE1001N1,CK,P1479,NA,NA,104,22,13,modified_salmoncaost_allstages,NA,SEMSP,bleeding post gill clip,NA
+U22782,NA,DE1001N1,CK,P1479,NA,NA,97,21,9.9,modified_salmoncaost_allstages,NA,SEMSP,bleeding post gill clip,NA
+U22783,NA,DE1001N1,CK,P1479,NA,NA,107,23,14.1,modified_salmoncaost_allstages,NA,SEMSP,handled with hands,NA
+U22784,NA,DE1001N1,CK,P1479,NA,NA,109,23,12.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22785,NA,DE1001N1,CK,P1479,NA,NA,98,21,10.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22771,NA,DE1001N1,HE,P1478,NA,NA,NA,NA,NA,NA,NA,SEMSP,NA,NA
+U24671,NA,DE1003N2,PI,P1668,NA,NA,63,12,1.95,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24672,NA,DE1003N2,PI,P1668,NA,NA,62,12,1.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24673,NA,DE1003N2,PI,P1668,NA,NA,70,12,2.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24681,NA,DE1003N2,CU,P1669,NA,NA,70,13,2.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24682,NA,DE1003N2,CU,P1669,NA,NA,78,14,3.8,modified_salmoncaost_allstages,NA,SEMSP,clear of lice: bleeding from gill clip,NA
+U24683,NA,DE1003N2,CU,P1669,NA,NA,73,14,2.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24684,NA,DE1003N2,CU,P1669,NA,NA,59,10,1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24685,NA,DE1003N2,CU,P1669,NA,NA,67,13,1.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24686,NA,DE1003N2,CU,P1669,NA,NA,73,14.5,2.2,modified_salmoncaost_allstages,NA,SEMSP,clear of lice,NA
+U24687,NA,DE1003N2,CU,P1669,NA,NA,84,15,4.6,modified_salmoncaost_allstages,NA,SEMSP,clear of lice,NA
+U24688,NA,DE1003N2,CU,P1669,NA,NA,72,12.5,2.9,modified_salmoncaost_allstages,NA,SEMSP,clear of lice,NA
+U24689,NA,DE1003N2,CU,P1669,NA,NA,73.5,13.5,2.3,modified_salmoncaost_allstages,NA,SEMSP,clear of lice,NA
+U24690,NA,DE1003N2,CU,P1669,NA,NA,74,14,2.45,modified_salmoncaost_allstages,NA,SEMSP,clear of lice; bleeding from gill clip,NA
+U24691,NA,DE1004N1,PI,P1670,NA,NA,61,9,0.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24692,NA,DE1004N1,PI,P1670,NA,NA,62,10.5,0.95,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24693,NA,DE1004N1,PI,P1670,NA,NA,59,7.5,1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24694,NA,DE1004N1,PI,P1670,NA,NA,61,11,1.35,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24695,NA,DE1004N1,PI,P1670,NA,NA,64,12,1.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24696,NA,DE1004N1,PI,P1670,NA,NA,60,9,1.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24697,NA,DE1004N1,PI,P1670,NA,NA,65,11.5,1.85,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; damage to caudal fin and meat of tail,NA
+U24698,NA,DE1004N1,PI,P1670,NA,NA,59,11,1.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24699,NA,DE1004N1,PI,P1670,NA,NA,60.5,11,1.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24700,NA,DE1004N1,PI,P1670,NA,NA,58,10,0.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24071,NA,DE1004N1,CU,P1608,NA,NA,69,13,3.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24072,NA,DE1004N1,CU,P1608,NA,NA,68,13.5,2.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24073,NA,DE1004N1,CU,P1608,NA,NA,58,7,1.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24074,NA,DE1004N1,CU,P1608,NA,NA,63,11,1.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24075,NA,DE1004N1,CU,P1608,NA,NA,65,11,2.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24076,NA,DE1004N1,CU,P1608,NA,NA,62,10,1.8,modified_salmoncaost_allstages,NA,SEMSP,heomorrage in left eye,NA
+U24077,NA,DE1004N1,CU,P1608,NA,NA,68,12,1.5,modified_salmoncaost_allstages,NA,SEMSP,heomorrage in eyes,NA
+U24078,NA,DE1004N1,CU,P1608,NA,NA,61,10.5,1.9,modified_salmoncaost_allstages,NA,SEMSP,abbrasion on base of tail,NA
+U24079,NA,DE1004N1,CU,P1608,NA,NA,57.5,10,1.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24080,NA,DE1004N1,CU,P1608,NA,NA,68,13,1.9,modified_salmoncaost_allstages,NA,SEMSP,heomorrage in eyes,NA
+U22601,NA,DE1007N2,SO,P1461,NA,NA,141,29,31.5,modified_salmoncaost_allstages,NA,SEMSP,healed scar under dorsal fin,NA
+U22602,NA,DE1007N2,SO,P1461,NA,NA,147,31,35.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22603,NA,DE1007N2,SO,P1461,NA,NA,118,28,16,modified_salmoncaost_allstages,NA,SEMSP,scar on left side under pelvic fin; bleeding from gill clip,NA
+U22604,NA,DE1007N2,SO,P1461,NA,NA,144,33,33,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22605,NA,DE1007N2,SO,P1461,NA,NA,147,29,34,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22606,NA,DE1007N2,SO,P1461,NA,NA,125,29,19,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22607,NA,DE1007N2,SO,P1461,NA,NA,166,39,49,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22608,NA,DE1007N2,SO,P1461,NA,NA,158,35,39,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22609,NA,DE1007N2,SO,P1461,NA,NA,129,27,23,modified_salmoncaost_allstages,NA,SEMSP,fish fell on floor,NA
+U22610,NA,DE1007N2,SO,P1461,NA,NA,145,38,36,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22611,NA,DE1007N2,PI,P1462,NA,NA,80,13,3.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22612,NA,DE1007N2,PI,P1462,NA,NA,70,12,3.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22613,NA,DE1007N2,PI,P1462,NA,NA,66,10,2.1,modified_salmoncaost_allstages,NA,SEMSP,"gill deformity on right side, gill clip coming from side that isn't deforemd;bleeding from gill clip",NA
+U22614,NA,DE1007N2,PI,P1462,NA,NA,65,11,2.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22615,NA,DE1007N2,PI,P1462,NA,NA,66,11,2.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22616,NA,DE1007N2,PI,P1462,NA,NA,70,12,2.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22617,NA,DE1007N2,PI,P1462,NA,NA,60,11,2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22618,NA,DE1007N2,PI,P1462,NA,NA,84,15,4.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22619,NA,DE1007N2,PI,P1462,NA,NA,77,13,3.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22620,NA,DE1007N2,PI,P1462,NA,NA,75,12,2.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22871,NA,DE1007N2,CU,P1488,NA,NA,77,15,3.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22872,NA,DE1007N2,CU,P1488,NA,NA,71,13,2.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22873,NA,DE1007N2,CU,P1488,NA,NA,69,14,3.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22874,NA,DE1007N2,CU,P1488,NA,NA,71,13,2.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22875,NA,DE1007N2,CU,P1488,NA,NA,74,15,3.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22876,NA,DE1007N2,CU,P1488,NA,NA,56,8,0.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22877,NA,DE1007N2,CU,P1488,NA,NA,77,13,3.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22878,NA,DE1007N2,CU,P1488,NA,NA,106,20,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22879,NA,DE1007N2,CU,P1488,NA,NA,71,11,2.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22880,NA,DE1007N2,CU,P1488,NA,NA,69,15,2.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22851,NA,DE1007N2,CO,P1486,NA,NA,134,24,25,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25001,NA,DE1010N1,PI,NA,NA,NA,56,10,0.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25002,NA,DE1010N1,PI,NA,NA,NA,46,9,0.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25003,NA,DE1010N1,PI,NA,NA,NA,53,9,0.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25004,NA,DE1010N1,PI,NA,NA,NA,57,11,0.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25005,NA,DE1010N1,PI,NA,NA,NA,53,9,0.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; eratic in recovery bucket,NA
+U25006,NA,DE1010N1,PI,NA,NA,NA,59,9,0.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25007,NA,DE1010N1,PI,NA,NA,NA,59,8,0.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25008,NA,DE1010N1,PI,NA,NA,NA,48,7,0.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25009,NA,DE1010N1,PI,NA,NA,NA,49,8,0.3,modified_salmoncaost_allstages,NA,SEMSP,no gill clip; removed from recovery briefly and returned,NA
+U25010,NA,DE1010N1,PI,NA,NA,NA,52,9,0.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22891,NA,DE1011N1,CU,P1490,NA,NA,102,19,11,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22892,NA,DE1011N1,CU,P1490,NA,NA,90,18,7.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22893,NA,DE1011N1,CU,P1490,NA,NA,94,17,7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22894,NA,DE1011N1,CU,P1490,NA,NA,101,19,8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22895,NA,DE1011N1,CU,P1490,NA,NA,99,17,10.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22896,NA,DE1011N1,CU,P1490,NA,NA,102,19,10.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22897,NA,DE1011N1,CU,P1490,NA,NA,98,18,9.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22898,NA,DE1011N1,CU,P1490,NA,NA,101,19,7.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22899,NA,DE1011N1,CU,P1490,NA,NA,95,16,8.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22900,NA,DE1011N1,CU,P1490,NA,NA,105,20,11.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24951,NA,DE1011N1,PI,P1696,NA,NA,74,12,3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24952,NA,DE1011N1,PI,P1696,NA,NA,74,13,3.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24953,NA,DE1011N1,PI,P1696,NA,NA,75,12,3.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24954,NA,DE1011N1,PI,P1696,NA,NA,74,11,2.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24955,NA,DE1011N1,PI,P1696,NA,NA,73,11,2.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24956,NA,DE1011N1,PI,P1696,NA,NA,83,15,4.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24957,NA,DE1011N1,PI,P1696,NA,NA,73,13,2.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24958,NA,DE1011N1,PI,P1696,NA,NA,81,13,3.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24959,NA,DE1011N1,PI,P1696,NA,NA,80,14,3.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24960,NA,DE1011N1,PI,P1696,NA,NA,91,15,5.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25011,NA,DE1012N1,PI,NA,NA,NA,72,3.5,12,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25012,NA,DE1012N1,PI,NA,NA,NA,71,2.5,12,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25013,NA,DE1012N1,PI,NA,NA,NA,79,3.5,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25014,NA,DE1012N1,PI,NA,NA,NA,75,3.7,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25015,NA,DE1012N1,PI,NA,NA,NA,88,4.3,14,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25016,NA,DE1012N1,PI,NA,NA,NA,72,3.2,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25017,NA,DE1012N1,PI,NA,NA,NA,84,5.3,16,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25018,NA,DE1012N1,PI,NA,NA,NA,94,6.3,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25019,NA,DE1012N1,PI,NA,NA,NA,74,2.4,13,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25020,NA,DE1012N1,PI,NA,NA,NA,68,2.4,12,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25021,NA,DE1012N1,CU,NA,NA,NA,105,9.2,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25022,NA,DE1012N1,CU,NA,NA,NA,116,16.5,22,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; mortality,NA
+U22861,NA,DE1015N1,SO,P1487,NA,NA,120,21,14.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22862,NA,DE1015N1,SO,P1487,NA,NA,109,21,12,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22863,NA,DE1015N1,SO,P1487,NA,NA,124,22,20,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22864,NA,DE1015N1,SO,P1487,NA,NA,125,22,18.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22865,NA,DE1015N1,SO,P1487,NA,NA,121,22,17.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22866,NA,DE1015N1,SO,P1487,NA,NA,118,23,16.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22867,NA,DE1015N1,SO,P1487,NA,NA,115,23,15.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22868,NA,DE1015N1,SO,P1487,NA,NA,122,22,15,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22869,NA,DE1015N1,SO,P1487,NA,NA,122,22,23,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22870,NA,DE1015N1,SO,P1487,NA,NA,128,21,18,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24961,NA,DE1015N1,SO,P1697,NA,NA,122,23,21.5,NA,NA,SEMSP,NA,NA
+U24962,NA,DE1015N1,SO,P1697,NA,NA,116,22,16,NA,NA,SEMSP,NA,NA
+U24963,NA,DE1015N1,SO,P1697,NA,NA,131,25,21.5,NA,NA,SEMSP,NA,NA
+U24964,NA,DE1015N1,SO,P1697,NA,NA,110,21,14.5,NA,NA,SEMSP,NA,NA
+U24965,NA,DE1015N1,SO,P1697,NA,NA,117,23,15.5,NA,NA,SEMSP,NA,NA
+U24966,NA,DE1015N1,SO,P1697,NA,NA,120,24,19.3,NA,NA,SEMSP,NA,NA
+U24967,NA,DE1015N1,SO,P1697,NA,NA,130,26,24.5,NA,NA,SEMSP,NA,NA
+U24968,NA,DE1015N1,SO,P1697,NA,NA,124,23,18,NA,NA,SEMSP,NA,NA
+U24969,NA,DE1015N1,SO,P1697,NA,NA,119,22,18.5,NA,NA,SEMSP,NA,NA
+U24970,NA,DE1015N1,SO,P1697,NA,NA,120,21,16,NA,NA,SEMSP,given headflick,NA
+U24971,NA,DE1015N1,SO,P1698,NA,NA,115,21,15.5,NA,NA,SEMSP,NA,NA
+U24972,NA,DE1015N1,SO,P1698,NA,NA,116,22,16.5,NA,NA,SEMSP,NA,NA
+U24973,NA,DE1015N1,SO,P1698,NA,NA,119,21,15,NA,NA,SEMSP,NA,NA
+U24974,NA,DE1015N1,SO,P1698,NA,NA,137,29,20.5,NA,NA,SEMSP,lesion on anterior dorsal area,NA
+U24975,NA,DE1015N1,SO,P1698,NA,NA,119,23,17,NA,NA,SEMSP,NA,NA
+U24976,NA,DE1015N1,SO,P1698,NA,NA,122,21,16.5,NA,NA,SEMSP,NA,NA
+U24977,NA,DE1015N1,SO,P1698,NA,NA,132,25,18,NA,NA,SEMSP,NA,NA
+U24978,NA,DE1015N1,SO,P1698,NA,NA,138,26,21.5,NA,NA,SEMSP,NA,NA
+U24979,NA,DE1015N1,SO,P1698,NA,NA,134,24,17.5,NA,NA,SEMSP,NA,NA
+U24980,NA,DE1015N1,SO,P1698,NA,NA,116,19,13.5,NA,NA,SEMSP,NA,NA
+U24981,NA,DE1015N1,PI,P1699,NA,NA,102,19,9.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24982,NA,DE1015N1,PI,P1699,NA,NA,95,18,7.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24983,NA,DE1015N1,PI,P1699,NA,NA,86,14,5.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24984,NA,DE1015N1,PI,P1699,NA,NA,95,19,9.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24985,NA,DE1015N1,PI,P1699,NA,NA,102,19,9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24986,NA,DE1015N1,PI,P1699,NA,NA,94,18,7.8,NA,NA,SEMSP,NA,NA
+U24987,NA,DE1015N1,PI,P1699,NA,NA,86,14,6,NA,NA,SEMSP,NA,NA
+U24988,NA,DE1015N1,PI,P1699,NA,NA,112,21,12.8,NA,NA,SEMSP,NA,NA
+U24989,NA,DE1015N1,PI,P1699,NA,NA,109,20,11.5,NA,NA,SEMSP,NA,NA
+U24990,NA,DE1015N1,PI,P1699,NA,NA,102,19,10,NA,NA,SEMSP,NA,NA
+U25023,NA,DE1015N1,SO,NA,NA,NA,131,25,22.5,NA,NA,SEMSP,NA,NA
+U25024,NA,DE1015N1,SO,NA,NA,NA,126,24,19,NA,NA,SEMSP,NA,NA
+U25025,NA,DE1015N1,SO,NA,NA,NA,122,20,13.5,NA,NA,SEMSP,NA,NA
+U25026,NA,DE1015N1,SO,NA,NA,NA,145,32,28,NA,NA,SEMSP,NA,NA
+U25027,NA,DE1015N1,SO,NA,NA,NA,126,23,20,NA,NA,SEMSP,NA,NA
+U25028,NA,DE1015N1,SO,NA,NA,NA,142,26,25.5,NA,NA,SEMSP,NA,NA
+U25029,NA,DE1015N1,SO,NA,NA,NA,130,23,17.9,NA,NA,SEMSP,NA,NA
+U25030,NA,DE1015N1,SO,NA,NA,NA,137,23,21,NA,NA,SEMSP,NA,NA
+U25031,NA,DE1015N1,SO,NA,NA,NA,139,28,30,NA,NA,SEMSP,NA,NA
+U25032,NA,DE1015N1,SO,NA,NA,NA,109,20,16.5,NA,NA,SEMSP,NA,NA
+U25033,NA,DE1015N1,SO,NA,NA,NA,114,19,15.8,NA,NA,SEMSP,NA,NA
+U25034,NA,DE1015N1,SO,NA,NA,NA,115,21,15.4,NA,NA,SEMSP,NA,NA
+U25035,NA,DE1015N1,SO,NA,NA,NA,129,24,19.2,NA,NA,SEMSP,NA,NA
+U25036,NA,DE1015N1,SO,NA,NA,NA,122,21,19.5,NA,NA,SEMSP,NA,NA
+U25037,NA,DE1015N1,SO,NA,NA,NA,131,24,23.5,NA,NA,SEMSP,NA,NA
+U25038,NA,DE1015N1,SO,NA,NA,NA,125,23,18.3,NA,NA,SEMSP,NA,NA
+U25039,NA,DE1015N1,SO,NA,NA,NA,129,24,20.5,NA,NA,SEMSP,NA,NA
+U25040,NA,DE1015N1,SO,NA,NA,NA,136,21,18,NA,NA,SEMSP,NA,NA
+U25041,NA,DE1015N1,SO,NA,NA,NA,125,23,23,NA,NA,SEMSP,NA,NA
+U25042,NA,DE1015N1,SO,NA,NA,NA,126,21,17,NA,NA,SEMSP,NA,NA
+U25043,NA,DE1016N1,PI,NA,NA,NA,88,14,6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25044,NA,DE1016N1,PI,NA,NA,NA,88,15,6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25045,NA,DE1016N1,PI,NA,NA,NA,83,13,5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25046,NA,DE1016N1,PI,NA,NA,NA,74,12,4.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip: missing right pec fin,NA
+U25047,NA,DE1016N1,PI,NA,NA,NA,76,14,4.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25048,NA,DE1016N1,PI,NA,NA,NA,86,13,5.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25049,NA,DE1016N1,PI,NA,NA,NA,80,12,5.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25050,NA,DE1016N1,PI,NA,NA,NA,86,14,5.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25051,NA,DE1016N1,PI,NA,NA,NA,83,13,5.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25052,NA,DE1016N1,PI,NA,NA,NA,81,13,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25053,NA,DE1016N1,CU,NA,NA,NA,84,14,4.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25054,NA,DE1016N1,CU,NA,NA,NA,99,17,9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25055,NA,DE1016N1,CU,NA,NA,NA,113,22,12.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25056,NA,DE1016N1,CU,NA,NA,NA,88,18,5.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25057,NA,DE1016N1,CU,NA,NA,NA,87,17,6.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25058,NA,DE1016N1,CU,NA,NA,NA,85,16,5.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25059,NA,DE1016N1,CU,NA,NA,NA,81,14,5.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25060,NA,DE1016N1,CU,NA,NA,NA,82,14,4.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25061,NA,DE1016N1,CU,NA,NA,NA,77,13,4.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25062,NA,DE1016N1,CU,NA,NA,NA,90,16,7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25063,NA,DE1016N1,CO,NA,NA,NA,170,32,41,NA,NA,SEMSP,NA,NA
+U25064,NA,DE1017N2,PI,NA,NA,NA,77,14,4.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25065,NA,DE1017N2,PI,NA,NA,NA,78,13,4.1,modified_salmoncaost_allstages,NA,SEMSP,died,NA
+U25066,NA,DE1017N2,PI,NA,NA,NA,70,11,2.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; small puncure by anal fin; died,NA
+U25067,NA,DE1017N2,PI,NA,NA,NA,63,10,1.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25068,NA,DE1017N2,PI,NA,NA,NA,75,13,3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25069,NA,DE1017N2,PI,NA,NA,NA,75,11,2.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25070,NA,DE1017N2,PI,NA,NA,NA,75,12,2.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25071,NA,DE1017N2,PI,NA,NA,NA,65,11,1.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25072,NA,DE1017N2,PI,NA,NA,NA,80,13,3.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25073,NA,DE1017N2,PI,NA,NA,NA,65,11,1.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25074,NA,DE1017N2,CU,NA,NA,NA,59,10,1.2,modified_salmoncaost_allstages,NA,SEMSP,sample lost for gill clip,NA
+U25075,NA,DE1017N2,CU,NA,NA,NA,85,14,4.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25076,NA,DE1017N2,CU,NA,NA,NA,103,18,7.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25077,NA,DE1017N2,CU,NA,NA,NA,85,14,5.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25078,NA,DE1017N2,CU,NA,NA,NA,80,14,4.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25079,NA,DE1017N2,CU,NA,NA,NA,84,13,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22581,NA,DE1018N1,SO,P1459,NA,NA,104,21,12,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22582,NA,DE1018N1,SO,P1459,NA,NA,115,24,13.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22583,NA,DE1018N1,SO,P1459,NA,NA,126,22,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22584,NA,DE1018N1,SO,P1459,NA,NA,119,23,15.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22585,NA,DE1018N1,SO,P1459,NA,NA,120,23,19,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22586,NA,DE1018N1,SO,P1459,NA,NA,120,23,17.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22587,NA,DE1018N1,SO,P1459,NA,NA,126,24,19.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22588,NA,DE1018N1,SO,P1459,NA,NA,115,25,16.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22589,NA,DE1018N1,SO,P1459,NA,NA,102,19,10.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22590,NA,DE1018N1,SO,P1459,NA,NA,119,22,17,modified_salmoncaost_allstages,NA,SEMSP,scaring by anus; gill clip cap fell on fllor,NA
+U24641,NA,DE1018N1,SO,P1665,NA,NA,114,22,14.9,NA,NA,SEMSP,NA,NA
+U24642,NA,DE1018N1,SO,P1665,NA,NA,112,21,14.5,NA,NA,SEMSP,NA,NA
+U24643,NA,DE1018N1,SO,P1665,NA,NA,121,23,19.5,NA,NA,SEMSP,NA,NA
+U24644,NA,DE1018N1,SO,P1665,NA,NA,123,21,17.5,NA,NA,SEMSP,NA,NA
+U24645,NA,DE1018N1,SO,P1665,NA,NA,116,21,14.5,NA,NA,SEMSP,NA,NA
+U24646,NA,DE1018N1,SO,P1665,NA,NA,113,20,14.8,NA,NA,SEMSP,NA,NA
+U24647,NA,DE1018N1,SO,P1665,NA,NA,119,21,17,NA,NA,SEMSP,NA,NA
+U24648,NA,DE1018N1,SO,P1665,NA,NA,122,21,15.5,NA,NA,SEMSP,NA,NA
+U24649,NA,DE1018N1,SO,P1665,NA,NA,119,20,14.3,NA,NA,SEMSP,NA,NA
+U24650,NA,DE1018N1,SO,P1665,NA,NA,126,22,17.5,NA,NA,SEMSP,NA,NA
+U22591,NA,DE1018N1,SO,P1460,NA,NA,134,24,21.5,NA,NA,SEMSP,NA,NA
+U22592,NA,DE1018N1,SO,P1460,NA,NA,126,23,19.8,NA,NA,SEMSP,NA,NA
+U22593,NA,DE1018N1,SO,P1460,NA,NA,122,23,21,NA,NA,SEMSP,NA,NA
+U22594,NA,DE1018N1,SO,P1460,NA,NA,115,21,15,NA,NA,SEMSP,NA,NA
+U22595,NA,DE1018N1,SO,P1460,NA,NA,119,22,17.1,NA,NA,SEMSP,NA,NA
+U22596,NA,DE1018N1,SO,P1460,NA,NA,129,23,19.8,NA,NA,SEMSP,NA,NA
+U22597,NA,DE1018N1,SO,P1460,NA,NA,128,23,19.3,NA,NA,SEMSP,NA,NA
+U22598,NA,DE1018N1,SO,P1460,NA,NA,116,21,14.5,NA,NA,SEMSP,NA,NA
+U22599,NA,DE1018N1,SO,P1460,NA,NA,117,21,16,NA,NA,SEMSP,NA,NA
+U22600,NA,DE1018N1,SO,P1460,NA,NA,106,20,12.2,NA,NA,SEMSP,NA,NA
+U24091,NA,DE1018N1,CU,P1610,NA,NA,123,25,15.5,modified_salmoncaost_allstages,NA,SEMSP,hemorrhage in left pelvic fin,NA
+U24092,NA,DE1018N1,CU,P1610,NA,NA,112,21,13.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24093,NA,DE1018N1,CU,P1610,NA,NA,104,20,10.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24094,NA,DE1018N1,CU,P1610,NA,NA,135,26,20,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24095,NA,DE1018N1,CU,P1610,NA,NA,96,19,8.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24096,NA,DE1018N1,CU,P1610,NA,NA,120,23,17.1,NA,NA,SEMSP,NA,NA
+U24097,NA,DE1018N1,CU,P1610,NA,NA,111,19,12.3,NA,NA,SEMSP,massive lesion on left side,NA
+U24098,NA,DE1018N1,CU,P1610,NA,NA,95,18,8.5,NA,NA,SEMSP,NA,NA
+U24099,NA,DE1018N1,CU,P1610,NA,NA,102,18,10,NA,NA,SEMSP,NA,NA
+U24100,NA,DE1018N1,CU,P1610,NA,NA,127,23,19.6,NA,NA,SEMSP,NA,NA
+U22791,NA,DE1018N1,PI,P1480,NA,NA,97,16,8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22792,NA,DE1018N1,PI,P1480,NA,NA,106,16,19.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22793,NA,DE1018N1,PI,P1480,NA,NA,106,18,10.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22794,NA,DE1018N1,PI,P1480,NA,NA,97,16,8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22795,NA,DE1018N1,PI,P1480,NA,NA,111,20,12,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25080,NA,DE1019N1,SO,NA,NA,NA,138,25,25,modified_salmoncaost_allstages,NA,SEMSP,"bleeding from gill clip;large lesion on back, behind head",NA
+U25081,NA,DE1019N1,SO,NA,NA,NA,111,19,12.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25082,NA,DE1019N1,SO,NA,NA,NA,116,23,16,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25083,NA,DE1019N1,SO,NA,NA,NA,110,18,11,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25084,NA,DE1019N1,SO,NA,NA,NA,127,20,18.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; fish fell on floor;leason on dorsal near head,NA
+U25085,NA,DE1019N1,SO,NA,NA,NA,109,18,11,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25086,NA,DE1019N1,SO,NA,NA,NA,103,18,9.9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25087,NA,DE1019N1,SO,NA,NA,NA,106,18,11.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25088,NA,DE1019N1,SO,NA,NA,NA,109,17,12.8,modified_salmoncaost_allstages,NA,SEMSP,"bleeding from gill clip; multiple cuts on both sides, huge scale loss maybe predation?",NA
+U25089,NA,DE1019N1,SO,NA,NA,NA,105,19,11,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25090,NA,DE1019N1,SO,NA,NA,NA,116,21,15.9,NA,NA,SEMSP,NA,NA
+U25091,NA,DE1019N1,SO,NA,NA,NA,106,18,11.5,NA,NA,SEMSP,NA,NA
+U25092,NA,DE1019N1,SO,NA,NA,NA,96,17,8.3,NA,NA,SEMSP,NA,NA
+U25093,NA,DE1019N1,SO,NA,NA,NA,110,19,11.8,NA,NA,SEMSP,NA,NA
+U25094,NA,DE1019N1,SO,NA,NA,NA,108,18,13.3,NA,NA,SEMSP,NA,NA
+U25095,NA,DE1019N1,SO,NA,NA,NA,102,17,10.8,NA,NA,SEMSP,NA,NA
+U24991,NA,DE1019N1,PI,NA,NA,NA,103,16,8.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24992,NA,DE1019N1,PI,NA,NA,NA,92,15,7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24993,NA,DE1019N1,PI,NA,NA,NA,102,19,9.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24994,NA,DE1019N1,PI,NA,NA,NA,90,15,5.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; lots of scale loss,NA
+U24995,NA,DE1019N1,PI,NA,NA,NA,97,18,7.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24996,NA,DE1019N1,PI,P1700,NA,NA,101,17,9.4,NA,NA,SEMSP,NA,NA
+U24997,NA,DE1019N1,PI,P1700,NA,NA,101,16,9.5,NA,NA,SEMSP,NA,NA
+U24998,NA,DE1019N1,PI,P1700,NA,NA,96,16,8,NA,NA,SEMSP,NA,NA
+U24999,NA,DE1019N1,PI,P1700,NA,NA,91,15,6.6,NA,NA,SEMSP,NA,NA
+U25000,NA,DE1019N1,PI,P1700,NA,NA,104,18,10.5,NA,NA,SEMSP,NA,NA
+U24351,NA,DE1019N1,CU,NA,NA,NA,123,24,16.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24352,NA,DE1019N1,CU,NA,NA,NA,116,21,12,modified_salmoncaost_allstages,NA,SEMSP,no blood!,NA
+U24353,NA,DE1019N1,CU,NA,NA,NA,102,20,11.9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24354,NA,DE1019N1,CU,NA,NA,NA,100,18,9.9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24355,NA,DE1019N1,CU,NA,NA,NA,108,19,13.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24356,NA,DE1019N1,CU,P1636,NA,NA,108,20,12.4,NA,NA,SEMSP,NA,NA
+U24357,NA,DE1019N1,CU,P1636,NA,NA,93,17,8,NA,NA,SEMSP,NA,NA
+U24358,NA,DE1019N1,CU,P1636,NA,NA,98,18,9.1,NA,NA,SEMSP,NA,NA
+U24359,NA,DE1019N1,CU,P1636,NA,NA,106,18,10.5,NA,NA,SEMSP,NA,NA
+U24360,NA,DE1019N1,CU,P1636,NA,NA,103,18,9.8,NA,NA,SEMSP,beautiful tail,NA
+U25212,NA,DE1020N1,SO,NA,NA,NA,122,21,20.5,modified_salmoncaost_allstages,NA,SEMSP,"pred scar on back, scale loss",NA
+U25096,NA,DE1020N1,SO,NA,NA,NA,146,26,23,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25097,NA,DE1020N1,SO,NA,NA,NA,130,25,22.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25098,NA,DE1020N1,SO,NA,NA,NA,126,24,18.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25099,NA,DE1020N1,SO,NA,NA,NA,119,20,12,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25100,NA,DE1020N1,SO,NA,NA,NA,146,27,29.5,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25101,NA,DE1020N1,SO,NA,NA,NA,139,25,22.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25102,NA,DE1020N1,SO,NA,NA,NA,130,23,19,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25103,NA,DE1020N1,SO,NA,NA,NA,144,27,28,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25104,NA,DE1020N1,SO,NA,NA,NA,135,24,20.8,modified_salmoncaost_allstages,NA,SEMSP,"bleeding from gill clip; discoloration on back, maybe early lesion?",NA
+U25105,NA,DE1020N1,CK,NA,NA,NA,112,23,16.5,NA,NA,SEMSP,fell on deck,NA
+U25106,NA,DE1020N1,CK,NA,NA,NA,149,32,38,NA,NA,SEMSP,"weight approximate, fell off scale",NA
+U24311,NA,DE1020N1,CU,NA,NA,NA,140,28,21,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24312,NA,DE1020N1,CU,NA,NA,NA,119,22,17.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24313,NA,DE1020N1,CU,NA,NA,NA,120,21,15,modified_salmoncaost_allstages,NA,SEMSP,;bleeding from gill clip,NA
+U24314,NA,DE1020N1,CU,NA,NA,NA,115,22,13,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24315,NA,DE1020N1,CU,NA,NA,NA,126,21,19.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip (light),NA
+U24316,NA,DE1020N1,CU,P1632,NA,NA,131,24,23,NA,NA,SEMSP,NA,NA
+U24317,NA,DE1020N1,CU,P1632,NA,NA,112,21,13.5,NA,NA,SEMSP,NA,NA
+U24318,NA,DE1020N1,CU,P1632,NA,NA,138,26,27.8,NA,NA,SEMSP,NA,NA
+U25107,NA,DE1020N1,PI,NA,NA,NA,90,13,6.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25108,NA,DE1020N1,PI,NA,NA,NA,81,14,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25109,NA,DE1020N1,PI,NA,NA,NA,82,13,4.3,modified_salmoncaost_allstages,NA,SEMSP,:bleeding from gill clip:fell on deck,NA
+U25110,NA,DE1020N1,PI,NA,NA,NA,89,14,4.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25111,NA,DE1020N1,PI,NA,NA,NA,83,13,6,modified_salmoncaost_allstages,NA,SEMSP,fell on net,NA
+U22621,NA,DE1021N1,SO,P1463,NA,NA,112,21,14.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24301,NA,DE1021N1,CU,P1631,NA,NA,141,28,28.8,modified_salmoncaost_allstages,NA,SEMSP,big lesion,NA
+U24302,NA,DE1021N1,CU,P1631,NA,NA,131,23,20.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24303,NA,DE1021N1,CU,P1631,NA,NA,110,19,12.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24304,NA,DE1021N1,CU,P1631,NA,NA,100,18,9.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24305,NA,DE1021N1,CU,P1631,NA,NA,110,19,14.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24306,NA,DE1021N1,CU,P1631,NA,NA,105,17,11,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24307,NA,DE1021N1,CU,P1631,NA,NA,113,21,12.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24308,NA,DE1021N1,CU,P1631,NA,NA,115,20,15.2,modified_salmoncaost_allstages,NA,SEMSP,"no gill clip, got mixed with a clip from a different  fish",NA
+U24309,NA,DE1021N1,CU,P1631,NA,NA,115,22,16.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24310,NA,DE1021N1,CU,P1631,NA,NA,99,17,9.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24801,NA,DE1021N1,PI,P1681,NA,NA,105,18,11.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24802,NA,DE1021N1,PI,P1681,NA,NA,103,18,8.9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24803,NA,DE1021N1,PI,P1681,NA,NA,97,17,8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24804,NA,DE1021N1,PI,P1681,NA,NA,101,18,8.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24805,NA,DE1021N1,PI,P1681,NA,NA,94,18,9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24806,NA,DE1021N1,PI,P1681,NA,NA,100,18,9,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24807,NA,DE1021N1,PI,P1681,NA,NA,98,16,8.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24808,NA,DE1021N1,PI,P1681,NA,NA,98,19,8.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24809,NA,DE1021N1,PI,P1681,NA,NA,94,18,7.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24810,NA,DE1021N1,PI,P1681,NA,NA,104,17,10.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25112,NA,DE1022N1,PI,NA,NA,NA,86,15,5.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25113,NA,DE1022N1,PI,NA,NA,NA,91,15,6.8,modified_salmoncaost_allstages,NA,SEMSP,"scarring on both sides (predation), scale loss",NA
+U25114,NA,DE1022N1,PI,NA,NA,NA,88,14,4.2,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25115,NA,DE1022N1,PI,NA,NA,NA,90,15,5.1,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25116,NA,DE1022N1,PI,NA,NA,NA,91,15,8.8,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25117,NA,DE1022N1,PI,NA,NA,NA,91,15,4.2,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25118,NA,DE1022N1,PI,NA,NA,NA,87,14,4.9,modified_salmoncaost_allstages,NA,SEMSP,scale loss,NA
+U25119,NA,DE1022N1,PI,NA,NA,NA,92,16,4.9,modified_salmoncaost_allstages,NA,SEMSP,"missing operculum on right side, gills exposed; bleeding from gill clip",NA
+U25120,NA,DE1022N1,PI,NA,NA,NA,84,14,4.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25121,NA,DE1022N1,PI,NA,NA,NA,89,15,4.9,modified_salmoncaost_allstages,NA,SEMSP,"dropped on boat, hemmorage on right jaw: bleeding from gill clip",NA
+U25122,NA,DE1022N1,CU,NA,NA,NA,111,19,12.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25123,NA,DE1022N1,CU,NA,NA,NA,102,18,9.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25124,NA,DE1022N1,CU,NA,NA,NA,101,18,11.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25125,NA,DE1022N1,CU,NA,NA,NA,96,16,8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25126,NA,DE1022N1,CU,NA,NA,NA,92,17,5.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25127,NA,DE1022N1,CU,NA,NA,NA,116,20,12.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25128,NA,DE1022N1,CU,NA,NA,NA,98,18,8.9,modified_salmoncaost_allstages,NA,SEMSP,scale loss on back; 2 gashes on belly,NA
+U25129,NA,DE1022N1,CU,NA,NA,NA,119,22,15.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip; scale loss,NA
+U25130,NA,DE1022N1,CU,NA,NA,NA,90,16,6.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25131,NA,DE1022N1,CU,NA,NA,NA,105,19,11.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25132,NA,DE1023N1,CU,NA,NA,NA,119,21,14.8,modified_salmoncaost_allstages,NA,SEMSP,parasite in gills,NA
+U25133,NA,DE1023N1,CU,NA,NA,NA,92,16,7.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25134,NA,DE1023N1,CU,NA,NA,NA,104,20,13,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25135,NA,DE1023N1,CU,NA,NA,NA,122,23,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25136,NA,DE1023N1,CU,NA,NA,NA,94,16,7.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25137,NA,DE1023N1,CU,NA,NA,NA,108,19,14,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25138,NA,DE1023N1,CU,NA,NA,NA,103,19,11.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25139,NA,DE1023N1,CU,NA,NA,NA,75,13,4.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25140,NA,DE1023N1,CU,NA,NA,NA,122,22,17.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25141,NA,DE1023N1,CU,NA,NA,NA,98,17,11,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25142,NA,DE1023N1,PI,NA,NA,NA,83,14,4.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25143,NA,DE1023N1,PI,NA,NA,NA,75,13,3.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25144,NA,DE1023N1,PI,NA,NA,NA,83,13,3.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25145,NA,DE1023N1,PI,NA,NA,NA,78,13,4.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25146,NA,DE1023N1,PI,NA,NA,NA,72,12,3.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25147,NA,DE1023N1,PI,NA,NA,NA,102,16,8.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25148,NA,DE1023N1,PI,NA,NA,NA,87,14,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25149,NA,DE1023N1,PI,NA,NA,NA,88,14,5.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25150,NA,DE1023N1,PI,NA,NA,NA,80,13,4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25151,NA,DE1023N1,PI,NA,NA,NA,93,14,6.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22801,NA,DE1024N1,SO,P1481,NA,NA,119,25,20.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22802,NA,DE1024N1,SO,P1481,NA,NA,125,24,20,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22803,NA,DE1024N1,SO,P1481,NA,NA,124,23,21.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22821,NA,DE1024N1,CU,P1483,NA,NA,118,24,19.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22822,NA,DE1024N1,CU,P1483,NA,NA,121,25,20.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22823,NA,DE1024N1,CU,P1483,NA,NA,119,23,17,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22824,NA,DE1024N1,CU,P1483,NA,NA,118,21,18.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22825,NA,DE1024N1,CU,P1483,NA,NA,125,22,21.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22826,NA,DE1024N1,CU,P1483,NA,NA,125,23,20.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22827,NA,DE1024N1,CU,P1483,NA,NA,121,21,18.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22828,NA,DE1024N1,CU,P1483,NA,NA,116,20,15.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U22829,NA,DE1024N1,CU,P1483,NA,NA,124,23,20.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22830,NA,DE1024N1,CU,P1483,NA,NA,115,20,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24321,NA,DE1024N1,PI,P1633,NA,NA,113,19,13.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24322,NA,DE1024N1,PI,P1633,NA,NA,104,18,11.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24323,NA,DE1024N1,PI,P1633,NA,NA,113,20,13.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24341,NA,DE1024N1,HE,P1635,NA,NA,115,25,16,modified_salmoncaost_allstages,NA,SEMSP,bleeding but no gill clip taken,NA
+U25152,NA,DE1025N1,PI,NA,NA,NA,97,16,5.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25153,NA,DE1025N1,PI,NA,NA,NA,99,17,5.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25154,NA,DE1025N1,PI,NA,NA,NA,93,16,5.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25155,NA,DE1025N1,PI,NA,NA,NA,97,17,6.3,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25156,NA,DE1025N1,PI,NA,NA,NA,100,16,6.1,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25157,NA,DE1025N1,PI,NA,NA,NA,87,15,4.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25158,NA,DE1025N1,PI,NA,NA,NA,95,17,9.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25159,NA,DE1025N1,PI,NA,NA,NA,101,17,6.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25160,NA,DE1025N1,PI,NA,NA,NA,103,18,7.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25161,NA,DE1025N1,PI,NA,NA,NA,104,17,7,modified_salmoncaost_allstages,NA,SEMSP,fell on boat,NA
+U25162,NA,DE1025N1,CU,NA,NA,NA,90,14,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25163,NA,DE1025N1,CU,NA,NA,NA,108,19,8.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25164,NA,DE1025N1,CU,NA,NA,NA,110,20,9.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25165,NA,DE1025N1,CU,NA,NA,NA,100,19,7,modified_salmoncaost_allstages,NA,SEMSP,"possible parasite in gill, bleeding from gill clip",NA
+U25166,NA,DE1025N1,CU,NA,NA,NA,98,17,6.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25167,NA,DE1025N1,CU,NA,NA,NA,96,17,6.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25168,NA,DE1025N1,CU,NA,NA,NA,118,21,12.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25169,NA,DE1025N1,CU,NA,NA,NA,105,18,9.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25170,NA,DE1025N1,CU,NA,NA,NA,112,20,10.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25171,NA,DE1025N1,CU,NA,NA,NA,94,16,5.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25172,NA,DE1026N1,SO,NA,NA,NA,127,24,23,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25173,NA,DE1026N1,SO,NA,NA,NA,124,23,17,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25174,NA,DE1026N1,PI,NA,NA,NA,74,9,4.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25175,NA,DE1026N1,PI,NA,NA,NA,85,13,5.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25176,NA,DE1026N1,PI,NA,NA,NA,72,10,3.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25177,NA,DE1026N1,PI,NA,NA,NA,85,12,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25178,NA,DE1026N1,PI,NA,NA,NA,81,10,5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25179,NA,DE1026N1,PI,NA,NA,NA,73,11,4.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25180,NA,DE1026N1,PI,NA,NA,NA,93,14,4.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25181,NA,DE1026N1,PI,NA,NA,NA,84,11,4.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25182,NA,DE1026N1,PI,NA,NA,NA,75,10,4.1,modified_salmoncaost_allstages,NA,SEMSP,predator scars,NA
+U25183,NA,DE1026N1,PI,NA,NA,NA,82,12,4.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25184,NA,DE1026N1,CU,NA,NA,NA,125,24,16.2,modified_salmoncaost_allstages,NA,SEMSP,2 chal scars. hemoraging on anal fin,NA
+U25185,NA,DE1026N1,CU,NA,NA,NA,120,22,14.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip. moving a lot during gill clip,NA
+U25186,NA,DE1026N1,CU,NA,NA,NA,115,21,14.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25187,NA,DE1026N1,CU,NA,NA,NA,111,17,10.1,modified_salmoncaost_allstages,NA,SEMSP,lesion,NA
+U25188,NA,DE1026N1,CU,NA,NA,NA,125,23,15.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25189,NA,DE1026N1,CU,NA,NA,NA,124,21,14.7,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25190,NA,DE1026N1,CU,NA,NA,NA,114,20,14.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25191,NA,DE1026N1,CU,NA,NA,NA,125,24,19.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25192,NA,DE1026N1,CU,NA,NA,NA,120,20,15.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25193,NA,DE1026N1,CU,NA,NA,NA,108,17,10.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22811,NA,DE1027N1,CU,P1482,NA,NA,96,19,8.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22812,NA,DE1027N1,CU,P1482,NA,NA,106,20,10.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22813,NA,DE1027N1,CU,P1482,NA,NA,98,19,9.3,modified_salmoncaost_allstages,NA,SEMSP,fish fell on ground,NA
+U22814,NA,DE1027N1,CU,P1482,NA,NA,115,21,13.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22815,NA,DE1027N1,CU,P1482,NA,NA,116,22,11.8,modified_salmoncaost_allstages,NA,SEMSP,blood on base of tail,NA
+U22816,NA,DE1027N1,CU,P1482,NA,NA,106,20,11.7,modified_salmoncaost_allstages,NA,SEMSP,fish on Brett's leg,NA
+U22817,NA,DE1027N1,CU,P1482,NA,NA,128,25,17,modified_salmoncaost_allstages,NA,SEMSP,big lesion anterior of dorsal fin,NA
+U22818,NA,DE1027N1,CU,P1482,NA,NA,113,21,13.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22819,NA,DE1027N1,CU,P1482,NA,NA,114,21,13.7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U22820,NA,DE1027N1,CU,P1482,NA,NA,115,19,13,modified_salmoncaost_allstages,NA,SEMSP,isopod,NA
+U24851,NA,DE1027N1,SO,P1686,NA,NA,125,25,19,modified_salmoncaost_allstages,NA,SEMSP,"fish fell on boat,bleeding at tail end, hemmoraging",NA
+U24371,NA,DE1027N1,CK,P1638,NA,NA,105,22,11.1,modified_salmoncaost_allstages,NA,SEMSP,"fish accidentally misidentified initially as chum, and therefore loused.",NA
+U24391,NA,DE1027N1,PI,P1640,NA,NA,102,17,8.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24392,NA,DE1027N1,PI,P1640,NA,NA,103,18,9.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24393,NA,DE1027N1,PI,P1640,NA,NA,104,19,8.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24394,NA,DE1027N1,PI,P1640,NA,NA,108,21,12.6,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24395,NA,DE1027N1,PI,P1640,NA,NA,97,17,6.3,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24396,NA,DE1027N1,PI,P1640,NA,NA,98,17,7,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24397,NA,DE1027N1,PI,P1640,NA,NA,108,20,10.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24398,NA,DE1027N1,PI,P1640,NA,NA,104,17,9.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U24399,NA,DE1027N1,PI,P1640,NA,NA,114,21,13.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24400,NA,DE1027N1,PI,P1640,NA,NA,105,19,9.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U24361,NA,DE1027N1,HE,P1637,NA,NA,113,20,10.5,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25213,NA,DE1028N1,CU,NA,NA,NA,118,22,14,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25214,NA,DE1028N1,CU,NA,NA,NA,113,21,13.1,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25194,NA,DE1028N1,CU,NA,NA,NA,115,22,15.2,modified_salmoncaost_allstages,NA,SEMSP,"bleeding from gill clip, isopod present",NA
+U25195,NA,DE1028N1,CU,NA,NA,NA,112,20,11.2,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25196,NA,DE1028N1,CU,NA,NA,NA,106,18,11.2,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25197,NA,DE1028N1,CU,NA,NA,NA,105,19,10,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25198,NA,DE1028N1,CU,NA,NA,NA,105,19,10,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25199,NA,DE1028N1,CU,NA,NA,NA,100,19,9.4,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25200,NA,DE1028N1,CU,NA,NA,NA,105,20,9.8,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25201,NA,DE1028N1,CU,NA,NA,NA,110,17,10.4,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25202,NA,DE1028N1,PI,NA,NA,NA,94,18,8.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25203,NA,DE1028N1,PI,NA,NA,NA,97,18,8.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25204,NA,DE1028N1,PI,NA,NA,NA,104,18,10.4,modified_salmoncaost_allstages,NA,SEMSP,Fish fell on floor,NA
+U25205,NA,DE1028N1,PI,NA,NA,NA,98,17,7.5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25206,NA,DE1028N1,PI,NA,NA,NA,102,16,8.6,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25207,NA,DE1028N1,PI,NA,NA,NA,104,19,9.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25208,NA,DE1028N1,PI,NA,NA,NA,106,17,9,modified_salmoncaost_allstages,NA,SEMSP,Isopod present,NA
+U25209,NA,DE1028N1,PI,NA,NA,NA,83,13,5,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
+U25210,NA,DE1028N1,PI,NA,NA,NA,85,13,5.9,modified_salmoncaost_allstages,NA,SEMSP,NA,NA
+U25211,NA,DE1028N1,PI,NA,NA,NA,86,13,5.8,modified_salmoncaost_allstages,NA,SEMSP,bleeding from gill clip,NA
