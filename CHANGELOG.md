@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## [v1.5.0] 2023-09-28
+
+### Added
+
+- 2023 Field data
+
+### Changed
+- Updated OBIS record to include sea surface temp and salinity,  motile sea lice counts as well as genetic stock identification. 
+
+
 ## [1.4.0] - 2023-06-14
 
 ### Added
