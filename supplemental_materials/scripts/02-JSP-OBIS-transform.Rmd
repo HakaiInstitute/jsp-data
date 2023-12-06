@@ -365,7 +365,6 @@ emof_ysi <- ysi |>
   select(eventID,
          sea_surface_temperature = temperature_0m,
          sea_surface_salinity = salinity_0m) |>
-  mutate(occurrenceID = NA) |>
   pivot_longer(
     c(sea_surface_temperature, sea_surface_salinity),
     names_to = "measurementType",
@@ -400,6 +399,11 @@ stock_id <- fish_data |>
   select(occurrenceID, eventID, measurementType, measurementValue, measurementTypeID, measurementID)
 
 emof <- bind_rows(measurementOrFact, emof_ysi, stock_id)
+
+# replace NAs occurrenceID with nothingness
+emof$occurrenceID[is.na(emof$occurrenceID)] <- ""
+
+
 
 write_csv(emof, here::here("supplemental_materials", "OBIS_data", "extendedMeasurementOrFact.csv"))
 
