@@ -414,7 +414,8 @@ write_csv(event, here::here("supplemental_materials", "OBIS_data", "event.csv"))
 
 occurrence <- occurrence |> 
   select(-c(ufn)) |> 
-  dplyr::left_join(select(survey_seines, seine_id, lat, long ), by = c("eventID" = "seine_id"))
+  dplyr::left_join(select(survey_seines, seine_id, lat, long ), by = c("eventID" = "seine_id")) |> 
+  filter(!scientificName == "Unknown")
 
 
 write_csv(occurrence, here::here("supplemental_materials", "OBIS_data", "occurrence.csv"))
@@ -434,6 +435,7 @@ dm_examine_constraints(only_pk)
 
 model <- only_pk %>% 
   dm_add_fk(occurrence, eventID, event) %>% 
+  dm_add_fk(emof, occurrenceID, occurrence) %>%
   dm_add_fk(rr_ext, resourceID, occurrence) |> 
   dm_add_fk(rr_ext, eventID, event) |> 
   dm_add_fk(emof, eventID, event)
